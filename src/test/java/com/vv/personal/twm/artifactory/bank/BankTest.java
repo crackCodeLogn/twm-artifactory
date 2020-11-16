@@ -1,4 +1,4 @@
-package com.vv.personal.twm.artifactory.core;
+package com.vv.personal.twm.artifactory.bank;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

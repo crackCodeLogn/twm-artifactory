@@ -1,4 +1,4 @@
-package com.vv.personal.twm.artifactory.core;
+package com.vv.personal.twm.artifactory.bank;
 
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;

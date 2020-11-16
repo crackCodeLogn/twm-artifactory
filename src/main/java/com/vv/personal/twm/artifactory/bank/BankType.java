@@ -1,4 +1,4 @@
-package com.vv.personal.twm.artifactory.core;
+package com.vv.personal.twm.artifactory.bank;
 
 /**
  * @author Vivek
