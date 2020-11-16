@@ -10,6 +10,8 @@ import java.util.Objects;
  * @since 16/11/20
  */
 public class Bank {
+    private static final long serialVersionUID = -625467751396573206L;
+
     private String name;
     private BankType type; //govt / private
     private String IFSC;

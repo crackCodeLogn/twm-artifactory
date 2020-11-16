@@ -5,5 +5,16 @@ package com.vv.personal.twm.artifactory.bank;
  * @since 16/11/20
  */
 public enum BankType {
-    GOVT, PRIVATE
+    GOVT("GOVT"),
+    PRIVATE("PRIVATE");
+
+    private String bankType;
+
+    BankType(String bankType) {
+        this.bankType = bankType;
+    }
+
+    public String getBankType() {
+        return bankType;
+    }
 }
