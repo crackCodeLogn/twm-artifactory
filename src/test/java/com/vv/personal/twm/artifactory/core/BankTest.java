@@ -23,5 +23,6 @@ public class BankTest {
 
         assertEquals("SBI", bank.getName());
         assertEquals(123456789L, bank.getContactNumber());
+        assertEquals("{\"name\":\"SBI\",\"type\":\"PRIVATE\",\"IFSC\":\"SBI00102131\",\"contactNumber\":123456789}", bank.toString());
     }
 }
