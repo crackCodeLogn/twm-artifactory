@@ -15,7 +15,7 @@ public class Bank {
     private String name;
     private BankType type; //govt / private
     private String IFSC;
-    private long contactNumber;
+    private String contactNumber;
 
     public Bank() {
     }
@@ -81,11 +81,11 @@ public class Bank {
         return this;
     }
 
-    public long getContactNumber() {
+    public String getContactNumber() {
         return contactNumber;
     }
 
-    public Bank setContactNumber(long contactNumber) {
+    public Bank setContactNumber(String contactNumber) {
         this.contactNumber = contactNumber;
         return this;
     }

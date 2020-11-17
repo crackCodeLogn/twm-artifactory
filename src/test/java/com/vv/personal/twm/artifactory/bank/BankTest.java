@@ -4,7 +4,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.JUnit4;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 /**
  * @author Vivek
@@ -18,11 +18,11 @@ public class BankTest {
         Bank bank = new Bank()
                 .setName("SBI")
                 .setType(BankType.PRIVATE)
-                .setContactNumber(123456789)
+                .setContactNumber("123456789")
                 .setIFSC("SBI00102131");
 
         assertEquals("SBI", bank.getName());
-        assertEquals(123456789L, bank.getContactNumber());
-        assertEquals("{\"name\":\"SBI\",\"type\":\"PRIVATE\",\"IFSC\":\"SBI00102131\",\"contactNumber\":123456789}", bank.toString());
+        assertEquals("123456789", bank.getContactNumber());
+        assertEquals("{\"name\":\"SBI\",\"type\":\"PRIVATE\",\"IFSC\":\"SBI00102131\",\"contactNumber\":\"123456789\"}", bank.toString());
     }
 }
