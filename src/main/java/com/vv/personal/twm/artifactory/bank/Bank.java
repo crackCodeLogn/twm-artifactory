@@ -26,6 +26,11 @@ public class Bank {
         this.IFSC = IFSC;
     }
 
+    public Bank(Bank otherObject) {
+        this(otherObject.getName(), otherObject.getType(), otherObject.getIFSC());
+        this.contactNumber = otherObject.getContactNumber();
+    }
+
     @Override
     public String toString() {
         return new ToStringBuilder(this, ToStringStyle.JSON_STYLE)
