@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+option java_package = "com.vv.personal.twm.artifactory.generated.deposit";
+option java_outer_classname = "FixedDepositProto";
+
+message FixedDeposit {
+  string user = 1;
+  string bankIFSC = 2;
+  double depositAmount = 3;
+  double rateOfInterest = 4;
+  string startDate = 5;
+  int32 months = 6;
+  int32 days = 7;
+  InterestType interestType = 8;
+  string nominee = 9;
+  int64 insertionTime = 10;
+}
+
+enum InterestType {
+  ON_MATURITY = 0;
+  QUARTERLY = 1;
+  MONTHLY = 2;
+}

@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+option java_package = "com.vv.personal.twm.artifactory.generated.bank";
+option java_outer_classname = "BankProto";
+
+message Bank {
+  string name = 1;
+  BankType bankType = 2;
+  string IFSC = 3;
+  string contactNumber = 4;
+}
+
+enum BankType {
+  GOVT = 0;
+  PRIVATE = 1;
+}
