@@ -14,3 +14,7 @@ enum BankType {
   GOVT = 0;
   PRIVATE = 1;
 }
+
+message BankList {
+  repeated Bank banks = 1;
+}

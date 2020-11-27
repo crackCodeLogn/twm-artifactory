@@ -21,3 +21,7 @@ enum InterestType {
   QUARTERLY = 1;
   MONTHLY = 2;
 }
+
+message FixedDepositList {
+  repeated FixedDeposit FixedDeposits = 1;
+}
