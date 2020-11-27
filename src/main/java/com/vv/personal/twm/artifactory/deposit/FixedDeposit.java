@@ -1,6 +1,5 @@
 package com.vv.personal.twm.artifactory.deposit;
 
-import com.vv.personal.twm.artifactory.bank.Bank;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
@@ -15,7 +14,7 @@ import static com.vv.personal.twm.artifactory.constants.Constants.FD_KEY;
 public class FixedDeposit {
 
     private String user;
-    private Bank bank;
+    private String bankIfsc;
     private double depositAmount;
     private double rateOfInterest;
     private String startDate; //YYYYMMDD
@@ -30,10 +29,10 @@ public class FixedDeposit {
         this.insertionTime = System.currentTimeMillis();
     }
 
-    public FixedDeposit(String user, Bank bank, double depositAmount, double rateOfInterest, String startDate, int months, int days, String maturityType, String nominee) {
+    public FixedDeposit(String user, String bankIfsc, double depositAmount, double rateOfInterest, String startDate, int months, int days, String maturityType, String nominee) {
         this();
         this.user = user;
-        this.bank = bank;
+        this.bankIfsc = bankIfsc;
         this.depositAmount = depositAmount;
         this.rateOfInterest = rateOfInterest;
         this.startDate = startDate;
@@ -46,7 +45,7 @@ public class FixedDeposit {
     }
 
     public FixedDeposit generateKey() {
-        this.key = String.format(FD_KEY, user, bank, depositAmount, startDate, insertionTime);
+        this.key = String.format(FD_KEY, user, bankIfsc, depositAmount, startDate, insertionTime);
         return this;
     }
 
@@ -54,7 +53,7 @@ public class FixedDeposit {
     public String toString() {
         return new ToStringBuilder(this, ToStringStyle.JSON_STYLE)
                 .append("user", user)
-                .append("bank", bank)
+                .append("bankIfsc", bankIfsc)
                 .append("depositAmount", depositAmount)
                 .append("rateOfInterest", rateOfInterest)
                 .append("startDate", startDate)
@@ -89,12 +88,12 @@ public class FixedDeposit {
         return this;
     }
 
-    public Bank getBank() {
-        return bank;
+    public String getBankIfsc() {
+        return bankIfsc;
     }
 
-    public FixedDeposit setBank(Bank bank) {
-        this.bank = bank;
+    public FixedDeposit setBankIfsc(String bankIfsc) {
+        this.bankIfsc = bankIfsc;
         return this;
     }
 
