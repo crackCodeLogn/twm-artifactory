@@ -1,6 +1,6 @@
 package com.vv.personal.twm.artifactory.generated.deposit;
 
-import com.vv.personal.twm.artifactory.KeyUtil;
+import com.vv.personal.twm.artifactory.FixedDepositKeyUtil;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.JUnit4;
@@ -35,7 +35,7 @@ public class FixedDepositProtoTest {
         assertEquals(ON_MATURITY, fixedDeposit.getInterestType());
         assertEquals(555555.23, fixedDeposit.getDepositAmount(), 10E-6);
 
-        String fdKey = KeyUtil.generateFdKey(fixedDeposit);
+        String fdKey = FixedDepositKeyUtil.generateFdKey(fixedDeposit);
         assertTrue(fdKey.matches("VIVEK-XYZ1223343-555555.23-20201127-[0-9]+"));
     }
 }
