@@ -5,16 +5,16 @@ option java_outer_classname = "FixedDepositProto";
 
 message FixedDeposit {
   string user = 1;
-  string bankIFSC = 2;
+  string bankIFSC = 2; // to match [A-Z]{4}[0-9]{7}
   double depositAmount = 3;
   double rateOfInterest = 4;
-  string startDate = 5;
+  string startDate = 5; //to match YYYYMMDD
   int32 months = 6;
   int32 days = 7;
   InterestType interestType = 8;
   string nominee = 9;
-  int64 insertionTime = 10;
-  string key = 11;
+  int64 insertionTime = 10; //to match YYYYMMDD-HH:mm
+  string key = 11; //populate at point of addition
 }
 
 enum InterestType {
