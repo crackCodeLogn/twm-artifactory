@@ -1,0 +1,41 @@
+syntax = "proto3";
+
+option java_package = "com.vv.personal.twm.artifactory.generated.tw";
+option java_outer_classname = "VillaProto";
+
+message Villa {
+  string name = 1;
+  int32 x = 2;
+  int32 y = 3;
+  int32 id = 4;
+  int64 timestamp = 5;
+  string world = 6;
+  Troops troops = 7;
+  VillaType type = 8;
+}
+
+message Troops {
+  int32 sp = 1;
+  int32 sw = 2;
+  int32 ax = 3;
+  int32 ar = 4;
+  int32 su = 5;
+  int32 lc = 6;
+  int32 ma = 7;
+  int32 hc = 8;
+  int32 rm = 9;
+  int32 ct = 10;
+  int32 nb = 11;
+  int32 pd = 12;
+  int32 wl = 13;
+}
+
+enum VillaType {
+  OFF = 0;
+  DEF = 1;
+  MIX = 2;
+}
+
+message VillaList {
+  repeated Villa villas = 1;
+}
