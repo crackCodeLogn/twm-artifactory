@@ -4,12 +4,12 @@ option java_package = "com.vv.personal.twm.artifactory.generated.tw";
 option java_outer_classname = "VillaProto";
 
 message Villa {
-  string name = 1;
-  int32 x = 2;
-  int32 y = 3;
-  int32 id = 4;
-  int64 timestamp = 5;
-  string world = 6;
+  string world = 1;
+  string name = 2;
+  int32 x = 3;
+  int32 y = 4;
+  string id = 5;
+  int64 timestamp = 6;
   Troops troops = 7;
   VillaType type = 8;
 }
