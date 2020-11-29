@@ -18,7 +18,6 @@ public class FixedDepositProtoTest {
 
     @Test
     public void testFixedDepositCreation() {
-        long insertionTimestamp = System.currentTimeMillis();
         FixedDepositProto.FixedDeposit fixedDeposit = FixedDepositProto.FixedDeposit.newBuilder()
                 .setUser("VIVEK")
                 .setBankIFSC("XYZ1223343")
@@ -31,7 +30,6 @@ public class FixedDepositProtoTest {
                 .setMonths(61)
                 .setInterestType(ON_MATURITY)
                 .setNominee("ITACHI")
-                .setInsertionTime(insertionTimestamp)
                 .build();
 
         assertEquals("VIVEK", fixedDeposit.getUser());
