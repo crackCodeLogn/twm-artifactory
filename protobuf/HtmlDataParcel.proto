@@ -4,5 +4,7 @@ option java_package = "com.vv.personal.twm.artifactory.generated.tw";
 option java_outer_classname = "HtmlDataParcelProto";
 
 message Parcel {
-  string htmlPageSource = 1;
+  string wallPageSource = 1;
+  string snobPageSource = 2;
+  string trainPageSource = 3;
 }
