@@ -12,6 +12,7 @@ message Villa {
   int64 timestamp = 6;
   Troops troops = 7;
   VillaType type = 8;
+  string farmStrength = 9;
 }
 
 message Troops {
