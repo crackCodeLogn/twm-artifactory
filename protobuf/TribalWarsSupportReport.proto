@@ -1,0 +1,36 @@
+syntax = "proto3";
+
+option java_package = "com.vv.personal.twm.artifactory.generated.tw";
+option java_outer_classname = "SupportReportProto";
+
+message SupportReport {
+  SupportReportType supportReportType = 1;
+  string from = 2;
+  string origin = 3;
+  string to = 4;
+  string destination = 5;
+  Troops troops = 6;
+  string reportTime = 7;
+  string reportSubject = 8;
+}
+
+enum SupportReportType {
+  ACQUIRED = 0;
+  SENT_BACK = 1;
+}
+
+message Troops {
+  int32 sp = 1;
+  int32 sw = 2;
+  int32 ax = 3;
+  int32 ar = 4;
+  int32 su = 5;
+  int32 lc = 6;
+  int32 ma = 7;
+  int32 hc = 8;
+  int32 rm = 9;
+  int32 ct = 10;
+  int32 nb = 11;
+  int32 pd = 12;
+  int32 wl = 13;
+}
