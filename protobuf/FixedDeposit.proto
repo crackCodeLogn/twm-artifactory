@@ -16,6 +16,10 @@ message FixedDeposit {
   int32 days = 10;
   InterestType interestType = 11;
   string nominee = 12;
+
+  double expectedAmount = 13;
+  double expectedInterest = 14;
+  int32 calculatedDays = 15;
 }
 
 enum InterestType {
