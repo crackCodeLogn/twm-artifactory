@@ -20,6 +20,8 @@ message FixedDeposit {
   double expectedAmount = 13;
   double expectedInterest = 14;
   int32 calculatedDays = 15;
+
+  bool isFdActive = 16;
 }
 
 enum InterestType {
