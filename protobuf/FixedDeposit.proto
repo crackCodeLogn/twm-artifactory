@@ -30,7 +30,7 @@ enum InterestType {
   MONTHLY = 2;
 }
 
-enum orderFDsBy {
+enum OrderFDsBy {
   START_DATE = 0;
   END_DATE = 1;
   DEPOSIT_AMOUNT = 2;
