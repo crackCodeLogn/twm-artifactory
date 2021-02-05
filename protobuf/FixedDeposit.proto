@@ -30,6 +30,14 @@ enum InterestType {
   MONTHLY = 2;
 }
 
+enum orderFDsBy {
+  START_DATE = 0;
+  END_DATE = 1;
+  DEPOSIT_AMOUNT = 2;
+  RATE_OF_INTEREST = 3;
+  MONTHS = 4;
+}
+
 message FixedDepositList {
   repeated FixedDeposit FixedDeposits = 1;
 }
