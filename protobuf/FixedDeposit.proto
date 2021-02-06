@@ -24,7 +24,7 @@ message FixedDeposit {
   bool isFdActive = 16;
   string originalUser = 17;
 
-  repeated AnnualBreakdownList annualBreakdownList = 18;
+  AnnualBreakdownList annualBreakdownList = 18;
 }
 
 enum InterestType {
