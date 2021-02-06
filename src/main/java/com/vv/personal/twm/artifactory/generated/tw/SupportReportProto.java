@@ -101,6 +101,8 @@ public final class SupportReportProto {
      * <code>SENT_BACK = 1;</code>
      */
     public static final int SENT_BACK_VALUE = 1;
+
+
     private static final com.google.protobuf.Internal.EnumLiteMap<
             SupportReportType> internalValueMap =
             new com.google.protobuf.Internal.EnumLiteMap<SupportReportType>() {
@@ -108,12 +110,6 @@ public final class SupportReportProto {
                 return SupportReportType.forNumber(number);
               }
             };
-    private static final SupportReportType[] VALUES = values();
-    private final int value;
-
-    SupportReportType(int value) {
-      this.value = value;
-    }
 
     /**
      * @deprecated Use {@link #forNumber(int)} instead.
@@ -121,6 +117,13 @@ public final class SupportReportProto {
     @java.lang.Deprecated
     public static SupportReportType valueOf(int value) {
       return forNumber(value);
+    }
+
+    private static final SupportReportType[] VALUES = values();
+    private final int value;
+
+    SupportReportType(int value) {
+      this.value = value;
     }
 
     public static SupportReportType forNumber(int value) {
@@ -233,18 +236,16 @@ public final class SupportReportProto {
      * <code>string destination = 5;</code>
      */
     com.google.protobuf.ByteString
-    getDestinationBytes();
+        getDestinationBytes();
 
     /**
      * <code>.Troops troops = 6;</code>
      */
     boolean hasTroops();
-
     /**
      * <code>.Troops troops = 6;</code>
      */
     com.vv.personal.twm.artifactory.generated.tw.SupportReportProto.Troops getTroops();
-
     /**
      * <code>.Troops troops = 6;</code>
      */
@@ -351,12 +352,45 @@ public final class SupportReportProto {
           // @@protoc_insertion_point(message_implements:SupportReport)
           SupportReportOrBuilder {
     public static final int SUPPORTREPORTTYPE_FIELD_NUMBER = 1;
+
+    // Use SupportReport.newBuilder() to construct.
+    private SupportReport(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+
+    private SupportReport() {
+      supportReportType_ = 0;
+      from_ = "";
+      origin_ = "";
+      to_ = "";
+      destination_ = "";
+      reportTime_ = "";
+      reportSubject_ = "";
+    }
+
     public static final int FROM_FIELD_NUMBER = 2;
     public static final int ORIGIN_FIELD_NUMBER = 3;
     public static final int TO_FIELD_NUMBER = 4;
     public static final int DESTINATION_FIELD_NUMBER = 5;
     public static final int TROOPS_FIELD_NUMBER = 6;
     public static final int REPORTTIME_FIELD_NUMBER = 7;
+
+    /**
+     * <code>.SupportReportType supportReportType = 1;</code>
+     */
+    public int getSupportReportTypeValue() {
+      return supportReportType_;
+    }
+
+    /**
+     * <code>.SupportReportType supportReportType = 1;</code>
+     */
+    public com.vv.personal.twm.artifactory.generated.tw.SupportReportProto.SupportReportType getSupportReportType() {
+      @SuppressWarnings("deprecation")
+      com.vv.personal.twm.artifactory.generated.tw.SupportReportProto.SupportReportType result = com.vv.personal.twm.artifactory.generated.tw.SupportReportProto.SupportReportType.valueOf(supportReportType_);
+      return result == null ? com.vv.personal.twm.artifactory.generated.tw.SupportReportProto.SupportReportType.UNRECOGNIZED : result;
+    }
+
     public static final int REPORTSUBJECT_FIELD_NUMBER = 8;
     private static final long serialVersionUID = 0L;
     // @@protoc_insertion_point(class_scope:SupportReport)
@@ -385,21 +419,6 @@ public final class SupportReportProto {
     private volatile java.lang.Object reportTime_;
     private volatile java.lang.Object reportSubject_;
     private byte memoizedIsInitialized = -1;
-
-    // Use SupportReport.newBuilder() to construct.
-    private SupportReport(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-
-    private SupportReport() {
-      supportReportType_ = 0;
-      from_ = "";
-      origin_ = "";
-      to_ = "";
-      destination_ = "";
-      reportTime_ = "";
-      reportSubject_ = "";
-    }
 
     private SupportReport(
             com.google.protobuf.CodedInputStream input,
@@ -477,7 +496,7 @@ public final class SupportReportProto {
             }
             default: {
               if (!parseUnknownFieldProto3(
-                      input, unknownFields, extensionRegistry, tag)) {
+                  input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
               break;
@@ -488,7 +507,7 @@ public final class SupportReportProto {
         throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
-                e).setUnfinishedMessage(this);
+            e).setUnfinishedMessage(this);
       } finally {
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -511,6 +530,27 @@ public final class SupportReportProto {
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
+    }
+
+    /**
+     * <code>.Troops troops = 6;</code>
+     */
+    public boolean hasTroops() {
+      return troops_ != null;
+    }
+
+    /**
+     * <code>.Troops troops = 6;</code>
+     */
+    public com.vv.personal.twm.artifactory.generated.tw.SupportReportProto.Troops getTroops() {
+      return troops_ == null ? com.vv.personal.twm.artifactory.generated.tw.SupportReportProto.Troops.getDefaultInstance() : troops_;
+    }
+
+    /**
+     * <code>.Troops troops = 6;</code>
+     */
+    public com.vv.personal.twm.artifactory.generated.tw.SupportReportProto.TroopsOrBuilder getTroopsOrBuilder() {
+      return getTroops();
     }
 
     public static com.vv.personal.twm.artifactory.generated.tw.SupportReportProto.SupportReport parseFrom(
@@ -573,6 +613,16 @@ public final class SupportReportProto {
               .parseWithIOException(PARSER, input);
     }
 
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
     public static com.vv.personal.twm.artifactory.generated.tw.SupportReportProto.SupportReport parseFrom(
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -587,6 +637,36 @@ public final class SupportReportProto {
 
     public static Builder newBuilder(com.vv.personal.twm.artifactory.generated.tw.SupportReportProto.SupportReport prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + SUPPORTREPORTTYPE_FIELD_NUMBER;
+      hash = (53 * hash) + supportReportType_;
+      hash = (37 * hash) + FROM_FIELD_NUMBER;
+      hash = (53 * hash) + getFrom().hashCode();
+      hash = (37 * hash) + ORIGIN_FIELD_NUMBER;
+      hash = (53 * hash) + getOrigin().hashCode();
+      hash = (37 * hash) + TO_FIELD_NUMBER;
+      hash = (53 * hash) + getTo().hashCode();
+      hash = (37 * hash) + DESTINATION_FIELD_NUMBER;
+      hash = (53 * hash) + getDestination().hashCode();
+      if (hasTroops()) {
+        hash = (37 * hash) + TROOPS_FIELD_NUMBER;
+        hash = (53 * hash) + getTroops().hashCode();
+      }
+      hash = (37 * hash) + REPORTTIME_FIELD_NUMBER;
+      hash = (53 * hash) + getReportTime().hashCode();
+      hash = (37 * hash) + REPORTSUBJECT_FIELD_NUMBER;
+      hash = (53 * hash) + getReportSubject().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
     }
 
     public static com.vv.personal.twm.artifactory.generated.tw.SupportReportProto.SupportReport getDefaultInstance() {
@@ -609,22 +689,6 @@ public final class SupportReportProto {
       return com.vv.personal.twm.artifactory.generated.tw.SupportReportProto.internal_static_SupportReport_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
                       com.vv.personal.twm.artifactory.generated.tw.SupportReportProto.SupportReport.class, com.vv.personal.twm.artifactory.generated.tw.SupportReportProto.SupportReport.Builder.class);
-    }
-
-    /**
-     * <code>.SupportReportType supportReportType = 1;</code>
-     */
-    public int getSupportReportTypeValue() {
-      return supportReportType_;
-    }
-
-    /**
-     * <code>.SupportReportType supportReportType = 1;</code>
-     */
-    public com.vv.personal.twm.artifactory.generated.tw.SupportReportProto.SupportReportType getSupportReportType() {
-      @SuppressWarnings("deprecation")
-      com.vv.personal.twm.artifactory.generated.tw.SupportReportProto.SupportReportType result = com.vv.personal.twm.artifactory.generated.tw.SupportReportProto.SupportReportType.valueOf(supportReportType_);
-      return result == null ? com.vv.personal.twm.artifactory.generated.tw.SupportReportProto.SupportReportType.UNRECOGNIZED : result;
     }
 
     /**
@@ -718,7 +782,7 @@ public final class SupportReportProto {
       if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b =
                 com.google.protobuf.ByteString.copyFromUtf8(
-                        (java.lang.String) ref);
+                (java.lang.String) ref);
         to_ = b;
         return b;
       } else {
@@ -751,33 +815,12 @@ public final class SupportReportProto {
       if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b =
                 com.google.protobuf.ByteString.copyFromUtf8(
-                        (java.lang.String) ref);
+                (java.lang.String) ref);
         destination_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
-    }
-
-    /**
-     * <code>.Troops troops = 6;</code>
-     */
-    public boolean hasTroops() {
-      return troops_ != null;
-    }
-
-    /**
-     * <code>.Troops troops = 6;</code>
-     */
-    public com.vv.personal.twm.artifactory.generated.tw.SupportReportProto.Troops getTroops() {
-      return troops_ == null ? com.vv.personal.twm.artifactory.generated.tw.SupportReportProto.Troops.getDefaultInstance() : troops_;
-    }
-
-    /**
-     * <code>.Troops troops = 6;</code>
-     */
-    public com.vv.personal.twm.artifactory.generated.tw.SupportReportProto.TroopsOrBuilder getTroopsOrBuilder() {
-      return getTroops();
     }
 
     /**
@@ -805,7 +848,7 @@ public final class SupportReportProto {
       if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b =
                 com.google.protobuf.ByteString.copyFromUtf8(
-                        (java.lang.String) ref);
+                (java.lang.String) ref);
         reportTime_ = b;
         return b;
       } else {
@@ -847,16 +890,6 @@ public final class SupportReportProto {
     }
 
     @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
             throws java.io.IOException {
       if (supportReportType_ != com.vv.personal.twm.artifactory.generated.tw.SupportReportProto.SupportReportType.ACQUIRED.getNumber()) {
@@ -894,7 +927,7 @@ public final class SupportReportProto {
       size = 0;
       if (supportReportType_ != com.vv.personal.twm.artifactory.generated.tw.SupportReportProto.SupportReportType.ACQUIRED.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
-                .computeEnumSize(1, supportReportType_);
+          .computeEnumSize(1, supportReportType_);
       }
       if (!getFromBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, from_);
@@ -910,7 +943,7 @@ public final class SupportReportProto {
       }
       if (troops_ != null) {
         size += com.google.protobuf.CodedOutputStream
-                .computeMessageSize(6, getTroops());
+          .computeMessageSize(6, getTroops());
       }
       if (!getReportTimeBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, reportTime_);
@@ -926,7 +959,7 @@ public final class SupportReportProto {
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
-        return true;
+       return true;
       }
       if (!(obj instanceof com.vv.personal.twm.artifactory.generated.tw.SupportReportProto.SupportReport)) {
         return super.equals(obj);
@@ -940,7 +973,7 @@ public final class SupportReportProto {
       result = result && getOrigin()
               .equals(other.getOrigin());
       result = result && getTo()
-              .equals(other.getTo());
+          .equals(other.getTo());
       result = result && getDestination()
               .equals(other.getDestination());
       result = result && (hasTroops() == other.hasTroops());
@@ -957,36 +990,6 @@ public final class SupportReportProto {
     }
 
     @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + SUPPORTREPORTTYPE_FIELD_NUMBER;
-      hash = (53 * hash) + supportReportType_;
-      hash = (37 * hash) + FROM_FIELD_NUMBER;
-      hash = (53 * hash) + getFrom().hashCode();
-      hash = (37 * hash) + ORIGIN_FIELD_NUMBER;
-      hash = (53 * hash) + getOrigin().hashCode();
-      hash = (37 * hash) + TO_FIELD_NUMBER;
-      hash = (53 * hash) + getTo().hashCode();
-      hash = (37 * hash) + DESTINATION_FIELD_NUMBER;
-      hash = (53 * hash) + getDestination().hashCode();
-      if (hasTroops()) {
-        hash = (37 * hash) + TROOPS_FIELD_NUMBER;
-        hash = (53 * hash) + getTroops().hashCode();
-      }
-      hash = (37 * hash) + REPORTTIME_FIELD_NUMBER;
-      hash = (53 * hash) + getReportTime().hashCode();
-      hash = (37 * hash) + REPORTSUBJECT_FIELD_NUMBER;
-      hash = (53 * hash) + getReportSubject().hashCode();
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    @java.lang.Override
     public Builder newBuilderForType() {
       return newBuilder();
     }
@@ -999,7 +1002,7 @@ public final class SupportReportProto {
 
     @java.lang.Override
     protected Builder newBuilderForType(
-            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -1025,43 +1028,12 @@ public final class SupportReportProto {
       private java.lang.Object from_ = "";
       private java.lang.Object origin_ = "";
       private java.lang.Object to_ = "";
-      private java.lang.Object destination_ = "";
-      private com.vv.personal.twm.artifactory.generated.tw.SupportReportProto.Troops troops_ = null;
-      private com.google.protobuf.SingleFieldBuilderV3<
-              com.vv.personal.twm.artifactory.generated.tw.SupportReportProto.Troops, com.vv.personal.twm.artifactory.generated.tw.SupportReportProto.Troops.Builder, com.vv.personal.twm.artifactory.generated.tw.SupportReportProto.TroopsOrBuilder> troopsBuilder_;
-      private java.lang.Object reportTime_ = "";
-      private java.lang.Object reportSubject_ = "";
-
-      // Construct using com.vv.personal.twm.artifactory.generated.tw.SupportReportProto.SupportReport.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-              com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-
-      public static final com.google.protobuf.Descriptors.Descriptor
-      getDescriptor() {
-        return com.vv.personal.twm.artifactory.generated.tw.SupportReportProto.internal_static_SupportReport_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internalGetFieldAccessorTable() {
-        return com.vv.personal.twm.artifactory.generated.tw.SupportReportProto.internal_static_SupportReport_fieldAccessorTable
-                .ensureFieldAccessorsInitialized(
-                        com.vv.personal.twm.artifactory.generated.tw.SupportReportProto.SupportReport.class, com.vv.personal.twm.artifactory.generated.tw.SupportReportProto.SupportReport.Builder.class);
-      }
 
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessageV3
                 .alwaysUseFieldBuilders) {
         }
       }
-
       @java.lang.Override
       public Builder clear() {
         super.clear();
@@ -1087,12 +1059,7 @@ public final class SupportReportProto {
 
         return this;
       }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-      getDescriptorForType() {
-        return com.vv.personal.twm.artifactory.generated.tw.SupportReportProto.internal_static_SupportReport_descriptor;
-      }
+      private java.lang.Object destination_ = "";
 
       @java.lang.Override
       public com.vv.personal.twm.artifactory.generated.tw.SupportReportProto.SupportReport getDefaultInstanceForType() {
@@ -1132,47 +1099,21 @@ public final class SupportReportProto {
         return super.clone();
       }
 
-      @java.lang.Override
-      public Builder setField(
-              com.google.protobuf.Descriptors.FieldDescriptor field,
-              java.lang.Object value) {
-        return super.setField(field, value);
+      private com.vv.personal.twm.artifactory.generated.tw.SupportReportProto.Troops troops_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+              com.vv.personal.twm.artifactory.generated.tw.SupportReportProto.Troops, com.vv.personal.twm.artifactory.generated.tw.SupportReportProto.Troops.Builder, com.vv.personal.twm.artifactory.generated.tw.SupportReportProto.TroopsOrBuilder> troopsBuilder_;
+      private java.lang.Object reportTime_ = "";
+      private java.lang.Object reportSubject_ = "";
+
+      // Construct using com.vv.personal.twm.artifactory.generated.tw.SupportReportProto.SupportReport.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
       }
 
-      @java.lang.Override
-      public Builder clearField(
-              com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-
-      @java.lang.Override
-      public Builder clearOneof(
-              com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-
-      @java.lang.Override
-      public Builder setRepeatedField(
-              com.google.protobuf.Descriptors.FieldDescriptor field,
-              int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-
-      @java.lang.Override
-      public Builder addRepeatedField(
-              com.google.protobuf.Descriptors.FieldDescriptor field,
-              java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.vv.personal.twm.artifactory.generated.tw.SupportReportProto.SupportReport) {
-          return mergeFrom((com.vv.personal.twm.artifactory.generated.tw.SupportReportProto.SupportReport) other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
+      private Builder(
+              com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
       }
 
       public Builder mergeFrom(com.vv.personal.twm.artifactory.generated.tw.SupportReportProto.SupportReport other) {
@@ -1217,23 +1158,17 @@ public final class SupportReportProto {
         return true;
       }
 
+      public static final com.google.protobuf.Descriptors.Descriptor
+      getDescriptor() {
+        return com.vv.personal.twm.artifactory.generated.tw.SupportReportProto.internal_static_SupportReport_descriptor;
+      }
+
       @java.lang.Override
-      public Builder mergeFrom(
-              com.google.protobuf.CodedInputStream input,
-              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-              throws java.io.IOException {
-        com.vv.personal.twm.artifactory.generated.tw.SupportReportProto.SupportReport parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.vv.personal.twm.artifactory.generated.tw.SupportReportProto.SupportReport) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internalGetFieldAccessorTable() {
+        return com.vv.personal.twm.artifactory.generated.tw.SupportReportProto.internal_static_SupportReport_fieldAccessorTable
+                .ensureFieldAccessorsInitialized(
+                        com.vv.personal.twm.artifactory.generated.tw.SupportReportProto.SupportReport.class, com.vv.personal.twm.artifactory.generated.tw.SupportReportProto.SupportReport.Builder.class);
       }
 
       /**
@@ -1259,6 +1194,74 @@ public final class SupportReportProto {
         @SuppressWarnings("deprecation")
         com.vv.personal.twm.artifactory.generated.tw.SupportReportProto.SupportReportType result = com.vv.personal.twm.artifactory.generated.tw.SupportReportProto.SupportReportType.valueOf(supportReportType_);
         return result == null ? com.vv.personal.twm.artifactory.generated.tw.SupportReportProto.SupportReportType.UNRECOGNIZED : result;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+      getDescriptorForType() {
+        return com.vv.personal.twm.artifactory.generated.tw.SupportReportProto.internal_static_SupportReport_descriptor;
+      }
+
+      @java.lang.Override
+      public Builder setField(
+              com.google.protobuf.Descriptors.FieldDescriptor field,
+              java.lang.Object value) {
+        return super.setField(field, value);
+      }
+
+      @java.lang.Override
+      public Builder clearField(
+              com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+
+      @java.lang.Override
+      public Builder clearOneof(
+              com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+
+      @java.lang.Override
+      public Builder setRepeatedField(
+              com.google.protobuf.Descriptors.FieldDescriptor field,
+              int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.vv.personal.twm.artifactory.generated.tw.SupportReportProto.SupportReport) {
+          return mergeFrom((com.vv.personal.twm.artifactory.generated.tw.SupportReportProto.SupportReport) other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws java.io.IOException {
+        com.vv.personal.twm.artifactory.generated.tw.SupportReportProto.SupportReport parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.vv.personal.twm.artifactory.generated.tw.SupportReportProto.SupportReport) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
       }
 
       /**
@@ -1335,11 +1338,11 @@ public final class SupportReportProto {
        * <code>string from = 2;</code>
        */
       public Builder setFromBytes(
-              com.google.protobuf.ByteString value) {
+          com.google.protobuf.ByteString value) {
         if (value == null) {
-          throw new NullPointerException();
-        }
-        checkByteStringIsUtf8(value);
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
 
         from_ = value;
         onChanged();
@@ -1407,11 +1410,11 @@ public final class SupportReportProto {
        * <code>string origin = 3;</code>
        */
       public Builder setOriginBytes(
-              com.google.protobuf.ByteString value) {
+          com.google.protobuf.ByteString value) {
         if (value == null) {
-          throw new NullPointerException();
-        }
-        checkByteStringIsUtf8(value);
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
 
         origin_ = value;
         onChanged();
@@ -1479,11 +1482,11 @@ public final class SupportReportProto {
        * <code>string to = 4;</code>
        */
       public Builder setToBytes(
-              com.google.protobuf.ByteString value) {
+          com.google.protobuf.ByteString value) {
         if (value == null) {
-          throw new NullPointerException();
-        }
-        checkByteStringIsUtf8(value);
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
 
         to_ = value;
         onChanged();
@@ -1538,13 +1541,46 @@ public final class SupportReportProto {
         java.lang.Object ref = destination_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b =
-                  com.google.protobuf.ByteString.copyFromUtf8(
-                          (java.lang.String) ref);
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
           destination_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
         }
+      }
+      /**
+       * <code>.Troops troops = 6;</code>
+       */
+      public boolean hasTroops() {
+        return troopsBuilder_ != null || troops_ != null;
+      }
+      /**
+       * <code>.Troops troops = 6;</code>
+       */
+      public com.vv.personal.twm.artifactory.generated.tw.SupportReportProto.Troops getTroops() {
+        if (troopsBuilder_ == null) {
+          return troops_ == null ? com.vv.personal.twm.artifactory.generated.tw.SupportReportProto.Troops.getDefaultInstance() : troops_;
+        } else {
+          return troopsBuilder_.getMessage();
+        }
+      }
+
+      /**
+       * <code>.Troops troops = 6;</code>
+       */
+      public Builder setTroops(com.vv.personal.twm.artifactory.generated.tw.SupportReportProto.Troops value) {
+        if (troopsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          troops_ = value;
+          onChanged();
+        } else {
+          troopsBuilder_.setMessage(value);
+        }
+
+        return this;
       }
 
       /**
@@ -1575,33 +1611,13 @@ public final class SupportReportProto {
       /**
        * <code>.Troops troops = 6;</code>
        */
-      public boolean hasTroops() {
-        return troopsBuilder_ != null || troops_ != null;
-      }
-
-      /**
-       * <code>.Troops troops = 6;</code>
-       */
-      public com.vv.personal.twm.artifactory.generated.tw.SupportReportProto.Troops getTroops() {
+      public Builder clearTroops() {
         if (troopsBuilder_ == null) {
-          return troops_ == null ? com.vv.personal.twm.artifactory.generated.tw.SupportReportProto.Troops.getDefaultInstance() : troops_;
-        } else {
-          return troopsBuilder_.getMessage();
-        }
-      }
-
-      /**
-       * <code>.Troops troops = 6;</code>
-       */
-      public Builder setTroops(com.vv.personal.twm.artifactory.generated.tw.SupportReportProto.Troops value) {
-        if (troopsBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          troops_ = value;
+          troops_ = null;
           onChanged();
         } else {
-          troopsBuilder_.setMessage(value);
+          troops_ = null;
+          troopsBuilder_ = null;
         }
 
         return this;
@@ -1611,7 +1627,7 @@ public final class SupportReportProto {
        * <code>.Troops troops = 6;</code>
        */
       public Builder setTroops(
-              com.vv.personal.twm.artifactory.generated.tw.SupportReportProto.Troops.Builder builderForValue) {
+          com.vv.personal.twm.artifactory.generated.tw.SupportReportProto.Troops.Builder builderForValue) {
         if (troopsBuilder_ == null) {
           troops_ = builderForValue.build();
           onChanged();
@@ -1629,28 +1645,13 @@ public final class SupportReportProto {
         if (troopsBuilder_ == null) {
           if (troops_ != null) {
             troops_ =
-                    com.vv.personal.twm.artifactory.generated.tw.SupportReportProto.Troops.newBuilder(troops_).mergeFrom(value).buildPartial();
+              com.vv.personal.twm.artifactory.generated.tw.SupportReportProto.Troops.newBuilder(troops_).mergeFrom(value).buildPartial();
           } else {
             troops_ = value;
           }
           onChanged();
         } else {
           troopsBuilder_.mergeFrom(value);
-        }
-
-        return this;
-      }
-
-      /**
-       * <code>.Troops troops = 6;</code>
-       */
-      public Builder clearTroops() {
-        if (troopsBuilder_ == null) {
-          troops_ = null;
-          onChanged();
-        } else {
-          troops_ = null;
-          troopsBuilder_ = null;
         }
 
         return this;
@@ -1745,11 +1746,11 @@ public final class SupportReportProto {
        * <code>string reportTime = 7;</code>
        */
       public Builder setReportTimeBytes(
-              com.google.protobuf.ByteString value) {
+          com.google.protobuf.ByteString value) {
         if (value == null) {
-          throw new NullPointerException();
-        }
-        checkByteStringIsUtf8(value);
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
 
         reportTime_ = value;
         onChanged();
@@ -1864,50 +1865,6 @@ public final class SupportReportProto {
           // @@protoc_insertion_point(message_implements:Troops)
           TroopsOrBuilder {
     public static final int SP_FIELD_NUMBER = 1;
-    public static final int SW_FIELD_NUMBER = 2;
-    public static final int AX_FIELD_NUMBER = 3;
-    public static final int AR_FIELD_NUMBER = 4;
-    public static final int SU_FIELD_NUMBER = 5;
-    public static final int LC_FIELD_NUMBER = 6;
-    public static final int MA_FIELD_NUMBER = 7;
-    public static final int HC_FIELD_NUMBER = 8;
-    public static final int RM_FIELD_NUMBER = 9;
-    public static final int CT_FIELD_NUMBER = 10;
-    public static final int NB_FIELD_NUMBER = 11;
-    public static final int PD_FIELD_NUMBER = 12;
-    public static final int WL_FIELD_NUMBER = 13;
-    private static final long serialVersionUID = 0L;
-    // @@protoc_insertion_point(class_scope:Troops)
-    private static final com.vv.personal.twm.artifactory.generated.tw.SupportReportProto.Troops DEFAULT_INSTANCE;
-    private static final com.google.protobuf.Parser<Troops>
-            PARSER = new com.google.protobuf.AbstractParser<Troops>() {
-      @java.lang.Override
-      public Troops parsePartialFrom(
-              com.google.protobuf.CodedInputStream input,
-              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-              throws com.google.protobuf.InvalidProtocolBufferException {
-        return new Troops(input, extensionRegistry);
-      }
-    };
-
-    static {
-      DEFAULT_INSTANCE = new com.vv.personal.twm.artifactory.generated.tw.SupportReportProto.Troops();
-    }
-
-    private int sp_;
-    private int sw_;
-    private int ax_;
-    private int ar_;
-    private int su_;
-    private int lc_;
-    private int ma_;
-    private int hc_;
-    private int rm_;
-    private int ct_;
-    private int nb_;
-    private int pd_;
-    private int wl_;
-    private byte memoizedIsInitialized = -1;
 
     // Use Troops.newBuilder() to construct.
     private Troops(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
@@ -1930,17 +1887,164 @@ public final class SupportReportProto {
       wl_ = 0;
     }
 
+    public static final int SW_FIELD_NUMBER = 2;
+    public static final int AX_FIELD_NUMBER = 3;
+    public static final int AR_FIELD_NUMBER = 4;
+    public static final int SU_FIELD_NUMBER = 5;
+    public static final int LC_FIELD_NUMBER = 6;
+    public static final int MA_FIELD_NUMBER = 7;
+
+    /**
+     * <code>int32 sp = 1;</code>
+     */
+    public int getSp() {
+      return sp_;
+    }
+
+    public static final int HC_FIELD_NUMBER = 8;
+    public static final int RM_FIELD_NUMBER = 9;
+
+    /**
+     * <code>int32 sw = 2;</code>
+     */
+    public int getSw() {
+      return sw_;
+    }
+
+    public static final int CT_FIELD_NUMBER = 10;
+    public static final int NB_FIELD_NUMBER = 11;
+
+    /**
+     * <code>int32 ax = 3;</code>
+     */
+    public int getAx() {
+      return ax_;
+    }
+
+    public static final int PD_FIELD_NUMBER = 12;
+    public static final int WL_FIELD_NUMBER = 13;
+
+    /**
+     * <code>int32 ar = 4;</code>
+     */
+    public int getAr() {
+      return ar_;
+    }
+
+    private static final long serialVersionUID = 0L;
+    // @@protoc_insertion_point(class_scope:Troops)
+    private static final com.vv.personal.twm.artifactory.generated.tw.SupportReportProto.Troops DEFAULT_INSTANCE;
+
+    /**
+     * <code>int32 su = 5;</code>
+     */
+    public int getSu() {
+      return su_;
+    }
+
+    private static final com.google.protobuf.Parser<Troops>
+            PARSER = new com.google.protobuf.AbstractParser<Troops>() {
+      @java.lang.Override
+      public Troops parsePartialFrom(
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws com.google.protobuf.InvalidProtocolBufferException {
+        return new Troops(input, extensionRegistry);
+      }
+    };
+
+    static {
+      DEFAULT_INSTANCE = new com.vv.personal.twm.artifactory.generated.tw.SupportReportProto.Troops();
+    }
+
+    /**
+     * <code>int32 lc = 6;</code>
+     */
+    public int getLc() {
+      return lc_;
+    }
+
+    private int sp_;
+    private int sw_;
+
+    /**
+     * <code>int32 ma = 7;</code>
+     */
+    public int getMa() {
+      return ma_;
+    }
+
+    private int ax_;
+    private int ar_;
+
+    /**
+     * <code>int32 hc = 8;</code>
+     */
+    public int getHc() {
+      return hc_;
+    }
+
+    private int su_;
+    private int lc_;
+
+    /**
+     * <code>int32 rm = 9;</code>
+     */
+    public int getRm() {
+      return rm_;
+    }
+
+    private int ma_;
+    private int hc_;
+
+    /**
+     * <code>int32 ct = 10;</code>
+     */
+    public int getCt() {
+      return ct_;
+    }
+
+    private int rm_;
+    private int ct_;
+
+    /**
+     * <code>int32 nb = 11;</code>
+     */
+    public int getNb() {
+      return nb_;
+    }
+
+    private int nb_;
+    private int pd_;
+
+    /**
+     * <code>int32 pd = 12;</code>
+     */
+    public int getPd() {
+      return pd_;
+    }
+
+    private int wl_;
+    private byte memoizedIsInitialized = -1;
+
+    /**
+     * <code>int32 wl = 13;</code>
+     */
+    public int getWl() {
+      return wl_;
+    }
+
     private Troops(
             com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
       int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-              com.google.protobuf.UnknownFieldSet.newBuilder();
+          com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -2034,6 +2138,16 @@ public final class SupportReportProto {
       }
     }
 
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
     public static final com.google.protobuf.Descriptors.Descriptor
     getDescriptor() {
       return com.vv.personal.twm.artifactory.generated.tw.SupportReportProto.internal_static_Troops_descriptor;
@@ -2050,6 +2164,44 @@ public final class SupportReportProto {
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + SP_FIELD_NUMBER;
+      hash = (53 * hash) + getSp();
+      hash = (37 * hash) + SW_FIELD_NUMBER;
+      hash = (53 * hash) + getSw();
+      hash = (37 * hash) + AX_FIELD_NUMBER;
+      hash = (53 * hash) + getAx();
+      hash = (37 * hash) + AR_FIELD_NUMBER;
+      hash = (53 * hash) + getAr();
+      hash = (37 * hash) + SU_FIELD_NUMBER;
+      hash = (53 * hash) + getSu();
+      hash = (37 * hash) + LC_FIELD_NUMBER;
+      hash = (53 * hash) + getLc();
+      hash = (37 * hash) + MA_FIELD_NUMBER;
+      hash = (53 * hash) + getMa();
+      hash = (37 * hash) + HC_FIELD_NUMBER;
+      hash = (53 * hash) + getHc();
+      hash = (37 * hash) + RM_FIELD_NUMBER;
+      hash = (53 * hash) + getRm();
+      hash = (37 * hash) + CT_FIELD_NUMBER;
+      hash = (53 * hash) + getCt();
+      hash = (37 * hash) + NB_FIELD_NUMBER;
+      hash = (53 * hash) + getNb();
+      hash = (37 * hash) + PD_FIELD_NUMBER;
+      hash = (53 * hash) + getPd();
+      hash = (37 * hash) + WL_FIELD_NUMBER;
+      hash = (53 * hash) + getWl();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
     }
 
     public static com.vv.personal.twm.artifactory.generated.tw.SupportReportProto.Troops parseFrom(
@@ -2109,15 +2261,15 @@ public final class SupportReportProto {
             com.google.protobuf.CodedInputStream input)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
-              .parseWithIOException(PARSER, input);
+          .parseWithIOException(PARSER, input);
     }
 
     public static com.vv.personal.twm.artifactory.generated.tw.SupportReportProto.Troops parseFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws java.io.IOException {
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
-              .parseWithIOException(PARSER, input, extensionRegistry);
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
     public static Builder newBuilder() {
@@ -2150,110 +2302,9 @@ public final class SupportReportProto {
                       com.vv.personal.twm.artifactory.generated.tw.SupportReportProto.Troops.class, com.vv.personal.twm.artifactory.generated.tw.SupportReportProto.Troops.Builder.class);
     }
 
-    /**
-     * <code>int32 sp = 1;</code>
-     */
-    public int getSp() {
-      return sp_;
-    }
-
-    /**
-     * <code>int32 sw = 2;</code>
-     */
-    public int getSw() {
-      return sw_;
-    }
-
-    /**
-     * <code>int32 ax = 3;</code>
-     */
-    public int getAx() {
-      return ax_;
-    }
-
-    /**
-     * <code>int32 ar = 4;</code>
-     */
-    public int getAr() {
-      return ar_;
-    }
-
-    /**
-     * <code>int32 su = 5;</code>
-     */
-    public int getSu() {
-      return su_;
-    }
-
-    /**
-     * <code>int32 lc = 6;</code>
-     */
-    public int getLc() {
-      return lc_;
-    }
-
-    /**
-     * <code>int32 ma = 7;</code>
-     */
-    public int getMa() {
-      return ma_;
-    }
-
-    /**
-     * <code>int32 hc = 8;</code>
-     */
-    public int getHc() {
-      return hc_;
-    }
-
-    /**
-     * <code>int32 rm = 9;</code>
-     */
-    public int getRm() {
-      return rm_;
-    }
-
-    /**
-     * <code>int32 ct = 10;</code>
-     */
-    public int getCt() {
-      return ct_;
-    }
-
-    /**
-     * <code>int32 nb = 11;</code>
-     */
-    public int getNb() {
-      return nb_;
-    }
-
-    /**
-     * <code>int32 pd = 12;</code>
-     */
-    public int getPd() {
-      return pd_;
-    }
-
-    /**
-     * <code>int32 wl = 13;</code>
-     */
-    public int getWl() {
-      return wl_;
-    }
-
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
-            throws java.io.IOException {
+                        throws java.io.IOException {
       if (sp_ != 0) {
         output.writeInt32(1, sp_);
       }
@@ -2340,19 +2391,19 @@ public final class SupportReportProto {
       }
       if (ct_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-                .computeInt32Size(10, ct_);
+          .computeInt32Size(10, ct_);
       }
       if (nb_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-                .computeInt32Size(11, nb_);
+          .computeInt32Size(11, nb_);
       }
       if (pd_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-                .computeInt32Size(12, pd_);
+          .computeInt32Size(12, pd_);
       }
       if (wl_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-                .computeInt32Size(13, wl_);
+          .computeInt32Size(13, wl_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -2383,11 +2434,11 @@ public final class SupportReportProto {
       result = result && (getLc()
               == other.getLc());
       result = result && (getMa()
-              == other.getMa());
+          == other.getMa());
       result = result && (getHc()
               == other.getHc());
       result = result && (getRm()
-              == other.getRm());
+          == other.getRm());
       result = result && (getCt()
               == other.getCt());
       result = result && (getNb()
@@ -2401,52 +2452,12 @@ public final class SupportReportProto {
     }
 
     @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + SP_FIELD_NUMBER;
-      hash = (53 * hash) + getSp();
-      hash = (37 * hash) + SW_FIELD_NUMBER;
-      hash = (53 * hash) + getSw();
-      hash = (37 * hash) + AX_FIELD_NUMBER;
-      hash = (53 * hash) + getAx();
-      hash = (37 * hash) + AR_FIELD_NUMBER;
-      hash = (53 * hash) + getAr();
-      hash = (37 * hash) + SU_FIELD_NUMBER;
-      hash = (53 * hash) + getSu();
-      hash = (37 * hash) + LC_FIELD_NUMBER;
-      hash = (53 * hash) + getLc();
-      hash = (37 * hash) + MA_FIELD_NUMBER;
-      hash = (53 * hash) + getMa();
-      hash = (37 * hash) + HC_FIELD_NUMBER;
-      hash = (53 * hash) + getHc();
-      hash = (37 * hash) + RM_FIELD_NUMBER;
-      hash = (53 * hash) + getRm();
-      hash = (37 * hash) + CT_FIELD_NUMBER;
-      hash = (53 * hash) + getCt();
-      hash = (37 * hash) + NB_FIELD_NUMBER;
-      hash = (53 * hash) + getNb();
-      hash = (37 * hash) + PD_FIELD_NUMBER;
-      hash = (53 * hash) + getPd();
-      hash = (37 * hash) + WL_FIELD_NUMBER;
-      hash = (53 * hash) + getWl();
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() {
-      return newBuilder();
-    }
+    public Builder newBuilderForType() { return newBuilder(); }
 
     @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
-              ? new Builder() : new Builder().mergeFrom(this);
+          ? new Builder() : new Builder().mergeFrom(this);
     }
 
     @java.lang.Override
@@ -2472,51 +2483,16 @@ public final class SupportReportProto {
     public static final class Builder extends
             com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
             // @@protoc_insertion_point(builder_implements:Troops)
-            com.vv.personal.twm.artifactory.generated.tw.SupportReportProto.TroopsOrBuilder {
-      private int sp_;
-      private int sw_;
-      private int ax_;
-      private int ar_;
-      private int su_;
-      private int lc_;
-      private int ma_;
-      private int hc_;
-      private int rm_;
-      private int ct_;
-      private int nb_;
-      private int pd_;
-      private int wl_;
-
-      // Construct using com.vv.personal.twm.artifactory.generated.tw.SupportReportProto.Troops.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-              com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-
-      public static final com.google.protobuf.Descriptors.Descriptor
-      getDescriptor() {
-        return com.vv.personal.twm.artifactory.generated.tw.SupportReportProto.internal_static_Troops_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internalGetFieldAccessorTable() {
-        return com.vv.personal.twm.artifactory.generated.tw.SupportReportProto.internal_static_Troops_fieldAccessorTable
-                .ensureFieldAccessorsInitialized(
-                        com.vv.personal.twm.artifactory.generated.tw.SupportReportProto.Troops.class, com.vv.personal.twm.artifactory.generated.tw.SupportReportProto.Troops.Builder.class);
-      }
-
+        com.vv.personal.twm.artifactory.generated.tw.SupportReportProto.TroopsOrBuilder {
+      private int sp_ ;
+      private int sw_ ;
+      private int ax_ ;
+      private int ar_ ;
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessageV3
                 .alwaysUseFieldBuilders) {
         }
       }
-
       @java.lang.Override
       public Builder clear() {
         super.clear();
@@ -2548,12 +2524,7 @@ public final class SupportReportProto {
 
         return this;
       }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-      getDescriptorForType() {
-        return com.vv.personal.twm.artifactory.generated.tw.SupportReportProto.internal_static_Troops_descriptor;
-      }
+      private int su_ ;
 
       @java.lang.Override
       public com.vv.personal.twm.artifactory.generated.tw.SupportReportProto.Troops getDefaultInstanceForType() {
@@ -2594,48 +2565,12 @@ public final class SupportReportProto {
         return super.clone();
       }
 
-      @java.lang.Override
-      public Builder setField(
-              com.google.protobuf.Descriptors.FieldDescriptor field,
-              java.lang.Object value) {
-        return super.setField(field, value);
-      }
-
-      @java.lang.Override
-      public Builder clearField(
-              com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-
-      @java.lang.Override
-      public Builder clearOneof(
-              com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-
-      @java.lang.Override
-      public Builder setRepeatedField(
-              com.google.protobuf.Descriptors.FieldDescriptor field,
-              int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-
-      @java.lang.Override
-      public Builder addRepeatedField(
-              com.google.protobuf.Descriptors.FieldDescriptor field,
-              java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.vv.personal.twm.artifactory.generated.tw.SupportReportProto.Troops) {
-          return mergeFrom((com.vv.personal.twm.artifactory.generated.tw.SupportReportProto.Troops) other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
+      private int lc_;
+      private int ma_;
+      private int hc_ ;
+      private int rm_ ;
+      private int ct_ ;
+      private int nb_ ;
 
       public Builder mergeFrom(com.vv.personal.twm.artifactory.generated.tw.SupportReportProto.Troops other) {
         if (other == com.vv.personal.twm.artifactory.generated.tw.SupportReportProto.Troops.getDefaultInstance()) return this;
@@ -2688,6 +2623,110 @@ public final class SupportReportProto {
         return true;
       }
 
+      private int pd_;
+      private int wl_;
+
+      /**
+       * <code>int32 sp = 1;</code>
+       */
+      public int getSp() {
+        return sp_;
+      }
+
+      // Construct using com.vv.personal.twm.artifactory.generated.tw.SupportReportProto.Troops.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+              com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+
+      public static final com.google.protobuf.Descriptors.Descriptor
+      getDescriptor() {
+        return com.vv.personal.twm.artifactory.generated.tw.SupportReportProto.internal_static_Troops_descriptor;
+      }
+
+      /**
+       * <code>int32 sw = 2;</code>
+       */
+      public int getSw() {
+        return sw_;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internalGetFieldAccessorTable() {
+        return com.vv.personal.twm.artifactory.generated.tw.SupportReportProto.internal_static_Troops_fieldAccessorTable
+                .ensureFieldAccessorsInitialized(
+                        com.vv.personal.twm.artifactory.generated.tw.SupportReportProto.Troops.class, com.vv.personal.twm.artifactory.generated.tw.SupportReportProto.Troops.Builder.class);
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+      getDescriptorForType() {
+        return com.vv.personal.twm.artifactory.generated.tw.SupportReportProto.internal_static_Troops_descriptor;
+      }
+
+      @java.lang.Override
+      public Builder setField(
+              com.google.protobuf.Descriptors.FieldDescriptor field,
+              java.lang.Object value) {
+        return super.setField(field, value);
+      }
+
+      /**
+       * <code>int32 ax = 3;</code>
+       */
+      public int getAx() {
+        return ax_;
+      }
+
+      @java.lang.Override
+      public Builder clearField(
+              com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+
+      @java.lang.Override
+      public Builder clearOneof(
+              com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+
+      @java.lang.Override
+      public Builder setRepeatedField(
+              com.google.protobuf.Descriptors.FieldDescriptor field,
+              int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+
+      /**
+       * <code>int32 ar = 4;</code>
+       */
+      public int getAr() {
+        return ar_;
+      }
+
+      @java.lang.Override
+      public Builder addRepeatedField(
+              com.google.protobuf.Descriptors.FieldDescriptor field,
+              java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.vv.personal.twm.artifactory.generated.tw.SupportReportProto.Troops) {
+          return mergeFrom((com.vv.personal.twm.artifactory.generated.tw.SupportReportProto.Troops) other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
       @java.lang.Override
       public Builder mergeFrom(
               com.google.protobuf.CodedInputStream input,
@@ -2708,10 +2747,10 @@ public final class SupportReportProto {
       }
 
       /**
-       * <code>int32 sp = 1;</code>
+       * <code>int32 su = 5;</code>
        */
-      public int getSp() {
-        return sp_;
+      public int getSu() {
+        return su_;
       }
 
       /**
@@ -2737,18 +2776,18 @@ public final class SupportReportProto {
       /**
        * <code>int32 sw = 2;</code>
        */
-      public int getSw() {
-        return sw_;
-      }
-
-      /**
-       * <code>int32 sw = 2;</code>
-       */
       public Builder setSw(int value) {
 
         sw_ = value;
         onChanged();
         return this;
+      }
+
+      /**
+       * <code>int32 lc = 6;</code>
+       */
+      public int getLc() {
+        return lc_;
       }
 
       /**
@@ -2759,13 +2798,6 @@ public final class SupportReportProto {
         sw_ = 0;
         onChanged();
         return this;
-      }
-
-      /**
-       * <code>int32 ax = 3;</code>
-       */
-      public int getAx() {
-        return ax_;
       }
 
       /**
@@ -2789,10 +2821,10 @@ public final class SupportReportProto {
       }
 
       /**
-       * <code>int32 ar = 4;</code>
+       * <code>int32 ma = 7;</code>
        */
-      public int getAr() {
-        return ar_;
+      public int getMa() {
+        return ma_;
       }
 
       /**
@@ -2818,18 +2850,18 @@ public final class SupportReportProto {
       /**
        * <code>int32 su = 5;</code>
        */
-      public int getSu() {
-        return su_;
-      }
-
-      /**
-       * <code>int32 su = 5;</code>
-       */
       public Builder setSu(int value) {
 
         su_ = value;
         onChanged();
         return this;
+      }
+
+      /**
+       * <code>int32 hc = 8;</code>
+       */
+      public int getHc() {
+        return hc_;
       }
 
       /**
@@ -2840,13 +2872,6 @@ public final class SupportReportProto {
         su_ = 0;
         onChanged();
         return this;
-      }
-
-      /**
-       * <code>int32 lc = 6;</code>
-       */
-      public int getLc() {
-        return lc_;
       }
 
       /**
@@ -2870,10 +2895,10 @@ public final class SupportReportProto {
       }
 
       /**
-       * <code>int32 ma = 7;</code>
+       * <code>int32 rm = 9;</code>
        */
-      public int getMa() {
-        return ma_;
+      public int getRm() {
+        return rm_;
       }
 
       /**
@@ -2899,18 +2924,18 @@ public final class SupportReportProto {
       /**
        * <code>int32 hc = 8;</code>
        */
-      public int getHc() {
-        return hc_;
-      }
-
-      /**
-       * <code>int32 hc = 8;</code>
-       */
       public Builder setHc(int value) {
 
         hc_ = value;
         onChanged();
         return this;
+      }
+
+      /**
+       * <code>int32 ct = 10;</code>
+       */
+      public int getCt() {
+        return ct_;
       }
 
       /**
@@ -2921,13 +2946,6 @@ public final class SupportReportProto {
         hc_ = 0;
         onChanged();
         return this;
-      }
-
-      /**
-       * <code>int32 rm = 9;</code>
-       */
-      public int getRm() {
-        return rm_;
       }
 
       /**
@@ -2951,10 +2969,10 @@ public final class SupportReportProto {
       }
 
       /**
-       * <code>int32 ct = 10;</code>
+       * <code>int32 nb = 11;</code>
        */
-      public int getCt() {
-        return ct_;
+      public int getNb() {
+        return nb_;
       }
 
       /**
@@ -2980,18 +2998,17 @@ public final class SupportReportProto {
       /**
        * <code>int32 nb = 11;</code>
        */
-      public int getNb() {
-        return nb_;
-      }
-
-      /**
-       * <code>int32 nb = 11;</code>
-       */
       public Builder setNb(int value) {
 
         nb_ = value;
         onChanged();
         return this;
+      }
+      /**
+       * <code>int32 pd = 12;</code>
+       */
+      public int getPd() {
+        return pd_;
       }
 
       /**
@@ -3002,13 +3019,6 @@ public final class SupportReportProto {
         nb_ = 0;
         onChanged();
         return this;
-      }
-
-      /**
-       * <code>int32 pd = 12;</code>
-       */
-      public int getPd() {
-        return pd_;
       }
 
       /**
@@ -3047,7 +3057,6 @@ public final class SupportReportProto {
         onChanged();
         return this;
       }
-
       /**
        * <code>int32 wl = 13;</code>
        */
@@ -3057,16 +3066,15 @@ public final class SupportReportProto {
         onChanged();
         return this;
       }
-
       @java.lang.Override
       public final Builder setUnknownFields(
-              final com.google.protobuf.UnknownFieldSet unknownFields) {
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
       @java.lang.Override
       public final Builder mergeUnknownFields(
-              final com.google.protobuf.UnknownFieldSet unknownFields) {
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 

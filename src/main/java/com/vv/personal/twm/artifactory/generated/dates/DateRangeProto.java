@@ -254,27 +254,10 @@ public final class DateRangeProto {
       return PARSER.parseFrom(data, extensionRegistry);
     }
 
-    /**
-     * <code>int64 daysInBetween = 3;</code>
-     */
-    public long getDaysInBetween() {
-      return daysInBetween_;
-    }
-
     public static com.vv.personal.twm.artifactory.generated.dates.DateRangeProto.DateRange parseFrom(
             com.google.protobuf.ByteString data)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
-    }
-
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
     }
 
     public static com.vv.personal.twm.artifactory.generated.dates.DateRangeProto.DateRange parseFrom(
@@ -296,10 +279,50 @@ public final class DateRangeProto {
       return PARSER.parseFrom(data, extensionRegistry);
     }
 
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getStartDateBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, startDate_);
+      }
+      if (!getEndDateBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, endDate_);
+      }
+      if (daysInBetween_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+                .computeInt64Size(3, daysInBetween_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
     public static com.vv.personal.twm.artifactory.generated.dates.DateRangeProto.DateRange parseFrom(java.io.InputStream input)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseWithIOException(PARSER, input);
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + STARTDATE_FIELD_NUMBER;
+      hash = (53 * hash) + getStartDate().hashCode();
+      hash = (37 * hash) + ENDDATE_FIELD_NUMBER;
+      hash = (53 * hash) + getEndDate().hashCode();
+      hash = (37 * hash) + DAYSINBETWEEN_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+              getDaysInBetween());
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
     }
 
     public static com.vv.personal.twm.artifactory.generated.dates.DateRangeProto.DateRange parseFrom(
@@ -435,6 +458,23 @@ public final class DateRangeProto {
       }
     }
 
+    /**
+     * <code>int64 daysInBetween = 3;</code>
+     */
+    public long getDaysInBetween() {
+      return daysInBetween_;
+    }
+
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
             throws java.io.IOException {
@@ -448,27 +488,6 @@ public final class DateRangeProto {
         output.writeInt64(3, daysInBetween_);
       }
       unknownFields.writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!getStartDateBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, startDate_);
-      }
-      if (!getEndDateBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, endDate_);
-      }
-      if (daysInBetween_ != 0L) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt64Size(3, daysInBetween_);
-      }
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
     }
 
     @java.lang.Override
@@ -490,25 +509,6 @@ public final class DateRangeProto {
           == other.getDaysInBetween());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + STARTDATE_FIELD_NUMBER;
-      hash = (53 * hash) + getStartDate().hashCode();
-      hash = (37 * hash) + ENDDATE_FIELD_NUMBER;
-      hash = (53 * hash) + getEndDate().hashCode();
-      hash = (37 * hash) + DAYSINBETWEEN_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          getDaysInBetween());
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
     }
 
     @java.lang.Override
@@ -548,18 +548,19 @@ public final class DateRangeProto {
             com.vv.personal.twm.artifactory.generated.dates.DateRangeProto.DateRangeOrBuilder {
       private java.lang.Object startDate_ = "";
       private java.lang.Object endDate_ = "";
-      private long daysInBetween_;
 
       // Construct using com.vv.personal.twm.artifactory.generated.dates.DateRangeProto.DateRange.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
+
+      private long daysInBetween_;
+
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessageV3
                 .alwaysUseFieldBuilders) {
         }
       }
-
       @java.lang.Override
       public Builder clear() {
         super.clear();
@@ -645,6 +646,30 @@ public final class DateRangeProto {
         return super.clearOneof(oneof);
       }
 
+      @java.lang.Override
+      public Builder setRepeatedField(
+              com.google.protobuf.Descriptors.FieldDescriptor field,
+              int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.vv.personal.twm.artifactory.generated.dates.DateRangeProto.DateRange) {
+          return mergeFrom((com.vv.personal.twm.artifactory.generated.dates.DateRangeProto.DateRange) other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
       public Builder mergeFrom(com.vv.personal.twm.artifactory.generated.dates.DateRangeProto.DateRange other) {
         if (other == com.vv.personal.twm.artifactory.generated.dates.DateRangeProto.DateRange.getDefaultInstance()) return this;
         if (!other.getStartDate().isEmpty()) {
@@ -663,33 +688,25 @@ public final class DateRangeProto {
         return this;
       }
 
+      /**
+       * <code>string startDate = 1;</code>
+       */
+      public java.lang.String getStartDate() {
+        java.lang.Object ref = startDate_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+                  (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          startDate_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+
       @java.lang.Override
       public final boolean isInitialized() {
         return true;
-      }
-
-      @java.lang.Override
-      public Builder setRepeatedField(
-              com.google.protobuf.Descriptors.FieldDescriptor field,
-              int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-
-      @java.lang.Override
-      public Builder addRepeatedField(
-              com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.vv.personal.twm.artifactory.generated.dates.DateRangeProto.DateRange) {
-          return mergeFrom((com.vv.personal.twm.artifactory.generated.dates.DateRangeProto.DateRange) other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
       }
 
       @java.lang.Override
@@ -708,36 +725,6 @@ public final class DateRangeProto {
             mergeFrom(parsedMessage);
           }
         }
-        return this;
-      }
-
-      /**
-       * <code>string startDate = 1;</code>
-       */
-      public java.lang.String getStartDate() {
-        java.lang.Object ref = startDate_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          startDate_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-
-      /**
-       * <code>string startDate = 1;</code>
-       */
-      public Builder setStartDate(
-              java.lang.String value) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-
-        startDate_ = value;
-        onChanged();
         return this;
       }
 
@@ -765,8 +752,8 @@ public final class DateRangeProto {
               com.google.protobuf.ByteString value) {
         if (value == null) {
           throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+        }
+        checkByteStringIsUtf8(value);
 
         startDate_ = value;
         onChanged();
@@ -776,9 +763,13 @@ public final class DateRangeProto {
       /**
        * <code>string startDate = 1;</code>
        */
-      public Builder clearStartDate() {
+      public Builder setStartDate(
+              java.lang.String value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
 
-        startDate_ = getDefaultInstance().getStartDate();
+        startDate_ = value;
         onChanged();
         return this;
       }
@@ -800,15 +791,11 @@ public final class DateRangeProto {
       }
 
       /**
-       * <code>string endDate = 2;</code>
+       * <code>string startDate = 1;</code>
        */
-      public Builder setEndDate(
-              java.lang.String value) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
+      public Builder clearStartDate() {
 
-        endDate_ = value;
+        startDate_ = getDefaultInstance().getStartDate();
         onChanged();
         return this;
       }
@@ -836,9 +823,23 @@ public final class DateRangeProto {
       public Builder setEndDateBytes(
               com.google.protobuf.ByteString value) {
         if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+          throw new NullPointerException();
+        }
+        checkByteStringIsUtf8(value);
+
+        endDate_ = value;
+        onChanged();
+        return this;
+      }
+
+      /**
+       * <code>string endDate = 2;</code>
+       */
+      public Builder setEndDate(
+              java.lang.String value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
 
         endDate_ = value;
         onChanged();
@@ -907,6 +908,16 @@ public final class DateRangeProto {
           // @@protoc_insertion_point(message_implements:DateRangeList)
           DateRangeListOrBuilder {
     public static final int DATERANGES_FIELD_NUMBER = 1;
+
+    // Use DateRangeList.newBuilder() to construct.
+    private DateRangeList(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+
+    private DateRangeList() {
+      dateRanges_ = java.util.Collections.emptyList();
+    }
+
     private static final long serialVersionUID = 0L;
     // @@protoc_insertion_point(class_scope:DateRangeList)
     private static final com.vv.personal.twm.artifactory.generated.dates.DateRangeProto.DateRangeList DEFAULT_INSTANCE;
@@ -928,13 +939,11 @@ public final class DateRangeProto {
     private java.util.List<com.vv.personal.twm.artifactory.generated.dates.DateRangeProto.DateRange> dateRanges_;
     private byte memoizedIsInitialized = -1;
 
-    // Use DateRangeList.newBuilder() to construct.
-    private DateRangeList(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-
-    private DateRangeList() {
-      dateRanges_ = java.util.Collections.emptyList();
+    /**
+     * <code>repeated .DateRange dateRanges = 1;</code>
+     */
+    public java.util.List<com.vv.personal.twm.artifactory.generated.dates.DateRangeProto.DateRange> getDateRangesList() {
+      return dateRanges_;
     }
 
     private DateRangeList(
@@ -947,7 +956,7 @@ public final class DateRangeProto {
       }
       int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-              com.google.protobuf.UnknownFieldSet.newBuilder();
+          com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -967,7 +976,7 @@ public final class DateRangeProto {
             }
             default: {
               if (!parseUnknownFieldProto3(
-                      input, unknownFields, extensionRegistry, tag)) {
+                  input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
               break;
@@ -988,6 +997,20 @@ public final class DateRangeProto {
       }
     }
 
+    /**
+     * <code>repeated .DateRange dateRanges = 1;</code>
+     */
+    public int getDateRangesCount() {
+      return dateRanges_.size();
+    }
+
+    /**
+     * <code>repeated .DateRange dateRanges = 1;</code>
+     */
+    public com.vv.personal.twm.artifactory.generated.dates.DateRangeProto.DateRange getDateRanges(int index) {
+      return dateRanges_.get(index);
+    }
+
     public static final com.google.protobuf.Descriptors.Descriptor
     getDescriptor() {
       return com.vv.personal.twm.artifactory.generated.dates.DateRangeProto.internal_static_DateRangeList_descriptor;
@@ -997,6 +1020,16 @@ public final class DateRangeProto {
             java.nio.ByteBuffer data)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
+    }
+
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
     }
 
     public static com.vv.personal.twm.artifactory.generated.dates.DateRangeProto.DateRangeList parseFrom(
@@ -1017,6 +1050,22 @@ public final class DateRangeProto {
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getDateRangesCount() > 0) {
+        hash = (37 * hash) + DATERANGES_FIELD_NUMBER;
+        hash = (53 * hash) + getDateRangesList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
     }
 
     public static com.vv.personal.twm.artifactory.generated.dates.DateRangeProto.DateRangeList parseFrom(byte[] data)
@@ -1069,9 +1118,9 @@ public final class DateRangeProto {
     public static com.vv.personal.twm.artifactory.generated.dates.DateRangeProto.DateRangeList parseFrom(
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws java.io.IOException {
+        throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
-              .parseWithIOException(PARSER, input, extensionRegistry);
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
     public static Builder newBuilder() {
@@ -1107,30 +1156,9 @@ public final class DateRangeProto {
     /**
      * <code>repeated .DateRange dateRanges = 1;</code>
      */
-    public java.util.List<com.vv.personal.twm.artifactory.generated.dates.DateRangeProto.DateRange> getDateRangesList() {
-      return dateRanges_;
-    }
-
-    /**
-     * <code>repeated .DateRange dateRanges = 1;</code>
-     */
     public java.util.List<? extends com.vv.personal.twm.artifactory.generated.dates.DateRangeProto.DateRangeOrBuilder>
     getDateRangesOrBuilderList() {
       return dateRanges_;
-    }
-
-    /**
-     * <code>repeated .DateRange dateRanges = 1;</code>
-     */
-    public int getDateRangesCount() {
-      return dateRanges_.size();
-    }
-
-    /**
-     * <code>repeated .DateRange dateRanges = 1;</code>
-     */
-    public com.vv.personal.twm.artifactory.generated.dates.DateRangeProto.DateRange getDateRanges(int index) {
-      return dateRanges_.get(index);
     }
 
     /**
@@ -1142,18 +1170,8 @@ public final class DateRangeProto {
     }
 
     @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
-            throws java.io.IOException {
+                        throws java.io.IOException {
       for (int i = 0; i < dateRanges_.size(); i++) {
         output.writeMessage(1, dateRanges_.get(i));
       }
@@ -1168,7 +1186,7 @@ public final class DateRangeProto {
       size = 0;
       for (int i = 0; i < dateRanges_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
-                .computeMessageSize(1, dateRanges_.get(i));
+          .computeMessageSize(1, dateRanges_.get(i));
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -1178,7 +1196,7 @@ public final class DateRangeProto {
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
-        return true;
+       return true;
       }
       if (!(obj instanceof com.vv.personal.twm.artifactory.generated.dates.DateRangeProto.DateRangeList)) {
         return super.equals(obj);
@@ -1190,22 +1208,6 @@ public final class DateRangeProto {
               .equals(other.getDateRangesList());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      if (getDateRangesCount() > 0) {
-        hash = (37 * hash) + DATERANGES_FIELD_NUMBER;
-        hash = (53 * hash) + getDateRangesList().hashCode();
-      }
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
     }
 
     @java.lang.Override
@@ -1221,7 +1223,7 @@ public final class DateRangeProto {
 
     @java.lang.Override
     protected Builder newBuilderForType(
-            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -1253,26 +1255,6 @@ public final class DateRangeProto {
       private Builder() {
         maybeForceBuilderInitialization();
       }
-
-      private Builder(
-              com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-
-      public static final com.google.protobuf.Descriptors.Descriptor
-      getDescriptor() {
-        return com.vv.personal.twm.artifactory.generated.dates.DateRangeProto.internal_static_DateRangeList_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internalGetFieldAccessorTable() {
-        return com.vv.personal.twm.artifactory.generated.dates.DateRangeProto.internal_static_DateRangeList_fieldAccessorTable
-                .ensureFieldAccessorsInitialized(
-                        com.vv.personal.twm.artifactory.generated.dates.DateRangeProto.DateRangeList.class, com.vv.personal.twm.artifactory.generated.dates.DateRangeProto.DateRangeList.Builder.class);
-      }
-
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessageV3
                 .alwaysUseFieldBuilders) {
@@ -1292,10 +1274,10 @@ public final class DateRangeProto {
         return this;
       }
 
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-      getDescriptorForType() {
-        return com.vv.personal.twm.artifactory.generated.dates.DateRangeProto.internal_static_DateRangeList_descriptor;
+      private Builder(
+              com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
       }
 
       @java.lang.Override
@@ -1334,6 +1316,25 @@ public final class DateRangeProto {
         return super.clone();
       }
 
+      public static final com.google.protobuf.Descriptors.Descriptor
+      getDescriptor() {
+        return com.vv.personal.twm.artifactory.generated.dates.DateRangeProto.internal_static_DateRangeList_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internalGetFieldAccessorTable() {
+        return com.vv.personal.twm.artifactory.generated.dates.DateRangeProto.internal_static_DateRangeList_fieldAccessorTable
+                .ensureFieldAccessorsInitialized(
+                        com.vv.personal.twm.artifactory.generated.dates.DateRangeProto.DateRangeList.class, com.vv.personal.twm.artifactory.generated.dates.DateRangeProto.DateRangeList.Builder.class);
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+      getDescriptorForType() {
+        return com.vv.personal.twm.artifactory.generated.dates.DateRangeProto.internal_static_DateRangeList_descriptor;
+      }
+
       @java.lang.Override
       public Builder setField(
               com.google.protobuf.Descriptors.FieldDescriptor field,
@@ -1361,16 +1362,21 @@ public final class DateRangeProto {
       }
 
       @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
       public Builder addRepeatedField(
               com.google.protobuf.Descriptors.FieldDescriptor field,
-              java.lang.Object value) {
+          java.lang.Object value) {
         return super.addRepeatedField(field, value);
       }
 
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.vv.personal.twm.artifactory.generated.dates.DateRangeProto.DateRangeList) {
-          return mergeFrom((com.vv.personal.twm.artifactory.generated.dates.DateRangeProto.DateRangeList) other);
+          return mergeFrom((com.vv.personal.twm.artifactory.generated.dates.DateRangeProto.DateRangeList)other);
         } else {
           super.mergeFrom(other);
           return this;
@@ -1398,8 +1404,8 @@ public final class DateRangeProto {
               dateRanges_ = other.dateRanges_;
               bitField0_ = (bitField0_ & ~0x00000001);
               dateRangesBuilder_ =
-                      com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                              getDateRangesFieldBuilder() : null;
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getDateRangesFieldBuilder() : null;
             } else {
               dateRangesBuilder_.addAllMessages(other.dateRanges_);
             }
@@ -1408,11 +1414,6 @@ public final class DateRangeProto {
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
       }
 
       @java.lang.Override
@@ -1438,7 +1439,7 @@ public final class DateRangeProto {
         if (!((bitField0_ & 0x00000001) == 0x00000001)) {
           dateRanges_ = new java.util.ArrayList<com.vv.personal.twm.artifactory.generated.dates.DateRangeProto.DateRange>(dateRanges_);
           bitField0_ |= 0x00000001;
-        }
+         }
       }
 
       /**
@@ -1451,7 +1452,6 @@ public final class DateRangeProto {
           return dateRangesBuilder_.getMessageList();
         }
       }
-
       /**
        * <code>repeated .DateRange dateRanges = 1;</code>
        */
@@ -1462,7 +1462,6 @@ public final class DateRangeProto {
           return dateRangesBuilder_.getCount();
         }
       }
-
       /**
        * <code>repeated .DateRange dateRanges = 1;</code>
        */
@@ -1506,7 +1505,6 @@ public final class DateRangeProto {
         }
         return this;
       }
-
       /**
        * <code>repeated .DateRange dateRanges = 1;</code>
        */
@@ -1580,14 +1578,13 @@ public final class DateRangeProto {
         if (dateRangesBuilder_ == null) {
           ensureDateRangesIsMutable();
           com.google.protobuf.AbstractMessageLite.Builder.addAll(
-                  values, dateRanges_);
+              values, dateRanges_);
           onChanged();
         } else {
           dateRangesBuilder_.addAllMessages(values);
         }
         return this;
       }
-
       /**
        * <code>repeated .DateRange dateRanges = 1;</code>
        */
@@ -1690,13 +1687,13 @@ public final class DateRangeProto {
 
       @java.lang.Override
       public final Builder setUnknownFields(
-              final com.google.protobuf.UnknownFieldSet unknownFields) {
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
       @java.lang.Override
       public final Builder mergeUnknownFields(
-              final com.google.protobuf.UnknownFieldSet unknownFields) {
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 

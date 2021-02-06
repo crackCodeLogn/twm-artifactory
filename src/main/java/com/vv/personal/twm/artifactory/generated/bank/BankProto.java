@@ -111,10 +111,8 @@ public final class BankProto {
     public static BankType valueOf(int value) {
       return forNumber(value);
     }
-
     private static final BankType[] VALUES = values();
     private final int value;
-
     BankType(int value) {
       this.value = value;
     }
@@ -273,7 +271,6 @@ public final class BankProto {
       iFSC_ = "";
       contactNumber_ = "";
     }
-
     public static final int BANKTYPE_FIELD_NUMBER = 2;
     public static final int IFSC_FIELD_NUMBER = 3;
     public static final int CONTACTNUMBER_FIELD_NUMBER = 4;
@@ -298,23 +295,6 @@ public final class BankProto {
     private volatile java.lang.Object name_;
     private int bankType_;
     private volatile java.lang.Object iFSC_;
-
-    /**
-     * <code>.BankType bankType = 2;</code>
-     */
-    public int getBankTypeValue() {
-      return bankType_;
-    }
-
-    /**
-     * <code>.BankType bankType = 2;</code>
-     */
-    public com.vv.personal.twm.artifactory.generated.bank.BankProto.BankType getBankType() {
-      @SuppressWarnings("deprecation")
-      com.vv.personal.twm.artifactory.generated.bank.BankProto.BankType result = com.vv.personal.twm.artifactory.generated.bank.BankProto.BankType.valueOf(bankType_);
-      return result == null ? com.vv.personal.twm.artifactory.generated.bank.BankProto.BankType.UNRECOGNIZED : result;
-    }
-
     private volatile java.lang.Object contactNumber_;
     private byte memoizedIsInitialized = -1;
 
@@ -417,16 +397,6 @@ public final class BankProto {
       return PARSER.parseFrom(data);
     }
 
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
     public static com.vv.personal.twm.artifactory.generated.bank.BankProto.Bank parseFrom(
             byte[] data,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -448,30 +418,34 @@ public final class BankProto {
               .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + NAME_FIELD_NUMBER;
-      hash = (53 * hash) + getName().hashCode();
-      hash = (37 * hash) + BANKTYPE_FIELD_NUMBER;
-      hash = (53 * hash) + bankType_;
-      hash = (37 * hash) + IFSC_FIELD_NUMBER;
-      hash = (53 * hash) + getIFSC().hashCode();
-      hash = (37 * hash) + CONTACTNUMBER_FIELD_NUMBER;
-      hash = (53 * hash) + getContactNumber().hashCode();
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
     public static com.vv.personal.twm.artifactory.generated.bank.BankProto.Bank parseDelimitedFrom(java.io.InputStream input)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getNameBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
+      }
+      if (bankType_ != com.vv.personal.twm.artifactory.generated.bank.BankProto.BankType.GOVT.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+                .computeEnumSize(2, bankType_);
+      }
+      if (!getIFSCBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, iFSC_);
+      }
+      if (!getContactNumberBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, contactNumber_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
     }
 
     public static com.vv.personal.twm.artifactory.generated.bank.BankProto.Bank parseDelimitedFrom(
@@ -561,6 +535,22 @@ public final class BankProto {
     }
 
     /**
+     * <code>.BankType bankType = 2;</code>
+     */
+    public int getBankTypeValue() {
+      return bankType_;
+    }
+
+    /**
+     * <code>.BankType bankType = 2;</code>
+     */
+    public com.vv.personal.twm.artifactory.generated.bank.BankProto.BankType getBankType() {
+      @SuppressWarnings("deprecation")
+      com.vv.personal.twm.artifactory.generated.bank.BankProto.BankType result = com.vv.personal.twm.artifactory.generated.bank.BankProto.BankType.valueOf(bankType_);
+      return result == null ? com.vv.personal.twm.artifactory.generated.bank.BankProto.BankType.UNRECOGNIZED : result;
+    }
+
+    /**
      * <code>string IFSC = 3;</code>
      */
     public java.lang.String getIFSC() {
@@ -627,6 +617,16 @@ public final class BankProto {
     }
 
     @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
             throws java.io.IOException {
       if (!getNameBytes().isEmpty()) {
@@ -645,30 +645,6 @@ public final class BankProto {
     }
 
     @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!getNameBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
-      }
-      if (bankType_ != com.vv.personal.twm.artifactory.generated.bank.BankProto.BankType.GOVT.getNumber()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(2, bankType_);
-      }
-      if (!getIFSCBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, iFSC_);
-      }
-      if (!getContactNumberBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, contactNumber_);
-      }
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
        return true;
@@ -683,11 +659,31 @@ public final class BankProto {
               .equals(other.getName());
       result = result && bankType_ == other.bankType_;
       result = result && getIFSC()
-              .equals(other.getIFSC());
+          .equals(other.getIFSC());
       result = result && getContactNumber()
-          .equals(other.getContactNumber());
+              .equals(other.getContactNumber());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getName().hashCode();
+      hash = (37 * hash) + BANKTYPE_FIELD_NUMBER;
+      hash = (53 * hash) + bankType_;
+      hash = (37 * hash) + IFSC_FIELD_NUMBER;
+      hash = (53 * hash) + getIFSC().hashCode();
+      hash = (37 * hash) + CONTACTNUMBER_FIELD_NUMBER;
+      hash = (53 * hash) + getContactNumber().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
     }
 
     @java.lang.Override
@@ -703,7 +699,7 @@ public final class BankProto {
 
     @java.lang.Override
     protected Builder newBuilderForType(
-            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -735,7 +731,6 @@ public final class BankProto {
                 .alwaysUseFieldBuilders) {
         }
       }
-
       @java.lang.Override
       public Builder clear() {
         super.clear();
@@ -823,6 +818,52 @@ public final class BankProto {
         return super.clearField(field);
       }
 
+      @java.lang.Override
+      public Builder clearOneof(
+              com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+
+      @java.lang.Override
+      public Builder setRepeatedField(
+              com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+
+      @java.lang.Override
+      public Builder addRepeatedField(
+              com.google.protobuf.Descriptors.FieldDescriptor field,
+              java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.vv.personal.twm.artifactory.generated.bank.BankProto.Bank) {
+          return mergeFrom((com.vv.personal.twm.artifactory.generated.bank.BankProto.Bank) other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      /**
+       * <code>string name = 1;</code>
+       */
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+                  (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          name_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+
       public Builder mergeFrom(com.vv.personal.twm.artifactory.generated.bank.BankProto.Bank other) {
         if (other == com.vv.personal.twm.artifactory.generated.bank.BankProto.Bank.getDefaultInstance()) return this;
         if (!other.getName().isEmpty()) {
@@ -851,36 +892,6 @@ public final class BankProto {
       }
 
       @java.lang.Override
-      public Builder clearOneof(
-              com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-
-      @java.lang.Override
-      public Builder setRepeatedField(
-              com.google.protobuf.Descriptors.FieldDescriptor field,
-              int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-
-      @java.lang.Override
-      public Builder addRepeatedField(
-              com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.vv.personal.twm.artifactory.generated.bank.BankProto.Bank) {
-          return mergeFrom((com.vv.personal.twm.artifactory.generated.bank.BankProto.Bank) other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      @java.lang.Override
       public Builder mergeFrom(
               com.google.protobuf.CodedInputStream input,
               com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -902,17 +913,33 @@ public final class BankProto {
       /**
        * <code>string name = 1;</code>
        */
-      public java.lang.String getName() {
+      public com.google.protobuf.ByteString
+      getNameBytes() {
         java.lang.Object ref = name_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          name_ = s;
-          return s;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b =
+                  com.google.protobuf.ByteString.copyFromUtf8(
+                          (java.lang.String) ref);
+          name_ = b;
+          return b;
         } else {
-          return (java.lang.String) ref;
+          return (com.google.protobuf.ByteString) ref;
         }
+      }
+
+      /**
+       * <code>string name = 1;</code>
+       */
+      public Builder setNameBytes(
+              com.google.protobuf.ByteString value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        checkByteStringIsUtf8(value);
+
+        name_ = value;
+        onChanged();
+        return this;
       }
 
       /**
@@ -932,18 +959,11 @@ public final class BankProto {
       /**
        * <code>string name = 1;</code>
        */
-      public com.google.protobuf.ByteString
-      getNameBytes() {
-        java.lang.Object ref = name_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b =
-                  com.google.protobuf.ByteString.copyFromUtf8(
-                          (java.lang.String) ref);
-          name_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+      public Builder clearName() {
+
+        name_ = getDefaultInstance().getName();
+        onChanged();
+        return this;
       }
 
       /**
@@ -969,31 +989,6 @@ public final class BankProto {
         @SuppressWarnings("deprecation")
         com.vv.personal.twm.artifactory.generated.bank.BankProto.BankType result = com.vv.personal.twm.artifactory.generated.bank.BankProto.BankType.valueOf(bankType_);
         return result == null ? com.vv.personal.twm.artifactory.generated.bank.BankProto.BankType.UNRECOGNIZED : result;
-      }
-
-      /**
-       * <code>string name = 1;</code>
-       */
-      public Builder setNameBytes(
-              com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-
-        name_ = value;
-        onChanged();
-        return this;
-      }
-
-      /**
-       * <code>string name = 1;</code>
-       */
-      public Builder clearName() {
-
-        name_ = getDefaultInstance().getName();
-        onChanged();
-        return this;
       }
 
       /**
@@ -1057,8 +1052,8 @@ public final class BankProto {
         java.lang.Object ref = iFSC_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b =
-                  com.google.protobuf.ByteString.copyFromUtf8(
-                          (java.lang.String) ref);
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
           iFSC_ = b;
           return b;
         } else {
@@ -1129,8 +1124,8 @@ public final class BankProto {
         java.lang.Object ref = contactNumber_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b =
-                  com.google.protobuf.ByteString.copyFromUtf8(
-                          (java.lang.String) ref);
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
           contactNumber_ = b;
           return b;
         } else {
@@ -1165,7 +1160,7 @@ public final class BankProto {
 
       @java.lang.Override
       public final Builder setUnknownFields(
-              final com.google.protobuf.UnknownFieldSet unknownFields) {
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
@@ -1189,6 +1184,16 @@ public final class BankProto {
           // @@protoc_insertion_point(message_implements:BankList)
           BankListOrBuilder {
     public static final int BANKS_FIELD_NUMBER = 1;
+
+    // Use BankList.newBuilder() to construct.
+    private BankList(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+
+    private BankList() {
+      banks_ = java.util.Collections.emptyList();
+    }
+
     private static final long serialVersionUID = 0L;
     // @@protoc_insertion_point(class_scope:BankList)
     private static final com.vv.personal.twm.artifactory.generated.bank.BankProto.BankList DEFAULT_INSTANCE;
@@ -1210,13 +1215,11 @@ public final class BankProto {
     private java.util.List<com.vv.personal.twm.artifactory.generated.bank.BankProto.Bank> banks_;
     private byte memoizedIsInitialized = -1;
 
-    // Use BankList.newBuilder() to construct.
-    private BankList(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-
-    private BankList() {
-      banks_ = java.util.Collections.emptyList();
+    /**
+     * <code>repeated .Bank banks = 1;</code>
+     */
+    public java.util.List<com.vv.personal.twm.artifactory.generated.bank.BankProto.Bank> getBanksList() {
+      return banks_;
     }
 
     private BankList(
@@ -1229,7 +1232,7 @@ public final class BankProto {
       }
       int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-              com.google.protobuf.UnknownFieldSet.newBuilder();
+          com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -1244,7 +1247,7 @@ public final class BankProto {
                 mutable_bitField0_ |= 0x00000001;
               }
               banks_.add(
-                      input.readMessage(com.vv.personal.twm.artifactory.generated.bank.BankProto.Bank.parser(), extensionRegistry));
+                  input.readMessage(com.vv.personal.twm.artifactory.generated.bank.BankProto.Bank.parser(), extensionRegistry));
               break;
             }
             default: {
@@ -1270,6 +1273,20 @@ public final class BankProto {
       }
     }
 
+    /**
+     * <code>repeated .Bank banks = 1;</code>
+     */
+    public int getBanksCount() {
+      return banks_.size();
+    }
+
+    /**
+     * <code>repeated .Bank banks = 1;</code>
+     */
+    public com.vv.personal.twm.artifactory.generated.bank.BankProto.Bank getBanks(int index) {
+      return banks_.get(index);
+    }
+
     public static final com.google.protobuf.Descriptors.Descriptor
     getDescriptor() {
       return com.vv.personal.twm.artifactory.generated.bank.BankProto.internal_static_BankList_descriptor;
@@ -1279,6 +1296,16 @@ public final class BankProto {
             java.nio.ByteBuffer data)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
+    }
+
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
     }
 
     public static com.vv.personal.twm.artifactory.generated.bank.BankProto.BankList parseFrom(
@@ -1299,6 +1326,22 @@ public final class BankProto {
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getBanksCount() > 0) {
+        hash = (37 * hash) + BANKS_FIELD_NUMBER;
+        hash = (53 * hash) + getBanksList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
     }
 
     public static com.vv.personal.twm.artifactory.generated.bank.BankProto.BankList parseFrom(byte[] data)
@@ -1349,11 +1392,11 @@ public final class BankProto {
     }
 
     public static com.vv.personal.twm.artifactory.generated.bank.BankProto.BankList parseFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws java.io.IOException {
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
-              .parseWithIOException(PARSER, input, extensionRegistry);
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
     public static Builder newBuilder() {
@@ -1389,13 +1432,6 @@ public final class BankProto {
     /**
      * <code>repeated .Bank banks = 1;</code>
      */
-    public java.util.List<com.vv.personal.twm.artifactory.generated.bank.BankProto.Bank> getBanksList() {
-      return banks_;
-    }
-
-    /**
-     * <code>repeated .Bank banks = 1;</code>
-     */
     public java.util.List<? extends com.vv.personal.twm.artifactory.generated.bank.BankProto.BankOrBuilder>
     getBanksOrBuilderList() {
       return banks_;
@@ -1404,33 +1440,9 @@ public final class BankProto {
     /**
      * <code>repeated .Bank banks = 1;</code>
      */
-    public int getBanksCount() {
-      return banks_.size();
-    }
-
-    /**
-     * <code>repeated .Bank banks = 1;</code>
-     */
-    public com.vv.personal.twm.artifactory.generated.bank.BankProto.Bank getBanks(int index) {
-      return banks_.get(index);
-    }
-
-    /**
-     * <code>repeated .Bank banks = 1;</code>
-     */
     public com.vv.personal.twm.artifactory.generated.bank.BankProto.BankOrBuilder getBanksOrBuilder(
-            int index) {
+        int index) {
       return banks_.get(index);
-    }
-
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
     }
 
     @java.lang.Override
@@ -1450,7 +1462,7 @@ public final class BankProto {
       size = 0;
       for (int i = 0; i < banks_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
-                .computeMessageSize(1, banks_.get(i));
+          .computeMessageSize(1, banks_.get(i));
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -1469,41 +1481,24 @@ public final class BankProto {
 
       boolean result = true;
       result = result && getBanksList()
-              .equals(other.getBanksList());
+          .equals(other.getBanksList());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
 
     @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      if (getBanksCount() > 0) {
-        hash = (37 * hash) + BANKS_FIELD_NUMBER;
-        hash = (53 * hash) + getBanksList().hashCode();
-      }
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    @java.lang.Override
     public Builder newBuilderForType() {
-      return newBuilder();
-    }
+      return newBuilder(); }
 
     @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
-              ? new Builder() : new Builder().mergeFrom(this);
+          ? new Builder() : new Builder().mergeFrom(this);
     }
 
     @java.lang.Override
     protected Builder newBuilderForType(
-            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -1536,25 +1531,6 @@ public final class BankProto {
         maybeForceBuilderInitialization();
       }
 
-      private Builder(
-              com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-
-      public static final com.google.protobuf.Descriptors.Descriptor
-      getDescriptor() {
-        return com.vv.personal.twm.artifactory.generated.bank.BankProto.internal_static_BankList_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internalGetFieldAccessorTable() {
-        return com.vv.personal.twm.artifactory.generated.bank.BankProto.internal_static_BankList_fieldAccessorTable
-                .ensureFieldAccessorsInitialized(
-                        com.vv.personal.twm.artifactory.generated.bank.BankProto.BankList.class, com.vv.personal.twm.artifactory.generated.bank.BankProto.BankList.Builder.class);
-      }
-
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessageV3
                 .alwaysUseFieldBuilders) {
@@ -1574,10 +1550,10 @@ public final class BankProto {
         return this;
       }
 
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-      getDescriptorForType() {
-        return com.vv.personal.twm.artifactory.generated.bank.BankProto.internal_static_BankList_descriptor;
+      private Builder(
+              com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
       }
 
       @java.lang.Override
@@ -1616,6 +1592,25 @@ public final class BankProto {
         return super.clone();
       }
 
+      public static final com.google.protobuf.Descriptors.Descriptor
+      getDescriptor() {
+        return com.vv.personal.twm.artifactory.generated.bank.BankProto.internal_static_BankList_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internalGetFieldAccessorTable() {
+        return com.vv.personal.twm.artifactory.generated.bank.BankProto.internal_static_BankList_fieldAccessorTable
+                .ensureFieldAccessorsInitialized(
+                        com.vv.personal.twm.artifactory.generated.bank.BankProto.BankList.class, com.vv.personal.twm.artifactory.generated.bank.BankProto.BankList.Builder.class);
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+      getDescriptorForType() {
+        return com.vv.personal.twm.artifactory.generated.bank.BankProto.internal_static_BankList_descriptor;
+      }
+
       @java.lang.Override
       public Builder setField(
               com.google.protobuf.Descriptors.FieldDescriptor field,
@@ -1643,6 +1638,11 @@ public final class BankProto {
       }
 
       @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
       public Builder addRepeatedField(
               com.google.protobuf.Descriptors.FieldDescriptor field,
               java.lang.Object value) {
@@ -1652,7 +1652,7 @@ public final class BankProto {
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.vv.personal.twm.artifactory.generated.bank.BankProto.BankList) {
-          return mergeFrom((com.vv.personal.twm.artifactory.generated.bank.BankProto.BankList) other);
+          return mergeFrom((com.vv.personal.twm.artifactory.generated.bank.BankProto.BankList)other);
         } else {
           super.mergeFrom(other);
           return this;
@@ -1693,11 +1693,6 @@ public final class BankProto {
       }
 
       @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
       public Builder mergeFrom(
               com.google.protobuf.CodedInputStream input,
               com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1720,7 +1715,7 @@ public final class BankProto {
         if (!((bitField0_ & 0x00000001) == 0x00000001)) {
           banks_ = new java.util.ArrayList<com.vv.personal.twm.artifactory.generated.bank.BankProto.Bank>(banks_);
           bitField0_ |= 0x00000001;
-        }
+         }
       }
 
       /**
@@ -1733,7 +1728,6 @@ public final class BankProto {
           return banksBuilder_.getMessageList();
         }
       }
-
       /**
        * <code>repeated .Bank banks = 1;</code>
        */
@@ -1858,18 +1852,17 @@ public final class BankProto {
        * <code>repeated .Bank banks = 1;</code>
        */
       public Builder addAllBanks(
-              java.lang.Iterable<? extends com.vv.personal.twm.artifactory.generated.bank.BankProto.Bank> values) {
+          java.lang.Iterable<? extends com.vv.personal.twm.artifactory.generated.bank.BankProto.Bank> values) {
         if (banksBuilder_ == null) {
           ensureBanksIsMutable();
           com.google.protobuf.AbstractMessageLite.Builder.addAll(
-                  values, banks_);
+              values, banks_);
           onChanged();
         } else {
           banksBuilder_.addAllMessages(values);
         }
         return this;
       }
-
       /**
        * <code>repeated .Bank banks = 1;</code>
        */
@@ -1969,16 +1962,15 @@ public final class BankProto {
         }
         return banksBuilder_;
       }
-
       @java.lang.Override
       public final Builder setUnknownFields(
-              final com.google.protobuf.UnknownFieldSet unknownFields) {
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
       @java.lang.Override
       public final Builder mergeUnknownFields(
-              final com.google.protobuf.UnknownFieldSet unknownFields) {
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
