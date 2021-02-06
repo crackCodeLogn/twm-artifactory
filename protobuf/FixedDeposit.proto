@@ -55,8 +55,8 @@ message AnnualBreakdown {//different than the DateRange.proto
   string endDate = 2;
   int64  daysInBetween = 3;
 
-  float expectedInterestGained = 4;
-  float expectedAmountAccumulated = 5;
+  double expectedInterestGained = 4;
+  double expectedAmountAccumulated = 5;
 
   string financialYear = 6; //2020-2021
 }
