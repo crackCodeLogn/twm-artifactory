@@ -49,3 +49,14 @@ enum FilterBy {
 message FixedDepositList {
   repeated FixedDeposit FixedDeposit = 1;
 }
+
+message AnnualBreakdown {//different than the DateRange.proto
+  string startDate = 1;
+  string endDate = 2;
+  int64  daysInBetween = 3;
+
+  float expectedInterestGained = 4;
+  float expectedAmountAccumulated = 5;
+
+  string financialYear = 6; //2020-2021
+}
