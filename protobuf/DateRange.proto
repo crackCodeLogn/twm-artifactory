@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+option java_package = "com.vv.personal.twm.artifactory.generated.dates";
+option java_outer_classname = "DateRangeProto";
+
+message DateRange {
+  string startDate = 1;
+  string endDate = 2;
+  int64  daysInBetween = 3;
+}
