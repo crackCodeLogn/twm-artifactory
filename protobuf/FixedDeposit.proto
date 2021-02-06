@@ -24,7 +24,7 @@ message FixedDeposit {
   bool isFdActive = 16;
   string originalUser = 17;
 
-  repeated AnnualBreakdown annualBreakdown = 18;
+  repeated AnnualBreakdownList annualBreakdownList = 18;
 }
 
 enum InterestType {
@@ -59,4 +59,8 @@ message AnnualBreakdown {//different than the DateRange.proto
   double expectedAmountAccumulated = 5;
 
   string financialYear = 6; //2020-2021
+}
+
+message AnnualBreakdownList {
+  repeated AnnualBreakdown annualBreakdown = 1;
 }
