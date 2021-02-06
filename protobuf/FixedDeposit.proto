@@ -22,6 +22,9 @@ message FixedDeposit {
   int32 calculatedDays = 15;
 
   bool isFdActive = 16;
+  string originalUser = 17;
+
+  repeated AnnualBreakdown annualBreakdown = 18;
 }
 
 enum InterestType {
@@ -38,6 +41,11 @@ enum OrderFDsBy {
   MONTHS = 4;
 }
 
+enum FilterBy {
+  USER = 0;
+  ORIGINAL_USER = 1;
+}
+
 message FixedDepositList {
-  repeated FixedDeposit FixedDeposits = 1;
+  repeated FixedDeposit FixedDeposit = 1;
 }
