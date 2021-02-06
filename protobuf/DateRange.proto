@@ -8,3 +8,7 @@ message DateRange {
   string endDate = 2;
   int64  daysInBetween = 3;
 }
+
+message DateRangeList {
+  repeated DateRange dateRanges = 1;
+}
