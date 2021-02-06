@@ -42,8 +42,11 @@ enum OrderFDsBy {
 }
 
 enum FilterBy {
-  USER = 0;
-  ORIGINAL_USER = 1;
+  ALL = 0;
+  USER = 1;
+  ORIGINAL_USER = 2;
+  KEY = 3;
+  BANK = 4;
 }
 
 message FixedDepositList {
