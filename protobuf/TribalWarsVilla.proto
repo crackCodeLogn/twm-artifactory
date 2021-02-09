@@ -12,7 +12,10 @@ message Villa {
   int64 timestamp = 6;
   Troops troops = 7;
   VillaType type = 8;
+
   string farmStrength = 9;
+  Resources resources = 10;
+  int32 coinMintingCapacity = 11;
 }
 
 message Troops {
@@ -29,6 +32,15 @@ message Troops {
   int32 nb = 11;
   int32 pd = 12;
   int32 wl = 13;
+}
+
+message Resources {
+  int64 currentWood = 1;
+  int64 currentClay = 2;
+  int64 currentIron = 3;
+
+  int64 currentWarehouseStat = 4;
+  int64 warehouseCapacity = 5;
 }
 
 enum VillaType {
