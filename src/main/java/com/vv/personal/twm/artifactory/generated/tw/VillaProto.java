@@ -39,14 +39,13 @@ public final class VillaProto {
                     "\001(\005\022\n\n\002ax\030\003 \001(\005\022\n\n\002ar\030\004 \001(\005\022\n\n\002su\030\005 \001(\005\022" +
                     "\n\n\002lc\030\006 \001(\005\022\n\n\002ma\030\007 \001(\005\022\n\n\002hc\030\010 \001(\005\022\n\n\002r" +
                     "m\030\t \001(\005\022\n\n\002ct\030\n \001(\005\022\n\n\002nb\030\013 \001(\005\022\n\n\002pd\030\014 " +
-                    "\001(\005\022\n\n\002wl\030\r \001(\005\"\203\001\n\tResources\022\023\n\013current" +
-                    "Wood\030\001 \001(\003\022\023\n\013currentClay\030\002 \001(\003\022\023\n\013curre" +
-                    "ntIron\030\003 \001(\003\022\034\n\024currentWarehouseStat\030\004 \001" +
-                    "(\003\022\031\n\021warehouseCapacity\030\005 \001(\003\"#\n\tVillaLi" +
-                    "st\022\026\n\006villas\030\001 \003(\0132\006.Villa*&\n\tVillaType\022" +
-                    "\007\n\003OFF\020\000\022\007\n\003DEF\020\001\022\007\n\003MIX\020\002B:\n,com.vv.per" +
-                    "sonal.twm.artifactory.generated.twB\nVill" +
-                    "aProtob\006proto3"
+                    "\001(\005\022\n\n\002wl\030\r \001(\005\"e\n\tResources\022\023\n\013currentW" +
+                    "ood\030\001 \001(\003\022\023\n\013currentClay\030\002 \001(\003\022\023\n\013curren" +
+                    "tIron\030\003 \001(\003\022\031\n\021warehouseCapacity\030\004 \001(\003\"#" +
+                    "\n\tVillaList\022\026\n\006villas\030\001 \003(\0132\006.Villa*&\n\tV" +
+                    "illaType\022\007\n\003OFF\020\000\022\007\n\003DEF\020\001\022\007\n\003MIX\020\002B:\n,c" +
+                    "om.vv.personal.twm.artifactory.generated" +
+                    ".twB\nVillaProtob\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
             new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner() {
@@ -77,7 +76,7 @@ public final class VillaProto {
     internal_static_Resources_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
             internal_static_Resources_descriptor,
-            new java.lang.String[]{"CurrentWood", "CurrentClay", "CurrentIron", "CurrentWarehouseStat", "WarehouseCapacity",});
+            new java.lang.String[]{"CurrentWood", "CurrentClay", "CurrentIron", "WarehouseCapacity",});
     internal_static_VillaList_descriptor =
             getDescriptor().getMessageTypes().get(3);
     internal_static_VillaList_fieldAccessorTable = new
@@ -297,13 +296,12 @@ public final class VillaProto {
      * <code>string farmStrength = 9;</code>
      */
     com.google.protobuf.ByteString
-    getFarmStrengthBytes();
+        getFarmStrengthBytes();
 
     /**
      * <code>.Resources resources = 10;</code>
      */
     boolean hasResources();
-
     /**
      * <code>.Resources resources = 10;</code>
      */
@@ -410,12 +408,7 @@ public final class VillaProto {
     long getCurrentIron();
 
     /**
-     * <code>int64 currentWarehouseStat = 4;</code>
-     */
-    long getCurrentWarehouseStat();
-
-    /**
-     * <code>int64 warehouseCapacity = 5;</code>
+     * <code>int64 warehouseCapacity = 4;</code>
      */
     long getWarehouseCapacity();
   }
@@ -467,6 +460,18 @@ public final class VillaProto {
       super(builder);
     }
 
+    private Villa() {
+      world_ = "";
+      name_ = "";
+      x_ = 0;
+      y_ = 0;
+      id_ = "";
+      timestamp_ = 0L;
+      type_ = 0;
+      farmStrength_ = "";
+      coinMintingCapacity_ = 0;
+    }
+
     public static final int NAME_FIELD_NUMBER = 2;
     public static final int X_FIELD_NUMBER = 3;
     public static final int Y_FIELD_NUMBER = 4;
@@ -486,7 +491,7 @@ public final class VillaProto {
       public Villa parsePartialFrom(
               com.google.protobuf.CodedInputStream input,
               com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-              throws com.google.protobuf.InvalidProtocolBufferException {
+          throws com.google.protobuf.InvalidProtocolBufferException {
         return new Villa(input, extensionRegistry);
       }
     };
@@ -496,53 +501,17 @@ public final class VillaProto {
     }
 
     private volatile java.lang.Object world_;
-
-    /**
-     * <code>int32 x = 3;</code>
-     */
-    public int getX() {
-      return x_;
-    }
-
     private volatile java.lang.Object name_;
     private int x_;
-
-    /**
-     * <code>int32 y = 4;</code>
-     */
-    public int getY() {
-      return y_;
-    }
-
     private int y_;
     private volatile java.lang.Object id_;
     private long timestamp_;
     private com.vv.personal.twm.artifactory.generated.tw.VillaProto.Troops troops_;
     private int type_;
     private volatile java.lang.Object farmStrength_;
-
-    /**
-     * <code>int64 timestamp = 6;</code>
-     */
-    public long getTimestamp() {
-      return timestamp_;
-    }
-
     private com.vv.personal.twm.artifactory.generated.tw.VillaProto.Resources resources_;
     private int coinMintingCapacity_;
     private byte memoizedIsInitialized = -1;
-
-    private Villa() {
-      world_ = "";
-      name_ = "";
-      x_ = 0;
-      y_ = 0;
-      id_ = "";
-      timestamp_ = 0L;
-      type_ = 0;
-      farmStrength_ = "";
-      coinMintingCapacity_ = 0;
-    }
 
     private Villa(
             com.google.protobuf.CodedInputStream input,
@@ -641,7 +610,7 @@ public final class VillaProto {
             }
             default: {
               if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
+                      input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
               break;
@@ -659,6 +628,27 @@ public final class VillaProto {
       }
     }
 
+    /**
+     * <code>.Troops troops = 7;</code>
+     */
+    public boolean hasTroops() {
+      return troops_ != null;
+    }
+
+    /**
+     * <code>.Troops troops = 7;</code>
+     */
+    public com.vv.personal.twm.artifactory.generated.tw.VillaProto.Troops getTroops() {
+      return troops_ == null ? com.vv.personal.twm.artifactory.generated.tw.VillaProto.Troops.getDefaultInstance() : troops_;
+    }
+
+    /**
+     * <code>.Troops troops = 7;</code>
+     */
+    public com.vv.personal.twm.artifactory.generated.tw.VillaProto.TroopsOrBuilder getTroopsOrBuilder() {
+      return getTroops();
+    }
+
     public static final com.google.protobuf.Descriptors.Descriptor
     getDescriptor() {
       return com.vv.personal.twm.artifactory.generated.tw.VillaProto.internal_static_Villa_descriptor;
@@ -668,6 +658,22 @@ public final class VillaProto {
             java.nio.ByteBuffer data)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
+    }
+
+    /**
+     * <code>.VillaType type = 8;</code>
+     */
+    public int getTypeValue() {
+      return type_;
+    }
+
+    /**
+     * <code>.VillaType type = 8;</code>
+     */
+    public com.vv.personal.twm.artifactory.generated.tw.VillaProto.VillaType getType() {
+      @SuppressWarnings("deprecation")
+      com.vv.personal.twm.artifactory.generated.tw.VillaProto.VillaType result = com.vv.personal.twm.artifactory.generated.tw.VillaProto.VillaType.valueOf(type_);
+      return result == null ? com.vv.personal.twm.artifactory.generated.tw.VillaProto.VillaType.UNRECOGNIZED : result;
     }
 
     public static com.vv.personal.twm.artifactory.generated.tw.VillaProto.Villa parseFrom(
@@ -708,6 +714,27 @@ public final class VillaProto {
               .parseWithIOException(PARSER, input);
     }
 
+    /**
+     * <code>.Resources resources = 10;</code>
+     */
+    public boolean hasResources() {
+      return resources_ != null;
+    }
+
+    /**
+     * <code>.Resources resources = 10;</code>
+     */
+    public com.vv.personal.twm.artifactory.generated.tw.VillaProto.Resources getResources() {
+      return resources_ == null ? com.vv.personal.twm.artifactory.generated.tw.VillaProto.Resources.getDefaultInstance() : resources_;
+    }
+
+    /**
+     * <code>.Resources resources = 10;</code>
+     */
+    public com.vv.personal.twm.artifactory.generated.tw.VillaProto.ResourcesOrBuilder getResourcesOrBuilder() {
+      return getResources();
+    }
+
     public static com.vv.personal.twm.artifactory.generated.tw.VillaProto.Villa parseFrom(
             java.io.InputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -722,6 +749,13 @@ public final class VillaProto {
               .parseDelimitedWithIOException(PARSER, input);
     }
 
+    /**
+     * <code>int32 coinMintingCapacity = 11;</code>
+     */
+    public int getCoinMintingCapacity() {
+      return coinMintingCapacity_;
+    }
+
     public static com.vv.personal.twm.artifactory.generated.tw.VillaProto.Villa parseDelimitedFrom(
             java.io.InputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -730,9 +764,19 @@ public final class VillaProto {
               .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
     public static com.vv.personal.twm.artifactory.generated.tw.VillaProto.Villa parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
+            com.google.protobuf.CodedInputStream input)
+            throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
@@ -771,7 +815,7 @@ public final class VillaProto {
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
     internalGetFieldAccessorTable() {
       return com.vv.personal.twm.artifactory.generated.tw.VillaProto.internal_static_Villa_fieldAccessorTable
-              .ensureFieldAccessorsInitialized(
+          .ensureFieldAccessorsInitialized(
               com.vv.personal.twm.artifactory.generated.tw.VillaProto.Villa.class, com.vv.personal.twm.artifactory.generated.tw.VillaProto.Villa.Builder.class);
     }
 
@@ -799,7 +843,7 @@ public final class VillaProto {
       java.lang.Object ref = world_;
       if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b =
-                com.google.protobuf.ByteString.copyFromUtf8(
+            com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         world_ = b;
         return b;
@@ -833,12 +877,26 @@ public final class VillaProto {
       if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b =
                 com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+                        (java.lang.String) ref);
         name_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
+    }
+
+    /**
+     * <code>int32 x = 3;</code>
+     */
+    public int getX() {
+      return x_;
+    }
+
+    /**
+     * <code>int32 y = 4;</code>
+     */
+    public int getY() {
+      return y_;
     }
 
     /**
@@ -866,7 +924,7 @@ public final class VillaProto {
       if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b =
                 com.google.protobuf.ByteString.copyFromUtf8(
-                        (java.lang.String) ref);
+                (java.lang.String) ref);
         id_ = b;
         return b;
       } else {
@@ -875,40 +933,10 @@ public final class VillaProto {
     }
 
     /**
-     * <code>.Troops troops = 7;</code>
+     * <code>int64 timestamp = 6;</code>
      */
-    public boolean hasTroops() {
-      return troops_ != null;
-    }
-
-    /**
-     * <code>.Troops troops = 7;</code>
-     */
-    public com.vv.personal.twm.artifactory.generated.tw.VillaProto.Troops getTroops() {
-      return troops_ == null ? com.vv.personal.twm.artifactory.generated.tw.VillaProto.Troops.getDefaultInstance() : troops_;
-    }
-
-    /**
-     * <code>.Troops troops = 7;</code>
-     */
-    public com.vv.personal.twm.artifactory.generated.tw.VillaProto.TroopsOrBuilder getTroopsOrBuilder() {
-      return getTroops();
-    }
-
-    /**
-     * <code>.VillaType type = 8;</code>
-     */
-    public int getTypeValue() {
-      return type_;
-    }
-
-    /**
-     * <code>.VillaType type = 8;</code>
-     */
-    public com.vv.personal.twm.artifactory.generated.tw.VillaProto.VillaType getType() {
-      @SuppressWarnings("deprecation")
-      com.vv.personal.twm.artifactory.generated.tw.VillaProto.VillaType result = com.vv.personal.twm.artifactory.generated.tw.VillaProto.VillaType.valueOf(type_);
-      return result == null ? com.vv.personal.twm.artifactory.generated.tw.VillaProto.VillaType.UNRECOGNIZED : result;
+    public long getTimestamp() {
+      return timestamp_;
     }
 
     /**
@@ -944,42 +972,17 @@ public final class VillaProto {
       }
     }
 
-    /**
-     * <code>.Resources resources = 10;</code>
-     */
-    public boolean hasResources() {
-      return resources_ != null;
-    }
-
-    /**
-     * <code>.Resources resources = 10;</code>
-     */
-    public com.vv.personal.twm.artifactory.generated.tw.VillaProto.Resources getResources() {
-      return resources_ == null ? com.vv.personal.twm.artifactory.generated.tw.VillaProto.Resources.getDefaultInstance() : resources_;
-    }
-
-    /**
-     * <code>.Resources resources = 10;</code>
-     */
-    public com.vv.personal.twm.artifactory.generated.tw.VillaProto.ResourcesOrBuilder getResourcesOrBuilder() {
-      return getResources();
-    }
-
-    /**
-     * <code>int32 coinMintingCapacity = 11;</code>
-     */
-    public int getCoinMintingCapacity() {
-      return coinMintingCapacity_;
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+              ? new Builder() : new Builder().mergeFrom(this);
     }
 
     @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
+    protected Builder newBuilderForType(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
     }
 
     @java.lang.Override
@@ -1050,7 +1053,7 @@ public final class VillaProto {
       }
       if (troops_ != null) {
         size += com.google.protobuf.CodedOutputStream
-                .computeMessageSize(7, getTroops());
+          .computeMessageSize(7, getTroops());
       }
       if (type_ != com.vv.personal.twm.artifactory.generated.tw.VillaProto.VillaType.OFF.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
@@ -1061,7 +1064,7 @@ public final class VillaProto {
       }
       if (resources_ != null) {
         size += com.google.protobuf.CodedOutputStream
-                .computeMessageSize(10, getResources());
+          .computeMessageSize(10, getResources());
       }
       if (coinMintingCapacity_ != 0) {
         size += com.google.protobuf.CodedOutputStream
@@ -1088,7 +1091,7 @@ public final class VillaProto {
       result = result && getName()
               .equals(other.getName());
       result = result && (getX()
-              == other.getX());
+          == other.getX());
       result = result && (getY()
               == other.getY());
       result = result && getId()
@@ -1098,11 +1101,11 @@ public final class VillaProto {
       result = result && (hasTroops() == other.hasTroops());
       if (hasTroops()) {
         result = result && getTroops()
-                .equals(other.getTroops());
+            .equals(other.getTroops());
       }
       result = result && type_ == other.type_;
       result = result && getFarmStrength()
-              .equals(other.getFarmStrength());
+          .equals(other.getFarmStrength());
       result = result && (hasResources() == other.hasResources());
       if (hasResources()) {
         result = result && getResources()
@@ -1133,7 +1136,7 @@ public final class VillaProto {
       hash = (53 * hash) + getId().hashCode();
       hash = (37 * hash) + TIMESTAMP_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-              getTimestamp());
+          getTimestamp());
       if (hasTroops()) {
         hash = (37 * hash) + TROOPS_FIELD_NUMBER;
         hash = (53 * hash) + getTroops().hashCode();
@@ -1154,21 +1157,7 @@ public final class VillaProto {
     }
 
     @java.lang.Override
-    public Builder newBuilderForType() {
-      return newBuilder();
-    }
-
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
+    public Builder newBuilderForType() { return newBuilder();
     }
 
     @java.lang.Override
@@ -1190,88 +1179,9 @@ public final class VillaProto {
             com.vv.personal.twm.artifactory.generated.tw.VillaProto.VillaOrBuilder {
       private java.lang.Object world_ = "";
       private java.lang.Object name_ = "";
-      private int x_;
-      private int y_;
-
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
-      }
-
+      private int x_ ;
+      private int y_ ;
       private java.lang.Object id_ = "";
-      private long timestamp_;
-
-      @java.lang.Override
-      public com.vv.personal.twm.artifactory.generated.tw.VillaProto.Villa getDefaultInstanceForType() {
-        return com.vv.personal.twm.artifactory.generated.tw.VillaProto.Villa.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.vv.personal.twm.artifactory.generated.tw.VillaProto.Villa build() {
-        com.vv.personal.twm.artifactory.generated.tw.VillaProto.Villa result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      private com.vv.personal.twm.artifactory.generated.tw.VillaProto.Troops troops_ = null;
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-
-      private com.google.protobuf.SingleFieldBuilderV3<
-              com.vv.personal.twm.artifactory.generated.tw.VillaProto.Troops, com.vv.personal.twm.artifactory.generated.tw.VillaProto.Troops.Builder, com.vv.personal.twm.artifactory.generated.tw.VillaProto.TroopsOrBuilder> troopsBuilder_;
-      private int type_ = 0;
-      private java.lang.Object farmStrength_ = "";
-      private com.vv.personal.twm.artifactory.generated.tw.VillaProto.Resources resources_ = null;
-      private com.google.protobuf.SingleFieldBuilderV3<
-              com.vv.personal.twm.artifactory.generated.tw.VillaProto.Resources, com.vv.personal.twm.artifactory.generated.tw.VillaProto.Resources.Builder, com.vv.personal.twm.artifactory.generated.tw.VillaProto.ResourcesOrBuilder> resourcesBuilder_;
-
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.vv.personal.twm.artifactory.generated.tw.VillaProto.Villa) {
-          return mergeFrom((com.vv.personal.twm.artifactory.generated.tw.VillaProto.Villa) other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      private int coinMintingCapacity_;
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      // Construct using com.vv.personal.twm.artifactory.generated.tw.VillaProto.Villa.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-              com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-
-      public static final com.google.protobuf.Descriptors.Descriptor
-      getDescriptor() {
-        return com.vv.personal.twm.artifactory.generated.tw.VillaProto.internal_static_Villa_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internalGetFieldAccessorTable() {
-        return com.vv.personal.twm.artifactory.generated.tw.VillaProto.internal_static_Villa_fieldAccessorTable
-                .ensureFieldAccessorsInitialized(
-                        com.vv.personal.twm.artifactory.generated.tw.VillaProto.Villa.class, com.vv.personal.twm.artifactory.generated.tw.VillaProto.Villa.Builder.class);
-      }
-
       @java.lang.Override
       public Builder clear() {
         super.clear();
@@ -1310,9 +1220,12 @@ public final class VillaProto {
 
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
+      getDescriptorForType() {
         return com.vv.personal.twm.artifactory.generated.tw.VillaProto.internal_static_Villa_descriptor;
       }
+
+      private long timestamp_;
+      private com.vv.personal.twm.artifactory.generated.tw.VillaProto.Troops troops_ = null;
 
       @java.lang.Override
       public com.vv.personal.twm.artifactory.generated.tw.VillaProto.Villa buildPartial() {
@@ -1340,38 +1253,21 @@ public final class VillaProto {
         return result;
       }
 
-      @java.lang.Override
-      public Builder setField(
-              com.google.protobuf.Descriptors.FieldDescriptor field,
-              java.lang.Object value) {
-        return super.setField(field, value);
-      }
-
-      @java.lang.Override
-      public Builder clearField(
-              com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-
-      @java.lang.Override
-      public Builder clearOneof(
-              com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-
-      @java.lang.Override
-      public Builder setRepeatedField(
-              com.google.protobuf.Descriptors.FieldDescriptor field,
-              int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
+      private com.google.protobuf.SingleFieldBuilderV3<
+              com.vv.personal.twm.artifactory.generated.tw.VillaProto.Troops, com.vv.personal.twm.artifactory.generated.tw.VillaProto.Troops.Builder, com.vv.personal.twm.artifactory.generated.tw.VillaProto.TroopsOrBuilder> troopsBuilder_;
+      private int type_ = 0;
+      private java.lang.Object farmStrength_ = "";
+      private com.vv.personal.twm.artifactory.generated.tw.VillaProto.Resources resources_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+              com.vv.personal.twm.artifactory.generated.tw.VillaProto.Resources, com.vv.personal.twm.artifactory.generated.tw.VillaProto.Resources.Builder, com.vv.personal.twm.artifactory.generated.tw.VillaProto.ResourcesOrBuilder> resourcesBuilder_;
 
       @java.lang.Override
       public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
+              com.google.protobuf.Descriptors.FieldDescriptor field,
+              java.lang.Object value) {
         return super.addRepeatedField(field, value);
       }
+      private int coinMintingCapacity_ ;
 
       public Builder mergeFrom(com.vv.personal.twm.artifactory.generated.tw.VillaProto.Villa other) {
         if (other == com.vv.personal.twm.artifactory.generated.tw.VillaProto.Villa.getDefaultInstance()) return this;
@@ -1417,6 +1313,96 @@ public final class VillaProto {
         return this;
       }
 
+      // Construct using com.vv.personal.twm.artifactory.generated.tw.VillaProto.Villa.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+              com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+
+      public static final com.google.protobuf.Descriptors.Descriptor
+      getDescriptor() {
+        return com.vv.personal.twm.artifactory.generated.tw.VillaProto.internal_static_Villa_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internalGetFieldAccessorTable() {
+        return com.vv.personal.twm.artifactory.generated.tw.VillaProto.internal_static_Villa_fieldAccessorTable
+                .ensureFieldAccessorsInitialized(
+                        com.vv.personal.twm.artifactory.generated.tw.VillaProto.Villa.class, com.vv.personal.twm.artifactory.generated.tw.VillaProto.Villa.Builder.class);
+      }
+
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+
+      @java.lang.Override
+      public com.vv.personal.twm.artifactory.generated.tw.VillaProto.Villa getDefaultInstanceForType() {
+        return com.vv.personal.twm.artifactory.generated.tw.VillaProto.Villa.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.vv.personal.twm.artifactory.generated.tw.VillaProto.Villa build() {
+        com.vv.personal.twm.artifactory.generated.tw.VillaProto.Villa result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+
+      @java.lang.Override
+      public Builder setField(
+              com.google.protobuf.Descriptors.FieldDescriptor field,
+              java.lang.Object value) {
+        return super.setField(field, value);
+      }
+
+      @java.lang.Override
+      public Builder clearField(
+              com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+
+      @java.lang.Override
+      public Builder clearOneof(
+              com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+
+      @java.lang.Override
+      public Builder setRepeatedField(
+              com.google.protobuf.Descriptors.FieldDescriptor field,
+              int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.vv.personal.twm.artifactory.generated.tw.VillaProto.Villa) {
+          return mergeFrom((com.vv.personal.twm.artifactory.generated.tw.VillaProto.Villa) other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
       @java.lang.Override
       public Builder mergeFrom(
               com.google.protobuf.CodedInputStream input,
@@ -1434,13 +1420,6 @@ public final class VillaProto {
           }
         }
         return this;
-      }
-
-      /**
-       * <code>int32 x = 3;</code>
-       */
-      public int getX() {
-        return x_;
       }
 
       /**
@@ -1481,20 +1460,13 @@ public final class VillaProto {
         java.lang.Object ref = world_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b =
-                  com.google.protobuf.ByteString.copyFromUtf8(
-                          (java.lang.String) ref);
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
           world_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
         }
-      }
-
-      /**
-       * <code>int32 y = 4;</code>
-       */
-      public int getY() {
-        return y_;
       }
 
       /**
@@ -1560,8 +1532,8 @@ public final class VillaProto {
         java.lang.Object ref = name_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b =
-                  com.google.protobuf.ByteString.copyFromUtf8(
-                          (java.lang.String) ref);
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
           name_ = b;
           return b;
         } else {
@@ -1573,11 +1545,11 @@ public final class VillaProto {
        * <code>string name = 2;</code>
        */
       public Builder setNameBytes(
-          com.google.protobuf.ByteString value) {
+              com.google.protobuf.ByteString value) {
         if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+          throw new NullPointerException();
+        }
+        checkByteStringIsUtf8(value);
 
         name_ = value;
         onChanged();
@@ -1592,6 +1564,13 @@ public final class VillaProto {
         name_ = getDefaultInstance().getName();
         onChanged();
         return this;
+      }
+
+      /**
+       * <code>int32 x = 3;</code>
+       */
+      public int getX() {
+        return x_;
       }
 
       /**
@@ -1613,11 +1592,12 @@ public final class VillaProto {
         onChanged();
         return this;
       }
+
       /**
-       * <code>int64 timestamp = 6;</code>
+       * <code>int32 y = 4;</code>
        */
-      public long getTimestamp() {
-        return timestamp_;
+      public int getY() {
+        return y_;
       }
 
       /**
@@ -1660,9 +1640,9 @@ public final class VillaProto {
        * <code>string id = 5;</code>
        */
       public Builder setId(
-              java.lang.String value) {
+          java.lang.String value) {
         if (value == null) {
-          throw new NullPointerException();
+    throw new NullPointerException();
         }
 
         id_ = value;
@@ -1674,43 +1654,24 @@ public final class VillaProto {
        * <code>string id = 5;</code>
        */
       public com.google.protobuf.ByteString
-          getIdBytes() {
+      getIdBytes() {
         java.lang.Object ref = id_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b =
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
+                  com.google.protobuf.ByteString.copyFromUtf8(
+                          (java.lang.String) ref);
           id_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
         }
       }
-      /**
-       * <code>.Troops troops = 7;</code>
-       */
-      public com.vv.personal.twm.artifactory.generated.tw.VillaProto.Troops getTroops() {
-        if (troopsBuilder_ == null) {
-          return troops_ == null ? com.vv.personal.twm.artifactory.generated.tw.VillaProto.Troops.getDefaultInstance() : troops_;
-        } else {
-          return troopsBuilder_.getMessage();
-        }
-      }
-      /**
-       * <code>.Troops troops = 7;</code>
-       */
-      public Builder setTroops(com.vv.personal.twm.artifactory.generated.tw.VillaProto.Troops value) {
-        if (troopsBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          troops_ = value;
-          onChanged();
-        } else {
-          troopsBuilder_.setMessage(value);
-        }
 
-        return this;
+      /**
+       * <code>.Troops troops = 7;</code>
+       */
+      public boolean hasTroops() {
+        return troopsBuilder_ != null || troops_ != null;
       }
 
       /**
@@ -1719,30 +1680,12 @@ public final class VillaProto {
       public Builder setIdBytes(
               com.google.protobuf.ByteString value) {
         if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+          throw new NullPointerException();
+        }
+        checkByteStringIsUtf8(value);
 
         id_ = value;
         onChanged();
-        return this;
-      }
-      /**
-       * <code>.Troops troops = 7;</code>
-       */
-      public Builder mergeTroops(com.vv.personal.twm.artifactory.generated.tw.VillaProto.Troops value) {
-        if (troopsBuilder_ == null) {
-          if (troops_ != null) {
-            troops_ =
-                    com.vv.personal.twm.artifactory.generated.tw.VillaProto.Troops.newBuilder(troops_).mergeFrom(value).buildPartial();
-          } else {
-            troops_ = value;
-          }
-          onChanged();
-        } else {
-          troopsBuilder_.mergeFrom(value);
-        }
-
         return this;
       }
 
@@ -1759,6 +1702,13 @@ public final class VillaProto {
       /**
        * <code>int64 timestamp = 6;</code>
        */
+      public long getTimestamp() {
+        return timestamp_;
+      }
+
+      /**
+       * <code>int64 timestamp = 6;</code>
+       */
       public Builder setTimestamp(long value) {
 
         timestamp_ = value;
@@ -1769,13 +1719,16 @@ public final class VillaProto {
       /**
        * <code>.Troops troops = 7;</code>
        */
-      public com.vv.personal.twm.artifactory.generated.tw.VillaProto.TroopsOrBuilder getTroopsOrBuilder() {
-        if (troopsBuilder_ != null) {
-          return troopsBuilder_.getMessageOrBuilder();
+      public Builder clearTroops() {
+        if (troopsBuilder_ == null) {
+          troops_ = null;
+          onChanged();
         } else {
-          return troops_ == null ?
-                  com.vv.personal.twm.artifactory.generated.tw.VillaProto.Troops.getDefaultInstance() : troops_;
+          troops_ = null;
+          troopsBuilder_ = null;
         }
+
+        return this;
       }
 
       /**
@@ -1791,8 +1744,29 @@ public final class VillaProto {
       /**
        * <code>.Troops troops = 7;</code>
        */
-      public boolean hasTroops() {
-        return troopsBuilder_ != null || troops_ != null;
+      public com.vv.personal.twm.artifactory.generated.tw.VillaProto.Troops getTroops() {
+        if (troopsBuilder_ == null) {
+          return troops_ == null ? com.vv.personal.twm.artifactory.generated.tw.VillaProto.Troops.getDefaultInstance() : troops_;
+        } else {
+          return troopsBuilder_.getMessage();
+        }
+      }
+
+      /**
+       * <code>.Troops troops = 7;</code>
+       */
+      public Builder setTroops(com.vv.personal.twm.artifactory.generated.tw.VillaProto.Troops value) {
+        if (troopsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          troops_ = value;
+          onChanged();
+        } else {
+          troopsBuilder_.setMessage(value);
+        }
+
+        return this;
       }
 
       /**
@@ -1813,31 +1787,24 @@ public final class VillaProto {
       /**
        * <code>.VillaType type = 8;</code>
        */
-      public Builder setTypeValue(int value) {
-        type_ = value;
-        onChanged();
-        return this;
-      }
-
-      /**
-       * <code>.VillaType type = 8;</code>
-       */
-      public com.vv.personal.twm.artifactory.generated.tw.VillaProto.VillaType getType() {
-        @SuppressWarnings("deprecation")
-        com.vv.personal.twm.artifactory.generated.tw.VillaProto.VillaType result = com.vv.personal.twm.artifactory.generated.tw.VillaProto.VillaType.valueOf(type_);
-        return result == null ? com.vv.personal.twm.artifactory.generated.tw.VillaProto.VillaType.UNRECOGNIZED : result;
+      public int getTypeValue() {
+        return type_;
       }
 
       /**
        * <code>.Troops troops = 7;</code>
        */
-      public Builder clearTroops() {
+      public Builder mergeTroops(com.vv.personal.twm.artifactory.generated.tw.VillaProto.Troops value) {
         if (troopsBuilder_ == null) {
-          troops_ = null;
+          if (troops_ != null) {
+            troops_ =
+                    com.vv.personal.twm.artifactory.generated.tw.VillaProto.Troops.newBuilder(troops_).mergeFrom(value).buildPartial();
+          } else {
+            troops_ = value;
+          }
           onChanged();
         } else {
-          troops_ = null;
-          troopsBuilder_ = null;
+          troopsBuilder_.mergeFrom(value);
         }
 
         return this;
@@ -1850,6 +1817,18 @@ public final class VillaProto {
 
         onChanged();
         return getTroopsFieldBuilder().getBuilder();
+      }
+
+      /**
+       * <code>.Troops troops = 7;</code>
+       */
+      public com.vv.personal.twm.artifactory.generated.tw.VillaProto.TroopsOrBuilder getTroopsOrBuilder() {
+        if (troopsBuilder_ != null) {
+          return troopsBuilder_.getMessageOrBuilder();
+        } else {
+          return troops_ == null ?
+                  com.vv.personal.twm.artifactory.generated.tw.VillaProto.Troops.getDefaultInstance() : troops_;
+        }
       }
 
       /**
@@ -1872,8 +1851,19 @@ public final class VillaProto {
       /**
        * <code>.VillaType type = 8;</code>
        */
-      public int getTypeValue() {
-        return type_;
+      public Builder setTypeValue(int value) {
+        type_ = value;
+        onChanged();
+        return this;
+      }
+
+      /**
+       * <code>.VillaType type = 8;</code>
+       */
+      public com.vv.personal.twm.artifactory.generated.tw.VillaProto.VillaType getType() {
+        @SuppressWarnings("deprecation")
+        com.vv.personal.twm.artifactory.generated.tw.VillaProto.VillaType result = com.vv.personal.twm.artifactory.generated.tw.VillaProto.VillaType.valueOf(type_);
+        return result == null ? com.vv.personal.twm.artifactory.generated.tw.VillaProto.VillaType.UNRECOGNIZED : result;
       }
 
       /**
@@ -1937,8 +1927,8 @@ public final class VillaProto {
         java.lang.Object ref = farmStrength_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b =
-                  com.google.protobuf.ByteString.copyFromUtf8(
-                          (java.lang.String) ref);
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
           farmStrength_ = b;
           return b;
         } else {
@@ -1950,27 +1940,16 @@ public final class VillaProto {
        * <code>string farmStrength = 9;</code>
        */
       public Builder setFarmStrengthBytes(
-              com.google.protobuf.ByteString value) {
+          com.google.protobuf.ByteString value) {
         if (value == null) {
-          throw new NullPointerException();
-        }
-        checkByteStringIsUtf8(value);
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
 
         farmStrength_ = value;
         onChanged();
         return this;
       }
-
-      /**
-       * <code>string farmStrength = 9;</code>
-       */
-      public Builder clearFarmStrength() {
-
-        farmStrength_ = getDefaultInstance().getFarmStrength();
-        onChanged();
-        return this;
-      }
-
       /**
        * <code>.Resources resources = 10;</code>
        */
@@ -2007,6 +1986,16 @@ public final class VillaProto {
       }
 
       /**
+       * <code>string farmStrength = 9;</code>
+       */
+      public Builder clearFarmStrength() {
+
+        farmStrength_ = getDefaultInstance().getFarmStrength();
+        onChanged();
+        return this;
+      }
+
+      /**
        * <code>.Resources resources = 10;</code>
        */
       public Builder setResources(
@@ -2024,17 +2013,13 @@ public final class VillaProto {
       /**
        * <code>.Resources resources = 10;</code>
        */
-      public Builder mergeResources(com.vv.personal.twm.artifactory.generated.tw.VillaProto.Resources value) {
+      public Builder clearResources() {
         if (resourcesBuilder_ == null) {
-          if (resources_ != null) {
-            resources_ =
-                    com.vv.personal.twm.artifactory.generated.tw.VillaProto.Resources.newBuilder(resources_).mergeFrom(value).buildPartial();
-          } else {
-            resources_ = value;
-          }
+          resources_ = null;
           onChanged();
         } else {
-          resourcesBuilder_.mergeFrom(value);
+          resources_ = null;
+          resourcesBuilder_ = null;
         }
 
         return this;
@@ -2043,13 +2028,17 @@ public final class VillaProto {
       /**
        * <code>.Resources resources = 10;</code>
        */
-      public Builder clearResources() {
+      public Builder mergeResources(com.vv.personal.twm.artifactory.generated.tw.VillaProto.Resources value) {
         if (resourcesBuilder_ == null) {
-          resources_ = null;
+          if (resources_ != null) {
+            resources_ =
+              com.vv.personal.twm.artifactory.generated.tw.VillaProto.Resources.newBuilder(resources_).mergeFrom(value).buildPartial();
+          } else {
+            resources_ = value;
+          }
           onChanged();
         } else {
-          resources_ = null;
-          resourcesBuilder_ = null;
+          resourcesBuilder_.mergeFrom(value);
         }
 
         return this;
@@ -2081,10 +2070,10 @@ public final class VillaProto {
        */
       private com.google.protobuf.SingleFieldBuilderV3<
               com.vv.personal.twm.artifactory.generated.tw.VillaProto.Resources, com.vv.personal.twm.artifactory.generated.tw.VillaProto.Resources.Builder, com.vv.personal.twm.artifactory.generated.tw.VillaProto.ResourcesOrBuilder>
-      getResourcesFieldBuilder() {
+          getResourcesFieldBuilder() {
         if (resourcesBuilder_ == null) {
           resourcesBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-                  com.vv.personal.twm.artifactory.generated.tw.VillaProto.Resources, com.vv.personal.twm.artifactory.generated.tw.VillaProto.Resources.Builder, com.vv.personal.twm.artifactory.generated.tw.VillaProto.ResourcesOrBuilder>(
+              com.vv.personal.twm.artifactory.generated.tw.VillaProto.Resources, com.vv.personal.twm.artifactory.generated.tw.VillaProto.Resources.Builder, com.vv.personal.twm.artifactory.generated.tw.VillaProto.ResourcesOrBuilder>(
                   getResources(),
                   getParentForChildren(),
                   isClean());
@@ -2092,7 +2081,6 @@ public final class VillaProto {
         }
         return resourcesBuilder_;
       }
-
       /**
        * <code>int32 coinMintingCapacity = 11;</code>
        */
@@ -2119,15 +2107,16 @@ public final class VillaProto {
         onChanged();
         return this;
       }
+
       @java.lang.Override
       public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
+              final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
       @java.lang.Override
       public final Builder mergeUnknownFields(
-              final com.google.protobuf.UnknownFieldSet unknownFields) {
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
@@ -2140,17 +2129,15 @@ public final class VillaProto {
   /**
    * Protobuf type {@code Troops}
    */
-  public static final class Troops extends
-          com.google.protobuf.GeneratedMessageV3 implements
-          // @@protoc_insertion_point(message_implements:Troops)
-          TroopsOrBuilder {
+  public  static final class Troops extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:Troops)
+      TroopsOrBuilder {
     public static final int SP_FIELD_NUMBER = 1;
-
     // Use Troops.newBuilder() to construct.
     private Troops(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-
     private Troops() {
       sp_ = 0;
       sw_ = 0;
@@ -2170,169 +2157,47 @@ public final class VillaProto {
     public static final int SW_FIELD_NUMBER = 2;
     public static final int AX_FIELD_NUMBER = 3;
     public static final int AR_FIELD_NUMBER = 4;
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-    internalGetFieldAccessorTable() {
-      return com.vv.personal.twm.artifactory.generated.tw.VillaProto.internal_static_Troops_fieldAccessorTable
-              .ensureFieldAccessorsInitialized(
-                      com.vv.personal.twm.artifactory.generated.tw.VillaProto.Troops.class, com.vv.personal.twm.artifactory.generated.tw.VillaProto.Troops.Builder.class);
-    }
-
     public static final int SU_FIELD_NUMBER = 5;
     public static final int LC_FIELD_NUMBER = 6;
-
-    /**
-     * <code>int32 sp = 1;</code>
-     */
-    public int getSp() {
-      return sp_;
-    }
-
     public static final int MA_FIELD_NUMBER = 7;
     public static final int HC_FIELD_NUMBER = 8;
-
-    /**
-     * <code>int32 sw = 2;</code>
-     */
-    public int getSw() {
-      return sw_;
-    }
-
     public static final int RM_FIELD_NUMBER = 9;
     public static final int CT_FIELD_NUMBER = 10;
-
-    /**
-     * <code>int32 ax = 3;</code>
-     */
-    public int getAx() {
-      return ax_;
-    }
-
     public static final int NB_FIELD_NUMBER = 11;
     public static final int PD_FIELD_NUMBER = 12;
-
-    /**
-     * <code>int32 ar = 4;</code>
-     */
-    public int getAr() {
-      return ar_;
-    }
-
     public static final int WL_FIELD_NUMBER = 13;
-    private static final long serialVersionUID = 0L;
-
-    /**
-     * <code>int32 su = 5;</code>
-     */
-    public int getSu() {
-      return su_;
-    }
-
+  private static final long serialVersionUID = 0L;
     // @@protoc_insertion_point(class_scope:Troops)
     private static final com.vv.personal.twm.artifactory.generated.tw.VillaProto.Troops DEFAULT_INSTANCE;
     private static final com.google.protobuf.Parser<Troops>
-            PARSER = new com.google.protobuf.AbstractParser<Troops>() {
+        PARSER = new com.google.protobuf.AbstractParser<Troops>() {
       @java.lang.Override
       public Troops parsePartialFrom(
-              com.google.protobuf.CodedInputStream input,
-              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-              throws com.google.protobuf.InvalidProtocolBufferException {
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
         return new Troops(input, extensionRegistry);
       }
     };
-
-    /**
-     * <code>int32 lc = 6;</code>
-     */
-    public int getLc() {
-      return lc_;
-    }
 
     static {
       DEFAULT_INSTANCE = new com.vv.personal.twm.artifactory.generated.tw.VillaProto.Troops();
     }
 
     private int sp_;
-
-    /**
-     * <code>int32 ma = 7;</code>
-     */
-    public int getMa() {
-      return ma_;
-    }
-
     private int sw_;
     private int ax_;
-
-    /**
-     * <code>int32 hc = 8;</code>
-     */
-    public int getHc() {
-      return hc_;
-    }
-
     private int ar_;
     private int su_;
-
-    /**
-     * <code>int32 rm = 9;</code>
-     */
-    public int getRm() {
-      return rm_;
-    }
-
     private int lc_;
     private int ma_;
-
-    /**
-     * <code>int32 ct = 10;</code>
-     */
-    public int getCt() {
-      return ct_;
-    }
-
     private int hc_;
     private int rm_;
-
-    /**
-     * <code>int32 nb = 11;</code>
-     */
-    public int getNb() {
-      return nb_;
-    }
-
     private int ct_;
     private int nb_;
-
-    /**
-     * <code>int32 pd = 12;</code>
-     */
-    public int getPd() {
-      return pd_;
-    }
-
     private int pd_;
     private int wl_;
-
-    /**
-     * <code>int32 wl = 13;</code>
-     */
-    public int getWl() {
-      return wl_;
-    }
-
     private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
     private Troops(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -2451,20 +2316,20 @@ public final class VillaProto {
     public static com.vv.personal.twm.artifactory.generated.tw.VillaProto.Troops parseFrom(
             java.nio.ByteBuffer data,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+        throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
 
     public static com.vv.personal.twm.artifactory.generated.tw.VillaProto.Troops parseFrom(
-            com.google.protobuf.ByteString data)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
 
     public static com.vv.personal.twm.artifactory.generated.tw.VillaProto.Troops parseFrom(
-            com.google.protobuf.ByteString data,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
 
@@ -2483,21 +2348,21 @@ public final class VillaProto {
     public static com.vv.personal.twm.artifactory.generated.tw.VillaProto.Troops parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+              .parseWithIOException(PARSER, input);
     }
 
     public static com.vv.personal.twm.artifactory.generated.tw.VillaProto.Troops parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
+            java.io.InputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+              .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
     public static com.vv.personal.twm.artifactory.generated.tw.VillaProto.Troops parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
+            throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+              .parseDelimitedWithIOException(PARSER, input);
     }
 
     public static com.vv.personal.twm.artifactory.generated.tw.VillaProto.Troops parseDelimitedFrom(
@@ -2509,63 +2374,27 @@ public final class VillaProto {
     }
 
     public static com.vv.personal.twm.artifactory.generated.tw.VillaProto.Troops parseFrom(
-            com.google.protobuf.CodedInputStream input)
-            throws java.io.IOException {
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
-              .parseWithIOException(PARSER, input);
+          .parseWithIOException(PARSER, input);
     }
 
     public static com.vv.personal.twm.artifactory.generated.tw.VillaProto.Troops parseFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws java.io.IOException {
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
-              .parseWithIOException(PARSER, input, extensionRegistry);
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
 
-    public static Builder newBuilder(com.vv.personal.twm.artifactory.generated.tw.VillaProto.Troops prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() {
-      return newBuilder();
-    }
-
-    public static com.vv.personal.twm.artifactory.generated.tw.VillaProto.Troops getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    public static com.google.protobuf.Parser<Troops> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-              ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
+            throws java.io.IOException {
       if (sp_ != 0) {
         output.writeInt32(1, sp_);
       }
@@ -2608,6 +2437,171 @@ public final class VillaProto {
       unknownFields.writeTo(output);
     }
 
+    public static Builder newBuilder(com.vv.personal.twm.artifactory.generated.tw.VillaProto.Troops prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+
+    public static com.vv.personal.twm.artifactory.generated.tw.VillaProto.Troops getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + SP_FIELD_NUMBER;
+      hash = (53 * hash) + getSp();
+      hash = (37 * hash) + SW_FIELD_NUMBER;
+      hash = (53 * hash) + getSw();
+      hash = (37 * hash) + AX_FIELD_NUMBER;
+      hash = (53 * hash) + getAx();
+      hash = (37 * hash) + AR_FIELD_NUMBER;
+      hash = (53 * hash) + getAr();
+      hash = (37 * hash) + SU_FIELD_NUMBER;
+      hash = (53 * hash) + getSu();
+      hash = (37 * hash) + LC_FIELD_NUMBER;
+      hash = (53 * hash) + getLc();
+      hash = (37 * hash) + MA_FIELD_NUMBER;
+      hash = (53 * hash) + getMa();
+      hash = (37 * hash) + HC_FIELD_NUMBER;
+      hash = (53 * hash) + getHc();
+      hash = (37 * hash) + RM_FIELD_NUMBER;
+      hash = (53 * hash) + getRm();
+      hash = (37 * hash) + CT_FIELD_NUMBER;
+      hash = (53 * hash) + getCt();
+      hash = (37 * hash) + NB_FIELD_NUMBER;
+      hash = (53 * hash) + getNb();
+      hash = (37 * hash) + PD_FIELD_NUMBER;
+      hash = (53 * hash) + getPd();
+      hash = (37 * hash) + WL_FIELD_NUMBER;
+      hash = (53 * hash) + getWl();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.google.protobuf.Parser<Troops> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+    internalGetFieldAccessorTable() {
+      return com.vv.personal.twm.artifactory.generated.tw.VillaProto.internal_static_Troops_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                      com.vv.personal.twm.artifactory.generated.tw.VillaProto.Troops.class, com.vv.personal.twm.artifactory.generated.tw.VillaProto.Troops.Builder.class);
+    }
+
+    /**
+     * <code>int32 sp = 1;</code>
+     */
+    public int getSp() {
+      return sp_;
+    }
+
+    /**
+     * <code>int32 sw = 2;</code>
+     */
+    public int getSw() {
+      return sw_;
+    }
+
+    /**
+     * <code>int32 ax = 3;</code>
+     */
+    public int getAx() {
+      return ax_;
+    }
+
+    /**
+     * <code>int32 ar = 4;</code>
+     */
+    public int getAr() {
+      return ar_;
+    }
+
+    /**
+     * <code>int32 su = 5;</code>
+     */
+    public int getSu() {
+      return su_;
+    }
+
+    /**
+     * <code>int32 lc = 6;</code>
+     */
+    public int getLc() {
+      return lc_;
+    }
+
+    /**
+     * <code>int32 ma = 7;</code>
+     */
+    public int getMa() {
+      return ma_;
+    }
+
+    /**
+     * <code>int32 hc = 8;</code>
+     */
+    public int getHc() {
+      return hc_;
+    }
+
+    /**
+     * <code>int32 rm = 9;</code>
+     */
+    public int getRm() {
+      return rm_;
+    }
+
+    /**
+     * <code>int32 ct = 10;</code>
+     */
+    public int getCt() {
+      return ct_;
+    }
+
+    /**
+     * <code>int32 nb = 11;</code>
+     */
+    public int getNb() {
+      return nb_;
+    }
+
+    /**
+     * <code>int32 pd = 12;</code>
+     */
+    public int getPd() {
+      return pd_;
+    }
+
+    /**
+     * <code>int32 wl = 13;</code>
+     */
+    public int getWl() {
+      return wl_;
+    }
+
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
     @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
@@ -2632,11 +2626,11 @@ public final class VillaProto {
       }
       if (su_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(5, su_);
+                .computeInt32Size(5, su_);
       }
       if (lc_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(6, lc_);
+                .computeInt32Size(6, lc_);
       }
       if (ma_ != 0) {
         size += com.google.protobuf.CodedOutputStream
@@ -2713,41 +2707,19 @@ public final class VillaProto {
     }
 
     @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + SP_FIELD_NUMBER;
-      hash = (53 * hash) + getSp();
-      hash = (37 * hash) + SW_FIELD_NUMBER;
-      hash = (53 * hash) + getSw();
-      hash = (37 * hash) + AX_FIELD_NUMBER;
-      hash = (53 * hash) + getAx();
-      hash = (37 * hash) + AR_FIELD_NUMBER;
-      hash = (53 * hash) + getAr();
-      hash = (37 * hash) + SU_FIELD_NUMBER;
-      hash = (53 * hash) + getSu();
-      hash = (37 * hash) + LC_FIELD_NUMBER;
-      hash = (53 * hash) + getLc();
-      hash = (37 * hash) + MA_FIELD_NUMBER;
-      hash = (53 * hash) + getMa();
-      hash = (37 * hash) + HC_FIELD_NUMBER;
-      hash = (53 * hash) + getHc();
-      hash = (37 * hash) + RM_FIELD_NUMBER;
-      hash = (53 * hash) + getRm();
-      hash = (37 * hash) + CT_FIELD_NUMBER;
-      hash = (53 * hash) + getCt();
-      hash = (37 * hash) + NB_FIELD_NUMBER;
-      hash = (53 * hash) + getNb();
-      hash = (37 * hash) + PD_FIELD_NUMBER;
-      hash = (53 * hash) + getPd();
-      hash = (37 * hash) + WL_FIELD_NUMBER;
-      hash = (53 * hash) + getWl();
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
+    public Builder newBuilderForType() { return newBuilder(); }
+
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
     }
 
     @java.lang.Override
@@ -2908,6 +2880,13 @@ public final class VillaProto {
       private int pd_;
       private int wl_;
 
+      /**
+       * <code>int32 sp = 1;</code>
+       */
+      public int getSp() {
+        return sp_;
+      }
+
       // Construct using com.vv.personal.twm.artifactory.generated.tw.VillaProto.Troops.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
@@ -2922,6 +2901,13 @@ public final class VillaProto {
       public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
         return com.vv.personal.twm.artifactory.generated.tw.VillaProto.internal_static_Troops_descriptor;
+      }
+
+      /**
+       * <code>int32 sw = 2;</code>
+       */
+      public int getSw() {
+        return sw_;
       }
 
       @java.lang.Override
@@ -2945,9 +2931,16 @@ public final class VillaProto {
         return super.setField(field, value);
       }
 
+      /**
+       * <code>int32 ax = 3;</code>
+       */
+      public int getAx() {
+        return ax_;
+      }
+
       @java.lang.Override
       public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
+              com.google.protobuf.Descriptors.FieldDescriptor field) {
         return super.clearField(field);
       }
 
@@ -2964,10 +2957,17 @@ public final class VillaProto {
         return super.setRepeatedField(field, index, value);
       }
 
+      /**
+       * <code>int32 ar = 4;</code>
+       */
+      public int getAr() {
+        return ar_;
+      }
+
       @java.lang.Override
       public Builder addRepeatedField(
-              com.google.protobuf.Descriptors.FieldDescriptor field,
-              java.lang.Object value) {
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
         return super.addRepeatedField(field, value);
       }
 
@@ -2983,8 +2983,8 @@ public final class VillaProto {
 
       @java.lang.Override
       public Builder mergeFrom(
-              com.google.protobuf.CodedInputStream input,
-              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         com.vv.personal.twm.artifactory.generated.tw.VillaProto.Troops parsedMessage = null;
         try {
@@ -3001,10 +3001,10 @@ public final class VillaProto {
       }
 
       /**
-       * <code>int32 sp = 1;</code>
+       * <code>int32 su = 5;</code>
        */
-      public int getSp() {
-        return sp_;
+      public int getSu() {
+        return su_;
       }
 
       /**
@@ -3030,18 +3030,17 @@ public final class VillaProto {
       /**
        * <code>int32 sw = 2;</code>
        */
-      public int getSw() {
-        return sw_;
-      }
-
-      /**
-       * <code>int32 sw = 2;</code>
-       */
       public Builder setSw(int value) {
 
         sw_ = value;
         onChanged();
         return this;
+      }
+      /**
+       * <code>int32 lc = 6;</code>
+       */
+      public int getLc() {
+        return lc_;
       }
 
       /**
@@ -3052,13 +3051,6 @@ public final class VillaProto {
         sw_ = 0;
         onChanged();
         return this;
-      }
-
-      /**
-       * <code>int32 ax = 3;</code>
-       */
-      public int getAx() {
-        return ax_;
       }
 
       /**
@@ -3080,12 +3072,11 @@ public final class VillaProto {
         onChanged();
         return this;
       }
-
       /**
-       * <code>int32 ar = 4;</code>
+       * <code>int32 ma = 7;</code>
        */
-      public int getAr() {
-        return ar_;
+      public int getMa() {
+        return ma_;
       }
 
       /**
@@ -3111,18 +3102,18 @@ public final class VillaProto {
       /**
        * <code>int32 su = 5;</code>
        */
-      public int getSu() {
-        return su_;
-      }
-
-      /**
-       * <code>int32 su = 5;</code>
-       */
       public Builder setSu(int value) {
 
         su_ = value;
         onChanged();
         return this;
+      }
+
+      /**
+       * <code>int32 hc = 8;</code>
+       */
+      public int getHc() {
+        return hc_;
       }
 
       /**
@@ -3133,13 +3124,6 @@ public final class VillaProto {
         su_ = 0;
         onChanged();
         return this;
-      }
-
-      /**
-       * <code>int32 lc = 6;</code>
-       */
-      public int getLc() {
-        return lc_;
       }
 
       /**
@@ -3161,12 +3145,11 @@ public final class VillaProto {
         onChanged();
         return this;
       }
-
       /**
-       * <code>int32 ma = 7;</code>
+       * <code>int32 rm = 9;</code>
        */
-      public int getMa() {
-        return ma_;
+      public int getRm() {
+        return rm_;
       }
 
       /**
@@ -3192,18 +3175,18 @@ public final class VillaProto {
       /**
        * <code>int32 hc = 8;</code>
        */
-      public int getHc() {
-        return hc_;
-      }
-
-      /**
-       * <code>int32 hc = 8;</code>
-       */
       public Builder setHc(int value) {
 
         hc_ = value;
         onChanged();
         return this;
+      }
+
+      /**
+       * <code>int32 ct = 10;</code>
+       */
+      public int getCt() {
+        return ct_;
       }
 
       /**
@@ -3214,13 +3197,6 @@ public final class VillaProto {
         hc_ = 0;
         onChanged();
         return this;
-      }
-
-      /**
-       * <code>int32 rm = 9;</code>
-       */
-      public int getRm() {
-        return rm_;
       }
 
       /**
@@ -3242,12 +3218,11 @@ public final class VillaProto {
         onChanged();
         return this;
       }
-
       /**
-       * <code>int32 ct = 10;</code>
+       * <code>int32 nb = 11;</code>
        */
-      public int getCt() {
-        return ct_;
+      public int getNb() {
+        return nb_;
       }
 
       /**
@@ -3273,18 +3248,18 @@ public final class VillaProto {
       /**
        * <code>int32 nb = 11;</code>
        */
-      public int getNb() {
-        return nb_;
-      }
-
-      /**
-       * <code>int32 nb = 11;</code>
-       */
       public Builder setNb(int value) {
 
         nb_ = value;
         onChanged();
         return this;
+      }
+
+      /**
+       * <code>int32 pd = 12;</code>
+       */
+      public int getPd() {
+        return pd_;
       }
 
       /**
@@ -3295,13 +3270,6 @@ public final class VillaProto {
         nb_ = 0;
         onChanged();
         return this;
-      }
-
-      /**
-       * <code>int32 pd = 12;</code>
-       */
-      public int getPd() {
-        return pd_;
       }
 
       /**
@@ -3377,10 +3345,22 @@ public final class VillaProto {
           // @@protoc_insertion_point(message_implements:Resources)
           ResourcesOrBuilder {
     public static final int CURRENTWOOD_FIELD_NUMBER = 1;
+
+    // Use Resources.newBuilder() to construct.
+    private Resources(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+
+    private Resources() {
+      currentWood_ = 0L;
+      currentClay_ = 0L;
+      currentIron_ = 0L;
+      warehouseCapacity_ = 0L;
+    }
+
     public static final int CURRENTCLAY_FIELD_NUMBER = 2;
     public static final int CURRENTIRON_FIELD_NUMBER = 3;
-    public static final int CURRENTWAREHOUSESTAT_FIELD_NUMBER = 4;
-    public static final int WAREHOUSECAPACITY_FIELD_NUMBER = 5;
+    public static final int WAREHOUSECAPACITY_FIELD_NUMBER = 4;
     private static final long serialVersionUID = 0L;
     // @@protoc_insertion_point(class_scope:Resources)
     private static final com.vv.personal.twm.artifactory.generated.tw.VillaProto.Resources DEFAULT_INSTANCE;
@@ -3395,33 +3375,37 @@ public final class VillaProto {
       }
     };
 
+    /**
+     * <code>int64 currentWood = 1;</code>
+     */
+    public long getCurrentWood() {
+      return currentWood_;
+    }
+
     static {
       DEFAULT_INSTANCE = new com.vv.personal.twm.artifactory.generated.tw.VillaProto.Resources();
     }
 
     private long currentWood_;
+    /**
+     * <code>int64 currentClay = 2;</code>
+     */
+    public long getCurrentClay() {
+      return currentClay_;
+    }
     private long currentClay_;
     private long currentIron_;
-    private long currentWarehouseStat_;
+    /**
+     * <code>int64 currentIron = 3;</code>
+     */
+    public long getCurrentIron() {
+      return currentIron_;
+    }
     private long warehouseCapacity_;
     private byte memoizedIsInitialized = -1;
-
-    // Use Resources.newBuilder() to construct.
-    private Resources(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-
-    private Resources() {
-      currentWood_ = 0L;
-      currentClay_ = 0L;
-      currentIron_ = 0L;
-      currentWarehouseStat_ = 0L;
-      warehouseCapacity_ = 0L;
-    }
-
     private Resources(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       if (extensionRegistry == null) {
@@ -3455,11 +3439,6 @@ public final class VillaProto {
             }
             case 32: {
 
-              currentWarehouseStat_ = input.readInt64();
-              break;
-            }
-            case 40: {
-
               warehouseCapacity_ = input.readInt64();
               break;
             }
@@ -3486,6 +3465,16 @@ public final class VillaProto {
     public static final com.google.protobuf.Descriptors.Descriptor
     getDescriptor() {
       return com.vv.personal.twm.artifactory.generated.tw.VillaProto.internal_static_Resources_descriptor;
+    }
+
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
     }
 
     public static com.vv.personal.twm.artifactory.generated.tw.VillaProto.Resources parseFrom(
@@ -3547,16 +3536,16 @@ public final class VillaProto {
     }
 
     public static com.vv.personal.twm.artifactory.generated.tw.VillaProto.Resources parseDelimitedFrom(
-            java.io.InputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws java.io.IOException {
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
-              .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
 
     public static com.vv.personal.twm.artifactory.generated.tw.VillaProto.Resources parseFrom(
-            com.google.protobuf.CodedInputStream input)
-            throws java.io.IOException {
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseWithIOException(PARSER, input);
     }
@@ -3593,55 +3582,17 @@ public final class VillaProto {
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-    internalGetFieldAccessorTable() {
+        internalGetFieldAccessorTable() {
       return com.vv.personal.twm.artifactory.generated.tw.VillaProto.internal_static_Resources_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
                       com.vv.personal.twm.artifactory.generated.tw.VillaProto.Resources.class, com.vv.personal.twm.artifactory.generated.tw.VillaProto.Resources.Builder.class);
     }
 
     /**
-     * <code>int64 currentWood = 1;</code>
-     */
-    public long getCurrentWood() {
-      return currentWood_;
-    }
-
-    /**
-     * <code>int64 currentClay = 2;</code>
-     */
-    public long getCurrentClay() {
-      return currentClay_;
-    }
-
-    /**
-     * <code>int64 currentIron = 3;</code>
-     */
-    public long getCurrentIron() {
-      return currentIron_;
-    }
-
-    /**
-     * <code>int64 currentWarehouseStat = 4;</code>
-     */
-    public long getCurrentWarehouseStat() {
-      return currentWarehouseStat_;
-    }
-
-    /**
-     * <code>int64 warehouseCapacity = 5;</code>
+     * <code>int64 warehouseCapacity = 4;</code>
      */
     public long getWarehouseCapacity() {
       return warehouseCapacity_;
-    }
-
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
     }
 
     @java.lang.Override
@@ -3656,11 +3607,8 @@ public final class VillaProto {
       if (currentIron_ != 0L) {
         output.writeInt64(3, currentIron_);
       }
-      if (currentWarehouseStat_ != 0L) {
-        output.writeInt64(4, currentWarehouseStat_);
-      }
       if (warehouseCapacity_ != 0L) {
-        output.writeInt64(5, warehouseCapacity_);
+        output.writeInt64(4, warehouseCapacity_);
       }
       unknownFields.writeTo(output);
     }
@@ -3683,13 +3631,9 @@ public final class VillaProto {
         size += com.google.protobuf.CodedOutputStream
                 .computeInt64Size(3, currentIron_);
       }
-      if (currentWarehouseStat_ != 0L) {
-        size += com.google.protobuf.CodedOutputStream
-                .computeInt64Size(4, currentWarehouseStat_);
-      }
       if (warehouseCapacity_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
-                .computeInt64Size(5, warehouseCapacity_);
+          .computeInt64Size(4, warehouseCapacity_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -3712,9 +3656,7 @@ public final class VillaProto {
       result = result && (getCurrentClay()
               == other.getCurrentClay());
       result = result && (getCurrentIron()
-              == other.getCurrentIron());
-      result = result && (getCurrentWarehouseStat()
-              == other.getCurrentWarehouseStat());
+          == other.getCurrentIron());
       result = result && (getWarehouseCapacity()
               == other.getWarehouseCapacity());
       result = result && unknownFields.equals(other.unknownFields);
@@ -3730,16 +3672,13 @@ public final class VillaProto {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + CURRENTWOOD_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-              getCurrentWood());
+          getCurrentWood());
       hash = (37 * hash) + CURRENTCLAY_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-              getCurrentClay());
+          getCurrentClay());
       hash = (37 * hash) + CURRENTIRON_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
               getCurrentIron());
-      hash = (37 * hash) + CURRENTWAREHOUSESTAT_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-              getCurrentWarehouseStat());
       hash = (37 * hash) + WAREHOUSECAPACITY_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
               getWarehouseCapacity());
@@ -3785,40 +3724,13 @@ public final class VillaProto {
             com.vv.personal.twm.artifactory.generated.tw.VillaProto.ResourcesOrBuilder {
       private long currentWood_;
       private long currentClay_;
-      private long currentIron_;
-      private long currentWarehouseStat_;
-      private long warehouseCapacity_;
-
-      // Construct using com.vv.personal.twm.artifactory.generated.tw.VillaProto.Resources.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-              com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-
-      public static final com.google.protobuf.Descriptors.Descriptor
-      getDescriptor() {
-        return com.vv.personal.twm.artifactory.generated.tw.VillaProto.internal_static_Resources_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internalGetFieldAccessorTable() {
-        return com.vv.personal.twm.artifactory.generated.tw.VillaProto.internal_static_Resources_fieldAccessorTable
-                .ensureFieldAccessorsInitialized(
-                        com.vv.personal.twm.artifactory.generated.tw.VillaProto.Resources.class, com.vv.personal.twm.artifactory.generated.tw.VillaProto.Resources.Builder.class);
-      }
-
+      private long currentIron_ ;
+      private long warehouseCapacity_ ;
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessageV3
                 .alwaysUseFieldBuilders) {
         }
       }
-
       @java.lang.Override
       public Builder clear() {
         super.clear();
@@ -3828,17 +3740,14 @@ public final class VillaProto {
 
         currentIron_ = 0L;
 
-        currentWarehouseStat_ = 0L;
-
         warehouseCapacity_ = 0L;
 
         return this;
       }
 
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-      getDescriptorForType() {
-        return com.vv.personal.twm.artifactory.generated.tw.VillaProto.internal_static_Resources_descriptor;
+      // Construct using com.vv.personal.twm.artifactory.generated.tw.VillaProto.Resources.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
       }
 
       @java.lang.Override
@@ -3861,7 +3770,6 @@ public final class VillaProto {
         result.currentWood_ = currentWood_;
         result.currentClay_ = currentClay_;
         result.currentIron_ = currentIron_;
-        result.currentWarehouseStat_ = currentWarehouseStat_;
         result.warehouseCapacity_ = warehouseCapacity_;
         onBuilt();
         return result;
@@ -3870,6 +3778,31 @@ public final class VillaProto {
       @java.lang.Override
       public Builder clone() {
         return super.clone();
+      }
+
+      private Builder(
+              com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+
+      public static final com.google.protobuf.Descriptors.Descriptor
+      getDescriptor() {
+        return com.vv.personal.twm.artifactory.generated.tw.VillaProto.internal_static_Resources_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internalGetFieldAccessorTable() {
+        return com.vv.personal.twm.artifactory.generated.tw.VillaProto.internal_static_Resources_fieldAccessorTable
+                .ensureFieldAccessorsInitialized(
+                        com.vv.personal.twm.artifactory.generated.tw.VillaProto.Resources.class, com.vv.personal.twm.artifactory.generated.tw.VillaProto.Resources.Builder.class);
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+      getDescriptorForType() {
+        return com.vv.personal.twm.artifactory.generated.tw.VillaProto.internal_static_Resources_descriptor;
       }
 
       @java.lang.Override
@@ -3885,36 +3818,6 @@ public final class VillaProto {
         return super.clearField(field);
       }
 
-      @java.lang.Override
-      public Builder clearOneof(
-              com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-
-      @java.lang.Override
-      public Builder setRepeatedField(
-              com.google.protobuf.Descriptors.FieldDescriptor field,
-              int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-
-      @java.lang.Override
-      public Builder addRepeatedField(
-              com.google.protobuf.Descriptors.FieldDescriptor field,
-              java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.vv.personal.twm.artifactory.generated.tw.VillaProto.Resources) {
-          return mergeFrom((com.vv.personal.twm.artifactory.generated.tw.VillaProto.Resources) other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
       public Builder mergeFrom(com.vv.personal.twm.artifactory.generated.tw.VillaProto.Resources other) {
         if (other == com.vv.personal.twm.artifactory.generated.tw.VillaProto.Resources.getDefaultInstance()) return this;
         if (other.getCurrentWood() != 0L) {
@@ -3925,9 +3828,6 @@ public final class VillaProto {
         }
         if (other.getCurrentIron() != 0L) {
           setCurrentIron(other.getCurrentIron());
-        }
-        if (other.getCurrentWarehouseStat() != 0L) {
-          setCurrentWarehouseStat(other.getCurrentWarehouseStat());
         }
         if (other.getWarehouseCapacity() != 0L) {
           setWarehouseCapacity(other.getWarehouseCapacity());
@@ -3943,9 +3843,46 @@ public final class VillaProto {
       }
 
       @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+
+      @java.lang.Override
+      public Builder setRepeatedField(
+              com.google.protobuf.Descriptors.FieldDescriptor field,
+              int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+
+      /**
+       * <code>int64 currentWood = 1;</code>
+       */
+      public long getCurrentWood() {
+        return currentWood_;
+      }
+
+      @java.lang.Override
+      public Builder addRepeatedField(
+              com.google.protobuf.Descriptors.FieldDescriptor field,
+              java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.vv.personal.twm.artifactory.generated.tw.VillaProto.Resources) {
+          return mergeFrom((com.vv.personal.twm.artifactory.generated.tw.VillaProto.Resources)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      @java.lang.Override
       public Builder mergeFrom(
-              com.google.protobuf.CodedInputStream input,
-              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
               throws java.io.IOException {
         com.vv.personal.twm.artifactory.generated.tw.VillaProto.Resources parsedMessage = null;
         try {
@@ -3960,12 +3897,11 @@ public final class VillaProto {
         }
         return this;
       }
-
       /**
-       * <code>int64 currentWood = 1;</code>
+       * <code>int64 currentClay = 2;</code>
        */
-      public long getCurrentWood() {
-        return currentWood_;
+      public long getCurrentClay() {
+        return currentClay_;
       }
 
       /**
@@ -3991,18 +3927,18 @@ public final class VillaProto {
       /**
        * <code>int64 currentClay = 2;</code>
        */
-      public long getCurrentClay() {
-        return currentClay_;
-      }
-
-      /**
-       * <code>int64 currentClay = 2;</code>
-       */
       public Builder setCurrentClay(long value) {
 
         currentClay_ = value;
         onChanged();
         return this;
+      }
+
+      /**
+       * <code>int64 currentIron = 3;</code>
+       */
+      public long getCurrentIron() {
+        return currentIron_;
       }
 
       /**
@@ -4013,13 +3949,6 @@ public final class VillaProto {
         currentClay_ = 0L;
         onChanged();
         return this;
-      }
-
-      /**
-       * <code>int64 currentIron = 3;</code>
-       */
-      public long getCurrentIron() {
-        return currentIron_;
       }
 
       /**
@@ -4043,41 +3972,14 @@ public final class VillaProto {
       }
 
       /**
-       * <code>int64 currentWarehouseStat = 4;</code>
-       */
-      public long getCurrentWarehouseStat() {
-        return currentWarehouseStat_;
-      }
-
-      /**
-       * <code>int64 currentWarehouseStat = 4;</code>
-       */
-      public Builder setCurrentWarehouseStat(long value) {
-
-        currentWarehouseStat_ = value;
-        onChanged();
-        return this;
-      }
-
-      /**
-       * <code>int64 currentWarehouseStat = 4;</code>
-       */
-      public Builder clearCurrentWarehouseStat() {
-
-        currentWarehouseStat_ = 0L;
-        onChanged();
-        return this;
-      }
-
-      /**
-       * <code>int64 warehouseCapacity = 5;</code>
+       * <code>int64 warehouseCapacity = 4;</code>
        */
       public long getWarehouseCapacity() {
         return warehouseCapacity_;
       }
 
       /**
-       * <code>int64 warehouseCapacity = 5;</code>
+       * <code>int64 warehouseCapacity = 4;</code>
        */
       public Builder setWarehouseCapacity(long value) {
 
@@ -4087,7 +3989,7 @@ public final class VillaProto {
       }
 
       /**
-       * <code>int64 warehouseCapacity = 5;</code>
+       * <code>int64 warehouseCapacity = 4;</code>
        */
       public Builder clearWarehouseCapacity() {
 
@@ -4118,27 +4020,27 @@ public final class VillaProto {
    * Protobuf type {@code VillaList}
    */
   public static final class VillaList extends
-          com.google.protobuf.GeneratedMessageV3 implements
-          // @@protoc_insertion_point(message_implements:VillaList)
-          VillaListOrBuilder {
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:VillaList)
+      VillaListOrBuilder {
     public static final int VILLAS_FIELD_NUMBER = 1;
-    private static final long serialVersionUID = 0L;
+    // Use VillaList.newBuilder() to construct.
+    private VillaList(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private VillaList() {
+      villas_ = java.util.Collections.emptyList();
+    }
+  private static final long serialVersionUID = 0L;
     // @@protoc_insertion_point(class_scope:VillaList)
     private static final com.vv.personal.twm.artifactory.generated.tw.VillaProto.VillaList DEFAULT_INSTANCE;
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-
     private static final com.google.protobuf.Parser<VillaList>
-            PARSER = new com.google.protobuf.AbstractParser<VillaList>() {
+        PARSER = new com.google.protobuf.AbstractParser<VillaList>() {
       @java.lang.Override
       public VillaList parsePartialFrom(
-              com.google.protobuf.CodedInputStream input,
-              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-              throws com.google.protobuf.InvalidProtocolBufferException {
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
         return new VillaList(input, extensionRegistry);
       }
     };
@@ -4149,24 +4051,10 @@ public final class VillaProto {
 
     private java.util.List<com.vv.personal.twm.artifactory.generated.tw.VillaProto.Villa> villas_;
     private byte memoizedIsInitialized = -1;
-    // Use VillaList.newBuilder() to construct.
-    private VillaList(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
 
-    /**
-     * <code>repeated .Villa villas = 1;</code>
-     */
-    public java.util.List<com.vv.personal.twm.artifactory.generated.tw.VillaProto.Villa> getVillasList() {
-      return villas_;
-    }
-
-    private VillaList() {
-      villas_ = java.util.Collections.emptyList();
-    }
     private VillaList(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       if (extensionRegistry == null) {
@@ -4174,7 +4062,7 @@ public final class VillaProto {
       }
       int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
+              com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -4220,18 +4108,30 @@ public final class VillaProto {
       return com.vv.personal.twm.artifactory.generated.tw.VillaProto.internal_static_VillaList_descriptor;
     }
 
-    /**
-     * <code>repeated .Villa villas = 1;</code>
-     */
-    public com.vv.personal.twm.artifactory.generated.tw.VillaProto.VillaOrBuilder getVillasOrBuilder(
-            int index) {
-      return villas_.get(index);
-    }
-
     public static com.vv.personal.twm.artifactory.generated.tw.VillaProto.VillaList parseFrom(
             java.nio.ByteBuffer data)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
+    }
+
+    public static com.vv.personal.twm.artifactory.generated.tw.VillaProto.VillaList parseFrom(
+            java.nio.ByteBuffer data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+
+    public static com.vv.personal.twm.artifactory.generated.tw.VillaProto.VillaList parseFrom(
+            com.google.protobuf.ByteString data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+
+    public static com.vv.personal.twm.artifactory.generated.tw.VillaProto.VillaList parseFrom(
+            com.google.protobuf.ByteString data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
     }
 
     @java.lang.Override
@@ -4244,35 +4144,22 @@ public final class VillaProto {
       return true;
     }
 
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-            throws java.io.IOException {
-      for (int i = 0; i < villas_.size(); i++) {
-        output.writeMessage(1, villas_.get(i));
-      }
-      unknownFields.writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      for (int i = 0; i < villas_.size(); i++) {
-        size += com.google.protobuf.CodedOutputStream
-                .computeMessageSize(1, villas_.get(i));
-      }
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
+    public static com.vv.personal.twm.artifactory.generated.tw.VillaProto.VillaList parseFrom(byte[] data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
     }
 
     public static com.vv.personal.twm.artifactory.generated.tw.VillaProto.VillaList parseFrom(
-            java.nio.ByteBuffer data,
+            byte[] data,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
+    }
+
+    public static com.vv.personal.twm.artifactory.generated.tw.VillaProto.VillaList parseFrom(java.io.InputStream input)
+            throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input);
     }
 
     @java.lang.Override
@@ -4289,37 +4176,6 @@ public final class VillaProto {
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
-    }
-
-    public static com.vv.personal.twm.artifactory.generated.tw.VillaProto.VillaList parseFrom(
-            com.google.protobuf.ByteString data)
-            throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-
-    public static com.vv.personal.twm.artifactory.generated.tw.VillaProto.VillaList parseFrom(
-            com.google.protobuf.ByteString data,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-
-    public static com.vv.personal.twm.artifactory.generated.tw.VillaProto.VillaList parseFrom(byte[] data)
-            throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-
-    public static com.vv.personal.twm.artifactory.generated.tw.VillaProto.VillaList parseFrom(
-            byte[] data,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-
-    public static com.vv.personal.twm.artifactory.generated.tw.VillaProto.VillaList parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-              .parseWithIOException(PARSER, input);
     }
 
     public static com.vv.personal.twm.artifactory.generated.tw.VillaProto.VillaList parseFrom(
@@ -4359,14 +4215,6 @@ public final class VillaProto {
               .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-
-    public static Builder newBuilder(com.vv.personal.twm.artifactory.generated.tw.VillaProto.VillaList prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-
     public static com.vv.personal.twm.artifactory.generated.tw.VillaProto.VillaList getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
@@ -4376,11 +4224,24 @@ public final class VillaProto {
     }
 
     @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
+    internalGetFieldAccessorTable() {
       return com.vv.personal.twm.artifactory.generated.tw.VillaProto.internal_static_VillaList_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
                       com.vv.personal.twm.artifactory.generated.tw.VillaProto.VillaList.class, com.vv.personal.twm.artifactory.generated.tw.VillaProto.VillaList.Builder.class);
+    }
+
+    /**
+     * <code>repeated .Villa villas = 1;</code>
+     */
+    public java.util.List<com.vv.personal.twm.artifactory.generated.tw.VillaProto.Villa> getVillasList() {
+      return villas_;
     }
 
     /**
@@ -4405,10 +4266,63 @@ public final class VillaProto {
       return villas_.get(index);
     }
 
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+
+    public static Builder newBuilder(com.vv.personal.twm.artifactory.generated.tw.VillaProto.VillaList prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+              ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+
+    /**
+     * <code>repeated .Villa villas = 1;</code>
+     */
+    public com.vv.personal.twm.artifactory.generated.tw.VillaProto.VillaOrBuilder getVillasOrBuilder(
+            int index) {
+      return villas_.get(index);
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+            throws java.io.IOException {
+      for (int i = 0; i < villas_.size(); i++) {
+        output.writeMessage(1, villas_.get(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < villas_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, villas_.get(i));
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
-        return true;
+       return true;
       }
       if (!(obj instanceof com.vv.personal.twm.artifactory.generated.tw.VillaProto.VillaList)) {
         return super.equals(obj);
@@ -4417,27 +4331,13 @@ public final class VillaProto {
 
       boolean result = true;
       result = result && getVillasList()
-              .equals(other.getVillasList());
+          .equals(other.getVillasList());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
 
     @java.lang.Override
-    public Builder newBuilderForType() {
-      return newBuilder(); }
-
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
+    public Builder newBuilderForType() { return newBuilder(); }
 
     @java.lang.Override
     public com.google.protobuf.Parser<VillaList> getParserForType() {
@@ -4532,12 +4432,6 @@ public final class VillaProto {
       }
 
       @java.lang.Override
-      public Builder clearField(
-              com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-
-      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
         return com.vv.personal.twm.artifactory.generated.tw.VillaProto.internal_static_VillaList_fieldAccessorTable
@@ -4546,16 +4440,41 @@ public final class VillaProto {
       }
 
       @java.lang.Override
-      public Builder setRepeatedField(
+      public com.google.protobuf.Descriptors.Descriptor
+      getDescriptorForType() {
+        return com.vv.personal.twm.artifactory.generated.tw.VillaProto.internal_static_VillaList_descriptor;
+      }
+
+      @java.lang.Override
+      public Builder setField(
               com.google.protobuf.Descriptors.FieldDescriptor field,
-              int index, java.lang.Object value) {
+              java.lang.Object value) {
+        return super.setField(field, value);
+      }
+
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
         return super.setRepeatedField(field, index, value);
       }
 
       @java.lang.Override
       public Builder addRepeatedField(
-              com.google.protobuf.Descriptors.FieldDescriptor field,
-              java.lang.Object value) {
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
         return super.addRepeatedField(field, value);
       }
 
@@ -4567,49 +4486,6 @@ public final class VillaProto {
           super.mergeFrom(other);
           return this;
         }
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-      getDescriptorForType() {
-        return com.vv.personal.twm.artifactory.generated.tw.VillaProto.internal_static_VillaList_descriptor;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-              com.google.protobuf.CodedInputStream input,
-              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-              throws java.io.IOException {
-        com.vv.personal.twm.artifactory.generated.tw.VillaProto.VillaList parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.vv.personal.twm.artifactory.generated.tw.VillaProto.VillaList) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-
-      @java.lang.Override
-      public Builder setField(
-              com.google.protobuf.Descriptors.FieldDescriptor field,
-              java.lang.Object value) {
-        return super.setField(field, value);
-      }
-
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
       }
 
       public Builder mergeFrom(com.vv.personal.twm.artifactory.generated.tw.VillaProto.VillaList other) {
@@ -4633,8 +4509,8 @@ public final class VillaProto {
               villas_ = other.villas_;
               bitField0_ = (bitField0_ & ~0x00000001);
               villasBuilder_ =
-                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                   getVillasFieldBuilder() : null;
+                      com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                              getVillasFieldBuilder() : null;
             } else {
               villasBuilder_.addAllMessages(other.villas_);
             }
@@ -4645,11 +4521,35 @@ public final class VillaProto {
         return this;
       }
 
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.vv.personal.twm.artifactory.generated.tw.VillaProto.VillaList parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.vv.personal.twm.artifactory.generated.tw.VillaProto.VillaList) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
       private void ensureVillasIsMutable() {
         if (!((bitField0_ & 0x00000001) == 0x00000001)) {
           villas_ = new java.util.ArrayList<com.vv.personal.twm.artifactory.generated.tw.VillaProto.Villa>(villas_);
           bitField0_ |= 0x00000001;
-        }
+         }
       }
 
       /**
@@ -4673,6 +4573,7 @@ public final class VillaProto {
           return villasBuilder_.getCount();
         }
       }
+
       /**
        * <code>repeated .Villa villas = 1;</code>
        */
@@ -4683,7 +4584,6 @@ public final class VillaProto {
           return villasBuilder_.getMessage(index);
         }
       }
-
       /**
        * <code>repeated .Villa villas = 1;</code>
        */
@@ -4716,7 +4616,6 @@ public final class VillaProto {
         }
         return this;
       }
-
       /**
        * <code>repeated .Villa villas = 1;</code>
        */
@@ -4733,7 +4632,6 @@ public final class VillaProto {
         }
         return this;
       }
-
       /**
        * <code>repeated .Villa villas = 1;</code>
        */
@@ -4751,11 +4649,12 @@ public final class VillaProto {
         }
         return this;
       }
+
       /**
        * <code>repeated .Villa villas = 1;</code>
        */
       public Builder addVillas(
-          com.vv.personal.twm.artifactory.generated.tw.VillaProto.Villa.Builder builderForValue) {
+              com.vv.personal.twm.artifactory.generated.tw.VillaProto.Villa.Builder builderForValue) {
         if (villasBuilder_ == null) {
           ensureVillasIsMutable();
           villas_.add(builderForValue.build());
@@ -4809,7 +4708,6 @@ public final class VillaProto {
         }
         return this;
       }
-
       /**
        * <code>repeated .Villa villas = 1;</code>
        */

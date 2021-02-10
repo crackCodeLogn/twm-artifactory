@@ -39,8 +39,7 @@ message Resources {
   int64 currentClay = 2;
   int64 currentIron = 3;
 
-  int64 currentWarehouseStat = 4;
-  int64 warehouseCapacity = 5;
+  int64 warehouseCapacity = 4;
 }
 
 enum VillaType {
