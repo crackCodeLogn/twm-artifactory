@@ -14,12 +14,13 @@ public final class HtmlDataParcelProto {
 
   static {
     java.lang.String[] descriptorData = {
-            "\n\024HtmlDataParcel.proto\"\206\001\n\006Parcel\022\026\n\016wal" +
+            "\n\024HtmlDataParcel.proto\"\237\001\n\006Parcel\022\026\n\016wal" +
                     "lPageSource\030\001 \001(\t\022\026\n\016snobPageSource\030\002 \001(" +
                     "\t\022\027\n\017trainPageSource\030\003 \001(\t\022\026\n\016farmPageSo" +
-                    "urce\030\004 \001(\t\022\033\n\023supportReportSource\030\005 \001(\tB" +
-                    "C\n,com.vv.personal.twm.artifactory.gener" +
-                    "ated.twB\023HtmlDataParcelProtob\006proto3"
+                    "urce\030\004 \001(\t\022\033\n\023supportReportSource\030\005 \001(\t\022" +
+                    "\027\n\017adhocExtracData\030\006 \003(\tBC\n,com.vv.perso" +
+                    "nal.twm.artifactory.generated.twB\023HtmlDa" +
+                    "taParcelProtob\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
             new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner() {
@@ -38,7 +39,7 @@ public final class HtmlDataParcelProto {
     internal_static_Parcel_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
             internal_static_Parcel_descriptor,
-            new java.lang.String[]{"WallPageSource", "SnobPageSource", "TrainPageSource", "FarmPageSource", "SupportReportSource",});
+            new java.lang.String[]{"WallPageSource", "SnobPageSource", "TrainPageSource", "FarmPageSource", "SupportReportSource", "AdhocExtracData",});
   }
 
   private HtmlDataParcelProto() {
@@ -117,6 +118,28 @@ public final class HtmlDataParcelProto {
      */
     com.google.protobuf.ByteString
     getSupportReportSourceBytes();
+
+    /**
+     * <code>repeated string adhocExtracData = 6;</code>
+     */
+    java.util.List<java.lang.String>
+    getAdhocExtracDataList();
+
+    /**
+     * <code>repeated string adhocExtracData = 6;</code>
+     */
+    int getAdhocExtracDataCount();
+
+    /**
+     * <code>repeated string adhocExtracData = 6;</code>
+     */
+    java.lang.String getAdhocExtracData(int index);
+
+    /**
+     * <code>repeated string adhocExtracData = 6;</code>
+     */
+    com.google.protobuf.ByteString
+    getAdhocExtracDataBytes(int index);
   }
 
   /**
@@ -133,18 +156,11 @@ public final class HtmlDataParcelProto {
       super(builder);
     }
 
-    private Parcel() {
-      wallPageSource_ = "";
-      snobPageSource_ = "";
-      trainPageSource_ = "";
-      farmPageSource_ = "";
-      supportReportSource_ = "";
-    }
-
     public static final int SNOBPAGESOURCE_FIELD_NUMBER = 2;
     public static final int TRAINPAGESOURCE_FIELD_NUMBER = 3;
     public static final int FARMPAGESOURCE_FIELD_NUMBER = 4;
     public static final int SUPPORTREPORTSOURCE_FIELD_NUMBER = 5;
+    public static final int ADHOCEXTRACDATA_FIELD_NUMBER = 6;
     private static final long serialVersionUID = 0L;
     // @@protoc_insertion_point(class_scope:Parcel)
     private static final com.vv.personal.twm.artifactory.generated.tw.HtmlDataParcelProto.Parcel DEFAULT_INSTANCE;
@@ -163,12 +179,23 @@ public final class HtmlDataParcelProto {
       DEFAULT_INSTANCE = new com.vv.personal.twm.artifactory.generated.tw.HtmlDataParcelProto.Parcel();
     }
 
+    private int bitField0_;
     private volatile java.lang.Object wallPageSource_;
     private volatile java.lang.Object snobPageSource_;
     private volatile java.lang.Object trainPageSource_;
     private volatile java.lang.Object farmPageSource_;
     private volatile java.lang.Object supportReportSource_;
+    private com.google.protobuf.LazyStringList adhocExtracData_;
     private byte memoizedIsInitialized = -1;
+
+    private Parcel() {
+      wallPageSource_ = "";
+      snobPageSource_ = "";
+      trainPageSource_ = "";
+      farmPageSource_ = "";
+      supportReportSource_ = "";
+      adhocExtracData_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    }
 
     private Parcel(
             com.google.protobuf.CodedInputStream input,
@@ -219,6 +246,15 @@ public final class HtmlDataParcelProto {
               supportReportSource_ = s;
               break;
             }
+            case 50: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
+                adhocExtracData_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000020;
+              }
+              adhocExtracData_.add(s);
+              break;
+            }
             default: {
               if (!parseUnknownFieldProto3(
                       input, unknownFields, extensionRegistry, tag)) {
@@ -232,8 +268,11 @@ public final class HtmlDataParcelProto {
         throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
+                e).setUnfinishedMessage(this);
       } finally {
+        if (((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
+          adhocExtracData_ = adhocExtracData_.getUnmodifiableView();
+        }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
@@ -302,48 +341,12 @@ public final class HtmlDataParcelProto {
               .parseDelimitedWithIOException(PARSER, input);
     }
 
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
     public static com.vv.personal.twm.artifactory.generated.tw.HtmlDataParcelProto.Parcel parseDelimitedFrom(
             java.io.InputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!getWallPageSourceBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, wallPageSource_);
-      }
-      if (!getSnobPageSourceBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, snobPageSource_);
-      }
-      if (!getTrainPageSourceBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, trainPageSource_);
-      }
-      if (!getFarmPageSourceBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, farmPageSource_);
-      }
-      if (!getSupportReportSourceBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, supportReportSource_);
-      }
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
     }
 
     public static com.vv.personal.twm.artifactory.generated.tw.HtmlDataParcelProto.Parcel parseFrom(
@@ -353,34 +356,12 @@ public final class HtmlDataParcelProto {
               .parseWithIOException(PARSER, input);
     }
 
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + WALLPAGESOURCE_FIELD_NUMBER;
-      hash = (53 * hash) + getWallPageSource().hashCode();
-      hash = (37 * hash) + SNOBPAGESOURCE_FIELD_NUMBER;
-      hash = (53 * hash) + getSnobPageSource().hashCode();
-      hash = (37 * hash) + TRAINPAGESOURCE_FIELD_NUMBER;
-      hash = (53 * hash) + getTrainPageSource().hashCode();
-      hash = (37 * hash) + FARMPAGESOURCE_FIELD_NUMBER;
-      hash = (53 * hash) + getFarmPageSource().hashCode();
-      hash = (37 * hash) + SUPPORTREPORTSOURCE_FIELD_NUMBER;
-      hash = (53 * hash) + getSupportReportSource().hashCode();
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
     public static com.vv.personal.twm.artifactory.generated.tw.HtmlDataParcelProto.Parcel parseFrom(
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
-              .parseWithIOException(PARSER, input, extensionRegistry);
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
     public static Builder newBuilder() {
@@ -422,7 +403,7 @@ public final class HtmlDataParcelProto {
         return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs =
-                (com.google.protobuf.ByteString) ref;
+            (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         wallPageSource_ = s;
         return s;
@@ -455,7 +436,7 @@ public final class HtmlDataParcelProto {
         return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs =
-                (com.google.protobuf.ByteString) ref;
+            (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         snobPageSource_ = s;
         return s;
@@ -578,6 +559,46 @@ public final class HtmlDataParcelProto {
       }
     }
 
+    /**
+     * <code>repeated string adhocExtracData = 6;</code>
+     */
+    public com.google.protobuf.ProtocolStringList
+    getAdhocExtracDataList() {
+      return adhocExtracData_;
+    }
+
+    /**
+     * <code>repeated string adhocExtracData = 6;</code>
+     */
+    public int getAdhocExtracDataCount() {
+      return adhocExtracData_.size();
+    }
+
+    /**
+     * <code>repeated string adhocExtracData = 6;</code>
+     */
+    public java.lang.String getAdhocExtracData(int index) {
+      return adhocExtracData_.get(index);
+    }
+
+    /**
+     * <code>repeated string adhocExtracData = 6;</code>
+     */
+    public com.google.protobuf.ByteString
+    getAdhocExtracDataBytes(int index) {
+      return adhocExtracData_.getByteString(index);
+    }
+
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
             throws java.io.IOException {
@@ -596,13 +617,50 @@ public final class HtmlDataParcelProto {
       if (!getSupportReportSourceBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, supportReportSource_);
       }
+      for (int i = 0; i < adhocExtracData_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, adhocExtracData_.getRaw(i));
+      }
       unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getWallPageSourceBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, wallPageSource_);
+      }
+      if (!getSnobPageSourceBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, snobPageSource_);
+      }
+      if (!getTrainPageSourceBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, trainPageSource_);
+      }
+      if (!getFarmPageSourceBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, farmPageSource_);
+      }
+      if (!getSupportReportSourceBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, supportReportSource_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < adhocExtracData_.size(); i++) {
+          dataSize += computeStringSizeNoTag(adhocExtracData_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getAdhocExtracDataList().size();
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
     }
 
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
-       return true;
+        return true;
       }
       if (!(obj instanceof com.vv.personal.twm.artifactory.generated.tw.HtmlDataParcelProto.Parcel)) {
         return super.equals(obj);
@@ -619,9 +677,37 @@ public final class HtmlDataParcelProto {
       result = result && getFarmPageSource()
               .equals(other.getFarmPageSource());
       result = result && getSupportReportSource()
-          .equals(other.getSupportReportSource());
+              .equals(other.getSupportReportSource());
+      result = result && getAdhocExtracDataList()
+              .equals(other.getAdhocExtracDataList());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + WALLPAGESOURCE_FIELD_NUMBER;
+      hash = (53 * hash) + getWallPageSource().hashCode();
+      hash = (37 * hash) + SNOBPAGESOURCE_FIELD_NUMBER;
+      hash = (53 * hash) + getSnobPageSource().hashCode();
+      hash = (37 * hash) + TRAINPAGESOURCE_FIELD_NUMBER;
+      hash = (53 * hash) + getTrainPageSource().hashCode();
+      hash = (37 * hash) + FARMPAGESOURCE_FIELD_NUMBER;
+      hash = (53 * hash) + getFarmPageSource().hashCode();
+      hash = (37 * hash) + SUPPORTREPORTSOURCE_FIELD_NUMBER;
+      hash = (53 * hash) + getSupportReportSource().hashCode();
+      if (getAdhocExtracDataCount() > 0) {
+        hash = (37 * hash) + ADHOCEXTRACDATA_FIELD_NUMBER;
+        hash = (53 * hash) + getAdhocExtracDataList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
     }
 
     @java.lang.Override
@@ -637,7 +723,7 @@ public final class HtmlDataParcelProto {
 
     @java.lang.Override
     protected Builder newBuilderForType(
-            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -659,26 +745,39 @@ public final class HtmlDataParcelProto {
             com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
             // @@protoc_insertion_point(builder_implements:Parcel)
             com.vv.personal.twm.artifactory.generated.tw.HtmlDataParcelProto.ParcelOrBuilder {
+      private int bitField0_;
       private java.lang.Object wallPageSource_ = "";
       private java.lang.Object snobPageSource_ = "";
       private java.lang.Object trainPageSource_ = "";
+
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+
       private java.lang.Object farmPageSource_ = "";
       private java.lang.Object supportReportSource_ = "";
 
       @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        wallPageSource_ = "";
+      public com.vv.personal.twm.artifactory.generated.tw.HtmlDataParcelProto.Parcel getDefaultInstanceForType() {
+        return com.vv.personal.twm.artifactory.generated.tw.HtmlDataParcelProto.Parcel.getDefaultInstance();
+      }
 
-        snobPageSource_ = "";
+      @java.lang.Override
+      public com.vv.personal.twm.artifactory.generated.tw.HtmlDataParcelProto.Parcel build() {
+        com.vv.personal.twm.artifactory.generated.tw.HtmlDataParcelProto.Parcel result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
 
-        trainPageSource_ = "";
+      private com.google.protobuf.LazyStringList adhocExtracData_ = com.google.protobuf.LazyStringArrayList.EMPTY;
 
-        farmPageSource_ = "";
-
-        supportReportSource_ = "";
-
-        return this;
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
       }
 
       // Construct using com.vv.personal.twm.artifactory.generated.tw.HtmlDataParcelProto.Parcel.newBuilder()
@@ -698,18 +797,6 @@ public final class HtmlDataParcelProto {
       }
 
       @java.lang.Override
-      public com.vv.personal.twm.artifactory.generated.tw.HtmlDataParcelProto.Parcel buildPartial() {
-        com.vv.personal.twm.artifactory.generated.tw.HtmlDataParcelProto.Parcel result = new com.vv.personal.twm.artifactory.generated.tw.HtmlDataParcelProto.Parcel(this);
-        result.wallPageSource_ = wallPageSource_;
-        result.snobPageSource_ = snobPageSource_;
-        result.trainPageSource_ = trainPageSource_;
-        result.farmPageSource_ = farmPageSource_;
-        result.supportReportSource_ = supportReportSource_;
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
         return com.vv.personal.twm.artifactory.generated.tw.HtmlDataParcelProto.internal_static_Parcel_fieldAccessorTable
@@ -717,10 +804,22 @@ public final class HtmlDataParcelProto {
                         com.vv.personal.twm.artifactory.generated.tw.HtmlDataParcelProto.Parcel.class, com.vv.personal.twm.artifactory.generated.tw.HtmlDataParcelProto.Parcel.Builder.class);
       }
 
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        wallPageSource_ = "";
+
+        snobPageSource_ = "";
+
+        trainPageSource_ = "";
+
+        farmPageSource_ = "";
+
+        supportReportSource_ = "";
+
+        adhocExtracData_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000020);
+        return this;
       }
 
       @java.lang.Override
@@ -730,22 +829,28 @@ public final class HtmlDataParcelProto {
       }
 
       @java.lang.Override
-      public com.vv.personal.twm.artifactory.generated.tw.HtmlDataParcelProto.Parcel getDefaultInstanceForType() {
-        return com.vv.personal.twm.artifactory.generated.tw.HtmlDataParcelProto.Parcel.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.vv.personal.twm.artifactory.generated.tw.HtmlDataParcelProto.Parcel build() {
-        com.vv.personal.twm.artifactory.generated.tw.HtmlDataParcelProto.Parcel result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
+      public com.vv.personal.twm.artifactory.generated.tw.HtmlDataParcelProto.Parcel buildPartial() {
+        com.vv.personal.twm.artifactory.generated.tw.HtmlDataParcelProto.Parcel result = new com.vv.personal.twm.artifactory.generated.tw.HtmlDataParcelProto.Parcel(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        result.wallPageSource_ = wallPageSource_;
+        result.snobPageSource_ = snobPageSource_;
+        result.trainPageSource_ = trainPageSource_;
+        result.farmPageSource_ = farmPageSource_;
+        result.supportReportSource_ = supportReportSource_;
+        if (((bitField0_ & 0x00000020) == 0x00000020)) {
+          adhocExtracData_ = adhocExtracData_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000020);
         }
+        result.adhocExtracData_ = adhocExtracData_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
         return result;
       }
 
       @java.lang.Override
-      public Builder clone() {
-        return super.clone();
+      public final boolean isInitialized() {
+        return true;
       }
 
       @java.lang.Override
@@ -753,33 +858,6 @@ public final class HtmlDataParcelProto {
               com.google.protobuf.Descriptors.FieldDescriptor field,
               java.lang.Object value) {
         return super.setField(field, value);
-      }
-
-      public Builder mergeFrom(com.vv.personal.twm.artifactory.generated.tw.HtmlDataParcelProto.Parcel other) {
-        if (other == com.vv.personal.twm.artifactory.generated.tw.HtmlDataParcelProto.Parcel.getDefaultInstance()) return this;
-        if (!other.getWallPageSource().isEmpty()) {
-          wallPageSource_ = other.wallPageSource_;
-          onChanged();
-        }
-        if (!other.getSnobPageSource().isEmpty()) {
-          snobPageSource_ = other.snobPageSource_;
-          onChanged();
-        }
-        if (!other.getTrainPageSource().isEmpty()) {
-          trainPageSource_ = other.trainPageSource_;
-          onChanged();
-        }
-        if (!other.getFarmPageSource().isEmpty()) {
-          farmPageSource_ = other.farmPageSource_;
-          onChanged();
-        }
-        if (!other.getSupportReportSource().isEmpty()) {
-          supportReportSource_ = other.supportReportSource_;
-          onChanged();
-        }
-        this.mergeUnknownFields(other.unknownFields);
-        onChanged();
-        return this;
       }
 
       @java.lang.Override
@@ -818,9 +896,41 @@ public final class HtmlDataParcelProto {
         }
       }
 
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
+      public Builder mergeFrom(com.vv.personal.twm.artifactory.generated.tw.HtmlDataParcelProto.Parcel other) {
+        if (other == com.vv.personal.twm.artifactory.generated.tw.HtmlDataParcelProto.Parcel.getDefaultInstance()) return this;
+        if (!other.getWallPageSource().isEmpty()) {
+          wallPageSource_ = other.wallPageSource_;
+          onChanged();
+        }
+        if (!other.getSnobPageSource().isEmpty()) {
+          snobPageSource_ = other.snobPageSource_;
+          onChanged();
+        }
+        if (!other.getTrainPageSource().isEmpty()) {
+          trainPageSource_ = other.trainPageSource_;
+          onChanged();
+        }
+        if (!other.getFarmPageSource().isEmpty()) {
+          farmPageSource_ = other.farmPageSource_;
+          onChanged();
+        }
+        if (!other.getSupportReportSource().isEmpty()) {
+          supportReportSource_ = other.supportReportSource_;
+          onChanged();
+        }
+        if (!other.adhocExtracData_.isEmpty()) {
+          if (adhocExtracData_.isEmpty()) {
+            adhocExtracData_ = other.adhocExtracData_;
+            bitField0_ = (bitField0_ & ~0x00000020);
+          } else {
+            ensureAdhocExtracDataIsMutable();
+            adhocExtracData_.addAll(other.adhocExtracData_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
       }
 
       @java.lang.Override
@@ -852,6 +962,22 @@ public final class HtmlDataParcelProto {
                   (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
           wallPageSource_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+
+      /**
+       * <code>string snobPageSource = 2;</code>
+       */
+      public java.lang.String getSnobPageSource() {
+        java.lang.Object ref = snobPageSource_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+                  (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          snobPageSource_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
@@ -893,11 +1019,11 @@ public final class HtmlDataParcelProto {
        * <code>string wallPageSource = 1;</code>
        */
       public Builder setWallPageSourceBytes(
-              com.google.protobuf.ByteString value) {
+          com.google.protobuf.ByteString value) {
         if (value == null) {
-          throw new NullPointerException();
-        }
-        checkByteStringIsUtf8(value);
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
 
         wallPageSource_ = value;
         onChanged();
@@ -910,36 +1036,6 @@ public final class HtmlDataParcelProto {
       public Builder clearWallPageSource() {
 
         wallPageSource_ = getDefaultInstance().getWallPageSource();
-        onChanged();
-        return this;
-      }
-
-      /**
-       * <code>string snobPageSource = 2;</code>
-       */
-      public java.lang.String getSnobPageSource() {
-        java.lang.Object ref = snobPageSource_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          snobPageSource_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-
-      /**
-       * <code>string snobPageSource = 2;</code>
-       */
-      public Builder setSnobPageSource(
-              java.lang.String value) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-
-        snobPageSource_ = value;
         onChanged();
         return this;
       }
@@ -970,6 +1066,20 @@ public final class HtmlDataParcelProto {
           throw new NullPointerException();
         }
         checkByteStringIsUtf8(value);
+
+        snobPageSource_ = value;
+        onChanged();
+        return this;
+      }
+
+      /**
+       * <code>string snobPageSource = 2;</code>
+       */
+      public Builder setSnobPageSource(
+              java.lang.String value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
 
         snobPageSource_ = value;
         onChanged();
@@ -1024,8 +1134,8 @@ public final class HtmlDataParcelProto {
         java.lang.Object ref = trainPageSource_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b =
-                  com.google.protobuf.ByteString.copyFromUtf8(
-                          (java.lang.String) ref);
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
           trainPageSource_ = b;
           return b;
         } else {
@@ -1096,8 +1206,8 @@ public final class HtmlDataParcelProto {
         java.lang.Object ref = farmPageSource_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b =
-                  com.google.protobuf.ByteString.copyFromUtf8(
-                          (java.lang.String) ref);
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
           farmPageSource_ = b;
           return b;
         } else {
@@ -1168,8 +1278,8 @@ public final class HtmlDataParcelProto {
         java.lang.Object ref = supportReportSource_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b =
-                  com.google.protobuf.ByteString.copyFromUtf8(
-                          (java.lang.String) ref);
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
           supportReportSource_ = b;
           return b;
         } else {
@@ -1181,11 +1291,11 @@ public final class HtmlDataParcelProto {
        * <code>string supportReportSource = 5;</code>
        */
       public Builder setSupportReportSourceBytes(
-          com.google.protobuf.ByteString value) {
+              com.google.protobuf.ByteString value) {
         if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+          throw new NullPointerException();
+        }
+        checkByteStringIsUtf8(value);
 
         supportReportSource_ = value;
         onChanged();
@@ -1201,6 +1311,109 @@ public final class HtmlDataParcelProto {
         onChanged();
         return this;
       }
+
+      private void ensureAdhocExtracDataIsMutable() {
+        if (!((bitField0_ & 0x00000020) == 0x00000020)) {
+          adhocExtracData_ = new com.google.protobuf.LazyStringArrayList(adhocExtracData_);
+          bitField0_ |= 0x00000020;
+        }
+      }
+
+      /**
+       * <code>repeated string adhocExtracData = 6;</code>
+       */
+      public com.google.protobuf.ProtocolStringList
+      getAdhocExtracDataList() {
+        return adhocExtracData_.getUnmodifiableView();
+      }
+
+      /**
+       * <code>repeated string adhocExtracData = 6;</code>
+       */
+      public int getAdhocExtracDataCount() {
+        return adhocExtracData_.size();
+      }
+
+      /**
+       * <code>repeated string adhocExtracData = 6;</code>
+       */
+      public java.lang.String getAdhocExtracData(int index) {
+        return adhocExtracData_.get(index);
+      }
+
+      /**
+       * <code>repeated string adhocExtracData = 6;</code>
+       */
+      public com.google.protobuf.ByteString
+      getAdhocExtracDataBytes(int index) {
+        return adhocExtracData_.getByteString(index);
+      }
+
+      /**
+       * <code>repeated string adhocExtracData = 6;</code>
+       */
+      public Builder setAdhocExtracData(
+              int index, java.lang.String value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureAdhocExtracDataIsMutable();
+        adhocExtracData_.set(index, value);
+        onChanged();
+        return this;
+      }
+
+      /**
+       * <code>repeated string adhocExtracData = 6;</code>
+       */
+      public Builder addAdhocExtracData(
+              java.lang.String value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureAdhocExtracDataIsMutable();
+        adhocExtracData_.add(value);
+        onChanged();
+        return this;
+      }
+
+      /**
+       * <code>repeated string adhocExtracData = 6;</code>
+       */
+      public Builder addAllAdhocExtracData(
+              java.lang.Iterable<java.lang.String> values) {
+        ensureAdhocExtracDataIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+                values, adhocExtracData_);
+        onChanged();
+        return this;
+      }
+
+      /**
+       * <code>repeated string adhocExtracData = 6;</code>
+       */
+      public Builder clearAdhocExtracData() {
+        adhocExtracData_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000020);
+        onChanged();
+        return this;
+      }
+
+      /**
+       * <code>repeated string adhocExtracData = 6;</code>
+       */
+      public Builder addAdhocExtracDataBytes(
+              com.google.protobuf.ByteString value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        checkByteStringIsUtf8(value);
+        ensureAdhocExtracDataIsMutable();
+        adhocExtracData_.add(value);
+        onChanged();
+        return this;
+      }
+
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
