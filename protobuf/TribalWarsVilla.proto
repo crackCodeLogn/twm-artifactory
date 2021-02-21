@@ -16,6 +16,8 @@ message Villa {
   string farmStrength = 9;
   Resources resources = 10;
   int32 coinMintingCapacity = 11;
+
+  map<string, double> extraDoubles = 12; //distanceWithComparingVilla
 }
 
 message Troops {
@@ -46,6 +48,7 @@ enum VillaType {
   OFF = 0;
   DEF = 1;
   MIX = 2;
+  ALL = 3;
 }
 
 message VillaList {
