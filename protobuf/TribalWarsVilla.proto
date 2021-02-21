@@ -18,6 +18,8 @@ message Villa {
   int32 coinMintingCapacity = 11;
 
   map<string, double> extraDoubles = 12; //distanceWithComparingVilla
+  map<string, string> extraStrings = 13;
+  map<string, int32> extraInts = 14;
 }
 
 message Troops {
