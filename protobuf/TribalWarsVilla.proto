@@ -15,11 +15,12 @@ message Villa {
 
   string farmStrength = 9;
   Resources resources = 10;
-  int32 coinMintingCapacity = 11;
+  int32 availableMerchants = 11;
+  int32 coinMintingCapacity = 12;
 
-  map<string, double> extraDoubles = 12; //distanceWithComparingVilla
-  map<string, string> extraStrings = 13;
-  map<string, int32> extraInts = 14;
+  map<string, double> extraDoubles = 13; //distanceWithComparingVilla
+  map<string, string> extraStrings = 14;
+  map<string, int32> extraInts = 15;
 }
 
 message Troops {
