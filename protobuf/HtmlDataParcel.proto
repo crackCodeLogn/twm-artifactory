@@ -9,6 +9,7 @@ message Parcel {
   string trainPageSource = 3;
   string farmPageSource = 4;
   string supportReportSource = 5;
+  string marketPageSource = 6;
 
-  repeated string adhocExtracData = 6;
+  repeated string adhocExtracData = 7;
 }
