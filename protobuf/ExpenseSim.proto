@@ -1,0 +1,35 @@
+syntax = "proto3";
+
+option java_package = "com.vv.personal.twm.artifactory.generated.expSim";
+option java_outer_classname = "ExpenseSimProto";
+
+message Bank {
+  string code = 1;
+  double balance = 2;
+  int64 date = 3;
+}
+
+message Transaction {
+  int64 date = 1;
+  string from = 2; // from-bank-code
+  string to = 3; // to-bank-code
+  double amt = 4;
+  string note = 5;
+}
+
+message Statement {
+  int64 date = 1;
+  BankList bankList = 2;
+}
+
+message BankList {
+  repeated Bank banks = 1;
+}
+
+message TransactionList {
+  repeated Transaction transactions = 1;
+}
+
+message StatementList {
+  repeated Statement statements = 1;
+}
