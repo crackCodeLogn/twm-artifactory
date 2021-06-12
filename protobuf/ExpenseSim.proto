@@ -19,7 +19,7 @@ message Transaction {
 
 message Statement {
   int64 date = 1;
-  BankList bankList = 2;
+  map<string, Bank> bankMap = 2;
 }
 
 message BankList {

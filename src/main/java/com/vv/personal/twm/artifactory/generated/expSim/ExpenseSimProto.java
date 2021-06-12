@@ -1730,17 +1730,38 @@ public final class ExpenseSimProto {
     long getDate();
 
     /**
-     * <code>.BankList bankList = 2;</code>
+     * <code>map&lt;string, .Bank&gt; bankMap = 2;</code>
      */
-    boolean hasBankList();
+    int getBankMapCount();
     /**
-     * <code>.BankList bankList = 2;</code>
+     * <code>map&lt;string, .Bank&gt; bankMap = 2;</code>
      */
-    com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.BankList getBankList();
+    boolean containsBankMap(
+        java.lang.String key);
     /**
-     * <code>.BankList bankList = 2;</code>
+     * Use {@link #getBankMapMap()} instead.
      */
-    com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.BankListOrBuilder getBankListOrBuilder();
+    @java.lang.Deprecated
+    java.util.Map<java.lang.String, com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.Bank>
+    getBankMap();
+    /**
+     * <code>map&lt;string, .Bank&gt; bankMap = 2;</code>
+     */
+    java.util.Map<java.lang.String, com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.Bank>
+    getBankMapMap();
+    /**
+     * <code>map&lt;string, .Bank&gt; bankMap = 2;</code>
+     */
+
+    com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.Bank getBankMapOrDefault(
+        java.lang.String key,
+        com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.Bank defaultValue);
+    /**
+     * <code>map&lt;string, .Bank&gt; bankMap = 2;</code>
+     */
+
+    com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.Bank getBankMapOrThrow(
+        java.lang.String key);
   }
   /**
    * Protobuf type {@code Statement}
@@ -1788,16 +1809,16 @@ public final class ExpenseSimProto {
               break;
             }
             case 18: {
-              com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.BankList.Builder subBuilder = null;
-              if (bankList_ != null) {
-                subBuilder = bankList_.toBuilder();
+              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+                bankMap_ = com.google.protobuf.MapField.newMapField(
+                    BankMapDefaultEntryHolder.defaultEntry);
+                mutable_bitField0_ |= 0x00000002;
               }
-              bankList_ = input.readMessage(com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.BankList.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(bankList_);
-                bankList_ = subBuilder.buildPartial();
-              }
-
+              com.google.protobuf.MapEntry<java.lang.String, com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.Bank>
+              bankMap__ = input.readMessage(
+                  BankMapDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              bankMap_.getMutableMap().put(
+                  bankMap__.getKey(), bankMap__.getValue());
               break;
             }
             default: {
@@ -1824,6 +1845,18 @@ public final class ExpenseSimProto {
       return com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.internal_static_Statement_descriptor;
     }
 
+    @SuppressWarnings({"rawtypes"})
+    @java.lang.Override
+    protected com.google.protobuf.MapField internalGetMapField(
+        int number) {
+      switch (number) {
+        case 2:
+          return internalGetBankMap();
+        default:
+          throw new RuntimeException(
+              "Invalid map field number: " + number);
+      }
+    }
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
@@ -1832,6 +1865,7 @@ public final class ExpenseSimProto {
               com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.Statement.class, com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.Statement.Builder.class);
     }
 
+    private int bitField0_;
     public static final int DATE_FIELD_NUMBER = 1;
     private long date_;
     /**
@@ -1841,25 +1875,80 @@ public final class ExpenseSimProto {
       return date_;
     }
 
-    public static final int BANKLIST_FIELD_NUMBER = 2;
-    private com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.BankList bankList_;
-    /**
-     * <code>.BankList bankList = 2;</code>
-     */
-    public boolean hasBankList() {
-      return bankList_ != null;
+    public static final int BANKMAP_FIELD_NUMBER = 2;
+    private static final class BankMapDefaultEntryHolder {
+      static final com.google.protobuf.MapEntry<
+          java.lang.String, com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.Bank> defaultEntry =
+              com.google.protobuf.MapEntry
+              .<java.lang.String, com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.Bank>newDefaultInstance(
+                  com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.internal_static_Statement_BankMapEntry_descriptor, 
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "",
+                  com.google.protobuf.WireFormat.FieldType.MESSAGE,
+                  com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.Bank.getDefaultInstance());
+    }
+    private com.google.protobuf.MapField<
+        java.lang.String, com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.Bank> bankMap_;
+    private com.google.protobuf.MapField<java.lang.String, com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.Bank>
+    internalGetBankMap() {
+      if (bankMap_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            BankMapDefaultEntryHolder.defaultEntry);
+      }
+      return bankMap_;
+    }
+
+    public int getBankMapCount() {
+      return internalGetBankMap().getMap().size();
     }
     /**
-     * <code>.BankList bankList = 2;</code>
+     * <code>map&lt;string, .Bank&gt; bankMap = 2;</code>
      */
-    public com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.BankList getBankList() {
-      return bankList_ == null ? com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.BankList.getDefaultInstance() : bankList_;
+
+    public boolean containsBankMap(
+        java.lang.String key) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      return internalGetBankMap().getMap().containsKey(key);
     }
     /**
-     * <code>.BankList bankList = 2;</code>
+     * Use {@link #getBankMapMap()} instead.
      */
-    public com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.BankListOrBuilder getBankListOrBuilder() {
-      return getBankList();
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.Bank> getBankMap() {
+      return getBankMapMap();
+    }
+    /**
+     * <code>map&lt;string, .Bank&gt; bankMap = 2;</code>
+     */
+
+    public java.util.Map<java.lang.String, com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.Bank> getBankMapMap() {
+      return internalGetBankMap().getMap();
+    }
+    /**
+     * <code>map&lt;string, .Bank&gt; bankMap = 2;</code>
+     */
+
+    public com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.Bank getBankMapOrDefault(
+        java.lang.String key,
+        com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.Bank defaultValue) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      java.util.Map<java.lang.String, com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.Bank> map =
+          internalGetBankMap().getMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <code>map&lt;string, .Bank&gt; bankMap = 2;</code>
+     */
+
+    public com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.Bank getBankMapOrThrow(
+        java.lang.String key) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      java.util.Map<java.lang.String, com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.Bank> map =
+          internalGetBankMap().getMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
     }
 
     private byte memoizedIsInitialized = -1;
@@ -1879,9 +1968,12 @@ public final class ExpenseSimProto {
       if (date_ != 0L) {
         output.writeInt64(1, date_);
       }
-      if (bankList_ != null) {
-        output.writeMessage(2, getBankList());
-      }
+      com.google.protobuf.GeneratedMessageV3
+        .serializeStringMapTo(
+          output,
+          internalGetBankMap(),
+          BankMapDefaultEntryHolder.defaultEntry,
+          2);
       unknownFields.writeTo(output);
     }
 
@@ -1895,9 +1987,15 @@ public final class ExpenseSimProto {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(1, date_);
       }
-      if (bankList_ != null) {
+      for (java.util.Map.Entry<java.lang.String, com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.Bank> entry
+           : internalGetBankMap().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.String, com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.Bank>
+        bankMap__ = BankMapDefaultEntryHolder.defaultEntry.newBuilderForType()
+            .setKey(entry.getKey())
+            .setValue(entry.getValue())
+            .build();
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, getBankList());
+            .computeMessageSize(2, bankMap__);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -1917,11 +2015,8 @@ public final class ExpenseSimProto {
       boolean result = true;
       result = result && (getDate()
           == other.getDate());
-      result = result && (hasBankList() == other.hasBankList());
-      if (hasBankList()) {
-        result = result && getBankList()
-            .equals(other.getBankList());
-      }
+      result = result && internalGetBankMap().equals(
+          other.internalGetBankMap());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -1936,9 +2031,9 @@ public final class ExpenseSimProto {
       hash = (37 * hash) + DATE_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getDate());
-      if (hasBankList()) {
-        hash = (37 * hash) + BANKLIST_FIELD_NUMBER;
-        hash = (53 * hash) + getBankList().hashCode();
+      if (!internalGetBankMap().getMap().isEmpty()) {
+        hash = (37 * hash) + BANKMAP_FIELD_NUMBER;
+        hash = (53 * hash) + internalGetBankMap().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -2047,6 +2142,28 @@ public final class ExpenseSimProto {
         return com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.internal_static_Statement_descriptor;
       }
 
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMapField(
+          int number) {
+        switch (number) {
+          case 2:
+            return internalGetBankMap();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMutableMapField(
+          int number) {
+        switch (number) {
+          case 2:
+            return internalGetMutableBankMap();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
@@ -2075,12 +2192,7 @@ public final class ExpenseSimProto {
         super.clear();
         date_ = 0L;
 
-        if (bankListBuilder_ == null) {
-          bankList_ = null;
-        } else {
-          bankList_ = null;
-          bankListBuilder_ = null;
-        }
+        internalGetMutableBankMap().clear();
         return this;
       }
 
@@ -2107,12 +2219,12 @@ public final class ExpenseSimProto {
       @java.lang.Override
       public com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.Statement buildPartial() {
         com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.Statement result = new com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.Statement(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         result.date_ = date_;
-        if (bankListBuilder_ == null) {
-          result.bankList_ = bankList_;
-        } else {
-          result.bankList_ = bankListBuilder_.build();
-        }
+        result.bankMap_ = internalGetBankMap();
+        result.bankMap_.makeImmutable();
+        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
@@ -2164,9 +2276,8 @@ public final class ExpenseSimProto {
         if (other.getDate() != 0L) {
           setDate(other.getDate());
         }
-        if (other.hasBankList()) {
-          mergeBankList(other.getBankList());
-        }
+        internalGetMutableBankMap().mergeFrom(
+            other.internalGetBankMap());
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -2195,6 +2306,7 @@ public final class ExpenseSimProto {
         }
         return this;
       }
+      private int bitField0_;
 
       private long date_ ;
       /**
@@ -2222,121 +2334,127 @@ public final class ExpenseSimProto {
         return this;
       }
 
-      private com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.BankList bankList_ = null;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.BankList, com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.BankList.Builder, com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.BankListOrBuilder> bankListBuilder_;
-      /**
-       * <code>.BankList bankList = 2;</code>
-       */
-      public boolean hasBankList() {
-        return bankListBuilder_ != null || bankList_ != null;
-      }
-      /**
-       * <code>.BankList bankList = 2;</code>
-       */
-      public com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.BankList getBankList() {
-        if (bankListBuilder_ == null) {
-          return bankList_ == null ? com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.BankList.getDefaultInstance() : bankList_;
-        } else {
-          return bankListBuilder_.getMessage();
+      private com.google.protobuf.MapField<
+          java.lang.String, com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.Bank> bankMap_;
+      private com.google.protobuf.MapField<java.lang.String, com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.Bank>
+      internalGetBankMap() {
+        if (bankMap_ == null) {
+          return com.google.protobuf.MapField.emptyMapField(
+              BankMapDefaultEntryHolder.defaultEntry);
         }
+        return bankMap_;
       }
-      /**
-       * <code>.BankList bankList = 2;</code>
-       */
-      public Builder setBankList(com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.BankList value) {
-        if (bankListBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          bankList_ = value;
-          onChanged();
-        } else {
-          bankListBuilder_.setMessage(value);
+      private com.google.protobuf.MapField<java.lang.String, com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.Bank>
+      internalGetMutableBankMap() {
+        onChanged();;
+        if (bankMap_ == null) {
+          bankMap_ = com.google.protobuf.MapField.newMapField(
+              BankMapDefaultEntryHolder.defaultEntry);
         }
+        if (!bankMap_.isMutable()) {
+          bankMap_ = bankMap_.copy();
+        }
+        return bankMap_;
+      }
 
+      public int getBankMapCount() {
+        return internalGetBankMap().getMap().size();
+      }
+      /**
+       * <code>map&lt;string, .Bank&gt; bankMap = 2;</code>
+       */
+
+      public boolean containsBankMap(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        return internalGetBankMap().getMap().containsKey(key);
+      }
+      /**
+       * Use {@link #getBankMapMap()} instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.Bank> getBankMap() {
+        return getBankMapMap();
+      }
+      /**
+       * <code>map&lt;string, .Bank&gt; bankMap = 2;</code>
+       */
+
+      public java.util.Map<java.lang.String, com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.Bank> getBankMapMap() {
+        return internalGetBankMap().getMap();
+      }
+      /**
+       * <code>map&lt;string, .Bank&gt; bankMap = 2;</code>
+       */
+
+      public com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.Bank getBankMapOrDefault(
+          java.lang.String key,
+          com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.Bank defaultValue) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        java.util.Map<java.lang.String, com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.Bank> map =
+            internalGetBankMap().getMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <code>map&lt;string, .Bank&gt; bankMap = 2;</code>
+       */
+
+      public com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.Bank getBankMapOrThrow(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        java.util.Map<java.lang.String, com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.Bank> map =
+            internalGetBankMap().getMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+
+      public Builder clearBankMap() {
+        internalGetMutableBankMap().getMutableMap()
+            .clear();
         return this;
       }
       /**
-       * <code>.BankList bankList = 2;</code>
+       * <code>map&lt;string, .Bank&gt; bankMap = 2;</code>
        */
-      public Builder setBankList(
-          com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.BankList.Builder builderForValue) {
-        if (bankListBuilder_ == null) {
-          bankList_ = builderForValue.build();
-          onChanged();
-        } else {
-          bankListBuilder_.setMessage(builderForValue.build());
-        }
 
+      public Builder removeBankMap(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        internalGetMutableBankMap().getMutableMap()
+            .remove(key);
         return this;
       }
       /**
-       * <code>.BankList bankList = 2;</code>
+       * Use alternate mutation accessors instead.
        */
-      public Builder mergeBankList(com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.BankList value) {
-        if (bankListBuilder_ == null) {
-          if (bankList_ != null) {
-            bankList_ =
-              com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.BankList.newBuilder(bankList_).mergeFrom(value).buildPartial();
-          } else {
-            bankList_ = value;
-          }
-          onChanged();
-        } else {
-          bankListBuilder_.mergeFrom(value);
-        }
-
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.Bank>
+      getMutableBankMap() {
+        return internalGetMutableBankMap().getMutableMap();
+      }
+      /**
+       * <code>map&lt;string, .Bank&gt; bankMap = 2;</code>
+       */
+      public Builder putBankMap(
+          java.lang.String key,
+          com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.Bank value) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (value == null) { throw new java.lang.NullPointerException(); }
+        internalGetMutableBankMap().getMutableMap()
+            .put(key, value);
         return this;
       }
       /**
-       * <code>.BankList bankList = 2;</code>
+       * <code>map&lt;string, .Bank&gt; bankMap = 2;</code>
        */
-      public Builder clearBankList() {
-        if (bankListBuilder_ == null) {
-          bankList_ = null;
-          onChanged();
-        } else {
-          bankList_ = null;
-          bankListBuilder_ = null;
-        }
 
+      public Builder putAllBankMap(
+          java.util.Map<java.lang.String, com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.Bank> values) {
+        internalGetMutableBankMap().getMutableMap()
+            .putAll(values);
         return this;
-      }
-      /**
-       * <code>.BankList bankList = 2;</code>
-       */
-      public com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.BankList.Builder getBankListBuilder() {
-        
-        onChanged();
-        return getBankListFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.BankList bankList = 2;</code>
-       */
-      public com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.BankListOrBuilder getBankListOrBuilder() {
-        if (bankListBuilder_ != null) {
-          return bankListBuilder_.getMessageOrBuilder();
-        } else {
-          return bankList_ == null ?
-              com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.BankList.getDefaultInstance() : bankList_;
-        }
-      }
-      /**
-       * <code>.BankList bankList = 2;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.BankList, com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.BankList.Builder, com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.BankListOrBuilder> 
-          getBankListFieldBuilder() {
-        if (bankListBuilder_ == null) {
-          bankListBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.BankList, com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.BankList.Builder, com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.BankListOrBuilder>(
-                  getBankList(),
-                  getParentForChildren(),
-                  isClean());
-          bankList_ = null;
-        }
-        return bankListBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -4753,6 +4871,11 @@ public final class ExpenseSimProto {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_Statement_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_Statement_BankMapEntry_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_Statement_BankMapEntry_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_BankList_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -4779,14 +4902,16 @@ public final class ExpenseSimProto {
       "\n\020ExpenseSim.proto\"3\n\004Bank\022\014\n\004code\030\001 \001(\t" +
       "\022\017\n\007balance\030\002 \001(\001\022\014\n\004date\030\003 \001(\003\"P\n\013Trans" +
       "action\022\014\n\004date\030\001 \001(\003\022\014\n\004from\030\002 \001(\t\022\n\n\002to" +
-      "\030\003 \001(\t\022\013\n\003amt\030\004 \001(\001\022\014\n\004note\030\005 \001(\t\"6\n\tSta" +
-      "tement\022\014\n\004date\030\001 \001(\003\022\033\n\010bankList\030\002 \001(\0132\t" +
-      ".BankList\" \n\010BankList\022\024\n\005banks\030\001 \003(\0132\005.B" +
-      "ank\"5\n\017TransactionList\022\"\n\014transactions\030\001" +
-      " \003(\0132\014.Transaction\"/\n\rStatementList\022\036\n\ns" +
-      "tatements\030\001 \003(\0132\n.StatementBC\n0com.vv.pe" +
-      "rsonal.twm.artifactory.generated.expSimB" +
-      "\017ExpenseSimProtob\006proto3"
+      "\030\003 \001(\t\022\013\n\003amt\030\004 \001(\001\022\014\n\004note\030\005 \001(\t\"z\n\tSta" +
+      "tement\022\014\n\004date\030\001 \001(\003\022(\n\007bankMap\030\002 \003(\0132\027." +
+      "Statement.BankMapEntry\0325\n\014BankMapEntry\022\013" +
+      "\n\003key\030\001 \001(\t\022\024\n\005value\030\002 \001(\0132\005.Bank:\0028\001\" \n" +
+      "\010BankList\022\024\n\005banks\030\001 \003(\0132\005.Bank\"5\n\017Trans" +
+      "actionList\022\"\n\014transactions\030\001 \003(\0132\014.Trans" +
+      "action\"/\n\rStatementList\022\036\n\nstatements\030\001 " +
+      "\003(\0132\n.StatementBC\n0com.vv.personal.twm.a" +
+      "rtifactory.generated.expSimB\017ExpenseSimP" +
+      "rotob\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -4817,7 +4942,13 @@ public final class ExpenseSimProto {
     internal_static_Statement_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_Statement_descriptor,
-        new java.lang.String[] { "Date", "BankList", });
+        new java.lang.String[] { "Date", "BankMap", });
+    internal_static_Statement_BankMapEntry_descriptor =
+      internal_static_Statement_descriptor.getNestedTypes().get(0);
+    internal_static_Statement_BankMapEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_Statement_BankMapEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
     internal_static_BankList_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_BankList_fieldAccessorTable = new
