@@ -15,6 +15,17 @@ message Transaction {
   string to = 3; // to-bank-code
   double amt = 4;
   string note = 5;
+  TxMode mode = 6;
+}
+
+enum TxMode {
+  U = 0;
+  Q = 1;
+  C = 2;
+  DC = 3;
+  CC = 4;
+  R = 5;
+  I = 6;
 }
 
 message Statement {

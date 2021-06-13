@@ -14,6 +14,149 @@ public final class ExpenseSimProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
+  /**
+   * Protobuf enum {@code TxMode}
+   */
+  public enum TxMode
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>U = 0;</code>
+     */
+    U(0),
+    /**
+     * <code>Q = 1;</code>
+     */
+    Q(1),
+    /**
+     * <code>C = 2;</code>
+     */
+    C(2),
+    /**
+     * <code>DC = 3;</code>
+     */
+    DC(3),
+    /**
+     * <code>CC = 4;</code>
+     */
+    CC(4),
+    /**
+     * <code>R = 5;</code>
+     */
+    R(5),
+    /**
+     * <code>I = 6;</code>
+     */
+    I(6),
+    UNRECOGNIZED(-1),
+    ;
+
+    /**
+     * <code>U = 0;</code>
+     */
+    public static final int U_VALUE = 0;
+    /**
+     * <code>Q = 1;</code>
+     */
+    public static final int Q_VALUE = 1;
+    /**
+     * <code>C = 2;</code>
+     */
+    public static final int C_VALUE = 2;
+    /**
+     * <code>DC = 3;</code>
+     */
+    public static final int DC_VALUE = 3;
+    /**
+     * <code>CC = 4;</code>
+     */
+    public static final int CC_VALUE = 4;
+    /**
+     * <code>R = 5;</code>
+     */
+    public static final int R_VALUE = 5;
+    /**
+     * <code>I = 6;</code>
+     */
+    public static final int I_VALUE = 6;
+
+
+    public final int getNumber() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalArgumentException(
+            "Can't get the number of an unknown enum value.");
+      }
+      return value;
+    }
+
+    /**
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static TxMode valueOf(int value) {
+      return forNumber(value);
+    }
+
+    public static TxMode forNumber(int value) {
+      switch (value) {
+        case 0: return U;
+        case 1: return Q;
+        case 2: return C;
+        case 3: return DC;
+        case 4: return CC;
+        case 5: return R;
+        case 6: return I;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<TxMode>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        TxMode> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<TxMode>() {
+            public TxMode findValueByNumber(int number) {
+              return TxMode.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.getDescriptor().getEnumTypes().get(0);
+    }
+
+    private static final TxMode[] VALUES = values();
+
+    public static TxMode valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      if (desc.getIndex() == -1) {
+        return UNRECOGNIZED;
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private TxMode(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:TxMode)
+  }
+
   public interface BankOrBuilder extends
       // @@protoc_insertion_point(interface_extends:Bank)
       com.google.protobuf.MessageOrBuilder {
@@ -753,6 +896,15 @@ public final class ExpenseSimProto {
      */
     com.google.protobuf.ByteString
         getNoteBytes();
+
+    /**
+     * <code>.TxMode mode = 6;</code>
+     */
+    int getModeValue();
+    /**
+     * <code>.TxMode mode = 6;</code>
+     */
+    com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.TxMode getMode();
   }
   /**
    * Protobuf type {@code Transaction}
@@ -772,6 +924,7 @@ public final class ExpenseSimProto {
       to_ = "";
       amt_ = 0D;
       note_ = "";
+      mode_ = 0;
     }
 
     @java.lang.Override
@@ -824,6 +977,12 @@ public final class ExpenseSimProto {
               java.lang.String s = input.readStringRequireUtf8();
 
               note_ = s;
+              break;
+            }
+            case 48: {
+              int rawValue = input.readEnum();
+
+              mode_ = rawValue;
               break;
             }
             default: {
@@ -994,6 +1153,23 @@ public final class ExpenseSimProto {
       }
     }
 
+    public static final int MODE_FIELD_NUMBER = 6;
+    private int mode_;
+    /**
+     * <code>.TxMode mode = 6;</code>
+     */
+    public int getModeValue() {
+      return mode_;
+    }
+    /**
+     * <code>.TxMode mode = 6;</code>
+     */
+    public com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.TxMode getMode() {
+      @SuppressWarnings("deprecation")
+      com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.TxMode result = com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.TxMode.valueOf(mode_);
+      return result == null ? com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.TxMode.UNRECOGNIZED : result;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -1023,6 +1199,9 @@ public final class ExpenseSimProto {
       if (!getNoteBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, note_);
       }
+      if (mode_ != com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.TxMode.U.getNumber()) {
+        output.writeEnum(6, mode_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -1048,6 +1227,10 @@ public final class ExpenseSimProto {
       }
       if (!getNoteBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, note_);
+      }
+      if (mode_ != com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.TxMode.U.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(6, mode_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -1077,6 +1260,7 @@ public final class ExpenseSimProto {
               other.getAmt()));
       result = result && getNote()
           .equals(other.getNote());
+      result = result && mode_ == other.mode_;
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -1100,6 +1284,8 @@ public final class ExpenseSimProto {
           java.lang.Double.doubleToLongBits(getAmt()));
       hash = (37 * hash) + NOTE_FIELD_NUMBER;
       hash = (53 * hash) + getNote().hashCode();
+      hash = (37 * hash) + MODE_FIELD_NUMBER;
+      hash = (53 * hash) + mode_;
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -1243,6 +1429,8 @@ public final class ExpenseSimProto {
 
         note_ = "";
 
+        mode_ = 0;
+
         return this;
       }
 
@@ -1274,6 +1462,7 @@ public final class ExpenseSimProto {
         result.to_ = to_;
         result.amt_ = amt_;
         result.note_ = note_;
+        result.mode_ = mode_;
         onBuilt();
         return result;
       }
@@ -1339,6 +1528,9 @@ public final class ExpenseSimProto {
         if (!other.getNote().isEmpty()) {
           note_ = other.note_;
           onChanged();
+        }
+        if (other.mode_ != 0) {
+          setModeValue(other.getModeValue());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -1664,6 +1856,51 @@ public final class ExpenseSimProto {
   checkByteStringIsUtf8(value);
         
         note_ = value;
+        onChanged();
+        return this;
+      }
+
+      private int mode_ = 0;
+      /**
+       * <code>.TxMode mode = 6;</code>
+       */
+      public int getModeValue() {
+        return mode_;
+      }
+      /**
+       * <code>.TxMode mode = 6;</code>
+       */
+      public Builder setModeValue(int value) {
+        mode_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.TxMode mode = 6;</code>
+       */
+      public com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.TxMode getMode() {
+        @SuppressWarnings("deprecation")
+        com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.TxMode result = com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.TxMode.valueOf(mode_);
+        return result == null ? com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.TxMode.UNRECOGNIZED : result;
+      }
+      /**
+       * <code>.TxMode mode = 6;</code>
+       */
+      public Builder setMode(com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.TxMode value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        mode_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.TxMode mode = 6;</code>
+       */
+      public Builder clearMode() {
+        
+        mode_ = 0;
         onChanged();
         return this;
       }
@@ -4900,18 +5137,20 @@ public final class ExpenseSimProto {
   static {
     java.lang.String[] descriptorData = {
       "\n\020ExpenseSim.proto\"3\n\004Bank\022\014\n\004code\030\001 \001(\t" +
-      "\022\017\n\007balance\030\002 \001(\001\022\014\n\004date\030\003 \001(\003\"P\n\013Trans" +
+      "\022\017\n\007balance\030\002 \001(\001\022\014\n\004date\030\003 \001(\003\"g\n\013Trans" +
       "action\022\014\n\004date\030\001 \001(\003\022\014\n\004from\030\002 \001(\t\022\n\n\002to" +
-      "\030\003 \001(\t\022\013\n\003amt\030\004 \001(\001\022\014\n\004note\030\005 \001(\t\"z\n\tSta" +
-      "tement\022\014\n\004date\030\001 \001(\003\022(\n\007bankMap\030\002 \003(\0132\027." +
-      "Statement.BankMapEntry\0325\n\014BankMapEntry\022\013" +
-      "\n\003key\030\001 \001(\t\022\024\n\005value\030\002 \001(\0132\005.Bank:\0028\001\" \n" +
-      "\010BankList\022\024\n\005banks\030\001 \003(\0132\005.Bank\"5\n\017Trans" +
-      "actionList\022\"\n\014transactions\030\001 \003(\0132\014.Trans" +
-      "action\"/\n\rStatementList\022\036\n\nstatements\030\001 " +
-      "\003(\0132\n.StatementBC\n0com.vv.personal.twm.a" +
-      "rtifactory.generated.expSimB\017ExpenseSimP" +
-      "rotob\006proto3"
+      "\030\003 \001(\t\022\013\n\003amt\030\004 \001(\001\022\014\n\004note\030\005 \001(\t\022\025\n\004mod" +
+      "e\030\006 \001(\0162\007.TxMode\"z\n\tStatement\022\014\n\004date\030\001 " +
+      "\001(\003\022(\n\007bankMap\030\002 \003(\0132\027.Statement.BankMap" +
+      "Entry\0325\n\014BankMapEntry\022\013\n\003key\030\001 \001(\t\022\024\n\005va" +
+      "lue\030\002 \001(\0132\005.Bank:\0028\001\" \n\010BankList\022\024\n\005bank" +
+      "s\030\001 \003(\0132\005.Bank\"5\n\017TransactionList\022\"\n\014tra" +
+      "nsactions\030\001 \003(\0132\014.Transaction\"/\n\rStateme" +
+      "ntList\022\036\n\nstatements\030\001 \003(\0132\n.Statement*;" +
+      "\n\006TxMode\022\005\n\001U\020\000\022\005\n\001Q\020\001\022\005\n\001C\020\002\022\006\n\002DC\020\003\022\006\n" +
+      "\002CC\020\004\022\005\n\001R\020\005\022\005\n\001I\020\006BC\n0com.vv.personal.t" +
+      "wm.artifactory.generated.expSimB\017Expense" +
+      "SimProtob\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -4936,7 +5175,7 @@ public final class ExpenseSimProto {
     internal_static_Transaction_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_Transaction_descriptor,
-        new java.lang.String[] { "Date", "From", "To", "Amt", "Note", });
+        new java.lang.String[] { "Date", "From", "To", "Amt", "Note", "Mode", });
     internal_static_Statement_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_Statement_fieldAccessorTable = new
