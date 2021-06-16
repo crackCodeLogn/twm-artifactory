@@ -26,6 +26,7 @@ enum TxMode {
   CC = 4;
   R = 5;
   I = 6;
+  SAL = 7;
 }
 
 message Statement {

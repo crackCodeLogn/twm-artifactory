@@ -47,6 +47,10 @@ public final class ExpenseSimProto {
      * <code>I = 6;</code>
      */
     I(6),
+    /**
+     * <code>SAL = 7;</code>
+     */
+    SAL(7),
     UNRECOGNIZED(-1),
     ;
 
@@ -78,6 +82,10 @@ public final class ExpenseSimProto {
      * <code>I = 6;</code>
      */
     public static final int I_VALUE = 6;
+    /**
+     * <code>SAL = 7;</code>
+     */
+    public static final int SAL_VALUE = 7;
 
 
     public final int getNumber() {
@@ -105,6 +113,7 @@ public final class ExpenseSimProto {
         case 4: return CC;
         case 5: return R;
         case 6: return I;
+        case 7: return SAL;
         default: return null;
       }
     }
@@ -5284,10 +5293,10 @@ public final class ExpenseSimProto {
       "ankList\022\024\n\005banks\030\001 \003(\0132\005.Bank\"5\n\017Transac" +
       "tionList\022\"\n\014transactions\030\001 \003(\0132\014.Transac" +
       "tion\"/\n\rStatementList\022\036\n\nstatements\030\001 \003(" +
-      "\0132\n.Statement*;\n\006TxMode\022\005\n\001U\020\000\022\005\n\001Q\020\001\022\005\n" +
-      "\001C\020\002\022\006\n\002DC\020\003\022\006\n\002CC\020\004\022\005\n\001R\020\005\022\005\n\001I\020\006BC\n0co" +
-      "m.vv.personal.twm.artifactory.generated." +
-      "expSimB\017ExpenseSimProtob\006proto3"
+      "\0132\n.Statement*D\n\006TxMode\022\005\n\001U\020\000\022\005\n\001Q\020\001\022\005\n" +
+      "\001C\020\002\022\006\n\002DC\020\003\022\006\n\002CC\020\004\022\005\n\001R\020\005\022\005\n\001I\020\006\022\007\n\003SA" +
+      "L\020\007BC\n0com.vv.personal.twm.artifactory.g" +
+      "enerated.expSimB\017ExpenseSimProtob\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
