@@ -1999,6 +1999,16 @@ public final class ExpenseSimProto {
 
     com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.Bank getBankMapOrThrow(
         java.lang.String key);
+
+    /**
+     * <code>string note = 3;</code>
+     */
+    java.lang.String getNote();
+    /**
+     * <code>string note = 3;</code>
+     */
+    com.google.protobuf.ByteString
+        getNoteBytes();
   }
   /**
    * Protobuf type {@code Statement}
@@ -2014,6 +2024,7 @@ public final class ExpenseSimProto {
     }
     private Statement() {
       date_ = 0L;
+      note_ = "";
     }
 
     @java.lang.Override
@@ -2056,6 +2067,12 @@ public final class ExpenseSimProto {
                   BankMapDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
               bankMap_.getMutableMap().put(
                   bankMap__.getKey(), bankMap__.getValue());
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              note_ = s;
               break;
             }
             default: {
@@ -2188,6 +2205,40 @@ public final class ExpenseSimProto {
       return map.get(key);
     }
 
+    public static final int NOTE_FIELD_NUMBER = 3;
+    private volatile java.lang.Object note_;
+    /**
+     * <code>string note = 3;</code>
+     */
+    public java.lang.String getNote() {
+      java.lang.Object ref = note_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        note_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string note = 3;</code>
+     */
+    public com.google.protobuf.ByteString
+        getNoteBytes() {
+      java.lang.Object ref = note_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        note_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -2211,6 +2262,9 @@ public final class ExpenseSimProto {
           internalGetBankMap(),
           BankMapDefaultEntryHolder.defaultEntry,
           2);
+      if (!getNoteBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, note_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -2234,6 +2288,9 @@ public final class ExpenseSimProto {
         size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(2, bankMap__);
       }
+      if (!getNoteBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, note_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -2254,6 +2311,8 @@ public final class ExpenseSimProto {
           == other.getDate());
       result = result && internalGetBankMap().equals(
           other.internalGetBankMap());
+      result = result && getNote()
+          .equals(other.getNote());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -2272,6 +2331,8 @@ public final class ExpenseSimProto {
         hash = (37 * hash) + BANKMAP_FIELD_NUMBER;
         hash = (53 * hash) + internalGetBankMap().hashCode();
       }
+      hash = (37 * hash) + NOTE_FIELD_NUMBER;
+      hash = (53 * hash) + getNote().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -2430,6 +2491,8 @@ public final class ExpenseSimProto {
         date_ = 0L;
 
         internalGetMutableBankMap().clear();
+        note_ = "";
+
         return this;
       }
 
@@ -2461,6 +2524,7 @@ public final class ExpenseSimProto {
         result.date_ = date_;
         result.bankMap_ = internalGetBankMap();
         result.bankMap_.makeImmutable();
+        result.note_ = note_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -2515,6 +2579,10 @@ public final class ExpenseSimProto {
         }
         internalGetMutableBankMap().mergeFrom(
             other.internalGetBankMap());
+        if (!other.getNote().isEmpty()) {
+          note_ = other.note_;
+          onChanged();
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -2691,6 +2759,75 @@ public final class ExpenseSimProto {
           java.util.Map<java.lang.String, com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.Bank> values) {
         internalGetMutableBankMap().getMutableMap()
             .putAll(values);
+        return this;
+      }
+
+      private java.lang.Object note_ = "";
+      /**
+       * <code>string note = 3;</code>
+       */
+      public java.lang.String getNote() {
+        java.lang.Object ref = note_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          note_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string note = 3;</code>
+       */
+      public com.google.protobuf.ByteString
+          getNoteBytes() {
+        java.lang.Object ref = note_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          note_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string note = 3;</code>
+       */
+      public Builder setNote(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        note_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string note = 3;</code>
+       */
+      public Builder clearNote() {
+        
+        note_ = getDefaultInstance().getNote();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string note = 3;</code>
+       */
+      public Builder setNoteBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        note_ = value;
+        onChanged();
         return this;
       }
       @java.lang.Override
@@ -5140,17 +5277,17 @@ public final class ExpenseSimProto {
       "\022\017\n\007balance\030\002 \001(\001\022\014\n\004date\030\003 \001(\003\"g\n\013Trans" +
       "action\022\014\n\004date\030\001 \001(\003\022\014\n\004from\030\002 \001(\t\022\n\n\002to" +
       "\030\003 \001(\t\022\013\n\003amt\030\004 \001(\001\022\014\n\004note\030\005 \001(\t\022\025\n\004mod" +
-      "e\030\006 \001(\0162\007.TxMode\"z\n\tStatement\022\014\n\004date\030\001 " +
-      "\001(\003\022(\n\007bankMap\030\002 \003(\0132\027.Statement.BankMap" +
-      "Entry\0325\n\014BankMapEntry\022\013\n\003key\030\001 \001(\t\022\024\n\005va" +
-      "lue\030\002 \001(\0132\005.Bank:\0028\001\" \n\010BankList\022\024\n\005bank" +
-      "s\030\001 \003(\0132\005.Bank\"5\n\017TransactionList\022\"\n\014tra" +
-      "nsactions\030\001 \003(\0132\014.Transaction\"/\n\rStateme" +
-      "ntList\022\036\n\nstatements\030\001 \003(\0132\n.Statement*;" +
-      "\n\006TxMode\022\005\n\001U\020\000\022\005\n\001Q\020\001\022\005\n\001C\020\002\022\006\n\002DC\020\003\022\006\n" +
-      "\002CC\020\004\022\005\n\001R\020\005\022\005\n\001I\020\006BC\n0com.vv.personal.t" +
-      "wm.artifactory.generated.expSimB\017Expense" +
-      "SimProtob\006proto3"
+      "e\030\006 \001(\0162\007.TxMode\"\210\001\n\tStatement\022\014\n\004date\030\001" +
+      " \001(\003\022(\n\007bankMap\030\002 \003(\0132\027.Statement.BankMa" +
+      "pEntry\022\014\n\004note\030\003 \001(\t\0325\n\014BankMapEntry\022\013\n\003" +
+      "key\030\001 \001(\t\022\024\n\005value\030\002 \001(\0132\005.Bank:\0028\001\" \n\010B" +
+      "ankList\022\024\n\005banks\030\001 \003(\0132\005.Bank\"5\n\017Transac" +
+      "tionList\022\"\n\014transactions\030\001 \003(\0132\014.Transac" +
+      "tion\"/\n\rStatementList\022\036\n\nstatements\030\001 \003(" +
+      "\0132\n.Statement*;\n\006TxMode\022\005\n\001U\020\000\022\005\n\001Q\020\001\022\005\n" +
+      "\001C\020\002\022\006\n\002DC\020\003\022\006\n\002CC\020\004\022\005\n\001R\020\005\022\005\n\001I\020\006BC\n0co" +
+      "m.vv.personal.twm.artifactory.generated." +
+      "expSimB\017ExpenseSimProtob\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -5181,7 +5318,7 @@ public final class ExpenseSimProto {
     internal_static_Statement_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_Statement_descriptor,
-        new java.lang.String[] { "Date", "BankMap", });
+        new java.lang.String[] { "Date", "BankMap", "Note", });
     internal_static_Statement_BankMapEntry_descriptor =
       internal_static_Statement_descriptor.getNestedTypes().get(0);
     internal_static_Statement_BankMapEntry_fieldAccessorTable = new

@@ -31,6 +31,7 @@ enum TxMode {
 message Statement {
   int64 date = 1;
   map<string, Bank> bankMap = 2;
+  string note = 3;
 }
 
 message BankList {
