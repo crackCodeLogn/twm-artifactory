@@ -2018,6 +2018,31 @@ public final class ExpenseSimProto {
      */
     com.google.protobuf.ByteString
         getNoteBytes();
+
+    /**
+     * <code>string from = 4;</code>
+     */
+    java.lang.String getFrom();
+    /**
+     * <code>string from = 4;</code>
+     */
+    com.google.protobuf.ByteString
+        getFromBytes();
+
+    /**
+     * <code>string to = 6;</code>
+     */
+    java.lang.String getTo();
+    /**
+     * <code>string to = 6;</code>
+     */
+    com.google.protobuf.ByteString
+        getToBytes();
+
+    /**
+     * <code>double amt = 7;</code>
+     */
+    double getAmt();
   }
   /**
    * Protobuf type {@code Statement}
@@ -2034,6 +2059,9 @@ public final class ExpenseSimProto {
     private Statement() {
       date_ = 0L;
       note_ = "";
+      from_ = "";
+      to_ = "";
+      amt_ = 0D;
     }
 
     @java.lang.Override
@@ -2082,6 +2110,23 @@ public final class ExpenseSimProto {
               java.lang.String s = input.readStringRequireUtf8();
 
               note_ = s;
+              break;
+            }
+            case 34: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              from_ = s;
+              break;
+            }
+            case 50: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              to_ = s;
+              break;
+            }
+            case 57: {
+
+              amt_ = input.readDouble();
               break;
             }
             default: {
@@ -2248,6 +2293,83 @@ public final class ExpenseSimProto {
       }
     }
 
+    public static final int FROM_FIELD_NUMBER = 4;
+    private volatile java.lang.Object from_;
+    /**
+     * <code>string from = 4;</code>
+     */
+    public java.lang.String getFrom() {
+      java.lang.Object ref = from_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        from_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string from = 4;</code>
+     */
+    public com.google.protobuf.ByteString
+        getFromBytes() {
+      java.lang.Object ref = from_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        from_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TO_FIELD_NUMBER = 6;
+    private volatile java.lang.Object to_;
+    /**
+     * <code>string to = 6;</code>
+     */
+    public java.lang.String getTo() {
+      java.lang.Object ref = to_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        to_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string to = 6;</code>
+     */
+    public com.google.protobuf.ByteString
+        getToBytes() {
+      java.lang.Object ref = to_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        to_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int AMT_FIELD_NUMBER = 7;
+    private double amt_;
+    /**
+     * <code>double amt = 7;</code>
+     */
+    public double getAmt() {
+      return amt_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -2273,6 +2395,15 @@ public final class ExpenseSimProto {
           2);
       if (!getNoteBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, note_);
+      }
+      if (!getFromBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, from_);
+      }
+      if (!getToBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, to_);
+      }
+      if (amt_ != 0D) {
+        output.writeDouble(7, amt_);
       }
       unknownFields.writeTo(output);
     }
@@ -2300,6 +2431,16 @@ public final class ExpenseSimProto {
       if (!getNoteBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, note_);
       }
+      if (!getFromBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, from_);
+      }
+      if (!getToBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, to_);
+      }
+      if (amt_ != 0D) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeDoubleSize(7, amt_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -2322,6 +2463,14 @@ public final class ExpenseSimProto {
           other.internalGetBankMap());
       result = result && getNote()
           .equals(other.getNote());
+      result = result && getFrom()
+          .equals(other.getFrom());
+      result = result && getTo()
+          .equals(other.getTo());
+      result = result && (
+          java.lang.Double.doubleToLongBits(getAmt())
+          == java.lang.Double.doubleToLongBits(
+              other.getAmt()));
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -2342,6 +2491,13 @@ public final class ExpenseSimProto {
       }
       hash = (37 * hash) + NOTE_FIELD_NUMBER;
       hash = (53 * hash) + getNote().hashCode();
+      hash = (37 * hash) + FROM_FIELD_NUMBER;
+      hash = (53 * hash) + getFrom().hashCode();
+      hash = (37 * hash) + TO_FIELD_NUMBER;
+      hash = (53 * hash) + getTo().hashCode();
+      hash = (37 * hash) + AMT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          java.lang.Double.doubleToLongBits(getAmt()));
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -2502,6 +2658,12 @@ public final class ExpenseSimProto {
         internalGetMutableBankMap().clear();
         note_ = "";
 
+        from_ = "";
+
+        to_ = "";
+
+        amt_ = 0D;
+
         return this;
       }
 
@@ -2534,6 +2696,9 @@ public final class ExpenseSimProto {
         result.bankMap_ = internalGetBankMap();
         result.bankMap_.makeImmutable();
         result.note_ = note_;
+        result.from_ = from_;
+        result.to_ = to_;
+        result.amt_ = amt_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -2591,6 +2756,17 @@ public final class ExpenseSimProto {
         if (!other.getNote().isEmpty()) {
           note_ = other.note_;
           onChanged();
+        }
+        if (!other.getFrom().isEmpty()) {
+          from_ = other.from_;
+          onChanged();
+        }
+        if (!other.getTo().isEmpty()) {
+          to_ = other.to_;
+          onChanged();
+        }
+        if (other.getAmt() != 0D) {
+          setAmt(other.getAmt());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -2836,6 +3012,170 @@ public final class ExpenseSimProto {
   checkByteStringIsUtf8(value);
         
         note_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object from_ = "";
+      /**
+       * <code>string from = 4;</code>
+       */
+      public java.lang.String getFrom() {
+        java.lang.Object ref = from_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          from_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string from = 4;</code>
+       */
+      public com.google.protobuf.ByteString
+          getFromBytes() {
+        java.lang.Object ref = from_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          from_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string from = 4;</code>
+       */
+      public Builder setFrom(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        from_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string from = 4;</code>
+       */
+      public Builder clearFrom() {
+        
+        from_ = getDefaultInstance().getFrom();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string from = 4;</code>
+       */
+      public Builder setFromBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        from_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object to_ = "";
+      /**
+       * <code>string to = 6;</code>
+       */
+      public java.lang.String getTo() {
+        java.lang.Object ref = to_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          to_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string to = 6;</code>
+       */
+      public com.google.protobuf.ByteString
+          getToBytes() {
+        java.lang.Object ref = to_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          to_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string to = 6;</code>
+       */
+      public Builder setTo(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        to_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string to = 6;</code>
+       */
+      public Builder clearTo() {
+        
+        to_ = getDefaultInstance().getTo();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string to = 6;</code>
+       */
+      public Builder setToBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        to_ = value;
+        onChanged();
+        return this;
+      }
+
+      private double amt_ ;
+      /**
+       * <code>double amt = 7;</code>
+       */
+      public double getAmt() {
+        return amt_;
+      }
+      /**
+       * <code>double amt = 7;</code>
+       */
+      public Builder setAmt(double value) {
+        
+        amt_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>double amt = 7;</code>
+       */
+      public Builder clearAmt() {
+        
+        amt_ = 0D;
         onChanged();
         return this;
       }
@@ -5286,17 +5626,18 @@ public final class ExpenseSimProto {
       "\022\017\n\007balance\030\002 \001(\001\022\014\n\004date\030\003 \001(\003\"g\n\013Trans" +
       "action\022\014\n\004date\030\001 \001(\003\022\014\n\004from\030\002 \001(\t\022\n\n\002to" +
       "\030\003 \001(\t\022\013\n\003amt\030\004 \001(\001\022\014\n\004note\030\005 \001(\t\022\025\n\004mod" +
-      "e\030\006 \001(\0162\007.TxMode\"\210\001\n\tStatement\022\014\n\004date\030\001" +
+      "e\030\006 \001(\0162\007.TxMode\"\257\001\n\tStatement\022\014\n\004date\030\001" +
       " \001(\003\022(\n\007bankMap\030\002 \003(\0132\027.Statement.BankMa" +
-      "pEntry\022\014\n\004note\030\003 \001(\t\0325\n\014BankMapEntry\022\013\n\003" +
-      "key\030\001 \001(\t\022\024\n\005value\030\002 \001(\0132\005.Bank:\0028\001\" \n\010B" +
-      "ankList\022\024\n\005banks\030\001 \003(\0132\005.Bank\"5\n\017Transac" +
-      "tionList\022\"\n\014transactions\030\001 \003(\0132\014.Transac" +
-      "tion\"/\n\rStatementList\022\036\n\nstatements\030\001 \003(" +
-      "\0132\n.Statement*D\n\006TxMode\022\005\n\001U\020\000\022\005\n\001Q\020\001\022\005\n" +
-      "\001C\020\002\022\006\n\002DC\020\003\022\006\n\002CC\020\004\022\005\n\001R\020\005\022\005\n\001I\020\006\022\007\n\003SA" +
-      "L\020\007BC\n0com.vv.personal.twm.artifactory.g" +
-      "enerated.expSimB\017ExpenseSimProtob\006proto3"
+      "pEntry\022\014\n\004note\030\003 \001(\t\022\014\n\004from\030\004 \001(\t\022\n\n\002to" +
+      "\030\006 \001(\t\022\013\n\003amt\030\007 \001(\001\0325\n\014BankMapEntry\022\013\n\003k" +
+      "ey\030\001 \001(\t\022\024\n\005value\030\002 \001(\0132\005.Bank:\0028\001\" \n\010Ba" +
+      "nkList\022\024\n\005banks\030\001 \003(\0132\005.Bank\"5\n\017Transact" +
+      "ionList\022\"\n\014transactions\030\001 \003(\0132\014.Transact" +
+      "ion\"/\n\rStatementList\022\036\n\nstatements\030\001 \003(\013" +
+      "2\n.Statement*D\n\006TxMode\022\005\n\001U\020\000\022\005\n\001Q\020\001\022\005\n\001" +
+      "C\020\002\022\006\n\002DC\020\003\022\006\n\002CC\020\004\022\005\n\001R\020\005\022\005\n\001I\020\006\022\007\n\003SAL" +
+      "\020\007BC\n0com.vv.personal.twm.artifactory.ge" +
+      "nerated.expSimB\017ExpenseSimProtob\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -5327,7 +5668,7 @@ public final class ExpenseSimProto {
     internal_static_Statement_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_Statement_descriptor,
-        new java.lang.String[] { "Date", "BankMap", "Note", });
+        new java.lang.String[] { "Date", "BankMap", "Note", "From", "To", "Amt", });
     internal_static_Statement_BankMapEntry_descriptor =
       internal_static_Statement_descriptor.getNestedTypes().get(0);
     internal_static_Statement_BankMapEntry_fieldAccessorTable = new

@@ -33,6 +33,9 @@ message Statement {
   int64 date = 1;
   map<string, Bank> bankMap = 2;
   string note = 3;
+  string from = 4;
+  string to = 6;
+  double amt = 7;
 }
 
 message BankList {
