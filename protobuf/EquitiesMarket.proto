@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+option java_package = "com.vv.personal.twm.artifactory.generated.equitiesMarket";
+option java_outer_classname = "EquitiesMarketProto";
+
+message Holding {
+  string symbol = 1;
+  int32 qty = 2;
+  double buyRate = 3;
+}
+
+message Holdings {
+  repeated Holding holdings = 1;
+}
+
+message LivePnL {
+  Holding holding = 1;
+  double currentRate = 2;
+  double diff = 3;
+  double diffPercent = 4;
+}
+
+message LivePnLs {
+  repeated LivePnL livePnLs = 1;
+}
