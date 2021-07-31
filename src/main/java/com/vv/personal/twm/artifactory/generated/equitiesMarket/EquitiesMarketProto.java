@@ -3062,6 +3062,745 @@ public final class EquitiesMarketProto {
 
   }
 
+  public interface PnLOutputOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:PnLOutput)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.LivePnLs livePnLs = 1;</code>
+     */
+    boolean hasLivePnLs();
+    /**
+     * <code>.LivePnLs livePnLs = 1;</code>
+     */
+    com.vv.personal.twm.artifactory.generated.equitiesMarket.EquitiesMarketProto.LivePnLs getLivePnLs();
+    /**
+     * <code>.LivePnLs livePnLs = 1;</code>
+     */
+    com.vv.personal.twm.artifactory.generated.equitiesMarket.EquitiesMarketProto.LivePnLsOrBuilder getLivePnLsOrBuilder();
+
+    /**
+     * <code>double pnLSubTotal = 2;</code>
+     */
+    double getPnLSubTotal();
+
+    /**
+     * <code>double currentRateOfReturn = 3;</code>
+     */
+    double getCurrentRateOfReturn();
+  }
+  /**
+   * Protobuf type {@code PnLOutput}
+   */
+  public  static final class PnLOutput extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:PnLOutput)
+      PnLOutputOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use PnLOutput.newBuilder() to construct.
+    private PnLOutput(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private PnLOutput() {
+      pnLSubTotal_ = 0D;
+      currentRateOfReturn_ = 0D;
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private PnLOutput(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              com.vv.personal.twm.artifactory.generated.equitiesMarket.EquitiesMarketProto.LivePnLs.Builder subBuilder = null;
+              if (livePnLs_ != null) {
+                subBuilder = livePnLs_.toBuilder();
+              }
+              livePnLs_ = input.readMessage(com.vv.personal.twm.artifactory.generated.equitiesMarket.EquitiesMarketProto.LivePnLs.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(livePnLs_);
+                livePnLs_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 17: {
+
+              pnLSubTotal_ = input.readDouble();
+              break;
+            }
+            case 25: {
+
+              currentRateOfReturn_ = input.readDouble();
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.vv.personal.twm.artifactory.generated.equitiesMarket.EquitiesMarketProto.internal_static_PnLOutput_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.vv.personal.twm.artifactory.generated.equitiesMarket.EquitiesMarketProto.internal_static_PnLOutput_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.vv.personal.twm.artifactory.generated.equitiesMarket.EquitiesMarketProto.PnLOutput.class, com.vv.personal.twm.artifactory.generated.equitiesMarket.EquitiesMarketProto.PnLOutput.Builder.class);
+    }
+
+    public static final int LIVEPNLS_FIELD_NUMBER = 1;
+    private com.vv.personal.twm.artifactory.generated.equitiesMarket.EquitiesMarketProto.LivePnLs livePnLs_;
+    /**
+     * <code>.LivePnLs livePnLs = 1;</code>
+     */
+    public boolean hasLivePnLs() {
+      return livePnLs_ != null;
+    }
+    /**
+     * <code>.LivePnLs livePnLs = 1;</code>
+     */
+    public com.vv.personal.twm.artifactory.generated.equitiesMarket.EquitiesMarketProto.LivePnLs getLivePnLs() {
+      return livePnLs_ == null ? com.vv.personal.twm.artifactory.generated.equitiesMarket.EquitiesMarketProto.LivePnLs.getDefaultInstance() : livePnLs_;
+    }
+    /**
+     * <code>.LivePnLs livePnLs = 1;</code>
+     */
+    public com.vv.personal.twm.artifactory.generated.equitiesMarket.EquitiesMarketProto.LivePnLsOrBuilder getLivePnLsOrBuilder() {
+      return getLivePnLs();
+    }
+
+    public static final int PNLSUBTOTAL_FIELD_NUMBER = 2;
+    private double pnLSubTotal_;
+    /**
+     * <code>double pnLSubTotal = 2;</code>
+     */
+    public double getPnLSubTotal() {
+      return pnLSubTotal_;
+    }
+
+    public static final int CURRENTRATEOFRETURN_FIELD_NUMBER = 3;
+    private double currentRateOfReturn_;
+    /**
+     * <code>double currentRateOfReturn = 3;</code>
+     */
+    public double getCurrentRateOfReturn() {
+      return currentRateOfReturn_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (livePnLs_ != null) {
+        output.writeMessage(1, getLivePnLs());
+      }
+      if (pnLSubTotal_ != 0D) {
+        output.writeDouble(2, pnLSubTotal_);
+      }
+      if (currentRateOfReturn_ != 0D) {
+        output.writeDouble(3, currentRateOfReturn_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (livePnLs_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getLivePnLs());
+      }
+      if (pnLSubTotal_ != 0D) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeDoubleSize(2, pnLSubTotal_);
+      }
+      if (currentRateOfReturn_ != 0D) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeDoubleSize(3, currentRateOfReturn_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.vv.personal.twm.artifactory.generated.equitiesMarket.EquitiesMarketProto.PnLOutput)) {
+        return super.equals(obj);
+      }
+      com.vv.personal.twm.artifactory.generated.equitiesMarket.EquitiesMarketProto.PnLOutput other = (com.vv.personal.twm.artifactory.generated.equitiesMarket.EquitiesMarketProto.PnLOutput) obj;
+
+      boolean result = true;
+      result = result && (hasLivePnLs() == other.hasLivePnLs());
+      if (hasLivePnLs()) {
+        result = result && getLivePnLs()
+            .equals(other.getLivePnLs());
+      }
+      result = result && (
+          java.lang.Double.doubleToLongBits(getPnLSubTotal())
+          == java.lang.Double.doubleToLongBits(
+              other.getPnLSubTotal()));
+      result = result && (
+          java.lang.Double.doubleToLongBits(getCurrentRateOfReturn())
+          == java.lang.Double.doubleToLongBits(
+              other.getCurrentRateOfReturn()));
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasLivePnLs()) {
+        hash = (37 * hash) + LIVEPNLS_FIELD_NUMBER;
+        hash = (53 * hash) + getLivePnLs().hashCode();
+      }
+      hash = (37 * hash) + PNLSUBTOTAL_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          java.lang.Double.doubleToLongBits(getPnLSubTotal()));
+      hash = (37 * hash) + CURRENTRATEOFRETURN_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          java.lang.Double.doubleToLongBits(getCurrentRateOfReturn()));
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.vv.personal.twm.artifactory.generated.equitiesMarket.EquitiesMarketProto.PnLOutput parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.vv.personal.twm.artifactory.generated.equitiesMarket.EquitiesMarketProto.PnLOutput parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.vv.personal.twm.artifactory.generated.equitiesMarket.EquitiesMarketProto.PnLOutput parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.vv.personal.twm.artifactory.generated.equitiesMarket.EquitiesMarketProto.PnLOutput parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.vv.personal.twm.artifactory.generated.equitiesMarket.EquitiesMarketProto.PnLOutput parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.vv.personal.twm.artifactory.generated.equitiesMarket.EquitiesMarketProto.PnLOutput parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.vv.personal.twm.artifactory.generated.equitiesMarket.EquitiesMarketProto.PnLOutput parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.vv.personal.twm.artifactory.generated.equitiesMarket.EquitiesMarketProto.PnLOutput parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.vv.personal.twm.artifactory.generated.equitiesMarket.EquitiesMarketProto.PnLOutput parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.vv.personal.twm.artifactory.generated.equitiesMarket.EquitiesMarketProto.PnLOutput parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.vv.personal.twm.artifactory.generated.equitiesMarket.EquitiesMarketProto.PnLOutput parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.vv.personal.twm.artifactory.generated.equitiesMarket.EquitiesMarketProto.PnLOutput parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.vv.personal.twm.artifactory.generated.equitiesMarket.EquitiesMarketProto.PnLOutput prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code PnLOutput}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:PnLOutput)
+        com.vv.personal.twm.artifactory.generated.equitiesMarket.EquitiesMarketProto.PnLOutputOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.vv.personal.twm.artifactory.generated.equitiesMarket.EquitiesMarketProto.internal_static_PnLOutput_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.vv.personal.twm.artifactory.generated.equitiesMarket.EquitiesMarketProto.internal_static_PnLOutput_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.vv.personal.twm.artifactory.generated.equitiesMarket.EquitiesMarketProto.PnLOutput.class, com.vv.personal.twm.artifactory.generated.equitiesMarket.EquitiesMarketProto.PnLOutput.Builder.class);
+      }
+
+      // Construct using com.vv.personal.twm.artifactory.generated.equitiesMarket.EquitiesMarketProto.PnLOutput.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (livePnLsBuilder_ == null) {
+          livePnLs_ = null;
+        } else {
+          livePnLs_ = null;
+          livePnLsBuilder_ = null;
+        }
+        pnLSubTotal_ = 0D;
+
+        currentRateOfReturn_ = 0D;
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.vv.personal.twm.artifactory.generated.equitiesMarket.EquitiesMarketProto.internal_static_PnLOutput_descriptor;
+      }
+
+      @java.lang.Override
+      public com.vv.personal.twm.artifactory.generated.equitiesMarket.EquitiesMarketProto.PnLOutput getDefaultInstanceForType() {
+        return com.vv.personal.twm.artifactory.generated.equitiesMarket.EquitiesMarketProto.PnLOutput.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.vv.personal.twm.artifactory.generated.equitiesMarket.EquitiesMarketProto.PnLOutput build() {
+        com.vv.personal.twm.artifactory.generated.equitiesMarket.EquitiesMarketProto.PnLOutput result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.vv.personal.twm.artifactory.generated.equitiesMarket.EquitiesMarketProto.PnLOutput buildPartial() {
+        com.vv.personal.twm.artifactory.generated.equitiesMarket.EquitiesMarketProto.PnLOutput result = new com.vv.personal.twm.artifactory.generated.equitiesMarket.EquitiesMarketProto.PnLOutput(this);
+        if (livePnLsBuilder_ == null) {
+          result.livePnLs_ = livePnLs_;
+        } else {
+          result.livePnLs_ = livePnLsBuilder_.build();
+        }
+        result.pnLSubTotal_ = pnLSubTotal_;
+        result.currentRateOfReturn_ = currentRateOfReturn_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.vv.personal.twm.artifactory.generated.equitiesMarket.EquitiesMarketProto.PnLOutput) {
+          return mergeFrom((com.vv.personal.twm.artifactory.generated.equitiesMarket.EquitiesMarketProto.PnLOutput)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.vv.personal.twm.artifactory.generated.equitiesMarket.EquitiesMarketProto.PnLOutput other) {
+        if (other == com.vv.personal.twm.artifactory.generated.equitiesMarket.EquitiesMarketProto.PnLOutput.getDefaultInstance()) return this;
+        if (other.hasLivePnLs()) {
+          mergeLivePnLs(other.getLivePnLs());
+        }
+        if (other.getPnLSubTotal() != 0D) {
+          setPnLSubTotal(other.getPnLSubTotal());
+        }
+        if (other.getCurrentRateOfReturn() != 0D) {
+          setCurrentRateOfReturn(other.getCurrentRateOfReturn());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.vv.personal.twm.artifactory.generated.equitiesMarket.EquitiesMarketProto.PnLOutput parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.vv.personal.twm.artifactory.generated.equitiesMarket.EquitiesMarketProto.PnLOutput) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private com.vv.personal.twm.artifactory.generated.equitiesMarket.EquitiesMarketProto.LivePnLs livePnLs_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.vv.personal.twm.artifactory.generated.equitiesMarket.EquitiesMarketProto.LivePnLs, com.vv.personal.twm.artifactory.generated.equitiesMarket.EquitiesMarketProto.LivePnLs.Builder, com.vv.personal.twm.artifactory.generated.equitiesMarket.EquitiesMarketProto.LivePnLsOrBuilder> livePnLsBuilder_;
+      /**
+       * <code>.LivePnLs livePnLs = 1;</code>
+       */
+      public boolean hasLivePnLs() {
+        return livePnLsBuilder_ != null || livePnLs_ != null;
+      }
+      /**
+       * <code>.LivePnLs livePnLs = 1;</code>
+       */
+      public com.vv.personal.twm.artifactory.generated.equitiesMarket.EquitiesMarketProto.LivePnLs getLivePnLs() {
+        if (livePnLsBuilder_ == null) {
+          return livePnLs_ == null ? com.vv.personal.twm.artifactory.generated.equitiesMarket.EquitiesMarketProto.LivePnLs.getDefaultInstance() : livePnLs_;
+        } else {
+          return livePnLsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.LivePnLs livePnLs = 1;</code>
+       */
+      public Builder setLivePnLs(com.vv.personal.twm.artifactory.generated.equitiesMarket.EquitiesMarketProto.LivePnLs value) {
+        if (livePnLsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          livePnLs_ = value;
+          onChanged();
+        } else {
+          livePnLsBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.LivePnLs livePnLs = 1;</code>
+       */
+      public Builder setLivePnLs(
+          com.vv.personal.twm.artifactory.generated.equitiesMarket.EquitiesMarketProto.LivePnLs.Builder builderForValue) {
+        if (livePnLsBuilder_ == null) {
+          livePnLs_ = builderForValue.build();
+          onChanged();
+        } else {
+          livePnLsBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.LivePnLs livePnLs = 1;</code>
+       */
+      public Builder mergeLivePnLs(com.vv.personal.twm.artifactory.generated.equitiesMarket.EquitiesMarketProto.LivePnLs value) {
+        if (livePnLsBuilder_ == null) {
+          if (livePnLs_ != null) {
+            livePnLs_ =
+              com.vv.personal.twm.artifactory.generated.equitiesMarket.EquitiesMarketProto.LivePnLs.newBuilder(livePnLs_).mergeFrom(value).buildPartial();
+          } else {
+            livePnLs_ = value;
+          }
+          onChanged();
+        } else {
+          livePnLsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.LivePnLs livePnLs = 1;</code>
+       */
+      public Builder clearLivePnLs() {
+        if (livePnLsBuilder_ == null) {
+          livePnLs_ = null;
+          onChanged();
+        } else {
+          livePnLs_ = null;
+          livePnLsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.LivePnLs livePnLs = 1;</code>
+       */
+      public com.vv.personal.twm.artifactory.generated.equitiesMarket.EquitiesMarketProto.LivePnLs.Builder getLivePnLsBuilder() {
+        
+        onChanged();
+        return getLivePnLsFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.LivePnLs livePnLs = 1;</code>
+       */
+      public com.vv.personal.twm.artifactory.generated.equitiesMarket.EquitiesMarketProto.LivePnLsOrBuilder getLivePnLsOrBuilder() {
+        if (livePnLsBuilder_ != null) {
+          return livePnLsBuilder_.getMessageOrBuilder();
+        } else {
+          return livePnLs_ == null ?
+              com.vv.personal.twm.artifactory.generated.equitiesMarket.EquitiesMarketProto.LivePnLs.getDefaultInstance() : livePnLs_;
+        }
+      }
+      /**
+       * <code>.LivePnLs livePnLs = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.vv.personal.twm.artifactory.generated.equitiesMarket.EquitiesMarketProto.LivePnLs, com.vv.personal.twm.artifactory.generated.equitiesMarket.EquitiesMarketProto.LivePnLs.Builder, com.vv.personal.twm.artifactory.generated.equitiesMarket.EquitiesMarketProto.LivePnLsOrBuilder> 
+          getLivePnLsFieldBuilder() {
+        if (livePnLsBuilder_ == null) {
+          livePnLsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.vv.personal.twm.artifactory.generated.equitiesMarket.EquitiesMarketProto.LivePnLs, com.vv.personal.twm.artifactory.generated.equitiesMarket.EquitiesMarketProto.LivePnLs.Builder, com.vv.personal.twm.artifactory.generated.equitiesMarket.EquitiesMarketProto.LivePnLsOrBuilder>(
+                  getLivePnLs(),
+                  getParentForChildren(),
+                  isClean());
+          livePnLs_ = null;
+        }
+        return livePnLsBuilder_;
+      }
+
+      private double pnLSubTotal_ ;
+      /**
+       * <code>double pnLSubTotal = 2;</code>
+       */
+      public double getPnLSubTotal() {
+        return pnLSubTotal_;
+      }
+      /**
+       * <code>double pnLSubTotal = 2;</code>
+       */
+      public Builder setPnLSubTotal(double value) {
+        
+        pnLSubTotal_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>double pnLSubTotal = 2;</code>
+       */
+      public Builder clearPnLSubTotal() {
+        
+        pnLSubTotal_ = 0D;
+        onChanged();
+        return this;
+      }
+
+      private double currentRateOfReturn_ ;
+      /**
+       * <code>double currentRateOfReturn = 3;</code>
+       */
+      public double getCurrentRateOfReturn() {
+        return currentRateOfReturn_;
+      }
+      /**
+       * <code>double currentRateOfReturn = 3;</code>
+       */
+      public Builder setCurrentRateOfReturn(double value) {
+        
+        currentRateOfReturn_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>double currentRateOfReturn = 3;</code>
+       */
+      public Builder clearCurrentRateOfReturn() {
+        
+        currentRateOfReturn_ = 0D;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:PnLOutput)
+    }
+
+    // @@protoc_insertion_point(class_scope:PnLOutput)
+    private static final com.vv.personal.twm.artifactory.generated.equitiesMarket.EquitiesMarketProto.PnLOutput DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.vv.personal.twm.artifactory.generated.equitiesMarket.EquitiesMarketProto.PnLOutput();
+    }
+
+    public static com.vv.personal.twm.artifactory.generated.equitiesMarket.EquitiesMarketProto.PnLOutput getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<PnLOutput>
+        PARSER = new com.google.protobuf.AbstractParser<PnLOutput>() {
+      @java.lang.Override
+      public PnLOutput parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new PnLOutput(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<PnLOutput> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<PnLOutput> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.vv.personal.twm.artifactory.generated.equitiesMarket.EquitiesMarketProto.PnLOutput getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_Holding_descriptor;
   private static final 
@@ -3082,6 +3821,11 @@ public final class EquitiesMarketProto {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_LivePnLs_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_PnLOutput_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_PnLOutput_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -3097,9 +3841,11 @@ public final class EquitiesMarketProto {
       "\\\n\007LivePnL\022\031\n\007holding\030\001 \001(\0132\010.Holding\022\023\n" +
       "\013currentRate\030\002 \001(\001\022\014\n\004diff\030\003 \001(\001\022\023\n\013diff" +
       "Percent\030\004 \001(\001\"&\n\010LivePnLs\022\032\n\010livePnLs\030\001 " +
-      "\003(\0132\010.LivePnLBO\n8com.vv.personal.twm.art" +
-      "ifactory.generated.equitiesMarketB\023Equit" +
-      "iesMarketProtob\006proto3"
+      "\003(\0132\010.LivePnL\"Z\n\tPnLOutput\022\033\n\010livePnLs\030\001" +
+      " \001(\0132\t.LivePnLs\022\023\n\013pnLSubTotal\030\002 \001(\001\022\033\n\023" +
+      "currentRateOfReturn\030\003 \001(\001BO\n8com.vv.pers" +
+      "onal.twm.artifactory.generated.equitiesM" +
+      "arketB\023EquitiesMarketProtob\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -3137,6 +3883,12 @@ public final class EquitiesMarketProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_LivePnLs_descriptor,
         new java.lang.String[] { "LivePnLs", });
+    internal_static_PnLOutput_descriptor =
+      getDescriptor().getMessageTypes().get(4);
+    internal_static_PnLOutput_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_PnLOutput_descriptor,
+        new java.lang.String[] { "LivePnLs", "PnLSubTotal", "CurrentRateOfReturn", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

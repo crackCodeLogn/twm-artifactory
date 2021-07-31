@@ -23,3 +23,9 @@ message LivePnL {
 message LivePnLs {
   repeated LivePnL livePnLs = 1;
 }
+
+message PnLOutput {
+  LivePnLs livePnLs = 1;
+  double pnLSubTotal = 2;
+  double currentRateOfReturn = 3;
+}
