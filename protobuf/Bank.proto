@@ -8,6 +8,7 @@ message Bank {
   BankType bankType = 2;
   string IFSC = 3;
   string contactNumber = 4;
+  bool isActive = 5;
 }
 
 enum BankType {
