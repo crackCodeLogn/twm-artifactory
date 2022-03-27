@@ -1,0 +1,46 @@
+syntax = "proto3";
+
+option java_package = "com.vv.personal.twm.artifactory.generated.itinerary";
+option java_outer_classname = "ItineraryProto";
+
+message ItineraryEntity {//for now, no x-referencing.
+  string name = 1;
+  double qty = 2;
+  bool isCritical = 3;
+  bool isPresent = 4;
+  string note = 5;
+
+  string uuid = 6;
+  string parentUuid = 7; //optional
+
+  int64 createdAt = 8;
+}
+
+message Trip {
+  ItineraryEntity itineraryEntity = 1;
+  string name = 2;
+  string uuid = 3;
+
+  int64 startDate = 4;
+  int64 startTime = 5; //optional
+  int64 endDate = 6;
+  int64 endTime = 7; //optional
+
+  int64 createdAt = 8;
+}
+
+message ItineraryUser {
+  string name = 1;
+  string contactNumbers = 2;
+  string contactEmail = 3;
+
+  int64 createdAt = 4;
+}
+
+message ItineraryEntityList {
+  repeated ItineraryEntity itineraryEntity = 1;
+}
+
+message ItineraryUserList {
+  repeated ItineraryUser itineraryUser = 1;
+}
