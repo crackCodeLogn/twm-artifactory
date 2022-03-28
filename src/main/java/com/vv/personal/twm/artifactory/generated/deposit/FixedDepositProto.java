@@ -29,7 +29,7 @@ public final class FixedDepositProto {
 
   static {
     java.lang.String[] descriptorData = {
-            "\n\022FixedDeposit.proto\"\242\003\n\014FixedDeposit\022\014\n" +
+            "\n\022FixedDeposit.proto\"\266\003\n\014FixedDeposit\022\014\n" +
                     "\004user\030\001 \001(\t\022\020\n\010fdNumber\030\002 \001(\t\022\022\n\ncustome" +
                     "rId\030\003 \001(\t\022\020\n\010bankIFSC\030\004 \001(\t\022\025\n\rdepositAm" +
                     "ount\030\005 \001(\001\022\026\n\016rateOfInterest\030\006 \001(\001\022\021\n\tst" +
@@ -38,24 +38,24 @@ public final class FixedDepositProto {
                     "(\0162\r.InterestType\022\017\n\007nominee\030\014 \001(\t\022\026\n\016ex" +
                     "pectedAmount\030\r \001(\001\022\030\n\020expectedInterest\030\016" +
                     " \001(\001\022\026\n\016calculatedDays\030\017 \001(\005\022\022\n\nisFdActi" +
-                    "ve\030\020 \001(\010\022\024\n\014originalUser\030\021 \001(\t\0221\n\023annual" +
-                    "BreakdownList\030\022 \001(\0132\024.AnnualBreakdownLis" +
-                    "t\"7\n\020FixedDepositList\022#\n\014FixedDeposit\030\001 " +
-                    "\003(\0132\r.FixedDeposit\"\246\001\n\017AnnualBreakdown\022\021" +
-                    "\n\tstartDate\030\001 \001(\t\022\017\n\007endDate\030\002 \001(\t\022\025\n\rda" +
-                    "ysInBetween\030\003 \001(\003\022\036\n\026expectedInterestGai" +
-                    "ned\030\004 \001(\001\022!\n\031expectedAmountAccumulated\030\005" +
-                    " \001(\001\022\025\n\rfinancialYear\030\006 \001(\t\"@\n\023AnnualBre" +
-                    "akdownList\022)\n\017annualBreakdown\030\001 \003(\0132\020.An" +
-                    "nualBreakdown*;\n\014InterestType\022\017\n\013ON_MATU" +
-                    "RITY\020\000\022\r\n\tQUARTERLY\020\001\022\013\n\007MONTHLY\020\002*`\n\nOr" +
-                    "derFDsBy\022\016\n\nSTART_DATE\020\000\022\014\n\010END_DATE\020\001\022\022" +
-                    "\n\016DEPOSIT_AMOUNT\020\002\022\024\n\020RATE_OF_INTEREST\020\003" +
-                    "\022\n\n\006MONTHS\020\004*C\n\010FilterBy\022\007\n\003ALL\020\000\022\010\n\004USE" +
-                    "R\020\001\022\021\n\rORIGINAL_USER\020\002\022\007\n\003KEY\020\003\022\010\n\004BANK\020" +
-                    "\004BF\n1com.vv.personal.twm.artifactory.gen" +
-                    "erated.depositB\021FixedDepositProtob\006proto" +
-                    "3"
+                    "ve\030\020 \001(\010\022\022\n\nisFdBroken\030\021 \001(\010\022\024\n\014original" +
+                    "User\030\022 \001(\t\0221\n\023annualBreakdownList\030\023 \001(\0132" +
+                    "\024.AnnualBreakdownList\"7\n\020FixedDepositLis" +
+                    "t\022#\n\014FixedDeposit\030\001 \003(\0132\r.FixedDeposit\"\246" +
+                    "\001\n\017AnnualBreakdown\022\021\n\tstartDate\030\001 \001(\t\022\017\n" +
+                    "\007endDate\030\002 \001(\t\022\025\n\rdaysInBetween\030\003 \001(\003\022\036\n" +
+                    "\026expectedInterestGained\030\004 \001(\001\022!\n\031expecte" +
+                    "dAmountAccumulated\030\005 \001(\001\022\025\n\rfinancialYea" +
+                    "r\030\006 \001(\t\"@\n\023AnnualBreakdownList\022)\n\017annual" +
+                    "Breakdown\030\001 \003(\0132\020.AnnualBreakdown*;\n\014Int" +
+                    "erestType\022\017\n\013ON_MATURITY\020\000\022\r\n\tQUARTERLY\020" +
+                    "\001\022\013\n\007MONTHLY\020\002*`\n\nOrderFDsBy\022\016\n\nSTART_DA" +
+                    "TE\020\000\022\014\n\010END_DATE\020\001\022\022\n\016DEPOSIT_AMOUNT\020\002\022\024" +
+                    "\n\020RATE_OF_INTEREST\020\003\022\n\n\006MONTHS\020\004*C\n\010Filt" +
+                    "erBy\022\007\n\003ALL\020\000\022\010\n\004USER\020\001\022\021\n\rORIGINAL_USER" +
+                    "\020\002\022\007\n\003KEY\020\003\022\010\n\004BANK\020\004BF\n1com.vv.personal" +
+                    ".twm.artifactory.generated.depositB\021Fixe" +
+                    "dDepositProtob\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
             new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner() {
@@ -74,7 +74,7 @@ public final class FixedDepositProto {
     internal_static_FixedDeposit_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
             internal_static_FixedDeposit_descriptor,
-            new java.lang.String[]{"User", "FdNumber", "CustomerId", "BankIFSC", "DepositAmount", "RateOfInterest", "StartDate", "EndDate", "Months", "Days", "InterestType", "Nominee", "ExpectedAmount", "ExpectedInterest", "CalculatedDays", "IsFdActive", "OriginalUser", "AnnualBreakdownList",});
+            new java.lang.String[]{"User", "FdNumber", "CustomerId", "BankIFSC", "DepositAmount", "RateOfInterest", "StartDate", "EndDate", "Months", "Days", "InterestType", "Nominee", "ExpectedAmount", "ExpectedInterest", "CalculatedDays", "IsFdActive", "IsFdBroken", "OriginalUser", "AnnualBreakdownList",});
     internal_static_FixedDepositList_descriptor =
             getDescriptor().getMessageTypes().get(1);
     internal_static_FixedDepositList_fieldAccessorTable = new
@@ -403,6 +403,8 @@ public final class FixedDepositProto {
      * <code>BANK = 4;</code>
      */
     public static final int BANK_VALUE = 4;
+
+
     private static final com.google.protobuf.Internal.EnumLiteMap<
             FilterBy> internalValueMap =
             new com.google.protobuf.Internal.EnumLiteMap<FilterBy>() {
@@ -641,28 +643,37 @@ public final class FixedDepositProto {
     boolean getIsFdActive();
 
     /**
-     * <code>string originalUser = 17;</code>
+     * <pre>
+     * means fd broken before maturity date.
+     * </pre>
+     *
+     * <code>bool isFdBroken = 17;</code>
+     */
+    boolean getIsFdBroken();
+
+    /**
+     * <code>string originalUser = 18;</code>
      */
     java.lang.String getOriginalUser();
 
     /**
-     * <code>string originalUser = 17;</code>
+     * <code>string originalUser = 18;</code>
      */
     com.google.protobuf.ByteString
     getOriginalUserBytes();
 
     /**
-     * <code>.AnnualBreakdownList annualBreakdownList = 18;</code>
+     * <code>.AnnualBreakdownList annualBreakdownList = 19;</code>
      */
     boolean hasAnnualBreakdownList();
 
     /**
-     * <code>.AnnualBreakdownList annualBreakdownList = 18;</code>
+     * <code>.AnnualBreakdownList annualBreakdownList = 19;</code>
      */
     com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.AnnualBreakdownList getAnnualBreakdownList();
 
     /**
-     * <code>.AnnualBreakdownList annualBreakdownList = 18;</code>
+     * <code>.AnnualBreakdownList annualBreakdownList = 19;</code>
      */
     com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.AnnualBreakdownListOrBuilder getAnnualBreakdownListOrBuilder();
   }
@@ -806,6 +817,113 @@ public final class FixedDepositProto {
     private FixedDeposit(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
+
+    public static final int FDNUMBER_FIELD_NUMBER = 2;
+    public static final int CUSTOMERID_FIELD_NUMBER = 3;
+    public static final int BANKIFSC_FIELD_NUMBER = 4;
+    public static final int DEPOSITAMOUNT_FIELD_NUMBER = 5;
+    public static final int RATEOFINTEREST_FIELD_NUMBER = 6;
+    public static final int STARTDATE_FIELD_NUMBER = 7;
+    public static final int ENDDATE_FIELD_NUMBER = 8;
+    public static final int MONTHS_FIELD_NUMBER = 9;
+    public static final int DAYS_FIELD_NUMBER = 10;
+    public static final int INTERESTTYPE_FIELD_NUMBER = 11;
+    public static final int NOMINEE_FIELD_NUMBER = 12;
+    public static final int EXPECTEDAMOUNT_FIELD_NUMBER = 13;
+    public static final int EXPECTEDINTEREST_FIELD_NUMBER = 14;
+    public static final int CALCULATEDDAYS_FIELD_NUMBER = 15;
+    public static final int ISFDACTIVE_FIELD_NUMBER = 16;
+    public static final int ISFDBROKEN_FIELD_NUMBER = 17;
+    public static final int ORIGINALUSER_FIELD_NUMBER = 18;
+    public static final int ANNUALBREAKDOWNLIST_FIELD_NUMBER = 19;
+    private static final long serialVersionUID = 0L;
+    // @@protoc_insertion_point(class_scope:FixedDeposit)
+    private static final com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.FixedDeposit DEFAULT_INSTANCE;
+    private static final com.google.protobuf.Parser<FixedDeposit>
+            PARSER = new com.google.protobuf.AbstractParser<FixedDeposit>() {
+      @java.lang.Override
+      public FixedDeposit parsePartialFrom(
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws com.google.protobuf.InvalidProtocolBufferException {
+        return new FixedDeposit(input, extensionRegistry);
+      }
+    };
+
+    static {
+      DEFAULT_INSTANCE = new com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.FixedDeposit();
+    }
+
+    private volatile java.lang.Object user_;
+
+    /**
+     * <code>double depositAmount = 5;</code>
+     */
+    public double getDepositAmount() {
+      return depositAmount_;
+    }
+
+    private volatile java.lang.Object fdNumber_;
+    private volatile java.lang.Object customerId_;
+
+    /**
+     * <code>double rateOfInterest = 6;</code>
+     */
+    public double getRateOfInterest() {
+      return rateOfInterest_;
+    }
+
+    private volatile java.lang.Object bankIFSC_;
+    private double depositAmount_;
+    private double rateOfInterest_;
+    private volatile java.lang.Object startDate_;
+    private volatile java.lang.Object endDate_;
+    private int months_;
+    private int days_;
+    private int interestType_;
+    private volatile java.lang.Object nominee_;
+    private double expectedAmount_;
+
+    /**
+     * <code>int32 months = 9;</code>
+     */
+    public int getMonths() {
+      return months_;
+    }
+
+    private double expectedInterest_;
+    private int calculatedDays_;
+
+    /**
+     * <code>int32 days = 10;</code>
+     */
+    public int getDays() {
+      return days_;
+    }
+
+    private boolean isFdActive_;
+    private boolean isFdBroken_;
+
+    /**
+     * <code>.InterestType interestType = 11;</code>
+     */
+    public int getInterestTypeValue() {
+      return interestType_;
+    }
+
+    /**
+     * <code>.InterestType interestType = 11;</code>
+     */
+    public com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.InterestType getInterestType() {
+      @SuppressWarnings("deprecation")
+      com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.InterestType result = com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.InterestType.valueOf(interestType_);
+      return result == null ? com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.InterestType.UNRECOGNIZED : result;
+    }
+
+    private volatile java.lang.Object originalUser_;
+    private com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.AnnualBreakdownList annualBreakdownList_;
+    private byte memoizedIsInitialized = -1;
+
     private FixedDeposit() {
       user_ = "";
       fdNumber_ = "";
@@ -823,62 +941,9 @@ public final class FixedDepositProto {
       expectedInterest_ = 0D;
       calculatedDays_ = 0;
       isFdActive_ = false;
+      isFdBroken_ = false;
       originalUser_ = "";
     }
-    public static final int FDNUMBER_FIELD_NUMBER = 2;
-    public static final int CUSTOMERID_FIELD_NUMBER = 3;
-    public static final int BANKIFSC_FIELD_NUMBER = 4;
-    public static final int DEPOSITAMOUNT_FIELD_NUMBER = 5;
-    public static final int RATEOFINTEREST_FIELD_NUMBER = 6;
-    public static final int STARTDATE_FIELD_NUMBER = 7;
-    public static final int ENDDATE_FIELD_NUMBER = 8;
-    public static final int MONTHS_FIELD_NUMBER = 9;
-    public static final int DAYS_FIELD_NUMBER = 10;
-    public static final int INTERESTTYPE_FIELD_NUMBER = 11;
-    public static final int NOMINEE_FIELD_NUMBER = 12;
-    public static final int EXPECTEDAMOUNT_FIELD_NUMBER = 13;
-    public static final int EXPECTEDINTEREST_FIELD_NUMBER = 14;
-    public static final int CALCULATEDDAYS_FIELD_NUMBER = 15;
-    public static final int ISFDACTIVE_FIELD_NUMBER = 16;
-    public static final int ORIGINALUSER_FIELD_NUMBER = 17;
-    public static final int ANNUALBREAKDOWNLIST_FIELD_NUMBER = 18;
-    private static final long serialVersionUID = 0L;
-    // @@protoc_insertion_point(class_scope:FixedDeposit)
-    private static final com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.FixedDeposit DEFAULT_INSTANCE;
-    private static final com.google.protobuf.Parser<FixedDeposit>
-            PARSER = new com.google.protobuf.AbstractParser<FixedDeposit>() {
-      @java.lang.Override
-      public FixedDeposit parsePartialFrom(
-              com.google.protobuf.CodedInputStream input,
-              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new FixedDeposit(input, extensionRegistry);
-      }
-    };
-
-    static {
-      DEFAULT_INSTANCE = new com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.FixedDeposit();
-    }
-
-    private volatile java.lang.Object user_;
-    private volatile java.lang.Object fdNumber_;
-    private volatile java.lang.Object customerId_;
-    private volatile java.lang.Object bankIFSC_;
-    private double depositAmount_;
-    private double rateOfInterest_;
-    private volatile java.lang.Object startDate_;
-    private volatile java.lang.Object endDate_;
-    private int months_;
-    private int days_;
-    private int interestType_;
-    private volatile java.lang.Object nominee_;
-    private double expectedAmount_;
-    private double expectedInterest_;
-    private int calculatedDays_;
-    private boolean isFdActive_;
-    private volatile java.lang.Object originalUser_;
-    private com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.AnnualBreakdownList annualBreakdownList_;
-    private byte memoizedIsInitialized = -1;
 
     private FixedDeposit(
             com.google.protobuf.CodedInputStream input,
@@ -987,13 +1052,18 @@ public final class FixedDepositProto {
               isFdActive_ = input.readBool();
               break;
             }
-            case 138: {
+            case 136: {
+
+              isFdBroken_ = input.readBool();
+              break;
+            }
+            case 146: {
               java.lang.String s = input.readStringRequireUtf8();
 
               originalUser_ = s;
               break;
             }
-            case 146: {
+            case 154: {
               com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.AnnualBreakdownList.Builder subBuilder = null;
               if (annualBreakdownList_ != null) {
                 subBuilder = annualBreakdownList_.toBuilder();
@@ -1031,6 +1101,13 @@ public final class FixedDepositProto {
       return com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.internal_static_FixedDeposit_descriptor;
     }
 
+    /**
+     * <code>double expectedAmount = 13;</code>
+     */
+    public double getExpectedAmount() {
+      return expectedAmount_;
+    }
+
     public static com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.FixedDeposit parseFrom(
             java.nio.ByteBuffer data)
             throws com.google.protobuf.InvalidProtocolBufferException {
@@ -1044,6 +1121,13 @@ public final class FixedDepositProto {
       return PARSER.parseFrom(data, extensionRegistry);
     }
 
+    /**
+     * <code>double expectedInterest = 14;</code>
+     */
+    public double getExpectedInterest() {
+      return expectedInterest_;
+    }
+
     public static com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.FixedDeposit parseFrom(
             com.google.protobuf.ByteString data)
             throws com.google.protobuf.InvalidProtocolBufferException {
@@ -1055,6 +1139,13 @@ public final class FixedDepositProto {
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
+    }
+
+    /**
+     * <code>int32 calculatedDays = 15;</code>
+     */
+    public int getCalculatedDays() {
+      return calculatedDays_;
     }
 
     public static com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.FixedDeposit parseFrom(byte[] data)
@@ -1090,15 +1181,15 @@ public final class FixedDepositProto {
     }
 
     public static com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.FixedDeposit parseDelimitedFrom(
-            java.io.InputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
-              .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
 
     public static com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.FixedDeposit parseFrom(
-            com.google.protobuf.CodedInputStream input)
+        com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
@@ -1134,19 +1225,12 @@ public final class FixedDepositProto {
       return this.unknownFields;
     }
 
-    /**
-     * <code>bool isFdActive = 16;</code>
-     */
-    public boolean getIsFdActive() {
-      return isFdActive_;
-    }
-
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
     internalGetFieldAccessorTable() {
       return com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.internal_static_FixedDeposit_fieldAccessorTable
-              .ensureFieldAccessorsInitialized(
-                      com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.FixedDeposit.class, com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.FixedDeposit.Builder.class);
+          .ensureFieldAccessorsInitialized(
+              com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.FixedDeposit.class, com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.FixedDeposit.Builder.class);
     }
 
     /**
@@ -1182,6 +1266,16 @@ public final class FixedDepositProto {
       }
     }
 
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
     /**
      * <pre>
      *unique per FD
@@ -1214,7 +1308,7 @@ public final class FixedDepositProto {
       java.lang.Object ref = fdNumber_;
       if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b =
-                com.google.protobuf.ByteString.copyFromUtf8(
+            com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         fdNumber_ = b;
         return b;
@@ -1232,32 +1326,11 @@ public final class FixedDepositProto {
         return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs =
-                (com.google.protobuf.ByteString) ref;
+            (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         customerId_ = s;
         return s;
       }
-    }
-
-    /**
-     * <code>.AnnualBreakdownList annualBreakdownList = 18;</code>
-     */
-    public boolean hasAnnualBreakdownList() {
-      return annualBreakdownList_ != null;
-    }
-
-    /**
-     * <code>.AnnualBreakdownList annualBreakdownList = 18;</code>
-     */
-    public com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.AnnualBreakdownList getAnnualBreakdownList() {
-      return annualBreakdownList_ == null ? com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.AnnualBreakdownList.getDefaultInstance() : annualBreakdownList_;
-    }
-
-    /**
-     * <code>.AnnualBreakdownList annualBreakdownList = 18;</code>
-     */
-    public com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.AnnualBreakdownListOrBuilder getAnnualBreakdownListOrBuilder() {
-      return getAnnualBreakdownList();
     }
 
     /**
@@ -1309,27 +1382,13 @@ public final class FixedDepositProto {
       java.lang.Object ref = bankIFSC_;
       if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b =
-                com.google.protobuf.ByteString.copyFromUtf8(
-                        (java.lang.String) ref);
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         bankIFSC_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
-    }
-
-    /**
-     * <code>double depositAmount = 5;</code>
-     */
-    public double getDepositAmount() {
-      return depositAmount_;
-    }
-
-    /**
-     * <code>double rateOfInterest = 6;</code>
-     */
-    public double getRateOfInterest() {
-      return rateOfInterest_;
     }
 
     /**
@@ -1360,7 +1419,7 @@ public final class FixedDepositProto {
      * <code>string startDate = 7;</code>
      */
     public com.google.protobuf.ByteString
-        getStartDateBytes() {
+    getStartDateBytes() {
       java.lang.Object ref = startDate_;
       if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b =
@@ -1375,7 +1434,7 @@ public final class FixedDepositProto {
 
     /**
      * <pre>
-     * to match YYYYMMDD
+     *to match YYYYMMDD
      * </pre>
      *
      * <code>string endDate = 8;</code>
@@ -1386,7 +1445,7 @@ public final class FixedDepositProto {
         return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
+                (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         endDate_ = s;
         return s;
@@ -1401,47 +1460,17 @@ public final class FixedDepositProto {
      * <code>string endDate = 8;</code>
      */
     public com.google.protobuf.ByteString
-    getEndDateBytes() {
+        getEndDateBytes() {
       java.lang.Object ref = endDate_;
       if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b =
-                com.google.protobuf.ByteString.copyFromUtf8(
-                        (java.lang.String) ref);
+            com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
         endDate_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
-    }
-
-    /**
-     * <code>int32 months = 9;</code>
-     */
-    public int getMonths() {
-      return months_;
-    }
-
-    /**
-     * <code>int32 days = 10;</code>
-     */
-    public int getDays() {
-      return days_;
-    }
-
-    /**
-     * <code>.InterestType interestType = 11;</code>
-     */
-    public int getInterestTypeValue() {
-      return interestType_;
-    }
-
-    /**
-     * <code>.InterestType interestType = 11;</code>
-     */
-    public com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.InterestType getInterestType() {
-      @SuppressWarnings("deprecation")
-      com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.InterestType result = com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.InterestType.valueOf(interestType_);
-      return result == null ? com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.InterestType.UNRECOGNIZED : result;
     }
 
     /**
@@ -1478,28 +1507,25 @@ public final class FixedDepositProto {
     }
 
     /**
-     * <code>double expectedAmount = 13;</code>
+     * <code>bool isFdActive = 16;</code>
      */
-    public double getExpectedAmount() {
-      return expectedAmount_;
+    public boolean getIsFdActive() {
+      return isFdActive_;
     }
 
     /**
-     * <code>double expectedInterest = 14;</code>
+     * <pre>
+     *means fd broken before maturity date.
+     * </pre>
+     *
+     * <code>bool isFdBroken = 17;</code>
      */
-    public double getExpectedInterest() {
-      return expectedInterest_;
+    public boolean getIsFdBroken() {
+      return isFdBroken_;
     }
 
     /**
-     * <code>int32 calculatedDays = 15;</code>
-     */
-    public int getCalculatedDays() {
-      return calculatedDays_;
-    }
-
-    /**
-     * <code>string originalUser = 17;</code>
+     * <code>string originalUser = 18;</code>
      */
     public java.lang.String getOriginalUser() {
       java.lang.Object ref = originalUser_;
@@ -1515,7 +1541,7 @@ public final class FixedDepositProto {
     }
 
     /**
-     * <code>string originalUser = 17;</code>
+     * <code>string originalUser = 18;</code>
      */
     public com.google.protobuf.ByteString
     getOriginalUserBytes() {
@@ -1531,14 +1557,25 @@ public final class FixedDepositProto {
       }
     }
 
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
+    /**
+     * <code>.AnnualBreakdownList annualBreakdownList = 19;</code>
+     */
+    public boolean hasAnnualBreakdownList() {
+      return annualBreakdownList_ != null;
+    }
 
-      memoizedIsInitialized = 1;
-      return true;
+    /**
+     * <code>.AnnualBreakdownList annualBreakdownList = 19;</code>
+     */
+    public com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.AnnualBreakdownList getAnnualBreakdownList() {
+      return annualBreakdownList_ == null ? com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.AnnualBreakdownList.getDefaultInstance() : annualBreakdownList_;
+    }
+
+    /**
+     * <code>.AnnualBreakdownList annualBreakdownList = 19;</code>
+     */
+    public com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.AnnualBreakdownListOrBuilder getAnnualBreakdownListOrBuilder() {
+      return getAnnualBreakdownList();
     }
 
     @java.lang.Override
@@ -1592,20 +1629,16 @@ public final class FixedDepositProto {
       if (isFdActive_ != false) {
         output.writeBool(16, isFdActive_);
       }
+      if (isFdBroken_ != false) {
+        output.writeBool(17, isFdBroken_);
+      }
       if (!getOriginalUserBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 17, originalUser_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 18, originalUser_);
       }
       if (annualBreakdownList_ != null) {
-        output.writeMessage(18, getAnnualBreakdownList());
+        output.writeMessage(19, getAnnualBreakdownList());
       }
       unknownFields.writeTo(output);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
     }
 
     @java.lang.Override
@@ -1657,26 +1690,30 @@ public final class FixedDepositProto {
       }
       if (expectedAmount_ != 0D) {
         size += com.google.protobuf.CodedOutputStream
-          .computeDoubleSize(13, expectedAmount_);
+                .computeDoubleSize(13, expectedAmount_);
       }
       if (expectedInterest_ != 0D) {
         size += com.google.protobuf.CodedOutputStream
-          .computeDoubleSize(14, expectedInterest_);
+                .computeDoubleSize(14, expectedInterest_);
       }
       if (calculatedDays_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(15, calculatedDays_);
+                .computeInt32Size(15, calculatedDays_);
       }
       if (isFdActive_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(16, isFdActive_);
+                .computeBoolSize(16, isFdActive_);
+      }
+      if (isFdBroken_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+                .computeBoolSize(17, isFdBroken_);
       }
       if (!getOriginalUserBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(17, originalUser_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(18, originalUser_);
       }
       if (annualBreakdownList_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(18, getAnnualBreakdownList());
+          .computeMessageSize(19, getAnnualBreakdownList());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -1726,13 +1763,15 @@ public final class FixedDepositProto {
                       == java.lang.Double.doubleToLongBits(
                       other.getExpectedAmount()));
       result = result && (
-          java.lang.Double.doubleToLongBits(getExpectedInterest())
-          == java.lang.Double.doubleToLongBits(
-              other.getExpectedInterest()));
+              java.lang.Double.doubleToLongBits(getExpectedInterest())
+                      == java.lang.Double.doubleToLongBits(
+                      other.getExpectedInterest()));
       result = result && (getCalculatedDays()
-          == other.getCalculatedDays());
+              == other.getCalculatedDays());
       result = result && (getIsFdActive()
-          == other.getIsFdActive());
+              == other.getIsFdActive());
+      result = result && (getIsFdBroken()
+              == other.getIsFdBroken());
       result = result && getOriginalUser()
           .equals(other.getOriginalUser());
       result = result && (hasAnnualBreakdownList() == other.hasAnnualBreakdownList());
@@ -1788,6 +1827,9 @@ public final class FixedDepositProto {
       hash = (37 * hash) + ISFDACTIVE_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
               getIsFdActive());
+      hash = (37 * hash) + ISFDBROKEN_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+              getIsFdBroken());
       hash = (37 * hash) + ORIGINALUSER_FIELD_NUMBER;
       hash = (53 * hash) + getOriginalUser().hashCode();
       if (hasAnnualBreakdownList()) {
@@ -1811,6 +1853,13 @@ public final class FixedDepositProto {
     }
 
     @java.lang.Override
+    protected Builder newBuilderForType(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+
+    @java.lang.Override
     public com.google.protobuf.Parser<FixedDeposit> getParserForType() {
       return PARSER;
     }
@@ -1828,6 +1877,74 @@ public final class FixedDepositProto {
             // @@protoc_insertion_point(builder_implements:FixedDeposit)
             com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.FixedDepositOrBuilder {
       private java.lang.Object user_ = "";
+      private java.lang.Object fdNumber_ = "";
+      private java.lang.Object customerId_ = "";
+      private java.lang.Object bankIFSC_ = "";
+      private double depositAmount_;
+      private double rateOfInterest_;
+      private java.lang.Object startDate_ = "";
+
+      @java.lang.Override
+      public com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.FixedDeposit getDefaultInstanceForType() {
+        return com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.FixedDeposit.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.FixedDeposit build() {
+        com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.FixedDeposit result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      private java.lang.Object endDate_ = "";
+      private int months_;
+      private int days_;
+      private int interestType_ = 0;
+      private java.lang.Object nominee_ = "";
+      private double expectedAmount_;
+      private double expectedInterest_;
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.FixedDeposit) {
+          return mergeFrom((com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.FixedDeposit) other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      private int calculatedDays_;
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      private boolean isFdActive_;
+      private boolean isFdBroken_;
+      private java.lang.Object originalUser_ = "";
+      private com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.AnnualBreakdownList annualBreakdownList_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+              com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.AnnualBreakdownList, com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.AnnualBreakdownList.Builder, com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.AnnualBreakdownListOrBuilder> annualBreakdownListBuilder_;
+
+      // Construct using com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.FixedDeposit.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+              com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+
+      public static final com.google.protobuf.Descriptors.Descriptor
+      getDescriptor() {
+        return com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.internal_static_FixedDeposit_descriptor;
+      }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -1836,9 +1953,13 @@ public final class FixedDepositProto {
                 .ensureFieldAccessorsInitialized(
                         com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.FixedDeposit.class, com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.FixedDeposit.Builder.class);
       }
-      private java.lang.Object fdNumber_ = "";
-      private java.lang.Object customerId_ = "";
-      private java.lang.Object bankIFSC_ = "";
+
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+
       @java.lang.Override
       public Builder clear() {
         super.clear();
@@ -1874,6 +1995,8 @@ public final class FixedDepositProto {
 
         isFdActive_ = false;
 
+        isFdBroken_ = false;
+
         originalUser_ = "";
 
         if (annualBreakdownListBuilder_ == null) {
@@ -1884,42 +2007,79 @@ public final class FixedDepositProto {
         }
         return this;
       }
-      private double depositAmount_ ;
 
       @java.lang.Override
-      public com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.FixedDeposit getDefaultInstanceForType() {
-        return com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.FixedDeposit.getDefaultInstance();
+      public com.google.protobuf.Descriptors.Descriptor
+      getDescriptorForType() {
+        return com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.internal_static_FixedDeposit_descriptor;
       }
 
       @java.lang.Override
-      public com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.FixedDeposit build() {
-        com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.FixedDeposit result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
+      public com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.FixedDeposit buildPartial() {
+        com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.FixedDeposit result = new com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.FixedDeposit(this);
+        result.user_ = user_;
+        result.fdNumber_ = fdNumber_;
+        result.customerId_ = customerId_;
+        result.bankIFSC_ = bankIFSC_;
+        result.depositAmount_ = depositAmount_;
+        result.rateOfInterest_ = rateOfInterest_;
+        result.startDate_ = startDate_;
+        result.endDate_ = endDate_;
+        result.months_ = months_;
+        result.days_ = days_;
+        result.interestType_ = interestType_;
+        result.nominee_ = nominee_;
+        result.expectedAmount_ = expectedAmount_;
+        result.expectedInterest_ = expectedInterest_;
+        result.calculatedDays_ = calculatedDays_;
+        result.isFdActive_ = isFdActive_;
+        result.isFdBroken_ = isFdBroken_;
+        result.originalUser_ = originalUser_;
+        if (annualBreakdownListBuilder_ == null) {
+          result.annualBreakdownList_ = annualBreakdownList_;
+        } else {
+          result.annualBreakdownList_ = annualBreakdownListBuilder_.build();
         }
+        onBuilt();
         return result;
       }
-
-      private double rateOfInterest_;
 
       @java.lang.Override
       public Builder clone() {
         return super.clone();
       }
 
-      private java.lang.Object startDate_ = "";
-      private java.lang.Object endDate_ = "";
-      private int months_;
-      private int days_;
-      private int interestType_ = 0;
       @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.FixedDeposit) {
-          return mergeFrom((com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.FixedDeposit)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
+      public Builder setField(
+              com.google.protobuf.Descriptors.FieldDescriptor field,
+              java.lang.Object value) {
+        return super.setField(field, value);
+      }
+
+      @java.lang.Override
+      public Builder clearField(
+              com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+
+      @java.lang.Override
+      public Builder clearOneof(
+              com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+
+      @java.lang.Override
+      public Builder setRepeatedField(
+              com.google.protobuf.Descriptors.FieldDescriptor field,
+              int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+
+      @java.lang.Override
+      public Builder addRepeatedField(
+              com.google.protobuf.Descriptors.FieldDescriptor field,
+              java.lang.Object value) {
+        return super.addRepeatedField(field, value);
       }
 
       public Builder mergeFrom(com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.FixedDeposit other) {
@@ -1979,6 +2139,9 @@ public final class FixedDepositProto {
         if (other.getIsFdActive() != false) {
           setIsFdActive(other.getIsFdActive());
         }
+        if (other.getIsFdBroken() != false) {
+          setIsFdBroken(other.getIsFdBroken());
+        }
         if (!other.getOriginalUser().isEmpty()) {
           originalUser_ = other.originalUser_;
           onChanged();
@@ -1989,111 +2152,6 @@ public final class FixedDepositProto {
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
-      }
-
-      private java.lang.Object nominee_ = "";
-      private double expectedAmount_;
-      private double expectedInterest_;
-      private int calculatedDays_;
-      private boolean isFdActive_;
-      private java.lang.Object originalUser_ = "";
-      private com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.AnnualBreakdownList annualBreakdownList_ = null;
-      private com.google.protobuf.SingleFieldBuilderV3<
-              com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.AnnualBreakdownList, com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.AnnualBreakdownList.Builder, com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.AnnualBreakdownListOrBuilder> annualBreakdownListBuilder_;
-
-      // Construct using com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.FixedDeposit.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-              com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-
-      public static final com.google.protobuf.Descriptors.Descriptor
-      getDescriptor() {
-        return com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.internal_static_FixedDeposit_descriptor;
-      }
-
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-      getDescriptorForType() {
-        return com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.internal_static_FixedDeposit_descriptor;
-      }
-
-      @java.lang.Override
-      public com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.FixedDeposit buildPartial() {
-        com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.FixedDeposit result = new com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.FixedDeposit(this);
-        result.user_ = user_;
-        result.fdNumber_ = fdNumber_;
-        result.customerId_ = customerId_;
-        result.bankIFSC_ = bankIFSC_;
-        result.depositAmount_ = depositAmount_;
-        result.rateOfInterest_ = rateOfInterest_;
-        result.startDate_ = startDate_;
-        result.endDate_ = endDate_;
-        result.months_ = months_;
-        result.days_ = days_;
-        result.interestType_ = interestType_;
-        result.nominee_ = nominee_;
-        result.expectedAmount_ = expectedAmount_;
-        result.expectedInterest_ = expectedInterest_;
-        result.calculatedDays_ = calculatedDays_;
-        result.isFdActive_ = isFdActive_;
-        result.originalUser_ = originalUser_;
-        if (annualBreakdownListBuilder_ == null) {
-          result.annualBreakdownList_ = annualBreakdownList_;
-        } else {
-          result.annualBreakdownList_ = annualBreakdownListBuilder_.build();
-        }
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder setField(
-              com.google.protobuf.Descriptors.FieldDescriptor field,
-              java.lang.Object value) {
-        return super.setField(field, value);
-      }
-
-      @java.lang.Override
-      public Builder clearField(
-              com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-
-      @java.lang.Override
-      public Builder clearOneof(
-              com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-
-      @java.lang.Override
-      public Builder setRepeatedField(
-              com.google.protobuf.Descriptors.FieldDescriptor field,
-              int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-
-      @java.lang.Override
-      public Builder addRepeatedField(
-              com.google.protobuf.Descriptors.FieldDescriptor field,
-              java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
       }
 
       @java.lang.Override
@@ -2169,8 +2227,8 @@ public final class FixedDepositProto {
               com.google.protobuf.ByteString value) {
         if (value == null) {
           throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+        }
+        checkByteStringIsUtf8(value);
 
         user_ = value;
         onChanged();
@@ -2185,6 +2243,13 @@ public final class FixedDepositProto {
         user_ = getDefaultInstance().getUser();
         onChanged();
         return this;
+      }
+
+      /**
+       * <code>double depositAmount = 5;</code>
+       */
+      public double getDepositAmount() {
+        return depositAmount_;
       }
 
       /**
@@ -2227,7 +2292,7 @@ public final class FixedDepositProto {
 
       /**
        * <pre>
-       *unique per FD
+       * unique per FD
        * </pre>
        *
        * <code>string fdNumber = 2;</code>
@@ -2244,6 +2309,12 @@ public final class FixedDepositProto {
         } else {
           return (com.google.protobuf.ByteString) ref;
         }
+      }
+      /**
+       * <code>double rateOfInterest = 6;</code>
+       */
+      public double getRateOfInterest() {
+        return rateOfInterest_;
       }
 
       /**
@@ -2302,7 +2373,7 @@ public final class FixedDepositProto {
               java.lang.String value) {
         if (value == null) {
           throw new NullPointerException();
-        }
+  }
 
         customerId_ = value;
         onChanged();
@@ -2313,11 +2384,11 @@ public final class FixedDepositProto {
        * <code>string customerId = 3;</code>
        */
       public com.google.protobuf.ByteString
-      getCustomerIdBytes() {
+          getCustomerIdBytes() {
         java.lang.Object ref = customerId_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b =
-                  com.google.protobuf.ByteString.copyFromUtf8(
+              com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           customerId_ = b;
           return b;
@@ -2362,7 +2433,7 @@ public final class FixedDepositProto {
         java.lang.Object ref = bankIFSC_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
-                  (com.google.protobuf.ByteString) ref;
+              (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
           bankIFSC_ = s;
           return s;
@@ -2397,11 +2468,11 @@ public final class FixedDepositProto {
        * <code>string bankIFSC = 4;</code>
        */
       public com.google.protobuf.ByteString
-          getBankIFSCBytes() {
+      getBankIFSCBytes() {
         java.lang.Object ref = bankIFSC_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b =
-              com.google.protobuf.ByteString.copyFromUtf8(
+                  com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           bankIFSC_ = b;
           return b;
@@ -2418,11 +2489,11 @@ public final class FixedDepositProto {
        * <code>string bankIFSC = 4;</code>
        */
       public Builder setBankIFSCBytes(
-              com.google.protobuf.ByteString value) {
+          com.google.protobuf.ByteString value) {
         if (value == null) {
-          throw new NullPointerException();
-        }
-        checkByteStringIsUtf8(value);
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
 
         bankIFSC_ = value;
         onChanged();
@@ -2441,13 +2512,6 @@ public final class FixedDepositProto {
         bankIFSC_ = getDefaultInstance().getBankIFSC();
         onChanged();
         return this;
-      }
-
-      /**
-       * <code>double depositAmount = 5;</code>
-       */
-      public double getDepositAmount() {
-        return depositAmount_;
       }
 
       /**
@@ -2473,18 +2537,18 @@ public final class FixedDepositProto {
       /**
        * <code>double rateOfInterest = 6;</code>
        */
-      public double getRateOfInterest() {
-        return rateOfInterest_;
-      }
-
-      /**
-       * <code>double rateOfInterest = 6;</code>
-       */
       public Builder setRateOfInterest(double value) {
 
         rateOfInterest_ = value;
         onChanged();
         return this;
+      }
+
+      /**
+       * <code>int32 months = 9;</code>
+       */
+      public int getMonths() {
+        return months_;
       }
 
       /**
@@ -2527,12 +2591,19 @@ public final class FixedDepositProto {
       public Builder setStartDate(
               java.lang.String value) {
         if (value == null) {
-    throw new NullPointerException();
-  }
+          throw new NullPointerException();
+        }
 
         startDate_ = value;
         onChanged();
         return this;
+      }
+
+      /**
+       * <code>int32 days = 10;</code>
+       */
+      public int getDays() {
+        return days_;
       }
 
       /**
@@ -2547,7 +2618,7 @@ public final class FixedDepositProto {
         java.lang.Object ref = startDate_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b =
-                  com.google.protobuf.ByteString.copyFromUtf8(
+              com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           startDate_ = b;
           return b;
@@ -2566,9 +2637,9 @@ public final class FixedDepositProto {
       public Builder setStartDateBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
-          throw new NullPointerException();
-        }
-        checkByteStringIsUtf8(value);
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
 
         startDate_ = value;
         onChanged();
@@ -2600,7 +2671,7 @@ public final class FixedDepositProto {
         java.lang.Object ref = endDate_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
+                  (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
           endDate_ = s;
           return s;
@@ -2611,7 +2682,7 @@ public final class FixedDepositProto {
 
       /**
        * <pre>
-       * to match YYYYMMDD
+       *to match YYYYMMDD
        * </pre>
        *
        * <code>string endDate = 8;</code>
@@ -2639,13 +2710,86 @@ public final class FixedDepositProto {
         java.lang.Object ref = endDate_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b =
-                  com.google.protobuf.ByteString.copyFromUtf8(
-                          (java.lang.String) ref);
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
           endDate_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
         }
+      }
+
+      /**
+       * <pre>
+       *to match YYYYMMDD
+       * </pre>
+       *
+       * <code>string endDate = 8;</code>
+       */
+      public Builder setEndDateBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+
+        endDate_ = value;
+        onChanged();
+        return this;
+      }
+
+      /**
+       * <pre>
+       * to match YYYYMMDD
+       * </pre>
+       *
+       * <code>string endDate = 8;</code>
+       */
+      public Builder clearEndDate() {
+
+        endDate_ = getDefaultInstance().getEndDate();
+        onChanged();
+        return this;
+      }
+
+      /**
+       * <code>int32 months = 9;</code>
+       */
+      public Builder setMonths(int value) {
+
+        months_ = value;
+        onChanged();
+        return this;
+      }
+
+      /**
+       * <code>int32 months = 9;</code>
+       */
+      public Builder clearMonths() {
+
+        months_ = 0;
+        onChanged();
+        return this;
+      }
+
+      /**
+       * <code>int32 days = 10;</code>
+       */
+      public Builder setDays(int value) {
+
+        days_ = value;
+        onChanged();
+        return this;
+      }
+
+      /**
+       * <code>int32 days = 10;</code>
+       */
+      public Builder clearDays() {
+
+        days_ = 0;
+        onChanged();
+        return this;
       }
 
       /**
@@ -2674,90 +2818,10 @@ public final class FixedDepositProto {
       }
 
       /**
-       * <pre>
-       *to match YYYYMMDD
-       * </pre>
-       *
-       * <code>string endDate = 8;</code>
+       * <code>double expectedAmount = 13;</code>
        */
-      public Builder setEndDateBytes(
-              com.google.protobuf.ByteString value) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        checkByteStringIsUtf8(value);
-
-        endDate_ = value;
-        onChanged();
-        return this;
-      }
-
-      /**
-       * <pre>
-       * to match YYYYMMDD
-       * </pre>
-       *
-       * <code>string endDate = 8;</code>
-       */
-      public Builder clearEndDate() {
-
-        endDate_ = getDefaultInstance().getEndDate();
-        onChanged();
-        return this;
-      }
-
-      /**
-       * <code>int32 months = 9;</code>
-       */
-      public int getMonths() {
-        return months_;
-      }
-
-      /**
-       * <code>int32 months = 9;</code>
-       */
-      public Builder setMonths(int value) {
-
-        months_ = value;
-        onChanged();
-        return this;
-      }
-
-      /**
-       * <code>int32 months = 9;</code>
-       */
-      public Builder clearMonths() {
-
-        months_ = 0;
-        onChanged();
-        return this;
-      }
-
-      /**
-       * <code>int32 days = 10;</code>
-       */
-      public int getDays() {
-        return days_;
-      }
-
-      /**
-       * <code>int32 days = 10;</code>
-       */
-      public Builder setDays(int value) {
-
-        days_ = value;
-        onChanged();
-        return this;
-      }
-
-      /**
-       * <code>int32 days = 10;</code>
-       */
-      public Builder clearDays() {
-
-        days_ = 0;
-        onChanged();
-        return this;
+      public double getExpectedAmount() {
+        return expectedAmount_;
       }
 
       /**
@@ -2800,13 +2864,20 @@ public final class FixedDepositProto {
       }
 
       /**
+       * <code>double expectedInterest = 14;</code>
+       */
+      public double getExpectedInterest() {
+        return expectedInterest_;
+      }
+
+      /**
        * <code>string nominee = 12;</code>
        */
       public Builder setNominee(
               java.lang.String value) {
         if (value == null) {
           throw new NullPointerException();
-  }
+        }
 
         nominee_ = value;
         onChanged();
@@ -2846,6 +2917,13 @@ public final class FixedDepositProto {
       }
 
       /**
+       * <code>int32 calculatedDays = 15;</code>
+       */
+      public int getCalculatedDays() {
+        return calculatedDays_;
+      }
+
+      /**
        * <code>string nominee = 12;</code>
        */
       public Builder clearNominee() {
@@ -2853,13 +2931,6 @@ public final class FixedDepositProto {
         nominee_ = getDefaultInstance().getNominee();
         onChanged();
         return this;
-      }
-
-      /**
-       * <code>double expectedAmount = 13;</code>
-       */
-      public double getExpectedAmount() {
-        return expectedAmount_;
       }
 
       /**
@@ -2881,12 +2952,11 @@ public final class FixedDepositProto {
         onChanged();
         return this;
       }
-
       /**
-       * <code>double expectedInterest = 14;</code>
+       * <code>bool isFdActive = 16;</code>
        */
-      public double getExpectedInterest() {
-        return expectedInterest_;
+      public boolean getIsFdActive() {
+        return isFdActive_;
       }
 
       /**
@@ -2912,13 +2982,6 @@ public final class FixedDepositProto {
       /**
        * <code>int32 calculatedDays = 15;</code>
        */
-      public int getCalculatedDays() {
-        return calculatedDays_;
-      }
-
-      /**
-       * <code>int32 calculatedDays = 15;</code>
-       */
       public Builder setCalculatedDays(int value) {
 
         calculatedDays_ = value;
@@ -2934,13 +2997,6 @@ public final class FixedDepositProto {
         calculatedDays_ = 0;
         onChanged();
         return this;
-      }
-
-      /**
-       * <code>bool isFdActive = 16;</code>
-       */
-      public boolean getIsFdActive() {
-        return isFdActive_;
       }
 
       /**
@@ -2964,13 +3020,52 @@ public final class FixedDepositProto {
       }
 
       /**
-       * <code>string originalUser = 17;</code>
+       * <pre>
+       * means fd broken before maturity date.
+       * </pre>
+       *
+       * <code>bool isFdBroken = 17;</code>
+       */
+      public boolean getIsFdBroken() {
+        return isFdBroken_;
+      }
+
+      /**
+       * <pre>
+       *means fd broken before maturity date.
+       * </pre>
+       *
+       * <code>bool isFdBroken = 17;</code>
+       */
+      public Builder setIsFdBroken(boolean value) {
+
+        isFdBroken_ = value;
+        onChanged();
+        return this;
+      }
+
+      /**
+       * <pre>
+       *means fd broken before maturity date.
+       * </pre>
+       *
+       * <code>bool isFdBroken = 17;</code>
+       */
+      public Builder clearIsFdBroken() {
+
+        isFdBroken_ = false;
+        onChanged();
+        return this;
+      }
+
+      /**
+       * <code>string originalUser = 18;</code>
        */
       public java.lang.String getOriginalUser() {
         java.lang.Object ref = originalUser_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
-                  (com.google.protobuf.ByteString) ref;
+              (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
           originalUser_ = s;
           return s;
@@ -2980,7 +3075,7 @@ public final class FixedDepositProto {
       }
 
       /**
-       * <code>string originalUser = 17;</code>
+       * <code>string originalUser = 18;</code>
        */
       public Builder setOriginalUser(
           java.lang.String value) {
@@ -2994,7 +3089,7 @@ public final class FixedDepositProto {
       }
 
       /**
-       * <code>string originalUser = 17;</code>
+       * <code>string originalUser = 18;</code>
        */
       public com.google.protobuf.ByteString
           getOriginalUserBytes() {
@@ -3011,14 +3106,14 @@ public final class FixedDepositProto {
       }
 
       /**
-       * <code>string originalUser = 17;</code>
+       * <code>string originalUser = 18;</code>
        */
       public Builder setOriginalUserBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+        }
+        checkByteStringIsUtf8(value);
 
         originalUser_ = value;
         onChanged();
@@ -3026,7 +3121,7 @@ public final class FixedDepositProto {
       }
 
       /**
-       * <code>string originalUser = 17;</code>
+       * <code>string originalUser = 18;</code>
        */
       public Builder clearOriginalUser() {
 
@@ -3034,15 +3129,16 @@ public final class FixedDepositProto {
         onChanged();
         return this;
       }
+
       /**
-       * <code>.AnnualBreakdownList annualBreakdownList = 18;</code>
+       * <code>.AnnualBreakdownList annualBreakdownList = 19;</code>
        */
       public boolean hasAnnualBreakdownList() {
         return annualBreakdownListBuilder_ != null || annualBreakdownList_ != null;
       }
 
       /**
-       * <code>.AnnualBreakdownList annualBreakdownList = 18;</code>
+       * <code>.AnnualBreakdownList annualBreakdownList = 19;</code>
        */
       public com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.AnnualBreakdownList getAnnualBreakdownList() {
         if (annualBreakdownListBuilder_ == null) {
@@ -3051,8 +3147,9 @@ public final class FixedDepositProto {
           return annualBreakdownListBuilder_.getMessage();
         }
       }
+
       /**
-       * <code>.AnnualBreakdownList annualBreakdownList = 18;</code>
+       * <code>.AnnualBreakdownList annualBreakdownList = 19;</code>
        */
       public Builder setAnnualBreakdownList(com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.AnnualBreakdownList value) {
         if (annualBreakdownListBuilder_ == null) {
@@ -3067,12 +3164,11 @@ public final class FixedDepositProto {
 
         return this;
       }
-
       /**
-       * <code>.AnnualBreakdownList annualBreakdownList = 18;</code>
+       * <code>.AnnualBreakdownList annualBreakdownList = 19;</code>
        */
       public Builder setAnnualBreakdownList(
-          com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.AnnualBreakdownList.Builder builderForValue) {
+              com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.AnnualBreakdownList.Builder builderForValue) {
         if (annualBreakdownListBuilder_ == null) {
           annualBreakdownList_ = builderForValue.build();
           onChanged();
@@ -3082,14 +3178,15 @@ public final class FixedDepositProto {
 
         return this;
       }
+
       /**
-       * <code>.AnnualBreakdownList annualBreakdownList = 18;</code>
+       * <code>.AnnualBreakdownList annualBreakdownList = 19;</code>
        */
       public Builder mergeAnnualBreakdownList(com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.AnnualBreakdownList value) {
         if (annualBreakdownListBuilder_ == null) {
           if (annualBreakdownList_ != null) {
             annualBreakdownList_ =
-              com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.AnnualBreakdownList.newBuilder(annualBreakdownList_).mergeFrom(value).buildPartial();
+                    com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.AnnualBreakdownList.newBuilder(annualBreakdownList_).mergeFrom(value).buildPartial();
           } else {
             annualBreakdownList_ = value;
           }
@@ -3102,7 +3199,7 @@ public final class FixedDepositProto {
       }
 
       /**
-       * <code>.AnnualBreakdownList annualBreakdownList = 18;</code>
+       * <code>.AnnualBreakdownList annualBreakdownList = 19;</code>
        */
       public Builder clearAnnualBreakdownList() {
         if (annualBreakdownListBuilder_ == null) {
@@ -3117,7 +3214,7 @@ public final class FixedDepositProto {
       }
 
       /**
-       * <code>.AnnualBreakdownList annualBreakdownList = 18;</code>
+       * <code>.AnnualBreakdownList annualBreakdownList = 19;</code>
        */
       public com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.AnnualBreakdownList.Builder getAnnualBreakdownListBuilder() {
 
@@ -3126,7 +3223,7 @@ public final class FixedDepositProto {
       }
 
       /**
-       * <code>.AnnualBreakdownList annualBreakdownList = 18;</code>
+       * <code>.AnnualBreakdownList annualBreakdownList = 19;</code>
        */
       public com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.AnnualBreakdownListOrBuilder getAnnualBreakdownListOrBuilder() {
         if (annualBreakdownListBuilder_ != null) {
@@ -3138,11 +3235,11 @@ public final class FixedDepositProto {
       }
 
       /**
-       * <code>.AnnualBreakdownList annualBreakdownList = 18;</code>
+       * <code>.AnnualBreakdownList annualBreakdownList = 19;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
               com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.AnnualBreakdownList, com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.AnnualBreakdownList.Builder, com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.AnnualBreakdownListOrBuilder>
-          getAnnualBreakdownListFieldBuilder() {
+      getAnnualBreakdownListFieldBuilder() {
         if (annualBreakdownListBuilder_ == null) {
           annualBreakdownListBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
                   com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.AnnualBreakdownList, com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.AnnualBreakdownList.Builder, com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.AnnualBreakdownListOrBuilder>(
@@ -3177,9 +3274,10 @@ public final class FixedDepositProto {
    */
   public static final class FixedDepositList extends
           com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:FixedDepositList)
-      FixedDepositListOrBuilder {
+          // @@protoc_insertion_point(message_implements:FixedDepositList)
+          FixedDepositListOrBuilder {
     public static final int FIXEDDEPOSIT_FIELD_NUMBER = 1;
+
     // Use FixedDepositList.newBuilder() to construct.
     private FixedDepositList(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
@@ -3196,9 +3294,9 @@ public final class FixedDepositProto {
             PARSER = new com.google.protobuf.AbstractParser<FixedDepositList>() {
       @java.lang.Override
       public FixedDepositList parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws com.google.protobuf.InvalidProtocolBufferException {
         return new FixedDepositList(input, extensionRegistry);
       }
     };
@@ -3209,9 +3307,16 @@ public final class FixedDepositProto {
 
     private java.util.List<com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.FixedDeposit> fixedDeposit_;
     private byte memoizedIsInitialized = -1;
+
+    /**
+     * <code>repeated .FixedDeposit FixedDeposit = 1;</code>
+     */
+    public java.util.List<com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.FixedDeposit> getFixedDepositList() {
+      return fixedDeposit_;
+    }
     private FixedDepositList(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       if (extensionRegistry == null) {
@@ -3260,9 +3365,50 @@ public final class FixedDepositProto {
       }
     }
 
+    /**
+     * <code>repeated .FixedDeposit FixedDeposit = 1;</code>
+     */
+    public int getFixedDepositCount() {
+      return fixedDeposit_.size();
+    }
+
+    /**
+     * <code>repeated .FixedDeposit FixedDeposit = 1;</code>
+     */
+    public com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.FixedDeposit getFixedDeposit(int index) {
+      return fixedDeposit_.get(index);
+    }
+
+    /**
+     * <code>repeated .FixedDeposit FixedDeposit = 1;</code>
+     */
+    public com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.FixedDepositOrBuilder getFixedDepositOrBuilder(
+            int index) {
+      return fixedDeposit_.get(index);
+    }
+
     public static final com.google.protobuf.Descriptors.Descriptor
     getDescriptor() {
       return com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.internal_static_FixedDepositList_descriptor;
+    }
+
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+            throws java.io.IOException {
+      for (int i = 0; i < fixedDeposit_.size(); i++) {
+        output.writeMessage(1, fixedDeposit_.get(i));
+      }
+      unknownFields.writeTo(output);
     }
 
     public static com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.FixedDepositList parseFrom(
@@ -3276,6 +3422,22 @@ public final class FixedDepositProto {
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getFixedDepositCount() > 0) {
+        hash = (37 * hash) + FIXEDDEPOSIT_FIELD_NUMBER;
+        hash = (53 * hash) + getFixedDepositList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
     }
 
     public static com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.FixedDepositList parseFrom(
@@ -3297,7 +3459,7 @@ public final class FixedDepositProto {
     }
 
     public static com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.FixedDepositList parseFrom(
-            byte[] data,
+        byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
@@ -3320,15 +3482,15 @@ public final class FixedDepositProto {
     public static com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.FixedDepositList parseDelimitedFrom(java.io.InputStream input)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+              .parseDelimitedWithIOException(PARSER, input);
     }
 
     public static com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.FixedDepositList parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
+            java.io.InputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+              .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
 
     public static com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.FixedDepositList parseFrom(
@@ -3346,12 +3508,38 @@ public final class FixedDepositProto {
               .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+
+    public static Builder newBuilder(com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.FixedDepositList prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() {
+      return newBuilder();
+    }
+
     public static com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.FixedDepositList getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
     public static com.google.protobuf.Parser<FixedDepositList> parser() {
       return PARSER;
+    }
+
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+              ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
     }
 
     @java.lang.Override
@@ -3362,72 +3550,18 @@ public final class FixedDepositProto {
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-    internalGetFieldAccessorTable() {
+        internalGetFieldAccessorTable() {
       return com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.internal_static_FixedDepositList_fieldAccessorTable
-              .ensureFieldAccessorsInitialized(
-                      com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.FixedDepositList.class, com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.FixedDepositList.Builder.class);
-    }
-
-    /**
-     * <code>repeated .FixedDeposit FixedDeposit = 1;</code>
-     */
-    public java.util.List<com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.FixedDeposit> getFixedDepositList() {
-      return fixedDeposit_;
+          .ensureFieldAccessorsInitialized(
+              com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.FixedDepositList.class, com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.FixedDepositList.Builder.class);
     }
 
     /**
      * <code>repeated .FixedDeposit FixedDeposit = 1;</code>
      */
     public java.util.List<? extends com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.FixedDepositOrBuilder>
-    getFixedDepositOrBuilderList() {
+        getFixedDepositOrBuilderList() {
       return fixedDeposit_;
-    }
-
-    /**
-     * <code>repeated .FixedDeposit FixedDeposit = 1;</code>
-     */
-    public int getFixedDepositCount() {
-      return fixedDeposit_.size();
-    }
-
-    /**
-     * <code>repeated .FixedDeposit FixedDeposit = 1;</code>
-     */
-    public com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.FixedDeposit getFixedDeposit(int index) {
-      return fixedDeposit_.get(index);
-    }
-
-    /**
-     * <code>repeated .FixedDeposit FixedDeposit = 1;</code>
-     */
-    public com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.FixedDepositOrBuilder getFixedDepositOrBuilder(
-        int index) {
-      return fixedDeposit_.get(index);
-    }
-
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.FixedDepositList prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      for (int i = 0; i < fixedDeposit_.size(); i++) {
-        output.writeMessage(1, fixedDeposit_.get(i));
-      }
-      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -3438,7 +3572,7 @@ public final class FixedDepositProto {
       size = 0;
       for (int i = 0; i < fixedDeposit_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
-                .computeMessageSize(1, fixedDeposit_.get(i));
+          .computeMessageSize(1, fixedDeposit_.get(i));
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -3448,7 +3582,7 @@ public final class FixedDepositProto {
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
-        return true;
+       return true;
       }
       if (!(obj instanceof com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.FixedDepositList)) {
         return super.equals(obj);
@@ -3460,38 +3594,6 @@ public final class FixedDepositProto {
           .equals(other.getFixedDepositList());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      if (getFixedDepositCount() > 0) {
-        hash = (37 * hash) + FIXEDDEPOSIT_FIELD_NUMBER;
-        hash = (53 * hash) + getFixedDepositList().hashCode();
-      }
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
     }
 
     @java.lang.Override
@@ -3589,14 +3691,28 @@ public final class FixedDepositProto {
       }
 
       @java.lang.Override
-      public Builder clearField(
-              com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
+      public com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.FixedDepositList getDefaultInstanceForType() {
+        return com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.FixedDepositList.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.FixedDepositList getDefaultInstanceForType() {
-        return com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.FixedDepositList.getDefaultInstance();
+      public Builder clearOneof(
+              com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+
+      @java.lang.Override
+      public Builder setRepeatedField(
+              com.google.protobuf.Descriptors.FieldDescriptor field,
+              int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+
+      @java.lang.Override
+      public Builder addRepeatedField(
+              com.google.protobuf.Descriptors.FieldDescriptor field,
+              java.lang.Object value) {
+        return super.addRepeatedField(field, value);
       }
 
       @java.lang.Override
@@ -3610,40 +3726,40 @@ public final class FixedDepositProto {
 
       @java.lang.Override
       public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
+              com.google.protobuf.Descriptors.FieldDescriptor field,
+              java.lang.Object value) {
         return super.setField(field, value);
       }
 
       @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
+      public Builder clearField(
+              com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
       }
 
       @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
+      public Builder mergeFrom(
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws java.io.IOException {
+        com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.FixedDepositList parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.FixedDepositList) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
       }
 
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.FixedDepositList) {
-          return mergeFrom((com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.FixedDepositList) other);
+          return mergeFrom((com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.FixedDepositList)other);
         } else {
           super.mergeFrom(other);
           return this;
@@ -3684,29 +3800,15 @@ public final class FixedDepositProto {
       }
 
       @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.FixedDepositList parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.FixedDepositList) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
+      public final boolean isInitialized() {
+        return true;
       }
 
       private void ensureFixedDepositIsMutable() {
         if (!((bitField0_ & 0x00000001) == 0x00000001)) {
           fixedDeposit_ = new java.util.ArrayList<com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.FixedDeposit>(fixedDeposit_);
           bitField0_ |= 0x00000001;
-        }
+         }
       }
 
       /**
@@ -3719,7 +3821,6 @@ public final class FixedDepositProto {
           return fixedDepositBuilder_.getMessageList();
         }
       }
-
       /**
        * <code>repeated .FixedDeposit FixedDeposit = 1;</code>
        */
@@ -3741,7 +3842,6 @@ public final class FixedDepositProto {
           return fixedDepositBuilder_.getMessage(index);
         }
       }
-
       /**
        * <code>repeated .FixedDeposit FixedDeposit = 1;</code>
        */
@@ -3764,7 +3864,7 @@ public final class FixedDepositProto {
        * <code>repeated .FixedDeposit FixedDeposit = 1;</code>
        */
       public Builder setFixedDeposit(
-              int index, com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.FixedDeposit.Builder builderForValue) {
+          int index, com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.FixedDeposit.Builder builderForValue) {
         if (fixedDepositBuilder_ == null) {
           ensureFixedDepositIsMutable();
           fixedDeposit_.set(index, builderForValue.build());
@@ -3774,6 +3874,7 @@ public final class FixedDepositProto {
         }
         return this;
       }
+
       /**
        * <code>repeated .FixedDeposit FixedDeposit = 1;</code>
        */
@@ -3940,10 +4041,10 @@ public final class FixedDepositProto {
 
       private com.google.protobuf.RepeatedFieldBuilderV3<
               com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.FixedDeposit, com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.FixedDeposit.Builder, com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.FixedDepositOrBuilder>
-      getFixedDepositFieldBuilder() {
+          getFixedDepositFieldBuilder() {
         if (fixedDepositBuilder_ == null) {
           fixedDepositBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-                  com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.FixedDeposit, com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.FixedDeposit.Builder, com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.FixedDepositOrBuilder>(
+              com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.FixedDeposit, com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.FixedDeposit.Builder, com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.FixedDepositOrBuilder>(
                   fixedDeposit_,
                   ((bitField0_ & 0x00000001) == 0x00000001),
                   getParentForChildren(),
@@ -3960,7 +4061,7 @@ public final class FixedDepositProto {
 
       @java.lang.Override
       public final Builder mergeUnknownFields(
-              final com.google.protobuf.UnknownFieldSet unknownFields) {
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
@@ -3986,6 +4087,7 @@ public final class FixedDepositProto {
     private AnnualBreakdown(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
+
     private AnnualBreakdown() {
       startDate_ = "";
       endDate_ = "";
@@ -3994,20 +4096,21 @@ public final class FixedDepositProto {
       expectedAmountAccumulated_ = 0D;
       financialYear_ = "";
     }
+
     public static final int ENDDATE_FIELD_NUMBER = 2;
     public static final int DAYSINBETWEEN_FIELD_NUMBER = 3;
     public static final int EXPECTEDINTERESTGAINED_FIELD_NUMBER = 4;
     public static final int EXPECTEDAMOUNTACCUMULATED_FIELD_NUMBER = 5;
     public static final int FINANCIALYEAR_FIELD_NUMBER = 6;
-  private static final long serialVersionUID = 0L;
+    private static final long serialVersionUID = 0L;
     // @@protoc_insertion_point(class_scope:AnnualBreakdown)
     private static final com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.AnnualBreakdown DEFAULT_INSTANCE;
     private static final com.google.protobuf.Parser<AnnualBreakdown>
-        PARSER = new com.google.protobuf.AbstractParser<AnnualBreakdown>() {
+            PARSER = new com.google.protobuf.AbstractParser<AnnualBreakdown>() {
       @java.lang.Override
       public AnnualBreakdown parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return new AnnualBreakdown(input, extensionRegistry);
       }
@@ -4022,19 +4125,25 @@ public final class FixedDepositProto {
     private long daysInBetween_;
     private double expectedInterestGained_;
     private double expectedAmountAccumulated_;
+    /**
+     * <code>int64 daysInBetween = 3;</code>
+     */
+    public long getDaysInBetween() {
+      return daysInBetween_;
+    }
     private volatile java.lang.Object financialYear_;
     private byte memoizedIsInitialized = -1;
     private AnnualBreakdown(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+        throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
       int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-              com.google.protobuf.UnknownFieldSet.newBuilder();
+          com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -4096,34 +4205,20 @@ public final class FixedDepositProto {
       }
     }
 
-    /**
-     * <code>double expectedInterestGained = 4;</code>
-     */
-    public double getExpectedInterestGained() {
-      return expectedInterestGained_;
-    }
-
     public static final com.google.protobuf.Descriptors.Descriptor
     getDescriptor() {
       return com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.internal_static_AnnualBreakdown_descriptor;
     }
 
     public static com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.AnnualBreakdown parseFrom(
-            java.nio.ByteBuffer data)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
 
-    /**
-     * <code>double expectedAmountAccumulated = 5;</code>
-     */
-    public double getExpectedAmountAccumulated() {
-      return expectedAmountAccumulated_;
-    }
-
     public static com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.AnnualBreakdown parseFrom(
-            java.nio.ByteBuffer data,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
@@ -4147,40 +4242,26 @@ public final class FixedDepositProto {
     }
 
     public static com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.AnnualBreakdown parseFrom(
-            byte[] data,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
 
     public static com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.AnnualBreakdown parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
+            throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+              .parseWithIOException(PARSER, input);
     }
 
     @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!getStartDateBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, startDate_);
-      }
-      if (!getEndDateBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, endDate_);
-      }
-      if (daysInBetween_ != 0L) {
-        output.writeInt64(3, daysInBetween_);
-      }
-      if (expectedInterestGained_ != 0D) {
-        output.writeDouble(4, expectedInterestGained_);
-      }
-      if (expectedAmountAccumulated_ != 0D) {
-        output.writeDouble(5, expectedAmountAccumulated_);
-      }
-      if (!getFinancialYearBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, financialYear_);
-      }
-      unknownFields.writeTo(output);
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
     }
 
     public static com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.AnnualBreakdown parseFrom(
@@ -4192,22 +4273,49 @@ public final class FixedDepositProto {
     }
 
     public static com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.AnnualBreakdown parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
+            throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+              .parseDelimitedWithIOException(PARSER, input);
     }
 
     public static com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.AnnualBreakdown parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
+            java.io.InputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+              .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + STARTDATE_FIELD_NUMBER;
+      hash = (53 * hash) + getStartDate().hashCode();
+      hash = (37 * hash) + ENDDATE_FIELD_NUMBER;
+      hash = (53 * hash) + getEndDate().hashCode();
+      hash = (37 * hash) + DAYSINBETWEEN_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+              getDaysInBetween());
+      hash = (37 * hash) + EXPECTEDINTERESTGAINED_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+              java.lang.Double.doubleToLongBits(getExpectedInterestGained()));
+      hash = (37 * hash) + EXPECTEDAMOUNTACCUMULATED_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+              java.lang.Double.doubleToLongBits(getExpectedAmountAccumulated()));
+      hash = (37 * hash) + FINANCIALYEAR_FIELD_NUMBER;
+      hash = (53 * hash) + getFinancialYear().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
     }
 
     public static com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.AnnualBreakdown parseFrom(
-            com.google.protobuf.CodedInputStream input)
-            throws java.io.IOException {
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseWithIOException(PARSER, input);
     }
@@ -4247,7 +4355,7 @@ public final class FixedDepositProto {
         internalGetFieldAccessorTable() {
       return com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.internal_static_AnnualBreakdown_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-                  com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.AnnualBreakdown.class, com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.AnnualBreakdown.Builder.class);
+              com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.AnnualBreakdown.class, com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.AnnualBreakdown.Builder.class);
     }
 
     /**
@@ -4274,8 +4382,8 @@ public final class FixedDepositProto {
       java.lang.Object ref = startDate_;
       if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b =
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+                com.google.protobuf.ByteString.copyFromUtf8(
+                        (java.lang.String) ref);
         startDate_ = b;
         return b;
       } else {
@@ -4292,7 +4400,7 @@ public final class FixedDepositProto {
         return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
+                (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         endDate_ = s;
         return s;
@@ -4303,12 +4411,12 @@ public final class FixedDepositProto {
      * <code>string endDate = 2;</code>
      */
     public com.google.protobuf.ByteString
-    getEndDateBytes() {
+        getEndDateBytes() {
       java.lang.Object ref = endDate_;
       if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b =
-                com.google.protobuf.ByteString.copyFromUtf8(
-                        (java.lang.String) ref);
+            com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
         endDate_ = b;
         return b;
       } else {
@@ -4316,11 +4424,21 @@ public final class FixedDepositProto {
       }
     }
 
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+
     /**
-     * <code>int64 daysInBetween = 3;</code>
+     * <code>double expectedInterestGained = 4;</code>
      */
-    public long getDaysInBetween() {
-      return daysInBetween_;
+    public double getExpectedInterestGained() {
+      return expectedInterestGained_;
+    }
+
+    /**
+     * <code>double expectedAmountAccumulated = 5;</code>
+     */
+    public double getExpectedAmountAccumulated() {
+      return expectedAmountAccumulated_;
     }
 
     /**
@@ -4356,34 +4474,36 @@ public final class FixedDepositProto {
       if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
-                    (java.lang.String) ref);
+                (java.lang.String) ref);
         financialYear_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
 
     @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+            throws java.io.IOException {
+      if (!getStartDateBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, startDate_);
+      }
+      if (!getEndDateBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, endDate_);
+      }
+      if (daysInBetween_ != 0L) {
+        output.writeInt64(3, daysInBetween_);
+      }
+      if (expectedInterestGained_ != 0D) {
+        output.writeDouble(4, expectedInterestGained_);
+      }
+      if (expectedAmountAccumulated_ != 0D) {
+        output.writeDouble(5, expectedAmountAccumulated_);
+      }
+      if (!getFinancialYearBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, financialYear_);
+      }
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -4421,7 +4541,7 @@ public final class FixedDepositProto {
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
-       return true;
+        return true;
       }
       if (!(obj instanceof com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.AnnualBreakdown)) {
         return super.equals(obj);
@@ -4430,54 +4550,37 @@ public final class FixedDepositProto {
 
       boolean result = true;
       result = result && getStartDate()
-              .equals(other.getStartDate());
+          .equals(other.getStartDate());
       result = result && getEndDate()
-              .equals(other.getEndDate());
+          .equals(other.getEndDate());
       result = result && (getDaysInBetween()
-              == other.getDaysInBetween());
+          == other.getDaysInBetween());
       result = result && (
-              java.lang.Double.doubleToLongBits(getExpectedInterestGained())
-                      == java.lang.Double.doubleToLongBits(
-                      other.getExpectedInterestGained()));
+          java.lang.Double.doubleToLongBits(getExpectedInterestGained())
+          == java.lang.Double.doubleToLongBits(
+              other.getExpectedInterestGained()));
       result = result && (
           java.lang.Double.doubleToLongBits(getExpectedAmountAccumulated())
           == java.lang.Double.doubleToLongBits(
               other.getExpectedAmountAccumulated()));
       result = result && getFinancialYear()
-              .equals(other.getFinancialYear());
+          .equals(other.getFinancialYear());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
 
     @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + STARTDATE_FIELD_NUMBER;
-      hash = (53 * hash) + getStartDate().hashCode();
-      hash = (37 * hash) + ENDDATE_FIELD_NUMBER;
-      hash = (53 * hash) + getEndDate().hashCode();
-      hash = (37 * hash) + DAYSINBETWEEN_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          getDaysInBetween());
-      hash = (37 * hash) + EXPECTEDINTERESTGAINED_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          java.lang.Double.doubleToLongBits(getExpectedInterestGained()));
-      hash = (37 * hash) + EXPECTEDAMOUNTACCUMULATED_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          java.lang.Double.doubleToLongBits(getExpectedAmountAccumulated()));
-      hash = (37 * hash) + FINANCIALYEAR_FIELD_NUMBER;
-      hash = (53 * hash) + getFinancialYear().hashCode();
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
     }
 
     @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
 
     @java.lang.Override
     public com.google.protobuf.Parser<AnnualBreakdown> getParserForType() {
@@ -4543,7 +4646,6 @@ public final class FixedDepositProto {
       public Builder clone() {
         return super.clone();
       }
-
       // Construct using com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.AnnualBreakdown.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
@@ -4592,6 +4694,54 @@ public final class FixedDepositProto {
         return com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.internal_static_AnnualBreakdown_descriptor;
       }
 
+      @java.lang.Override
+      public Builder setField(
+              com.google.protobuf.Descriptors.FieldDescriptor field,
+              java.lang.Object value) {
+        return super.setField(field, value);
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder clearField(
+              com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+
+      @java.lang.Override
+      public Builder clearOneof(
+              com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+
+      @java.lang.Override
+      public Builder setRepeatedField(
+              com.google.protobuf.Descriptors.FieldDescriptor field,
+              int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+
+      @java.lang.Override
+      public Builder addRepeatedField(
+              com.google.protobuf.Descriptors.FieldDescriptor field,
+              java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.AnnualBreakdown) {
+          return mergeFrom((com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.AnnualBreakdown) other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
       public Builder mergeFrom(com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.AnnualBreakdown other) {
         if (other == com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.AnnualBreakdown.getDefaultInstance()) return this;
         if (!other.getStartDate().isEmpty()) {
@@ -4618,54 +4768,6 @@ public final class FixedDepositProto {
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
-      }
-
-      @java.lang.Override
-      public Builder setField(
-              com.google.protobuf.Descriptors.FieldDescriptor field,
-              java.lang.Object value) {
-        return super.setField(field, value);
-      }
-
-      @java.lang.Override
-      public Builder clearField(
-              com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-
-      @java.lang.Override
-      public Builder clearOneof(
-              com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-
-      @java.lang.Override
-      public Builder setRepeatedField(
-              com.google.protobuf.Descriptors.FieldDescriptor field,
-              int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-
-      @java.lang.Override
-      public Builder addRepeatedField(
-              com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.AnnualBreakdown) {
-          return mergeFrom((com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.AnnualBreakdown) other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
       }
 
       @java.lang.Override
@@ -4697,22 +4799,6 @@ public final class FixedDepositProto {
                   (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
           startDate_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-
-      /**
-       * <code>string endDate = 2;</code>
-       */
-      public java.lang.String getEndDate() {
-        java.lang.Object ref = endDate_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-                  (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          endDate_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
@@ -4778,6 +4864,43 @@ public final class FixedDepositProto {
       /**
        * <code>string endDate = 2;</code>
        */
+      public java.lang.String getEndDate() {
+        java.lang.Object ref = endDate_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+                  (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          endDate_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+
+      /**
+       * <code>string endDate = 2;</code>
+       */
+      public Builder setEndDate(
+              java.lang.String value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+
+        endDate_ = value;
+        onChanged();
+        return this;
+      }
+
+      /**
+       * <code>int64 daysInBetween = 3;</code>
+       */
+      public long getDaysInBetween() {
+        return daysInBetween_;
+      }
+
+      /**
+       * <code>string endDate = 2;</code>
+       */
       public com.google.protobuf.ByteString
       getEndDateBytes() {
         java.lang.Object ref = endDate_;
@@ -4810,38 +4933,11 @@ public final class FixedDepositProto {
       /**
        * <code>string endDate = 2;</code>
        */
-      public Builder setEndDate(
-              java.lang.String value) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-
-        endDate_ = value;
-        onChanged();
-        return this;
-      }
-
-      /**
-       * <code>string endDate = 2;</code>
-       */
       public Builder clearEndDate() {
 
         endDate_ = getDefaultInstance().getEndDate();
         onChanged();
         return this;
-      }
-
-      /**
-       * <code>int64 daysInBetween = 3;</code>
-       */
-      public long getDaysInBetween() {
-        return daysInBetween_;
-      }
-      /**
-       * <code>double expectedInterestGained = 4;</code>
-       */
-      public double getExpectedInterestGained() {
-        return expectedInterestGained_;
       }
 
       /**
@@ -4867,18 +4963,18 @@ public final class FixedDepositProto {
       /**
        * <code>double expectedInterestGained = 4;</code>
        */
+      public double getExpectedInterestGained() {
+        return expectedInterestGained_;
+      }
+
+      /**
+       * <code>double expectedInterestGained = 4;</code>
+       */
       public Builder setExpectedInterestGained(double value) {
 
         expectedInterestGained_ = value;
         onChanged();
         return this;
-      }
-
-      /**
-       * <code>double expectedAmountAccumulated = 5;</code>
-       */
-      public double getExpectedAmountAccumulated() {
-        return expectedAmountAccumulated_;
       }
 
       /**
@@ -4889,6 +4985,13 @@ public final class FixedDepositProto {
         expectedInterestGained_ = 0D;
         onChanged();
         return this;
+      }
+
+      /**
+       * <code>double expectedAmountAccumulated = 5;</code>
+       */
+      public double getExpectedAmountAccumulated() {
+        return expectedAmountAccumulated_;
       }
 
       /**
@@ -4941,8 +5044,8 @@ public final class FixedDepositProto {
       public Builder setFinancialYear(
               java.lang.String value) {
         if (value == null) {
-          throw new NullPointerException();
-        }
+    throw new NullPointerException();
+  }
 
         financialYear_ = value;
         onChanged();
@@ -4991,7 +5094,7 @@ public final class FixedDepositProto {
 
       /**
        * <pre>
-       * 2020-2021
+       *2020-2021
        * </pre>
        *
        * <code>string financialYear = 6;</code>
@@ -5005,13 +5108,13 @@ public final class FixedDepositProto {
 
       @java.lang.Override
       public final Builder setUnknownFields(
-              final com.google.protobuf.UnknownFieldSet unknownFields) {
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
       @java.lang.Override
       public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
+              final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
@@ -5038,15 +5141,16 @@ public final class FixedDepositProto {
     private AnnualBreakdownList() {
       annualBreakdown_ = java.util.Collections.emptyList();
     }
-  private static final long serialVersionUID = 0L;
+
+    private static final long serialVersionUID = 0L;
     // @@protoc_insertion_point(class_scope:AnnualBreakdownList)
     private static final com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.AnnualBreakdownList DEFAULT_INSTANCE;
     private static final com.google.protobuf.Parser<AnnualBreakdownList>
         PARSER = new com.google.protobuf.AbstractParser<AnnualBreakdownList>() {
       @java.lang.Override
       public AnnualBreakdownList parsePartialFrom(
-              com.google.protobuf.CodedInputStream input,
-              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return new AnnualBreakdownList(input, extensionRegistry);
       }
@@ -5059,10 +5163,17 @@ public final class FixedDepositProto {
     private java.util.List<com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.AnnualBreakdown> annualBreakdown_;
     private byte memoizedIsInitialized = -1;
 
+    /**
+     * <code>repeated .AnnualBreakdown annualBreakdown = 1;</code>
+     */
+    public java.util.List<com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.AnnualBreakdown> getAnnualBreakdownList() {
+      return annualBreakdown_;
+    }
+
     private AnnualBreakdownList(
             com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
@@ -5115,20 +5226,6 @@ public final class FixedDepositProto {
       return com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.internal_static_AnnualBreakdownList_descriptor;
     }
 
-    /**
-     * <code>repeated .AnnualBreakdown annualBreakdown = 1;</code>
-     */
-    public int getAnnualBreakdownCount() {
-      return annualBreakdown_.size();
-    }
-
-    /**
-     * <code>repeated .AnnualBreakdown annualBreakdown = 1;</code>
-     */
-    public com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.AnnualBreakdown getAnnualBreakdown(int index) {
-      return annualBreakdown_.get(index);
-    }
-
     public static com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.AnnualBreakdownList parseFrom(
             java.nio.ByteBuffer data)
             throws com.google.protobuf.InvalidProtocolBufferException {
@@ -5140,16 +5237,6 @@ public final class FixedDepositProto {
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
     }
 
     public static com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.AnnualBreakdownList parseFrom(
@@ -5177,6 +5264,36 @@ public final class FixedDepositProto {
       return PARSER.parseFrom(data, extensionRegistry);
     }
 
+    public static com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.AnnualBreakdownList parseFrom(java.io.InputStream input)
+            throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input);
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getAnnualBreakdownCount() > 0) {
+        hash = (37 * hash) + ANNUALBREAKDOWN_FIELD_NUMBER;
+        hash = (53 * hash) + getAnnualBreakdownList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.AnnualBreakdownList parseFrom(
+            java.io.InputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
     public static com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.AnnualBreakdownList parseDelimitedFrom(java.io.InputStream input)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
@@ -5184,8 +5301,8 @@ public final class FixedDepositProto {
     }
 
     public static com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.AnnualBreakdownList parseDelimitedFrom(
-            java.io.InputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
@@ -5206,26 +5323,20 @@ public final class FixedDepositProto {
               .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+
+    public static Builder newBuilder(com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.AnnualBreakdownList prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+
     public static com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.AnnualBreakdownList getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
     public static com.google.protobuf.Parser<AnnualBreakdownList> parser() {
       return PARSER;
-    }
-
-    public static com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.AnnualBreakdownList parseFrom(java.io.InputStream input)
-            throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-              .parseWithIOException(PARSER, input);
-    }
-
-    public static com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.AnnualBreakdownList parseFrom(
-            java.io.InputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-              .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
     @java.lang.Override
@@ -5245,16 +5356,23 @@ public final class FixedDepositProto {
     /**
      * <code>repeated .AnnualBreakdown annualBreakdown = 1;</code>
      */
-    public java.util.List<com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.AnnualBreakdown> getAnnualBreakdownList() {
+    public java.util.List<? extends com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.AnnualBreakdownOrBuilder>
+    getAnnualBreakdownOrBuilderList() {
       return annualBreakdown_;
     }
 
     /**
      * <code>repeated .AnnualBreakdown annualBreakdown = 1;</code>
      */
-    public java.util.List<? extends com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.AnnualBreakdownOrBuilder>
-    getAnnualBreakdownOrBuilderList() {
-      return annualBreakdown_;
+    public int getAnnualBreakdownCount() {
+      return annualBreakdown_.size();
+    }
+
+    /**
+     * <code>repeated .AnnualBreakdown annualBreakdown = 1;</code>
+     */
+    public com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.AnnualBreakdown getAnnualBreakdown(int index) {
+      return annualBreakdown_.get(index);
     }
 
     /**
@@ -5265,12 +5383,14 @@ public final class FixedDepositProto {
       return annualBreakdown_.get(index);
     }
 
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
 
-    public static Builder newBuilder(com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.AnnualBreakdownList prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      memoizedIsInitialized = 1;
+      return true;
     }
 
     @java.lang.Override
@@ -5290,7 +5410,7 @@ public final class FixedDepositProto {
       size = 0;
       for (int i = 0; i < annualBreakdown_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
-                .computeMessageSize(1, annualBreakdown_.get(i));
+          .computeMessageSize(1, annualBreakdown_.get(i));
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -5315,35 +5435,17 @@ public final class FixedDepositProto {
     }
 
     @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      if (getAnnualBreakdownCount() > 0) {
-        hash = (37 * hash) + ANNUALBREAKDOWN_FIELD_NUMBER;
-        hash = (53 * hash) + getAnnualBreakdownList().hashCode();
-      }
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() {
-      return newBuilder();
-    }
+    public Builder newBuilderForType() { return newBuilder(); }
 
     @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
-              ? new Builder() : new Builder().mergeFrom(this);
+          ? new Builder() : new Builder().mergeFrom(this);
     }
 
     @java.lang.Override
     protected Builder newBuilderForType(
-            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -5363,7 +5465,7 @@ public final class FixedDepositProto {
      */
     public static final class Builder extends
             com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:AnnualBreakdownList)
+            // @@protoc_insertion_point(builder_implements:AnnualBreakdownList)
         com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.AnnualBreakdownListOrBuilder {
       private int bitField0_;
       private java.util.List<com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.AnnualBreakdown> annualBreakdown_ =
@@ -5394,7 +5496,7 @@ public final class FixedDepositProto {
       }
 
       private Builder(
-              com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -5435,25 +5537,6 @@ public final class FixedDepositProto {
         return super.clone();
       }
 
-      @java.lang.Override
-      public Builder setField(
-              com.google.protobuf.Descriptors.FieldDescriptor field,
-              java.lang.Object value) {
-        return super.setField(field, value);
-      }
-
-      @java.lang.Override
-      public Builder clearField(
-              com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-
-      @java.lang.Override
-      public Builder clearOneof(
-              com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-
       public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
         return com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.internal_static_AnnualBreakdownList_descriptor;
@@ -5475,35 +5558,16 @@ public final class FixedDepositProto {
 
       @java.lang.Override
       public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
+              com.google.protobuf.Descriptors.FieldDescriptor field,
+              int index, java.lang.Object value) {
         return super.setRepeatedField(field, index, value);
       }
 
       @java.lang.Override
       public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
+              com.google.protobuf.Descriptors.FieldDescriptor field,
+              java.lang.Object value) {
         return super.addRepeatedField(field, value);
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.AnnualBreakdownList parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.AnnualBreakdownList) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
       }
 
       @java.lang.Override
@@ -5514,6 +5578,30 @@ public final class FixedDepositProto {
           super.mergeFrom(other);
           return this;
         }
+      }
+
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder clearField(
+              com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+
+      @java.lang.Override
+      public Builder clearOneof(
+              com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
       }
 
       public Builder mergeFrom(com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.AnnualBreakdownList other) {
@@ -5550,8 +5638,22 @@ public final class FixedDepositProto {
       }
 
       @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.AnnualBreakdownList parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.AnnualBreakdownList) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
       }
 
       private void ensureAnnualBreakdownIsMutable() {
@@ -5571,7 +5673,6 @@ public final class FixedDepositProto {
           return annualBreakdownBuilder_.getMessageList();
         }
       }
-
       /**
        * <code>repeated .AnnualBreakdown annualBreakdown = 1;</code>
        */
@@ -5610,6 +5711,7 @@ public final class FixedDepositProto {
         }
         return this;
       }
+
       /**
        * <code>repeated .AnnualBreakdown annualBreakdown = 1;</code>
        */
@@ -5659,6 +5761,7 @@ public final class FixedDepositProto {
         }
         return this;
       }
+
       /**
        * <code>repeated .AnnualBreakdown annualBreakdown = 1;</code>
        */
@@ -5677,7 +5780,7 @@ public final class FixedDepositProto {
        * <code>repeated .AnnualBreakdown annualBreakdown = 1;</code>
        */
       public Builder addAnnualBreakdown(
-              int index, com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.AnnualBreakdown.Builder builderForValue) {
+          int index, com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.AnnualBreakdown.Builder builderForValue) {
         if (annualBreakdownBuilder_ == null) {
           ensureAnnualBreakdownIsMutable();
           annualBreakdown_.add(index, builderForValue.build());
@@ -5687,23 +5790,21 @@ public final class FixedDepositProto {
         }
         return this;
       }
-
       /**
        * <code>repeated .AnnualBreakdown annualBreakdown = 1;</code>
        */
       public Builder addAllAnnualBreakdown(
-              java.lang.Iterable<? extends com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.AnnualBreakdown> values) {
+          java.lang.Iterable<? extends com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.AnnualBreakdown> values) {
         if (annualBreakdownBuilder_ == null) {
           ensureAnnualBreakdownIsMutable();
           com.google.protobuf.AbstractMessageLite.Builder.addAll(
-                  values, annualBreakdown_);
+              values, annualBreakdown_);
           onChanged();
         } else {
           annualBreakdownBuilder_.addAllMessages(values);
         }
         return this;
       }
-
       /**
        * <code>repeated .AnnualBreakdown annualBreakdown = 1;</code>
        */
@@ -5717,7 +5818,6 @@ public final class FixedDepositProto {
         }
         return this;
       }
-
       /**
        * <code>repeated .AnnualBreakdown annualBreakdown = 1;</code>
        */
@@ -5735,9 +5835,10 @@ public final class FixedDepositProto {
        * <code>repeated .AnnualBreakdown annualBreakdown = 1;</code>
        */
       public com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.AnnualBreakdown.Builder getAnnualBreakdownBuilder(
-          int index) {
+              int index) {
         return getAnnualBreakdownFieldBuilder().getBuilder(index);
       }
+
       /**
        * <code>repeated .AnnualBreakdown annualBreakdown = 1;</code>
        */
@@ -5764,7 +5865,7 @@ public final class FixedDepositProto {
        */
       public com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.AnnualBreakdown.Builder addAnnualBreakdownBuilder() {
         return getAnnualBreakdownFieldBuilder().addBuilder(
-                com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.AnnualBreakdown.getDefaultInstance());
+            com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.AnnualBreakdown.getDefaultInstance());
       }
       /**
        * <code>repeated .AnnualBreakdown annualBreakdown = 1;</code>
@@ -5772,7 +5873,7 @@ public final class FixedDepositProto {
       public com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.AnnualBreakdown.Builder addAnnualBreakdownBuilder(
           int index) {
         return getAnnualBreakdownFieldBuilder().addBuilder(
-                index, com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.AnnualBreakdown.getDefaultInstance());
+            index, com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.AnnualBreakdown.getDefaultInstance());
       }
 
       /**
