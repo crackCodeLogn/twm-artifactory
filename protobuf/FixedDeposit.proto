@@ -22,9 +22,10 @@ message FixedDeposit {
   int32 calculatedDays = 15;
 
   bool isFdActive = 16;
-  string originalUser = 17;
+  bool isFdBroken = 17; //means fd broken before maturity date.
+  string originalUser = 18;
 
-  AnnualBreakdownList annualBreakdownList = 18;
+  AnnualBreakdownList annualBreakdownList = 19;
 }
 
 enum InterestType {
