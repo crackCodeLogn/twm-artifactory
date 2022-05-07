@@ -4,21 +4,126 @@
 package com.vv.personal.twm.artifactory.generated.expSim;
 
 public final class ExpenseSimProto {
-  private ExpenseSimProto() {}
-  public static void registerAllExtensions(
-      com.google.protobuf.ExtensionRegistryLite registry) {
+  private ExpenseSimProto() {
   }
 
   public static void registerAllExtensions(
-      com.google.protobuf.ExtensionRegistry registry) {
-    registerAllExtensions(
-        (com.google.protobuf.ExtensionRegistryLite) registry);
+          com.google.protobuf.ExtensionRegistryLite registry) {
   }
+
+  public static void registerAllExtensions(
+          com.google.protobuf.ExtensionRegistry registry) {
+    registerAllExtensions(
+            (com.google.protobuf.ExtensionRegistryLite) registry);
+  }
+
+  static {
+    java.lang.String[] descriptorData = {
+            "\n\020ExpenseSim.proto\"3\n\004Bank\022\014\n\004code\030\001 \001(\t" +
+                    "\022\017\n\007balance\030\002 \001(\001\022\014\n\004date\030\003 \001(\003\"g\n\013Trans" +
+                    "action\022\014\n\004date\030\001 \001(\003\022\014\n\004from\030\002 \001(\t\022\n\n\002to" +
+                    "\030\003 \001(\t\022\013\n\003amt\030\004 \001(\001\022\014\n\004note\030\005 \001(\t\022\025\n\004mod" +
+                    "e\030\006 \001(\0162\007.TxMode\"\257\001\n\tStatement\022\014\n\004date\030\001" +
+                    " \001(\003\022(\n\007bankMap\030\002 \003(\0132\027.Statement.BankMa" +
+                    "pEntry\022\014\n\004note\030\003 \001(\t\022\014\n\004from\030\004 \001(\t\022\n\n\002to" +
+                    "\030\006 \001(\t\022\013\n\003amt\030\007 \001(\001\0325\n\014BankMapEntry\022\013\n\003k" +
+                    "ey\030\001 \001(\t\022\024\n\005value\030\002 \001(\0132\005.Bank:\0028\001\" \n\010Ba" +
+                    "nkList\022\024\n\005banks\030\001 \003(\0132\005.Bank\"5\n\017Transact" +
+                    "ionList\022\"\n\014transactions\030\001 \003(\0132\014.Transact" +
+                    "ion\"/\n\rStatementList\022\036\n\nstatements\030\001 \003(\013" +
+                    "2\n.Statement*L\n\006TxMode\022\005\n\001U\020\000\022\005\n\001Q\020\001\022\005\n\001" +
+                    "C\020\002\022\006\n\002DC\020\003\022\006\n\002CC\020\004\022\005\n\001R\020\005\022\005\n\001I\020\006\022\007\n\003SAL" +
+                    "\020\007\022\006\n\002NB\020\010BC\n0com.vv.personal.twm.artifa" +
+                    "ctory.generated.expSimB\017ExpenseSimProtob" +
+                    "\006proto3"
+    };
+    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
+            new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner() {
+              public com.google.protobuf.ExtensionRegistry assignDescriptors(
+                      com.google.protobuf.Descriptors.FileDescriptor root) {
+                descriptor = root;
+                return null;
+              }
+            };
+    com.google.protobuf.Descriptors.FileDescriptor
+            .internalBuildGeneratedFileFrom(descriptorData,
+                    new com.google.protobuf.Descriptors.FileDescriptor[]{
+                    }, assigner);
+    internal_static_Bank_descriptor =
+            getDescriptor().getMessageTypes().get(0);
+    internal_static_Bank_fieldAccessorTable = new
+            com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+            internal_static_Bank_descriptor,
+            new java.lang.String[]{"Code", "Balance", "Date",});
+    internal_static_Transaction_descriptor =
+            getDescriptor().getMessageTypes().get(1);
+    internal_static_Transaction_fieldAccessorTable = new
+            com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+            internal_static_Transaction_descriptor,
+            new java.lang.String[]{"Date", "From", "To", "Amt", "Note", "Mode",});
+    internal_static_Statement_descriptor =
+            getDescriptor().getMessageTypes().get(2);
+    internal_static_Statement_fieldAccessorTable = new
+            com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+            internal_static_Statement_descriptor,
+            new java.lang.String[]{"Date", "BankMap", "Note", "From", "To", "Amt",});
+    internal_static_Statement_BankMapEntry_descriptor =
+            internal_static_Statement_descriptor.getNestedTypes().get(0);
+    internal_static_Statement_BankMapEntry_fieldAccessorTable = new
+            com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+            internal_static_Statement_BankMapEntry_descriptor,
+            new java.lang.String[]{"Key", "Value",});
+    internal_static_BankList_descriptor =
+            getDescriptor().getMessageTypes().get(3);
+    internal_static_BankList_fieldAccessorTable = new
+            com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+            internal_static_BankList_descriptor,
+            new java.lang.String[]{"Banks",});
+    internal_static_TransactionList_descriptor =
+            getDescriptor().getMessageTypes().get(4);
+    internal_static_TransactionList_fieldAccessorTable = new
+            com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+            internal_static_TransactionList_descriptor,
+            new java.lang.String[]{"Transactions",});
+    internal_static_StatementList_descriptor =
+            getDescriptor().getMessageTypes().get(5);
+    internal_static_StatementList_fieldAccessorTable = new
+            com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+            internal_static_StatementList_descriptor,
+            new java.lang.String[]{"Statements",});
+  }
+
+  public interface BankOrBuilder extends
+          // @@protoc_insertion_point(interface_extends:Bank)
+          com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string code = 1;</code>
+     */
+    java.lang.String getCode();
+
+    /**
+     * <code>string code = 1;</code>
+     */
+    com.google.protobuf.ByteString
+    getCodeBytes();
+
+    /**
+     * <code>double balance = 2;</code>
+     */
+    double getBalance();
+
+    /**
+     * <code>int64 date = 3;</code>
+     */
+    long getDate();
+  }
+
   /**
    * Protobuf enum {@code TxMode}
    */
   public enum TxMode
-      implements com.google.protobuf.ProtocolMessageEnum {
+          implements com.google.protobuf.ProtocolMessageEnum {
     /**
      * <code>U = 0;</code>
      */
@@ -51,6 +156,10 @@ public final class ExpenseSimProto {
      * <code>SAL = 7;</code>
      */
     SAL(7),
+    /**
+     * <code>NB = 8;</code>
+     */
+    NB(8),
     UNRECOGNIZED(-1),
     ;
 
@@ -86,12 +195,16 @@ public final class ExpenseSimProto {
      * <code>SAL = 7;</code>
      */
     public static final int SAL_VALUE = 7;
+    /**
+     * <code>NB = 8;</code>
+     */
+    public static final int NB_VALUE = 8;
 
 
     public final int getNumber() {
       if (this == UNRECOGNIZED) {
         throw new java.lang.IllegalArgumentException(
-            "Can't get the number of an unknown enum value.");
+                "Can't get the number of an unknown enum value.");
       }
       return value;
     }
@@ -104,27 +217,18 @@ public final class ExpenseSimProto {
       return forNumber(value);
     }
 
-    public static TxMode forNumber(int value) {
-      switch (value) {
-        case 0: return U;
-        case 1: return Q;
-        case 2: return C;
-        case 3: return DC;
-        case 4: return CC;
-        case 5: return R;
-        case 6: return I;
-        case 7: return SAL;
-        default: return null;
-      }
+    TxMode(int value) {
+      this.value = value;
     }
 
     public static com.google.protobuf.Internal.EnumLiteMap<TxMode>
-        internalGetValueMap() {
+    internalGetValueMap() {
       return internalValueMap;
     }
+
     private static final com.google.protobuf.Internal.EnumLiteMap<
-        TxMode> internalValueMap =
-          new com.google.protobuf.Internal.EnumLiteMap<TxMode>() {
+            TxMode> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<TxMode>() {
             public TxMode findValueByNumber(int number) {
               return TxMode.forNumber(number);
             }
@@ -149,7 +253,7 @@ public final class ExpenseSimProto {
         com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
       if (desc.getType() != getDescriptor()) {
         throw new java.lang.IllegalArgumentException(
-          "EnumValueDescriptor is not for this type.");
+                "EnumValueDescriptor is not for this type.");
       }
       if (desc.getIndex() == -1) {
         return UNRECOGNIZED;
@@ -159,37 +263,108 @@ public final class ExpenseSimProto {
 
     private final int value;
 
-    private TxMode(int value) {
-      this.value = value;
+    public static TxMode forNumber(int value) {
+      switch (value) {
+        case 0:
+          return U;
+        case 1:
+          return Q;
+        case 2:
+          return C;
+        case 3:
+          return DC;
+        case 4:
+          return CC;
+        case 5:
+          return R;
+        case 6:
+          return I;
+        case 7:
+          return SAL;
+        case 8:
+          return NB;
+        default:
+          return null;
+      }
     }
 
     // @@protoc_insertion_point(enum_scope:TxMode)
   }
 
-  public interface BankOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:Bank)
-      com.google.protobuf.MessageOrBuilder {
+  public interface TransactionOrBuilder extends
+          // @@protoc_insertion_point(interface_extends:Transaction)
+          com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string code = 1;</code>
-     */
-    java.lang.String getCode();
-    /**
-     * <code>string code = 1;</code>
-     */
-    com.google.protobuf.ByteString
-        getCodeBytes();
-
-    /**
-     * <code>double balance = 2;</code>
-     */
-    double getBalance();
-
-    /**
-     * <code>int64 date = 3;</code>
+     * <code>int64 date = 1;</code>
      */
     long getDate();
+
+    /**
+     * <pre>
+     * from-bank-code
+     * </pre>
+     *
+     * <code>string from = 2;</code>
+     */
+    java.lang.String getFrom();
+
+    /**
+     * <pre>
+     * from-bank-code
+     * </pre>
+     *
+     * <code>string from = 2;</code>
+     */
+    com.google.protobuf.ByteString
+    getFromBytes();
+
+    /**
+     * <pre>
+     * to-bank-code
+     * </pre>
+     *
+     * <code>string to = 3;</code>
+     */
+    java.lang.String getTo();
+
+    /**
+     * <pre>
+     * to-bank-code
+     * </pre>
+     *
+     * <code>string to = 3;</code>
+     */
+    com.google.protobuf.ByteString
+    getToBytes();
+
+    /**
+     * <code>double amt = 4;</code>
+     */
+    double getAmt();
+
+    /**
+     * <code>string note = 5;</code>
+     */
+    java.lang.String getNote();
+
+    /**
+     * <code>string note = 5;</code>
+     */
+    com.google.protobuf.ByteString
+    getNoteBytes();
+
+    /**
+     * <code>.TxMode mode = 6;</code>
+     */
+    int getModeValue();
+
+    /**
+     * <code>.TxMode mode = 6;</code>
+     */
+    com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.TxMode getMode();
   }
+
   /**
    * Protobuf type {@code Bank}
    */
@@ -282,6 +457,7 @@ public final class ExpenseSimProto {
 
     public static final int CODE_FIELD_NUMBER = 1;
     private volatile java.lang.Object code_;
+
     /**
      * <code>string code = 1;</code>
      */
@@ -290,13 +466,14 @@ public final class ExpenseSimProto {
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         code_ = s;
         return s;
       }
     }
+
     /**
      * <code>string code = 1;</code>
      */
@@ -304,7 +481,7 @@ public final class ExpenseSimProto {
         getCodeBytes() {
       java.lang.Object ref = code_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         code_ = b;
@@ -592,35 +769,35 @@ public final class ExpenseSimProto {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+              com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+              com.google.protobuf.Descriptors.FieldDescriptor field,
+              int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -689,6 +866,7 @@ public final class ExpenseSimProto {
           return (java.lang.String) ref;
         }
       }
+
       /**
        * <code>string code = 1;</code>
        */
@@ -696,7 +874,7 @@ public final class ExpenseSimProto {
           getCodeBytes() {
         java.lang.Object ref = code_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           code_ = b;
@@ -713,7 +891,7 @@ public final class ExpenseSimProto {
         if (value == null) {
     throw new NullPointerException();
   }
-  
+
         code_ = value;
         onChanged();
         return this;
@@ -722,7 +900,7 @@ public final class ExpenseSimProto {
        * <code>string code = 1;</code>
        */
       public Builder clearCode() {
-        
+
         code_ = getDefaultInstance().getCode();
         onChanged();
         return this;
@@ -736,7 +914,7 @@ public final class ExpenseSimProto {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
-        
+
         code_ = value;
         onChanged();
         return this;
@@ -753,7 +931,7 @@ public final class ExpenseSimProto {
        * <code>double balance = 2;</code>
        */
       public Builder setBalance(double value) {
-        
+
         balance_ = value;
         onChanged();
         return this;
@@ -762,7 +940,7 @@ public final class ExpenseSimProto {
        * <code>double balance = 2;</code>
        */
       public Builder clearBalance() {
-        
+
         balance_ = 0D;
         onChanged();
         return this;
@@ -779,7 +957,7 @@ public final class ExpenseSimProto {
        * <code>int64 date = 3;</code>
        */
       public Builder setDate(long value) {
-        
+
         date_ = value;
         onChanged();
         return this;
@@ -788,7 +966,7 @@ public final class ExpenseSimProto {
        * <code>int64 date = 3;</code>
        */
       public Builder clearDate() {
-        
+
         date_ = 0L;
         onChanged();
         return this;
@@ -846,9 +1024,9 @@ public final class ExpenseSimProto {
 
   }
 
-  public interface TransactionOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:Transaction)
-      com.google.protobuf.MessageOrBuilder {
+  public interface StatementOrBuilder extends
+          // @@protoc_insertion_point(interface_extends:Statement)
+          com.google.protobuf.MessageOrBuilder {
 
     /**
      * <code>int64 date = 1;</code>
@@ -856,65 +1034,82 @@ public final class ExpenseSimProto {
     long getDate();
 
     /**
-     * <pre>
-     * from-bank-code
-     * </pre>
-     *
-     * <code>string from = 2;</code>
+     * <code>map&lt;string, .Bank&gt; bankMap = 2;</code>
+     */
+    int getBankMapCount();
+
+    /**
+     * <code>map&lt;string, .Bank&gt; bankMap = 2;</code>
+     */
+    boolean containsBankMap(
+            java.lang.String key);
+
+    /**
+     * Use {@link #getBankMapMap()} instead.
+     */
+    @java.lang.Deprecated
+    java.util.Map<java.lang.String, com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.Bank>
+    getBankMap();
+
+    /**
+     * <code>map&lt;string, .Bank&gt; bankMap = 2;</code>
+     */
+    java.util.Map<java.lang.String, com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.Bank>
+    getBankMapMap();
+
+    /**
+     * <code>map&lt;string, .Bank&gt; bankMap = 2;</code>
+     */
+
+    com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.Bank getBankMapOrDefault(
+            java.lang.String key,
+            com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.Bank defaultValue);
+
+    /**
+     * <code>map&lt;string, .Bank&gt; bankMap = 2;</code>
+     */
+
+    com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.Bank getBankMapOrThrow(
+            java.lang.String key);
+
+    /**
+     * <code>string note = 3;</code>
+     */
+    java.lang.String getNote();
+
+    /**
+     * <code>string note = 3;</code>
+     */
+    com.google.protobuf.ByteString
+    getNoteBytes();
+
+    /**
+     * <code>string from = 4;</code>
      */
     java.lang.String getFrom();
+
     /**
-     * <pre>
-     * from-bank-code
-     * </pre>
-     *
-     * <code>string from = 2;</code>
+     * <code>string from = 4;</code>
      */
     com.google.protobuf.ByteString
         getFromBytes();
 
     /**
-     * <pre>
-     * to-bank-code
-     * </pre>
-     *
-     * <code>string to = 3;</code>
+     * <code>string to = 6;</code>
      */
     java.lang.String getTo();
     /**
-     * <pre>
-     * to-bank-code
-     * </pre>
-     *
-     * <code>string to = 3;</code>
+     * <code>string to = 6;</code>
      */
     com.google.protobuf.ByteString
         getToBytes();
 
     /**
-     * <code>double amt = 4;</code>
+     * <code>double amt = 7;</code>
      */
     double getAmt();
-
-    /**
-     * <code>string note = 5;</code>
-     */
-    java.lang.String getNote();
-    /**
-     * <code>string note = 5;</code>
-     */
-    com.google.protobuf.ByteString
-        getNoteBytes();
-
-    /**
-     * <code>.TxMode mode = 6;</code>
-     */
-    int getModeValue();
-    /**
-     * <code>.TxMode mode = 6;</code>
-     */
-    com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.TxMode getMode();
   }
+
   /**
    * Protobuf type {@code Transaction}
    */
@@ -1037,6 +1232,7 @@ public final class ExpenseSimProto {
 
     public static final int FROM_FIELD_NUMBER = 2;
     private volatile java.lang.Object from_;
+
     /**
      * <pre>
      * from-bank-code
@@ -1049,13 +1245,14 @@ public final class ExpenseSimProto {
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         from_ = s;
         return s;
       }
     }
+
     /**
      * <pre>
      * from-bank-code
@@ -1067,7 +1264,7 @@ public final class ExpenseSimProto {
         getFromBytes() {
       java.lang.Object ref = from_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         from_ = b;
@@ -1079,6 +1276,7 @@ public final class ExpenseSimProto {
 
     public static final int TO_FIELD_NUMBER = 3;
     private volatile java.lang.Object to_;
+
     /**
      * <pre>
      * to-bank-code
@@ -1091,13 +1289,14 @@ public final class ExpenseSimProto {
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         to_ = s;
         return s;
       }
     }
+
     /**
      * <pre>
      * to-bank-code
@@ -1109,7 +1308,7 @@ public final class ExpenseSimProto {
         getToBytes() {
       java.lang.Object ref = to_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         to_ = b;
@@ -1130,6 +1329,7 @@ public final class ExpenseSimProto {
 
     public static final int NOTE_FIELD_NUMBER = 5;
     private volatile java.lang.Object note_;
+
     /**
      * <code>string note = 5;</code>
      */
@@ -1138,8 +1338,8 @@ public final class ExpenseSimProto {
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
+        com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         note_ = s;
         return s;
@@ -1152,7 +1352,7 @@ public final class ExpenseSimProto {
         getNoteBytes() {
       java.lang.Object ref = note_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         note_ = b;
@@ -1478,35 +1678,36 @@ public final class ExpenseSimProto {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
+
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+              com.google.protobuf.Descriptors.FieldDescriptor field,
+              int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1581,7 +1782,7 @@ public final class ExpenseSimProto {
        * <code>int64 date = 1;</code>
        */
       public Builder setDate(long value) {
-        
+
         date_ = value;
         onChanged();
         return this;
@@ -1590,7 +1791,7 @@ public final class ExpenseSimProto {
        * <code>int64 date = 1;</code>
        */
       public Builder clearDate() {
-        
+
         date_ = 0L;
         onChanged();
         return this;
@@ -1616,6 +1817,7 @@ public final class ExpenseSimProto {
           return (java.lang.String) ref;
         }
       }
+
       /**
        * <pre>
        * from-bank-code
@@ -1627,7 +1829,7 @@ public final class ExpenseSimProto {
           getFromBytes() {
         java.lang.Object ref = from_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           from_ = b;
@@ -1648,7 +1850,7 @@ public final class ExpenseSimProto {
         if (value == null) {
     throw new NullPointerException();
   }
-  
+
         from_ = value;
         onChanged();
         return this;
@@ -1661,7 +1863,7 @@ public final class ExpenseSimProto {
        * <code>string from = 2;</code>
        */
       public Builder clearFrom() {
-        
+
         from_ = getDefaultInstance().getFrom();
         onChanged();
         return this;
@@ -1679,7 +1881,7 @@ public final class ExpenseSimProto {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
-        
+
         from_ = value;
         onChanged();
         return this;
@@ -1705,6 +1907,7 @@ public final class ExpenseSimProto {
           return (java.lang.String) ref;
         }
       }
+
       /**
        * <pre>
        * to-bank-code
@@ -1716,7 +1919,7 @@ public final class ExpenseSimProto {
           getToBytes() {
         java.lang.Object ref = to_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           to_ = b;
@@ -1737,7 +1940,7 @@ public final class ExpenseSimProto {
         if (value == null) {
     throw new NullPointerException();
   }
-  
+
         to_ = value;
         onChanged();
         return this;
@@ -1750,7 +1953,7 @@ public final class ExpenseSimProto {
        * <code>string to = 3;</code>
        */
       public Builder clearTo() {
-        
+
         to_ = getDefaultInstance().getTo();
         onChanged();
         return this;
@@ -1768,7 +1971,7 @@ public final class ExpenseSimProto {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
-        
+
         to_ = value;
         onChanged();
         return this;
@@ -1785,7 +1988,7 @@ public final class ExpenseSimProto {
        * <code>double amt = 4;</code>
        */
       public Builder setAmt(double value) {
-        
+
         amt_ = value;
         onChanged();
         return this;
@@ -1794,7 +1997,7 @@ public final class ExpenseSimProto {
        * <code>double amt = 4;</code>
        */
       public Builder clearAmt() {
-        
+
         amt_ = 0D;
         onChanged();
         return this;
@@ -1823,7 +2026,7 @@ public final class ExpenseSimProto {
           getNoteBytes() {
         java.lang.Object ref = note_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           note_ = b;
@@ -1840,7 +2043,7 @@ public final class ExpenseSimProto {
         if (value == null) {
     throw new NullPointerException();
   }
-  
+
         note_ = value;
         onChanged();
         return this;
@@ -1849,7 +2052,7 @@ public final class ExpenseSimProto {
        * <code>string note = 5;</code>
        */
       public Builder clearNote() {
-        
+
         note_ = getDefaultInstance().getNote();
         onChanged();
         return this;
@@ -1863,7 +2066,7 @@ public final class ExpenseSimProto {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
-        
+
         note_ = value;
         onChanged();
         return this;
@@ -1899,7 +2102,7 @@ public final class ExpenseSimProto {
         if (value == null) {
           throw new NullPointerException();
         }
-        
+
         mode_ = value.getNumber();
         onChanged();
         return this;
@@ -1908,7 +2111,7 @@ public final class ExpenseSimProto {
        * <code>.TxMode mode = 6;</code>
        */
       public Builder clearMode() {
-        
+
         mode_ = 0;
         onChanged();
         return this;
@@ -1945,7 +2148,7 @@ public final class ExpenseSimProto {
       public Transaction parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+              throws com.google.protobuf.InvalidProtocolBufferException {
         return new Transaction(input, extensionRegistry);
       }
     };
@@ -1966,84 +2169,38 @@ public final class ExpenseSimProto {
 
   }
 
-  public interface StatementOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:Statement)
-      com.google.protobuf.MessageOrBuilder {
+  public interface BankListOrBuilder extends
+          // @@protoc_insertion_point(interface_extends:BankList)
+          com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>int64 date = 1;</code>
+     * <code>repeated .Bank banks = 1;</code>
      */
-    long getDate();
+    java.util.List<com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.Bank>
+    getBanksList();
 
     /**
-     * <code>map&lt;string, .Bank&gt; bankMap = 2;</code>
+     * <code>repeated .Bank banks = 1;</code>
      */
-    int getBankMapCount();
-    /**
-     * <code>map&lt;string, .Bank&gt; bankMap = 2;</code>
-     */
-    boolean containsBankMap(
-        java.lang.String key);
-    /**
-     * Use {@link #getBankMapMap()} instead.
-     */
-    @java.lang.Deprecated
-    java.util.Map<java.lang.String, com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.Bank>
-    getBankMap();
-    /**
-     * <code>map&lt;string, .Bank&gt; bankMap = 2;</code>
-     */
-    java.util.Map<java.lang.String, com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.Bank>
-    getBankMapMap();
-    /**
-     * <code>map&lt;string, .Bank&gt; bankMap = 2;</code>
-     */
-
-    com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.Bank getBankMapOrDefault(
-        java.lang.String key,
-        com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.Bank defaultValue);
-    /**
-     * <code>map&lt;string, .Bank&gt; bankMap = 2;</code>
-     */
-
-    com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.Bank getBankMapOrThrow(
-        java.lang.String key);
+    com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.Bank getBanks(int index);
 
     /**
-     * <code>string note = 3;</code>
+     * <code>repeated .Bank banks = 1;</code>
      */
-    java.lang.String getNote();
-    /**
-     * <code>string note = 3;</code>
-     */
-    com.google.protobuf.ByteString
-        getNoteBytes();
+    int getBanksCount();
 
     /**
-     * <code>string from = 4;</code>
+     * <code>repeated .Bank banks = 1;</code>
      */
-    java.lang.String getFrom();
+    java.util.List<? extends com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.BankOrBuilder> 
+        getBanksOrBuilderList();
     /**
-     * <code>string from = 4;</code>
+     * <code>repeated .Bank banks = 1;</code>
      */
-    com.google.protobuf.ByteString
-        getFromBytes();
-
-    /**
-     * <code>string to = 6;</code>
-     */
-    java.lang.String getTo();
-    /**
-     * <code>string to = 6;</code>
-     */
-    com.google.protobuf.ByteString
-        getToBytes();
-
-    /**
-     * <code>double amt = 7;</code>
-     */
-    double getAmt();
+    com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.BankOrBuilder getBanksOrBuilder(
+        int index);
   }
+
   /**
    * Protobuf type {@code Statement}
    */
@@ -2184,12 +2341,13 @@ public final class ExpenseSimProto {
     }
 
     public static final int BANKMAP_FIELD_NUMBER = 2;
+
     private static final class BankMapDefaultEntryHolder {
       static final com.google.protobuf.MapEntry<
-          java.lang.String, com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.Bank> defaultEntry =
+              java.lang.String, com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.Bank> defaultEntry =
               com.google.protobuf.MapEntry
-              .<java.lang.String, com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.Bank>newDefaultInstance(
-                  com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.internal_static_Statement_BankMapEntry_descriptor, 
+                      .newDefaultInstance(
+                              com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.internal_static_Statement_BankMapEntry_descriptor,
                   com.google.protobuf.WireFormat.FieldType.STRING,
                   "",
                   com.google.protobuf.WireFormat.FieldType.MESSAGE,
@@ -2269,8 +2427,8 @@ public final class ExpenseSimProto {
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
+        com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         note_ = s;
         return s;
@@ -2283,7 +2441,7 @@ public final class ExpenseSimProto {
         getNoteBytes() {
       java.lang.Object ref = note_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         note_ = b;
@@ -2303,8 +2461,8 @@ public final class ExpenseSimProto {
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
+        com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         from_ = s;
         return s;
@@ -2317,7 +2475,7 @@ public final class ExpenseSimProto {
         getFromBytes() {
       java.lang.Object ref = from_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         from_ = b;
@@ -2337,8 +2495,8 @@ public final class ExpenseSimProto {
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
+        com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         to_ = s;
         return s;
@@ -2351,7 +2509,7 @@ public final class ExpenseSimProto {
         getToBytes() {
       java.lang.Object ref = to_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         to_ = b;
@@ -2706,35 +2864,37 @@ public final class ExpenseSimProto {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
+
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
+
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
+              com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -2809,7 +2969,7 @@ public final class ExpenseSimProto {
        * <code>int64 date = 1;</code>
        */
       public Builder setDate(long value) {
-        
+
         date_ = value;
         onChanged();
         return this;
@@ -2818,7 +2978,7 @@ public final class ExpenseSimProto {
        * <code>int64 date = 1;</code>
        */
       public Builder clearDate() {
-        
+
         date_ = 0L;
         onChanged();
         return this;
@@ -2836,7 +2996,7 @@ public final class ExpenseSimProto {
       }
       private com.google.protobuf.MapField<java.lang.String, com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.Bank>
       internalGetMutableBankMap() {
-        onChanged();;
+        onChanged();
         if (bankMap_ == null) {
           bankMap_ = com.google.protobuf.MapField.newMapField(
               BankMapDefaultEntryHolder.defaultEntry);
@@ -2970,7 +3130,7 @@ public final class ExpenseSimProto {
           getNoteBytes() {
         java.lang.Object ref = note_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           note_ = b;
@@ -2987,7 +3147,7 @@ public final class ExpenseSimProto {
         if (value == null) {
     throw new NullPointerException();
   }
-  
+
         note_ = value;
         onChanged();
         return this;
@@ -2996,7 +3156,7 @@ public final class ExpenseSimProto {
        * <code>string note = 3;</code>
        */
       public Builder clearNote() {
-        
+
         note_ = getDefaultInstance().getNote();
         onChanged();
         return this;
@@ -3010,7 +3170,7 @@ public final class ExpenseSimProto {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
-        
+
         note_ = value;
         onChanged();
         return this;
@@ -3039,7 +3199,7 @@ public final class ExpenseSimProto {
           getFromBytes() {
         java.lang.Object ref = from_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           from_ = b;
@@ -3056,7 +3216,7 @@ public final class ExpenseSimProto {
         if (value == null) {
     throw new NullPointerException();
   }
-  
+
         from_ = value;
         onChanged();
         return this;
@@ -3065,7 +3225,7 @@ public final class ExpenseSimProto {
        * <code>string from = 4;</code>
        */
       public Builder clearFrom() {
-        
+
         from_ = getDefaultInstance().getFrom();
         onChanged();
         return this;
@@ -3079,7 +3239,7 @@ public final class ExpenseSimProto {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
-        
+
         from_ = value;
         onChanged();
         return this;
@@ -3108,7 +3268,7 @@ public final class ExpenseSimProto {
           getToBytes() {
         java.lang.Object ref = to_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           to_ = b;
@@ -3125,7 +3285,7 @@ public final class ExpenseSimProto {
         if (value == null) {
     throw new NullPointerException();
   }
-  
+
         to_ = value;
         onChanged();
         return this;
@@ -3134,7 +3294,7 @@ public final class ExpenseSimProto {
        * <code>string to = 6;</code>
        */
       public Builder clearTo() {
-        
+
         to_ = getDefaultInstance().getTo();
         onChanged();
         return this;
@@ -3148,7 +3308,7 @@ public final class ExpenseSimProto {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
-        
+
         to_ = value;
         onChanged();
         return this;
@@ -3165,7 +3325,7 @@ public final class ExpenseSimProto {
        * <code>double amt = 7;</code>
        */
       public Builder setAmt(double value) {
-        
+
         amt_ = value;
         onChanged();
         return this;
@@ -3174,7 +3334,7 @@ public final class ExpenseSimProto {
        * <code>double amt = 7;</code>
        */
       public Builder clearAmt() {
-        
+
         amt_ = 0D;
         onChanged();
         return this;
@@ -3211,7 +3371,7 @@ public final class ExpenseSimProto {
       public Statement parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+              throws com.google.protobuf.InvalidProtocolBufferException {
         return new Statement(input, extensionRegistry);
       }
     };
@@ -3232,34 +3392,39 @@ public final class ExpenseSimProto {
 
   }
 
-  public interface BankListOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:BankList)
-      com.google.protobuf.MessageOrBuilder {
+  public interface TransactionListOrBuilder extends
+          // @@protoc_insertion_point(interface_extends:TransactionList)
+          com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>repeated .Bank banks = 1;</code>
+     * <code>repeated .Transaction transactions = 1;</code>
      */
-    java.util.List<com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.Bank> 
-        getBanksList();
+    java.util.List<com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.Transaction>
+    getTransactionsList();
+
     /**
-     * <code>repeated .Bank banks = 1;</code>
+     * <code>repeated .Transaction transactions = 1;</code>
      */
-    com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.Bank getBanks(int index);
+    com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.Transaction getTransactions(int index);
+
     /**
-     * <code>repeated .Bank banks = 1;</code>
+     * <code>repeated .Transaction transactions = 1;</code>
      */
-    int getBanksCount();
+    int getTransactionsCount();
+
     /**
-     * <code>repeated .Bank banks = 1;</code>
+     * <code>repeated .Transaction transactions = 1;</code>
      */
-    java.util.List<? extends com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.BankOrBuilder> 
-        getBanksOrBuilderList();
+    java.util.List<? extends com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.TransactionOrBuilder>
+    getTransactionsOrBuilderList();
+
     /**
-     * <code>repeated .Bank banks = 1;</code>
+     * <code>repeated .Transaction transactions = 1;</code>
      */
-    com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.BankOrBuilder getBanksOrBuilder(
-        int index);
+    com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.TransactionOrBuilder getTransactionsOrBuilder(
+            int index);
   }
+
   /**
    * Protobuf type {@code BankList}
    */
@@ -3340,31 +3505,35 @@ public final class ExpenseSimProto {
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.internal_static_BankList_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.BankList.class, com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.BankList.Builder.class);
+              .ensureFieldAccessorsInitialized(
+                      com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.BankList.class, com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.BankList.Builder.class);
     }
 
     public static final int BANKS_FIELD_NUMBER = 1;
     private java.util.List<com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.Bank> banks_;
+
     /**
      * <code>repeated .Bank banks = 1;</code>
      */
     public java.util.List<com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.Bank> getBanksList() {
       return banks_;
     }
+
     /**
      * <code>repeated .Bank banks = 1;</code>
      */
-    public java.util.List<? extends com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.BankOrBuilder> 
-        getBanksOrBuilderList() {
+    public java.util.List<? extends com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.BankOrBuilder>
+    getBanksOrBuilderList() {
       return banks_;
     }
+
     /**
      * <code>repeated .Bank banks = 1;</code>
      */
     public int getBanksCount() {
       return banks_.size();
     }
+
     /**
      * <code>repeated .Bank banks = 1;</code>
      */
@@ -3624,35 +3793,36 @@ public final class ExpenseSimProto {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
+
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -3684,9 +3854,9 @@ public final class ExpenseSimProto {
               banksBuilder_ = null;
               banks_ = other.banks_;
               bitField0_ = (bitField0_ & ~0x00000001);
-              banksBuilder_ = 
-                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                   getBanksFieldBuilder() : null;
+              banksBuilder_ =
+                      com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                              getBanksFieldBuilder() : null;
             } else {
               banksBuilder_.addAllMessages(other.banks_);
             }
@@ -3897,62 +4067,70 @@ public final class ExpenseSimProto {
         }
         return this;
       }
+
       /**
        * <code>repeated .Bank banks = 1;</code>
        */
       public com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.Bank.Builder getBanksBuilder(
-          int index) {
+              int index) {
         return getBanksFieldBuilder().getBuilder(index);
       }
+
       /**
        * <code>repeated .Bank banks = 1;</code>
        */
       public com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.BankOrBuilder getBanksOrBuilder(
-          int index) {
+              int index) {
         if (banksBuilder_ == null) {
-          return banks_.get(index);  } else {
+          return banks_.get(index);
+        } else {
           return banksBuilder_.getMessageOrBuilder(index);
         }
       }
+
       /**
        * <code>repeated .Bank banks = 1;</code>
        */
-      public java.util.List<? extends com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.BankOrBuilder> 
-           getBanksOrBuilderList() {
+      public java.util.List<? extends com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.BankOrBuilder>
+      getBanksOrBuilderList() {
         if (banksBuilder_ != null) {
           return banksBuilder_.getMessageOrBuilderList();
         } else {
           return java.util.Collections.unmodifiableList(banks_);
         }
       }
+
       /**
        * <code>repeated .Bank banks = 1;</code>
        */
       public com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.Bank.Builder addBanksBuilder() {
         return getBanksFieldBuilder().addBuilder(
-            com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.Bank.getDefaultInstance());
+                com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.Bank.getDefaultInstance());
       }
+
       /**
        * <code>repeated .Bank banks = 1;</code>
        */
       public com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.Bank.Builder addBanksBuilder(
-          int index) {
+              int index) {
         return getBanksFieldBuilder().addBuilder(
-            index, com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.Bank.getDefaultInstance());
+                index, com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.Bank.getDefaultInstance());
       }
+
       /**
        * <code>repeated .Bank banks = 1;</code>
        */
-      public java.util.List<com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.Bank.Builder> 
-           getBanksBuilderList() {
+      public java.util.List<com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.Bank.Builder>
+      getBanksBuilderList() {
         return getBanksFieldBuilder().getBuilderList();
       }
+
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.Bank, com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.Bank.Builder, com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.BankOrBuilder> 
-          getBanksFieldBuilder() {
+              com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.Bank, com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.Bank.Builder, com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.BankOrBuilder>
+      getBanksFieldBuilder() {
         if (banksBuilder_ == null) {
           banksBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.Bank, com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.Bank.Builder, com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.BankOrBuilder>(
+                  com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.Bank, com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.Bank.Builder, com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.BankOrBuilder>(
                   banks_,
                   ((bitField0_ & 0x00000001) == 0x00000001),
                   getParentForChildren(),
@@ -3991,9 +4169,9 @@ public final class ExpenseSimProto {
         PARSER = new com.google.protobuf.AbstractParser<BankList>() {
       @java.lang.Override
       public BankList parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws com.google.protobuf.InvalidProtocolBufferException {
         return new BankList(input, extensionRegistry);
       }
     };
@@ -4014,34 +4192,39 @@ public final class ExpenseSimProto {
 
   }
 
-  public interface TransactionListOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:TransactionList)
-      com.google.protobuf.MessageOrBuilder {
+  public interface StatementListOrBuilder extends
+          // @@protoc_insertion_point(interface_extends:StatementList)
+          com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>repeated .Transaction transactions = 1;</code>
+     * <code>repeated .Statement statements = 1;</code>
      */
-    java.util.List<com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.Transaction> 
-        getTransactionsList();
+    java.util.List<com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.Statement>
+    getStatementsList();
+
     /**
-     * <code>repeated .Transaction transactions = 1;</code>
+     * <code>repeated .Statement statements = 1;</code>
      */
-    com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.Transaction getTransactions(int index);
+    com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.Statement getStatements(int index);
+
     /**
-     * <code>repeated .Transaction transactions = 1;</code>
+     * <code>repeated .Statement statements = 1;</code>
      */
-    int getTransactionsCount();
+    int getStatementsCount();
+
     /**
-     * <code>repeated .Transaction transactions = 1;</code>
+     * <code>repeated .Statement statements = 1;</code>
      */
-    java.util.List<? extends com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.TransactionOrBuilder> 
-        getTransactionsOrBuilderList();
+    java.util.List<? extends com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.StatementOrBuilder>
+    getStatementsOrBuilderList();
+
     /**
-     * <code>repeated .Transaction transactions = 1;</code>
+     * <code>repeated .Statement statements = 1;</code>
      */
-    com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.TransactionOrBuilder getTransactionsOrBuilder(
-        int index);
+    com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.StatementOrBuilder getStatementsOrBuilder(
+            int index);
   }
+
   /**
    * Protobuf type {@code TransactionList}
    */
@@ -4122,31 +4305,35 @@ public final class ExpenseSimProto {
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.internal_static_TransactionList_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.TransactionList.class, com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.TransactionList.Builder.class);
+              .ensureFieldAccessorsInitialized(
+                      com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.TransactionList.class, com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.TransactionList.Builder.class);
     }
 
     public static final int TRANSACTIONS_FIELD_NUMBER = 1;
     private java.util.List<com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.Transaction> transactions_;
+
     /**
      * <code>repeated .Transaction transactions = 1;</code>
      */
     public java.util.List<com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.Transaction> getTransactionsList() {
       return transactions_;
     }
+
     /**
      * <code>repeated .Transaction transactions = 1;</code>
      */
-    public java.util.List<? extends com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.TransactionOrBuilder> 
-        getTransactionsOrBuilderList() {
+    public java.util.List<? extends com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.TransactionOrBuilder>
+    getTransactionsOrBuilderList() {
       return transactions_;
     }
+
     /**
      * <code>repeated .Transaction transactions = 1;</code>
      */
     public int getTransactionsCount() {
       return transactions_.size();
     }
+
     /**
      * <code>repeated .Transaction transactions = 1;</code>
      */
@@ -4406,35 +4593,35 @@ public final class ExpenseSimProto {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+              com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -4466,9 +4653,9 @@ public final class ExpenseSimProto {
               transactionsBuilder_ = null;
               transactions_ = other.transactions_;
               bitField0_ = (bitField0_ & ~0x00000001);
-              transactionsBuilder_ = 
-                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                   getTransactionsFieldBuilder() : null;
+              transactionsBuilder_ =
+                      com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                              getTransactionsFieldBuilder() : null;
             } else {
               transactionsBuilder_.addAllMessages(other.transactions_);
             }
@@ -4679,62 +4866,70 @@ public final class ExpenseSimProto {
         }
         return this;
       }
+
       /**
        * <code>repeated .Transaction transactions = 1;</code>
        */
       public com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.Transaction.Builder getTransactionsBuilder(
-          int index) {
+              int index) {
         return getTransactionsFieldBuilder().getBuilder(index);
       }
+
       /**
        * <code>repeated .Transaction transactions = 1;</code>
        */
       public com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.TransactionOrBuilder getTransactionsOrBuilder(
-          int index) {
+              int index) {
         if (transactionsBuilder_ == null) {
-          return transactions_.get(index);  } else {
+          return transactions_.get(index);
+        } else {
           return transactionsBuilder_.getMessageOrBuilder(index);
         }
       }
+
       /**
        * <code>repeated .Transaction transactions = 1;</code>
        */
-      public java.util.List<? extends com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.TransactionOrBuilder> 
-           getTransactionsOrBuilderList() {
+      public java.util.List<? extends com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.TransactionOrBuilder>
+      getTransactionsOrBuilderList() {
         if (transactionsBuilder_ != null) {
           return transactionsBuilder_.getMessageOrBuilderList();
         } else {
           return java.util.Collections.unmodifiableList(transactions_);
         }
       }
+
       /**
        * <code>repeated .Transaction transactions = 1;</code>
        */
       public com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.Transaction.Builder addTransactionsBuilder() {
         return getTransactionsFieldBuilder().addBuilder(
-            com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.Transaction.getDefaultInstance());
+                com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.Transaction.getDefaultInstance());
       }
+
       /**
        * <code>repeated .Transaction transactions = 1;</code>
        */
       public com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.Transaction.Builder addTransactionsBuilder(
-          int index) {
+              int index) {
         return getTransactionsFieldBuilder().addBuilder(
-            index, com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.Transaction.getDefaultInstance());
+                index, com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.Transaction.getDefaultInstance());
       }
+
       /**
        * <code>repeated .Transaction transactions = 1;</code>
        */
-      public java.util.List<com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.Transaction.Builder> 
-           getTransactionsBuilderList() {
+      public java.util.List<com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.Transaction.Builder>
+      getTransactionsBuilderList() {
         return getTransactionsFieldBuilder().getBuilderList();
       }
+
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.Transaction, com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.Transaction.Builder, com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.TransactionOrBuilder> 
-          getTransactionsFieldBuilder() {
+              com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.Transaction, com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.Transaction.Builder, com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.TransactionOrBuilder>
+      getTransactionsFieldBuilder() {
         if (transactionsBuilder_ == null) {
           transactionsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.Transaction, com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.Transaction.Builder, com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.TransactionOrBuilder>(
+                  com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.Transaction, com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.Transaction.Builder, com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.TransactionOrBuilder>(
                   transactions_,
                   ((bitField0_ & 0x00000001) == 0x00000001),
                   getParentForChildren(),
@@ -4773,9 +4968,9 @@ public final class ExpenseSimProto {
         PARSER = new com.google.protobuf.AbstractParser<TransactionList>() {
       @java.lang.Override
       public TransactionList parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws com.google.protobuf.InvalidProtocolBufferException {
         return new TransactionList(input, extensionRegistry);
       }
     };
@@ -4796,42 +4991,59 @@ public final class ExpenseSimProto {
 
   }
 
-  public interface StatementListOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:StatementList)
-      com.google.protobuf.MessageOrBuilder {
+  private static final com.google.protobuf.Descriptors.Descriptor
+          internal_static_Bank_descriptor;
+  private static final
+  com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internal_static_Bank_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+          internal_static_Transaction_descriptor;
+  private static final
+  com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internal_static_Transaction_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+          internal_static_Statement_descriptor;
+  private static final
+  com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internal_static_Statement_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+          internal_static_Statement_BankMapEntry_descriptor;
+  private static final
+  com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internal_static_Statement_BankMapEntry_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+          internal_static_BankList_descriptor;
+  private static final
+  com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internal_static_BankList_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+          internal_static_TransactionList_descriptor;
+  private static final
+  com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internal_static_TransactionList_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+          internal_static_StatementList_descriptor;
+  private static final
+  com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internal_static_StatementList_fieldAccessorTable;
 
-    /**
-     * <code>repeated .Statement statements = 1;</code>
-     */
-    java.util.List<com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.Statement> 
-        getStatementsList();
-    /**
-     * <code>repeated .Statement statements = 1;</code>
-     */
-    com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.Statement getStatements(int index);
-    /**
-     * <code>repeated .Statement statements = 1;</code>
-     */
-    int getStatementsCount();
-    /**
-     * <code>repeated .Statement statements = 1;</code>
-     */
-    java.util.List<? extends com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.StatementOrBuilder> 
-        getStatementsOrBuilderList();
-    /**
-     * <code>repeated .Statement statements = 1;</code>
-     */
-    com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.StatementOrBuilder getStatementsOrBuilder(
-        int index);
+  public static com.google.protobuf.Descriptors.FileDescriptor
+  getDescriptor() {
+    return descriptor;
   }
+
+  private static com.google.protobuf.Descriptors.FileDescriptor
+          descriptor;
+
   /**
    * Protobuf type {@code StatementList}
    */
-  public  static final class StatementList extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:StatementList)
-      StatementListOrBuilder {
-  private static final long serialVersionUID = 0L;
+  public static final class StatementList extends
+          com.google.protobuf.GeneratedMessageV3 implements
+          // @@protoc_insertion_point(message_implements:StatementList)
+          StatementListOrBuilder {
+    private static final long serialVersionUID = 0L;
+
     // Use StatementList.newBuilder() to construct.
     private StatementList(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
@@ -4904,31 +5116,35 @@ public final class ExpenseSimProto {
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.internal_static_StatementList_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.StatementList.class, com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.StatementList.Builder.class);
+              .ensureFieldAccessorsInitialized(
+                      com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.StatementList.class, com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.StatementList.Builder.class);
     }
 
     public static final int STATEMENTS_FIELD_NUMBER = 1;
     private java.util.List<com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.Statement> statements_;
+
     /**
      * <code>repeated .Statement statements = 1;</code>
      */
     public java.util.List<com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.Statement> getStatementsList() {
       return statements_;
     }
+
     /**
      * <code>repeated .Statement statements = 1;</code>
      */
-    public java.util.List<? extends com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.StatementOrBuilder> 
-        getStatementsOrBuilderList() {
+    public java.util.List<? extends com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.StatementOrBuilder>
+    getStatementsOrBuilderList() {
       return statements_;
     }
+
     /**
      * <code>repeated .Statement statements = 1;</code>
      */
     public int getStatementsCount() {
       return statements_.size();
     }
+
     /**
      * <code>repeated .Statement statements = 1;</code>
      */
@@ -5188,35 +5404,36 @@ public final class ExpenseSimProto {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
+
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+              com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -5248,9 +5465,9 @@ public final class ExpenseSimProto {
               statementsBuilder_ = null;
               statements_ = other.statements_;
               bitField0_ = (bitField0_ & ~0x00000001);
-              statementsBuilder_ = 
-                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                   getStatementsFieldBuilder() : null;
+              statementsBuilder_ =
+                      com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                              getStatementsFieldBuilder() : null;
             } else {
               statementsBuilder_.addAllMessages(other.statements_);
             }
@@ -5461,62 +5678,70 @@ public final class ExpenseSimProto {
         }
         return this;
       }
+
       /**
        * <code>repeated .Statement statements = 1;</code>
        */
       public com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.Statement.Builder getStatementsBuilder(
-          int index) {
+              int index) {
         return getStatementsFieldBuilder().getBuilder(index);
       }
+
       /**
        * <code>repeated .Statement statements = 1;</code>
        */
       public com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.StatementOrBuilder getStatementsOrBuilder(
-          int index) {
+              int index) {
         if (statementsBuilder_ == null) {
-          return statements_.get(index);  } else {
+          return statements_.get(index);
+        } else {
           return statementsBuilder_.getMessageOrBuilder(index);
         }
       }
+
       /**
        * <code>repeated .Statement statements = 1;</code>
        */
-      public java.util.List<? extends com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.StatementOrBuilder> 
-           getStatementsOrBuilderList() {
+      public java.util.List<? extends com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.StatementOrBuilder>
+      getStatementsOrBuilderList() {
         if (statementsBuilder_ != null) {
           return statementsBuilder_.getMessageOrBuilderList();
         } else {
           return java.util.Collections.unmodifiableList(statements_);
         }
       }
+
       /**
        * <code>repeated .Statement statements = 1;</code>
        */
       public com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.Statement.Builder addStatementsBuilder() {
         return getStatementsFieldBuilder().addBuilder(
-            com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.Statement.getDefaultInstance());
+                com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.Statement.getDefaultInstance());
       }
+
       /**
        * <code>repeated .Statement statements = 1;</code>
        */
       public com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.Statement.Builder addStatementsBuilder(
-          int index) {
+              int index) {
         return getStatementsFieldBuilder().addBuilder(
-            index, com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.Statement.getDefaultInstance());
+                index, com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.Statement.getDefaultInstance());
       }
+
       /**
        * <code>repeated .Statement statements = 1;</code>
        */
-      public java.util.List<com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.Statement.Builder> 
-           getStatementsBuilderList() {
+      public java.util.List<com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.Statement.Builder>
+      getStatementsBuilderList() {
         return getStatementsFieldBuilder().getBuilderList();
       }
+
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.Statement, com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.Statement.Builder, com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.StatementOrBuilder> 
-          getStatementsFieldBuilder() {
+              com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.Statement, com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.Statement.Builder, com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.StatementOrBuilder>
+      getStatementsFieldBuilder() {
         if (statementsBuilder_ == null) {
           statementsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.Statement, com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.Statement.Builder, com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.StatementOrBuilder>(
+                  com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.Statement, com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.Statement.Builder, com.vv.personal.twm.artifactory.generated.expSim.ExpenseSimProto.StatementOrBuilder>(
                   statements_,
                   ((bitField0_ & 0x00000001) == 0x00000001),
                   getParentForChildren(),
@@ -5576,123 +5801,6 @@ public final class ExpenseSimProto {
       return DEFAULT_INSTANCE;
     }
 
-  }
-
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_Bank_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_Bank_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_Transaction_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_Transaction_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_Statement_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_Statement_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_Statement_BankMapEntry_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_Statement_BankMapEntry_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_BankList_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_BankList_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_TransactionList_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_TransactionList_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_StatementList_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_StatementList_fieldAccessorTable;
-
-  public static com.google.protobuf.Descriptors.FileDescriptor
-      getDescriptor() {
-    return descriptor;
-  }
-  private static  com.google.protobuf.Descriptors.FileDescriptor
-      descriptor;
-  static {
-    java.lang.String[] descriptorData = {
-      "\n\020ExpenseSim.proto\"3\n\004Bank\022\014\n\004code\030\001 \001(\t" +
-      "\022\017\n\007balance\030\002 \001(\001\022\014\n\004date\030\003 \001(\003\"g\n\013Trans" +
-      "action\022\014\n\004date\030\001 \001(\003\022\014\n\004from\030\002 \001(\t\022\n\n\002to" +
-      "\030\003 \001(\t\022\013\n\003amt\030\004 \001(\001\022\014\n\004note\030\005 \001(\t\022\025\n\004mod" +
-      "e\030\006 \001(\0162\007.TxMode\"\257\001\n\tStatement\022\014\n\004date\030\001" +
-      " \001(\003\022(\n\007bankMap\030\002 \003(\0132\027.Statement.BankMa" +
-      "pEntry\022\014\n\004note\030\003 \001(\t\022\014\n\004from\030\004 \001(\t\022\n\n\002to" +
-      "\030\006 \001(\t\022\013\n\003amt\030\007 \001(\001\0325\n\014BankMapEntry\022\013\n\003k" +
-      "ey\030\001 \001(\t\022\024\n\005value\030\002 \001(\0132\005.Bank:\0028\001\" \n\010Ba" +
-      "nkList\022\024\n\005banks\030\001 \003(\0132\005.Bank\"5\n\017Transact" +
-      "ionList\022\"\n\014transactions\030\001 \003(\0132\014.Transact" +
-      "ion\"/\n\rStatementList\022\036\n\nstatements\030\001 \003(\013" +
-      "2\n.Statement*D\n\006TxMode\022\005\n\001U\020\000\022\005\n\001Q\020\001\022\005\n\001" +
-      "C\020\002\022\006\n\002DC\020\003\022\006\n\002CC\020\004\022\005\n\001R\020\005\022\005\n\001I\020\006\022\007\n\003SAL" +
-      "\020\007BC\n0com.vv.personal.twm.artifactory.ge" +
-      "nerated.expSimB\017ExpenseSimProtob\006proto3"
-    };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
-      .internalBuildGeneratedFileFrom(descriptorData,
-        new com.google.protobuf.Descriptors.FileDescriptor[] {
-        }, assigner);
-    internal_static_Bank_descriptor =
-      getDescriptor().getMessageTypes().get(0);
-    internal_static_Bank_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_Bank_descriptor,
-        new java.lang.String[] { "Code", "Balance", "Date", });
-    internal_static_Transaction_descriptor =
-      getDescriptor().getMessageTypes().get(1);
-    internal_static_Transaction_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_Transaction_descriptor,
-        new java.lang.String[] { "Date", "From", "To", "Amt", "Note", "Mode", });
-    internal_static_Statement_descriptor =
-      getDescriptor().getMessageTypes().get(2);
-    internal_static_Statement_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_Statement_descriptor,
-        new java.lang.String[] { "Date", "BankMap", "Note", "From", "To", "Amt", });
-    internal_static_Statement_BankMapEntry_descriptor =
-      internal_static_Statement_descriptor.getNestedTypes().get(0);
-    internal_static_Statement_BankMapEntry_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_Statement_BankMapEntry_descriptor,
-        new java.lang.String[] { "Key", "Value", });
-    internal_static_BankList_descriptor =
-      getDescriptor().getMessageTypes().get(3);
-    internal_static_BankList_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_BankList_descriptor,
-        new java.lang.String[] { "Banks", });
-    internal_static_TransactionList_descriptor =
-      getDescriptor().getMessageTypes().get(4);
-    internal_static_TransactionList_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_TransactionList_descriptor,
-        new java.lang.String[] { "Transactions", });
-    internal_static_StatementList_descriptor =
-      getDescriptor().getMessageTypes().get(5);
-    internal_static_StatementList_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_StatementList_descriptor,
-        new java.lang.String[] { "Statements", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)
