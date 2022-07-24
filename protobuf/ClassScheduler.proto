@@ -1,0 +1,31 @@
+syntax = "proto3";
+
+option java_package = "com.vv.personal.twm.artifactory.generated.scheduler";
+option java_outer_classname = "ClassScheduler";
+
+message ScheduledClass {
+  string code = 1;
+  string days = 2;
+  string startTime = 3;
+  string endTime = 4;
+  bool compulsory = 5;
+  string name = 6;
+  string prof = 7;
+  bool ai = 8;
+}
+
+message Classes {
+  repeated ScheduledClass classes = 1;
+}
+
+message ScheduledClassCell {
+  string code = 1;
+  string day = 2;
+  string startTime = 3;
+  string endTime = 4;
+}
+
+message ClassCells {
+  repeated ScheduledClassCell classCells = 1;
+  Classes classes = 2;
+}
