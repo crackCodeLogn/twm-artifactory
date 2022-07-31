@@ -24,42 +24,35 @@ public final class ClassScheduler {
   private static final
   com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internal_static_ClassCells_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.FileDescriptor
+  private static final com.google.protobuf.Descriptors.FileDescriptor
           descriptor;
 
   static {
     java.lang.String[] descriptorData = {
-            "\n\024ClassScheduler.proto\"\214\001\n\016ScheduledClas" +
+            "\n\024ClassScheduler.proto\"\236\001\n\016ScheduledClas" +
                     "s\022\014\n\004code\030\001 \001(\t\022\014\n\004days\030\002 \001(\t\022\021\n\tstartTi" +
                     "me\030\003 \001(\t\022\017\n\007endTime\030\004 \001(\t\022\022\n\ncompulsory\030" +
                     "\005 \001(\010\022\014\n\004name\030\006 \001(\t\022\014\n\004prof\030\007 \001(\t\022\n\n\002ai\030" +
-                    "\010 \001(\010\"+\n\007Classes\022 \n\007classes\030\001 \003(\0132\017.Sche" +
-                    "duledClass\"S\n\022ScheduledClassCell\022\014\n\004code" +
-                    "\030\001 \001(\t\022\013\n\003day\030\002 \001(\t\022\021\n\tstartTime\030\003 \001(\t\022\017" +
-                    "\n\007endTime\030\004 \001(\t\"P\n\nClassCells\022'\n\nclassCe" +
-                    "lls\030\001 \003(\0132\023.ScheduledClassCell\022\031\n\007classe" +
-                    "s\030\002 \001(\0132\010.ClassesBE\n3com.vv.personal.twm" +
-                    ".artifactory.generated.schedulerB\016ClassS" +
-                    "chedulerb\006proto3"
+                    "\010 \001(\010\022\020\n\010location\030\t \001(\t\"+\n\007Classes\022 \n\007cl" +
+                    "asses\030\001 \003(\0132\017.ScheduledClass\"e\n\022Schedule" +
+                    "dClassCell\022\014\n\004code\030\001 \001(\t\022\013\n\003day\030\002 \001(\t\022\021\n" +
+                    "\tstartTime\030\003 \001(\t\022\017\n\007endTime\030\004 \001(\t\022\020\n\010loc" +
+                    "ation\030\005 \001(\t\"P\n\nClassCells\022'\n\nclassCells\030" +
+                    "\001 \003(\0132\023.ScheduledClassCell\022\031\n\007classes\030\002 " +
+                    "\001(\0132\010.ClassesBE\n3com.vv.personal.twm.art" +
+                    "ifactory.generated.schedulerB\016ClassSched" +
+                    "ulerb\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-            new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner() {
-              public com.google.protobuf.ExtensionRegistry assignDescriptors(
-                      com.google.protobuf.Descriptors.FileDescriptor root) {
-                descriptor = root;
-                return null;
-              }
-            };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
             .internalBuildGeneratedFileFrom(descriptorData,
                     new com.google.protobuf.Descriptors.FileDescriptor[]{
-                    }, assigner);
+                    });
     internal_static_ScheduledClass_descriptor =
             getDescriptor().getMessageTypes().get(0);
     internal_static_ScheduledClass_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
             internal_static_ScheduledClass_descriptor,
-            new java.lang.String[]{"Code", "Days", "StartTime", "EndTime", "Compulsory", "Name", "Prof", "Ai",});
+            new java.lang.String[]{"Code", "Days", "StartTime", "EndTime", "Compulsory", "Name", "Prof", "Ai", "Location",});
     internal_static_Classes_descriptor =
             getDescriptor().getMessageTypes().get(1);
     internal_static_Classes_fieldAccessorTable = new
@@ -71,7 +64,7 @@ public final class ClassScheduler {
     internal_static_ScheduledClassCell_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
             internal_static_ScheduledClassCell_descriptor,
-            new java.lang.String[]{"Code", "Day", "StartTime", "EndTime",});
+            new java.lang.String[]{"Code", "Day", "StartTime", "EndTime", "Location",});
     internal_static_ClassCells_descriptor =
             getDescriptor().getMessageTypes().get(3);
     internal_static_ClassCells_fieldAccessorTable = new
@@ -104,79 +97,120 @@ public final class ClassScheduler {
 
     /**
      * <code>string code = 1;</code>
+     *
+     * @return The code.
      */
     java.lang.String getCode();
 
     /**
      * <code>string code = 1;</code>
+     *
+     * @return The bytes for code.
      */
     com.google.protobuf.ByteString
     getCodeBytes();
 
     /**
      * <code>string days = 2;</code>
+     *
+     * @return The days.
      */
     java.lang.String getDays();
 
     /**
      * <code>string days = 2;</code>
+     *
+     * @return The bytes for days.
      */
     com.google.protobuf.ByteString
     getDaysBytes();
 
     /**
      * <code>string startTime = 3;</code>
+     *
+     * @return The startTime.
      */
     java.lang.String getStartTime();
 
     /**
      * <code>string startTime = 3;</code>
+     * @return The bytes for startTime.
      */
     com.google.protobuf.ByteString
     getStartTimeBytes();
 
     /**
      * <code>string endTime = 4;</code>
+     *
+     * @return The endTime.
      */
     java.lang.String getEndTime();
 
     /**
      * <code>string endTime = 4;</code>
+     * @return The bytes for endTime.
      */
     com.google.protobuf.ByteString
-    getEndTimeBytes();
+        getEndTimeBytes();
 
     /**
      * <code>bool compulsory = 5;</code>
+     *
+     * @return The compulsory.
      */
     boolean getCompulsory();
 
     /**
      * <code>string name = 6;</code>
+     *
+     * @return The name.
      */
     java.lang.String getName();
 
     /**
      * <code>string name = 6;</code>
+     *
+     * @return The bytes for name.
      */
     com.google.protobuf.ByteString
     getNameBytes();
 
     /**
      * <code>string prof = 7;</code>
+     *
+     * @return The prof.
      */
     java.lang.String getProf();
 
     /**
      * <code>string prof = 7;</code>
+     *
+     * @return The bytes for prof.
      */
     com.google.protobuf.ByteString
     getProfBytes();
 
     /**
      * <code>bool ai = 8;</code>
+     *
+     * @return The ai.
      */
     boolean getAi();
+
+    /**
+     * <code>string location = 9;</code>
+     *
+     * @return The location.
+     */
+    java.lang.String getLocation();
+
+    /**
+     * <code>string location = 9;</code>
+     *
+     * @return The bytes for location.
+     */
+    com.google.protobuf.ByteString
+    getLocationBytes();
   }
 
   public interface ClassesOrBuilder extends
@@ -218,47 +252,76 @@ public final class ClassScheduler {
 
     /**
      * <code>string code = 1;</code>
+     *
+     * @return The code.
      */
     java.lang.String getCode();
 
     /**
      * <code>string code = 1;</code>
+     * @return The bytes for code.
      */
     com.google.protobuf.ByteString
     getCodeBytes();
 
     /**
      * <code>string day = 2;</code>
+     *
+     * @return The day.
      */
     java.lang.String getDay();
 
     /**
      * <code>string day = 2;</code>
+     * @return The bytes for day.
      */
     com.google.protobuf.ByteString
     getDayBytes();
 
     /**
      * <code>string startTime = 3;</code>
+     *
+     * @return The startTime.
      */
     java.lang.String getStartTime();
 
     /**
      * <code>string startTime = 3;</code>
+     *
+     * @return The bytes for startTime.
      */
     com.google.protobuf.ByteString
     getStartTimeBytes();
 
     /**
      * <code>string endTime = 4;</code>
+     *
+     * @return The endTime.
      */
     java.lang.String getEndTime();
 
     /**
      * <code>string endTime = 4;</code>
+     *
+     * @return The bytes for endTime.
      */
     com.google.protobuf.ByteString
     getEndTimeBytes();
+
+    /**
+     * <code>string location = 5;</code>
+     *
+     * @return The location.
+     */
+    java.lang.String getLocation();
+
+    /**
+     * <code>string location = 5;</code>
+     *
+     * @return The bytes for location.
+     */
+    com.google.protobuf.ByteString
+    getLocationBytes();
   }
 
   public interface ClassCellsOrBuilder extends
@@ -285,8 +348,7 @@ public final class ClassScheduler {
      * <code>repeated .ScheduledClassCell classCells = 1;</code>
      */
     java.util.List<? extends com.vv.personal.twm.artifactory.generated.scheduler.ClassScheduler.ScheduledClassCellOrBuilder>
-    getClassCellsOrBuilderList();
-
+        getClassCellsOrBuilderList();
     /**
      * <code>repeated .ScheduledClassCell classCells = 1;</code>
      */
@@ -295,11 +357,15 @@ public final class ClassScheduler {
 
     /**
      * <code>.Classes classes = 2;</code>
+     *
+     * @return Whether the classes field is set.
      */
     boolean hasClasses();
 
     /**
      * <code>.Classes classes = 2;</code>
+     *
+     * @return The classes.
      */
     com.vv.personal.twm.artifactory.generated.scheduler.ClassScheduler.Classes getClasses();
 
@@ -317,6 +383,12 @@ public final class ClassScheduler {
           // @@protoc_insertion_point(message_implements:ScheduledClass)
           ScheduledClassOrBuilder {
     public static final int CODE_FIELD_NUMBER = 1;
+
+    // Use ScheduledClass.newBuilder() to construct.
+    private ScheduledClass(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+
     public static final int DAYS_FIELD_NUMBER = 2;
     public static final int STARTTIME_FIELD_NUMBER = 3;
     public static final int ENDTIME_FIELD_NUMBER = 4;
@@ -324,15 +396,16 @@ public final class ClassScheduler {
     public static final int NAME_FIELD_NUMBER = 6;
     public static final int PROF_FIELD_NUMBER = 7;
     public static final int AI_FIELD_NUMBER = 8;
+    public static final int LOCATION_FIELD_NUMBER = 9;
     private static final long serialVersionUID = 0L;
     // @@protoc_insertion_point(class_scope:ScheduledClass)
     private static final com.vv.personal.twm.artifactory.generated.scheduler.ClassScheduler.ScheduledClass DEFAULT_INSTANCE;
     private static final com.google.protobuf.Parser<ScheduledClass>
-            PARSER = new com.google.protobuf.AbstractParser<ScheduledClass>() {
+        PARSER = new com.google.protobuf.AbstractParser<ScheduledClass>() {
       @java.lang.Override
       public ScheduledClass parsePartialFrom(
-              com.google.protobuf.CodedInputStream input,
-              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
               throws com.google.protobuf.InvalidProtocolBufferException {
         return new ScheduledClass(input, extensionRegistry);
       }
@@ -350,35 +423,28 @@ public final class ClassScheduler {
     private volatile java.lang.Object name_;
     private volatile java.lang.Object prof_;
     private boolean ai_;
+    private volatile java.lang.Object location_;
     private byte memoizedIsInitialized = -1;
-
-    // Use ScheduledClass.newBuilder() to construct.
-    private ScheduledClass(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
 
     private ScheduledClass() {
       code_ = "";
       days_ = "";
       startTime_ = "";
       endTime_ = "";
-      compulsory_ = false;
       name_ = "";
       prof_ = "";
-      ai_ = false;
+      location_ = "";
     }
-
     private ScheduledClass(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-              com.google.protobuf.UnknownFieldSet.newBuilder();
+          com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -433,8 +499,14 @@ public final class ClassScheduler {
               ai_ = input.readBool();
               break;
             }
+            case 74: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              location_ = s;
+              break;
+            }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                       input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -444,6 +516,8 @@ public final class ClassScheduler {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
                 e).setUnfinishedMessage(this);
@@ -453,7 +527,7 @@ public final class ClassScheduler {
       }
     }
 
-    public static final com.google.protobuf.Descriptors.Descriptor
+    public static com.google.protobuf.Descriptors.Descriptor
     getDescriptor() {
       return com.vv.personal.twm.artifactory.generated.scheduler.ClassScheduler.internal_static_ScheduledClass_descriptor;
     }
@@ -525,10 +599,10 @@ public final class ClassScheduler {
     }
 
     public static com.vv.personal.twm.artifactory.generated.scheduler.ClassScheduler.ScheduledClass parseFrom(
-            com.google.protobuf.CodedInputStream input)
-            throws java.io.IOException {
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
-              .parseWithIOException(PARSER, input);
+          .parseWithIOException(PARSER, input);
     }
 
     public static com.vv.personal.twm.artifactory.generated.scheduler.ClassScheduler.ScheduledClass parseFrom(
@@ -556,14 +630,21 @@ public final class ClassScheduler {
     }
 
     @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+            UnusedPrivateParameter unused) {
+      return new ScheduledClass();
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-    internalGetFieldAccessorTable() {
+        internalGetFieldAccessorTable() {
       return com.vv.personal.twm.artifactory.generated.scheduler.ClassScheduler.internal_static_ScheduledClass_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
                       com.vv.personal.twm.artifactory.generated.scheduler.ClassScheduler.ScheduledClass.class, com.vv.personal.twm.artifactory.generated.scheduler.ClassScheduler.ScheduledClass.Builder.class);
@@ -571,7 +652,10 @@ public final class ClassScheduler {
 
     /**
      * <code>string code = 1;</code>
+     *
+     * @return The code.
      */
+    @java.lang.Override
     public java.lang.String getCode() {
       java.lang.Object ref = code_;
       if (ref instanceof java.lang.String) {
@@ -587,9 +671,11 @@ public final class ClassScheduler {
 
     /**
      * <code>string code = 1;</code>
+     * @return The bytes for code.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
-    getCodeBytes() {
+        getCodeBytes() {
       java.lang.Object ref = code_;
       if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b =
@@ -604,7 +690,10 @@ public final class ClassScheduler {
 
     /**
      * <code>string days = 2;</code>
+     *
+     * @return The days.
      */
+    @java.lang.Override
     public java.lang.String getDays() {
       java.lang.Object ref = days_;
       if (ref instanceof java.lang.String) {
@@ -620,7 +709,9 @@ public final class ClassScheduler {
 
     /**
      * <code>string days = 2;</code>
+     * @return The bytes for days.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
     getDaysBytes() {
       java.lang.Object ref = days_;
@@ -637,7 +728,10 @@ public final class ClassScheduler {
 
     /**
      * <code>string startTime = 3;</code>
+     *
+     * @return The startTime.
      */
+    @java.lang.Override
     public java.lang.String getStartTime() {
       java.lang.Object ref = startTime_;
       if (ref instanceof java.lang.String) {
@@ -653,14 +747,16 @@ public final class ClassScheduler {
 
     /**
      * <code>string startTime = 3;</code>
+     * @return The bytes for startTime.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
     getStartTimeBytes() {
       java.lang.Object ref = startTime_;
       if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b =
-                com.google.protobuf.ByteString.copyFromUtf8(
-                        (java.lang.String) ref);
+            com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
         startTime_ = b;
         return b;
       } else {
@@ -670,7 +766,10 @@ public final class ClassScheduler {
 
     /**
      * <code>string endTime = 4;</code>
+     *
+     * @return The endTime.
      */
+    @java.lang.Override
     public java.lang.String getEndTime() {
       java.lang.Object ref = endTime_;
       if (ref instanceof java.lang.String) {
@@ -686,9 +785,11 @@ public final class ClassScheduler {
 
     /**
      * <code>string endTime = 4;</code>
+     * @return The bytes for endTime.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
-    getEndTimeBytes() {
+        getEndTimeBytes() {
       java.lang.Object ref = endTime_;
       if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b =
@@ -703,14 +804,20 @@ public final class ClassScheduler {
 
     /**
      * <code>bool compulsory = 5;</code>
+     *
+     * @return The compulsory.
      */
+    @java.lang.Override
     public boolean getCompulsory() {
       return compulsory_;
     }
 
     /**
      * <code>string name = 6;</code>
+     *
+     * @return The name.
      */
+    @java.lang.Override
     public java.lang.String getName() {
       java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
@@ -726,7 +833,9 @@ public final class ClassScheduler {
 
     /**
      * <code>string name = 6;</code>
+     * @return The bytes for name.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
     getNameBytes() {
       java.lang.Object ref = name_;
@@ -743,7 +852,10 @@ public final class ClassScheduler {
 
     /**
      * <code>string prof = 7;</code>
+     *
+     * @return The prof.
      */
+    @java.lang.Override
     public java.lang.String getProf() {
       java.lang.Object ref = prof_;
       if (ref instanceof java.lang.String) {
@@ -759,7 +871,10 @@ public final class ClassScheduler {
 
     /**
      * <code>string prof = 7;</code>
+     *
+     * @return The bytes for prof.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
     getProfBytes() {
       java.lang.Object ref = prof_;
@@ -776,13 +891,55 @@ public final class ClassScheduler {
 
     /**
      * <code>bool ai = 8;</code>
+     *
+     * @return The ai.
      */
+    @java.lang.Override
     public boolean getAi() {
       return ai_;
     }
 
+    /**
+     * <code>string location = 9;</code>
+     *
+     * @return The location.
+     */
     @java.lang.Override
-    public final boolean isInitialized() {
+    public java.lang.String getLocation() {
+      java.lang.Object ref = location_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        location_ = s;
+        return s;
+      }
+    }
+
+    /**
+     * <code>string location = 9;</code>
+     *
+     * @return The bytes for location.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+    getLocationBytes() {
+      java.lang.Object ref = location_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b =
+                com.google.protobuf.ByteString.copyFromUtf8(
+                        (java.lang.String) ref);
+        location_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    @java.lang.Override
+    public boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
       if (isInitialized == 0) return false;
@@ -794,29 +951,32 @@ public final class ClassScheduler {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
             throws java.io.IOException {
-      if (!getCodeBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(code_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, code_);
       }
-      if (!getDaysBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(days_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, days_);
       }
-      if (!getStartTimeBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(startTime_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, startTime_);
       }
-      if (!getEndTimeBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(endTime_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, endTime_);
       }
-      if (compulsory_ != false) {
+      if (compulsory_) {
         output.writeBool(5, compulsory_);
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 6, name_);
       }
-      if (!getProfBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(prof_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 7, prof_);
       }
-      if (ai_ != false) {
+      if (ai_) {
         output.writeBool(8, ai_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(location_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 9, location_);
       }
       unknownFields.writeTo(output);
     }
@@ -827,31 +987,34 @@ public final class ClassScheduler {
       if (size != -1) return size;
 
       size = 0;
-      if (!getCodeBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(code_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, code_);
       }
-      if (!getDaysBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(days_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, days_);
       }
-      if (!getStartTimeBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(startTime_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, startTime_);
       }
-      if (!getEndTimeBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(endTime_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, endTime_);
       }
-      if (compulsory_ != false) {
+      if (compulsory_) {
         size += com.google.protobuf.CodedOutputStream
                 .computeBoolSize(5, compulsory_);
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, name_);
       }
-      if (!getProfBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(prof_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, prof_);
       }
-      if (ai_ != false) {
+      if (ai_) {
         size += com.google.protobuf.CodedOutputStream
                 .computeBoolSize(8, ai_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(location_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, location_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -868,25 +1031,25 @@ public final class ClassScheduler {
       }
       com.vv.personal.twm.artifactory.generated.scheduler.ClassScheduler.ScheduledClass other = (com.vv.personal.twm.artifactory.generated.scheduler.ClassScheduler.ScheduledClass) obj;
 
-      boolean result = true;
-      result = result && getCode()
-              .equals(other.getCode());
-      result = result && getDays()
-              .equals(other.getDays());
-      result = result && getStartTime()
-              .equals(other.getStartTime());
-      result = result && getEndTime()
-              .equals(other.getEndTime());
-      result = result && (getCompulsory()
-              == other.getCompulsory());
-      result = result && getName()
-              .equals(other.getName());
-      result = result && getProf()
-              .equals(other.getProf());
-      result = result && (getAi()
-              == other.getAi());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getCode()
+          .equals(other.getCode())) return false;
+      if (!getDays()
+          .equals(other.getDays())) return false;
+      if (!getStartTime()
+          .equals(other.getStartTime())) return false;
+      if (!getEndTime()
+          .equals(other.getEndTime())) return false;
+      if (getCompulsory()
+          != other.getCompulsory()) return false;
+      if (!getName()
+              .equals(other.getName())) return false;
+      if (!getProf()
+              .equals(other.getProf())) return false;
+      if (getAi()
+              != other.getAi()) return false;
+      if (!getLocation()
+              .equals(other.getLocation())) return false;
+      return unknownFields.equals(other.unknownFields);
     }
 
     @java.lang.Override
@@ -913,7 +1076,9 @@ public final class ClassScheduler {
       hash = (53 * hash) + getProf().hashCode();
       hash = (37 * hash) + AI_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-              getAi());
+          getAi());
+      hash = (37 * hash) + LOCATION_FIELD_NUMBER;
+      hash = (53 * hash) + getLocation().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -958,10 +1123,39 @@ public final class ClassScheduler {
       private java.lang.Object days_ = "";
       private java.lang.Object startTime_ = "";
       private java.lang.Object endTime_ = "";
+
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+
       private boolean compulsory_;
       private java.lang.Object name_ = "";
+
+      @java.lang.Override
+      public com.vv.personal.twm.artifactory.generated.scheduler.ClassScheduler.ScheduledClass getDefaultInstanceForType() {
+        return com.vv.personal.twm.artifactory.generated.scheduler.ClassScheduler.ScheduledClass.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.vv.personal.twm.artifactory.generated.scheduler.ClassScheduler.ScheduledClass build() {
+        com.vv.personal.twm.artifactory.generated.scheduler.ClassScheduler.ScheduledClass result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
       private java.lang.Object prof_ = "";
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+
       private boolean ai_;
+      private java.lang.Object location_ = "";
 
       // Construct using com.vv.personal.twm.artifactory.generated.scheduler.ClassScheduler.ScheduledClass.newBuilder()
       private Builder() {
@@ -974,7 +1168,7 @@ public final class ClassScheduler {
         maybeForceBuilderInitialization();
       }
 
-      public static final com.google.protobuf.Descriptors.Descriptor
+      public static com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
         return com.vv.personal.twm.artifactory.generated.scheduler.ClassScheduler.internal_static_ScheduledClass_descriptor;
       }
@@ -983,14 +1177,8 @@ public final class ClassScheduler {
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
         return com.vv.personal.twm.artifactory.generated.scheduler.ClassScheduler.internal_static_ScheduledClass_fieldAccessorTable
-                .ensureFieldAccessorsInitialized(
-                        com.vv.personal.twm.artifactory.generated.scheduler.ClassScheduler.ScheduledClass.class, com.vv.personal.twm.artifactory.generated.scheduler.ClassScheduler.ScheduledClass.Builder.class);
-      }
-
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+            .ensureFieldAccessorsInitialized(
+                com.vv.personal.twm.artifactory.generated.scheduler.ClassScheduler.ScheduledClass.class, com.vv.personal.twm.artifactory.generated.scheduler.ClassScheduler.ScheduledClass.Builder.class);
       }
 
       @java.lang.Override
@@ -1012,6 +1200,8 @@ public final class ClassScheduler {
 
         ai_ = false;
 
+        location_ = "";
+
         return this;
       }
 
@@ -1019,20 +1209,6 @@ public final class ClassScheduler {
       public com.google.protobuf.Descriptors.Descriptor
       getDescriptorForType() {
         return com.vv.personal.twm.artifactory.generated.scheduler.ClassScheduler.internal_static_ScheduledClass_descriptor;
-      }
-
-      @java.lang.Override
-      public com.vv.personal.twm.artifactory.generated.scheduler.ClassScheduler.ScheduledClass getDefaultInstanceForType() {
-        return com.vv.personal.twm.artifactory.generated.scheduler.ClassScheduler.ScheduledClass.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.vv.personal.twm.artifactory.generated.scheduler.ClassScheduler.ScheduledClass build() {
-        com.vv.personal.twm.artifactory.generated.scheduler.ClassScheduler.ScheduledClass result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
       }
 
       @java.lang.Override
@@ -1046,13 +1222,9 @@ public final class ClassScheduler {
         result.name_ = name_;
         result.prof_ = prof_;
         result.ai_ = ai_;
+        result.location_ = location_;
         onBuilt();
         return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
       }
 
       @java.lang.Override
@@ -1064,7 +1236,7 @@ public final class ClassScheduler {
 
       @java.lang.Override
       public Builder clearField(
-              com.google.protobuf.Descriptors.FieldDescriptor field) {
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
         return super.clearField(field);
       }
 
@@ -1076,15 +1248,15 @@ public final class ClassScheduler {
 
       @java.lang.Override
       public Builder setRepeatedField(
-              com.google.protobuf.Descriptors.FieldDescriptor field,
-              int index, java.lang.Object value) {
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
         return super.setRepeatedField(field, index, value);
       }
 
       @java.lang.Override
       public Builder addRepeatedField(
-              com.google.protobuf.Descriptors.FieldDescriptor field,
-              java.lang.Object value) {
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
         return super.addRepeatedField(field, value);
       }
 
@@ -1116,7 +1288,7 @@ public final class ClassScheduler {
           endTime_ = other.endTime_;
           onChanged();
         }
-        if (other.getCompulsory() != false) {
+        if (other.getCompulsory()) {
           setCompulsory(other.getCompulsory());
         }
         if (!other.getName().isEmpty()) {
@@ -1127,8 +1299,12 @@ public final class ClassScheduler {
           prof_ = other.prof_;
           onChanged();
         }
-        if (other.getAi() != false) {
+        if (other.getAi()) {
           setAi(other.getAi());
+        }
+        if (!other.getLocation().isEmpty()) {
+          location_ = other.location_;
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -1136,14 +1312,14 @@ public final class ClassScheduler {
       }
 
       @java.lang.Override
-      public final boolean isInitialized() {
+      public boolean isInitialized() {
         return true;
       }
 
       @java.lang.Override
       public Builder mergeFrom(
-              com.google.protobuf.CodedInputStream input,
-              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
               throws java.io.IOException {
         com.vv.personal.twm.artifactory.generated.scheduler.ClassScheduler.ScheduledClass parsedMessage = null;
         try {
@@ -1161,6 +1337,8 @@ public final class ClassScheduler {
 
       /**
        * <code>string code = 1;</code>
+       *
+       * @return The code.
        */
       public java.lang.String getCode() {
         java.lang.Object ref = code_;
@@ -1177,6 +1355,9 @@ public final class ClassScheduler {
 
       /**
        * <code>string code = 1;</code>
+       *
+       * @param value The code to set.
+       * @return This builder for chaining.
        */
       public Builder setCode(
               java.lang.String value) {
@@ -1191,14 +1372,15 @@ public final class ClassScheduler {
 
       /**
        * <code>string code = 1;</code>
+       * @return The bytes for code.
        */
       public com.google.protobuf.ByteString
-      getCodeBytes() {
+          getCodeBytes() {
         java.lang.Object ref = code_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b =
                   com.google.protobuf.ByteString.copyFromUtf8(
-                          (java.lang.String) ref);
+                  (java.lang.String) ref);
           code_ = b;
           return b;
         } else {
@@ -1208,6 +1390,8 @@ public final class ClassScheduler {
 
       /**
        * <code>string code = 1;</code>
+       * @param value The bytes for code to set.
+       * @return This builder for chaining.
        */
       public Builder setCodeBytes(
               com.google.protobuf.ByteString value) {
@@ -1223,6 +1407,8 @@ public final class ClassScheduler {
 
       /**
        * <code>string code = 1;</code>
+       *
+       * @return This builder for chaining.
        */
       public Builder clearCode() {
 
@@ -1233,6 +1419,8 @@ public final class ClassScheduler {
 
       /**
        * <code>string days = 2;</code>
+       *
+       * @return The days.
        */
       public java.lang.String getDays() {
         java.lang.Object ref = days_;
@@ -1249,6 +1437,9 @@ public final class ClassScheduler {
 
       /**
        * <code>string days = 2;</code>
+       *
+       * @param value The days to set.
+       * @return This builder for chaining.
        */
       public Builder setDays(
               java.lang.String value) {
@@ -1263,6 +1454,7 @@ public final class ClassScheduler {
 
       /**
        * <code>string days = 2;</code>
+       * @return The bytes for days.
        */
       public com.google.protobuf.ByteString
       getDaysBytes() {
@@ -1280,6 +1472,8 @@ public final class ClassScheduler {
 
       /**
        * <code>string days = 2;</code>
+       * @param value The bytes for days to set.
+       * @return This builder for chaining.
        */
       public Builder setDaysBytes(
               com.google.protobuf.ByteString value) {
@@ -1295,6 +1489,7 @@ public final class ClassScheduler {
 
       /**
        * <code>string days = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearDays() {
 
@@ -1305,6 +1500,8 @@ public final class ClassScheduler {
 
       /**
        * <code>string startTime = 3;</code>
+       *
+       * @return The startTime.
        */
       public java.lang.String getStartTime() {
         java.lang.Object ref = startTime_;
@@ -1321,6 +1518,9 @@ public final class ClassScheduler {
 
       /**
        * <code>string startTime = 3;</code>
+       *
+       * @param value The startTime to set.
+       * @return This builder for chaining.
        */
       public Builder setStartTime(
               java.lang.String value) {
@@ -1335,6 +1535,7 @@ public final class ClassScheduler {
 
       /**
        * <code>string startTime = 3;</code>
+       * @return The bytes for startTime.
        */
       public com.google.protobuf.ByteString
       getStartTimeBytes() {
@@ -1352,6 +1553,8 @@ public final class ClassScheduler {
 
       /**
        * <code>string startTime = 3;</code>
+       * @param value The bytes for startTime to set.
+       * @return This builder for chaining.
        */
       public Builder setStartTimeBytes(
               com.google.protobuf.ByteString value) {
@@ -1367,6 +1570,8 @@ public final class ClassScheduler {
 
       /**
        * <code>string startTime = 3;</code>
+       *
+       * @return This builder for chaining.
        */
       public Builder clearStartTime() {
 
@@ -1377,6 +1582,8 @@ public final class ClassScheduler {
 
       /**
        * <code>string endTime = 4;</code>
+       *
+       * @return The endTime.
        */
       public java.lang.String getEndTime() {
         java.lang.Object ref = endTime_;
@@ -1393,12 +1600,14 @@ public final class ClassScheduler {
 
       /**
        * <code>string endTime = 4;</code>
+       * @param value The endTime to set.
+       * @return This builder for chaining.
        */
       public Builder setEndTime(
               java.lang.String value) {
         if (value == null) {
-          throw new NullPointerException();
-        }
+    throw new NullPointerException();
+  }
 
         endTime_ = value;
         onChanged();
@@ -1407,9 +1616,10 @@ public final class ClassScheduler {
 
       /**
        * <code>string endTime = 4;</code>
+       * @return The bytes for endTime.
        */
       public com.google.protobuf.ByteString
-      getEndTimeBytes() {
+          getEndTimeBytes() {
         java.lang.Object ref = endTime_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b =
@@ -1424,6 +1634,8 @@ public final class ClassScheduler {
 
       /**
        * <code>string endTime = 4;</code>
+       * @param value The bytes for endTime to set.
+       * @return This builder for chaining.
        */
       public Builder setEndTimeBytes(
               com.google.protobuf.ByteString value) {
@@ -1439,6 +1651,8 @@ public final class ClassScheduler {
 
       /**
        * <code>string endTime = 4;</code>
+       *
+       * @return This builder for chaining.
        */
       public Builder clearEndTime() {
 
@@ -1449,13 +1663,18 @@ public final class ClassScheduler {
 
       /**
        * <code>bool compulsory = 5;</code>
+       *
+       * @return The compulsory.
        */
+      @java.lang.Override
       public boolean getCompulsory() {
         return compulsory_;
       }
 
       /**
        * <code>bool compulsory = 5;</code>
+       * @param value The compulsory to set.
+       * @return This builder for chaining.
        */
       public Builder setCompulsory(boolean value) {
 
@@ -1466,6 +1685,8 @@ public final class ClassScheduler {
 
       /**
        * <code>bool compulsory = 5;</code>
+       *
+       * @return This builder for chaining.
        */
       public Builder clearCompulsory() {
 
@@ -1476,6 +1697,8 @@ public final class ClassScheduler {
 
       /**
        * <code>string name = 6;</code>
+       *
+       * @return The name.
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -1492,9 +1715,11 @@ public final class ClassScheduler {
 
       /**
        * <code>string name = 6;</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
        */
       public Builder setName(
-              java.lang.String value) {
+          java.lang.String value) {
         if (value == null) {
           throw new NullPointerException();
         }
@@ -1506,6 +1731,7 @@ public final class ClassScheduler {
 
       /**
        * <code>string name = 6;</code>
+       * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
       getNameBytes() {
@@ -1523,6 +1749,9 @@ public final class ClassScheduler {
 
       /**
        * <code>string name = 6;</code>
+       *
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
        */
       public Builder setNameBytes(
               com.google.protobuf.ByteString value) {
@@ -1538,6 +1767,8 @@ public final class ClassScheduler {
 
       /**
        * <code>string name = 6;</code>
+       *
+       * @return This builder for chaining.
        */
       public Builder clearName() {
 
@@ -1548,6 +1779,8 @@ public final class ClassScheduler {
 
       /**
        * <code>string prof = 7;</code>
+       *
+       * @return The prof.
        */
       public java.lang.String getProf() {
         java.lang.Object ref = prof_;
@@ -1564,11 +1797,13 @@ public final class ClassScheduler {
 
       /**
        * <code>string prof = 7;</code>
+       * @param value The prof to set.
+       * @return This builder for chaining.
        */
       public Builder setProf(
               java.lang.String value) {
         if (value == null) {
-          throw new NullPointerException();
+    throw new NullPointerException();
         }
 
         prof_ = value;
@@ -1578,9 +1813,10 @@ public final class ClassScheduler {
 
       /**
        * <code>string prof = 7;</code>
+       * @return The bytes for prof.
        */
       public com.google.protobuf.ByteString
-      getProfBytes() {
+          getProfBytes() {
         java.lang.Object ref = prof_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b =
@@ -1595,6 +1831,9 @@ public final class ClassScheduler {
 
       /**
        * <code>string prof = 7;</code>
+       *
+       * @param value The bytes for prof to set.
+       * @return This builder for chaining.
        */
       public Builder setProfBytes(
               com.google.protobuf.ByteString value) {
@@ -1610,6 +1849,8 @@ public final class ClassScheduler {
 
       /**
        * <code>string prof = 7;</code>
+       *
+       * @return This builder for chaining.
        */
       public Builder clearProf() {
 
@@ -1620,13 +1861,19 @@ public final class ClassScheduler {
 
       /**
        * <code>bool ai = 8;</code>
+       *
+       * @return The ai.
        */
+      @java.lang.Override
       public boolean getAi() {
         return ai_;
       }
 
       /**
        * <code>bool ai = 8;</code>
+       *
+       * @param value The ai to set.
+       * @return This builder for chaining.
        */
       public Builder setAi(boolean value) {
 
@@ -1637,6 +1884,8 @@ public final class ClassScheduler {
 
       /**
        * <code>bool ai = 8;</code>
+       *
+       * @return This builder for chaining.
        */
       public Builder clearAi() {
 
@@ -1645,14 +1894,98 @@ public final class ClassScheduler {
         return this;
       }
 
-      @java.lang.Override
-      public final Builder setUnknownFields(
-              final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+      /**
+       * <code>string location = 9;</code>
+       *
+       * @return The location.
+       */
+      public java.lang.String getLocation() {
+        java.lang.Object ref = location_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+                  (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          location_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+
+      /**
+       * <code>string location = 9;</code>
+       *
+       * @param value The location to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLocation(
+              java.lang.String value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+
+        location_ = value;
+        onChanged();
+        return this;
+      }
+
+      /**
+       * <code>string location = 9;</code>
+       *
+       * @return The bytes for location.
+       */
+      public com.google.protobuf.ByteString
+      getLocationBytes() {
+        java.lang.Object ref = location_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b =
+                  com.google.protobuf.ByteString.copyFromUtf8(
+                          (java.lang.String) ref);
+          location_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      /**
+       * <code>string location = 9;</code>
+       *
+       * @param value The bytes for location to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLocationBytes(
+              com.google.protobuf.ByteString value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        checkByteStringIsUtf8(value);
+
+        location_ = value;
+        onChanged();
+        return this;
+      }
+
+      /**
+       * <code>string location = 9;</code>
+       *
+       * @return This builder for chaining.
+       */
+      public Builder clearLocation() {
+
+        location_ = getDefaultInstance().getLocation();
+        onChanged();
+        return this;
       }
 
       @java.lang.Override
-      public final Builder mergeUnknownFields(
+      public Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public Builder mergeUnknownFields(
               final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
@@ -1671,6 +2004,16 @@ public final class ClassScheduler {
           // @@protoc_insertion_point(message_implements:Classes)
           ClassesOrBuilder {
     public static final int CLASSES_FIELD_NUMBER = 1;
+
+    // Use Classes.newBuilder() to construct.
+    private Classes(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+
+    private Classes() {
+      classes_ = java.util.Collections.emptyList();
+    }
+
     private static final long serialVersionUID = 0L;
     // @@protoc_insertion_point(class_scope:Classes)
     private static final com.vv.personal.twm.artifactory.generated.scheduler.ClassScheduler.Classes DEFAULT_INSTANCE;
@@ -1692,15 +2035,6 @@ public final class ClassScheduler {
     private java.util.List<com.vv.personal.twm.artifactory.generated.scheduler.ClassScheduler.ScheduledClass> classes_;
     private byte memoizedIsInitialized = -1;
 
-    // Use Classes.newBuilder() to construct.
-    private Classes(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-
-    private Classes() {
-      classes_ = java.util.Collections.emptyList();
-    }
-
     private Classes(
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1721,7 +2055,7 @@ public final class ClassScheduler {
               done = true;
               break;
             case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+              if ((mutable_bitField0_ & 0x00000001) == 0) {
                 classes_ = new java.util.ArrayList<com.vv.personal.twm.artifactory.generated.scheduler.ClassScheduler.ScheduledClass>();
                 mutable_bitField0_ |= 0x00000001;
               }
@@ -1730,7 +2064,7 @@ public final class ClassScheduler {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                       input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -1740,11 +2074,13 @@ public final class ClassScheduler {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
                 e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           classes_ = java.util.Collections.unmodifiableList(classes_);
         }
         this.unknownFields = unknownFields.build();
@@ -1752,7 +2088,7 @@ public final class ClassScheduler {
       }
     }
 
-    public static final com.google.protobuf.Descriptors.Descriptor
+    public static com.google.protobuf.Descriptors.Descriptor
     getDescriptor() {
       return com.vv.personal.twm.artifactory.generated.scheduler.ClassScheduler.internal_static_Classes_descriptor;
     }
@@ -1815,6 +2151,22 @@ public final class ClassScheduler {
               .parseDelimitedWithIOException(PARSER, input);
     }
 
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getClassesCount() > 0) {
+        hash = (37 * hash) + CLASSES_FIELD_NUMBER;
+        hash = (53 * hash) + getClassesList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
     public static com.vv.personal.twm.artifactory.generated.scheduler.ClassScheduler.Classes parseDelimitedFrom(
             java.io.InputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1855,7 +2207,14 @@ public final class ClassScheduler {
     }
 
     @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+            UnusedPrivateParameter unused) {
+      return new Classes();
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
     }
@@ -1871,6 +2230,7 @@ public final class ClassScheduler {
     /**
      * <code>repeated .ScheduledClass classes = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<com.vv.personal.twm.artifactory.generated.scheduler.ClassScheduler.ScheduledClass> getClassesList() {
       return classes_;
     }
@@ -1878,6 +2238,7 @@ public final class ClassScheduler {
     /**
      * <code>repeated .ScheduledClass classes = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends com.vv.personal.twm.artifactory.generated.scheduler.ClassScheduler.ScheduledClassOrBuilder>
     getClassesOrBuilderList() {
       return classes_;
@@ -1886,6 +2247,7 @@ public final class ClassScheduler {
     /**
      * <code>repeated .ScheduledClass classes = 1;</code>
      */
+    @java.lang.Override
     public int getClassesCount() {
       return classes_.size();
     }
@@ -1893,6 +2255,7 @@ public final class ClassScheduler {
     /**
      * <code>repeated .ScheduledClass classes = 1;</code>
      */
+    @java.lang.Override
     public com.vv.personal.twm.artifactory.generated.scheduler.ClassScheduler.ScheduledClass getClasses(int index) {
       return classes_.get(index);
     }
@@ -1900,13 +2263,14 @@ public final class ClassScheduler {
     /**
      * <code>repeated .ScheduledClass classes = 1;</code>
      */
+    @java.lang.Override
     public com.vv.personal.twm.artifactory.generated.scheduler.ClassScheduler.ScheduledClassOrBuilder getClassesOrBuilder(
             int index) {
       return classes_.get(index);
     }
 
     @java.lang.Override
-    public final boolean isInitialized() {
+    public boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
       if (isInitialized == 0) return false;
@@ -1949,33 +2313,13 @@ public final class ClassScheduler {
       }
       com.vv.personal.twm.artifactory.generated.scheduler.ClassScheduler.Classes other = (com.vv.personal.twm.artifactory.generated.scheduler.ClassScheduler.Classes) obj;
 
-      boolean result = true;
-      result = result && getClassesList()
-              .equals(other.getClassesList());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getClassesList()
+              .equals(other.getClassesList())) return false;
+      return unknownFields.equals(other.unknownFields);
     }
 
     @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      if (getClassesCount() > 0) {
-        hash = (37 * hash) + CLASSES_FIELD_NUMBER;
-        hash = (53 * hash) + getClassesList().hashCode();
-      }
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() {
-      return newBuilder();
-    }
+    public Builder newBuilderForType() { return newBuilder(); }
 
     @java.lang.Override
     public Builder toBuilder() {
@@ -2018,25 +2362,6 @@ public final class ClassScheduler {
         maybeForceBuilderInitialization();
       }
 
-      private Builder(
-              com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-
-      public static final com.google.protobuf.Descriptors.Descriptor
-      getDescriptor() {
-        return com.vv.personal.twm.artifactory.generated.scheduler.ClassScheduler.internal_static_Classes_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internalGetFieldAccessorTable() {
-        return com.vv.personal.twm.artifactory.generated.scheduler.ClassScheduler.internal_static_Classes_fieldAccessorTable
-                .ensureFieldAccessorsInitialized(
-                        com.vv.personal.twm.artifactory.generated.scheduler.ClassScheduler.Classes.class, com.vv.personal.twm.artifactory.generated.scheduler.ClassScheduler.Classes.Builder.class);
-      }
-
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessageV3
                 .alwaysUseFieldBuilders) {
@@ -2056,10 +2381,10 @@ public final class ClassScheduler {
         return this;
       }
 
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-      getDescriptorForType() {
-        return com.vv.personal.twm.artifactory.generated.scheduler.ClassScheduler.internal_static_Classes_descriptor;
+      private Builder(
+              com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
       }
 
       @java.lang.Override
@@ -2076,12 +2401,36 @@ public final class ClassScheduler {
         return result;
       }
 
+      public static com.google.protobuf.Descriptors.Descriptor
+      getDescriptor() {
+        return com.vv.personal.twm.artifactory.generated.scheduler.ClassScheduler.internal_static_Classes_descriptor;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internalGetFieldAccessorTable() {
+        return com.vv.personal.twm.artifactory.generated.scheduler.ClassScheduler.internal_static_Classes_fieldAccessorTable
+                .ensureFieldAccessorsInitialized(
+                        com.vv.personal.twm.artifactory.generated.scheduler.ClassScheduler.Classes.class, com.vv.personal.twm.artifactory.generated.scheduler.ClassScheduler.Classes.Builder.class);
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+      getDescriptorForType() {
+        return com.vv.personal.twm.artifactory.generated.scheduler.ClassScheduler.internal_static_Classes_descriptor;
+      }
+
       @java.lang.Override
       public com.vv.personal.twm.artifactory.generated.scheduler.ClassScheduler.Classes buildPartial() {
         com.vv.personal.twm.artifactory.generated.scheduler.ClassScheduler.Classes result = new com.vv.personal.twm.artifactory.generated.scheduler.ClassScheduler.Classes(this);
         int from_bitField0_ = bitField0_;
         if (classesBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             classes_ = java.util.Collections.unmodifiableList(classes_);
             bitField0_ = (bitField0_ & ~0x00000001);
           }
@@ -2091,11 +2440,6 @@ public final class ClassScheduler {
         }
         onBuilt();
         return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
       }
 
       @java.lang.Override
@@ -2175,7 +2519,7 @@ public final class ClassScheduler {
       }
 
       @java.lang.Override
-      public final boolean isInitialized() {
+      public boolean isInitialized() {
         return true;
       }
 
@@ -2199,7 +2543,7 @@ public final class ClassScheduler {
       }
 
       private void ensureClassesIsMutable() {
-        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+        if ((bitField0_ & 0x00000001) == 0) {
           classes_ = new java.util.ArrayList<com.vv.personal.twm.artifactory.generated.scheduler.ClassScheduler.ScheduledClass>(classes_);
           bitField0_ |= 0x00000001;
         }
@@ -2444,7 +2788,7 @@ public final class ClassScheduler {
           classesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
                   com.vv.personal.twm.artifactory.generated.scheduler.ClassScheduler.ScheduledClass, com.vv.personal.twm.artifactory.generated.scheduler.ClassScheduler.ScheduledClass.Builder, com.vv.personal.twm.artifactory.generated.scheduler.ClassScheduler.ScheduledClassOrBuilder>(
                   classes_,
-                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           classes_ = null;
@@ -2453,13 +2797,13 @@ public final class ClassScheduler {
       }
 
       @java.lang.Override
-      public final Builder setUnknownFields(
+      public Builder setUnknownFields(
               final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
-      public final Builder mergeUnknownFields(
+      public Builder mergeUnknownFields(
               final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
@@ -2478,9 +2822,16 @@ public final class ClassScheduler {
           // @@protoc_insertion_point(message_implements:ScheduledClassCell)
           ScheduledClassCellOrBuilder {
     public static final int CODE_FIELD_NUMBER = 1;
+
+    // Use ScheduledClassCell.newBuilder() to construct.
+    private ScheduledClassCell(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+
     public static final int DAY_FIELD_NUMBER = 2;
     public static final int STARTTIME_FIELD_NUMBER = 3;
     public static final int ENDTIME_FIELD_NUMBER = 4;
+    public static final int LOCATION_FIELD_NUMBER = 5;
     private static final long serialVersionUID = 0L;
     // @@protoc_insertion_point(class_scope:ScheduledClassCell)
     private static final com.vv.personal.twm.artifactory.generated.scheduler.ClassScheduler.ScheduledClassCell DEFAULT_INSTANCE;
@@ -2503,18 +2854,15 @@ public final class ClassScheduler {
     private volatile java.lang.Object day_;
     private volatile java.lang.Object startTime_;
     private volatile java.lang.Object endTime_;
+    private volatile java.lang.Object location_;
     private byte memoizedIsInitialized = -1;
-
-    // Use ScheduledClassCell.newBuilder() to construct.
-    private ScheduledClassCell(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
 
     private ScheduledClassCell() {
       code_ = "";
       day_ = "";
       startTime_ = "";
       endTime_ = "";
+      location_ = "";
     }
 
     private ScheduledClassCell(
@@ -2525,7 +2873,6 @@ public final class ClassScheduler {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
               com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -2560,8 +2907,14 @@ public final class ClassScheduler {
               endTime_ = s;
               break;
             }
+            case 42: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              location_ = s;
+              break;
+            }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                       input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -2571,6 +2924,8 @@ public final class ClassScheduler {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
                 e).setUnfinishedMessage(this);
@@ -2580,7 +2935,7 @@ public final class ClassScheduler {
       }
     }
 
-    public static final com.google.protobuf.Descriptors.Descriptor
+    public static com.google.protobuf.Descriptors.Descriptor
     getDescriptor() {
       return com.vv.personal.twm.artifactory.generated.scheduler.ClassScheduler.internal_static_ScheduledClassCell_descriptor;
     }
@@ -2683,7 +3038,14 @@ public final class ClassScheduler {
     }
 
     @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+            UnusedPrivateParameter unused) {
+      return new ScheduledClassCell();
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
     }
@@ -2698,7 +3060,9 @@ public final class ClassScheduler {
 
     /**
      * <code>string code = 1;</code>
+     * @return The code.
      */
+    @java.lang.Override
     public java.lang.String getCode() {
       java.lang.Object ref = code_;
       if (ref instanceof java.lang.String) {
@@ -2714,7 +3078,10 @@ public final class ClassScheduler {
 
     /**
      * <code>string code = 1;</code>
+     *
+     * @return The bytes for code.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
     getCodeBytes() {
       java.lang.Object ref = code_;
@@ -2731,7 +3098,9 @@ public final class ClassScheduler {
 
     /**
      * <code>string day = 2;</code>
+     * @return The day.
      */
+    @java.lang.Override
     public java.lang.String getDay() {
       java.lang.Object ref = day_;
       if (ref instanceof java.lang.String) {
@@ -2747,7 +3116,9 @@ public final class ClassScheduler {
 
     /**
      * <code>string day = 2;</code>
+     * @return The bytes for day.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
     getDayBytes() {
       java.lang.Object ref = day_;
@@ -2764,7 +3135,10 @@ public final class ClassScheduler {
 
     /**
      * <code>string startTime = 3;</code>
+     *
+     * @return The startTime.
      */
+    @java.lang.Override
     public java.lang.String getStartTime() {
       java.lang.Object ref = startTime_;
       if (ref instanceof java.lang.String) {
@@ -2780,7 +3154,10 @@ public final class ClassScheduler {
 
     /**
      * <code>string startTime = 3;</code>
+     *
+     * @return The bytes for startTime.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
     getStartTimeBytes() {
       java.lang.Object ref = startTime_;
@@ -2797,7 +3174,10 @@ public final class ClassScheduler {
 
     /**
      * <code>string endTime = 4;</code>
+     *
+     * @return The endTime.
      */
+    @java.lang.Override
     public java.lang.String getEndTime() {
       java.lang.Object ref = endTime_;
       if (ref instanceof java.lang.String) {
@@ -2813,7 +3193,10 @@ public final class ClassScheduler {
 
     /**
      * <code>string endTime = 4;</code>
+     *
+     * @return The bytes for endTime.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
     getEndTimeBytes() {
       java.lang.Object ref = endTime_;
@@ -2828,8 +3211,47 @@ public final class ClassScheduler {
       }
     }
 
+    /**
+     * <code>string location = 5;</code>
+     *
+     * @return The location.
+     */
     @java.lang.Override
-    public final boolean isInitialized() {
+    public java.lang.String getLocation() {
+      java.lang.Object ref = location_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        location_ = s;
+        return s;
+      }
+    }
+
+    /**
+     * <code>string location = 5;</code>
+     *
+     * @return The bytes for location.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+    getLocationBytes() {
+      java.lang.Object ref = location_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b =
+                com.google.protobuf.ByteString.copyFromUtf8(
+                        (java.lang.String) ref);
+        location_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    @java.lang.Override
+    public boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
       if (isInitialized == 0) return false;
@@ -2841,17 +3263,20 @@ public final class ClassScheduler {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
             throws java.io.IOException {
-      if (!getCodeBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(code_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, code_);
       }
-      if (!getDayBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(day_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, day_);
       }
-      if (!getStartTimeBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(startTime_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, startTime_);
       }
-      if (!getEndTimeBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(endTime_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, endTime_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(location_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, location_);
       }
       unknownFields.writeTo(output);
     }
@@ -2862,17 +3287,20 @@ public final class ClassScheduler {
       if (size != -1) return size;
 
       size = 0;
-      if (!getCodeBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(code_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, code_);
       }
-      if (!getDayBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(day_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, day_);
       }
-      if (!getStartTimeBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(startTime_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, startTime_);
       }
-      if (!getEndTimeBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(endTime_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, endTime_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(location_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, location_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -2889,17 +3317,17 @@ public final class ClassScheduler {
       }
       com.vv.personal.twm.artifactory.generated.scheduler.ClassScheduler.ScheduledClassCell other = (com.vv.personal.twm.artifactory.generated.scheduler.ClassScheduler.ScheduledClassCell) obj;
 
-      boolean result = true;
-      result = result && getCode()
-              .equals(other.getCode());
-      result = result && getDay()
-              .equals(other.getDay());
-      result = result && getStartTime()
-              .equals(other.getStartTime());
-      result = result && getEndTime()
-              .equals(other.getEndTime());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getCode()
+              .equals(other.getCode())) return false;
+      if (!getDay()
+              .equals(other.getDay())) return false;
+      if (!getStartTime()
+              .equals(other.getStartTime())) return false;
+      if (!getEndTime()
+              .equals(other.getEndTime())) return false;
+      if (!getLocation()
+              .equals(other.getLocation())) return false;
+      return unknownFields.equals(other.unknownFields);
     }
 
     @java.lang.Override
@@ -2917,6 +3345,8 @@ public final class ClassScheduler {
       hash = (53 * hash) + getStartTime().hashCode();
       hash = (37 * hash) + ENDTIME_FIELD_NUMBER;
       hash = (53 * hash) + getEndTime().hashCode();
+      hash = (37 * hash) + LOCATION_FIELD_NUMBER;
+      hash = (53 * hash) + getLocation().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -2962,54 +3392,17 @@ public final class ClassScheduler {
       private java.lang.Object startTime_ = "";
       private java.lang.Object endTime_ = "";
 
-      // Construct using com.vv.personal.twm.artifactory.generated.scheduler.ClassScheduler.ScheduledClassCell.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-              com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-
-      public static final com.google.protobuf.Descriptors.Descriptor
-      getDescriptor() {
-        return com.vv.personal.twm.artifactory.generated.scheduler.ClassScheduler.internal_static_ScheduledClassCell_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internalGetFieldAccessorTable() {
-        return com.vv.personal.twm.artifactory.generated.scheduler.ClassScheduler.internal_static_ScheduledClassCell_fieldAccessorTable
-                .ensureFieldAccessorsInitialized(
-                        com.vv.personal.twm.artifactory.generated.scheduler.ClassScheduler.ScheduledClassCell.class, com.vv.personal.twm.artifactory.generated.scheduler.ClassScheduler.ScheduledClassCell.Builder.class);
-      }
-
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessageV3
                 .alwaysUseFieldBuilders) {
         }
       }
 
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        code_ = "";
+      private java.lang.Object location_ = "";
 
-        day_ = "";
-
-        startTime_ = "";
-
-        endTime_ = "";
-
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-      getDescriptorForType() {
-        return com.vv.personal.twm.artifactory.generated.scheduler.ClassScheduler.internal_static_ScheduledClassCell_descriptor;
+      // Construct using com.vv.personal.twm.artifactory.generated.scheduler.ClassScheduler.ScheduledClassCell.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
       }
 
       @java.lang.Override
@@ -3026,6 +3419,52 @@ public final class ClassScheduler {
         return result;
       }
 
+      private Builder(
+              com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+
+      public static com.google.protobuf.Descriptors.Descriptor
+      getDescriptor() {
+        return com.vv.personal.twm.artifactory.generated.scheduler.ClassScheduler.internal_static_ScheduledClassCell_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internalGetFieldAccessorTable() {
+        return com.vv.personal.twm.artifactory.generated.scheduler.ClassScheduler.internal_static_ScheduledClassCell_fieldAccessorTable
+                .ensureFieldAccessorsInitialized(
+                        com.vv.personal.twm.artifactory.generated.scheduler.ClassScheduler.ScheduledClassCell.class, com.vv.personal.twm.artifactory.generated.scheduler.ClassScheduler.ScheduledClassCell.Builder.class);
+      }
+
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        code_ = "";
+
+        day_ = "";
+
+        startTime_ = "";
+
+        endTime_ = "";
+
+        location_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+      getDescriptorForType() {
+        return com.vv.personal.twm.artifactory.generated.scheduler.ClassScheduler.internal_static_ScheduledClassCell_descriptor;
+      }
+
       @java.lang.Override
       public com.vv.personal.twm.artifactory.generated.scheduler.ClassScheduler.ScheduledClassCell buildPartial() {
         com.vv.personal.twm.artifactory.generated.scheduler.ClassScheduler.ScheduledClassCell result = new com.vv.personal.twm.artifactory.generated.scheduler.ClassScheduler.ScheduledClassCell(this);
@@ -3033,13 +3472,9 @@ public final class ClassScheduler {
         result.day_ = day_;
         result.startTime_ = startTime_;
         result.endTime_ = endTime_;
+        result.location_ = location_;
         onBuilt();
         return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
       }
 
       @java.lang.Override
@@ -3078,7 +3513,7 @@ public final class ClassScheduler {
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.vv.personal.twm.artifactory.generated.scheduler.ClassScheduler.ScheduledClassCell) {
-          return mergeFrom((com.vv.personal.twm.artifactory.generated.scheduler.ClassScheduler.ScheduledClassCell) other);
+          return mergeFrom((com.vv.personal.twm.artifactory.generated.scheduler.ClassScheduler.ScheduledClassCell)other);
         } else {
           super.mergeFrom(other);
           return this;
@@ -3103,13 +3538,17 @@ public final class ClassScheduler {
           endTime_ = other.endTime_;
           onChanged();
         }
+        if (!other.getLocation().isEmpty()) {
+          location_ = other.location_;
+          onChanged();
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
 
       @java.lang.Override
-      public final boolean isInitialized() {
+      public boolean isInitialized() {
         return true;
       }
 
@@ -3134,6 +3573,7 @@ public final class ClassScheduler {
 
       /**
        * <code>string code = 1;</code>
+       * @return The code.
        */
       public java.lang.String getCode() {
         java.lang.Object ref = code_;
@@ -3150,6 +3590,9 @@ public final class ClassScheduler {
 
       /**
        * <code>string code = 1;</code>
+       *
+       * @param value The code to set.
+       * @return This builder for chaining.
        */
       public Builder setCode(
               java.lang.String value) {
@@ -3164,6 +3607,8 @@ public final class ClassScheduler {
 
       /**
        * <code>string code = 1;</code>
+       *
+       * @return The bytes for code.
        */
       public com.google.protobuf.ByteString
       getCodeBytes() {
@@ -3181,6 +3626,9 @@ public final class ClassScheduler {
 
       /**
        * <code>string code = 1;</code>
+       *
+       * @param value The bytes for code to set.
+       * @return This builder for chaining.
        */
       public Builder setCodeBytes(
               com.google.protobuf.ByteString value) {
@@ -3196,6 +3644,7 @@ public final class ClassScheduler {
 
       /**
        * <code>string code = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearCode() {
 
@@ -3206,6 +3655,8 @@ public final class ClassScheduler {
 
       /**
        * <code>string day = 2;</code>
+       *
+       * @return The day.
        */
       public java.lang.String getDay() {
         java.lang.Object ref = day_;
@@ -3222,6 +3673,8 @@ public final class ClassScheduler {
 
       /**
        * <code>string day = 2;</code>
+       * @param value The day to set.
+       * @return This builder for chaining.
        */
       public Builder setDay(
               java.lang.String value) {
@@ -3236,6 +3689,8 @@ public final class ClassScheduler {
 
       /**
        * <code>string day = 2;</code>
+       *
+       * @return The bytes for day.
        */
       public com.google.protobuf.ByteString
       getDayBytes() {
@@ -3253,6 +3708,9 @@ public final class ClassScheduler {
 
       /**
        * <code>string day = 2;</code>
+       *
+       * @param value The bytes for day to set.
+       * @return This builder for chaining.
        */
       public Builder setDayBytes(
               com.google.protobuf.ByteString value) {
@@ -3268,6 +3726,7 @@ public final class ClassScheduler {
 
       /**
        * <code>string day = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearDay() {
 
@@ -3278,6 +3737,8 @@ public final class ClassScheduler {
 
       /**
        * <code>string startTime = 3;</code>
+       *
+       * @return The startTime.
        */
       public java.lang.String getStartTime() {
         java.lang.Object ref = startTime_;
@@ -3294,6 +3755,8 @@ public final class ClassScheduler {
 
       /**
        * <code>string startTime = 3;</code>
+       * @param value The startTime to set.
+       * @return This builder for chaining.
        */
       public Builder setStartTime(
               java.lang.String value) {
@@ -3308,6 +3771,8 @@ public final class ClassScheduler {
 
       /**
        * <code>string startTime = 3;</code>
+       *
+       * @return The bytes for startTime.
        */
       public com.google.protobuf.ByteString
       getStartTimeBytes() {
@@ -3325,6 +3790,8 @@ public final class ClassScheduler {
 
       /**
        * <code>string startTime = 3;</code>
+       * @param value The bytes for startTime to set.
+       * @return This builder for chaining.
        */
       public Builder setStartTimeBytes(
               com.google.protobuf.ByteString value) {
@@ -3340,6 +3807,8 @@ public final class ClassScheduler {
 
       /**
        * <code>string startTime = 3;</code>
+       *
+       * @return This builder for chaining.
        */
       public Builder clearStartTime() {
 
@@ -3350,6 +3819,8 @@ public final class ClassScheduler {
 
       /**
        * <code>string endTime = 4;</code>
+       *
+       * @return The endTime.
        */
       public java.lang.String getEndTime() {
         java.lang.Object ref = endTime_;
@@ -3366,6 +3837,9 @@ public final class ClassScheduler {
 
       /**
        * <code>string endTime = 4;</code>
+       *
+       * @param value The endTime to set.
+       * @return This builder for chaining.
        */
       public Builder setEndTime(
               java.lang.String value) {
@@ -3380,6 +3854,8 @@ public final class ClassScheduler {
 
       /**
        * <code>string endTime = 4;</code>
+       *
+       * @return The bytes for endTime.
        */
       public com.google.protobuf.ByteString
       getEndTimeBytes() {
@@ -3397,6 +3873,9 @@ public final class ClassScheduler {
 
       /**
        * <code>string endTime = 4;</code>
+       *
+       * @param value The bytes for endTime to set.
+       * @return This builder for chaining.
        */
       public Builder setEndTimeBytes(
               com.google.protobuf.ByteString value) {
@@ -3412,6 +3891,8 @@ public final class ClassScheduler {
 
       /**
        * <code>string endTime = 4;</code>
+       *
+       * @return This builder for chaining.
        */
       public Builder clearEndTime() {
 
@@ -3420,14 +3901,97 @@ public final class ClassScheduler {
         return this;
       }
 
-      @java.lang.Override
-      public final Builder setUnknownFields(
-              final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+      /**
+       * <code>string location = 5;</code>
+       *
+       * @return The location.
+       */
+      public java.lang.String getLocation() {
+        java.lang.Object ref = location_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+                  (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          location_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+
+      /**
+       * <code>string location = 5;</code>
+       *
+       * @param value The location to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLocation(
+              java.lang.String value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+
+        location_ = value;
+        onChanged();
+        return this;
+      }
+
+      /**
+       * <code>string location = 5;</code>
+       *
+       * @return The bytes for location.
+       */
+      public com.google.protobuf.ByteString
+      getLocationBytes() {
+        java.lang.Object ref = location_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b =
+                  com.google.protobuf.ByteString.copyFromUtf8(
+                          (java.lang.String) ref);
+          location_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      /**
+       * <code>string location = 5;</code>
+       * @param value The bytes for location to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLocationBytes(
+              com.google.protobuf.ByteString value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        checkByteStringIsUtf8(value);
+
+        location_ = value;
+        onChanged();
+        return this;
+      }
+
+      /**
+       * <code>string location = 5;</code>
+       *
+       * @return This builder for chaining.
+       */
+      public Builder clearLocation() {
+
+        location_ = getDefaultInstance().getLocation();
+        onChanged();
+        return this;
       }
 
       @java.lang.Override
-      public final Builder mergeUnknownFields(
+      public Builder setUnknownFields(
+              final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public Builder mergeUnknownFields(
               final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
@@ -3442,12 +4006,19 @@ public final class ClassScheduler {
    * Protobuf type {@code ClassCells}
    */
   public static final class ClassCells extends
-          com.google.protobuf.GeneratedMessageV3 implements
-          // @@protoc_insertion_point(message_implements:ClassCells)
-          ClassCellsOrBuilder {
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:ClassCells)
+      ClassCellsOrBuilder {
     public static final int CLASSCELLS_FIELD_NUMBER = 1;
+    // Use ClassCells.newBuilder() to construct.
+    private ClassCells(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ClassCells() {
+      classCells_ = java.util.Collections.emptyList();
+    }
     public static final int CLASSES_FIELD_NUMBER = 2;
-    private static final long serialVersionUID = 0L;
+  private static final long serialVersionUID = 0L;
     // @@protoc_insertion_point(class_scope:ClassCells)
     private static final com.vv.personal.twm.artifactory.generated.scheduler.ClassScheduler.ClassCells DEFAULT_INSTANCE;
     private static final com.google.protobuf.Parser<ClassCells>
@@ -3465,19 +4036,9 @@ public final class ClassScheduler {
       DEFAULT_INSTANCE = new com.vv.personal.twm.artifactory.generated.scheduler.ClassScheduler.ClassCells();
     }
 
-    private int bitField0_;
     private java.util.List<com.vv.personal.twm.artifactory.generated.scheduler.ClassScheduler.ScheduledClassCell> classCells_;
     private com.vv.personal.twm.artifactory.generated.scheduler.ClassScheduler.Classes classes_;
     private byte memoizedIsInitialized = -1;
-
-    // Use ClassCells.newBuilder() to construct.
-    private ClassCells(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-
-    private ClassCells() {
-      classCells_ = java.util.Collections.emptyList();
-    }
 
     private ClassCells(
             com.google.protobuf.CodedInputStream input,
@@ -3499,7 +4060,7 @@ public final class ClassScheduler {
               done = true;
               break;
             case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+              if ((mutable_bitField0_ & 0x00000001) == 0) {
                 classCells_ = new java.util.ArrayList<com.vv.personal.twm.artifactory.generated.scheduler.ClassScheduler.ScheduledClassCell>();
                 mutable_bitField0_ |= 0x00000001;
               }
@@ -3521,7 +4082,7 @@ public final class ClassScheduler {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                       input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -3531,11 +4092,13 @@ public final class ClassScheduler {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
                 e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           classCells_ = java.util.Collections.unmodifiableList(classCells_);
         }
         this.unknownFields = unknownFields.build();
@@ -3543,7 +4106,7 @@ public final class ClassScheduler {
       }
     }
 
-    public static final com.google.protobuf.Descriptors.Descriptor
+    public static com.google.protobuf.Descriptors.Descriptor
     getDescriptor() {
       return com.vv.personal.twm.artifactory.generated.scheduler.ClassScheduler.internal_static_ClassCells_descriptor;
     }
@@ -3611,7 +4174,7 @@ public final class ClassScheduler {
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
-              .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
 
     public static com.vv.personal.twm.artifactory.generated.scheduler.ClassScheduler.ClassCells parseFrom(
@@ -3627,6 +4190,26 @@ public final class ClassScheduler {
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getClassCellsCount() > 0) {
+        hash = (37 * hash) + CLASSCELLS_FIELD_NUMBER;
+        hash = (53 * hash) + getClassCellsList().hashCode();
+      }
+      if (hasClasses()) {
+        hash = (37 * hash) + CLASSES_FIELD_NUMBER;
+        hash = (53 * hash) + getClasses().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
     }
 
     public static Builder newBuilder() {
@@ -3646,7 +4229,14 @@ public final class ClassScheduler {
     }
 
     @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ClassCells();
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
     }
@@ -3662,6 +4252,7 @@ public final class ClassScheduler {
     /**
      * <code>repeated .ScheduledClassCell classCells = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<com.vv.personal.twm.artifactory.generated.scheduler.ClassScheduler.ScheduledClassCell> getClassCellsList() {
       return classCells_;
     }
@@ -3669,14 +4260,16 @@ public final class ClassScheduler {
     /**
      * <code>repeated .ScheduledClassCell classCells = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends com.vv.personal.twm.artifactory.generated.scheduler.ClassScheduler.ScheduledClassCellOrBuilder>
-    getClassCellsOrBuilderList() {
+        getClassCellsOrBuilderList() {
       return classCells_;
     }
 
     /**
      * <code>repeated .ScheduledClassCell classCells = 1;</code>
      */
+    @java.lang.Override
     public int getClassCellsCount() {
       return classCells_.size();
     }
@@ -3684,6 +4277,7 @@ public final class ClassScheduler {
     /**
      * <code>repeated .ScheduledClassCell classCells = 1;</code>
      */
+    @java.lang.Override
     public com.vv.personal.twm.artifactory.generated.scheduler.ClassScheduler.ScheduledClassCell getClassCells(int index) {
       return classCells_.get(index);
     }
@@ -3691,6 +4285,7 @@ public final class ClassScheduler {
     /**
      * <code>repeated .ScheduledClassCell classCells = 1;</code>
      */
+    @java.lang.Override
     public com.vv.personal.twm.artifactory.generated.scheduler.ClassScheduler.ScheduledClassCellOrBuilder getClassCellsOrBuilder(
             int index) {
       return classCells_.get(index);
@@ -3698,14 +4293,18 @@ public final class ClassScheduler {
 
     /**
      * <code>.Classes classes = 2;</code>
+     * @return Whether the classes field is set.
      */
+    @java.lang.Override
     public boolean hasClasses() {
       return classes_ != null;
     }
 
     /**
      * <code>.Classes classes = 2;</code>
+     * @return The classes.
      */
+    @java.lang.Override
     public com.vv.personal.twm.artifactory.generated.scheduler.ClassScheduler.Classes getClasses() {
       return classes_ == null ? com.vv.personal.twm.artifactory.generated.scheduler.ClassScheduler.Classes.getDefaultInstance() : classes_;
     }
@@ -3713,12 +4312,13 @@ public final class ClassScheduler {
     /**
      * <code>.Classes classes = 2;</code>
      */
+    @java.lang.Override
     public com.vv.personal.twm.artifactory.generated.scheduler.ClassScheduler.ClassesOrBuilder getClassesOrBuilder() {
       return getClasses();
     }
 
     @java.lang.Override
-    public final boolean isInitialized() {
+    public boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
       if (isInitialized == 0) return false;
@@ -3761,43 +4361,21 @@ public final class ClassScheduler {
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
-        return true;
+       return true;
       }
       if (!(obj instanceof com.vv.personal.twm.artifactory.generated.scheduler.ClassScheduler.ClassCells)) {
         return super.equals(obj);
       }
       com.vv.personal.twm.artifactory.generated.scheduler.ClassScheduler.ClassCells other = (com.vv.personal.twm.artifactory.generated.scheduler.ClassScheduler.ClassCells) obj;
 
-      boolean result = true;
-      result = result && getClassCellsList()
-              .equals(other.getClassCellsList());
-      result = result && (hasClasses() == other.hasClasses());
+      if (!getClassCellsList()
+              .equals(other.getClassCellsList())) return false;
+      if (hasClasses() != other.hasClasses()) return false;
       if (hasClasses()) {
-        result = result && getClasses()
-                .equals(other.getClasses());
+        if (!getClasses()
+                .equals(other.getClasses())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      if (getClassCellsCount() > 0) {
-        hash = (37 * hash) + CLASSCELLS_FIELD_NUMBER;
-        hash = (53 * hash) + getClassCellsList().hashCode();
-      }
-      if (hasClasses()) {
-        hash = (37 * hash) + CLASSES_FIELD_NUMBER;
-        hash = (53 * hash) + getClasses().hashCode();
-      }
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
+      return unknownFields.equals(other.unknownFields);
     }
 
     @java.lang.Override
@@ -3840,33 +4418,7 @@ public final class ClassScheduler {
               java.util.Collections.emptyList();
       private com.google.protobuf.RepeatedFieldBuilderV3<
               com.vv.personal.twm.artifactory.generated.scheduler.ClassScheduler.ScheduledClassCell, com.vv.personal.twm.artifactory.generated.scheduler.ClassScheduler.ScheduledClassCell.Builder, com.vv.personal.twm.artifactory.generated.scheduler.ClassScheduler.ScheduledClassCellOrBuilder> classCellsBuilder_;
-      private com.vv.personal.twm.artifactory.generated.scheduler.ClassScheduler.Classes classes_ = null;
-      private com.google.protobuf.SingleFieldBuilderV3<
-              com.vv.personal.twm.artifactory.generated.scheduler.ClassScheduler.Classes, com.vv.personal.twm.artifactory.generated.scheduler.ClassScheduler.Classes.Builder, com.vv.personal.twm.artifactory.generated.scheduler.ClassScheduler.ClassesOrBuilder> classesBuilder_;
-
-      // Construct using com.vv.personal.twm.artifactory.generated.scheduler.ClassScheduler.ClassCells.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-              com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-
-      public static final com.google.protobuf.Descriptors.Descriptor
-      getDescriptor() {
-        return com.vv.personal.twm.artifactory.generated.scheduler.ClassScheduler.internal_static_ClassCells_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internalGetFieldAccessorTable() {
-        return com.vv.personal.twm.artifactory.generated.scheduler.ClassScheduler.internal_static_ClassCells_fieldAccessorTable
-                .ensureFieldAccessorsInitialized(
-                        com.vv.personal.twm.artifactory.generated.scheduler.ClassScheduler.ClassCells.class, com.vv.personal.twm.artifactory.generated.scheduler.ClassScheduler.ClassCells.Builder.class);
-      }
+      private com.vv.personal.twm.artifactory.generated.scheduler.ClassScheduler.Classes classes_;
 
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessageV3
@@ -3893,11 +4445,8 @@ public final class ClassScheduler {
         return this;
       }
 
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-      getDescriptorForType() {
-        return com.vv.personal.twm.artifactory.generated.scheduler.ClassScheduler.internal_static_ClassCells_descriptor;
-      }
+      private com.google.protobuf.SingleFieldBuilderV3<
+              com.vv.personal.twm.artifactory.generated.scheduler.ClassScheduler.Classes, com.vv.personal.twm.artifactory.generated.scheduler.ClassScheduler.Classes.Builder, com.vv.personal.twm.artifactory.generated.scheduler.ClassScheduler.ClassesOrBuilder> classesBuilder_;
 
       @java.lang.Override
       public com.vv.personal.twm.artifactory.generated.scheduler.ClassScheduler.ClassCells getDefaultInstanceForType() {
@@ -3913,13 +4462,47 @@ public final class ClassScheduler {
         return result;
       }
 
+      // Construct using com.vv.personal.twm.artifactory.generated.scheduler.ClassScheduler.ClassCells.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+
+      private Builder(
+              com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+
+      public static com.google.protobuf.Descriptors.Descriptor
+      getDescriptor() {
+        return com.vv.personal.twm.artifactory.generated.scheduler.ClassScheduler.internal_static_ClassCells_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internalGetFieldAccessorTable() {
+        return com.vv.personal.twm.artifactory.generated.scheduler.ClassScheduler.internal_static_ClassCells_fieldAccessorTable
+                .ensureFieldAccessorsInitialized(
+                        com.vv.personal.twm.artifactory.generated.scheduler.ClassScheduler.ClassCells.class, com.vv.personal.twm.artifactory.generated.scheduler.ClassScheduler.ClassCells.Builder.class);
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.vv.personal.twm.artifactory.generated.scheduler.ClassScheduler.internal_static_ClassCells_descriptor;
+      }
+
       @java.lang.Override
       public com.vv.personal.twm.artifactory.generated.scheduler.ClassScheduler.ClassCells buildPartial() {
         com.vv.personal.twm.artifactory.generated.scheduler.ClassScheduler.ClassCells result = new com.vv.personal.twm.artifactory.generated.scheduler.ClassScheduler.ClassCells(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (classCellsBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             classCells_ = java.util.Collections.unmodifiableList(classCells_);
             bitField0_ = (bitField0_ & ~0x00000001);
           }
@@ -3932,14 +4515,8 @@ public final class ClassScheduler {
         } else {
           result.classes_ = classesBuilder_.build();
         }
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
       }
 
       @java.lang.Override
@@ -4022,34 +4599,8 @@ public final class ClassScheduler {
       }
 
       @java.lang.Override
-      public final boolean isInitialized() {
+      public boolean isInitialized() {
         return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-              com.google.protobuf.CodedInputStream input,
-              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-              throws java.io.IOException {
-        com.vv.personal.twm.artifactory.generated.scheduler.ClassScheduler.ClassCells parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.vv.personal.twm.artifactory.generated.scheduler.ClassScheduler.ClassCells) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-
-      private void ensureClassCellsIsMutable() {
-        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
-          classCells_ = new java.util.ArrayList<com.vv.personal.twm.artifactory.generated.scheduler.ClassScheduler.ScheduledClassCell>(classCells_);
-          bitField0_ |= 0x00000001;
-        }
       }
 
       /**
@@ -4085,6 +4636,49 @@ public final class ClassScheduler {
         }
       }
 
+      @java.lang.Override
+      public Builder mergeFrom(
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws java.io.IOException {
+        com.vv.personal.twm.artifactory.generated.scheduler.ClassScheduler.ClassCells parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.vv.personal.twm.artifactory.generated.scheduler.ClassScheduler.ClassCells) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private void ensureClassCellsIsMutable() {
+        if ((bitField0_ & 0x00000001) == 0) {
+          classCells_ = new java.util.ArrayList<com.vv.personal.twm.artifactory.generated.scheduler.ClassScheduler.ScheduledClassCell>(classCells_);
+          bitField0_ |= 0x00000001;
+        }
+      }
+
+      /**
+       * <code>repeated .ScheduledClassCell classCells = 1;</code>
+       */
+      public Builder addClassCells(com.vv.personal.twm.artifactory.generated.scheduler.ClassScheduler.ScheduledClassCell value) {
+        if (classCellsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureClassCellsIsMutable();
+          classCells_.add(value);
+          onChanged();
+        } else {
+          classCellsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+
       /**
        * <code>repeated .ScheduledClassCell classCells = 1;</code>
        */
@@ -4114,23 +4708,6 @@ public final class ClassScheduler {
           onChanged();
         } else {
           classCellsBuilder_.setMessage(index, builderForValue.build());
-        }
-        return this;
-      }
-
-      /**
-       * <code>repeated .ScheduledClassCell classCells = 1;</code>
-       */
-      public Builder addClassCells(com.vv.personal.twm.artifactory.generated.scheduler.ClassScheduler.ScheduledClassCell value) {
-        if (classCellsBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureClassCellsIsMutable();
-          classCells_.add(value);
-          onChanged();
-        } else {
-          classCellsBuilder_.addMessage(value);
         }
         return this;
       }
@@ -4171,6 +4748,33 @@ public final class ClassScheduler {
       /**
        * <code>repeated .ScheduledClassCell classCells = 1;</code>
        */
+      public Builder clearClassCells() {
+        if (classCellsBuilder_ == null) {
+          classCells_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          classCellsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ScheduledClassCell classCells = 1;</code>
+       */
+      public Builder removeClassCells(int index) {
+        if (classCellsBuilder_ == null) {
+          ensureClassCellsIsMutable();
+          classCells_.remove(index);
+          onChanged();
+        } else {
+          classCellsBuilder_.remove(index);
+        }
+        return this;
+      }
+
+      /**
+       * <code>repeated .ScheduledClassCell classCells = 1;</code>
+       */
       public Builder addClassCells(
               int index, com.vv.personal.twm.artifactory.generated.scheduler.ClassScheduler.ScheduledClassCell.Builder builderForValue) {
         if (classCellsBuilder_ == null) {
@@ -4202,34 +4806,6 @@ public final class ClassScheduler {
       /**
        * <code>repeated .ScheduledClassCell classCells = 1;</code>
        */
-      public Builder clearClassCells() {
-        if (classCellsBuilder_ == null) {
-          classCells_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
-          onChanged();
-        } else {
-          classCellsBuilder_.clear();
-        }
-        return this;
-      }
-
-      /**
-       * <code>repeated .ScheduledClassCell classCells = 1;</code>
-       */
-      public Builder removeClassCells(int index) {
-        if (classCellsBuilder_ == null) {
-          ensureClassCellsIsMutable();
-          classCells_.remove(index);
-          onChanged();
-        } else {
-          classCellsBuilder_.remove(index);
-        }
-        return this;
-      }
-
-      /**
-       * <code>repeated .ScheduledClassCell classCells = 1;</code>
-       */
       public com.vv.personal.twm.artifactory.generated.scheduler.ClassScheduler.ScheduledClassCell.Builder getClassCellsBuilder(
               int index) {
         return getClassCellsFieldBuilder().getBuilder(index);
@@ -4241,8 +4817,7 @@ public final class ClassScheduler {
       public com.vv.personal.twm.artifactory.generated.scheduler.ClassScheduler.ScheduledClassCellOrBuilder getClassCellsOrBuilder(
               int index) {
         if (classCellsBuilder_ == null) {
-          return classCells_.get(index);
-        } else {
+          return classCells_.get(index);  } else {
           return classCellsBuilder_.getMessageOrBuilder(index);
         }
       }
@@ -4251,7 +4826,7 @@ public final class ClassScheduler {
        * <code>repeated .ScheduledClassCell classCells = 1;</code>
        */
       public java.util.List<? extends com.vv.personal.twm.artifactory.generated.scheduler.ClassScheduler.ScheduledClassCellOrBuilder>
-      getClassCellsOrBuilderList() {
+           getClassCellsOrBuilderList() {
         if (classCellsBuilder_ != null) {
           return classCellsBuilder_.getMessageOrBuilderList();
         } else {
@@ -4280,18 +4855,18 @@ public final class ClassScheduler {
        * <code>repeated .ScheduledClassCell classCells = 1;</code>
        */
       public java.util.List<com.vv.personal.twm.artifactory.generated.scheduler.ClassScheduler.ScheduledClassCell.Builder>
-      getClassCellsBuilderList() {
+           getClassCellsBuilderList() {
         return getClassCellsFieldBuilder().getBuilderList();
       }
 
       private com.google.protobuf.RepeatedFieldBuilderV3<
               com.vv.personal.twm.artifactory.generated.scheduler.ClassScheduler.ScheduledClassCell, com.vv.personal.twm.artifactory.generated.scheduler.ClassScheduler.ScheduledClassCell.Builder, com.vv.personal.twm.artifactory.generated.scheduler.ClassScheduler.ScheduledClassCellOrBuilder>
-      getClassCellsFieldBuilder() {
+          getClassCellsFieldBuilder() {
         if (classCellsBuilder_ == null) {
           classCellsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-                  com.vv.personal.twm.artifactory.generated.scheduler.ClassScheduler.ScheduledClassCell, com.vv.personal.twm.artifactory.generated.scheduler.ClassScheduler.ScheduledClassCell.Builder, com.vv.personal.twm.artifactory.generated.scheduler.ClassScheduler.ScheduledClassCellOrBuilder>(
+              com.vv.personal.twm.artifactory.generated.scheduler.ClassScheduler.ScheduledClassCell, com.vv.personal.twm.artifactory.generated.scheduler.ClassScheduler.ScheduledClassCell.Builder, com.vv.personal.twm.artifactory.generated.scheduler.ClassScheduler.ScheduledClassCellOrBuilder>(
                   classCells_,
-                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           classCells_ = null;
@@ -4301,6 +4876,7 @@ public final class ClassScheduler {
 
       /**
        * <code>.Classes classes = 2;</code>
+       * @return Whether the classes field is set.
        */
       public boolean hasClasses() {
         return classesBuilder_ != null || classes_ != null;
@@ -4308,6 +4884,8 @@ public final class ClassScheduler {
 
       /**
        * <code>.Classes classes = 2;</code>
+       *
+       * @return The classes.
        */
       public com.vv.personal.twm.artifactory.generated.scheduler.ClassScheduler.Classes getClasses() {
         if (classesBuilder_ == null) {
@@ -4348,7 +4926,6 @@ public final class ClassScheduler {
 
         return this;
       }
-
       /**
        * <code>.Classes classes = 2;</code>
        */
@@ -4356,7 +4933,7 @@ public final class ClassScheduler {
         if (classesBuilder_ == null) {
           if (classes_ != null) {
             classes_ =
-                    com.vv.personal.twm.artifactory.generated.scheduler.ClassScheduler.Classes.newBuilder(classes_).mergeFrom(value).buildPartial();
+              com.vv.personal.twm.artifactory.generated.scheduler.ClassScheduler.Classes.newBuilder(classes_).mergeFrom(value).buildPartial();
           } else {
             classes_ = value;
           }
@@ -4367,7 +4944,6 @@ public final class ClassScheduler {
 
         return this;
       }
-
       /**
        * <code>.Classes classes = 2;</code>
        */
@@ -4382,7 +4958,6 @@ public final class ClassScheduler {
 
         return this;
       }
-
       /**
        * <code>.Classes classes = 2;</code>
        */
@@ -4391,7 +4966,6 @@ public final class ClassScheduler {
         onChanged();
         return getClassesFieldBuilder().getBuilder();
       }
-
       /**
        * <code>.Classes classes = 2;</code>
        */
@@ -4400,19 +4974,18 @@ public final class ClassScheduler {
           return classesBuilder_.getMessageOrBuilder();
         } else {
           return classes_ == null ?
-                  com.vv.personal.twm.artifactory.generated.scheduler.ClassScheduler.Classes.getDefaultInstance() : classes_;
+              com.vv.personal.twm.artifactory.generated.scheduler.ClassScheduler.Classes.getDefaultInstance() : classes_;
         }
       }
-
       /**
        * <code>.Classes classes = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-              com.vv.personal.twm.artifactory.generated.scheduler.ClassScheduler.Classes, com.vv.personal.twm.artifactory.generated.scheduler.ClassScheduler.Classes.Builder, com.vv.personal.twm.artifactory.generated.scheduler.ClassScheduler.ClassesOrBuilder>
-      getClassesFieldBuilder() {
+          com.vv.personal.twm.artifactory.generated.scheduler.ClassScheduler.Classes, com.vv.personal.twm.artifactory.generated.scheduler.ClassScheduler.Classes.Builder, com.vv.personal.twm.artifactory.generated.scheduler.ClassScheduler.ClassesOrBuilder>
+          getClassesFieldBuilder() {
         if (classesBuilder_ == null) {
           classesBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-                  com.vv.personal.twm.artifactory.generated.scheduler.ClassScheduler.Classes, com.vv.personal.twm.artifactory.generated.scheduler.ClassScheduler.Classes.Builder, com.vv.personal.twm.artifactory.generated.scheduler.ClassScheduler.ClassesOrBuilder>(
+              com.vv.personal.twm.artifactory.generated.scheduler.ClassScheduler.Classes, com.vv.personal.twm.artifactory.generated.scheduler.ClassScheduler.Classes.Builder, com.vv.personal.twm.artifactory.generated.scheduler.ClassScheduler.ClassesOrBuilder>(
                   getClasses(),
                   getParentForChildren(),
                   isClean());
@@ -4420,16 +4993,15 @@ public final class ClassScheduler {
         }
         return classesBuilder_;
       }
-
       @java.lang.Override
-      public final Builder setUnknownFields(
-              final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+      public Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
-      public final Builder mergeUnknownFields(
-              final com.google.protobuf.UnknownFieldSet unknownFields) {
+      public Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 

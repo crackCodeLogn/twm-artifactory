@@ -12,6 +12,7 @@ message ScheduledClass {
   string name = 6;
   string prof = 7;
   bool ai = 8;
+  string location = 9;
 }
 
 message Classes {
@@ -23,6 +24,7 @@ message ScheduledClassCell {
   string day = 2;
   string startTime = 3;
   string endTime = 4;
+  string location = 5;
 }
 
 message ClassCells {
