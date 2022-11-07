@@ -25,6 +25,7 @@ message ScheduledClassCell {
   string startTime = 3;
   string endTime = 4;
   string location = 5;
+  string prof = 6;
 }
 
 message ClassCells {
