@@ -7,7 +7,8 @@ message Ticker {
   string symbol = 1;
   string name = 2;
   string sector = 3;
-  repeated Value data = 4;
+  InstrumentType type = 4;
+  repeated Value data = 5;
 }
 
 message Value {
@@ -29,4 +30,15 @@ message Portfolio {
 enum AccountType {
   TFSA = 0;
   NR = 1;
+}
+
+enum InstrumentType {
+  EQUITY = 0;
+  INDEX = 1;
+  ETF = 2;
+  MUTUALFUND = 3;
+  FUTURE = 4;
+  CURRENCY = 5;
+  CRYPTOCURRENCY = 6;
+  OPTION = 7;
 }

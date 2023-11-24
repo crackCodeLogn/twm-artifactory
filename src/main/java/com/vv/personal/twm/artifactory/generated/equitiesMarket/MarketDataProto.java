@@ -5,6 +5,19 @@
 package com.vv.personal.twm.artifactory.generated.equitiesMarket;
 
 public final class MarketDataProto {
+    private MarketDataProto() {
+    }
+
+    public static void registerAllExtensions(
+            com.google.protobuf.ExtensionRegistryLite registry) {
+    }
+
+    public static void registerAllExtensions(
+            com.google.protobuf.ExtensionRegistry registry) {
+        registerAllExtensions(
+                (com.google.protobuf.ExtensionRegistryLite) registry);
+    }
+
     private static final com.google.protobuf.Descriptors.Descriptor
             internal_static_Ticker_descriptor;
     private static final
@@ -30,59 +43,50 @@ public final class MarketDataProto {
 
     static {
         java.lang.String[] descriptorData = {
-                "\n\020MarketData.proto\"L\n\006Ticker\022\016\n\006symbol\030\001" +
-                        " \001(\t\022\014\n\004name\030\002 \001(\t\022\016\n\006sector\030\003 \001(\t\022\024\n\004da" +
-                        "ta\030\004 \003(\0132\006.Value\"$\n\005Value\022\014\n\004date\030\001 \001(\t\022" +
-                        "\r\n\005price\030\002 \001(\001\"U\n\nInvestment\022\027\n\006ticker\030\001" +
-                        " \001(\0132\007.Ticker\022\013\n\003qty\030\002 \001(\001\022!\n\013accountTyp" +
-                        "e\030\003 \001(\0162\014.AccountType\"-\n\tPortfolio\022 \n\013in" +
-                        "vestments\030\001 \003(\0132\013.Investment*\037\n\013AccountT" +
-                        "ype\022\010\n\004TFSA\020\000\022\006\n\002NR\020\001BK\n8com.vv.personal" +
-                        ".twm.artifactory.generated.equitiesMarke" +
-                        "tB\017MarketDataProtob\006proto3"
-        };
-        descriptor = com.google.protobuf.Descriptors.FileDescriptor
-                .internalBuildGeneratedFileFrom(descriptorData,
-                        new com.google.protobuf.Descriptors.FileDescriptor[]{
-                        });
-        internal_static_Ticker_descriptor =
-                getDescriptor().getMessageTypes().get(0);
-        internal_static_Ticker_fieldAccessorTable = new
-                com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-                internal_static_Ticker_descriptor,
-                new java.lang.String[]{"Symbol", "Name", "Sector", "Data",});
-        internal_static_Value_descriptor =
-                getDescriptor().getMessageTypes().get(1);
-        internal_static_Value_fieldAccessorTable = new
-                com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-                internal_static_Value_descriptor,
-                new java.lang.String[]{"Date", "Price",});
-        internal_static_Investment_descriptor =
-                getDescriptor().getMessageTypes().get(2);
-        internal_static_Investment_fieldAccessorTable = new
-                com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-                internal_static_Investment_descriptor,
-                new java.lang.String[]{"Ticker", "Qty", "AccountType",});
-        internal_static_Portfolio_descriptor =
-                getDescriptor().getMessageTypes().get(3);
-        internal_static_Portfolio_fieldAccessorTable = new
-                com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-                internal_static_Portfolio_descriptor,
-                new java.lang.String[]{"Investments",});
-    }
-
-    private MarketDataProto() {
-    }
-
-    public static void registerAllExtensions(
-            com.google.protobuf.ExtensionRegistryLite registry) {
-    }
-
-    public static void registerAllExtensions(
-            com.google.protobuf.ExtensionRegistry registry) {
-        registerAllExtensions(
-                (com.google.protobuf.ExtensionRegistryLite) registry);
-    }
+                "\n\020MarketData.proto\"k\n\006Ticker\022\016\n\006symbol\030\001" +
+                        " \001(\t\022\014\n\004name\030\002 \001(\t\022\016\n\006sector\030\003 \001(\t\022\035\n\004ty" +
+      "pe\030\004 \001(\0162\017.InstrumentType\022\024\n\004data\030\005 \003(\0132" +
+      "\006.Value\"$\n\005Value\022\014\n\004date\030\001 \001(\t\022\r\n\005price\030" +
+      "\002 \001(\001\"U\n\nInvestment\022\027\n\006ticker\030\001 \001(\0132\007.Ti" +
+      "cker\022\013\n\003qty\030\002 \001(\001\022!\n\013accountType\030\003 \001(\0162\014" +
+      ".AccountType\"-\n\tPortfolio\022 \n\013investments" +
+      "\030\001 \003(\0132\013.Investment*\037\n\013AccountType\022\010\n\004TF" +
+      "SA\020\000\022\006\n\002NR\020\001*z\n\016InstrumentType\022\n\n\006EQUITY" +
+      "\020\000\022\t\n\005INDEX\020\001\022\007\n\003ETF\020\002\022\016\n\nMUTUALFUND\020\003\022\n" +
+      "\n\006FUTURE\020\004\022\014\n\010CURRENCY\020\005\022\022\n\016CRYPTOCURREN" +
+      "CY\020\006\022\n\n\006OPTION\020\007BK\n8com.vv.personal.twm." +
+      "artifactory.generated.equitiesMarketB\017Ma" +
+      "rketDataProtob\006proto3"
+    };
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
+      .internalBuildGeneratedFileFrom(descriptorData,
+        new com.google.protobuf.Descriptors.FileDescriptor[] {
+        });
+    internal_static_Ticker_descriptor =
+      getDescriptor().getMessageTypes().get(0);
+    internal_static_Ticker_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_Ticker_descriptor,
+        new java.lang.String[] { "Symbol", "Name", "Sector", "Type", "Data", });
+    internal_static_Value_descriptor =
+      getDescriptor().getMessageTypes().get(1);
+    internal_static_Value_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_Value_descriptor,
+        new java.lang.String[] { "Date", "Price", });
+    internal_static_Investment_descriptor =
+      getDescriptor().getMessageTypes().get(2);
+    internal_static_Investment_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_Investment_descriptor,
+        new java.lang.String[] { "Ticker", "Qty", "AccountType", });
+    internal_static_Portfolio_descriptor =
+      getDescriptor().getMessageTypes().get(3);
+    internal_static_Portfolio_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_Portfolio_descriptor,
+        new java.lang.String[] { "Investments", });
+  }
 
     public static com.google.protobuf.Descriptors.FileDescriptor
     getDescriptor() {
@@ -112,6 +116,8 @@ public final class MarketDataProto {
          * <code>NR = 1;</code>
          */
         public static final int NR_VALUE = 1;
+
+
         private static final com.google.protobuf.Internal.EnumLiteMap<
                 AccountType> internalValueMap =
                 new com.google.protobuf.Internal.EnumLiteMap<AccountType>() {
@@ -119,12 +125,6 @@ public final class MarketDataProto {
                         return AccountType.forNumber(number);
                     }
                 };
-        private static final AccountType[] VALUES = values();
-        private final int value;
-
-        AccountType(int value) {
-            this.value = value;
-        }
 
         /**
          * @param value The numeric wire value of the corresponding enum entry.
@@ -155,10 +155,24 @@ public final class MarketDataProto {
         internalGetValueMap() {
             return internalValueMap;
         }
+        private static final AccountType[] VALUES = values();
+        private final int value;
+
+        AccountType(int value) {
+            this.value = value;
+        }
 
         public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
             return com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.getDescriptor().getEnumTypes().get(0);
+        }
+
+        public final int getNumber() {
+            if (this == UNRECOGNIZED) {
+                throw new java.lang.IllegalArgumentException(
+                        "Can't get the number of an unknown enum value.");
+            }
+            return value;
         }
 
         public static AccountType valueOf(
@@ -171,14 +185,6 @@ public final class MarketDataProto {
                 return UNRECOGNIZED;
             }
             return VALUES[desc.getIndex()];
-        }
-
-        public final int getNumber() {
-            if (this == UNRECOGNIZED) {
-                throw new java.lang.IllegalArgumentException(
-                        "Can't get the number of an unknown enum value.");
-            }
-            return value;
         }
 
         public final com.google.protobuf.Descriptors.EnumValueDescriptor
@@ -197,6 +203,176 @@ public final class MarketDataProto {
 
         // @@protoc_insertion_point(enum_scope:AccountType)
     }
+    /**
+     * Protobuf enum {@code InstrumentType}
+     */
+    public enum InstrumentType
+            implements com.google.protobuf.ProtocolMessageEnum {
+        /**
+         * <code>EQUITY = 0;</code>
+         */
+        EQUITY(0),
+        /**
+         * <code>INDEX = 1;</code>
+         */
+        INDEX(1),
+        /**
+         * <code>ETF = 2;</code>
+         */
+        ETF(2),
+        /**
+         * <code>MUTUALFUND = 3;</code>
+         */
+        MUTUALFUND(3),
+        /**
+         * <code>FUTURE = 4;</code>
+         */
+        FUTURE(4),
+        /**
+         * <code>CURRENCY = 5;</code>
+         */
+        CURRENCY(5),
+        /**
+         * <code>CRYPTOCURRENCY = 6;</code>
+         */
+        CRYPTOCURRENCY(6),
+        /**
+         * <code>OPTION = 7;</code>
+         */
+        OPTION(7),
+        UNRECOGNIZED(-1),
+        ;
+
+        /**
+         * <code>EQUITY = 0;</code>
+         */
+        public static final int EQUITY_VALUE = 0;
+        /**
+         * <code>INDEX = 1;</code>
+         */
+        public static final int INDEX_VALUE = 1;
+        /**
+         * <code>ETF = 2;</code>
+         */
+        public static final int ETF_VALUE = 2;
+        /**
+         * <code>MUTUALFUND = 3;</code>
+         */
+        public static final int MUTUALFUND_VALUE = 3;
+        /**
+         * <code>FUTURE = 4;</code>
+         */
+        public static final int FUTURE_VALUE = 4;
+        /**
+         * <code>CURRENCY = 5;</code>
+         */
+        public static final int CURRENCY_VALUE = 5;
+        /**
+         * <code>CRYPTOCURRENCY = 6;</code>
+         */
+        public static final int CRYPTOCURRENCY_VALUE = 6;
+        /**
+         * <code>OPTION = 7;</code>
+         */
+        public static final int OPTION_VALUE = 7;
+
+
+        public final int getNumber() {
+            if (this == UNRECOGNIZED) {
+                throw new java.lang.IllegalArgumentException(
+                        "Can't get the number of an unknown enum value.");
+            }
+            return value;
+        }
+        private static final com.google.protobuf.Internal.EnumLiteMap<
+                InstrumentType> internalValueMap =
+                new com.google.protobuf.Internal.EnumLiteMap<InstrumentType>() {
+                    public InstrumentType findValueByNumber(int number) {
+                        return InstrumentType.forNumber(number);
+                    }
+                };
+        private static final InstrumentType[] VALUES = values();
+        private final int value;
+
+        InstrumentType(int value) {
+            this.value = value;
+        }
+
+        /**
+         * @param value The numeric wire value of the corresponding enum entry.
+         * @return The enum associated with the given numeric wire value.
+         * @deprecated Use {@link #forNumber(int)} instead.
+         */
+        @java.lang.Deprecated
+        public static InstrumentType valueOf(int value) {
+            return forNumber(value);
+        }
+
+        /**
+         * @param value The numeric wire value of the corresponding enum entry.
+         * @return The enum associated with the given numeric wire value.
+         */
+        public static InstrumentType forNumber(int value) {
+            switch (value) {
+                case 0:
+                    return EQUITY;
+                case 1:
+                    return INDEX;
+                case 2:
+                    return ETF;
+                case 3:
+                    return MUTUALFUND;
+                case 4:
+                    return FUTURE;
+                case 5:
+                    return CURRENCY;
+                case 6:
+                    return CRYPTOCURRENCY;
+                case 7:
+                    return OPTION;
+                default:
+                    return null;
+            }
+        }
+
+        public static com.google.protobuf.Internal.EnumLiteMap<InstrumentType>
+        internalGetValueMap() {
+            return internalValueMap;
+        }
+
+        public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+            return com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.getDescriptor().getEnumTypes().get(1);
+        }
+
+        public static InstrumentType valueOf(
+                com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+            if (desc.getType() != getDescriptor()) {
+                throw new java.lang.IllegalArgumentException(
+                        "EnumValueDescriptor is not for this type.");
+            }
+            if (desc.getIndex() == -1) {
+                return UNRECOGNIZED;
+            }
+            return VALUES[desc.getIndex()];
+        }
+
+        public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+            if (this == UNRECOGNIZED) {
+                throw new java.lang.IllegalStateException(
+                        "Can't get the descriptor of an unrecognized enum value.");
+            }
+            return getDescriptor().getValues().get(ordinal());
+    }
+
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+    getDescriptorForType() {
+        return getDescriptor();
+    }
+
+        // @@protoc_insertion_point(enum_scope:InstrumentType)
+    }
     public interface TickerOrBuilder extends
             // @@protoc_insertion_point(interface_extends:Ticker)
             com.google.protobuf.MessageOrBuilder {
@@ -210,7 +386,6 @@ public final class MarketDataProto {
 
         /**
          * <code>string symbol = 1;</code>
-         *
          * @return The bytes for symbol.
          */
         com.google.protobuf.ByteString
@@ -225,7 +400,6 @@ public final class MarketDataProto {
 
         /**
          * <code>string name = 2;</code>
-         *
          * @return The bytes for name.
          */
         com.google.protobuf.ByteString
@@ -247,29 +421,43 @@ public final class MarketDataProto {
         getSectorBytes();
 
         /**
-         * <code>repeated .Value data = 4;</code>
+         * <code>.InstrumentType type = 4;</code>
+         *
+         * @return The enum numeric value on the wire for type.
+         */
+        int getTypeValue();
+
+        /**
+         * <code>.InstrumentType type = 4;</code>
+         *
+         * @return The type.
+         */
+        com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.InstrumentType getType();
+
+        /**
+         * <code>repeated .Value data = 5;</code>
          */
         java.util.List<com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Value>
         getDataList();
 
         /**
-         * <code>repeated .Value data = 4;</code>
+         * <code>repeated .Value data = 5;</code>
          */
         com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Value getData(int index);
 
         /**
-         * <code>repeated .Value data = 4;</code>
-         */
+         * <code>repeated .Value data = 5;</code>
+     */
         int getDataCount();
 
         /**
-         * <code>repeated .Value data = 4;</code>
+         * <code>repeated .Value data = 5;</code>
          */
         java.util.List<? extends com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.ValueOrBuilder>
         getDataOrBuilderList();
 
         /**
-         * <code>repeated .Value data = 4;</code>
+         * <code>repeated .Value data = 5;</code>
          */
         com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.ValueOrBuilder getDataOrBuilder(
                 int index);
@@ -278,12 +466,11 @@ public final class MarketDataProto {
             // @@protoc_insertion_point(interface_extends:Value)
             com.google.protobuf.MessageOrBuilder {
 
-        /**
-         * <code>string date = 1;</code>
-         *
-         * @return The date.
-         */
-        java.lang.String getDate();
+    /**
+     * <code>string date = 1;</code>
+     * @return The date.
+     */
+    java.lang.String getDate();
 
         /**
          * <code>string date = 1;</code>
@@ -332,7 +519,6 @@ public final class MarketDataProto {
 
         /**
          * <code>.AccountType accountType = 3;</code>
-         *
          * @return The enum numeric value on the wire for accountType.
          */
         int getAccountTypeValue();
@@ -384,13 +570,113 @@ public final class MarketDataProto {
             com.google.protobuf.GeneratedMessageV3 implements
             // @@protoc_insertion_point(message_implements:Ticker)
             TickerOrBuilder {
-        public static final int SYMBOL_FIELD_NUMBER = 1;
-        public static final int NAME_FIELD_NUMBER = 2;
-        public static final int SECTOR_FIELD_NUMBER = 3;
-        public static final int DATA_FIELD_NUMBER = 4;
         private static final long serialVersionUID = 0L;
+
+        // Use Ticker.newBuilder() to construct.
+        private Ticker(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+            super(builder);
+        }
+
+        public static final int SYMBOL_FIELD_NUMBER = 1;
+
+        @java.lang.Override
+        @SuppressWarnings({"unused"})
+        protected java.lang.Object newInstance(
+                UnusedPrivateParameter unused) {
+            return new Ticker();
+        }
+        public static final int NAME_FIELD_NUMBER = 2;
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+            return com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.internal_static_Ticker_fieldAccessorTable
+                    .ensureFieldAccessorsInitialized(
+                            com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Ticker.class, com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Ticker.Builder.class);
+        }
+        public static final int SECTOR_FIELD_NUMBER = 3;
+        public static final int TYPE_FIELD_NUMBER = 4;
+
+        /**
+         * <code>string symbol = 1;</code>
+         *
+         * @return The symbol.
+         */
+        @java.lang.Override
+        public java.lang.String getSymbol() {
+            java.lang.Object ref = symbol_;
+            if (ref instanceof java.lang.String) {
+                return (java.lang.String) ref;
+            } else {
+                com.google.protobuf.ByteString bs =
+                        (com.google.protobuf.ByteString) ref;
+                java.lang.String s = bs.toStringUtf8();
+                symbol_ = s;
+                return s;
+            }
+        }
+
+        /**
+         * <code>string symbol = 1;</code>
+         *
+         * @return The bytes for symbol.
+         */
+        @java.lang.Override
+        public com.google.protobuf.ByteString
+        getSymbolBytes() {
+            java.lang.Object ref = symbol_;
+            if (ref instanceof java.lang.String) {
+                com.google.protobuf.ByteString b =
+                        com.google.protobuf.ByteString.copyFromUtf8(
+                                (java.lang.String) ref);
+                symbol_ = b;
+                return b;
+            } else {
+                return (com.google.protobuf.ByteString) ref;
+            }
+        }
+        public static final int DATA_FIELD_NUMBER = 5;
         // @@protoc_insertion_point(class_scope:Ticker)
         private static final com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Ticker DEFAULT_INSTANCE;
+
+        /**
+         * <code>string name = 2;</code>
+         *
+         * @return The name.
+         */
+        @java.lang.Override
+        public java.lang.String getName() {
+            java.lang.Object ref = name_;
+            if (ref instanceof java.lang.String) {
+                return (java.lang.String) ref;
+            } else {
+                com.google.protobuf.ByteString bs =
+                        (com.google.protobuf.ByteString) ref;
+                java.lang.String s = bs.toStringUtf8();
+                name_ = s;
+                return s;
+            }
+        }
+
+        /**
+         * <code>string name = 2;</code>
+         *
+         * @return The bytes for name.
+         */
+        @java.lang.Override
+        public com.google.protobuf.ByteString
+        getNameBytes() {
+            java.lang.Object ref = name_;
+            if (ref instanceof java.lang.String) {
+                com.google.protobuf.ByteString b =
+                        com.google.protobuf.ByteString.copyFromUtf8(
+                                (java.lang.String) ref);
+                name_ = b;
+                return b;
+            } else {
+                return (com.google.protobuf.ByteString) ref;
+            }
+        }
         private static final com.google.protobuf.Parser<Ticker>
                 PARSER = new com.google.protobuf.AbstractParser<Ticker>() {
             @java.lang.Override
@@ -417,31 +703,67 @@ public final class MarketDataProto {
             DEFAULT_INSTANCE = new com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Ticker();
         }
 
+        /**
+         * <code>string sector = 3;</code>
+         *
+         * @return The sector.
+         */
+        @java.lang.Override
+        public java.lang.String getSector() {
+            java.lang.Object ref = sector_;
+            if (ref instanceof java.lang.String) {
+                return (java.lang.String) ref;
+            } else {
+                com.google.protobuf.ByteString bs =
+                        (com.google.protobuf.ByteString) ref;
+                java.lang.String s = bs.toStringUtf8();
+                sector_ = s;
+                return s;
+            }
+        }
+
+        /**
+         * <code>string sector = 3;</code>
+         *
+         * @return The bytes for sector.
+         */
+        @java.lang.Override
+        public com.google.protobuf.ByteString
+        getSectorBytes() {
+            java.lang.Object ref = sector_;
+            if (ref instanceof java.lang.String) {
+                com.google.protobuf.ByteString b =
+                        com.google.protobuf.ByteString.copyFromUtf8(
+                                (java.lang.String) ref);
+                sector_ = b;
+                return b;
+            } else {
+                return (com.google.protobuf.ByteString) ref;
+            }
+        }
+
         @SuppressWarnings("serial")
         private volatile java.lang.Object symbol_ = "";
         @SuppressWarnings("serial")
         private volatile java.lang.Object name_ = "";
         @SuppressWarnings("serial")
         private volatile java.lang.Object sector_ = "";
+        private int type_ = 0;
         @SuppressWarnings("serial")
         private java.util.List<com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Value> data_;
         private byte memoizedIsInitialized = -1;
-
-        // Use Ticker.newBuilder() to construct.
-        private Ticker(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-            super(builder);
-        }
 
         private Ticker() {
             symbol_ = "";
             name_ = "";
             sector_ = "";
+            type_ = 0;
             data_ = java.util.Collections.emptyList();
         }
 
         public static com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-            return com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.internal_static_Ticker_descriptor;
+      return com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.internal_static_Ticker_descriptor;
         }
 
         public static com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Ticker parseFrom(
@@ -541,140 +863,29 @@ public final class MarketDataProto {
             return PARSER;
         }
 
-        @java.lang.Override
-        @SuppressWarnings({"unused"})
-        protected java.lang.Object newInstance(
-                UnusedPrivateParameter unused) {
-            return new Ticker();
-        }
-
-        @java.lang.Override
-        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-            return com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.internal_static_Ticker_fieldAccessorTable
-                    .ensureFieldAccessorsInitialized(
-                            com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Ticker.class, com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Ticker.Builder.class);
-        }
-
         /**
-         * <code>string symbol = 1;</code>
+         * <code>.InstrumentType type = 4;</code>
          *
-         * @return The symbol.
+         * @return The enum numeric value on the wire for type.
          */
         @java.lang.Override
-        public java.lang.String getSymbol() {
-            java.lang.Object ref = symbol_;
-            if (ref instanceof java.lang.String) {
-                return (java.lang.String) ref;
-            } else {
-                com.google.protobuf.ByteString bs =
-                        (com.google.protobuf.ByteString) ref;
-                java.lang.String s = bs.toStringUtf8();
-                symbol_ = s;
-                return s;
-            }
+        public int getTypeValue() {
+            return type_;
         }
 
         /**
-         * <code>string symbol = 1;</code>
+         * <code>.InstrumentType type = 4;</code>
          *
-         * @return The bytes for symbol.
+         * @return The type.
          */
         @java.lang.Override
-        public com.google.protobuf.ByteString
-        getSymbolBytes() {
-            java.lang.Object ref = symbol_;
-            if (ref instanceof java.lang.String) {
-                com.google.protobuf.ByteString b =
-                        com.google.protobuf.ByteString.copyFromUtf8(
-                                (java.lang.String) ref);
-                symbol_ = b;
-                return b;
-            } else {
-                return (com.google.protobuf.ByteString) ref;
-            }
+        public com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.InstrumentType getType() {
+            com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.InstrumentType result = com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.InstrumentType.forNumber(type_);
+            return result == null ? com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.InstrumentType.UNRECOGNIZED : result;
         }
 
         /**
-         * <code>string name = 2;</code>
-         *
-         * @return The name.
-         */
-        @java.lang.Override
-        public java.lang.String getName() {
-            java.lang.Object ref = name_;
-            if (ref instanceof java.lang.String) {
-                return (java.lang.String) ref;
-            } else {
-                com.google.protobuf.ByteString bs =
-                        (com.google.protobuf.ByteString) ref;
-                java.lang.String s = bs.toStringUtf8();
-                name_ = s;
-                return s;
-            }
-        }
-
-        /**
-         * <code>string name = 2;</code>
-         *
-         * @return The bytes for name.
-         */
-        @java.lang.Override
-        public com.google.protobuf.ByteString
-        getNameBytes() {
-            java.lang.Object ref = name_;
-            if (ref instanceof java.lang.String) {
-                com.google.protobuf.ByteString b =
-                        com.google.protobuf.ByteString.copyFromUtf8(
-                                (java.lang.String) ref);
-                name_ = b;
-                return b;
-            } else {
-                return (com.google.protobuf.ByteString) ref;
-            }
-        }
-
-        /**
-         * <code>string sector = 3;</code>
-         *
-         * @return The sector.
-         */
-        @java.lang.Override
-        public java.lang.String getSector() {
-            java.lang.Object ref = sector_;
-            if (ref instanceof java.lang.String) {
-                return (java.lang.String) ref;
-            } else {
-                com.google.protobuf.ByteString bs =
-                        (com.google.protobuf.ByteString) ref;
-                java.lang.String s = bs.toStringUtf8();
-                sector_ = s;
-                return s;
-            }
-        }
-
-        /**
-         * <code>string sector = 3;</code>
-         *
-         * @return The bytes for sector.
-         */
-        @java.lang.Override
-        public com.google.protobuf.ByteString
-        getSectorBytes() {
-            java.lang.Object ref = sector_;
-            if (ref instanceof java.lang.String) {
-                com.google.protobuf.ByteString b =
-                        com.google.protobuf.ByteString.copyFromUtf8(
-                                (java.lang.String) ref);
-                sector_ = b;
-                return b;
-            } else {
-                return (com.google.protobuf.ByteString) ref;
-            }
-        }
-
-        /**
-         * <code>repeated .Value data = 4;</code>
+         * <code>repeated .Value data = 5;</code>
          */
         @java.lang.Override
         public java.util.List<com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Value> getDataList() {
@@ -682,7 +893,7 @@ public final class MarketDataProto {
         }
 
         /**
-         * <code>repeated .Value data = 4;</code>
+         * <code>repeated .Value data = 5;</code>
          */
         @java.lang.Override
         public java.util.List<? extends com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.ValueOrBuilder>
@@ -691,15 +902,20 @@ public final class MarketDataProto {
         }
 
         /**
-         * <code>repeated .Value data = 4;</code>
+         * <code>repeated .Value data = 5;</code>
          */
         @java.lang.Override
         public int getDataCount() {
             return data_.size();
         }
 
+        @java.lang.Override
+        public Builder newBuilderForType() {
+            return newBuilder();
+        }
+
         /**
-         * <code>repeated .Value data = 4;</code>
+         * <code>repeated .Value data = 5;</code>
          */
         @java.lang.Override
         public com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Value getData(int index) {
@@ -707,12 +923,25 @@ public final class MarketDataProto {
         }
 
         /**
-         * <code>repeated .Value data = 4;</code>
+         * <code>repeated .Value data = 5;</code>
          */
         @java.lang.Override
         public com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.ValueOrBuilder getDataOrBuilder(
                 int index) {
             return data_.get(index);
+        }
+
+        @java.lang.Override
+        public Builder toBuilder() {
+            return this == DEFAULT_INSTANCE
+                    ? new Builder() : new Builder().mergeFrom(this);
+        }
+
+        @java.lang.Override
+        protected Builder newBuilderForType(
+                com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+            Builder builder = new Builder(parent);
+            return builder;
         }
 
         @java.lang.Override
@@ -737,8 +966,11 @@ public final class MarketDataProto {
             if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sector_)) {
                 com.google.protobuf.GeneratedMessageV3.writeString(output, 3, sector_);
             }
+            if (type_ != com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.InstrumentType.EQUITY.getNumber()) {
+                output.writeEnum(4, type_);
+            }
             for (int i = 0; i < data_.size(); i++) {
-                output.writeMessage(4, data_.get(i));
+                output.writeMessage(5, data_.get(i));
             }
             getUnknownFields().writeTo(output);
         }
@@ -758,9 +990,13 @@ public final class MarketDataProto {
             if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sector_)) {
                 size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, sector_);
             }
+            if (type_ != com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.InstrumentType.EQUITY.getNumber()) {
+                size += com.google.protobuf.CodedOutputStream
+                        .computeEnumSize(4, type_);
+            }
             for (int i = 0; i < data_.size(); i++) {
                 size += com.google.protobuf.CodedOutputStream
-                        .computeMessageSize(4, data_.get(i));
+                        .computeMessageSize(5, data_.get(i));
             }
             size += getUnknownFields().getSerializedSize();
             memoizedSize = size;
@@ -783,6 +1019,7 @@ public final class MarketDataProto {
                     .equals(other.getName())) return false;
             if (!getSector()
                     .equals(other.getSector())) return false;
+            if (type_ != other.type_) return false;
             if (!getDataList()
                     .equals(other.getDataList())) return false;
             return getUnknownFields().equals(other.getUnknownFields());
@@ -801,6 +1038,8 @@ public final class MarketDataProto {
             hash = (53 * hash) + getName().hashCode();
             hash = (37 * hash) + SECTOR_FIELD_NUMBER;
             hash = (53 * hash) + getSector().hashCode();
+            hash = (37 * hash) + TYPE_FIELD_NUMBER;
+            hash = (53 * hash) + type_;
             if (getDataCount() > 0) {
                 hash = (37 * hash) + DATA_FIELD_NUMBER;
                 hash = (53 * hash) + getDataList().hashCode();
@@ -808,24 +1047,6 @@ public final class MarketDataProto {
             hash = (29 * hash) + getUnknownFields().hashCode();
             memoizedHashCode = hash;
             return hash;
-        }
-
-        @java.lang.Override
-        public Builder newBuilderForType() {
-            return newBuilder();
-        }
-
-        @java.lang.Override
-        public Builder toBuilder() {
-            return this == DEFAULT_INSTANCE
-                    ? new Builder() : new Builder().mergeFrom(this);
-        }
-
-        @java.lang.Override
-        protected Builder newBuilderForType(
-                com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-            Builder builder = new Builder(parent);
-            return builder;
         }
 
         @java.lang.Override
@@ -846,29 +1067,6 @@ public final class MarketDataProto {
                 // @@protoc_insertion_point(builder_implements:Ticker)
                 com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.TickerOrBuilder {
             private int bitField0_;
-            private java.lang.Object symbol_ = "";
-            private java.lang.Object name_ = "";
-            private java.lang.Object sector_ = "";
-            private java.util.List<com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Value> data_ =
-                    java.util.Collections.emptyList();
-            private com.google.protobuf.RepeatedFieldBuilderV3<
-                    com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Value, com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Value.Builder, com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.ValueOrBuilder> dataBuilder_;
-
-            // Construct using com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Ticker.newBuilder()
-            private Builder() {
-
-            }
-
-            private Builder(
-                    com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-                super(parent);
-
-            }
-
-            public static com.google.protobuf.Descriptors.Descriptor
-            getDescriptor() {
-                return com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.internal_static_Ticker_descriptor;
-            }
 
             @java.lang.Override
             protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -877,23 +1075,9 @@ public final class MarketDataProto {
                         .ensureFieldAccessorsInitialized(
                                 com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Ticker.class, com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Ticker.Builder.class);
             }
-
-            @java.lang.Override
-            public Builder clear() {
-                super.clear();
-                bitField0_ = 0;
-                symbol_ = "";
-                name_ = "";
-                sector_ = "";
-                if (dataBuilder_ == null) {
-                    data_ = java.util.Collections.emptyList();
-                } else {
-                    data_ = null;
-                    dataBuilder_.clear();
-                }
-                bitField0_ = (bitField0_ & ~0x00000008);
-                return this;
-            }
+            private java.lang.Object symbol_ = "";
+            private java.lang.Object name_ = "";
+            private java.lang.Object sector_ = "";
 
             @java.lang.Override
             public com.google.protobuf.Descriptors.Descriptor
@@ -925,31 +1109,9 @@ public final class MarketDataProto {
                 onBuilt();
                 return result;
             }
-
-            private void buildPartialRepeatedFields(com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Ticker result) {
-                if (dataBuilder_ == null) {
-                    if (((bitField0_ & 0x00000008) != 0)) {
-                        data_ = java.util.Collections.unmodifiableList(data_);
-                        bitField0_ = (bitField0_ & ~0x00000008);
-                    }
-                    result.data_ = data_;
-                } else {
-                    result.data_ = dataBuilder_.build();
-                }
-            }
-
-            private void buildPartial0(com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Ticker result) {
-                int from_bitField0_ = bitField0_;
-                if (((from_bitField0_ & 0x00000001) != 0)) {
-                    result.symbol_ = symbol_;
-                }
-                if (((from_bitField0_ & 0x00000002) != 0)) {
-                    result.name_ = name_;
-                }
-                if (((from_bitField0_ & 0x00000004) != 0)) {
-                    result.sector_ = sector_;
-                }
-            }
+            private int type_ = 0;
+            private java.util.List<com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Value> data_ =
+                    java.util.Collections.emptyList();
 
             @java.lang.Override
             public Builder clone() {
@@ -998,6 +1160,119 @@ public final class MarketDataProto {
                     return this;
                 }
             }
+            private com.google.protobuf.RepeatedFieldBuilderV3<
+                    com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Value, com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Value.Builder, com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.ValueOrBuilder> dataBuilder_;
+
+            // Construct using com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Ticker.newBuilder()
+            private Builder() {
+
+            }
+
+            private Builder(
+                    com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+                super(parent);
+
+            }
+
+            public static com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+                return com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.internal_static_Ticker_descriptor;
+            }
+
+            @java.lang.Override
+            public Builder clear() {
+                super.clear();
+                bitField0_ = 0;
+                symbol_ = "";
+                name_ = "";
+                sector_ = "";
+                type_ = 0;
+                if (dataBuilder_ == null) {
+                    data_ = java.util.Collections.emptyList();
+                } else {
+                    data_ = null;
+                    dataBuilder_.clear();
+                }
+                bitField0_ = (bitField0_ & ~0x00000010);
+                return this;
+            }
+
+            /**
+             * <code>string symbol = 1;</code>
+             *
+             * @return The symbol.
+             */
+            public java.lang.String getSymbol() {
+                java.lang.Object ref = symbol_;
+                if (!(ref instanceof java.lang.String)) {
+                    com.google.protobuf.ByteString bs =
+                            (com.google.protobuf.ByteString) ref;
+                    java.lang.String s = bs.toStringUtf8();
+                    symbol_ = s;
+                    return s;
+                } else {
+                    return (java.lang.String) ref;
+                }
+            }
+
+            /**
+             * <code>string symbol = 1;</code>
+             *
+             * @return The bytes for symbol.
+             */
+            public com.google.protobuf.ByteString
+            getSymbolBytes() {
+                java.lang.Object ref = symbol_;
+                if (ref instanceof String) {
+                    com.google.protobuf.ByteString b =
+                            com.google.protobuf.ByteString.copyFromUtf8(
+                                    (java.lang.String) ref);
+                    symbol_ = b;
+                    return b;
+                } else {
+                    return (com.google.protobuf.ByteString) ref;
+                }
+            }
+
+            private void buildPartialRepeatedFields(com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Ticker result) {
+                if (dataBuilder_ == null) {
+                    if (((bitField0_ & 0x00000010) != 0)) {
+                        data_ = java.util.Collections.unmodifiableList(data_);
+                        bitField0_ = (bitField0_ & ~0x00000010);
+                    }
+                    result.data_ = data_;
+                } else {
+                    result.data_ = dataBuilder_.build();
+                }
+            }
+
+            /**
+             * <code>string symbol = 1;</code>
+             *
+             * @return This builder for chaining.
+             */
+            public Builder clearSymbol() {
+                symbol_ = getDefaultInstance().getSymbol();
+                bitField0_ = (bitField0_ & ~0x00000001);
+                onChanged();
+                return this;
+            }
+
+            private void buildPartial0(com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Ticker result) {
+                int from_bitField0_ = bitField0_;
+                if (((from_bitField0_ & 0x00000001) != 0)) {
+                    result.symbol_ = symbol_;
+                }
+                if (((from_bitField0_ & 0x00000002) != 0)) {
+                    result.name_ = name_;
+                }
+                if (((from_bitField0_ & 0x00000004) != 0)) {
+                    result.sector_ = sector_;
+                }
+                if (((from_bitField0_ & 0x00000008) != 0)) {
+                    result.type_ = type_;
+                }
+            }
 
             public Builder mergeFrom(com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Ticker other) {
                 if (other == com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Ticker.getDefaultInstance())
@@ -1017,11 +1292,14 @@ public final class MarketDataProto {
                     bitField0_ |= 0x00000004;
                     onChanged();
                 }
+                if (other.type_ != 0) {
+                    setTypeValue(other.getTypeValue());
+                }
                 if (dataBuilder_ == null) {
                     if (!other.data_.isEmpty()) {
                         if (data_.isEmpty()) {
                             data_ = other.data_;
-                            bitField0_ = (bitField0_ & ~0x00000008);
+                            bitField0_ = (bitField0_ & ~0x00000010);
                         } else {
                             ensureDataIsMutable();
                             data_.addAll(other.data_);
@@ -1034,7 +1312,7 @@ public final class MarketDataProto {
                             dataBuilder_.dispose();
                             dataBuilder_ = null;
                             data_ = other.data_;
-                            bitField0_ = (bitField0_ & ~0x00000008);
+                            bitField0_ = (bitField0_ & ~0x00000010);
                             dataBuilder_ =
                                     com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                                             getDataFieldBuilder() : null;
@@ -1048,9 +1326,58 @@ public final class MarketDataProto {
                 return this;
             }
 
+            /**
+             * <code>string name = 2;</code>
+             *
+             * @return The name.
+             */
+            public java.lang.String getName() {
+                java.lang.Object ref = name_;
+                if (!(ref instanceof java.lang.String)) {
+                    com.google.protobuf.ByteString bs =
+                            (com.google.protobuf.ByteString) ref;
+                    java.lang.String s = bs.toStringUtf8();
+                    name_ = s;
+                    return s;
+                } else {
+                    return (java.lang.String) ref;
+                }
+            }
+
+            /**
+             * <code>string name = 2;</code>
+             *
+             * @return The bytes for name.
+             */
+            public com.google.protobuf.ByteString
+            getNameBytes() {
+                java.lang.Object ref = name_;
+                if (ref instanceof String) {
+                    com.google.protobuf.ByteString b =
+                            com.google.protobuf.ByteString.copyFromUtf8(
+                                    (java.lang.String) ref);
+                    name_ = b;
+                    return b;
+                } else {
+                    return (com.google.protobuf.ByteString) ref;
+                }
+            }
+
             @java.lang.Override
             public boolean isInitialized() {
                 return true;
+            }
+
+            /**
+             * <code>string name = 2;</code>
+             *
+             * @return This builder for chaining.
+             */
+            public Builder clearName() {
+                name_ = getDefaultInstance().getName();
+                bitField0_ = (bitField0_ & ~0x00000002);
+                onChanged();
+                return this;
             }
 
             @java.lang.Override
@@ -1084,7 +1411,12 @@ public final class MarketDataProto {
                                 bitField0_ |= 0x00000004;
                                 break;
                             } // case 26
-                            case 34: {
+                            case 32: {
+                                type_ = input.readEnum();
+                                bitField0_ |= 0x00000008;
+                                break;
+                            } // case 32
+                            case 42: {
                                 com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Value m =
                                         input.readMessage(
                                                 com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Value.parser(),
@@ -1096,7 +1428,7 @@ public final class MarketDataProto {
                                     dataBuilder_.addMessage(m);
                                 }
                                 break;
-                            } // case 34
+                            } // case 42
                             default: {
                                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                                     done = true; // was an endgroup tag
@@ -1116,24 +1448,6 @@ public final class MarketDataProto {
             /**
              * <code>string symbol = 1;</code>
              *
-             * @return The symbol.
-             */
-            public java.lang.String getSymbol() {
-                java.lang.Object ref = symbol_;
-                if (!(ref instanceof java.lang.String)) {
-                    com.google.protobuf.ByteString bs =
-                            (com.google.protobuf.ByteString) ref;
-                    java.lang.String s = bs.toStringUtf8();
-                    symbol_ = s;
-                    return s;
-                } else {
-                    return (java.lang.String) ref;
-                }
-            }
-
-            /**
-             * <code>string symbol = 1;</code>
-             *
              * @param value The symbol to set.
              * @return This builder for chaining.
              */
@@ -1144,139 +1458,6 @@ public final class MarketDataProto {
                 }
                 symbol_ = value;
                 bitField0_ |= 0x00000001;
-                onChanged();
-                return this;
-            }
-
-            /**
-             * <code>string symbol = 1;</code>
-             *
-             * @return The bytes for symbol.
-             */
-            public com.google.protobuf.ByteString
-            getSymbolBytes() {
-                java.lang.Object ref = symbol_;
-                if (ref instanceof String) {
-                    com.google.protobuf.ByteString b =
-                            com.google.protobuf.ByteString.copyFromUtf8(
-                                    (java.lang.String) ref);
-                    symbol_ = b;
-                    return b;
-                } else {
-                    return (com.google.protobuf.ByteString) ref;
-                }
-            }
-
-            /**
-             * <code>string symbol = 1;</code>
-             *
-             * @param value The bytes for symbol to set.
-             * @return This builder for chaining.
-             */
-            public Builder setSymbolBytes(
-                    com.google.protobuf.ByteString value) {
-                if (value == null) {
-                    throw new NullPointerException();
-                }
-                checkByteStringIsUtf8(value);
-                symbol_ = value;
-                bitField0_ |= 0x00000001;
-                onChanged();
-                return this;
-            }
-
-            /**
-             * <code>string symbol = 1;</code>
-             *
-             * @return This builder for chaining.
-             */
-            public Builder clearSymbol() {
-                symbol_ = getDefaultInstance().getSymbol();
-                bitField0_ = (bitField0_ & ~0x00000001);
-                onChanged();
-                return this;
-            }
-
-            /**
-             * <code>string name = 2;</code>
-             *
-             * @return The name.
-             */
-            public java.lang.String getName() {
-                java.lang.Object ref = name_;
-                if (!(ref instanceof java.lang.String)) {
-                    com.google.protobuf.ByteString bs =
-                            (com.google.protobuf.ByteString) ref;
-                    java.lang.String s = bs.toStringUtf8();
-                    name_ = s;
-                    return s;
-                } else {
-                    return (java.lang.String) ref;
-                }
-            }
-
-            /**
-             * <code>string name = 2;</code>
-             *
-             * @param value The name to set.
-             * @return This builder for chaining.
-             */
-            public Builder setName(
-                    java.lang.String value) {
-                if (value == null) {
-                    throw new NullPointerException();
-                }
-                name_ = value;
-                bitField0_ |= 0x00000002;
-                onChanged();
-                return this;
-            }
-
-            /**
-             * <code>string name = 2;</code>
-             *
-             * @return The bytes for name.
-             */
-            public com.google.protobuf.ByteString
-            getNameBytes() {
-                java.lang.Object ref = name_;
-                if (ref instanceof String) {
-                    com.google.protobuf.ByteString b =
-                            com.google.protobuf.ByteString.copyFromUtf8(
-                                    (java.lang.String) ref);
-                    name_ = b;
-                    return b;
-                } else {
-                    return (com.google.protobuf.ByteString) ref;
-                }
-            }
-
-            /**
-             * <code>string name = 2;</code>
-             *
-             * @param value The bytes for name to set.
-             * @return This builder for chaining.
-             */
-            public Builder setNameBytes(
-                    com.google.protobuf.ByteString value) {
-                if (value == null) {
-                    throw new NullPointerException();
-                }
-                checkByteStringIsUtf8(value);
-                name_ = value;
-                bitField0_ |= 0x00000002;
-                onChanged();
-                return this;
-            }
-
-            /**
-             * <code>string name = 2;</code>
-             *
-             * @return This builder for chaining.
-             */
-            public Builder clearName() {
-                name_ = getDefaultInstance().getName();
-                bitField0_ = (bitField0_ & ~0x00000002);
                 onChanged();
                 return this;
             }
@@ -1302,23 +1483,6 @@ public final class MarketDataProto {
             /**
              * <code>string sector = 3;</code>
              *
-             * @param value The sector to set.
-             * @return This builder for chaining.
-             */
-            public Builder setSector(
-                    java.lang.String value) {
-                if (value == null) {
-                    throw new NullPointerException();
-                }
-                sector_ = value;
-                bitField0_ |= 0x00000004;
-                onChanged();
-                return this;
-            }
-
-            /**
-             * <code>string sector = 3;</code>
-             *
              * @return The bytes for sector.
              */
             public com.google.protobuf.ByteString
@@ -1333,6 +1497,41 @@ public final class MarketDataProto {
                 } else {
                     return (com.google.protobuf.ByteString) ref;
                 }
+            }
+
+            /**
+             * <code>string symbol = 1;</code>
+             *
+             * @param value The bytes for symbol to set.
+             * @return This builder for chaining.
+             */
+            public Builder setSymbolBytes(
+                    com.google.protobuf.ByteString value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+                checkByteStringIsUtf8(value);
+                symbol_ = value;
+                bitField0_ |= 0x00000001;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>string name = 2;</code>
+             *
+             * @param value The name to set.
+             * @return This builder for chaining.
+             */
+            public Builder setName(
+                    java.lang.String value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+                name_ = value;
+                bitField0_ |= 0x00000002;
+                onChanged();
+                return this;
             }
 
             /**
@@ -1354,6 +1553,41 @@ public final class MarketDataProto {
             }
 
             /**
+             * <code>string name = 2;</code>
+             *
+             * @param value The bytes for name to set.
+             * @return This builder for chaining.
+             */
+            public Builder setNameBytes(
+                    com.google.protobuf.ByteString value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+                checkByteStringIsUtf8(value);
+                name_ = value;
+                bitField0_ |= 0x00000002;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>string sector = 3;</code>
+             *
+             * @param value The sector to set.
+             * @return This builder for chaining.
+             */
+            public Builder setSector(
+                    java.lang.String value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+                sector_ = value;
+                bitField0_ |= 0x00000004;
+                onChanged();
+                return this;
+            }
+
+            /**
              * <code>string sector = 3;</code>
              *
              * @return This builder for chaining.
@@ -1365,15 +1599,76 @@ public final class MarketDataProto {
                 return this;
             }
 
+            /**
+             * <code>.InstrumentType type = 4;</code>
+             *
+             * @return The enum numeric value on the wire for type.
+             */
+            @java.lang.Override
+            public int getTypeValue() {
+                return type_;
+            }
+
+            /**
+             * <code>.InstrumentType type = 4;</code>
+             *
+             * @param value The enum numeric value on the wire for type to set.
+             * @return This builder for chaining.
+             */
+            public Builder setTypeValue(int value) {
+                type_ = value;
+                bitField0_ |= 0x00000008;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>.InstrumentType type = 4;</code>
+             *
+             * @return The type.
+             */
+            @java.lang.Override
+            public com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.InstrumentType getType() {
+                com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.InstrumentType result = com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.InstrumentType.forNumber(type_);
+                return result == null ? com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.InstrumentType.UNRECOGNIZED : result;
+            }
+
+            /**
+             * <code>.InstrumentType type = 4;</code>
+             * @param value The type to set.
+             * @return This builder for chaining.
+             */
+            public Builder setType(com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.InstrumentType value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+                bitField0_ |= 0x00000008;
+                type_ = value.getNumber();
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>.InstrumentType type = 4;</code>
+             *
+             * @return This builder for chaining.
+             */
+            public Builder clearType() {
+                bitField0_ = (bitField0_ & ~0x00000008);
+                type_ = 0;
+                onChanged();
+                return this;
+            }
+
             private void ensureDataIsMutable() {
-                if ((bitField0_ & 0x00000008) == 0) {
+                if ((bitField0_ & 0x00000010) == 0) {
                     data_ = new java.util.ArrayList<com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Value>(data_);
-                    bitField0_ |= 0x00000008;
+                    bitField0_ |= 0x00000010;
                 }
             }
 
             /**
-             * <code>repeated .Value data = 4;</code>
+             * <code>repeated .Value data = 5;</code>
              */
             public java.util.List<com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Value> getDataList() {
                 if (dataBuilder_ == null) {
@@ -1384,7 +1679,7 @@ public final class MarketDataProto {
             }
 
             /**
-             * <code>repeated .Value data = 4;</code>
+             * <code>repeated .Value data = 5;</code>
              */
             public int getDataCount() {
                 if (dataBuilder_ == null) {
@@ -1395,7 +1690,7 @@ public final class MarketDataProto {
             }
 
             /**
-             * <code>repeated .Value data = 4;</code>
+             * <code>repeated .Value data = 5;</code>
              */
             public com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Value getData(int index) {
                 if (dataBuilder_ == null) {
@@ -1406,7 +1701,7 @@ public final class MarketDataProto {
             }
 
             /**
-             * <code>repeated .Value data = 4;</code>
+             * <code>repeated .Value data = 5;</code>
              */
             public Builder setData(
                     int index, com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Value value) {
@@ -1424,7 +1719,7 @@ public final class MarketDataProto {
             }
 
             /**
-             * <code>repeated .Value data = 4;</code>
+             * <code>repeated .Value data = 5;</code>
              */
             public Builder setData(
                     int index, com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Value.Builder builderForValue) {
@@ -1439,7 +1734,7 @@ public final class MarketDataProto {
             }
 
             /**
-             * <code>repeated .Value data = 4;</code>
+             * <code>repeated .Value data = 5;</code>
              */
             public Builder addData(com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Value value) {
                 if (dataBuilder_ == null) {
@@ -1456,7 +1751,7 @@ public final class MarketDataProto {
             }
 
             /**
-             * <code>repeated .Value data = 4;</code>
+             * <code>repeated .Value data = 5;</code>
              */
             public Builder addData(
                     int index, com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Value value) {
@@ -1474,7 +1769,7 @@ public final class MarketDataProto {
             }
 
             /**
-             * <code>repeated .Value data = 4;</code>
+             * <code>repeated .Value data = 5;</code>
              */
             public Builder addData(
                     com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Value.Builder builderForValue) {
@@ -1489,7 +1784,7 @@ public final class MarketDataProto {
             }
 
             /**
-             * <code>repeated .Value data = 4;</code>
+             * <code>repeated .Value data = 5;</code>
              */
             public Builder addData(
                     int index, com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Value.Builder builderForValue) {
@@ -1504,7 +1799,7 @@ public final class MarketDataProto {
             }
 
             /**
-             * <code>repeated .Value data = 4;</code>
+             * <code>repeated .Value data = 5;</code>
              */
             public Builder addAllData(
                     java.lang.Iterable<? extends com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Value> values) {
@@ -1520,12 +1815,12 @@ public final class MarketDataProto {
             }
 
             /**
-             * <code>repeated .Value data = 4;</code>
+             * <code>repeated .Value data = 5;</code>
              */
             public Builder clearData() {
                 if (dataBuilder_ == null) {
                     data_ = java.util.Collections.emptyList();
-                    bitField0_ = (bitField0_ & ~0x00000008);
+                    bitField0_ = (bitField0_ & ~0x00000010);
                     onChanged();
                 } else {
                     dataBuilder_.clear();
@@ -1534,7 +1829,7 @@ public final class MarketDataProto {
             }
 
             /**
-             * <code>repeated .Value data = 4;</code>
+             * <code>repeated .Value data = 5;</code>
              */
             public Builder removeData(int index) {
                 if (dataBuilder_ == null) {
@@ -1548,7 +1843,7 @@ public final class MarketDataProto {
             }
 
             /**
-             * <code>repeated .Value data = 4;</code>
+             * <code>repeated .Value data = 5;</code>
              */
             public com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Value.Builder getDataBuilder(
                     int index) {
@@ -1556,7 +1851,7 @@ public final class MarketDataProto {
             }
 
             /**
-             * <code>repeated .Value data = 4;</code>
+             * <code>repeated .Value data = 5;</code>
              */
             public com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.ValueOrBuilder getDataOrBuilder(
                     int index) {
@@ -1568,7 +1863,7 @@ public final class MarketDataProto {
             }
 
             /**
-             * <code>repeated .Value data = 4;</code>
+             * <code>repeated .Value data = 5;</code>
              */
             public java.util.List<? extends com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.ValueOrBuilder>
             getDataOrBuilderList() {
@@ -1580,7 +1875,7 @@ public final class MarketDataProto {
             }
 
             /**
-             * <code>repeated .Value data = 4;</code>
+             * <code>repeated .Value data = 5;</code>
              */
             public com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Value.Builder addDataBuilder() {
                 return getDataFieldBuilder().addBuilder(
@@ -1588,7 +1883,7 @@ public final class MarketDataProto {
             }
 
             /**
-             * <code>repeated .Value data = 4;</code>
+             * <code>repeated .Value data = 5;</code>
              */
             public com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Value.Builder addDataBuilder(
                     int index) {
@@ -1597,7 +1892,7 @@ public final class MarketDataProto {
             }
 
             /**
-             * <code>repeated .Value data = 4;</code>
+             * <code>repeated .Value data = 5;</code>
              */
             public java.util.List<com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Value.Builder>
             getDataBuilderList() {
@@ -1611,7 +1906,7 @@ public final class MarketDataProto {
                     dataBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
                             com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Value, com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Value.Builder, com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.ValueOrBuilder>(
                             data_,
-                            ((bitField0_ & 0x00000008) != 0),
+                            ((bitField0_ & 0x00000010) != 0),
                             getParentForChildren(),
                             isClean());
                     data_ = null;
@@ -1645,10 +1940,73 @@ public final class MarketDataProto {
             // @@protoc_insertion_point(message_implements:Value)
             ValueOrBuilder {
         public static final int DATE_FIELD_NUMBER = 1;
+
+        // Use Value.newBuilder() to construct.
+        private Value(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+            super(builder);
+        }
+
+        private Value() {
+            date_ = "";
+        }
+
+        @java.lang.Override
+        @SuppressWarnings({"unused"})
+        protected java.lang.Object newInstance(
+                UnusedPrivateParameter unused) {
+            return new Value();
+        }
         public static final int PRICE_FIELD_NUMBER = 2;
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+            return com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.internal_static_Value_fieldAccessorTable
+                    .ensureFieldAccessorsInitialized(
+                            com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Value.class, com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Value.Builder.class);
+        }
         private static final long serialVersionUID = 0L;
         // @@protoc_insertion_point(class_scope:Value)
         private static final com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Value DEFAULT_INSTANCE;
+
+        /**
+         * <code>string date = 1;</code>
+         *
+         * @return The date.
+         */
+        @java.lang.Override
+        public java.lang.String getDate() {
+            java.lang.Object ref = date_;
+            if (ref instanceof java.lang.String) {
+                return (java.lang.String) ref;
+            } else {
+                com.google.protobuf.ByteString bs =
+                        (com.google.protobuf.ByteString) ref;
+                java.lang.String s = bs.toStringUtf8();
+                date_ = s;
+                return s;
+            }
+        }
+
+        /**
+         * <code>string date = 1;</code>
+         *
+         * @return The bytes for date.
+         */
+        @java.lang.Override
+        public com.google.protobuf.ByteString
+        getDateBytes() {
+            java.lang.Object ref = date_;
+            if (ref instanceof java.lang.String) {
+                com.google.protobuf.ByteString b =
+                        com.google.protobuf.ByteString.copyFromUtf8(
+                                (java.lang.String) ref);
+                date_ = b;
+                return b;
+            } else {
+                return (com.google.protobuf.ByteString) ref;
+            }
+        }
         private static final com.google.protobuf.Parser<Value>
                 PARSER = new com.google.protobuf.AbstractParser<Value>() {
             @java.lang.Override
@@ -1675,18 +2033,65 @@ public final class MarketDataProto {
             DEFAULT_INSTANCE = new com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Value();
         }
 
+        /**
+         * <code>double price = 2;</code>
+         * @return The price.
+         */
+        @java.lang.Override
+        public double getPrice() {
+            return price_;
+        }
+
         @SuppressWarnings("serial")
         private volatile java.lang.Object date_ = "";
         private double price_ = 0D;
-        private byte memoizedIsInitialized = -1;
 
-        // Use Value.newBuilder() to construct.
-        private Value(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-            super(builder);
+        @java.lang.Override
+        public void writeTo(com.google.protobuf.CodedOutputStream output)
+                throws java.io.IOException {
+            if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(date_)) {
+                com.google.protobuf.GeneratedMessageV3.writeString(output, 1, date_);
+            }
+            if (java.lang.Double.doubleToRawLongBits(price_) != 0) {
+                output.writeDouble(2, price_);
+            }
+            getUnknownFields().writeTo(output);
         }
 
-        private Value() {
-            date_ = "";
+        @java.lang.Override
+        public int getSerializedSize() {
+            int size = memoizedSize;
+            if (size != -1) return size;
+
+            size = 0;
+            if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(date_)) {
+                size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, date_);
+            }
+            if (java.lang.Double.doubleToRawLongBits(price_) != 0) {
+                size += com.google.protobuf.CodedOutputStream
+                        .computeDoubleSize(2, price_);
+            }
+            size += getUnknownFields().getSerializedSize();
+            memoizedSize = size;
+            return size;
+        }
+        private byte memoizedIsInitialized = -1;
+
+        @java.lang.Override
+        public int hashCode() {
+            if (memoizedHashCode != 0) {
+                return memoizedHashCode;
+            }
+            int hash = 41;
+            hash = (19 * hash) + getDescriptor().hashCode();
+            hash = (37 * hash) + DATE_FIELD_NUMBER;
+            hash = (53 * hash) + getDate().hashCode();
+            hash = (37 * hash) + PRICE_FIELD_NUMBER;
+            hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+                    java.lang.Double.doubleToLongBits(getPrice()));
+            hash = (29 * hash) + getUnknownFields().hashCode();
+            memoizedHashCode = hash;
+            return hash;
         }
 
         public static com.google.protobuf.Descriptors.Descriptor
@@ -1767,6 +2172,11 @@ public final class MarketDataProto {
                     .parseWithIOException(PARSER, input);
         }
 
+        @java.lang.Override
+        public Builder newBuilderForType() {
+            return newBuilder();
+        }
+
         public static com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Value parseFrom(
                 com.google.protobuf.CodedInputStream input,
                 com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1777,6 +2187,19 @@ public final class MarketDataProto {
 
         public static Builder newBuilder() {
             return DEFAULT_INSTANCE.toBuilder();
+        }
+
+        @java.lang.Override
+        public Builder toBuilder() {
+            return this == DEFAULT_INSTANCE
+                    ? new Builder() : new Builder().mergeFrom(this);
+        }
+
+        @java.lang.Override
+        protected Builder newBuilderForType(
+                com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+            Builder builder = new Builder(parent);
+            return builder;
         }
 
         public static Builder newBuilder(com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Value prototype) {
@@ -1792,70 +2215,6 @@ public final class MarketDataProto {
         }
 
         @java.lang.Override
-        @SuppressWarnings({"unused"})
-        protected java.lang.Object newInstance(
-                UnusedPrivateParameter unused) {
-            return new Value();
-        }
-
-        @java.lang.Override
-        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-            return com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.internal_static_Value_fieldAccessorTable
-                    .ensureFieldAccessorsInitialized(
-                            com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Value.class, com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Value.Builder.class);
-        }
-
-        /**
-         * <code>string date = 1;</code>
-         *
-         * @return The date.
-         */
-        @java.lang.Override
-        public java.lang.String getDate() {
-            java.lang.Object ref = date_;
-            if (ref instanceof java.lang.String) {
-                return (java.lang.String) ref;
-            } else {
-                com.google.protobuf.ByteString bs =
-                        (com.google.protobuf.ByteString) ref;
-                java.lang.String s = bs.toStringUtf8();
-                date_ = s;
-                return s;
-            }
-        }
-
-        /**
-         * <code>string date = 1;</code>
-         *
-         * @return The bytes for date.
-         */
-        @java.lang.Override
-        public com.google.protobuf.ByteString
-        getDateBytes() {
-            java.lang.Object ref = date_;
-            if (ref instanceof java.lang.String) {
-                com.google.protobuf.ByteString b =
-                        com.google.protobuf.ByteString.copyFromUtf8(
-                                (java.lang.String) ref);
-                date_ = b;
-                return b;
-            } else {
-                return (com.google.protobuf.ByteString) ref;
-            }
-        }
-
-        /**
-         * <code>double price = 2;</code>
-         *
-         * @return The price.
-         */
-        @java.lang.Override
-        public double getPrice() {
-            return price_;
-        }
-
-        @java.lang.Override
         public boolean isInitialized() {
             byte isInitialized = memoizedIsInitialized;
             if (isInitialized == 1) return true;
@@ -1863,36 +2222,6 @@ public final class MarketDataProto {
 
             memoizedIsInitialized = 1;
             return true;
-        }
-
-        @java.lang.Override
-        public void writeTo(com.google.protobuf.CodedOutputStream output)
-                throws java.io.IOException {
-            if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(date_)) {
-                com.google.protobuf.GeneratedMessageV3.writeString(output, 1, date_);
-            }
-            if (java.lang.Double.doubleToRawLongBits(price_) != 0) {
-                output.writeDouble(2, price_);
-            }
-            getUnknownFields().writeTo(output);
-        }
-
-        @java.lang.Override
-        public int getSerializedSize() {
-            int size = memoizedSize;
-            if (size != -1) return size;
-
-            size = 0;
-            if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(date_)) {
-                size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, date_);
-            }
-            if (java.lang.Double.doubleToRawLongBits(price_) != 0) {
-                size += com.google.protobuf.CodedOutputStream
-                        .computeDoubleSize(2, price_);
-            }
-            size += getUnknownFields().getSerializedSize();
-            memoizedSize = size;
-            return size;
         }
 
         @java.lang.Override
@@ -1914,41 +2243,6 @@ public final class MarketDataProto {
         }
 
         @java.lang.Override
-        public int hashCode() {
-            if (memoizedHashCode != 0) {
-                return memoizedHashCode;
-            }
-            int hash = 41;
-            hash = (19 * hash) + getDescriptor().hashCode();
-            hash = (37 * hash) + DATE_FIELD_NUMBER;
-            hash = (53 * hash) + getDate().hashCode();
-            hash = (37 * hash) + PRICE_FIELD_NUMBER;
-            hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-                    java.lang.Double.doubleToLongBits(getPrice()));
-            hash = (29 * hash) + getUnknownFields().hashCode();
-            memoizedHashCode = hash;
-            return hash;
-        }
-
-        @java.lang.Override
-        public Builder newBuilderForType() {
-            return newBuilder();
-        }
-
-        @java.lang.Override
-        public Builder toBuilder() {
-            return this == DEFAULT_INSTANCE
-                    ? new Builder() : new Builder().mergeFrom(this);
-        }
-
-        @java.lang.Override
-        protected Builder newBuilderForType(
-                com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-            Builder builder = new Builder(parent);
-            return builder;
-        }
-
-        @java.lang.Override
         public com.google.protobuf.Parser<Value> getParserForType() {
             return PARSER;
         }
@@ -1966,24 +2260,6 @@ public final class MarketDataProto {
                 // @@protoc_insertion_point(builder_implements:Value)
                 com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.ValueOrBuilder {
             private int bitField0_;
-            private java.lang.Object date_ = "";
-            private double price_;
-
-            // Construct using com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Value.newBuilder()
-            private Builder() {
-
-            }
-
-            private Builder(
-                    com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-                super(parent);
-
-            }
-
-            public static com.google.protobuf.Descriptors.Descriptor
-            getDescriptor() {
-                return com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.internal_static_Value_descriptor;
-            }
 
             @java.lang.Override
             protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -1992,6 +2268,8 @@ public final class MarketDataProto {
                         .ensureFieldAccessorsInitialized(
                                 com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Value.class, com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Value.Builder.class);
             }
+            private java.lang.Object date_ = "";
+            private double price_;
 
             @java.lang.Override
             public Builder clear() {
@@ -2106,9 +2384,9 @@ public final class MarketDataProto {
                 return this;
             }
 
-            @java.lang.Override
-            public boolean isInitialized() {
-                return true;
+            // Construct using com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Value.newBuilder()
+            private Builder() {
+
             }
 
             @java.lang.Override
@@ -2153,6 +2431,17 @@ public final class MarketDataProto {
                 return this;
             }
 
+            private Builder(
+                    com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+                super(parent);
+
+            }
+
+            public static com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+                return com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.internal_static_Value_descriptor;
+            }
+
             /**
              * <code>string date = 1;</code>
              *
@@ -2174,23 +2463,6 @@ public final class MarketDataProto {
             /**
              * <code>string date = 1;</code>
              *
-             * @param value The date to set.
-             * @return This builder for chaining.
-             */
-            public Builder setDate(
-                    java.lang.String value) {
-                if (value == null) {
-                    throw new NullPointerException();
-                }
-                date_ = value;
-                bitField0_ |= 0x00000001;
-                onChanged();
-                return this;
-            }
-
-            /**
-             * <code>string date = 1;</code>
-             *
              * @return The bytes for date.
              */
             public com.google.protobuf.ByteString
@@ -2207,9 +2479,42 @@ public final class MarketDataProto {
                 }
             }
 
+            @java.lang.Override
+            public boolean isInitialized() {
+                return true;
+            }
+
             /**
              * <code>string date = 1;</code>
              *
+             * @return This builder for chaining.
+             */
+            public Builder clearDate() {
+                date_ = getDefaultInstance().getDate();
+                bitField0_ = (bitField0_ & ~0x00000001);
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>string date = 1;</code>
+             *
+             * @param value The date to set.
+             * @return This builder for chaining.
+             */
+            public Builder setDate(
+                    java.lang.String value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+                date_ = value;
+                bitField0_ |= 0x00000001;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>string date = 1;</code>
              * @param value The bytes for date to set.
              * @return This builder for chaining.
              */
@@ -2226,20 +2531,7 @@ public final class MarketDataProto {
             }
 
             /**
-             * <code>string date = 1;</code>
-             *
-             * @return This builder for chaining.
-             */
-            public Builder clearDate() {
-                date_ = getDefaultInstance().getDate();
-                bitField0_ = (bitField0_ & ~0x00000001);
-                onChanged();
-                return this;
-            }
-
-            /**
              * <code>double price = 2;</code>
-             *
              * @return The price.
              */
             @java.lang.Override
@@ -2299,11 +2591,63 @@ public final class MarketDataProto {
             // @@protoc_insertion_point(message_implements:Investment)
             InvestmentOrBuilder {
         public static final int TICKER_FIELD_NUMBER = 1;
+
+        // Use Investment.newBuilder() to construct.
+        private Investment(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+            super(builder);
+        }
+
+        private Investment() {
+            accountType_ = 0;
+        }
+
+        @java.lang.Override
+        @SuppressWarnings({"unused"})
+        protected java.lang.Object newInstance(
+                UnusedPrivateParameter unused) {
+            return new Investment();
+        }
         public static final int QTY_FIELD_NUMBER = 2;
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+            return com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.internal_static_Investment_fieldAccessorTable
+                    .ensureFieldAccessorsInitialized(
+                            com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Investment.class, com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Investment.Builder.class);
+        }
         public static final int ACCOUNTTYPE_FIELD_NUMBER = 3;
         private static final long serialVersionUID = 0L;
         // @@protoc_insertion_point(class_scope:Investment)
         private static final com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Investment DEFAULT_INSTANCE;
+
+        /**
+         * <code>.Ticker ticker = 1;</code>
+         *
+         * @return Whether the ticker field is set.
+         */
+        @java.lang.Override
+        public boolean hasTicker() {
+            return ((bitField0_ & 0x00000001) != 0);
+        }
+
+        /**
+         * <code>.Ticker ticker = 1;</code>
+         *
+         * @return The ticker.
+         */
+        @java.lang.Override
+        public com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Ticker getTicker() {
+            return ticker_ == null ? com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Ticker.getDefaultInstance() : ticker_;
+        }
+
+        /**
+         * <code>.Ticker ticker = 1;</code>
+         */
+        @java.lang.Override
+        public com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.TickerOrBuilder getTickerOrBuilder() {
+            return ticker_ == null ? com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Ticker.getDefaultInstance() : ticker_;
+        }
         private static final com.google.protobuf.Parser<Investment>
                 PARSER = new com.google.protobuf.AbstractParser<Investment>() {
             @java.lang.Override
@@ -2330,18 +2674,100 @@ public final class MarketDataProto {
             DEFAULT_INSTANCE = new com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Investment();
         }
 
+        /**
+         * <code>double qty = 2;</code>
+         *
+         * @return The qty.
+         */
+        @java.lang.Override
+        public double getQty() {
+            return qty_;
+        }
+
         private int bitField0_;
         private com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Ticker ticker_;
+
+        /**
+         * <code>.AccountType accountType = 3;</code>
+         *
+         * @return The enum numeric value on the wire for accountType.
+         */
+        @java.lang.Override
+        public int getAccountTypeValue() {
+            return accountType_;
+        }
+
+        /**
+         * <code>.AccountType accountType = 3;</code>
+         *
+         * @return The accountType.
+         */
+        @java.lang.Override
+        public com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.AccountType getAccountType() {
+            com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.AccountType result = com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.AccountType.forNumber(accountType_);
+            return result == null ? com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.AccountType.UNRECOGNIZED : result;
+        }
         private double qty_ = 0D;
         private int accountType_ = 0;
+
+        @java.lang.Override
+        public void writeTo(com.google.protobuf.CodedOutputStream output)
+                throws java.io.IOException {
+            if (((bitField0_ & 0x00000001) != 0)) {
+                output.writeMessage(1, getTicker());
+            }
+            if (java.lang.Double.doubleToRawLongBits(qty_) != 0) {
+                output.writeDouble(2, qty_);
+            }
+            if (accountType_ != com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.AccountType.TFSA.getNumber()) {
+                output.writeEnum(3, accountType_);
+            }
+            getUnknownFields().writeTo(output);
+        }
+
+        @java.lang.Override
+        public int getSerializedSize() {
+            int size = memoizedSize;
+            if (size != -1) return size;
+
+            size = 0;
+            if (((bitField0_ & 0x00000001) != 0)) {
+                size += com.google.protobuf.CodedOutputStream
+                        .computeMessageSize(1, getTicker());
+            }
+            if (java.lang.Double.doubleToRawLongBits(qty_) != 0) {
+                size += com.google.protobuf.CodedOutputStream
+                        .computeDoubleSize(2, qty_);
+            }
+            if (accountType_ != com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.AccountType.TFSA.getNumber()) {
+                size += com.google.protobuf.CodedOutputStream
+                        .computeEnumSize(3, accountType_);
+            }
+            size += getUnknownFields().getSerializedSize();
+            memoizedSize = size;
+            return size;
+        }
         private byte memoizedIsInitialized = -1;
 
-        // Use Investment.newBuilder() to construct.
-        private Investment(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-            super(builder);
-        }
-        private Investment() {
-            accountType_ = 0;
+        @java.lang.Override
+        public int hashCode() {
+            if (memoizedHashCode != 0) {
+                return memoizedHashCode;
+            }
+            int hash = 41;
+            hash = (19 * hash) + getDescriptor().hashCode();
+            if (hasTicker()) {
+                hash = (37 * hash) + TICKER_FIELD_NUMBER;
+                hash = (53 * hash) + getTicker().hashCode();
+            }
+            hash = (37 * hash) + QTY_FIELD_NUMBER;
+            hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+                    java.lang.Double.doubleToLongBits(getQty()));
+            hash = (37 * hash) + ACCOUNTTYPE_FIELD_NUMBER;
+            hash = (53 * hash) + accountType_;
+            hash = (29 * hash) + getUnknownFields().hashCode();
+            memoizedHashCode = hash;
+            return hash;
         }
 
         public static com.google.protobuf.Descriptors.Descriptor
@@ -2422,6 +2848,11 @@ public final class MarketDataProto {
                     .parseWithIOException(PARSER, input);
         }
 
+        @java.lang.Override
+        public Builder newBuilderForType() {
+            return newBuilder();
+        }
+
         public static com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Investment parseFrom(
                 com.google.protobuf.CodedInputStream input,
                 com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -2432,6 +2863,19 @@ public final class MarketDataProto {
 
         public static Builder newBuilder() {
             return DEFAULT_INSTANCE.toBuilder();
+        }
+
+        @java.lang.Override
+        public Builder toBuilder() {
+            return this == DEFAULT_INSTANCE
+                    ? new Builder() : new Builder().mergeFrom(this);
+        }
+
+        @java.lang.Override
+        protected Builder newBuilderForType(
+                com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+            Builder builder = new Builder(parent);
+            return builder;
         }
 
         public static Builder newBuilder(com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Investment prototype) {
@@ -2447,80 +2891,6 @@ public final class MarketDataProto {
         }
 
         @java.lang.Override
-        @SuppressWarnings({"unused"})
-        protected java.lang.Object newInstance(
-                UnusedPrivateParameter unused) {
-            return new Investment();
-        }
-
-        @java.lang.Override
-        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-            return com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.internal_static_Investment_fieldAccessorTable
-                    .ensureFieldAccessorsInitialized(
-                            com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Investment.class, com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Investment.Builder.class);
-        }
-
-        /**
-         * <code>.Ticker ticker = 1;</code>
-         *
-         * @return Whether the ticker field is set.
-         */
-        @java.lang.Override
-        public boolean hasTicker() {
-            return ((bitField0_ & 0x00000001) != 0);
-        }
-
-        /**
-         * <code>.Ticker ticker = 1;</code>
-         *
-         * @return The ticker.
-         */
-        @java.lang.Override
-        public com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Ticker getTicker() {
-            return ticker_ == null ? com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Ticker.getDefaultInstance() : ticker_;
-        }
-
-        /**
-         * <code>.Ticker ticker = 1;</code>
-         */
-        @java.lang.Override
-        public com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.TickerOrBuilder getTickerOrBuilder() {
-            return ticker_ == null ? com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Ticker.getDefaultInstance() : ticker_;
-        }
-
-        /**
-         * <code>double qty = 2;</code>
-         *
-         * @return The qty.
-         */
-        @java.lang.Override
-        public double getQty() {
-            return qty_;
-        }
-
-        /**
-         * <code>.AccountType accountType = 3;</code>
-         *
-         * @return The enum numeric value on the wire for accountType.
-         */
-        @java.lang.Override
-        public int getAccountTypeValue() {
-            return accountType_;
-        }
-
-        /**
-         * <code>.AccountType accountType = 3;</code>
-         *
-         * @return The accountType.
-         */
-        @java.lang.Override
-        public com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.AccountType getAccountType() {
-            com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.AccountType result = com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.AccountType.forNumber(accountType_);
-            return result == null ? com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.AccountType.UNRECOGNIZED : result;
-        }
-
-        @java.lang.Override
         public boolean isInitialized() {
             byte isInitialized = memoizedIsInitialized;
             if (isInitialized == 1) return true;
@@ -2528,44 +2898,6 @@ public final class MarketDataProto {
 
             memoizedIsInitialized = 1;
             return true;
-        }
-
-        @java.lang.Override
-        public void writeTo(com.google.protobuf.CodedOutputStream output)
-                throws java.io.IOException {
-            if (((bitField0_ & 0x00000001) != 0)) {
-                output.writeMessage(1, getTicker());
-            }
-            if (java.lang.Double.doubleToRawLongBits(qty_) != 0) {
-                output.writeDouble(2, qty_);
-            }
-            if (accountType_ != com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.AccountType.TFSA.getNumber()) {
-                output.writeEnum(3, accountType_);
-            }
-            getUnknownFields().writeTo(output);
-        }
-
-        @java.lang.Override
-        public int getSerializedSize() {
-            int size = memoizedSize;
-            if (size != -1) return size;
-
-            size = 0;
-            if (((bitField0_ & 0x00000001) != 0)) {
-                size += com.google.protobuf.CodedOutputStream
-                        .computeMessageSize(1, getTicker());
-            }
-            if (java.lang.Double.doubleToRawLongBits(qty_) != 0) {
-                size += com.google.protobuf.CodedOutputStream
-                        .computeDoubleSize(2, qty_);
-            }
-            if (accountType_ != com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.AccountType.TFSA.getNumber()) {
-                size += com.google.protobuf.CodedOutputStream
-                        .computeEnumSize(3, accountType_);
-            }
-            size += getUnknownFields().getSerializedSize();
-            memoizedSize = size;
-            return size;
         }
 
         @java.lang.Override
@@ -2591,45 +2923,6 @@ public final class MarketDataProto {
         }
 
         @java.lang.Override
-        public int hashCode() {
-            if (memoizedHashCode != 0) {
-                return memoizedHashCode;
-            }
-            int hash = 41;
-            hash = (19 * hash) + getDescriptor().hashCode();
-            if (hasTicker()) {
-                hash = (37 * hash) + TICKER_FIELD_NUMBER;
-                hash = (53 * hash) + getTicker().hashCode();
-            }
-            hash = (37 * hash) + QTY_FIELD_NUMBER;
-            hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-                    java.lang.Double.doubleToLongBits(getQty()));
-            hash = (37 * hash) + ACCOUNTTYPE_FIELD_NUMBER;
-            hash = (53 * hash) + accountType_;
-            hash = (29 * hash) + getUnknownFields().hashCode();
-            memoizedHashCode = hash;
-            return hash;
-        }
-
-        @java.lang.Override
-        public Builder newBuilderForType() {
-            return newBuilder();
-        }
-
-        @java.lang.Override
-        public Builder toBuilder() {
-            return this == DEFAULT_INSTANCE
-                    ? new Builder() : new Builder().mergeFrom(this);
-        }
-
-        @java.lang.Override
-        protected Builder newBuilderForType(
-                com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-            Builder builder = new Builder(parent);
-            return builder;
-        }
-
-        @java.lang.Override
         public com.google.protobuf.Parser<Investment> getParserForType() {
             return PARSER;
         }
@@ -2647,27 +2940,6 @@ public final class MarketDataProto {
                 // @@protoc_insertion_point(builder_implements:Investment)
                 com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.InvestmentOrBuilder {
             private int bitField0_;
-            private com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Ticker ticker_;
-            private com.google.protobuf.SingleFieldBuilderV3<
-                    com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Ticker, com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Ticker.Builder, com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.TickerOrBuilder> tickerBuilder_;
-            private double qty_;
-            private int accountType_ = 0;
-
-            // Construct using com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Investment.newBuilder()
-            private Builder() {
-                maybeForceBuilderInitialization();
-            }
-
-            private Builder(
-                    com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-                super(parent);
-                maybeForceBuilderInitialization();
-            }
-
-            public static com.google.protobuf.Descriptors.Descriptor
-            getDescriptor() {
-                return com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.internal_static_Investment_descriptor;
-            }
 
             @java.lang.Override
             protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -2676,6 +2948,9 @@ public final class MarketDataProto {
                         .ensureFieldAccessorsInitialized(
                                 com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Investment.class, com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Investment.Builder.class);
             }
+            private com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Ticker ticker_;
+            private com.google.protobuf.SingleFieldBuilderV3<
+                    com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Ticker, com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Ticker.Builder, com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.TickerOrBuilder> tickerBuilder_;
 
             private void maybeForceBuilderInitialization() {
                 if (com.google.protobuf.GeneratedMessageV3
@@ -2810,11 +3085,7 @@ public final class MarketDataProto {
                 onChanged();
                 return this;
             }
-
-            @java.lang.Override
-            public boolean isInitialized() {
-                return true;
-            }
+            private double qty_;
 
             @java.lang.Override
             public Builder mergeFrom(
@@ -2863,6 +3134,17 @@ public final class MarketDataProto {
                     onChanged();
                 } // finally
                 return this;
+            }
+            private int accountType_ = 0;
+
+            // Construct using com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Investment.newBuilder()
+            private Builder() {
+                maybeForceBuilderInitialization();
+            }
+            private Builder(
+                    com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+                super(parent);
+                maybeForceBuilderInitialization();
             }
 
             /**
@@ -2993,6 +3275,11 @@ public final class MarketDataProto {
                 return tickerBuilder_;
             }
 
+            public static com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+                return com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.internal_static_Investment_descriptor;
+            }
+
             /**
              * <code>double qty = 2;</code>
              *
@@ -3029,6 +3316,11 @@ public final class MarketDataProto {
                 return this;
             }
 
+            @java.lang.Override
+            public boolean isInitialized() {
+                return true;
+            }
+
             /**
              * <code>.AccountType accountType = 3;</code>
              *
@@ -3041,7 +3333,6 @@ public final class MarketDataProto {
 
             /**
              * <code>.AccountType accountType = 3;</code>
-             *
              * @param value The enum numeric value on the wire for accountType to set.
              * @return This builder for chaining.
              */
@@ -3081,7 +3372,6 @@ public final class MarketDataProto {
 
             /**
              * <code>.AccountType accountType = 3;</code>
-             *
              * @return This builder for chaining.
              */
             public Builder clearAccountType() {
@@ -3117,7 +3407,31 @@ public final class MarketDataProto {
             // @@protoc_insertion_point(message_implements:Portfolio)
             PortfolioOrBuilder {
         public static final int INVESTMENTS_FIELD_NUMBER = 1;
+
+        // Use Portfolio.newBuilder() to construct.
+        private Portfolio(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+            super(builder);
+        }
+
+        private Portfolio() {
+            investments_ = java.util.Collections.emptyList();
+        }
+
+        @java.lang.Override
+        @SuppressWarnings({"unused"})
+        protected java.lang.Object newInstance(
+                UnusedPrivateParameter unused) {
+            return new Portfolio();
+        }
         private static final long serialVersionUID = 0L;
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+            return com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.internal_static_Portfolio_fieldAccessorTable
+                    .ensureFieldAccessorsInitialized(
+                            com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Portfolio.class, com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Portfolio.Builder.class);
+        }
         // @@protoc_insertion_point(class_scope:Portfolio)
         private static final com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Portfolio DEFAULT_INSTANCE;
         private static final com.google.protobuf.Parser<Portfolio>
@@ -3142,20 +3456,94 @@ public final class MarketDataProto {
             }
         };
 
+        /**
+         * <code>repeated .Investment investments = 1;</code>
+         */
+        @java.lang.Override
+        public java.util.List<com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Investment> getInvestmentsList() {
+            return investments_;
+        }
+
+        /**
+         * <code>repeated .Investment investments = 1;</code>
+         */
+        @java.lang.Override
+        public java.util.List<? extends com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.InvestmentOrBuilder>
+        getInvestmentsOrBuilderList() {
+            return investments_;
+        }
+
+        /**
+         * <code>repeated .Investment investments = 1;</code>
+         */
+        @java.lang.Override
+        public int getInvestmentsCount() {
+            return investments_.size();
+        }
+
+        /**
+         * <code>repeated .Investment investments = 1;</code>
+         */
+        @java.lang.Override
+        public com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Investment getInvestments(int index) {
+            return investments_.get(index);
+        }
+
+        /**
+         * <code>repeated .Investment investments = 1;</code>
+         */
+        @java.lang.Override
+        public com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.InvestmentOrBuilder getInvestmentsOrBuilder(
+                int index) {
+            return investments_.get(index);
+        }
+
         static {
             DEFAULT_INSTANCE = new com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Portfolio();
         }
 
         @SuppressWarnings("serial")
         private java.util.List<com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Investment> investments_;
-        private byte memoizedIsInitialized = -1;
-        // Use Portfolio.newBuilder() to construct.
-        private Portfolio(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-            super(builder);
+
+        @java.lang.Override
+        public void writeTo(com.google.protobuf.CodedOutputStream output)
+                throws java.io.IOException {
+            for (int i = 0; i < investments_.size(); i++) {
+                output.writeMessage(1, investments_.get(i));
+            }
+            getUnknownFields().writeTo(output);
         }
 
-        private Portfolio() {
-            investments_ = java.util.Collections.emptyList();
+        @java.lang.Override
+        public int getSerializedSize() {
+            int size = memoizedSize;
+            if (size != -1) return size;
+
+            size = 0;
+            for (int i = 0; i < investments_.size(); i++) {
+                size += com.google.protobuf.CodedOutputStream
+                        .computeMessageSize(1, investments_.get(i));
+            }
+            size += getUnknownFields().getSerializedSize();
+            memoizedSize = size;
+            return size;
+        }
+        private byte memoizedIsInitialized = -1;
+
+        @java.lang.Override
+        public int hashCode() {
+            if (memoizedHashCode != 0) {
+                return memoizedHashCode;
+            }
+            int hash = 41;
+            hash = (19 * hash) + getDescriptor().hashCode();
+            if (getInvestmentsCount() > 0) {
+                hash = (37 * hash) + INVESTMENTS_FIELD_NUMBER;
+                hash = (53 * hash) + getInvestmentsList().hashCode();
+            }
+            hash = (29 * hash) + getUnknownFields().hashCode();
+            memoizedHashCode = hash;
+            return hash;
         }
 
         public static com.google.protobuf.Descriptors.Descriptor
@@ -3236,6 +3624,11 @@ public final class MarketDataProto {
                     .parseWithIOException(PARSER, input);
         }
 
+        @java.lang.Override
+        public Builder newBuilderForType() {
+            return newBuilder();
+        }
+
         public static com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Portfolio parseFrom(
                 com.google.protobuf.CodedInputStream input,
                 com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -3246,6 +3639,19 @@ public final class MarketDataProto {
 
         public static Builder newBuilder() {
             return DEFAULT_INSTANCE.toBuilder();
+        }
+
+        @java.lang.Override
+        public Builder toBuilder() {
+            return this == DEFAULT_INSTANCE
+                    ? new Builder() : new Builder().mergeFrom(this);
+        }
+
+        @java.lang.Override
+        protected Builder newBuilderForType(
+                com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+            Builder builder = new Builder(parent);
+            return builder;
         }
 
         public static Builder newBuilder(com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Portfolio prototype) {
@@ -3261,63 +3667,6 @@ public final class MarketDataProto {
         }
 
         @java.lang.Override
-        @SuppressWarnings({"unused"})
-        protected java.lang.Object newInstance(
-                UnusedPrivateParameter unused) {
-            return new Portfolio();
-        }
-
-        @java.lang.Override
-        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-            return com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.internal_static_Portfolio_fieldAccessorTable
-                    .ensureFieldAccessorsInitialized(
-                            com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Portfolio.class, com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Portfolio.Builder.class);
-        }
-
-        /**
-         * <code>repeated .Investment investments = 1;</code>
-         */
-        @java.lang.Override
-        public java.util.List<com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Investment> getInvestmentsList() {
-            return investments_;
-        }
-
-        /**
-         * <code>repeated .Investment investments = 1;</code>
-         */
-        @java.lang.Override
-        public java.util.List<? extends com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.InvestmentOrBuilder>
-        getInvestmentsOrBuilderList() {
-            return investments_;
-        }
-
-        /**
-         * <code>repeated .Investment investments = 1;</code>
-         */
-        @java.lang.Override
-        public int getInvestmentsCount() {
-            return investments_.size();
-        }
-
-        /**
-         * <code>repeated .Investment investments = 1;</code>
-         */
-        @java.lang.Override
-        public com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Investment getInvestments(int index) {
-            return investments_.get(index);
-        }
-
-        /**
-         * <code>repeated .Investment investments = 1;</code>
-         */
-        @java.lang.Override
-        public com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.InvestmentOrBuilder getInvestmentsOrBuilder(
-                int index) {
-            return investments_.get(index);
-        }
-
-        @java.lang.Override
         public boolean isInitialized() {
             byte isInitialized = memoizedIsInitialized;
             if (isInitialized == 1) return true;
@@ -3325,30 +3674,6 @@ public final class MarketDataProto {
 
             memoizedIsInitialized = 1;
             return true;
-        }
-
-        @java.lang.Override
-        public void writeTo(com.google.protobuf.CodedOutputStream output)
-                throws java.io.IOException {
-            for (int i = 0; i < investments_.size(); i++) {
-                output.writeMessage(1, investments_.get(i));
-            }
-            getUnknownFields().writeTo(output);
-        }
-
-        @java.lang.Override
-        public int getSerializedSize() {
-            int size = memoizedSize;
-            if (size != -1) return size;
-
-            size = 0;
-            for (int i = 0; i < investments_.size(); i++) {
-                size += com.google.protobuf.CodedOutputStream
-                        .computeMessageSize(1, investments_.get(i));
-            }
-            size += getUnknownFields().getSerializedSize();
-            memoizedSize = size;
-            return size;
         }
 
         @java.lang.Override
@@ -3364,40 +3689,6 @@ public final class MarketDataProto {
             if (!getInvestmentsList()
                     .equals(other.getInvestmentsList())) return false;
             return getUnknownFields().equals(other.getUnknownFields());
-        }
-
-        @java.lang.Override
-        public int hashCode() {
-            if (memoizedHashCode != 0) {
-                return memoizedHashCode;
-            }
-            int hash = 41;
-            hash = (19 * hash) + getDescriptor().hashCode();
-            if (getInvestmentsCount() > 0) {
-                hash = (37 * hash) + INVESTMENTS_FIELD_NUMBER;
-                hash = (53 * hash) + getInvestmentsList().hashCode();
-            }
-            hash = (29 * hash) + getUnknownFields().hashCode();
-            memoizedHashCode = hash;
-            return hash;
-        }
-
-        @java.lang.Override
-        public Builder newBuilderForType() {
-            return newBuilder();
-        }
-
-        @java.lang.Override
-        public Builder toBuilder() {
-            return this == DEFAULT_INSTANCE
-                    ? new Builder() : new Builder().mergeFrom(this);
-        }
-
-        @java.lang.Override
-        protected Builder newBuilderForType(
-                com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-            Builder builder = new Builder(parent);
-            return builder;
         }
 
         @java.lang.Override
@@ -3418,26 +3709,6 @@ public final class MarketDataProto {
                 // @@protoc_insertion_point(builder_implements:Portfolio)
                 com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.PortfolioOrBuilder {
             private int bitField0_;
-            private java.util.List<com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Investment> investments_ =
-                    java.util.Collections.emptyList();
-            private com.google.protobuf.RepeatedFieldBuilderV3<
-                    com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Investment, com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Investment.Builder, com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.InvestmentOrBuilder> investmentsBuilder_;
-
-            // Construct using com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Portfolio.newBuilder()
-            private Builder() {
-
-            }
-
-            private Builder(
-                    com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-                super(parent);
-
-            }
-
-            public static com.google.protobuf.Descriptors.Descriptor
-            getDescriptor() {
-                return com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.internal_static_Portfolio_descriptor;
-            }
 
             @java.lang.Override
             protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -3446,6 +3717,10 @@ public final class MarketDataProto {
                         .ensureFieldAccessorsInitialized(
                                 com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Portfolio.class, com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Portfolio.Builder.class);
             }
+            private java.util.List<com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Investment> investments_ =
+                    java.util.Collections.emptyList();
+            private com.google.protobuf.RepeatedFieldBuilderV3<
+                    com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Investment, com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Investment.Builder, com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.InvestmentOrBuilder> investmentsBuilder_;
 
             @java.lang.Override
             public Builder clear() {
@@ -3590,9 +3865,9 @@ public final class MarketDataProto {
                 return this;
             }
 
-            @java.lang.Override
-            public boolean isInitialized() {
-                return true;
+            // Construct using com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Portfolio.newBuilder()
+            private Builder() {
+
             }
 
             @java.lang.Override
@@ -3638,6 +3913,22 @@ public final class MarketDataProto {
                     onChanged();
                 } // finally
                 return this;
+            }
+
+            private Builder(
+                    com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+                super(parent);
+
+            }
+
+            public static com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+                return com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.internal_static_Portfolio_descriptor;
+            }
+
+            @java.lang.Override
+            public boolean isInitialized() {
+                return true;
             }
 
             private void ensureInvestmentsIsMutable() {
@@ -3912,5 +4203,5 @@ public final class MarketDataProto {
 
     }
 
-    // @@protoc_insertion_point(outer_class_scope)
+  // @@protoc_insertion_point(outer_class_scope)
 }
