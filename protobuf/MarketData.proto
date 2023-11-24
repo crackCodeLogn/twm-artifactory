@@ -1,0 +1,32 @@
+syntax = "proto3";
+
+option java_package = "com.vv.personal.twm.artifactory.generated.equitiesMarket";
+option java_outer_classname = "MarketDataProto";
+
+message Ticker {
+  string symbol = 1;
+  string name = 2;
+  string sector = 3;
+  repeated Value data = 4;
+}
+
+message Value {
+  string date = 1;
+  double price = 2;
+}
+
+message Investment {
+  Ticker ticker = 1;
+  double qty = 2;
+  AccountType accountType = 3;
+}
+
+message Portfolio {
+  repeated Investment investments = 1;
+}
+
+
+enum AccountType {
+  TFSA = 0;
+  NR = 1;
+}
