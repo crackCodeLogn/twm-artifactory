@@ -7,15 +7,14 @@ package com.vv.personal.twm.artifactory.generated.equitiesMarket;
 
 public final class EquitiesMarketProto {
   private EquitiesMarketProto() {}
-
   static {
     com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
-            com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
-            /* major= */ 4,
-            /* minor= */ 27,
-            /* patch= */ 2,
-            /* suffix= */ "",
-            EquitiesMarketProto.class.getName());
+      com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+      /* major= */ 4,
+      /* minor= */ 27,
+      /* patch= */ 2,
+      /* suffix= */ "",
+      EquitiesMarketProto.class.getName());
   }
   public static void registerAllExtensions(
       com.google.protobuf.ExtensionRegistryLite registry) {
@@ -58,19 +57,18 @@ public final class EquitiesMarketProto {
    * Protobuf type {@code Holding}
    */
   public static final class Holding extends
-          com.google.protobuf.GeneratedMessage implements
+      com.google.protobuf.GeneratedMessage implements
       // @@protoc_insertion_point(message_implements:Holding)
       HoldingOrBuilder {
   private static final long serialVersionUID = 0L;
-
     static {
       com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
-              com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
-              /* major= */ 4,
-              /* minor= */ 27,
-              /* patch= */ 2,
-              /* suffix= */ "",
-              Holding.class.getName());
+        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+        /* major= */ 4,
+        /* minor= */ 27,
+        /* patch= */ 2,
+        /* suffix= */ "",
+        Holding.class.getName());
     }
     // Use Holding.newBuilder() to construct.
     private Holding(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
@@ -213,11 +211,11 @@ public final class EquitiesMarketProto {
       com.vv.personal.twm.artifactory.generated.equitiesMarket.EquitiesMarketProto.Holding other = (com.vv.personal.twm.artifactory.generated.equitiesMarket.EquitiesMarketProto.Holding) obj;
 
       if (!getSymbol()
-              .equals(other.getSymbol())) return false;
+          .equals(other.getSymbol())) return false;
       if (getQty()
-              != other.getQty()) return false;
+          != other.getQty()) return false;
       if (java.lang.Double.doubleToLongBits(getBuyRate())
-              != java.lang.Double.doubleToLongBits(
+          != java.lang.Double.doubleToLongBits(
               other.getBuyRate())) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
@@ -330,7 +328,7 @@ public final class EquitiesMarketProto {
 
     @java.lang.Override
     protected Builder newBuilderForType(
-            com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -338,7 +336,7 @@ public final class EquitiesMarketProto {
      * Protobuf type {@code Holding}
      */
     public static final class Builder extends
-            com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:Holding)
         com.vv.personal.twm.artifactory.generated.equitiesMarket.EquitiesMarketProto.HoldingOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
@@ -360,7 +358,7 @@ public final class EquitiesMarketProto {
       }
 
       private Builder(
-              com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
 
       }
@@ -397,9 +395,7 @@ public final class EquitiesMarketProto {
       @java.lang.Override
       public com.vv.personal.twm.artifactory.generated.equitiesMarket.EquitiesMarketProto.Holding buildPartial() {
         com.vv.personal.twm.artifactory.generated.equitiesMarket.EquitiesMarketProto.Holding result = new com.vv.personal.twm.artifactory.generated.equitiesMarket.EquitiesMarketProto.Holding(this);
-        if (bitField0_ != 0) {
-          buildPartial0(result);
-        }
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
@@ -496,7 +492,6 @@ public final class EquitiesMarketProto {
         } // finally
         return this;
       }
-
       private int bitField0_;
 
       private java.lang.Object symbol_ = "";
@@ -540,9 +535,7 @@ public final class EquitiesMarketProto {
        */
       public Builder setSymbol(
           java.lang.String value) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
+        if (value == null) { throw new NullPointerException(); }
         symbol_ = value;
         bitField0_ |= 0x00000001;
         onChanged();
@@ -565,9 +558,7 @@ public final class EquitiesMarketProto {
        */
       public Builder setSymbolBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
+        if (value == null) { throw new NullPointerException(); }
         checkByteStringIsUtf8(value);
         symbol_ = value;
         bitField0_ |= 0x00000001;
@@ -668,7 +659,7 @@ public final class EquitiesMarketProto {
           throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
         } catch (java.io.IOException e) {
           throw new com.google.protobuf.InvalidProtocolBufferException(e)
-                  .setUnfinishedMessage(builder.buildPartial());
+              .setUnfinishedMessage(builder.buildPartial());
         }
         return builder.buildPartial();
       }
@@ -722,19 +713,18 @@ public final class EquitiesMarketProto {
    * Protobuf type {@code Holdings}
    */
   public static final class Holdings extends
-          com.google.protobuf.GeneratedMessage implements
+      com.google.protobuf.GeneratedMessage implements
       // @@protoc_insertion_point(message_implements:Holdings)
       HoldingsOrBuilder {
   private static final long serialVersionUID = 0L;
-
     static {
       com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
-              com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
-              /* major= */ 4,
-              /* minor= */ 27,
-              /* patch= */ 2,
-              /* suffix= */ "",
-              Holdings.class.getName());
+        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+        /* major= */ 4,
+        /* minor= */ 27,
+        /* patch= */ 2,
+        /* suffix= */ "",
+        Holdings.class.getName());
     }
     // Use Holdings.newBuilder() to construct.
     private Holdings(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
@@ -844,7 +834,7 @@ public final class EquitiesMarketProto {
       com.vv.personal.twm.artifactory.generated.equitiesMarket.EquitiesMarketProto.Holdings other = (com.vv.personal.twm.artifactory.generated.equitiesMarket.EquitiesMarketProto.Holdings) obj;
 
       if (!getHoldingsList()
-              .equals(other.getHoldingsList())) return false;
+          .equals(other.getHoldingsList())) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -953,7 +943,7 @@ public final class EquitiesMarketProto {
 
     @java.lang.Override
     protected Builder newBuilderForType(
-            com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -961,7 +951,7 @@ public final class EquitiesMarketProto {
      * Protobuf type {@code Holdings}
      */
     public static final class Builder extends
-            com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:Holdings)
         com.vv.personal.twm.artifactory.generated.equitiesMarket.EquitiesMarketProto.HoldingsOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
@@ -983,7 +973,7 @@ public final class EquitiesMarketProto {
       }
 
       private Builder(
-              com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
 
       }
@@ -1025,9 +1015,7 @@ public final class EquitiesMarketProto {
       public com.vv.personal.twm.artifactory.generated.equitiesMarket.EquitiesMarketProto.Holdings buildPartial() {
         com.vv.personal.twm.artifactory.generated.equitiesMarket.EquitiesMarketProto.Holdings result = new com.vv.personal.twm.artifactory.generated.equitiesMarket.EquitiesMarketProto.Holdings(this);
         buildPartialRepeatedFields(result);
-        if (bitField0_ != 0) {
-          buildPartial0(result);
-        }
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
@@ -1078,8 +1066,8 @@ public final class EquitiesMarketProto {
               holdingsBuilder_ = null;
               holdings_ = other.holdings_;
               bitField0_ = (bitField0_ & ~0x00000001);
-              holdingsBuilder_ =
-                      com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+              holdingsBuilder_ = 
+                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    getHoldingsFieldBuilder() : null;
             } else {
               holdingsBuilder_.addAllMessages(other.holdings_);
@@ -1114,9 +1102,9 @@ public final class EquitiesMarketProto {
                 break;
               case 10: {
                 com.vv.personal.twm.artifactory.generated.equitiesMarket.EquitiesMarketProto.Holding m =
-                        input.readMessage(
-                                com.vv.personal.twm.artifactory.generated.equitiesMarket.EquitiesMarketProto.Holding.parser(),
-                                extensionRegistry);
+                    input.readMessage(
+                        com.vv.personal.twm.artifactory.generated.equitiesMarket.EquitiesMarketProto.Holding.parser(),
+                        extensionRegistry);
                 if (holdingsBuilder_ == null) {
                   ensureHoldingsIsMutable();
                   holdings_.add(m);
@@ -1367,7 +1355,6 @@ public final class EquitiesMarketProto {
            getHoldingsBuilderList() {
         return getHoldingsFieldBuilder().getBuilderList();
       }
-
       private com.google.protobuf.RepeatedFieldBuilder<
           com.vv.personal.twm.artifactory.generated.equitiesMarket.EquitiesMarketProto.Holding, com.vv.personal.twm.artifactory.generated.equitiesMarket.EquitiesMarketProto.Holding.Builder, com.vv.personal.twm.artifactory.generated.equitiesMarket.EquitiesMarketProto.HoldingOrBuilder> 
           getHoldingsFieldBuilder() {
@@ -1412,7 +1399,7 @@ public final class EquitiesMarketProto {
           throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
         } catch (java.io.IOException e) {
           throw new com.google.protobuf.InvalidProtocolBufferException(e)
-                  .setUnfinishedMessage(builder.buildPartial());
+              .setUnfinishedMessage(builder.buildPartial());
         }
         return builder.buildPartial();
       }
@@ -1475,19 +1462,18 @@ public final class EquitiesMarketProto {
    * Protobuf type {@code LivePnL}
    */
   public static final class LivePnL extends
-          com.google.protobuf.GeneratedMessage implements
+      com.google.protobuf.GeneratedMessage implements
       // @@protoc_insertion_point(message_implements:LivePnL)
       LivePnLOrBuilder {
   private static final long serialVersionUID = 0L;
-
     static {
       com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
-              com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
-              /* major= */ 4,
-              /* minor= */ 27,
-              /* patch= */ 2,
-              /* suffix= */ "",
-              LivePnL.class.getName());
+        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+        /* major= */ 4,
+        /* minor= */ 27,
+        /* patch= */ 2,
+        /* suffix= */ "",
+        LivePnL.class.getName());
     }
     // Use LivePnL.newBuilder() to construct.
     private LivePnL(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
@@ -1638,16 +1624,16 @@ public final class EquitiesMarketProto {
       if (hasHolding() != other.hasHolding()) return false;
       if (hasHolding()) {
         if (!getHolding()
-                .equals(other.getHolding())) return false;
+            .equals(other.getHolding())) return false;
       }
       if (java.lang.Double.doubleToLongBits(getCurrentRate())
-              != java.lang.Double.doubleToLongBits(
+          != java.lang.Double.doubleToLongBits(
               other.getCurrentRate())) return false;
       if (java.lang.Double.doubleToLongBits(getDiff())
-              != java.lang.Double.doubleToLongBits(
+          != java.lang.Double.doubleToLongBits(
               other.getDiff())) return false;
       if (java.lang.Double.doubleToLongBits(getDiffPercent())
-              != java.lang.Double.doubleToLongBits(
+          != java.lang.Double.doubleToLongBits(
               other.getDiffPercent())) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
@@ -1766,7 +1752,7 @@ public final class EquitiesMarketProto {
 
     @java.lang.Override
     protected Builder newBuilderForType(
-            com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -1774,7 +1760,7 @@ public final class EquitiesMarketProto {
      * Protobuf type {@code LivePnL}
      */
     public static final class Builder extends
-            com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:LivePnL)
         com.vv.personal.twm.artifactory.generated.equitiesMarket.EquitiesMarketProto.LivePnLOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
@@ -1796,7 +1782,7 @@ public final class EquitiesMarketProto {
       }
 
       private Builder(
-              com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -1844,9 +1830,7 @@ public final class EquitiesMarketProto {
       @java.lang.Override
       public com.vv.personal.twm.artifactory.generated.equitiesMarket.EquitiesMarketProto.LivePnL buildPartial() {
         com.vv.personal.twm.artifactory.generated.equitiesMarket.EquitiesMarketProto.LivePnL result = new com.vv.personal.twm.artifactory.generated.equitiesMarket.EquitiesMarketProto.LivePnL(this);
-        if (bitField0_ != 0) {
-          buildPartial0(result);
-        }
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
@@ -1856,8 +1840,8 @@ public final class EquitiesMarketProto {
         int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.holding_ = holdingBuilder_ == null
-                  ? holding_
-                  : holdingBuilder_.build();
+              ? holding_
+              : holdingBuilder_.build();
           to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
@@ -1924,8 +1908,8 @@ public final class EquitiesMarketProto {
                 break;
               case 10: {
                 input.readMessage(
-                        getHoldingFieldBuilder().getBuilder(),
-                        extensionRegistry);
+                    getHoldingFieldBuilder().getBuilder(),
+                    extensionRegistry);
                 bitField0_ |= 0x00000001;
                 break;
               } // case 10
@@ -1959,7 +1943,6 @@ public final class EquitiesMarketProto {
         } // finally
         return this;
       }
-
       private int bitField0_;
 
       private com.vv.personal.twm.artifactory.generated.equitiesMarket.EquitiesMarketProto.Holding holding_;
@@ -2019,8 +2002,8 @@ public final class EquitiesMarketProto {
       public Builder mergeHolding(com.vv.personal.twm.artifactory.generated.equitiesMarket.EquitiesMarketProto.Holding value) {
         if (holdingBuilder_ == null) {
           if (((bitField0_ & 0x00000001) != 0) &&
-                  holding_ != null &&
-                  holding_ != com.vv.personal.twm.artifactory.generated.equitiesMarket.EquitiesMarketProto.Holding.getDefaultInstance()) {
+            holding_ != null &&
+            holding_ != com.vv.personal.twm.artifactory.generated.equitiesMarket.EquitiesMarketProto.Holding.getDefaultInstance()) {
             getHoldingBuilder().mergeFrom(value);
           } else {
             holding_ = value;
@@ -2208,7 +2191,7 @@ public final class EquitiesMarketProto {
           throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
         } catch (java.io.IOException e) {
           throw new com.google.protobuf.InvalidProtocolBufferException(e)
-                  .setUnfinishedMessage(builder.buildPartial());
+              .setUnfinishedMessage(builder.buildPartial());
         }
         return builder.buildPartial();
       }
@@ -2262,19 +2245,18 @@ public final class EquitiesMarketProto {
    * Protobuf type {@code LivePnLs}
    */
   public static final class LivePnLs extends
-          com.google.protobuf.GeneratedMessage implements
+      com.google.protobuf.GeneratedMessage implements
       // @@protoc_insertion_point(message_implements:LivePnLs)
       LivePnLsOrBuilder {
   private static final long serialVersionUID = 0L;
-
     static {
       com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
-              com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
-              /* major= */ 4,
-              /* minor= */ 27,
-              /* patch= */ 2,
-              /* suffix= */ "",
-              LivePnLs.class.getName());
+        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+        /* major= */ 4,
+        /* minor= */ 27,
+        /* patch= */ 2,
+        /* suffix= */ "",
+        LivePnLs.class.getName());
     }
     // Use LivePnLs.newBuilder() to construct.
     private LivePnLs(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
@@ -2384,7 +2366,7 @@ public final class EquitiesMarketProto {
       com.vv.personal.twm.artifactory.generated.equitiesMarket.EquitiesMarketProto.LivePnLs other = (com.vv.personal.twm.artifactory.generated.equitiesMarket.EquitiesMarketProto.LivePnLs) obj;
 
       if (!getLivePnLsList()
-              .equals(other.getLivePnLsList())) return false;
+          .equals(other.getLivePnLsList())) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -2493,7 +2475,7 @@ public final class EquitiesMarketProto {
 
     @java.lang.Override
     protected Builder newBuilderForType(
-            com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -2501,7 +2483,7 @@ public final class EquitiesMarketProto {
      * Protobuf type {@code LivePnLs}
      */
     public static final class Builder extends
-            com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:LivePnLs)
         com.vv.personal.twm.artifactory.generated.equitiesMarket.EquitiesMarketProto.LivePnLsOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
@@ -2523,7 +2505,7 @@ public final class EquitiesMarketProto {
       }
 
       private Builder(
-              com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
 
       }
@@ -2565,9 +2547,7 @@ public final class EquitiesMarketProto {
       public com.vv.personal.twm.artifactory.generated.equitiesMarket.EquitiesMarketProto.LivePnLs buildPartial() {
         com.vv.personal.twm.artifactory.generated.equitiesMarket.EquitiesMarketProto.LivePnLs result = new com.vv.personal.twm.artifactory.generated.equitiesMarket.EquitiesMarketProto.LivePnLs(this);
         buildPartialRepeatedFields(result);
-        if (bitField0_ != 0) {
-          buildPartial0(result);
-        }
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
@@ -2618,8 +2598,8 @@ public final class EquitiesMarketProto {
               livePnLsBuilder_ = null;
               livePnLs_ = other.livePnLs_;
               bitField0_ = (bitField0_ & ~0x00000001);
-              livePnLsBuilder_ =
-                      com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+              livePnLsBuilder_ = 
+                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    getLivePnLsFieldBuilder() : null;
             } else {
               livePnLsBuilder_.addAllMessages(other.livePnLs_);
@@ -2654,9 +2634,9 @@ public final class EquitiesMarketProto {
                 break;
               case 10: {
                 com.vv.personal.twm.artifactory.generated.equitiesMarket.EquitiesMarketProto.LivePnL m =
-                        input.readMessage(
-                                com.vv.personal.twm.artifactory.generated.equitiesMarket.EquitiesMarketProto.LivePnL.parser(),
-                                extensionRegistry);
+                    input.readMessage(
+                        com.vv.personal.twm.artifactory.generated.equitiesMarket.EquitiesMarketProto.LivePnL.parser(),
+                        extensionRegistry);
                 if (livePnLsBuilder_ == null) {
                   ensureLivePnLsIsMutable();
                   livePnLs_.add(m);
@@ -2907,7 +2887,6 @@ public final class EquitiesMarketProto {
            getLivePnLsBuilderList() {
         return getLivePnLsFieldBuilder().getBuilderList();
       }
-
       private com.google.protobuf.RepeatedFieldBuilder<
           com.vv.personal.twm.artifactory.generated.equitiesMarket.EquitiesMarketProto.LivePnL, com.vv.personal.twm.artifactory.generated.equitiesMarket.EquitiesMarketProto.LivePnL.Builder, com.vv.personal.twm.artifactory.generated.equitiesMarket.EquitiesMarketProto.LivePnLOrBuilder> 
           getLivePnLsFieldBuilder() {
@@ -2952,7 +2931,7 @@ public final class EquitiesMarketProto {
           throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
         } catch (java.io.IOException e) {
           throw new com.google.protobuf.InvalidProtocolBufferException(e)
-                  .setUnfinishedMessage(builder.buildPartial());
+              .setUnfinishedMessage(builder.buildPartial());
         }
         return builder.buildPartial();
       }
@@ -3009,19 +2988,18 @@ public final class EquitiesMarketProto {
    * Protobuf type {@code PnLOutput}
    */
   public static final class PnLOutput extends
-          com.google.protobuf.GeneratedMessage implements
+      com.google.protobuf.GeneratedMessage implements
       // @@protoc_insertion_point(message_implements:PnLOutput)
       PnLOutputOrBuilder {
   private static final long serialVersionUID = 0L;
-
     static {
       com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
-              com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
-              /* major= */ 4,
-              /* minor= */ 27,
-              /* patch= */ 2,
-              /* suffix= */ "",
-              PnLOutput.class.getName());
+        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+        /* major= */ 4,
+        /* minor= */ 27,
+        /* patch= */ 2,
+        /* suffix= */ "",
+        PnLOutput.class.getName());
     }
     // Use PnLOutput.newBuilder() to construct.
     private PnLOutput(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
@@ -3154,13 +3132,13 @@ public final class EquitiesMarketProto {
       if (hasLivePnLs() != other.hasLivePnLs()) return false;
       if (hasLivePnLs()) {
         if (!getLivePnLs()
-                .equals(other.getLivePnLs())) return false;
+            .equals(other.getLivePnLs())) return false;
       }
       if (java.lang.Double.doubleToLongBits(getPnLSubTotal())
-              != java.lang.Double.doubleToLongBits(
+          != java.lang.Double.doubleToLongBits(
               other.getPnLSubTotal())) return false;
       if (java.lang.Double.doubleToLongBits(getCurrentRateOfReturn())
-              != java.lang.Double.doubleToLongBits(
+          != java.lang.Double.doubleToLongBits(
               other.getCurrentRateOfReturn())) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
@@ -3276,7 +3254,7 @@ public final class EquitiesMarketProto {
 
     @java.lang.Override
     protected Builder newBuilderForType(
-            com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -3284,7 +3262,7 @@ public final class EquitiesMarketProto {
      * Protobuf type {@code PnLOutput}
      */
     public static final class Builder extends
-            com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:PnLOutput)
         com.vv.personal.twm.artifactory.generated.equitiesMarket.EquitiesMarketProto.PnLOutputOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
@@ -3306,7 +3284,7 @@ public final class EquitiesMarketProto {
       }
 
       private Builder(
-              com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -3353,9 +3331,7 @@ public final class EquitiesMarketProto {
       @java.lang.Override
       public com.vv.personal.twm.artifactory.generated.equitiesMarket.EquitiesMarketProto.PnLOutput buildPartial() {
         com.vv.personal.twm.artifactory.generated.equitiesMarket.EquitiesMarketProto.PnLOutput result = new com.vv.personal.twm.artifactory.generated.equitiesMarket.EquitiesMarketProto.PnLOutput(this);
-        if (bitField0_ != 0) {
-          buildPartial0(result);
-        }
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
@@ -3365,8 +3341,8 @@ public final class EquitiesMarketProto {
         int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.livePnLs_ = livePnLsBuilder_ == null
-                  ? livePnLs_
-                  : livePnLsBuilder_.build();
+              ? livePnLs_
+              : livePnLsBuilder_.build();
           to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
@@ -3427,8 +3403,8 @@ public final class EquitiesMarketProto {
                 break;
               case 10: {
                 input.readMessage(
-                        getLivePnLsFieldBuilder().getBuilder(),
-                        extensionRegistry);
+                    getLivePnLsFieldBuilder().getBuilder(),
+                    extensionRegistry);
                 bitField0_ |= 0x00000001;
                 break;
               } // case 10
@@ -3457,7 +3433,6 @@ public final class EquitiesMarketProto {
         } // finally
         return this;
       }
-
       private int bitField0_;
 
       private com.vv.personal.twm.artifactory.generated.equitiesMarket.EquitiesMarketProto.LivePnLs livePnLs_;
@@ -3517,8 +3492,8 @@ public final class EquitiesMarketProto {
       public Builder mergeLivePnLs(com.vv.personal.twm.artifactory.generated.equitiesMarket.EquitiesMarketProto.LivePnLs value) {
         if (livePnLsBuilder_ == null) {
           if (((bitField0_ & 0x00000001) != 0) &&
-                  livePnLs_ != null &&
-                  livePnLs_ != com.vv.personal.twm.artifactory.generated.equitiesMarket.EquitiesMarketProto.LivePnLs.getDefaultInstance()) {
+            livePnLs_ != null &&
+            livePnLs_ != com.vv.personal.twm.artifactory.generated.equitiesMarket.EquitiesMarketProto.LivePnLs.getDefaultInstance()) {
             getLivePnLsBuilder().mergeFrom(value);
           } else {
             livePnLs_ = value;
@@ -3674,7 +3649,7 @@ public final class EquitiesMarketProto {
           throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
         } catch (java.io.IOException e) {
           throw new com.google.protobuf.InvalidProtocolBufferException(e)
-                  .setUnfinishedMessage(builder.buildPartial());
+              .setUnfinishedMessage(builder.buildPartial());
         }
         return builder.buildPartial();
       }
@@ -3698,28 +3673,28 @@ public final class EquitiesMarketProto {
 
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_Holding_descriptor;
-  private static final
-  com.google.protobuf.GeneratedMessage.FieldAccessorTable
+  private static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_Holding_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_Holdings_descriptor;
-  private static final
-  com.google.protobuf.GeneratedMessage.FieldAccessorTable
+  private static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_Holdings_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_LivePnL_descriptor;
-  private static final
-  com.google.protobuf.GeneratedMessage.FieldAccessorTable
+  private static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_LivePnL_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_LivePnLs_descriptor;
-  private static final
-  com.google.protobuf.GeneratedMessage.FieldAccessorTable
+  private static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_LivePnLs_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_PnLOutput_descriptor;
-  private static final
-  com.google.protobuf.GeneratedMessage.FieldAccessorTable
+  private static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_PnLOutput_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
@@ -3749,31 +3724,31 @@ public final class EquitiesMarketProto {
     internal_static_Holding_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_Holding_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Holding_descriptor,
         new java.lang.String[] { "Symbol", "Qty", "BuyRate", });
     internal_static_Holdings_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_Holdings_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Holdings_descriptor,
         new java.lang.String[] { "Holdings", });
     internal_static_LivePnL_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_LivePnL_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_LivePnL_descriptor,
         new java.lang.String[] { "Holding", "CurrentRate", "Diff", "DiffPercent", });
     internal_static_LivePnLs_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_LivePnLs_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_LivePnLs_descriptor,
         new java.lang.String[] { "LivePnLs", });
     internal_static_PnLOutput_descriptor =
       getDescriptor().getMessageTypes().get(4);
     internal_static_PnLOutput_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_PnLOutput_descriptor,
         new java.lang.String[] { "LivePnLs", "PnLSubTotal", "CurrentRateOfReturn", });
     descriptor.resolveAllFeaturesImmutable();
