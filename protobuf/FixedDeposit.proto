@@ -26,6 +26,13 @@ message FixedDeposit {
   string originalUser = 18;
 
   AnnualBreakdownList annualBreakdownList = 19;
+  AccountType accountType = 20;
+}
+
+enum AccountType {
+  IND = 0;
+  TFSA = 1;
+  NR = 2;
 }
 
 enum InterestType {

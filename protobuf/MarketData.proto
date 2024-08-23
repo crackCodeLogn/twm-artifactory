@@ -30,6 +30,7 @@ message Portfolio {
 enum AccountType {
   TFSA = 0;
   NR = 1;
+  IND = 3;
 }
 
 enum InstrumentType {
