@@ -2195,7 +2195,7 @@ public final class MarketDataProto {
 
   }
 
-  public interface InvestmentOrBuilder extends
+  @java.lang.Deprecated public interface InvestmentOrBuilder extends
       // @@protoc_insertion_point(interface_extends:Investment)
       com.google.protobuf.MessageOrBuilder {
 
@@ -2232,9 +2232,13 @@ public final class MarketDataProto {
     com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.AccountType getAccountType();
   }
   /**
+   * <pre>
+   * deprecating erstwhile Investment because of introduction of stock selling
+   * </pre>
+   *
    * Protobuf type {@code Investment}
    */
-  public static final class Investment extends
+  @java.lang.Deprecated public static final class Investment extends
       com.google.protobuf.GeneratedMessage implements
       // @@protoc_insertion_point(message_implements:Investment)
       InvestmentOrBuilder {
@@ -2511,6 +2515,10 @@ public final class MarketDataProto {
       return builder;
     }
     /**
+     * <pre>
+     * deprecating erstwhile Investment because of introduction of stock selling
+     * </pre>
+     *
      * Protobuf type {@code Investment}
      */
     public static final class Builder extends
@@ -2944,32 +2952,805 @@ public final class MarketDataProto {
 
   }
 
+  public interface InstrumentOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:Instrument)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.Ticker ticker = 1;</code>
+     * @return Whether the ticker field is set.
+     */
+    boolean hasTicker();
+    /**
+     * <code>.Ticker ticker = 1;</code>
+     * @return The ticker.
+     */
+    com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Ticker getTicker();
+    /**
+     * <code>.Ticker ticker = 1;</code>
+     */
+    com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.TickerOrBuilder getTickerOrBuilder();
+
+    /**
+     * <code>double qty = 2;</code>
+     * @return The qty.
+     */
+    double getQty();
+
+    /**
+     * <code>.AccountType accountType = 3;</code>
+     * @return The enum numeric value on the wire for accountType.
+     */
+    int getAccountTypeValue();
+    /**
+     * <code>.AccountType accountType = 3;</code>
+     * @return The accountType.
+     */
+    com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.AccountType getAccountType();
+  }
+  /**
+   * Protobuf type {@code Instrument}
+   */
+  public static final class Instrument extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:Instrument)
+      InstrumentOrBuilder {
+  private static final long serialVersionUID = 0L;
+    static {
+      com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
+        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+        /* major= */ 4,
+        /* minor= */ 27,
+        /* patch= */ 3,
+        /* suffix= */ "",
+        Instrument.class.getName());
+    }
+    // Use Instrument.newBuilder() to construct.
+    private Instrument(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+    }
+    private Instrument() {
+      accountType_ = 0;
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.internal_static_Instrument_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.internal_static_Instrument_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Instrument.class, com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Instrument.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int TICKER_FIELD_NUMBER = 1;
+    private com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Ticker ticker_;
+    /**
+     * <code>.Ticker ticker = 1;</code>
+     * @return Whether the ticker field is set.
+     */
+    @java.lang.Override
+    public boolean hasTicker() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>.Ticker ticker = 1;</code>
+     * @return The ticker.
+     */
+    @java.lang.Override
+    public com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Ticker getTicker() {
+      return ticker_ == null ? com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Ticker.getDefaultInstance() : ticker_;
+    }
+    /**
+     * <code>.Ticker ticker = 1;</code>
+     */
+    @java.lang.Override
+    public com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.TickerOrBuilder getTickerOrBuilder() {
+      return ticker_ == null ? com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Ticker.getDefaultInstance() : ticker_;
+    }
+
+    public static final int QTY_FIELD_NUMBER = 2;
+    private double qty_ = 0D;
+    /**
+     * <code>double qty = 2;</code>
+     * @return The qty.
+     */
+    @java.lang.Override
+    public double getQty() {
+      return qty_;
+    }
+
+    public static final int ACCOUNTTYPE_FIELD_NUMBER = 3;
+    private int accountType_ = 0;
+    /**
+     * <code>.AccountType accountType = 3;</code>
+     * @return The enum numeric value on the wire for accountType.
+     */
+    @java.lang.Override public int getAccountTypeValue() {
+      return accountType_;
+    }
+    /**
+     * <code>.AccountType accountType = 3;</code>
+     * @return The accountType.
+     */
+    @java.lang.Override public com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.AccountType getAccountType() {
+      com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.AccountType result = com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.AccountType.forNumber(accountType_);
+      return result == null ? com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.AccountType.UNRECOGNIZED : result;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeMessage(1, getTicker());
+      }
+      if (java.lang.Double.doubleToRawLongBits(qty_) != 0) {
+        output.writeDouble(2, qty_);
+      }
+      if (accountType_ != com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.AccountType.TFSA.getNumber()) {
+        output.writeEnum(3, accountType_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getTicker());
+      }
+      if (java.lang.Double.doubleToRawLongBits(qty_) != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeDoubleSize(2, qty_);
+      }
+      if (accountType_ != com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.AccountType.TFSA.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(3, accountType_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Instrument)) {
+        return super.equals(obj);
+      }
+      com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Instrument other = (com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Instrument) obj;
+
+      if (hasTicker() != other.hasTicker()) return false;
+      if (hasTicker()) {
+        if (!getTicker()
+            .equals(other.getTicker())) return false;
+      }
+      if (java.lang.Double.doubleToLongBits(getQty())
+          != java.lang.Double.doubleToLongBits(
+              other.getQty())) return false;
+      if (accountType_ != other.accountType_) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasTicker()) {
+        hash = (37 * hash) + TICKER_FIELD_NUMBER;
+        hash = (53 * hash) + getTicker().hashCode();
+      }
+      hash = (37 * hash) + QTY_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          java.lang.Double.doubleToLongBits(getQty()));
+      hash = (37 * hash) + ACCOUNTTYPE_FIELD_NUMBER;
+      hash = (53 * hash) + accountType_;
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Instrument parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Instrument parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Instrument parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Instrument parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Instrument parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Instrument parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Instrument parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Instrument parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Instrument parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Instrument parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Instrument parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Instrument parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Instrument prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code Instrument}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:Instrument)
+        com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.InstrumentOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.internal_static_Instrument_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.internal_static_Instrument_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Instrument.class, com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Instrument.Builder.class);
+      }
+
+      // Construct using com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Instrument.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage
+                .alwaysUseFieldBuilders) {
+          getTickerFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        ticker_ = null;
+        if (tickerBuilder_ != null) {
+          tickerBuilder_.dispose();
+          tickerBuilder_ = null;
+        }
+        qty_ = 0D;
+        accountType_ = 0;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.internal_static_Instrument_descriptor;
+      }
+
+      @java.lang.Override
+      public com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Instrument getDefaultInstanceForType() {
+        return com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Instrument.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Instrument build() {
+        com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Instrument result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Instrument buildPartial() {
+        com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Instrument result = new com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Instrument(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Instrument result) {
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.ticker_ = tickerBuilder_ == null
+              ? ticker_
+              : tickerBuilder_.build();
+          to_bitField0_ |= 0x00000001;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.qty_ = qty_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.accountType_ = accountType_;
+        }
+        result.bitField0_ |= to_bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Instrument) {
+          return mergeFrom((com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Instrument)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Instrument other) {
+        if (other == com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Instrument.getDefaultInstance()) return this;
+        if (other.hasTicker()) {
+          mergeTicker(other.getTicker());
+        }
+        if (other.getQty() != 0D) {
+          setQty(other.getQty());
+        }
+        if (other.accountType_ != 0) {
+          setAccountTypeValue(other.getAccountTypeValue());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getTickerFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 17: {
+                qty_ = input.readDouble();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 17
+              case 24: {
+                accountType_ = input.readEnum();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Ticker ticker_;
+      private com.google.protobuf.SingleFieldBuilder<
+          com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Ticker, com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Ticker.Builder, com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.TickerOrBuilder> tickerBuilder_;
+      /**
+       * <code>.Ticker ticker = 1;</code>
+       * @return Whether the ticker field is set.
+       */
+      public boolean hasTicker() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.Ticker ticker = 1;</code>
+       * @return The ticker.
+       */
+      public com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Ticker getTicker() {
+        if (tickerBuilder_ == null) {
+          return ticker_ == null ? com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Ticker.getDefaultInstance() : ticker_;
+        } else {
+          return tickerBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.Ticker ticker = 1;</code>
+       */
+      public Builder setTicker(com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Ticker value) {
+        if (tickerBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ticker_ = value;
+        } else {
+          tickerBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.Ticker ticker = 1;</code>
+       */
+      public Builder setTicker(
+          com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Ticker.Builder builderForValue) {
+        if (tickerBuilder_ == null) {
+          ticker_ = builderForValue.build();
+        } else {
+          tickerBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.Ticker ticker = 1;</code>
+       */
+      public Builder mergeTicker(com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Ticker value) {
+        if (tickerBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            ticker_ != null &&
+            ticker_ != com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Ticker.getDefaultInstance()) {
+            getTickerBuilder().mergeFrom(value);
+          } else {
+            ticker_ = value;
+          }
+        } else {
+          tickerBuilder_.mergeFrom(value);
+        }
+        if (ticker_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <code>.Ticker ticker = 1;</code>
+       */
+      public Builder clearTicker() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        ticker_ = null;
+        if (tickerBuilder_ != null) {
+          tickerBuilder_.dispose();
+          tickerBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.Ticker ticker = 1;</code>
+       */
+      public com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Ticker.Builder getTickerBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getTickerFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.Ticker ticker = 1;</code>
+       */
+      public com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.TickerOrBuilder getTickerOrBuilder() {
+        if (tickerBuilder_ != null) {
+          return tickerBuilder_.getMessageOrBuilder();
+        } else {
+          return ticker_ == null ?
+              com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Ticker.getDefaultInstance() : ticker_;
+        }
+      }
+      /**
+       * <code>.Ticker ticker = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Ticker, com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Ticker.Builder, com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.TickerOrBuilder> 
+          getTickerFieldBuilder() {
+        if (tickerBuilder_ == null) {
+          tickerBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Ticker, com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Ticker.Builder, com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.TickerOrBuilder>(
+                  getTicker(),
+                  getParentForChildren(),
+                  isClean());
+          ticker_ = null;
+        }
+        return tickerBuilder_;
+      }
+
+      private double qty_ ;
+      /**
+       * <code>double qty = 2;</code>
+       * @return The qty.
+       */
+      @java.lang.Override
+      public double getQty() {
+        return qty_;
+      }
+      /**
+       * <code>double qty = 2;</code>
+       * @param value The qty to set.
+       * @return This builder for chaining.
+       */
+      public Builder setQty(double value) {
+
+        qty_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>double qty = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearQty() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        qty_ = 0D;
+        onChanged();
+        return this;
+      }
+
+      private int accountType_ = 0;
+      /**
+       * <code>.AccountType accountType = 3;</code>
+       * @return The enum numeric value on the wire for accountType.
+       */
+      @java.lang.Override public int getAccountTypeValue() {
+        return accountType_;
+      }
+      /**
+       * <code>.AccountType accountType = 3;</code>
+       * @param value The enum numeric value on the wire for accountType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAccountTypeValue(int value) {
+        accountType_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.AccountType accountType = 3;</code>
+       * @return The accountType.
+       */
+      @java.lang.Override
+      public com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.AccountType getAccountType() {
+        com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.AccountType result = com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.AccountType.forNumber(accountType_);
+        return result == null ? com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.AccountType.UNRECOGNIZED : result;
+      }
+      /**
+       * <code>.AccountType accountType = 3;</code>
+       * @param value The accountType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAccountType(com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.AccountType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000004;
+        accountType_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.AccountType accountType = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAccountType() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        accountType_ = 0;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:Instrument)
+    }
+
+    // @@protoc_insertion_point(class_scope:Instrument)
+    private static final com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Instrument DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Instrument();
+    }
+
+    public static com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Instrument getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Instrument>
+        PARSER = new com.google.protobuf.AbstractParser<Instrument>() {
+      @java.lang.Override
+      public Instrument parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Instrument> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Instrument> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Instrument getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface PortfolioOrBuilder extends
       // @@protoc_insertion_point(interface_extends:Portfolio)
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>repeated .Investment investments = 1;</code>
+     * <code>repeated .Investment investments = 1 [deprecated = true];</code>
      */
-    java.util.List<com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Investment> 
+    @java.lang.Deprecated java.util.List<com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Investment> 
         getInvestmentsList();
     /**
-     * <code>repeated .Investment investments = 1;</code>
+     * <code>repeated .Investment investments = 1 [deprecated = true];</code>
      */
-    com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Investment getInvestments(int index);
+    @java.lang.Deprecated com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Investment getInvestments(int index);
     /**
-     * <code>repeated .Investment investments = 1;</code>
+     * <code>repeated .Investment investments = 1 [deprecated = true];</code>
      */
-    int getInvestmentsCount();
+    @java.lang.Deprecated int getInvestmentsCount();
     /**
-     * <code>repeated .Investment investments = 1;</code>
+     * <code>repeated .Investment investments = 1 [deprecated = true];</code>
      */
-    java.util.List<? extends com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.InvestmentOrBuilder> 
+    @java.lang.Deprecated java.util.List<? extends com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.InvestmentOrBuilder> 
         getInvestmentsOrBuilderList();
     /**
-     * <code>repeated .Investment investments = 1;</code>
+     * <code>repeated .Investment investments = 1 [deprecated = true];</code>
      */
-    com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.InvestmentOrBuilder getInvestmentsOrBuilder(
+    @java.lang.Deprecated com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.InvestmentOrBuilder getInvestmentsOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .Instrument instruments = 2;</code>
+     */
+    java.util.List<com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Instrument> 
+        getInstrumentsList();
+    /**
+     * <code>repeated .Instrument instruments = 2;</code>
+     */
+    com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Instrument getInstruments(int index);
+    /**
+     * <code>repeated .Instrument instruments = 2;</code>
+     */
+    int getInstrumentsCount();
+    /**
+     * <code>repeated .Instrument instruments = 2;</code>
+     */
+    java.util.List<? extends com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.InstrumentOrBuilder> 
+        getInstrumentsOrBuilderList();
+    /**
+     * <code>repeated .Instrument instruments = 2;</code>
+     */
+    com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.InstrumentOrBuilder getInstrumentsOrBuilder(
         int index);
   }
   /**
@@ -2995,6 +3776,7 @@ public final class MarketDataProto {
     }
     private Portfolio() {
       investments_ = java.util.Collections.emptyList();
+      instruments_ = java.util.Collections.emptyList();
     }
 
     public static final com.google.protobuf.Descriptors.Descriptor
@@ -3014,41 +3796,82 @@ public final class MarketDataProto {
     @SuppressWarnings("serial")
     private java.util.List<com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Investment> investments_;
     /**
-     * <code>repeated .Investment investments = 1;</code>
+     * <code>repeated .Investment investments = 1 [deprecated = true];</code>
      */
     @java.lang.Override
-    public java.util.List<com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Investment> getInvestmentsList() {
+    @java.lang.Deprecated public java.util.List<com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Investment> getInvestmentsList() {
       return investments_;
     }
     /**
-     * <code>repeated .Investment investments = 1;</code>
+     * <code>repeated .Investment investments = 1 [deprecated = true];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.InvestmentOrBuilder> 
+    @java.lang.Deprecated public java.util.List<? extends com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.InvestmentOrBuilder> 
         getInvestmentsOrBuilderList() {
       return investments_;
     }
     /**
-     * <code>repeated .Investment investments = 1;</code>
+     * <code>repeated .Investment investments = 1 [deprecated = true];</code>
      */
     @java.lang.Override
-    public int getInvestmentsCount() {
+    @java.lang.Deprecated public int getInvestmentsCount() {
       return investments_.size();
     }
     /**
-     * <code>repeated .Investment investments = 1;</code>
+     * <code>repeated .Investment investments = 1 [deprecated = true];</code>
      */
     @java.lang.Override
-    public com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Investment getInvestments(int index) {
+    @java.lang.Deprecated public com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Investment getInvestments(int index) {
       return investments_.get(index);
     }
     /**
-     * <code>repeated .Investment investments = 1;</code>
+     * <code>repeated .Investment investments = 1 [deprecated = true];</code>
      */
     @java.lang.Override
-    public com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.InvestmentOrBuilder getInvestmentsOrBuilder(
+    @java.lang.Deprecated public com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.InvestmentOrBuilder getInvestmentsOrBuilder(
         int index) {
       return investments_.get(index);
+    }
+
+    public static final int INSTRUMENTS_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private java.util.List<com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Instrument> instruments_;
+    /**
+     * <code>repeated .Instrument instruments = 2;</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Instrument> getInstrumentsList() {
+      return instruments_;
+    }
+    /**
+     * <code>repeated .Instrument instruments = 2;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.InstrumentOrBuilder> 
+        getInstrumentsOrBuilderList() {
+      return instruments_;
+    }
+    /**
+     * <code>repeated .Instrument instruments = 2;</code>
+     */
+    @java.lang.Override
+    public int getInstrumentsCount() {
+      return instruments_.size();
+    }
+    /**
+     * <code>repeated .Instrument instruments = 2;</code>
+     */
+    @java.lang.Override
+    public com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Instrument getInstruments(int index) {
+      return instruments_.get(index);
+    }
+    /**
+     * <code>repeated .Instrument instruments = 2;</code>
+     */
+    @java.lang.Override
+    public com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.InstrumentOrBuilder getInstrumentsOrBuilder(
+        int index) {
+      return instruments_.get(index);
     }
 
     private byte memoizedIsInitialized = -1;
@@ -3068,6 +3891,9 @@ public final class MarketDataProto {
       for (int i = 0; i < investments_.size(); i++) {
         output.writeMessage(1, investments_.get(i));
       }
+      for (int i = 0; i < instruments_.size(); i++) {
+        output.writeMessage(2, instruments_.get(i));
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -3080,6 +3906,10 @@ public final class MarketDataProto {
       for (int i = 0; i < investments_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, investments_.get(i));
+      }
+      for (int i = 0; i < instruments_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, instruments_.get(i));
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -3098,6 +3928,8 @@ public final class MarketDataProto {
 
       if (!getInvestmentsList()
           .equals(other.getInvestmentsList())) return false;
+      if (!getInstrumentsList()
+          .equals(other.getInstrumentsList())) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -3112,6 +3944,10 @@ public final class MarketDataProto {
       if (getInvestmentsCount() > 0) {
         hash = (37 * hash) + INVESTMENTS_FIELD_NUMBER;
         hash = (53 * hash) + getInvestmentsList().hashCode();
+      }
+      if (getInstrumentsCount() > 0) {
+        hash = (37 * hash) + INSTRUMENTS_FIELD_NUMBER;
+        hash = (53 * hash) + getInstrumentsList().hashCode();
       }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
@@ -3251,6 +4087,13 @@ public final class MarketDataProto {
           investmentsBuilder_.clear();
         }
         bitField0_ = (bitField0_ & ~0x00000001);
+        if (instrumentsBuilder_ == null) {
+          instruments_ = java.util.Collections.emptyList();
+        } else {
+          instruments_ = null;
+          instrumentsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000002);
         return this;
       }
 
@@ -3292,6 +4135,15 @@ public final class MarketDataProto {
           result.investments_ = investments_;
         } else {
           result.investments_ = investmentsBuilder_.build();
+        }
+        if (instrumentsBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0)) {
+            instruments_ = java.util.Collections.unmodifiableList(instruments_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.instruments_ = instruments_;
+        } else {
+          result.instruments_ = instrumentsBuilder_.build();
         }
       }
 
@@ -3337,6 +4189,32 @@ public final class MarketDataProto {
             }
           }
         }
+        if (instrumentsBuilder_ == null) {
+          if (!other.instruments_.isEmpty()) {
+            if (instruments_.isEmpty()) {
+              instruments_ = other.instruments_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensureInstrumentsIsMutable();
+              instruments_.addAll(other.instruments_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.instruments_.isEmpty()) {
+            if (instrumentsBuilder_.isEmpty()) {
+              instrumentsBuilder_.dispose();
+              instrumentsBuilder_ = null;
+              instruments_ = other.instruments_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              instrumentsBuilder_ = 
+                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                   getInstrumentsFieldBuilder() : null;
+            } else {
+              instrumentsBuilder_.addAllMessages(other.instruments_);
+            }
+          }
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -3376,6 +4254,19 @@ public final class MarketDataProto {
                 }
                 break;
               } // case 10
+              case 18: {
+                com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Instrument m =
+                    input.readMessage(
+                        com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Instrument.parser(),
+                        extensionRegistry);
+                if (instrumentsBuilder_ == null) {
+                  ensureInstrumentsIsMutable();
+                  instruments_.add(m);
+                } else {
+                  instrumentsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 18
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -3406,9 +4297,9 @@ public final class MarketDataProto {
           com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Investment, com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Investment.Builder, com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.InvestmentOrBuilder> investmentsBuilder_;
 
       /**
-       * <code>repeated .Investment investments = 1;</code>
+       * <code>repeated .Investment investments = 1 [deprecated = true];</code>
        */
-      public java.util.List<com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Investment> getInvestmentsList() {
+      @java.lang.Deprecated public java.util.List<com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Investment> getInvestmentsList() {
         if (investmentsBuilder_ == null) {
           return java.util.Collections.unmodifiableList(investments_);
         } else {
@@ -3416,9 +4307,9 @@ public final class MarketDataProto {
         }
       }
       /**
-       * <code>repeated .Investment investments = 1;</code>
+       * <code>repeated .Investment investments = 1 [deprecated = true];</code>
        */
-      public int getInvestmentsCount() {
+      @java.lang.Deprecated public int getInvestmentsCount() {
         if (investmentsBuilder_ == null) {
           return investments_.size();
         } else {
@@ -3426,9 +4317,9 @@ public final class MarketDataProto {
         }
       }
       /**
-       * <code>repeated .Investment investments = 1;</code>
+       * <code>repeated .Investment investments = 1 [deprecated = true];</code>
        */
-      public com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Investment getInvestments(int index) {
+      @java.lang.Deprecated public com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Investment getInvestments(int index) {
         if (investmentsBuilder_ == null) {
           return investments_.get(index);
         } else {
@@ -3436,9 +4327,9 @@ public final class MarketDataProto {
         }
       }
       /**
-       * <code>repeated .Investment investments = 1;</code>
+       * <code>repeated .Investment investments = 1 [deprecated = true];</code>
        */
-      public Builder setInvestments(
+      @java.lang.Deprecated public Builder setInvestments(
           int index, com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Investment value) {
         if (investmentsBuilder_ == null) {
           if (value == null) {
@@ -3453,9 +4344,9 @@ public final class MarketDataProto {
         return this;
       }
       /**
-       * <code>repeated .Investment investments = 1;</code>
+       * <code>repeated .Investment investments = 1 [deprecated = true];</code>
        */
-      public Builder setInvestments(
+      @java.lang.Deprecated public Builder setInvestments(
           int index, com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Investment.Builder builderForValue) {
         if (investmentsBuilder_ == null) {
           ensureInvestmentsIsMutable();
@@ -3467,9 +4358,9 @@ public final class MarketDataProto {
         return this;
       }
       /**
-       * <code>repeated .Investment investments = 1;</code>
+       * <code>repeated .Investment investments = 1 [deprecated = true];</code>
        */
-      public Builder addInvestments(com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Investment value) {
+      @java.lang.Deprecated public Builder addInvestments(com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Investment value) {
         if (investmentsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -3483,9 +4374,9 @@ public final class MarketDataProto {
         return this;
       }
       /**
-       * <code>repeated .Investment investments = 1;</code>
+       * <code>repeated .Investment investments = 1 [deprecated = true];</code>
        */
-      public Builder addInvestments(
+      @java.lang.Deprecated public Builder addInvestments(
           int index, com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Investment value) {
         if (investmentsBuilder_ == null) {
           if (value == null) {
@@ -3500,9 +4391,9 @@ public final class MarketDataProto {
         return this;
       }
       /**
-       * <code>repeated .Investment investments = 1;</code>
+       * <code>repeated .Investment investments = 1 [deprecated = true];</code>
        */
-      public Builder addInvestments(
+      @java.lang.Deprecated public Builder addInvestments(
           com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Investment.Builder builderForValue) {
         if (investmentsBuilder_ == null) {
           ensureInvestmentsIsMutable();
@@ -3514,9 +4405,9 @@ public final class MarketDataProto {
         return this;
       }
       /**
-       * <code>repeated .Investment investments = 1;</code>
+       * <code>repeated .Investment investments = 1 [deprecated = true];</code>
        */
-      public Builder addInvestments(
+      @java.lang.Deprecated public Builder addInvestments(
           int index, com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Investment.Builder builderForValue) {
         if (investmentsBuilder_ == null) {
           ensureInvestmentsIsMutable();
@@ -3528,9 +4419,9 @@ public final class MarketDataProto {
         return this;
       }
       /**
-       * <code>repeated .Investment investments = 1;</code>
+       * <code>repeated .Investment investments = 1 [deprecated = true];</code>
        */
-      public Builder addAllInvestments(
+      @java.lang.Deprecated public Builder addAllInvestments(
           java.lang.Iterable<? extends com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Investment> values) {
         if (investmentsBuilder_ == null) {
           ensureInvestmentsIsMutable();
@@ -3543,9 +4434,9 @@ public final class MarketDataProto {
         return this;
       }
       /**
-       * <code>repeated .Investment investments = 1;</code>
+       * <code>repeated .Investment investments = 1 [deprecated = true];</code>
        */
-      public Builder clearInvestments() {
+      @java.lang.Deprecated public Builder clearInvestments() {
         if (investmentsBuilder_ == null) {
           investments_ = java.util.Collections.emptyList();
           bitField0_ = (bitField0_ & ~0x00000001);
@@ -3556,9 +4447,9 @@ public final class MarketDataProto {
         return this;
       }
       /**
-       * <code>repeated .Investment investments = 1;</code>
+       * <code>repeated .Investment investments = 1 [deprecated = true];</code>
        */
-      public Builder removeInvestments(int index) {
+      @java.lang.Deprecated public Builder removeInvestments(int index) {
         if (investmentsBuilder_ == null) {
           ensureInvestmentsIsMutable();
           investments_.remove(index);
@@ -3569,16 +4460,16 @@ public final class MarketDataProto {
         return this;
       }
       /**
-       * <code>repeated .Investment investments = 1;</code>
+       * <code>repeated .Investment investments = 1 [deprecated = true];</code>
        */
-      public com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Investment.Builder getInvestmentsBuilder(
+      @java.lang.Deprecated public com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Investment.Builder getInvestmentsBuilder(
           int index) {
         return getInvestmentsFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .Investment investments = 1;</code>
+       * <code>repeated .Investment investments = 1 [deprecated = true];</code>
        */
-      public com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.InvestmentOrBuilder getInvestmentsOrBuilder(
+      @java.lang.Deprecated public com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.InvestmentOrBuilder getInvestmentsOrBuilder(
           int index) {
         if (investmentsBuilder_ == null) {
           return investments_.get(index);  } else {
@@ -3586,9 +4477,9 @@ public final class MarketDataProto {
         }
       }
       /**
-       * <code>repeated .Investment investments = 1;</code>
+       * <code>repeated .Investment investments = 1 [deprecated = true];</code>
        */
-      public java.util.List<? extends com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.InvestmentOrBuilder> 
+      @java.lang.Deprecated public java.util.List<? extends com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.InvestmentOrBuilder> 
            getInvestmentsOrBuilderList() {
         if (investmentsBuilder_ != null) {
           return investmentsBuilder_.getMessageOrBuilderList();
@@ -3597,24 +4488,24 @@ public final class MarketDataProto {
         }
       }
       /**
-       * <code>repeated .Investment investments = 1;</code>
+       * <code>repeated .Investment investments = 1 [deprecated = true];</code>
        */
-      public com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Investment.Builder addInvestmentsBuilder() {
+      @java.lang.Deprecated public com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Investment.Builder addInvestmentsBuilder() {
         return getInvestmentsFieldBuilder().addBuilder(
             com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Investment.getDefaultInstance());
       }
       /**
-       * <code>repeated .Investment investments = 1;</code>
+       * <code>repeated .Investment investments = 1 [deprecated = true];</code>
        */
-      public com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Investment.Builder addInvestmentsBuilder(
+      @java.lang.Deprecated public com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Investment.Builder addInvestmentsBuilder(
           int index) {
         return getInvestmentsFieldBuilder().addBuilder(
             index, com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Investment.getDefaultInstance());
       }
       /**
-       * <code>repeated .Investment investments = 1;</code>
+       * <code>repeated .Investment investments = 1 [deprecated = true];</code>
        */
-      public java.util.List<com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Investment.Builder> 
+      @java.lang.Deprecated public java.util.List<com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Investment.Builder> 
            getInvestmentsBuilderList() {
         return getInvestmentsFieldBuilder().getBuilderList();
       }
@@ -3631,6 +4522,246 @@ public final class MarketDataProto {
           investments_ = null;
         }
         return investmentsBuilder_;
+      }
+
+      private java.util.List<com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Instrument> instruments_ =
+        java.util.Collections.emptyList();
+      private void ensureInstrumentsIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          instruments_ = new java.util.ArrayList<com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Instrument>(instruments_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilder<
+          com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Instrument, com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Instrument.Builder, com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.InstrumentOrBuilder> instrumentsBuilder_;
+
+      /**
+       * <code>repeated .Instrument instruments = 2;</code>
+       */
+      public java.util.List<com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Instrument> getInstrumentsList() {
+        if (instrumentsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(instruments_);
+        } else {
+          return instrumentsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .Instrument instruments = 2;</code>
+       */
+      public int getInstrumentsCount() {
+        if (instrumentsBuilder_ == null) {
+          return instruments_.size();
+        } else {
+          return instrumentsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .Instrument instruments = 2;</code>
+       */
+      public com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Instrument getInstruments(int index) {
+        if (instrumentsBuilder_ == null) {
+          return instruments_.get(index);
+        } else {
+          return instrumentsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .Instrument instruments = 2;</code>
+       */
+      public Builder setInstruments(
+          int index, com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Instrument value) {
+        if (instrumentsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureInstrumentsIsMutable();
+          instruments_.set(index, value);
+          onChanged();
+        } else {
+          instrumentsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Instrument instruments = 2;</code>
+       */
+      public Builder setInstruments(
+          int index, com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Instrument.Builder builderForValue) {
+        if (instrumentsBuilder_ == null) {
+          ensureInstrumentsIsMutable();
+          instruments_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          instrumentsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Instrument instruments = 2;</code>
+       */
+      public Builder addInstruments(com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Instrument value) {
+        if (instrumentsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureInstrumentsIsMutable();
+          instruments_.add(value);
+          onChanged();
+        } else {
+          instrumentsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Instrument instruments = 2;</code>
+       */
+      public Builder addInstruments(
+          int index, com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Instrument value) {
+        if (instrumentsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureInstrumentsIsMutable();
+          instruments_.add(index, value);
+          onChanged();
+        } else {
+          instrumentsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Instrument instruments = 2;</code>
+       */
+      public Builder addInstruments(
+          com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Instrument.Builder builderForValue) {
+        if (instrumentsBuilder_ == null) {
+          ensureInstrumentsIsMutable();
+          instruments_.add(builderForValue.build());
+          onChanged();
+        } else {
+          instrumentsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Instrument instruments = 2;</code>
+       */
+      public Builder addInstruments(
+          int index, com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Instrument.Builder builderForValue) {
+        if (instrumentsBuilder_ == null) {
+          ensureInstrumentsIsMutable();
+          instruments_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          instrumentsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Instrument instruments = 2;</code>
+       */
+      public Builder addAllInstruments(
+          java.lang.Iterable<? extends com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Instrument> values) {
+        if (instrumentsBuilder_ == null) {
+          ensureInstrumentsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, instruments_);
+          onChanged();
+        } else {
+          instrumentsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Instrument instruments = 2;</code>
+       */
+      public Builder clearInstruments() {
+        if (instrumentsBuilder_ == null) {
+          instruments_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+        } else {
+          instrumentsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Instrument instruments = 2;</code>
+       */
+      public Builder removeInstruments(int index) {
+        if (instrumentsBuilder_ == null) {
+          ensureInstrumentsIsMutable();
+          instruments_.remove(index);
+          onChanged();
+        } else {
+          instrumentsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Instrument instruments = 2;</code>
+       */
+      public com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Instrument.Builder getInstrumentsBuilder(
+          int index) {
+        return getInstrumentsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .Instrument instruments = 2;</code>
+       */
+      public com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.InstrumentOrBuilder getInstrumentsOrBuilder(
+          int index) {
+        if (instrumentsBuilder_ == null) {
+          return instruments_.get(index);  } else {
+          return instrumentsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .Instrument instruments = 2;</code>
+       */
+      public java.util.List<? extends com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.InstrumentOrBuilder> 
+           getInstrumentsOrBuilderList() {
+        if (instrumentsBuilder_ != null) {
+          return instrumentsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(instruments_);
+        }
+      }
+      /**
+       * <code>repeated .Instrument instruments = 2;</code>
+       */
+      public com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Instrument.Builder addInstrumentsBuilder() {
+        return getInstrumentsFieldBuilder().addBuilder(
+            com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Instrument.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .Instrument instruments = 2;</code>
+       */
+      public com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Instrument.Builder addInstrumentsBuilder(
+          int index) {
+        return getInstrumentsFieldBuilder().addBuilder(
+            index, com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Instrument.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .Instrument instruments = 2;</code>
+       */
+      public java.util.List<com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Instrument.Builder> 
+           getInstrumentsBuilderList() {
+        return getInstrumentsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilder<
+          com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Instrument, com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Instrument.Builder, com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.InstrumentOrBuilder> 
+          getInstrumentsFieldBuilder() {
+        if (instrumentsBuilder_ == null) {
+          instrumentsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+              com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Instrument, com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Instrument.Builder, com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.InstrumentOrBuilder>(
+                  instruments_,
+                  ((bitField0_ & 0x00000002) != 0),
+                  getParentForChildren(),
+                  isClean());
+          instruments_ = null;
+        }
+        return instrumentsBuilder_;
       }
 
       // @@protoc_insertion_point(builder_scope:Portfolio)
@@ -3700,6 +4831,11 @@ public final class MarketDataProto {
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_Investment_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_Instrument_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_Instrument_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_Portfolio_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
@@ -3717,16 +4853,19 @@ public final class MarketDataProto {
       " \001(\t\022\014\n\004name\030\002 \001(\t\022\016\n\006sector\030\003 \001(\t\022\035\n\004ty" +
       "pe\030\004 \001(\0162\017.InstrumentType\022\024\n\004data\030\005 \003(\0132" +
       "\006.Value\"$\n\005Value\022\014\n\004date\030\001 \001(\t\022\r\n\005price\030" +
-      "\002 \001(\001\"U\n\nInvestment\022\027\n\006ticker\030\001 \001(\0132\007.Ti" +
+      "\002 \001(\001\"Y\n\nInvestment\022\027\n\006ticker\030\001 \001(\0132\007.Ti" +
       "cker\022\013\n\003qty\030\002 \001(\001\022!\n\013accountType\030\003 \001(\0162\014" +
-      ".AccountType\"-\n\tPortfolio\022 \n\013investments" +
-      "\030\001 \003(\0132\013.Investment*(\n\013AccountType\022\010\n\004TF" +
-      "SA\020\000\022\006\n\002NR\020\001\022\007\n\003IND\020\003*z\n\016InstrumentType\022" +
-      "\n\n\006EQUITY\020\000\022\t\n\005INDEX\020\001\022\007\n\003ETF\020\002\022\016\n\nMUTUA" +
-      "LFUND\020\003\022\n\n\006FUTURE\020\004\022\014\n\010CURRENCY\020\005\022\022\n\016CRY" +
-      "PTOCURRENCY\020\006\022\n\n\006OPTION\020\007BK\n8com.vv.pers" +
-      "onal.twm.artifactory.generated.equitiesM" +
-      "arketB\017MarketDataProtob\006proto3"
+      ".AccountType:\002\030\001\"U\n\nInstrument\022\027\n\006ticker" +
+      "\030\001 \001(\0132\007.Ticker\022\013\n\003qty\030\002 \001(\001\022!\n\013accountT" +
+      "ype\030\003 \001(\0162\014.AccountType\"S\n\tPortfolio\022$\n\013" +
+      "investments\030\001 \003(\0132\013.InvestmentB\002\030\001\022 \n\013in" +
+      "struments\030\002 \003(\0132\013.Instrument*(\n\013AccountT" +
+      "ype\022\010\n\004TFSA\020\000\022\006\n\002NR\020\001\022\007\n\003IND\020\003*z\n\016Instru" +
+      "mentType\022\n\n\006EQUITY\020\000\022\t\n\005INDEX\020\001\022\007\n\003ETF\020\002" +
+      "\022\016\n\nMUTUALFUND\020\003\022\n\n\006FUTURE\020\004\022\014\n\010CURRENCY" +
+      "\020\005\022\022\n\016CRYPTOCURRENCY\020\006\022\n\n\006OPTION\020\007BK\n8co" +
+      "m.vv.personal.twm.artifactory.generated." +
+      "equitiesMarketB\017MarketDataProtob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -3750,12 +4889,18 @@ public final class MarketDataProto {
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Investment_descriptor,
         new java.lang.String[] { "Ticker", "Qty", "AccountType", });
-    internal_static_Portfolio_descriptor =
+    internal_static_Instrument_descriptor =
       getDescriptor().getMessageTypes().get(3);
+    internal_static_Instrument_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_Instrument_descriptor,
+        new java.lang.String[] { "Ticker", "Qty", "AccountType", });
+    internal_static_Portfolio_descriptor =
+      getDescriptor().getMessageTypes().get(4);
     internal_static_Portfolio_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Portfolio_descriptor,
-        new java.lang.String[] { "Investments", });
+        new java.lang.String[] { "Investments", "Instruments", });
     descriptor.resolveAllFeaturesImmutable();
   }
 

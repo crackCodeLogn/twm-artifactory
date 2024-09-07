@@ -16,14 +16,23 @@ message Value {
   double price = 2;
 }
 
+// deprecating erstwhile Investment because of introduction of stock selling
 message Investment {
+  option deprecated = true;
+  Ticker ticker = 1;
+  double qty = 2;
+  AccountType accountType = 3;
+}
+
+message Instrument {
   Ticker ticker = 1;
   double qty = 2;
   AccountType accountType = 3;
 }
 
 message Portfolio {
-  repeated Investment investments = 1;
+  repeated Investment investments = 1 [deprecated = true];
+  repeated Instrument instruments = 2;
 }
 
 
