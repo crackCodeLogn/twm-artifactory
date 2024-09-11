@@ -26,6 +26,123 @@ public final class MarketDataProto {
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
   /**
+   * Protobuf enum {@code Direction}
+   */
+  public enum Direction
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>BUY = 0;</code>
+     */
+    BUY(0),
+    /**
+     * <code>SELL = 1;</code>
+     */
+    SELL(1),
+    UNRECOGNIZED(-1),
+    ;
+
+    static {
+      com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
+        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+        /* major= */ 4,
+        /* minor= */ 27,
+        /* patch= */ 3,
+        /* suffix= */ "",
+        Direction.class.getName());
+    }
+    /**
+     * <code>BUY = 0;</code>
+     */
+    public static final int BUY_VALUE = 0;
+    /**
+     * <code>SELL = 1;</code>
+     */
+    public static final int SELL_VALUE = 1;
+
+
+    public final int getNumber() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalArgumentException(
+            "Can't get the number of an unknown enum value.");
+      }
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static Direction valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static Direction forNumber(int value) {
+      switch (value) {
+        case 0: return BUY;
+        case 1: return SELL;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<Direction>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        Direction> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<Direction>() {
+            public Direction findValueByNumber(int number) {
+              return Direction.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalStateException(
+            "Can't get the descriptor of an unrecognized enum value.");
+      }
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.getDescriptor().getEnumTypes().get(0);
+    }
+
+    private static final Direction[] VALUES = values();
+
+    public static Direction valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      if (desc.getIndex() == -1) {
+        return UNRECOGNIZED;
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private Direction(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:Direction)
+  }
+
+  /**
    * Protobuf enum {@code AccountType}
    */
   public enum AccountType
@@ -125,7 +242,7 @@ public final class MarketDataProto {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.getDescriptor().getEnumTypes().get(0);
+      return com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.getDescriptor().getEnumTypes().get(1);
     }
 
     private static final AccountType[] VALUES = values();
@@ -296,7 +413,7 @@ public final class MarketDataProto {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.getDescriptor().getEnumTypes().get(1);
+      return com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.getDescriptor().getEnumTypes().get(2);
     }
 
     private static final InstrumentType[] VALUES = values();
@@ -1616,16 +1733,14 @@ public final class MarketDataProto {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string date = 1;</code>
+     * <pre>
+     * store date in yyyyMMdd format
+     * </pre>
+     *
+     * <code>int32 date = 1;</code>
      * @return The date.
      */
-    java.lang.String getDate();
-    /**
-     * <code>string date = 1;</code>
-     * @return The bytes for date.
-     */
-    com.google.protobuf.ByteString
-        getDateBytes();
+    int getDate();
 
     /**
      * <code>double price = 2;</code>
@@ -1655,7 +1770,6 @@ public final class MarketDataProto {
       super(builder);
     }
     private Value() {
-      date_ = "";
     }
 
     public static final com.google.protobuf.Descriptors.Descriptor
@@ -1672,42 +1786,18 @@ public final class MarketDataProto {
     }
 
     public static final int DATE_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object date_ = "";
+    private int date_ = 0;
     /**
-     * <code>string date = 1;</code>
+     * <pre>
+     * store date in yyyyMMdd format
+     * </pre>
+     *
+     * <code>int32 date = 1;</code>
      * @return The date.
      */
     @java.lang.Override
-    public java.lang.String getDate() {
-      java.lang.Object ref = date_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        date_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string date = 1;</code>
-     * @return The bytes for date.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getDateBytes() {
-      java.lang.Object ref = date_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        date_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+    public int getDate() {
+      return date_;
     }
 
     public static final int PRICE_FIELD_NUMBER = 2;
@@ -1735,8 +1825,8 @@ public final class MarketDataProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(date_)) {
-        com.google.protobuf.GeneratedMessage.writeString(output, 1, date_);
+      if (date_ != 0) {
+        output.writeInt32(1, date_);
       }
       if (java.lang.Double.doubleToRawLongBits(price_) != 0) {
         output.writeDouble(2, price_);
@@ -1750,8 +1840,9 @@ public final class MarketDataProto {
       if (size != -1) return size;
 
       size = 0;
-      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(date_)) {
-        size += com.google.protobuf.GeneratedMessage.computeStringSize(1, date_);
+      if (date_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(1, date_);
       }
       if (java.lang.Double.doubleToRawLongBits(price_) != 0) {
         size += com.google.protobuf.CodedOutputStream
@@ -1772,8 +1863,8 @@ public final class MarketDataProto {
       }
       com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Value other = (com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Value) obj;
 
-      if (!getDate()
-          .equals(other.getDate())) return false;
+      if (getDate()
+          != other.getDate()) return false;
       if (java.lang.Double.doubleToLongBits(getPrice())
           != java.lang.Double.doubleToLongBits(
               other.getPrice())) return false;
@@ -1789,7 +1880,7 @@ public final class MarketDataProto {
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + DATE_FIELD_NUMBER;
-      hash = (53 * hash) + getDate().hashCode();
+      hash = (53 * hash) + getDate();
       hash = (37 * hash) + PRICE_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           java.lang.Double.doubleToLongBits(getPrice()));
@@ -1924,7 +2015,7 @@ public final class MarketDataProto {
       public Builder clear() {
         super.clear();
         bitField0_ = 0;
-        date_ = "";
+        date_ = 0;
         price_ = 0D;
         return this;
       }
@@ -1979,10 +2070,8 @@ public final class MarketDataProto {
 
       public Builder mergeFrom(com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Value other) {
         if (other == com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Value.getDefaultInstance()) return this;
-        if (!other.getDate().isEmpty()) {
-          date_ = other.date_;
-          bitField0_ |= 0x00000001;
-          onChanged();
+        if (other.getDate() != 0) {
+          setDate(other.getDate());
         }
         if (other.getPrice() != 0D) {
           setPrice(other.getPrice());
@@ -2013,11 +2102,11 @@ public final class MarketDataProto {
               case 0:
                 done = true;
                 break;
-              case 10: {
-                date_ = input.readStringRequireUtf8();
+              case 8: {
+                date_ = input.readInt32();
                 bitField0_ |= 0x00000001;
                 break;
-              } // case 10
+              } // case 8
               case 17: {
                 price_ = input.readDouble();
                 bitField0_ |= 0x00000002;
@@ -2040,74 +2129,46 @@ public final class MarketDataProto {
       }
       private int bitField0_;
 
-      private java.lang.Object date_ = "";
+      private int date_ ;
       /**
-       * <code>string date = 1;</code>
+       * <pre>
+       * store date in yyyyMMdd format
+       * </pre>
+       *
+       * <code>int32 date = 1;</code>
        * @return The date.
        */
-      public java.lang.String getDate() {
-        java.lang.Object ref = date_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          date_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+      @java.lang.Override
+      public int getDate() {
+        return date_;
       }
       /**
-       * <code>string date = 1;</code>
-       * @return The bytes for date.
-       */
-      public com.google.protobuf.ByteString
-          getDateBytes() {
-        java.lang.Object ref = date_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          date_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string date = 1;</code>
+       * <pre>
+       * store date in yyyyMMdd format
+       * </pre>
+       *
+       * <code>int32 date = 1;</code>
        * @param value The date to set.
        * @return This builder for chaining.
        */
-      public Builder setDate(
-          java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
+      public Builder setDate(int value) {
+
         date_ = value;
         bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
       /**
-       * <code>string date = 1;</code>
+       * <pre>
+       * store date in yyyyMMdd format
+       * </pre>
+       *
+       * <code>int32 date = 1;</code>
        * @return This builder for chaining.
        */
       public Builder clearDate() {
-        date_ = getDefaultInstance().getDate();
         bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string date = 1;</code>
-       * @param value The bytes for date to set.
-       * @return This builder for chaining.
-       */
-      public Builder setDateBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        date_ = value;
-        bitField0_ |= 0x00000001;
+        date_ = 0;
         onChanged();
         return this;
       }
@@ -2987,6 +3048,17 @@ public final class MarketDataProto {
      * @return The accountType.
      */
     com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.AccountType getAccountType();
+
+    /**
+     * <code>.Direction direction = 4;</code>
+     * @return The enum numeric value on the wire for direction.
+     */
+    int getDirectionValue();
+    /**
+     * <code>.Direction direction = 4;</code>
+     * @return The direction.
+     */
+    com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Direction getDirection();
   }
   /**
    * Protobuf type {@code Instrument}
@@ -3011,6 +3083,7 @@ public final class MarketDataProto {
     }
     private Instrument() {
       accountType_ = 0;
+      direction_ = 0;
     }
 
     public static final com.google.protobuf.Descriptors.Descriptor
@@ -3082,6 +3155,24 @@ public final class MarketDataProto {
       return result == null ? com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.AccountType.UNRECOGNIZED : result;
     }
 
+    public static final int DIRECTION_FIELD_NUMBER = 4;
+    private int direction_ = 0;
+    /**
+     * <code>.Direction direction = 4;</code>
+     * @return The enum numeric value on the wire for direction.
+     */
+    @java.lang.Override public int getDirectionValue() {
+      return direction_;
+    }
+    /**
+     * <code>.Direction direction = 4;</code>
+     * @return The direction.
+     */
+    @java.lang.Override public com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Direction getDirection() {
+      com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Direction result = com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Direction.forNumber(direction_);
+      return result == null ? com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Direction.UNRECOGNIZED : result;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -3105,6 +3196,9 @@ public final class MarketDataProto {
       if (accountType_ != com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.AccountType.TFSA.getNumber()) {
         output.writeEnum(3, accountType_);
       }
+      if (direction_ != com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Direction.BUY.getNumber()) {
+        output.writeEnum(4, direction_);
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -3125,6 +3219,10 @@ public final class MarketDataProto {
       if (accountType_ != com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.AccountType.TFSA.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(3, accountType_);
+      }
+      if (direction_ != com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Direction.BUY.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(4, direction_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -3150,6 +3248,7 @@ public final class MarketDataProto {
           != java.lang.Double.doubleToLongBits(
               other.getQty())) return false;
       if (accountType_ != other.accountType_) return false;
+      if (direction_ != other.direction_) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -3170,6 +3269,8 @@ public final class MarketDataProto {
           java.lang.Double.doubleToLongBits(getQty()));
       hash = (37 * hash) + ACCOUNTTYPE_FIELD_NUMBER;
       hash = (53 * hash) + accountType_;
+      hash = (37 * hash) + DIRECTION_FIELD_NUMBER;
+      hash = (53 * hash) + direction_;
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -3314,6 +3415,7 @@ public final class MarketDataProto {
         }
         qty_ = 0D;
         accountType_ = 0;
+        direction_ = 0;
         return this;
       }
 
@@ -3360,6 +3462,9 @@ public final class MarketDataProto {
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.accountType_ = accountType_;
         }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.direction_ = direction_;
+        }
         result.bitField0_ |= to_bitField0_;
       }
 
@@ -3383,6 +3488,9 @@ public final class MarketDataProto {
         }
         if (other.accountType_ != 0) {
           setAccountTypeValue(other.getAccountTypeValue());
+        }
+        if (other.direction_ != 0) {
+          setDirectionValue(other.getDirectionValue());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
@@ -3427,6 +3535,11 @@ public final class MarketDataProto {
                 bitField0_ |= 0x00000004;
                 break;
               } // case 24
+              case 32: {
+                direction_ = input.readEnum();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 32
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -3646,6 +3759,59 @@ public final class MarketDataProto {
       public Builder clearAccountType() {
         bitField0_ = (bitField0_ & ~0x00000004);
         accountType_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int direction_ = 0;
+      /**
+       * <code>.Direction direction = 4;</code>
+       * @return The enum numeric value on the wire for direction.
+       */
+      @java.lang.Override public int getDirectionValue() {
+        return direction_;
+      }
+      /**
+       * <code>.Direction direction = 4;</code>
+       * @param value The enum numeric value on the wire for direction to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDirectionValue(int value) {
+        direction_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.Direction direction = 4;</code>
+       * @return The direction.
+       */
+      @java.lang.Override
+      public com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Direction getDirection() {
+        com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Direction result = com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Direction.forNumber(direction_);
+        return result == null ? com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Direction.UNRECOGNIZED : result;
+      }
+      /**
+       * <code>.Direction direction = 4;</code>
+       * @param value The direction to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDirection(com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Direction value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000008;
+        direction_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.Direction direction = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDirection() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        direction_ = 0;
         onChanged();
         return this;
       }
@@ -4852,20 +5018,22 @@ public final class MarketDataProto {
       "\n\020MarketData.proto\"k\n\006Ticker\022\016\n\006symbol\030\001" +
       " \001(\t\022\014\n\004name\030\002 \001(\t\022\016\n\006sector\030\003 \001(\t\022\035\n\004ty" +
       "pe\030\004 \001(\0162\017.InstrumentType\022\024\n\004data\030\005 \003(\0132" +
-      "\006.Value\"$\n\005Value\022\014\n\004date\030\001 \001(\t\022\r\n\005price\030" +
+      "\006.Value\"$\n\005Value\022\014\n\004date\030\001 \001(\005\022\r\n\005price\030" +
       "\002 \001(\001\"Y\n\nInvestment\022\027\n\006ticker\030\001 \001(\0132\007.Ti" +
       "cker\022\013\n\003qty\030\002 \001(\001\022!\n\013accountType\030\003 \001(\0162\014" +
-      ".AccountType:\002\030\001\"U\n\nInstrument\022\027\n\006ticker" +
+      ".AccountType:\002\030\001\"t\n\nInstrument\022\027\n\006ticker" +
       "\030\001 \001(\0132\007.Ticker\022\013\n\003qty\030\002 \001(\001\022!\n\013accountT" +
-      "ype\030\003 \001(\0162\014.AccountType\"S\n\tPortfolio\022$\n\013" +
-      "investments\030\001 \003(\0132\013.InvestmentB\002\030\001\022 \n\013in" +
-      "struments\030\002 \003(\0132\013.Instrument*(\n\013AccountT" +
-      "ype\022\010\n\004TFSA\020\000\022\006\n\002NR\020\001\022\007\n\003IND\020\003*z\n\016Instru" +
-      "mentType\022\n\n\006EQUITY\020\000\022\t\n\005INDEX\020\001\022\007\n\003ETF\020\002" +
-      "\022\016\n\nMUTUALFUND\020\003\022\n\n\006FUTURE\020\004\022\014\n\010CURRENCY" +
-      "\020\005\022\022\n\016CRYPTOCURRENCY\020\006\022\n\n\006OPTION\020\007BK\n8co" +
-      "m.vv.personal.twm.artifactory.generated." +
-      "equitiesMarketB\017MarketDataProtob\006proto3"
+      "ype\030\003 \001(\0162\014.AccountType\022\035\n\tdirection\030\004 \001" +
+      "(\0162\n.Direction\"S\n\tPortfolio\022$\n\013investmen" +
+      "ts\030\001 \003(\0132\013.InvestmentB\002\030\001\022 \n\013instruments" +
+      "\030\002 \003(\0132\013.Instrument*\036\n\tDirection\022\007\n\003BUY\020" +
+      "\000\022\010\n\004SELL\020\001*(\n\013AccountType\022\010\n\004TFSA\020\000\022\006\n\002" +
+      "NR\020\001\022\007\n\003IND\020\003*z\n\016InstrumentType\022\n\n\006EQUIT" +
+      "Y\020\000\022\t\n\005INDEX\020\001\022\007\n\003ETF\020\002\022\016\n\nMUTUALFUND\020\003\022" +
+      "\n\n\006FUTURE\020\004\022\014\n\010CURRENCY\020\005\022\022\n\016CRYPTOCURRE" +
+      "NCY\020\006\022\n\n\006OPTION\020\007BK\n8com.vv.personal.twm" +
+      ".artifactory.generated.equitiesMarketB\017M" +
+      "arketDataProtob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -4894,7 +5062,7 @@ public final class MarketDataProto {
     internal_static_Instrument_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Instrument_descriptor,
-        new java.lang.String[] { "Ticker", "Qty", "AccountType", });
+        new java.lang.String[] { "Ticker", "Qty", "AccountType", "Direction", });
     internal_static_Portfolio_descriptor =
       getDescriptor().getMessageTypes().get(4);
     internal_static_Portfolio_fieldAccessorTable = new
