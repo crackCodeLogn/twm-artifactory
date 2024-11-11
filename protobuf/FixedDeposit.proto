@@ -27,6 +27,7 @@ message FixedDeposit {
 
   AnnualBreakdownList annualBreakdownList = 19;
   AccountType accountType = 20;
+  int32 freeze = 21;
 }
 
 enum AccountType {
