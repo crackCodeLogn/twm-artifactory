@@ -29,6 +29,7 @@ message Instrument {
   double qty = 2;
   AccountType accountType = 3;
   Direction direction = 4;
+  map<string, string> metaData = 5;
 }
 
 message Portfolio {
