@@ -1,4 +1,5 @@
 syntax = "proto3";
+import "google/protobuf/timestamp.proto";
 
 option java_package = "com.vv.personal.twm.artifactory.generated.bank";
 option java_outer_classname = "BankProto";
@@ -9,6 +10,7 @@ message Bank {
   string IFSC = 3;
   string contactNumber = 4;
   bool isActive = 5;
+  string countryCode = 6;
 }
 
 enum BankType {
@@ -18,4 +20,35 @@ enum BankType {
 
 message BankList {
   repeated Bank banks = 1;
+}
+
+message BankAccount {
+  Bank bank = 1;
+  string number = 2;
+  string name = 3;
+  int64 transitNumber = 4; // branch, CA specific
+  int64 institutionNumber = 5; // bank, CA specific
+  double balance = 6;
+  map<string, string> metaData = 7;
+  BankAccountType bankAccountType = 8;
+
+  optional google.protobuf.Timestamp createdAt = 9;
+  optional google.protobuf.Timestamp lastUpdatedAt = 10;
+  double overdraftBalance = 11;
+  double interestRate = 12;
+}
+
+enum BankAccountType {
+  CHQ = 0;      // chequing
+  SAV = 1;      // saving
+  TFSA = 2;     // tax-free saving account
+  NR = 3;       // non-registered
+  HISA = 4;     // high interest saving account
+  CASH_HISA = 5;
+  STD = 6;      // standard
+  CC = 7;       // credit card
+}
+
+message BankAccounts {
+  repeated BankAccount accounts = 1;
 }
