@@ -2261,24 +2261,44 @@ public final class BankProto {
     com.vv.personal.twm.artifactory.generated.bank.BankProto.BankOrBuilder getBankOrBuilder();
 
     /**
-     * <code>string number = 2;</code>
+     * <pre>
+     * uuid
+     * </pre>
+     *
+     * <code>string id = 2;</code>
+     * @return The id.
+     */
+    java.lang.String getId();
+    /**
+     * <pre>
+     * uuid
+     * </pre>
+     *
+     * <code>string id = 2;</code>
+     * @return The bytes for id.
+     */
+    com.google.protobuf.ByteString
+        getIdBytes();
+
+    /**
+     * <code>string number = 3;</code>
      * @return The number.
      */
     java.lang.String getNumber();
     /**
-     * <code>string number = 2;</code>
+     * <code>string number = 3;</code>
      * @return The bytes for number.
      */
     com.google.protobuf.ByteString
         getNumberBytes();
 
     /**
-     * <code>string name = 3;</code>
+     * <code>string name = 4;</code>
      * @return The name.
      */
     java.lang.String getName();
     /**
-     * <code>string name = 3;</code>
+     * <code>string name = 4;</code>
      * @return The bytes for name.
      */
     com.google.protobuf.ByteString
@@ -2289,7 +2309,16 @@ public final class BankProto {
      * branch, CA specific
      * </pre>
      *
-     * <code>int64 transitNumber = 4;</code>
+     * <code>optional int64 transitNumber = 5;</code>
+     * @return Whether the transitNumber field is set.
+     */
+    boolean hasTransitNumber();
+    /**
+     * <pre>
+     * branch, CA specific
+     * </pre>
+     *
+     * <code>optional int64 transitNumber = 5;</code>
      * @return The transitNumber.
      */
     long getTransitNumber();
@@ -2299,23 +2328,32 @@ public final class BankProto {
      * bank, CA specific
      * </pre>
      *
-     * <code>int64 institutionNumber = 5;</code>
+     * <code>optional int64 institutionNumber = 6;</code>
+     * @return Whether the institutionNumber field is set.
+     */
+    boolean hasInstitutionNumber();
+    /**
+     * <pre>
+     * bank, CA specific
+     * </pre>
+     *
+     * <code>optional int64 institutionNumber = 6;</code>
      * @return The institutionNumber.
      */
     long getInstitutionNumber();
 
     /**
-     * <code>double balance = 6;</code>
+     * <code>double balance = 7;</code>
      * @return The balance.
      */
     double getBalance();
 
     /**
-     * <code>map&lt;string, string&gt; metaData = 7;</code>
+     * <code>map&lt;string, string&gt; metaData = 8;</code>
      */
     int getMetaDataCount();
     /**
-     * <code>map&lt;string, string&gt; metaData = 7;</code>
+     * <code>map&lt;string, string&gt; metaData = 8;</code>
      */
     boolean containsMetaData(
         java.lang.String key);
@@ -2326,12 +2364,12 @@ public final class BankProto {
     java.util.Map<java.lang.String, java.lang.String>
     getMetaData();
     /**
-     * <code>map&lt;string, string&gt; metaData = 7;</code>
+     * <code>map&lt;string, string&gt; metaData = 8;</code>
      */
     java.util.Map<java.lang.String, java.lang.String>
     getMetaDataMap();
     /**
-     * <code>map&lt;string, string&gt; metaData = 7;</code>
+     * <code>map&lt;string, string&gt; metaData = 8;</code>
      */
     /* nullable */
 java.lang.String getMetaDataOrDefault(
@@ -2339,63 +2377,69 @@ java.lang.String getMetaDataOrDefault(
         /* nullable */
 java.lang.String defaultValue);
     /**
-     * <code>map&lt;string, string&gt; metaData = 7;</code>
+     * <code>map&lt;string, string&gt; metaData = 8;</code>
      */
     java.lang.String getMetaDataOrThrow(
         java.lang.String key);
 
     /**
-     * <code>.BankAccountType bankAccountType = 8;</code>
+     * <code>.BankAccountType bankAccountType = 9;</code>
      * @return The enum numeric value on the wire for bankAccountType.
      */
     int getBankAccountTypeValue();
     /**
-     * <code>.BankAccountType bankAccountType = 8;</code>
+     * <code>.BankAccountType bankAccountType = 9;</code>
      * @return The bankAccountType.
      */
     com.vv.personal.twm.artifactory.generated.bank.BankProto.BankAccountType getBankAccountType();
 
     /**
-     * <code>optional .google.protobuf.Timestamp createdAt = 9;</code>
-     * @return Whether the createdAt field is set.
-     */
-    boolean hasCreatedAt();
-    /**
-     * <code>optional .google.protobuf.Timestamp createdAt = 9;</code>
-     * @return The createdAt.
-     */
-    com.google.protobuf.Timestamp getCreatedAt();
-    /**
-     * <code>optional .google.protobuf.Timestamp createdAt = 9;</code>
-     */
-    com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder();
-
-    /**
-     * <code>optional .google.protobuf.Timestamp lastUpdatedAt = 10;</code>
-     * @return Whether the lastUpdatedAt field is set.
-     */
-    boolean hasLastUpdatedAt();
-    /**
-     * <code>optional .google.protobuf.Timestamp lastUpdatedAt = 10;</code>
-     * @return The lastUpdatedAt.
-     */
-    com.google.protobuf.Timestamp getLastUpdatedAt();
-    /**
-     * <code>optional .google.protobuf.Timestamp lastUpdatedAt = 10;</code>
-     */
-    com.google.protobuf.TimestampOrBuilder getLastUpdatedAtOrBuilder();
-
-    /**
-     * <code>double overdraftBalance = 11;</code>
+     * <code>double overdraftBalance = 10;</code>
      * @return The overdraftBalance.
      */
     double getOverdraftBalance();
 
     /**
-     * <code>double interestRate = 12;</code>
+     * <code>double interestRate = 11;</code>
      * @return The interestRate.
      */
     double getInterestRate();
+
+    /**
+     * <code>bool isActive = 12;</code>
+     * @return The isActive.
+     */
+    boolean getIsActive();
+
+    /**
+     * <code>optional .google.protobuf.Timestamp createdAt = 13;</code>
+     * @return Whether the createdAt field is set.
+     */
+    boolean hasCreatedAt();
+    /**
+     * <code>optional .google.protobuf.Timestamp createdAt = 13;</code>
+     * @return The createdAt.
+     */
+    com.google.protobuf.Timestamp getCreatedAt();
+    /**
+     * <code>optional .google.protobuf.Timestamp createdAt = 13;</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder();
+
+    /**
+     * <code>optional .google.protobuf.Timestamp lastUpdatedAt = 14;</code>
+     * @return Whether the lastUpdatedAt field is set.
+     */
+    boolean hasLastUpdatedAt();
+    /**
+     * <code>optional .google.protobuf.Timestamp lastUpdatedAt = 14;</code>
+     * @return The lastUpdatedAt.
+     */
+    com.google.protobuf.Timestamp getLastUpdatedAt();
+    /**
+     * <code>optional .google.protobuf.Timestamp lastUpdatedAt = 14;</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getLastUpdatedAtOrBuilder();
   }
   /**
    * Protobuf type {@code BankAccount}
@@ -2419,6 +2463,7 @@ java.lang.String defaultValue);
       super(builder);
     }
     private BankAccount() {
+      id_ = "";
       number_ = "";
       name_ = "";
       bankAccountType_ = 0;
@@ -2434,7 +2479,7 @@ java.lang.String defaultValue);
     protected com.google.protobuf.MapFieldReflectionAccessor internalGetMapFieldReflection(
         int number) {
       switch (number) {
-        case 7:
+        case 8:
           return internalGetMetaData();
         default:
           throw new RuntimeException(
@@ -2476,11 +2521,58 @@ java.lang.String defaultValue);
       return bank_ == null ? com.vv.personal.twm.artifactory.generated.bank.BankProto.Bank.getDefaultInstance() : bank_;
     }
 
-    public static final int NUMBER_FIELD_NUMBER = 2;
+    public static final int ID_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object id_ = "";
+    /**
+     * <pre>
+     * uuid
+     * </pre>
+     *
+     * <code>string id = 2;</code>
+     * @return The id.
+     */
+    @java.lang.Override
+    public java.lang.String getId() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        id_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * uuid
+     * </pre>
+     *
+     * <code>string id = 2;</code>
+     * @return The bytes for id.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getIdBytes() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        id_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int NUMBER_FIELD_NUMBER = 3;
     @SuppressWarnings("serial")
     private volatile java.lang.Object number_ = "";
     /**
-     * <code>string number = 2;</code>
+     * <code>string number = 3;</code>
      * @return The number.
      */
     @java.lang.Override
@@ -2497,7 +2589,7 @@ java.lang.String defaultValue);
       }
     }
     /**
-     * <code>string number = 2;</code>
+     * <code>string number = 3;</code>
      * @return The bytes for number.
      */
     @java.lang.Override
@@ -2515,11 +2607,11 @@ java.lang.String defaultValue);
       }
     }
 
-    public static final int NAME_FIELD_NUMBER = 3;
+    public static final int NAME_FIELD_NUMBER = 4;
     @SuppressWarnings("serial")
     private volatile java.lang.Object name_ = "";
     /**
-     * <code>string name = 3;</code>
+     * <code>string name = 4;</code>
      * @return The name.
      */
     @java.lang.Override
@@ -2536,7 +2628,7 @@ java.lang.String defaultValue);
       }
     }
     /**
-     * <code>string name = 3;</code>
+     * <code>string name = 4;</code>
      * @return The bytes for name.
      */
     @java.lang.Override
@@ -2554,14 +2646,26 @@ java.lang.String defaultValue);
       }
     }
 
-    public static final int TRANSITNUMBER_FIELD_NUMBER = 4;
+    public static final int TRANSITNUMBER_FIELD_NUMBER = 5;
     private long transitNumber_ = 0L;
     /**
      * <pre>
      * branch, CA specific
      * </pre>
      *
-     * <code>int64 transitNumber = 4;</code>
+     * <code>optional int64 transitNumber = 5;</code>
+     * @return Whether the transitNumber field is set.
+     */
+    @java.lang.Override
+    public boolean hasTransitNumber() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <pre>
+     * branch, CA specific
+     * </pre>
+     *
+     * <code>optional int64 transitNumber = 5;</code>
      * @return The transitNumber.
      */
     @java.lang.Override
@@ -2569,14 +2673,26 @@ java.lang.String defaultValue);
       return transitNumber_;
     }
 
-    public static final int INSTITUTIONNUMBER_FIELD_NUMBER = 5;
+    public static final int INSTITUTIONNUMBER_FIELD_NUMBER = 6;
     private long institutionNumber_ = 0L;
     /**
      * <pre>
      * bank, CA specific
      * </pre>
      *
-     * <code>int64 institutionNumber = 5;</code>
+     * <code>optional int64 institutionNumber = 6;</code>
+     * @return Whether the institutionNumber field is set.
+     */
+    @java.lang.Override
+    public boolean hasInstitutionNumber() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <pre>
+     * bank, CA specific
+     * </pre>
+     *
+     * <code>optional int64 institutionNumber = 6;</code>
      * @return The institutionNumber.
      */
     @java.lang.Override
@@ -2584,10 +2700,10 @@ java.lang.String defaultValue);
       return institutionNumber_;
     }
 
-    public static final int BALANCE_FIELD_NUMBER = 6;
+    public static final int BALANCE_FIELD_NUMBER = 7;
     private double balance_ = 0D;
     /**
-     * <code>double balance = 6;</code>
+     * <code>double balance = 7;</code>
      * @return The balance.
      */
     @java.lang.Override
@@ -2595,7 +2711,7 @@ java.lang.String defaultValue);
       return balance_;
     }
 
-    public static final int METADATA_FIELD_NUMBER = 7;
+    public static final int METADATA_FIELD_NUMBER = 8;
     private static final class MetaDataDefaultEntryHolder {
       static final com.google.protobuf.MapEntry<
           java.lang.String, java.lang.String> defaultEntry =
@@ -2622,7 +2738,7 @@ java.lang.String defaultValue);
       return internalGetMetaData().getMap().size();
     }
     /**
-     * <code>map&lt;string, string&gt; metaData = 7;</code>
+     * <code>map&lt;string, string&gt; metaData = 8;</code>
      */
     @java.lang.Override
     public boolean containsMetaData(
@@ -2639,14 +2755,14 @@ java.lang.String defaultValue);
       return getMetaDataMap();
     }
     /**
-     * <code>map&lt;string, string&gt; metaData = 7;</code>
+     * <code>map&lt;string, string&gt; metaData = 8;</code>
      */
     @java.lang.Override
     public java.util.Map<java.lang.String, java.lang.String> getMetaDataMap() {
       return internalGetMetaData().getMap();
     }
     /**
-     * <code>map&lt;string, string&gt; metaData = 7;</code>
+     * <code>map&lt;string, string&gt; metaData = 8;</code>
      */
     @java.lang.Override
     public /* nullable */
@@ -2660,7 +2776,7 @@ java.lang.String defaultValue) {
       return map.containsKey(key) ? map.get(key) : defaultValue;
     }
     /**
-     * <code>map&lt;string, string&gt; metaData = 7;</code>
+     * <code>map&lt;string, string&gt; metaData = 8;</code>
      */
     @java.lang.Override
     public java.lang.String getMetaDataOrThrow(
@@ -2674,17 +2790,17 @@ java.lang.String defaultValue) {
       return map.get(key);
     }
 
-    public static final int BANKACCOUNTTYPE_FIELD_NUMBER = 8;
+    public static final int BANKACCOUNTTYPE_FIELD_NUMBER = 9;
     private int bankAccountType_ = 0;
     /**
-     * <code>.BankAccountType bankAccountType = 8;</code>
+     * <code>.BankAccountType bankAccountType = 9;</code>
      * @return The enum numeric value on the wire for bankAccountType.
      */
     @java.lang.Override public int getBankAccountTypeValue() {
       return bankAccountType_;
     }
     /**
-     * <code>.BankAccountType bankAccountType = 8;</code>
+     * <code>.BankAccountType bankAccountType = 9;</code>
      * @return The bankAccountType.
      */
     @java.lang.Override public com.vv.personal.twm.artifactory.generated.bank.BankProto.BankAccountType getBankAccountType() {
@@ -2692,62 +2808,10 @@ java.lang.String defaultValue) {
       return result == null ? com.vv.personal.twm.artifactory.generated.bank.BankProto.BankAccountType.UNRECOGNIZED : result;
     }
 
-    public static final int CREATEDAT_FIELD_NUMBER = 9;
-    private com.google.protobuf.Timestamp createdAt_;
-    /**
-     * <code>optional .google.protobuf.Timestamp createdAt = 9;</code>
-     * @return Whether the createdAt field is set.
-     */
-    @java.lang.Override
-    public boolean hasCreatedAt() {
-      return ((bitField0_ & 0x00000002) != 0);
-    }
-    /**
-     * <code>optional .google.protobuf.Timestamp createdAt = 9;</code>
-     * @return The createdAt.
-     */
-    @java.lang.Override
-    public com.google.protobuf.Timestamp getCreatedAt() {
-      return createdAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
-    }
-    /**
-     * <code>optional .google.protobuf.Timestamp createdAt = 9;</code>
-     */
-    @java.lang.Override
-    public com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder() {
-      return createdAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
-    }
-
-    public static final int LASTUPDATEDAT_FIELD_NUMBER = 10;
-    private com.google.protobuf.Timestamp lastUpdatedAt_;
-    /**
-     * <code>optional .google.protobuf.Timestamp lastUpdatedAt = 10;</code>
-     * @return Whether the lastUpdatedAt field is set.
-     */
-    @java.lang.Override
-    public boolean hasLastUpdatedAt() {
-      return ((bitField0_ & 0x00000004) != 0);
-    }
-    /**
-     * <code>optional .google.protobuf.Timestamp lastUpdatedAt = 10;</code>
-     * @return The lastUpdatedAt.
-     */
-    @java.lang.Override
-    public com.google.protobuf.Timestamp getLastUpdatedAt() {
-      return lastUpdatedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : lastUpdatedAt_;
-    }
-    /**
-     * <code>optional .google.protobuf.Timestamp lastUpdatedAt = 10;</code>
-     */
-    @java.lang.Override
-    public com.google.protobuf.TimestampOrBuilder getLastUpdatedAtOrBuilder() {
-      return lastUpdatedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : lastUpdatedAt_;
-    }
-
-    public static final int OVERDRAFTBALANCE_FIELD_NUMBER = 11;
+    public static final int OVERDRAFTBALANCE_FIELD_NUMBER = 10;
     private double overdraftBalance_ = 0D;
     /**
-     * <code>double overdraftBalance = 11;</code>
+     * <code>double overdraftBalance = 10;</code>
      * @return The overdraftBalance.
      */
     @java.lang.Override
@@ -2755,15 +2819,78 @@ java.lang.String defaultValue) {
       return overdraftBalance_;
     }
 
-    public static final int INTERESTRATE_FIELD_NUMBER = 12;
+    public static final int INTERESTRATE_FIELD_NUMBER = 11;
     private double interestRate_ = 0D;
     /**
-     * <code>double interestRate = 12;</code>
+     * <code>double interestRate = 11;</code>
      * @return The interestRate.
      */
     @java.lang.Override
     public double getInterestRate() {
       return interestRate_;
+    }
+
+    public static final int ISACTIVE_FIELD_NUMBER = 12;
+    private boolean isActive_ = false;
+    /**
+     * <code>bool isActive = 12;</code>
+     * @return The isActive.
+     */
+    @java.lang.Override
+    public boolean getIsActive() {
+      return isActive_;
+    }
+
+    public static final int CREATEDAT_FIELD_NUMBER = 13;
+    private com.google.protobuf.Timestamp createdAt_;
+    /**
+     * <code>optional .google.protobuf.Timestamp createdAt = 13;</code>
+     * @return Whether the createdAt field is set.
+     */
+    @java.lang.Override
+    public boolean hasCreatedAt() {
+      return ((bitField0_ & 0x00000008) != 0);
+    }
+    /**
+     * <code>optional .google.protobuf.Timestamp createdAt = 13;</code>
+     * @return The createdAt.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getCreatedAt() {
+      return createdAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
+    }
+    /**
+     * <code>optional .google.protobuf.Timestamp createdAt = 13;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder() {
+      return createdAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
+    }
+
+    public static final int LASTUPDATEDAT_FIELD_NUMBER = 14;
+    private com.google.protobuf.Timestamp lastUpdatedAt_;
+    /**
+     * <code>optional .google.protobuf.Timestamp lastUpdatedAt = 14;</code>
+     * @return Whether the lastUpdatedAt field is set.
+     */
+    @java.lang.Override
+    public boolean hasLastUpdatedAt() {
+      return ((bitField0_ & 0x00000010) != 0);
+    }
+    /**
+     * <code>optional .google.protobuf.Timestamp lastUpdatedAt = 14;</code>
+     * @return The lastUpdatedAt.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getLastUpdatedAt() {
+      return lastUpdatedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : lastUpdatedAt_;
+    }
+    /**
+     * <code>optional .google.protobuf.Timestamp lastUpdatedAt = 14;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.TimestampOrBuilder getLastUpdatedAtOrBuilder() {
+      return lastUpdatedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : lastUpdatedAt_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -2783,41 +2910,47 @@ java.lang.String defaultValue) {
       if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getBank());
       }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(id_)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 2, id_);
+      }
       if (!com.google.protobuf.GeneratedMessage.isStringEmpty(number_)) {
-        com.google.protobuf.GeneratedMessage.writeString(output, 2, number_);
+        com.google.protobuf.GeneratedMessage.writeString(output, 3, number_);
       }
       if (!com.google.protobuf.GeneratedMessage.isStringEmpty(name_)) {
-        com.google.protobuf.GeneratedMessage.writeString(output, 3, name_);
+        com.google.protobuf.GeneratedMessage.writeString(output, 4, name_);
       }
-      if (transitNumber_ != 0L) {
-        output.writeInt64(4, transitNumber_);
+      if (((bitField0_ & 0x00000002) != 0)) {
+        output.writeInt64(5, transitNumber_);
       }
-      if (institutionNumber_ != 0L) {
-        output.writeInt64(5, institutionNumber_);
+      if (((bitField0_ & 0x00000004) != 0)) {
+        output.writeInt64(6, institutionNumber_);
       }
       if (java.lang.Double.doubleToRawLongBits(balance_) != 0) {
-        output.writeDouble(6, balance_);
+        output.writeDouble(7, balance_);
       }
       com.google.protobuf.GeneratedMessage
         .serializeStringMapTo(
           output,
           internalGetMetaData(),
           MetaDataDefaultEntryHolder.defaultEntry,
-          7);
+          8);
       if (bankAccountType_ != com.vv.personal.twm.artifactory.generated.bank.BankProto.BankAccountType.CHQ.getNumber()) {
-        output.writeEnum(8, bankAccountType_);
-      }
-      if (((bitField0_ & 0x00000002) != 0)) {
-        output.writeMessage(9, getCreatedAt());
-      }
-      if (((bitField0_ & 0x00000004) != 0)) {
-        output.writeMessage(10, getLastUpdatedAt());
+        output.writeEnum(9, bankAccountType_);
       }
       if (java.lang.Double.doubleToRawLongBits(overdraftBalance_) != 0) {
-        output.writeDouble(11, overdraftBalance_);
+        output.writeDouble(10, overdraftBalance_);
       }
       if (java.lang.Double.doubleToRawLongBits(interestRate_) != 0) {
-        output.writeDouble(12, interestRate_);
+        output.writeDouble(11, interestRate_);
+      }
+      if (isActive_ != false) {
+        output.writeBool(12, isActive_);
+      }
+      if (((bitField0_ & 0x00000008) != 0)) {
+        output.writeMessage(13, getCreatedAt());
+      }
+      if (((bitField0_ & 0x00000010) != 0)) {
+        output.writeMessage(14, getLastUpdatedAt());
       }
       getUnknownFields().writeTo(output);
     }
@@ -2832,23 +2965,26 @@ java.lang.String defaultValue) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getBank());
       }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(id_)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(2, id_);
+      }
       if (!com.google.protobuf.GeneratedMessage.isStringEmpty(number_)) {
-        size += com.google.protobuf.GeneratedMessage.computeStringSize(2, number_);
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(3, number_);
       }
       if (!com.google.protobuf.GeneratedMessage.isStringEmpty(name_)) {
-        size += com.google.protobuf.GeneratedMessage.computeStringSize(3, name_);
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(4, name_);
       }
-      if (transitNumber_ != 0L) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt64Size(4, transitNumber_);
+          .computeInt64Size(5, transitNumber_);
       }
-      if (institutionNumber_ != 0L) {
+      if (((bitField0_ & 0x00000004) != 0)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt64Size(5, institutionNumber_);
+          .computeInt64Size(6, institutionNumber_);
       }
       if (java.lang.Double.doubleToRawLongBits(balance_) != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeDoubleSize(6, balance_);
+          .computeDoubleSize(7, balance_);
       }
       for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
            : internalGetMetaData().getMap().entrySet()) {
@@ -2858,27 +2994,31 @@ java.lang.String defaultValue) {
             .setValue(entry.getValue())
             .build();
         size += com.google.protobuf.CodedOutputStream
-            .computeMessageSize(7, metaData__);
+            .computeMessageSize(8, metaData__);
       }
       if (bankAccountType_ != com.vv.personal.twm.artifactory.generated.bank.BankProto.BankAccountType.CHQ.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(8, bankAccountType_);
-      }
-      if (((bitField0_ & 0x00000002) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(9, getCreatedAt());
-      }
-      if (((bitField0_ & 0x00000004) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(10, getLastUpdatedAt());
+          .computeEnumSize(9, bankAccountType_);
       }
       if (java.lang.Double.doubleToRawLongBits(overdraftBalance_) != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeDoubleSize(11, overdraftBalance_);
+          .computeDoubleSize(10, overdraftBalance_);
       }
       if (java.lang.Double.doubleToRawLongBits(interestRate_) != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeDoubleSize(12, interestRate_);
+          .computeDoubleSize(11, interestRate_);
+      }
+      if (isActive_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(12, isActive_);
+      }
+      if (((bitField0_ & 0x00000008) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(13, getCreatedAt());
+      }
+      if (((bitField0_ & 0x00000010) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(14, getLastUpdatedAt());
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -2900,20 +3040,36 @@ java.lang.String defaultValue) {
         if (!getBank()
             .equals(other.getBank())) return false;
       }
+      if (!getId()
+          .equals(other.getId())) return false;
       if (!getNumber()
           .equals(other.getNumber())) return false;
       if (!getName()
           .equals(other.getName())) return false;
-      if (getTransitNumber()
-          != other.getTransitNumber()) return false;
-      if (getInstitutionNumber()
-          != other.getInstitutionNumber()) return false;
+      if (hasTransitNumber() != other.hasTransitNumber()) return false;
+      if (hasTransitNumber()) {
+        if (getTransitNumber()
+            != other.getTransitNumber()) return false;
+      }
+      if (hasInstitutionNumber() != other.hasInstitutionNumber()) return false;
+      if (hasInstitutionNumber()) {
+        if (getInstitutionNumber()
+            != other.getInstitutionNumber()) return false;
+      }
       if (java.lang.Double.doubleToLongBits(getBalance())
           != java.lang.Double.doubleToLongBits(
               other.getBalance())) return false;
       if (!internalGetMetaData().equals(
           other.internalGetMetaData())) return false;
       if (bankAccountType_ != other.bankAccountType_) return false;
+      if (java.lang.Double.doubleToLongBits(getOverdraftBalance())
+          != java.lang.Double.doubleToLongBits(
+              other.getOverdraftBalance())) return false;
+      if (java.lang.Double.doubleToLongBits(getInterestRate())
+          != java.lang.Double.doubleToLongBits(
+              other.getInterestRate())) return false;
+      if (getIsActive()
+          != other.getIsActive()) return false;
       if (hasCreatedAt() != other.hasCreatedAt()) return false;
       if (hasCreatedAt()) {
         if (!getCreatedAt()
@@ -2924,12 +3080,6 @@ java.lang.String defaultValue) {
         if (!getLastUpdatedAt()
             .equals(other.getLastUpdatedAt())) return false;
       }
-      if (java.lang.Double.doubleToLongBits(getOverdraftBalance())
-          != java.lang.Double.doubleToLongBits(
-              other.getOverdraftBalance())) return false;
-      if (java.lang.Double.doubleToLongBits(getInterestRate())
-          != java.lang.Double.doubleToLongBits(
-              other.getInterestRate())) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -2945,16 +3095,22 @@ java.lang.String defaultValue) {
         hash = (37 * hash) + BANK_FIELD_NUMBER;
         hash = (53 * hash) + getBank().hashCode();
       }
+      hash = (37 * hash) + ID_FIELD_NUMBER;
+      hash = (53 * hash) + getId().hashCode();
       hash = (37 * hash) + NUMBER_FIELD_NUMBER;
       hash = (53 * hash) + getNumber().hashCode();
       hash = (37 * hash) + NAME_FIELD_NUMBER;
       hash = (53 * hash) + getName().hashCode();
-      hash = (37 * hash) + TRANSITNUMBER_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          getTransitNumber());
-      hash = (37 * hash) + INSTITUTIONNUMBER_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          getInstitutionNumber());
+      if (hasTransitNumber()) {
+        hash = (37 * hash) + TRANSITNUMBER_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getTransitNumber());
+      }
+      if (hasInstitutionNumber()) {
+        hash = (37 * hash) + INSTITUTIONNUMBER_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getInstitutionNumber());
+      }
       hash = (37 * hash) + BALANCE_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           java.lang.Double.doubleToLongBits(getBalance()));
@@ -2964,6 +3120,15 @@ java.lang.String defaultValue) {
       }
       hash = (37 * hash) + BANKACCOUNTTYPE_FIELD_NUMBER;
       hash = (53 * hash) + bankAccountType_;
+      hash = (37 * hash) + OVERDRAFTBALANCE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          java.lang.Double.doubleToLongBits(getOverdraftBalance()));
+      hash = (37 * hash) + INTERESTRATE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          java.lang.Double.doubleToLongBits(getInterestRate()));
+      hash = (37 * hash) + ISACTIVE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getIsActive());
       if (hasCreatedAt()) {
         hash = (37 * hash) + CREATEDAT_FIELD_NUMBER;
         hash = (53 * hash) + getCreatedAt().hashCode();
@@ -2972,12 +3137,6 @@ java.lang.String defaultValue) {
         hash = (37 * hash) + LASTUPDATEDAT_FIELD_NUMBER;
         hash = (53 * hash) + getLastUpdatedAt().hashCode();
       }
-      hash = (37 * hash) + OVERDRAFTBALANCE_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          java.lang.Double.doubleToLongBits(getOverdraftBalance()));
-      hash = (37 * hash) + INTERESTRATE_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          java.lang.Double.doubleToLongBits(getInterestRate()));
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -3091,7 +3250,7 @@ java.lang.String defaultValue) {
       protected com.google.protobuf.MapFieldReflectionAccessor internalGetMapFieldReflection(
           int number) {
         switch (number) {
-          case 7:
+          case 8:
             return internalGetMetaData();
           default:
             throw new RuntimeException(
@@ -3102,7 +3261,7 @@ java.lang.String defaultValue) {
       protected com.google.protobuf.MapFieldReflectionAccessor internalGetMutableMapFieldReflection(
           int number) {
         switch (number) {
-          case 7:
+          case 8:
             return internalGetMutableMetaData();
           default:
             throw new RuntimeException(
@@ -3144,6 +3303,7 @@ java.lang.String defaultValue) {
           bankBuilder_.dispose();
           bankBuilder_ = null;
         }
+        id_ = "";
         number_ = "";
         name_ = "";
         transitNumber_ = 0L;
@@ -3151,6 +3311,9 @@ java.lang.String defaultValue) {
         balance_ = 0D;
         internalGetMutableMetaData().clear();
         bankAccountType_ = 0;
+        overdraftBalance_ = 0D;
+        interestRate_ = 0D;
+        isActive_ = false;
         createdAt_ = null;
         if (createdAtBuilder_ != null) {
           createdAtBuilder_.dispose();
@@ -3161,8 +3324,6 @@ java.lang.String defaultValue) {
           lastUpdatedAtBuilder_.dispose();
           lastUpdatedAtBuilder_ = null;
         }
-        overdraftBalance_ = 0D;
-        interestRate_ = 0D;
         return this;
       }
 
@@ -3204,44 +3365,52 @@ java.lang.String defaultValue) {
           to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.number_ = number_;
+          result.id_ = id_;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
-          result.name_ = name_;
+          result.number_ = number_;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
-          result.transitNumber_ = transitNumber_;
+          result.name_ = name_;
         }
         if (((from_bitField0_ & 0x00000010) != 0)) {
-          result.institutionNumber_ = institutionNumber_;
+          result.transitNumber_ = transitNumber_;
+          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000020) != 0)) {
-          result.balance_ = balance_;
+          result.institutionNumber_ = institutionNumber_;
+          to_bitField0_ |= 0x00000004;
         }
         if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.balance_ = balance_;
+        }
+        if (((from_bitField0_ & 0x00000080) != 0)) {
           result.metaData_ = internalGetMetaData();
           result.metaData_.makeImmutable();
         }
-        if (((from_bitField0_ & 0x00000080) != 0)) {
+        if (((from_bitField0_ & 0x00000100) != 0)) {
           result.bankAccountType_ = bankAccountType_;
         }
-        if (((from_bitField0_ & 0x00000100) != 0)) {
+        if (((from_bitField0_ & 0x00000200) != 0)) {
+          result.overdraftBalance_ = overdraftBalance_;
+        }
+        if (((from_bitField0_ & 0x00000400) != 0)) {
+          result.interestRate_ = interestRate_;
+        }
+        if (((from_bitField0_ & 0x00000800) != 0)) {
+          result.isActive_ = isActive_;
+        }
+        if (((from_bitField0_ & 0x00001000) != 0)) {
           result.createdAt_ = createdAtBuilder_ == null
               ? createdAt_
               : createdAtBuilder_.build();
-          to_bitField0_ |= 0x00000002;
+          to_bitField0_ |= 0x00000008;
         }
-        if (((from_bitField0_ & 0x00000200) != 0)) {
+        if (((from_bitField0_ & 0x00002000) != 0)) {
           result.lastUpdatedAt_ = lastUpdatedAtBuilder_ == null
               ? lastUpdatedAt_
               : lastUpdatedAtBuilder_.build();
-          to_bitField0_ |= 0x00000004;
-        }
-        if (((from_bitField0_ & 0x00000400) != 0)) {
-          result.overdraftBalance_ = overdraftBalance_;
-        }
-        if (((from_bitField0_ & 0x00000800) != 0)) {
-          result.interestRate_ = interestRate_;
+          to_bitField0_ |= 0x00000010;
         }
         result.bitField0_ |= to_bitField0_;
       }
@@ -3261,20 +3430,25 @@ java.lang.String defaultValue) {
         if (other.hasBank()) {
           mergeBank(other.getBank());
         }
+        if (!other.getId().isEmpty()) {
+          id_ = other.id_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         if (!other.getNumber().isEmpty()) {
           number_ = other.number_;
-          bitField0_ |= 0x00000002;
+          bitField0_ |= 0x00000004;
           onChanged();
         }
         if (!other.getName().isEmpty()) {
           name_ = other.name_;
-          bitField0_ |= 0x00000004;
+          bitField0_ |= 0x00000008;
           onChanged();
         }
-        if (other.getTransitNumber() != 0L) {
+        if (other.hasTransitNumber()) {
           setTransitNumber(other.getTransitNumber());
         }
-        if (other.getInstitutionNumber() != 0L) {
+        if (other.hasInstitutionNumber()) {
           setInstitutionNumber(other.getInstitutionNumber());
         }
         if (other.getBalance() != 0D) {
@@ -3282,21 +3456,24 @@ java.lang.String defaultValue) {
         }
         internalGetMutableMetaData().mergeFrom(
             other.internalGetMetaData());
-        bitField0_ |= 0x00000040;
+        bitField0_ |= 0x00000080;
         if (other.bankAccountType_ != 0) {
           setBankAccountTypeValue(other.getBankAccountTypeValue());
-        }
-        if (other.hasCreatedAt()) {
-          mergeCreatedAt(other.getCreatedAt());
-        }
-        if (other.hasLastUpdatedAt()) {
-          mergeLastUpdatedAt(other.getLastUpdatedAt());
         }
         if (other.getOverdraftBalance() != 0D) {
           setOverdraftBalance(other.getOverdraftBalance());
         }
         if (other.getInterestRate() != 0D) {
           setInterestRate(other.getInterestRate());
+        }
+        if (other.getIsActive() != false) {
+          setIsActive(other.getIsActive());
+        }
+        if (other.hasCreatedAt()) {
+          mergeCreatedAt(other.getCreatedAt());
+        }
+        if (other.hasLastUpdatedAt()) {
+          mergeLastUpdatedAt(other.getLastUpdatedAt());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
@@ -3332,68 +3509,78 @@ java.lang.String defaultValue) {
                 break;
               } // case 10
               case 18: {
-                number_ = input.readStringRequireUtf8();
+                id_ = input.readStringRequireUtf8();
                 bitField0_ |= 0x00000002;
                 break;
               } // case 18
               case 26: {
-                name_ = input.readStringRequireUtf8();
+                number_ = input.readStringRequireUtf8();
                 bitField0_ |= 0x00000004;
                 break;
               } // case 26
-              case 32: {
-                transitNumber_ = input.readInt64();
+              case 34: {
+                name_ = input.readStringRequireUtf8();
                 bitField0_ |= 0x00000008;
                 break;
-              } // case 32
+              } // case 34
               case 40: {
-                institutionNumber_ = input.readInt64();
+                transitNumber_ = input.readInt64();
                 bitField0_ |= 0x00000010;
                 break;
               } // case 40
-              case 49: {
-                balance_ = input.readDouble();
+              case 48: {
+                institutionNumber_ = input.readInt64();
                 bitField0_ |= 0x00000020;
                 break;
-              } // case 49
-              case 58: {
+              } // case 48
+              case 57: {
+                balance_ = input.readDouble();
+                bitField0_ |= 0x00000040;
+                break;
+              } // case 57
+              case 66: {
                 com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
                 metaData__ = input.readMessage(
                     MetaDataDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
                 internalGetMutableMetaData().getMutableMap().put(
                     metaData__.getKey(), metaData__.getValue());
-                bitField0_ |= 0x00000040;
-                break;
-              } // case 58
-              case 64: {
-                bankAccountType_ = input.readEnum();
                 bitField0_ |= 0x00000080;
                 break;
-              } // case 64
-              case 74: {
-                input.readMessage(
-                    getCreatedAtFieldBuilder().getBuilder(),
-                    extensionRegistry);
+              } // case 66
+              case 72: {
+                bankAccountType_ = input.readEnum();
                 bitField0_ |= 0x00000100;
                 break;
-              } // case 74
-              case 82: {
-                input.readMessage(
-                    getLastUpdatedAtFieldBuilder().getBuilder(),
-                    extensionRegistry);
+              } // case 72
+              case 81: {
+                overdraftBalance_ = input.readDouble();
                 bitField0_ |= 0x00000200;
                 break;
-              } // case 82
+              } // case 81
               case 89: {
-                overdraftBalance_ = input.readDouble();
+                interestRate_ = input.readDouble();
                 bitField0_ |= 0x00000400;
                 break;
               } // case 89
-              case 97: {
-                interestRate_ = input.readDouble();
+              case 96: {
+                isActive_ = input.readBool();
                 bitField0_ |= 0x00000800;
                 break;
-              } // case 97
+              } // case 96
+              case 106: {
+                input.readMessage(
+                    getCreatedAtFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00001000;
+                break;
+              } // case 106
+              case 114: {
+                input.readMessage(
+                    getLastUpdatedAtFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00002000;
+                break;
+              } // case 114
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -3532,9 +3719,101 @@ java.lang.String defaultValue) {
         return bankBuilder_;
       }
 
+      private java.lang.Object id_ = "";
+      /**
+       * <pre>
+       * uuid
+       * </pre>
+       *
+       * <code>string id = 2;</code>
+       * @return The id.
+       */
+      public java.lang.String getId() {
+        java.lang.Object ref = id_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          id_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * uuid
+       * </pre>
+       *
+       * <code>string id = 2;</code>
+       * @return The bytes for id.
+       */
+      public com.google.protobuf.ByteString
+          getIdBytes() {
+        java.lang.Object ref = id_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          id_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * uuid
+       * </pre>
+       *
+       * <code>string id = 2;</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        id_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * uuid
+       * </pre>
+       *
+       * <code>string id = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearId() {
+        id_ = getDefaultInstance().getId();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * uuid
+       * </pre>
+       *
+       * <code>string id = 2;</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        id_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
       private java.lang.Object number_ = "";
       /**
-       * <code>string number = 2;</code>
+       * <code>string number = 3;</code>
        * @return The number.
        */
       public java.lang.String getNumber() {
@@ -3550,7 +3829,7 @@ java.lang.String defaultValue) {
         }
       }
       /**
-       * <code>string number = 2;</code>
+       * <code>string number = 3;</code>
        * @return The bytes for number.
        */
       public com.google.protobuf.ByteString
@@ -3567,7 +3846,7 @@ java.lang.String defaultValue) {
         }
       }
       /**
-       * <code>string number = 2;</code>
+       * <code>string number = 3;</code>
        * @param value The number to set.
        * @return This builder for chaining.
        */
@@ -3575,22 +3854,22 @@ java.lang.String defaultValue) {
           java.lang.String value) {
         if (value == null) { throw new NullPointerException(); }
         number_ = value;
-        bitField0_ |= 0x00000002;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
       /**
-       * <code>string number = 2;</code>
+       * <code>string number = 3;</code>
        * @return This builder for chaining.
        */
       public Builder clearNumber() {
         number_ = getDefaultInstance().getNumber();
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
         return this;
       }
       /**
-       * <code>string number = 2;</code>
+       * <code>string number = 3;</code>
        * @param value The bytes for number to set.
        * @return This builder for chaining.
        */
@@ -3599,14 +3878,14 @@ java.lang.String defaultValue) {
         if (value == null) { throw new NullPointerException(); }
         checkByteStringIsUtf8(value);
         number_ = value;
-        bitField0_ |= 0x00000002;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
 
       private java.lang.Object name_ = "";
       /**
-       * <code>string name = 3;</code>
+       * <code>string name = 4;</code>
        * @return The name.
        */
       public java.lang.String getName() {
@@ -3622,7 +3901,7 @@ java.lang.String defaultValue) {
         }
       }
       /**
-       * <code>string name = 3;</code>
+       * <code>string name = 4;</code>
        * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
@@ -3639,7 +3918,7 @@ java.lang.String defaultValue) {
         }
       }
       /**
-       * <code>string name = 3;</code>
+       * <code>string name = 4;</code>
        * @param value The name to set.
        * @return This builder for chaining.
        */
@@ -3647,22 +3926,22 @@ java.lang.String defaultValue) {
           java.lang.String value) {
         if (value == null) { throw new NullPointerException(); }
         name_ = value;
-        bitField0_ |= 0x00000004;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
       /**
-       * <code>string name = 3;</code>
+       * <code>string name = 4;</code>
        * @return This builder for chaining.
        */
       public Builder clearName() {
         name_ = getDefaultInstance().getName();
-        bitField0_ = (bitField0_ & ~0x00000004);
+        bitField0_ = (bitField0_ & ~0x00000008);
         onChanged();
         return this;
       }
       /**
-       * <code>string name = 3;</code>
+       * <code>string name = 4;</code>
        * @param value The bytes for name to set.
        * @return This builder for chaining.
        */
@@ -3671,7 +3950,7 @@ java.lang.String defaultValue) {
         if (value == null) { throw new NullPointerException(); }
         checkByteStringIsUtf8(value);
         name_ = value;
-        bitField0_ |= 0x00000004;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -3682,7 +3961,19 @@ java.lang.String defaultValue) {
        * branch, CA specific
        * </pre>
        *
-       * <code>int64 transitNumber = 4;</code>
+       * <code>optional int64 transitNumber = 5;</code>
+       * @return Whether the transitNumber field is set.
+       */
+      @java.lang.Override
+      public boolean hasTransitNumber() {
+        return ((bitField0_ & 0x00000010) != 0);
+      }
+      /**
+       * <pre>
+       * branch, CA specific
+       * </pre>
+       *
+       * <code>optional int64 transitNumber = 5;</code>
        * @return The transitNumber.
        */
       @java.lang.Override
@@ -3694,14 +3985,14 @@ java.lang.String defaultValue) {
        * branch, CA specific
        * </pre>
        *
-       * <code>int64 transitNumber = 4;</code>
+       * <code>optional int64 transitNumber = 5;</code>
        * @param value The transitNumber to set.
        * @return This builder for chaining.
        */
       public Builder setTransitNumber(long value) {
 
         transitNumber_ = value;
-        bitField0_ |= 0x00000008;
+        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
@@ -3710,11 +4001,11 @@ java.lang.String defaultValue) {
        * branch, CA specific
        * </pre>
        *
-       * <code>int64 transitNumber = 4;</code>
+       * <code>optional int64 transitNumber = 5;</code>
        * @return This builder for chaining.
        */
       public Builder clearTransitNumber() {
-        bitField0_ = (bitField0_ & ~0x00000008);
+        bitField0_ = (bitField0_ & ~0x00000010);
         transitNumber_ = 0L;
         onChanged();
         return this;
@@ -3726,7 +4017,19 @@ java.lang.String defaultValue) {
        * bank, CA specific
        * </pre>
        *
-       * <code>int64 institutionNumber = 5;</code>
+       * <code>optional int64 institutionNumber = 6;</code>
+       * @return Whether the institutionNumber field is set.
+       */
+      @java.lang.Override
+      public boolean hasInstitutionNumber() {
+        return ((bitField0_ & 0x00000020) != 0);
+      }
+      /**
+       * <pre>
+       * bank, CA specific
+       * </pre>
+       *
+       * <code>optional int64 institutionNumber = 6;</code>
        * @return The institutionNumber.
        */
       @java.lang.Override
@@ -3738,14 +4041,14 @@ java.lang.String defaultValue) {
        * bank, CA specific
        * </pre>
        *
-       * <code>int64 institutionNumber = 5;</code>
+       * <code>optional int64 institutionNumber = 6;</code>
        * @param value The institutionNumber to set.
        * @return This builder for chaining.
        */
       public Builder setInstitutionNumber(long value) {
 
         institutionNumber_ = value;
-        bitField0_ |= 0x00000010;
+        bitField0_ |= 0x00000020;
         onChanged();
         return this;
       }
@@ -3754,11 +4057,11 @@ java.lang.String defaultValue) {
        * bank, CA specific
        * </pre>
        *
-       * <code>int64 institutionNumber = 5;</code>
+       * <code>optional int64 institutionNumber = 6;</code>
        * @return This builder for chaining.
        */
       public Builder clearInstitutionNumber() {
-        bitField0_ = (bitField0_ & ~0x00000010);
+        bitField0_ = (bitField0_ & ~0x00000020);
         institutionNumber_ = 0L;
         onChanged();
         return this;
@@ -3766,7 +4069,7 @@ java.lang.String defaultValue) {
 
       private double balance_ ;
       /**
-       * <code>double balance = 6;</code>
+       * <code>double balance = 7;</code>
        * @return The balance.
        */
       @java.lang.Override
@@ -3774,23 +4077,23 @@ java.lang.String defaultValue) {
         return balance_;
       }
       /**
-       * <code>double balance = 6;</code>
+       * <code>double balance = 7;</code>
        * @param value The balance to set.
        * @return This builder for chaining.
        */
       public Builder setBalance(double value) {
 
         balance_ = value;
-        bitField0_ |= 0x00000020;
+        bitField0_ |= 0x00000040;
         onChanged();
         return this;
       }
       /**
-       * <code>double balance = 6;</code>
+       * <code>double balance = 7;</code>
        * @return This builder for chaining.
        */
       public Builder clearBalance() {
-        bitField0_ = (bitField0_ & ~0x00000020);
+        bitField0_ = (bitField0_ & ~0x00000040);
         balance_ = 0D;
         onChanged();
         return this;
@@ -3815,7 +4118,7 @@ java.lang.String defaultValue) {
         if (!metaData_.isMutable()) {
           metaData_ = metaData_.copy();
         }
-        bitField0_ |= 0x00000040;
+        bitField0_ |= 0x00000080;
         onChanged();
         return metaData_;
       }
@@ -3823,7 +4126,7 @@ java.lang.String defaultValue) {
         return internalGetMetaData().getMap().size();
       }
       /**
-       * <code>map&lt;string, string&gt; metaData = 7;</code>
+       * <code>map&lt;string, string&gt; metaData = 8;</code>
        */
       @java.lang.Override
       public boolean containsMetaData(
@@ -3840,14 +4143,14 @@ java.lang.String defaultValue) {
         return getMetaDataMap();
       }
       /**
-       * <code>map&lt;string, string&gt; metaData = 7;</code>
+       * <code>map&lt;string, string&gt; metaData = 8;</code>
        */
       @java.lang.Override
       public java.util.Map<java.lang.String, java.lang.String> getMetaDataMap() {
         return internalGetMetaData().getMap();
       }
       /**
-       * <code>map&lt;string, string&gt; metaData = 7;</code>
+       * <code>map&lt;string, string&gt; metaData = 8;</code>
        */
       @java.lang.Override
       public /* nullable */
@@ -3861,7 +4164,7 @@ java.lang.String defaultValue) {
         return map.containsKey(key) ? map.get(key) : defaultValue;
       }
       /**
-       * <code>map&lt;string, string&gt; metaData = 7;</code>
+       * <code>map&lt;string, string&gt; metaData = 8;</code>
        */
       @java.lang.Override
       public java.lang.String getMetaDataOrThrow(
@@ -3875,13 +4178,13 @@ java.lang.String defaultValue) {
         return map.get(key);
       }
       public Builder clearMetaData() {
-        bitField0_ = (bitField0_ & ~0x00000040);
+        bitField0_ = (bitField0_ & ~0x00000080);
         internalGetMutableMetaData().getMutableMap()
             .clear();
         return this;
       }
       /**
-       * <code>map&lt;string, string&gt; metaData = 7;</code>
+       * <code>map&lt;string, string&gt; metaData = 8;</code>
        */
       public Builder removeMetaData(
           java.lang.String key) {
@@ -3896,11 +4199,11 @@ java.lang.String defaultValue) {
       @java.lang.Deprecated
       public java.util.Map<java.lang.String, java.lang.String>
           getMutableMetaData() {
-        bitField0_ |= 0x00000040;
+        bitField0_ |= 0x00000080;
         return internalGetMutableMetaData().getMutableMap();
       }
       /**
-       * <code>map&lt;string, string&gt; metaData = 7;</code>
+       * <code>map&lt;string, string&gt; metaData = 8;</code>
        */
       public Builder putMetaData(
           java.lang.String key,
@@ -3909,41 +4212,41 @@ java.lang.String defaultValue) {
         if (value == null) { throw new NullPointerException("map value"); }
         internalGetMutableMetaData().getMutableMap()
             .put(key, value);
-        bitField0_ |= 0x00000040;
+        bitField0_ |= 0x00000080;
         return this;
       }
       /**
-       * <code>map&lt;string, string&gt; metaData = 7;</code>
+       * <code>map&lt;string, string&gt; metaData = 8;</code>
        */
       public Builder putAllMetaData(
           java.util.Map<java.lang.String, java.lang.String> values) {
         internalGetMutableMetaData().getMutableMap()
             .putAll(values);
-        bitField0_ |= 0x00000040;
+        bitField0_ |= 0x00000080;
         return this;
       }
 
       private int bankAccountType_ = 0;
       /**
-       * <code>.BankAccountType bankAccountType = 8;</code>
+       * <code>.BankAccountType bankAccountType = 9;</code>
        * @return The enum numeric value on the wire for bankAccountType.
        */
       @java.lang.Override public int getBankAccountTypeValue() {
         return bankAccountType_;
       }
       /**
-       * <code>.BankAccountType bankAccountType = 8;</code>
+       * <code>.BankAccountType bankAccountType = 9;</code>
        * @param value The enum numeric value on the wire for bankAccountType to set.
        * @return This builder for chaining.
        */
       public Builder setBankAccountTypeValue(int value) {
         bankAccountType_ = value;
-        bitField0_ |= 0x00000080;
+        bitField0_ |= 0x00000100;
         onChanged();
         return this;
       }
       /**
-       * <code>.BankAccountType bankAccountType = 8;</code>
+       * <code>.BankAccountType bankAccountType = 9;</code>
        * @return The bankAccountType.
        */
       @java.lang.Override
@@ -3952,7 +4255,7 @@ java.lang.String defaultValue) {
         return result == null ? com.vv.personal.twm.artifactory.generated.bank.BankProto.BankAccountType.UNRECOGNIZED : result;
       }
       /**
-       * <code>.BankAccountType bankAccountType = 8;</code>
+       * <code>.BankAccountType bankAccountType = 9;</code>
        * @param value The bankAccountType to set.
        * @return This builder for chaining.
        */
@@ -3960,18 +4263,114 @@ java.lang.String defaultValue) {
         if (value == null) {
           throw new NullPointerException();
         }
-        bitField0_ |= 0x00000080;
+        bitField0_ |= 0x00000100;
         bankAccountType_ = value.getNumber();
         onChanged();
         return this;
       }
       /**
-       * <code>.BankAccountType bankAccountType = 8;</code>
+       * <code>.BankAccountType bankAccountType = 9;</code>
        * @return This builder for chaining.
        */
       public Builder clearBankAccountType() {
-        bitField0_ = (bitField0_ & ~0x00000080);
+        bitField0_ = (bitField0_ & ~0x00000100);
         bankAccountType_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private double overdraftBalance_ ;
+      /**
+       * <code>double overdraftBalance = 10;</code>
+       * @return The overdraftBalance.
+       */
+      @java.lang.Override
+      public double getOverdraftBalance() {
+        return overdraftBalance_;
+      }
+      /**
+       * <code>double overdraftBalance = 10;</code>
+       * @param value The overdraftBalance to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOverdraftBalance(double value) {
+
+        overdraftBalance_ = value;
+        bitField0_ |= 0x00000200;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>double overdraftBalance = 10;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOverdraftBalance() {
+        bitField0_ = (bitField0_ & ~0x00000200);
+        overdraftBalance_ = 0D;
+        onChanged();
+        return this;
+      }
+
+      private double interestRate_ ;
+      /**
+       * <code>double interestRate = 11;</code>
+       * @return The interestRate.
+       */
+      @java.lang.Override
+      public double getInterestRate() {
+        return interestRate_;
+      }
+      /**
+       * <code>double interestRate = 11;</code>
+       * @param value The interestRate to set.
+       * @return This builder for chaining.
+       */
+      public Builder setInterestRate(double value) {
+
+        interestRate_ = value;
+        bitField0_ |= 0x00000400;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>double interestRate = 11;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearInterestRate() {
+        bitField0_ = (bitField0_ & ~0x00000400);
+        interestRate_ = 0D;
+        onChanged();
+        return this;
+      }
+
+      private boolean isActive_ ;
+      /**
+       * <code>bool isActive = 12;</code>
+       * @return The isActive.
+       */
+      @java.lang.Override
+      public boolean getIsActive() {
+        return isActive_;
+      }
+      /**
+       * <code>bool isActive = 12;</code>
+       * @param value The isActive to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIsActive(boolean value) {
+
+        isActive_ = value;
+        bitField0_ |= 0x00000800;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool isActive = 12;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIsActive() {
+        bitField0_ = (bitField0_ & ~0x00000800);
+        isActive_ = false;
         onChanged();
         return this;
       }
@@ -3980,14 +4379,14 @@ java.lang.String defaultValue) {
       private com.google.protobuf.SingleFieldBuilder<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> createdAtBuilder_;
       /**
-       * <code>optional .google.protobuf.Timestamp createdAt = 9;</code>
+       * <code>optional .google.protobuf.Timestamp createdAt = 13;</code>
        * @return Whether the createdAt field is set.
        */
       public boolean hasCreatedAt() {
-        return ((bitField0_ & 0x00000100) != 0);
+        return ((bitField0_ & 0x00001000) != 0);
       }
       /**
-       * <code>optional .google.protobuf.Timestamp createdAt = 9;</code>
+       * <code>optional .google.protobuf.Timestamp createdAt = 13;</code>
        * @return The createdAt.
        */
       public com.google.protobuf.Timestamp getCreatedAt() {
@@ -3998,7 +4397,7 @@ java.lang.String defaultValue) {
         }
       }
       /**
-       * <code>optional .google.protobuf.Timestamp createdAt = 9;</code>
+       * <code>optional .google.protobuf.Timestamp createdAt = 13;</code>
        */
       public Builder setCreatedAt(com.google.protobuf.Timestamp value) {
         if (createdAtBuilder_ == null) {
@@ -4009,12 +4408,12 @@ java.lang.String defaultValue) {
         } else {
           createdAtBuilder_.setMessage(value);
         }
-        bitField0_ |= 0x00000100;
+        bitField0_ |= 0x00001000;
         onChanged();
         return this;
       }
       /**
-       * <code>optional .google.protobuf.Timestamp createdAt = 9;</code>
+       * <code>optional .google.protobuf.Timestamp createdAt = 13;</code>
        */
       public Builder setCreatedAt(
           com.google.protobuf.Timestamp.Builder builderForValue) {
@@ -4023,16 +4422,16 @@ java.lang.String defaultValue) {
         } else {
           createdAtBuilder_.setMessage(builderForValue.build());
         }
-        bitField0_ |= 0x00000100;
+        bitField0_ |= 0x00001000;
         onChanged();
         return this;
       }
       /**
-       * <code>optional .google.protobuf.Timestamp createdAt = 9;</code>
+       * <code>optional .google.protobuf.Timestamp createdAt = 13;</code>
        */
       public Builder mergeCreatedAt(com.google.protobuf.Timestamp value) {
         if (createdAtBuilder_ == null) {
-          if (((bitField0_ & 0x00000100) != 0) &&
+          if (((bitField0_ & 0x00001000) != 0) &&
             createdAt_ != null &&
             createdAt_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
             getCreatedAtBuilder().mergeFrom(value);
@@ -4043,16 +4442,16 @@ java.lang.String defaultValue) {
           createdAtBuilder_.mergeFrom(value);
         }
         if (createdAt_ != null) {
-          bitField0_ |= 0x00000100;
+          bitField0_ |= 0x00001000;
           onChanged();
         }
         return this;
       }
       /**
-       * <code>optional .google.protobuf.Timestamp createdAt = 9;</code>
+       * <code>optional .google.protobuf.Timestamp createdAt = 13;</code>
        */
       public Builder clearCreatedAt() {
-        bitField0_ = (bitField0_ & ~0x00000100);
+        bitField0_ = (bitField0_ & ~0x00001000);
         createdAt_ = null;
         if (createdAtBuilder_ != null) {
           createdAtBuilder_.dispose();
@@ -4062,15 +4461,15 @@ java.lang.String defaultValue) {
         return this;
       }
       /**
-       * <code>optional .google.protobuf.Timestamp createdAt = 9;</code>
+       * <code>optional .google.protobuf.Timestamp createdAt = 13;</code>
        */
       public com.google.protobuf.Timestamp.Builder getCreatedAtBuilder() {
-        bitField0_ |= 0x00000100;
+        bitField0_ |= 0x00001000;
         onChanged();
         return getCreatedAtFieldBuilder().getBuilder();
       }
       /**
-       * <code>optional .google.protobuf.Timestamp createdAt = 9;</code>
+       * <code>optional .google.protobuf.Timestamp createdAt = 13;</code>
        */
       public com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder() {
         if (createdAtBuilder_ != null) {
@@ -4081,7 +4480,7 @@ java.lang.String defaultValue) {
         }
       }
       /**
-       * <code>optional .google.protobuf.Timestamp createdAt = 9;</code>
+       * <code>optional .google.protobuf.Timestamp createdAt = 13;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
@@ -4101,14 +4500,14 @@ java.lang.String defaultValue) {
       private com.google.protobuf.SingleFieldBuilder<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> lastUpdatedAtBuilder_;
       /**
-       * <code>optional .google.protobuf.Timestamp lastUpdatedAt = 10;</code>
+       * <code>optional .google.protobuf.Timestamp lastUpdatedAt = 14;</code>
        * @return Whether the lastUpdatedAt field is set.
        */
       public boolean hasLastUpdatedAt() {
-        return ((bitField0_ & 0x00000200) != 0);
+        return ((bitField0_ & 0x00002000) != 0);
       }
       /**
-       * <code>optional .google.protobuf.Timestamp lastUpdatedAt = 10;</code>
+       * <code>optional .google.protobuf.Timestamp lastUpdatedAt = 14;</code>
        * @return The lastUpdatedAt.
        */
       public com.google.protobuf.Timestamp getLastUpdatedAt() {
@@ -4119,7 +4518,7 @@ java.lang.String defaultValue) {
         }
       }
       /**
-       * <code>optional .google.protobuf.Timestamp lastUpdatedAt = 10;</code>
+       * <code>optional .google.protobuf.Timestamp lastUpdatedAt = 14;</code>
        */
       public Builder setLastUpdatedAt(com.google.protobuf.Timestamp value) {
         if (lastUpdatedAtBuilder_ == null) {
@@ -4130,12 +4529,12 @@ java.lang.String defaultValue) {
         } else {
           lastUpdatedAtBuilder_.setMessage(value);
         }
-        bitField0_ |= 0x00000200;
+        bitField0_ |= 0x00002000;
         onChanged();
         return this;
       }
       /**
-       * <code>optional .google.protobuf.Timestamp lastUpdatedAt = 10;</code>
+       * <code>optional .google.protobuf.Timestamp lastUpdatedAt = 14;</code>
        */
       public Builder setLastUpdatedAt(
           com.google.protobuf.Timestamp.Builder builderForValue) {
@@ -4144,16 +4543,16 @@ java.lang.String defaultValue) {
         } else {
           lastUpdatedAtBuilder_.setMessage(builderForValue.build());
         }
-        bitField0_ |= 0x00000200;
+        bitField0_ |= 0x00002000;
         onChanged();
         return this;
       }
       /**
-       * <code>optional .google.protobuf.Timestamp lastUpdatedAt = 10;</code>
+       * <code>optional .google.protobuf.Timestamp lastUpdatedAt = 14;</code>
        */
       public Builder mergeLastUpdatedAt(com.google.protobuf.Timestamp value) {
         if (lastUpdatedAtBuilder_ == null) {
-          if (((bitField0_ & 0x00000200) != 0) &&
+          if (((bitField0_ & 0x00002000) != 0) &&
             lastUpdatedAt_ != null &&
             lastUpdatedAt_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
             getLastUpdatedAtBuilder().mergeFrom(value);
@@ -4164,16 +4563,16 @@ java.lang.String defaultValue) {
           lastUpdatedAtBuilder_.mergeFrom(value);
         }
         if (lastUpdatedAt_ != null) {
-          bitField0_ |= 0x00000200;
+          bitField0_ |= 0x00002000;
           onChanged();
         }
         return this;
       }
       /**
-       * <code>optional .google.protobuf.Timestamp lastUpdatedAt = 10;</code>
+       * <code>optional .google.protobuf.Timestamp lastUpdatedAt = 14;</code>
        */
       public Builder clearLastUpdatedAt() {
-        bitField0_ = (bitField0_ & ~0x00000200);
+        bitField0_ = (bitField0_ & ~0x00002000);
         lastUpdatedAt_ = null;
         if (lastUpdatedAtBuilder_ != null) {
           lastUpdatedAtBuilder_.dispose();
@@ -4183,15 +4582,15 @@ java.lang.String defaultValue) {
         return this;
       }
       /**
-       * <code>optional .google.protobuf.Timestamp lastUpdatedAt = 10;</code>
+       * <code>optional .google.protobuf.Timestamp lastUpdatedAt = 14;</code>
        */
       public com.google.protobuf.Timestamp.Builder getLastUpdatedAtBuilder() {
-        bitField0_ |= 0x00000200;
+        bitField0_ |= 0x00002000;
         onChanged();
         return getLastUpdatedAtFieldBuilder().getBuilder();
       }
       /**
-       * <code>optional .google.protobuf.Timestamp lastUpdatedAt = 10;</code>
+       * <code>optional .google.protobuf.Timestamp lastUpdatedAt = 14;</code>
        */
       public com.google.protobuf.TimestampOrBuilder getLastUpdatedAtOrBuilder() {
         if (lastUpdatedAtBuilder_ != null) {
@@ -4202,7 +4601,7 @@ java.lang.String defaultValue) {
         }
       }
       /**
-       * <code>optional .google.protobuf.Timestamp lastUpdatedAt = 10;</code>
+       * <code>optional .google.protobuf.Timestamp lastUpdatedAt = 14;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
@@ -4216,70 +4615,6 @@ java.lang.String defaultValue) {
           lastUpdatedAt_ = null;
         }
         return lastUpdatedAtBuilder_;
-      }
-
-      private double overdraftBalance_ ;
-      /**
-       * <code>double overdraftBalance = 11;</code>
-       * @return The overdraftBalance.
-       */
-      @java.lang.Override
-      public double getOverdraftBalance() {
-        return overdraftBalance_;
-      }
-      /**
-       * <code>double overdraftBalance = 11;</code>
-       * @param value The overdraftBalance to set.
-       * @return This builder for chaining.
-       */
-      public Builder setOverdraftBalance(double value) {
-
-        overdraftBalance_ = value;
-        bitField0_ |= 0x00000400;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>double overdraftBalance = 11;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearOverdraftBalance() {
-        bitField0_ = (bitField0_ & ~0x00000400);
-        overdraftBalance_ = 0D;
-        onChanged();
-        return this;
-      }
-
-      private double interestRate_ ;
-      /**
-       * <code>double interestRate = 12;</code>
-       * @return The interestRate.
-       */
-      @java.lang.Override
-      public double getInterestRate() {
-        return interestRate_;
-      }
-      /**
-       * <code>double interestRate = 12;</code>
-       * @param value The interestRate to set.
-       * @return This builder for chaining.
-       */
-      public Builder setInterestRate(double value) {
-
-        interestRate_ = value;
-        bitField0_ |= 0x00000800;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>double interestRate = 12;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearInterestRate() {
-        bitField0_ = (bitField0_ & ~0x00000800);
-        interestRate_ = 0D;
-        onChanged();
-        return this;
       }
 
       // @@protoc_insertion_point(builder_scope:BankAccount)
@@ -5112,17 +5447,19 @@ java.lang.String defaultValue) {
       "\002 \001(\0162\t.BankType\022\014\n\004IFSC\030\003 \001(\t\022\025\n\rcontac" +
       "tNumber\030\004 \001(\t\022\020\n\010isActive\030\005 \001(\010\022\023\n\013count" +
       "ryCode\030\006 \001(\t\" \n\010BankList\022\024\n\005banks\030\001 \003(\0132" +
-      "\005.Bank\"\311\003\n\013BankAccount\022\023\n\004bank\030\001 \001(\0132\005.B" +
-      "ank\022\016\n\006number\030\002 \001(\t\022\014\n\004name\030\003 \001(\t\022\025\n\rtra" +
-      "nsitNumber\030\004 \001(\003\022\031\n\021institutionNumber\030\005 " +
-      "\001(\003\022\017\n\007balance\030\006 \001(\001\022,\n\010metaData\030\007 \003(\0132\032" +
-      ".BankAccount.MetaDataEntry\022)\n\017bankAccoun" +
-      "tType\030\010 \001(\0162\020.BankAccountType\0222\n\tcreated" +
-      "At\030\t \001(\0132\032.google.protobuf.TimestampH\000\210\001" +
-      "\001\0226\n\rlastUpdatedAt\030\n \001(\0132\032.google.protob" +
-      "uf.TimestampH\001\210\001\001\022\030\n\020overdraftBalance\030\013 " +
-      "\001(\001\022\024\n\014interestRate\030\014 \001(\001\032/\n\rMetaDataEnt" +
-      "ry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001B\014\n\n_c" +
+      "\005.Bank\"\231\004\n\013BankAccount\022\023\n\004bank\030\001 \001(\0132\005.B" +
+      "ank\022\n\n\002id\030\002 \001(\t\022\016\n\006number\030\003 \001(\t\022\014\n\004name\030" +
+      "\004 \001(\t\022\032\n\rtransitNumber\030\005 \001(\003H\000\210\001\001\022\036\n\021ins" +
+      "titutionNumber\030\006 \001(\003H\001\210\001\001\022\017\n\007balance\030\007 \001" +
+      "(\001\022,\n\010metaData\030\010 \003(\0132\032.BankAccount.MetaD" +
+      "ataEntry\022)\n\017bankAccountType\030\t \001(\0162\020.Bank" +
+      "AccountType\022\030\n\020overdraftBalance\030\n \001(\001\022\024\n" +
+      "\014interestRate\030\013 \001(\001\022\020\n\010isActive\030\014 \001(\010\0222\n" +
+      "\tcreatedAt\030\r \001(\0132\032.google.protobuf.Times" +
+      "tampH\002\210\001\001\0226\n\rlastUpdatedAt\030\016 \001(\0132\032.googl" +
+      "e.protobuf.TimestampH\003\210\001\001\032/\n\rMetaDataEnt" +
+      "ry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001B\020\n\016_t" +
+      "ransitNumberB\024\n\022_institutionNumberB\014\n\n_c" +
       "reatedAtB\020\n\016_lastUpdatedAt\".\n\014BankAccoun" +
       "ts\022\036\n\010accounts\030\001 \003(\0132\014.BankAccount*!\n\010Ba" +
       "nkType\022\010\n\004GOVT\020\000\022\013\n\007PRIVATE\020\001*_\n\017BankAcc" +
@@ -5153,7 +5490,7 @@ java.lang.String defaultValue) {
     internal_static_BankAccount_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_BankAccount_descriptor,
-        new java.lang.String[] { "Bank", "Number", "Name", "TransitNumber", "InstitutionNumber", "Balance", "MetaData", "BankAccountType", "CreatedAt", "LastUpdatedAt", "OverdraftBalance", "InterestRate", });
+        new java.lang.String[] { "Bank", "Id", "Number", "Name", "TransitNumber", "InstitutionNumber", "Balance", "MetaData", "BankAccountType", "OverdraftBalance", "InterestRate", "IsActive", "CreatedAt", "LastUpdatedAt", });
     internal_static_BankAccount_MetaDataEntry_descriptor =
       internal_static_BankAccount_descriptor.getNestedTypes().get(0);
     internal_static_BankAccount_MetaDataEntry_fieldAccessorTable = new

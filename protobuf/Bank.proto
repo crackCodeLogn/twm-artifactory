@@ -24,18 +24,20 @@ message BankList {
 
 message BankAccount {
   Bank bank = 1;
-  string number = 2;
-  string name = 3;
-  int64 transitNumber = 4; // branch, CA specific
-  int64 institutionNumber = 5; // bank, CA specific
-  double balance = 6;
-  map<string, string> metaData = 7;
-  BankAccountType bankAccountType = 8;
+  string id = 2; // uuid
+  string number = 3;
+  string name = 4;
+  optional int64 transitNumber = 5; // branch, CA specific
+  optional int64 institutionNumber = 6; // bank, CA specific
+  double balance = 7;
+  map<string, string> metaData = 8;
+  BankAccountType bankAccountType = 9;
+  double overdraftBalance = 10;
+  double interestRate = 11;
+  bool isActive = 12;
 
-  optional google.protobuf.Timestamp createdAt = 9;
-  optional google.protobuf.Timestamp lastUpdatedAt = 10;
-  double overdraftBalance = 11;
-  double interestRate = 12;
+  optional google.protobuf.Timestamp createdAt = 13;
+  optional google.protobuf.Timestamp lastUpdatedAt = 14;
 }
 
 enum BankAccountType {
