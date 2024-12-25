@@ -27,8 +27,8 @@ message BankAccount {
   string id = 2; // uuid
   string number = 3;
   string name = 4;
-  optional int64 transitNumber = 5; // branch, CA specific
-  optional int64 institutionNumber = 6; // bank, CA specific
+  string transitNumber = 5; // branch, CA specific, but fields are optional by default
+  string institutionNumber = 6; // bank, CA specific
   double balance = 7;
   map<string, string> metaData = 8;
   BankAccountType bankAccountType = 9;
@@ -36,8 +36,8 @@ message BankAccount {
   double interestRate = 11;
   bool isActive = 12;
 
-  optional google.protobuf.Timestamp createdAt = 13;
-  optional google.protobuf.Timestamp lastUpdatedAt = 14;
+  google.protobuf.Timestamp createdAt = 13;
+  google.protobuf.Timestamp lastUpdatedAt = 14;
 }
 
 enum BankAccountType {
@@ -49,6 +49,8 @@ enum BankAccountType {
   CASH_HISA = 5;
   STD = 6;      // standard
   CC = 7;       // credit card
+  FHSA = 8;     // first house saving account
+  RRSP = 9;     // registered retirement savings plan
 }
 
 message BankAccounts {

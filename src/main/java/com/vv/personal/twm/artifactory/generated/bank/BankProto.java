@@ -207,6 +207,22 @@ public final class BankProto {
      * <code>CC = 7;</code>
      */
     CC(7),
+    /**
+     * <pre>
+     * first house saving account
+     * </pre>
+     *
+     * <code>FHSA = 8;</code>
+     */
+    FHSA(8),
+    /**
+     * <pre>
+     * registered retirement savings plan
+     * </pre>
+     *
+     * <code>RRSP = 9;</code>
+     */
+    RRSP(9),
     UNRECOGNIZED(-1),
     ;
 
@@ -279,6 +295,22 @@ public final class BankProto {
      * <code>CC = 7;</code>
      */
     public static final int CC_VALUE = 7;
+    /**
+     * <pre>
+     * first house saving account
+     * </pre>
+     *
+     * <code>FHSA = 8;</code>
+     */
+    public static final int FHSA_VALUE = 8;
+    /**
+     * <pre>
+     * registered retirement savings plan
+     * </pre>
+     *
+     * <code>RRSP = 9;</code>
+     */
+    public static final int RRSP_VALUE = 9;
 
 
     public final int getNumber() {
@@ -313,6 +345,8 @@ public final class BankProto {
         case 5: return CASH_HISA;
         case 6: return STD;
         case 7: return CC;
+        case 8: return FHSA;
+        case 9: return RRSP;
         default: return null;
       }
     }
@@ -2306,41 +2340,43 @@ public final class BankProto {
 
     /**
      * <pre>
-     * branch, CA specific
+     * branch, CA specific, but fields are optional by default
      * </pre>
      *
-     * <code>optional int64 transitNumber = 5;</code>
-     * @return Whether the transitNumber field is set.
-     */
-    boolean hasTransitNumber();
-    /**
-     * <pre>
-     * branch, CA specific
-     * </pre>
-     *
-     * <code>optional int64 transitNumber = 5;</code>
+     * <code>string transitNumber = 5;</code>
      * @return The transitNumber.
      */
-    long getTransitNumber();
+    java.lang.String getTransitNumber();
+    /**
+     * <pre>
+     * branch, CA specific, but fields are optional by default
+     * </pre>
+     *
+     * <code>string transitNumber = 5;</code>
+     * @return The bytes for transitNumber.
+     */
+    com.google.protobuf.ByteString
+        getTransitNumberBytes();
 
     /**
      * <pre>
      * bank, CA specific
      * </pre>
      *
-     * <code>optional int64 institutionNumber = 6;</code>
-     * @return Whether the institutionNumber field is set.
+     * <code>string institutionNumber = 6;</code>
+     * @return The institutionNumber.
      */
-    boolean hasInstitutionNumber();
+    java.lang.String getInstitutionNumber();
     /**
      * <pre>
      * bank, CA specific
      * </pre>
      *
-     * <code>optional int64 institutionNumber = 6;</code>
-     * @return The institutionNumber.
+     * <code>string institutionNumber = 6;</code>
+     * @return The bytes for institutionNumber.
      */
-    long getInstitutionNumber();
+    com.google.protobuf.ByteString
+        getInstitutionNumberBytes();
 
     /**
      * <code>double balance = 7;</code>
@@ -2412,32 +2448,32 @@ java.lang.String defaultValue);
     boolean getIsActive();
 
     /**
-     * <code>optional .google.protobuf.Timestamp createdAt = 13;</code>
+     * <code>.google.protobuf.Timestamp createdAt = 13;</code>
      * @return Whether the createdAt field is set.
      */
     boolean hasCreatedAt();
     /**
-     * <code>optional .google.protobuf.Timestamp createdAt = 13;</code>
+     * <code>.google.protobuf.Timestamp createdAt = 13;</code>
      * @return The createdAt.
      */
     com.google.protobuf.Timestamp getCreatedAt();
     /**
-     * <code>optional .google.protobuf.Timestamp createdAt = 13;</code>
+     * <code>.google.protobuf.Timestamp createdAt = 13;</code>
      */
     com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder();
 
     /**
-     * <code>optional .google.protobuf.Timestamp lastUpdatedAt = 14;</code>
+     * <code>.google.protobuf.Timestamp lastUpdatedAt = 14;</code>
      * @return Whether the lastUpdatedAt field is set.
      */
     boolean hasLastUpdatedAt();
     /**
-     * <code>optional .google.protobuf.Timestamp lastUpdatedAt = 14;</code>
+     * <code>.google.protobuf.Timestamp lastUpdatedAt = 14;</code>
      * @return The lastUpdatedAt.
      */
     com.google.protobuf.Timestamp getLastUpdatedAt();
     /**
-     * <code>optional .google.protobuf.Timestamp lastUpdatedAt = 14;</code>
+     * <code>.google.protobuf.Timestamp lastUpdatedAt = 14;</code>
      */
     com.google.protobuf.TimestampOrBuilder getLastUpdatedAtOrBuilder();
   }
@@ -2466,6 +2502,8 @@ java.lang.String defaultValue);
       id_ = "";
       number_ = "";
       name_ = "";
+      transitNumber_ = "";
+      institutionNumber_ = "";
       bankAccountType_ = 0;
     }
 
@@ -2647,57 +2685,97 @@ java.lang.String defaultValue);
     }
 
     public static final int TRANSITNUMBER_FIELD_NUMBER = 5;
-    private long transitNumber_ = 0L;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object transitNumber_ = "";
     /**
      * <pre>
-     * branch, CA specific
+     * branch, CA specific, but fields are optional by default
      * </pre>
      *
-     * <code>optional int64 transitNumber = 5;</code>
-     * @return Whether the transitNumber field is set.
-     */
-    @java.lang.Override
-    public boolean hasTransitNumber() {
-      return ((bitField0_ & 0x00000002) != 0);
-    }
-    /**
-     * <pre>
-     * branch, CA specific
-     * </pre>
-     *
-     * <code>optional int64 transitNumber = 5;</code>
+     * <code>string transitNumber = 5;</code>
      * @return The transitNumber.
      */
     @java.lang.Override
-    public long getTransitNumber() {
-      return transitNumber_;
+    public java.lang.String getTransitNumber() {
+      java.lang.Object ref = transitNumber_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        transitNumber_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * branch, CA specific, but fields are optional by default
+     * </pre>
+     *
+     * <code>string transitNumber = 5;</code>
+     * @return The bytes for transitNumber.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTransitNumberBytes() {
+      java.lang.Object ref = transitNumber_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        transitNumber_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
     }
 
     public static final int INSTITUTIONNUMBER_FIELD_NUMBER = 6;
-    private long institutionNumber_ = 0L;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object institutionNumber_ = "";
     /**
      * <pre>
      * bank, CA specific
      * </pre>
      *
-     * <code>optional int64 institutionNumber = 6;</code>
-     * @return Whether the institutionNumber field is set.
+     * <code>string institutionNumber = 6;</code>
+     * @return The institutionNumber.
      */
     @java.lang.Override
-    public boolean hasInstitutionNumber() {
-      return ((bitField0_ & 0x00000004) != 0);
+    public java.lang.String getInstitutionNumber() {
+      java.lang.Object ref = institutionNumber_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        institutionNumber_ = s;
+        return s;
+      }
     }
     /**
      * <pre>
      * bank, CA specific
      * </pre>
      *
-     * <code>optional int64 institutionNumber = 6;</code>
-     * @return The institutionNumber.
+     * <code>string institutionNumber = 6;</code>
+     * @return The bytes for institutionNumber.
      */
     @java.lang.Override
-    public long getInstitutionNumber() {
-      return institutionNumber_;
+    public com.google.protobuf.ByteString
+        getInstitutionNumberBytes() {
+      java.lang.Object ref = institutionNumber_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        institutionNumber_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
     }
 
     public static final int BALANCE_FIELD_NUMBER = 7;
@@ -2844,15 +2922,15 @@ java.lang.String defaultValue) {
     public static final int CREATEDAT_FIELD_NUMBER = 13;
     private com.google.protobuf.Timestamp createdAt_;
     /**
-     * <code>optional .google.protobuf.Timestamp createdAt = 13;</code>
+     * <code>.google.protobuf.Timestamp createdAt = 13;</code>
      * @return Whether the createdAt field is set.
      */
     @java.lang.Override
     public boolean hasCreatedAt() {
-      return ((bitField0_ & 0x00000008) != 0);
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
-     * <code>optional .google.protobuf.Timestamp createdAt = 13;</code>
+     * <code>.google.protobuf.Timestamp createdAt = 13;</code>
      * @return The createdAt.
      */
     @java.lang.Override
@@ -2860,7 +2938,7 @@ java.lang.String defaultValue) {
       return createdAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
     }
     /**
-     * <code>optional .google.protobuf.Timestamp createdAt = 13;</code>
+     * <code>.google.protobuf.Timestamp createdAt = 13;</code>
      */
     @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder() {
@@ -2870,15 +2948,15 @@ java.lang.String defaultValue) {
     public static final int LASTUPDATEDAT_FIELD_NUMBER = 14;
     private com.google.protobuf.Timestamp lastUpdatedAt_;
     /**
-     * <code>optional .google.protobuf.Timestamp lastUpdatedAt = 14;</code>
+     * <code>.google.protobuf.Timestamp lastUpdatedAt = 14;</code>
      * @return Whether the lastUpdatedAt field is set.
      */
     @java.lang.Override
     public boolean hasLastUpdatedAt() {
-      return ((bitField0_ & 0x00000010) != 0);
+      return ((bitField0_ & 0x00000004) != 0);
     }
     /**
-     * <code>optional .google.protobuf.Timestamp lastUpdatedAt = 14;</code>
+     * <code>.google.protobuf.Timestamp lastUpdatedAt = 14;</code>
      * @return The lastUpdatedAt.
      */
     @java.lang.Override
@@ -2886,7 +2964,7 @@ java.lang.String defaultValue) {
       return lastUpdatedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : lastUpdatedAt_;
     }
     /**
-     * <code>optional .google.protobuf.Timestamp lastUpdatedAt = 14;</code>
+     * <code>.google.protobuf.Timestamp lastUpdatedAt = 14;</code>
      */
     @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getLastUpdatedAtOrBuilder() {
@@ -2919,11 +2997,11 @@ java.lang.String defaultValue) {
       if (!com.google.protobuf.GeneratedMessage.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessage.writeString(output, 4, name_);
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
-        output.writeInt64(5, transitNumber_);
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(transitNumber_)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 5, transitNumber_);
       }
-      if (((bitField0_ & 0x00000004) != 0)) {
-        output.writeInt64(6, institutionNumber_);
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(institutionNumber_)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 6, institutionNumber_);
       }
       if (java.lang.Double.doubleToRawLongBits(balance_) != 0) {
         output.writeDouble(7, balance_);
@@ -2946,10 +3024,10 @@ java.lang.String defaultValue) {
       if (isActive_ != false) {
         output.writeBool(12, isActive_);
       }
-      if (((bitField0_ & 0x00000008) != 0)) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(13, getCreatedAt());
       }
-      if (((bitField0_ & 0x00000010) != 0)) {
+      if (((bitField0_ & 0x00000004) != 0)) {
         output.writeMessage(14, getLastUpdatedAt());
       }
       getUnknownFields().writeTo(output);
@@ -2974,13 +3052,11 @@ java.lang.String defaultValue) {
       if (!com.google.protobuf.GeneratedMessage.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessage.computeStringSize(4, name_);
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt64Size(5, transitNumber_);
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(transitNumber_)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(5, transitNumber_);
       }
-      if (((bitField0_ & 0x00000004) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt64Size(6, institutionNumber_);
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(institutionNumber_)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(6, institutionNumber_);
       }
       if (java.lang.Double.doubleToRawLongBits(balance_) != 0) {
         size += com.google.protobuf.CodedOutputStream
@@ -3012,11 +3088,11 @@ java.lang.String defaultValue) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(12, isActive_);
       }
-      if (((bitField0_ & 0x00000008) != 0)) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(13, getCreatedAt());
       }
-      if (((bitField0_ & 0x00000010) != 0)) {
+      if (((bitField0_ & 0x00000004) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(14, getLastUpdatedAt());
       }
@@ -3046,16 +3122,10 @@ java.lang.String defaultValue) {
           .equals(other.getNumber())) return false;
       if (!getName()
           .equals(other.getName())) return false;
-      if (hasTransitNumber() != other.hasTransitNumber()) return false;
-      if (hasTransitNumber()) {
-        if (getTransitNumber()
-            != other.getTransitNumber()) return false;
-      }
-      if (hasInstitutionNumber() != other.hasInstitutionNumber()) return false;
-      if (hasInstitutionNumber()) {
-        if (getInstitutionNumber()
-            != other.getInstitutionNumber()) return false;
-      }
+      if (!getTransitNumber()
+          .equals(other.getTransitNumber())) return false;
+      if (!getInstitutionNumber()
+          .equals(other.getInstitutionNumber())) return false;
       if (java.lang.Double.doubleToLongBits(getBalance())
           != java.lang.Double.doubleToLongBits(
               other.getBalance())) return false;
@@ -3101,16 +3171,10 @@ java.lang.String defaultValue) {
       hash = (53 * hash) + getNumber().hashCode();
       hash = (37 * hash) + NAME_FIELD_NUMBER;
       hash = (53 * hash) + getName().hashCode();
-      if (hasTransitNumber()) {
-        hash = (37 * hash) + TRANSITNUMBER_FIELD_NUMBER;
-        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-            getTransitNumber());
-      }
-      if (hasInstitutionNumber()) {
-        hash = (37 * hash) + INSTITUTIONNUMBER_FIELD_NUMBER;
-        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-            getInstitutionNumber());
-      }
+      hash = (37 * hash) + TRANSITNUMBER_FIELD_NUMBER;
+      hash = (53 * hash) + getTransitNumber().hashCode();
+      hash = (37 * hash) + INSTITUTIONNUMBER_FIELD_NUMBER;
+      hash = (53 * hash) + getInstitutionNumber().hashCode();
       hash = (37 * hash) + BALANCE_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           java.lang.Double.doubleToLongBits(getBalance()));
@@ -3306,8 +3370,8 @@ java.lang.String defaultValue) {
         id_ = "";
         number_ = "";
         name_ = "";
-        transitNumber_ = 0L;
-        institutionNumber_ = 0L;
+        transitNumber_ = "";
+        institutionNumber_ = "";
         balance_ = 0D;
         internalGetMutableMetaData().clear();
         bankAccountType_ = 0;
@@ -3375,11 +3439,9 @@ java.lang.String defaultValue) {
         }
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.transitNumber_ = transitNumber_;
-          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000020) != 0)) {
           result.institutionNumber_ = institutionNumber_;
-          to_bitField0_ |= 0x00000004;
         }
         if (((from_bitField0_ & 0x00000040) != 0)) {
           result.balance_ = balance_;
@@ -3404,13 +3466,13 @@ java.lang.String defaultValue) {
           result.createdAt_ = createdAtBuilder_ == null
               ? createdAt_
               : createdAtBuilder_.build();
-          to_bitField0_ |= 0x00000008;
+          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00002000) != 0)) {
           result.lastUpdatedAt_ = lastUpdatedAtBuilder_ == null
               ? lastUpdatedAt_
               : lastUpdatedAtBuilder_.build();
-          to_bitField0_ |= 0x00000010;
+          to_bitField0_ |= 0x00000004;
         }
         result.bitField0_ |= to_bitField0_;
       }
@@ -3445,11 +3507,15 @@ java.lang.String defaultValue) {
           bitField0_ |= 0x00000008;
           onChanged();
         }
-        if (other.hasTransitNumber()) {
-          setTransitNumber(other.getTransitNumber());
+        if (!other.getTransitNumber().isEmpty()) {
+          transitNumber_ = other.transitNumber_;
+          bitField0_ |= 0x00000010;
+          onChanged();
         }
-        if (other.hasInstitutionNumber()) {
-          setInstitutionNumber(other.getInstitutionNumber());
+        if (!other.getInstitutionNumber().isEmpty()) {
+          institutionNumber_ = other.institutionNumber_;
+          bitField0_ |= 0x00000020;
+          onChanged();
         }
         if (other.getBalance() != 0D) {
           setBalance(other.getBalance());
@@ -3523,16 +3589,16 @@ java.lang.String defaultValue) {
                 bitField0_ |= 0x00000008;
                 break;
               } // case 34
-              case 40: {
-                transitNumber_ = input.readInt64();
+              case 42: {
+                transitNumber_ = input.readStringRequireUtf8();
                 bitField0_ |= 0x00000010;
                 break;
-              } // case 40
-              case 48: {
-                institutionNumber_ = input.readInt64();
+              } // case 42
+              case 50: {
+                institutionNumber_ = input.readStringRequireUtf8();
                 bitField0_ |= 0x00000020;
                 break;
-              } // case 48
+              } // case 50
               case 57: {
                 balance_ = input.readDouble();
                 bitField0_ |= 0x00000040;
@@ -3955,42 +4021,60 @@ java.lang.String defaultValue) {
         return this;
       }
 
-      private long transitNumber_ ;
+      private java.lang.Object transitNumber_ = "";
       /**
        * <pre>
-       * branch, CA specific
+       * branch, CA specific, but fields are optional by default
        * </pre>
        *
-       * <code>optional int64 transitNumber = 5;</code>
-       * @return Whether the transitNumber field is set.
-       */
-      @java.lang.Override
-      public boolean hasTransitNumber() {
-        return ((bitField0_ & 0x00000010) != 0);
-      }
-      /**
-       * <pre>
-       * branch, CA specific
-       * </pre>
-       *
-       * <code>optional int64 transitNumber = 5;</code>
+       * <code>string transitNumber = 5;</code>
        * @return The transitNumber.
        */
-      @java.lang.Override
-      public long getTransitNumber() {
-        return transitNumber_;
+      public java.lang.String getTransitNumber() {
+        java.lang.Object ref = transitNumber_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          transitNumber_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
       }
       /**
        * <pre>
-       * branch, CA specific
+       * branch, CA specific, but fields are optional by default
        * </pre>
        *
-       * <code>optional int64 transitNumber = 5;</code>
+       * <code>string transitNumber = 5;</code>
+       * @return The bytes for transitNumber.
+       */
+      public com.google.protobuf.ByteString
+          getTransitNumberBytes() {
+        java.lang.Object ref = transitNumber_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          transitNumber_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * branch, CA specific, but fields are optional by default
+       * </pre>
+       *
+       * <code>string transitNumber = 5;</code>
        * @param value The transitNumber to set.
        * @return This builder for chaining.
        */
-      public Builder setTransitNumber(long value) {
-
+      public Builder setTransitNumber(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
         transitNumber_ = value;
         bitField0_ |= 0x00000010;
         onChanged();
@@ -3998,55 +4082,91 @@ java.lang.String defaultValue) {
       }
       /**
        * <pre>
-       * branch, CA specific
+       * branch, CA specific, but fields are optional by default
        * </pre>
        *
-       * <code>optional int64 transitNumber = 5;</code>
+       * <code>string transitNumber = 5;</code>
        * @return This builder for chaining.
        */
       public Builder clearTransitNumber() {
+        transitNumber_ = getDefaultInstance().getTransitNumber();
         bitField0_ = (bitField0_ & ~0x00000010);
-        transitNumber_ = 0L;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * branch, CA specific, but fields are optional by default
+       * </pre>
+       *
+       * <code>string transitNumber = 5;</code>
+       * @param value The bytes for transitNumber to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTransitNumberBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        transitNumber_ = value;
+        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
 
-      private long institutionNumber_ ;
+      private java.lang.Object institutionNumber_ = "";
       /**
        * <pre>
        * bank, CA specific
        * </pre>
        *
-       * <code>optional int64 institutionNumber = 6;</code>
-       * @return Whether the institutionNumber field is set.
-       */
-      @java.lang.Override
-      public boolean hasInstitutionNumber() {
-        return ((bitField0_ & 0x00000020) != 0);
-      }
-      /**
-       * <pre>
-       * bank, CA specific
-       * </pre>
-       *
-       * <code>optional int64 institutionNumber = 6;</code>
+       * <code>string institutionNumber = 6;</code>
        * @return The institutionNumber.
        */
-      @java.lang.Override
-      public long getInstitutionNumber() {
-        return institutionNumber_;
+      public java.lang.String getInstitutionNumber() {
+        java.lang.Object ref = institutionNumber_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          institutionNumber_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
       }
       /**
        * <pre>
        * bank, CA specific
        * </pre>
        *
-       * <code>optional int64 institutionNumber = 6;</code>
+       * <code>string institutionNumber = 6;</code>
+       * @return The bytes for institutionNumber.
+       */
+      public com.google.protobuf.ByteString
+          getInstitutionNumberBytes() {
+        java.lang.Object ref = institutionNumber_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          institutionNumber_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * bank, CA specific
+       * </pre>
+       *
+       * <code>string institutionNumber = 6;</code>
        * @param value The institutionNumber to set.
        * @return This builder for chaining.
        */
-      public Builder setInstitutionNumber(long value) {
-
+      public Builder setInstitutionNumber(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
         institutionNumber_ = value;
         bitField0_ |= 0x00000020;
         onChanged();
@@ -4057,12 +4177,30 @@ java.lang.String defaultValue) {
        * bank, CA specific
        * </pre>
        *
-       * <code>optional int64 institutionNumber = 6;</code>
+       * <code>string institutionNumber = 6;</code>
        * @return This builder for chaining.
        */
       public Builder clearInstitutionNumber() {
+        institutionNumber_ = getDefaultInstance().getInstitutionNumber();
         bitField0_ = (bitField0_ & ~0x00000020);
-        institutionNumber_ = 0L;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * bank, CA specific
+       * </pre>
+       *
+       * <code>string institutionNumber = 6;</code>
+       * @param value The bytes for institutionNumber to set.
+       * @return This builder for chaining.
+       */
+      public Builder setInstitutionNumberBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        institutionNumber_ = value;
+        bitField0_ |= 0x00000020;
         onChanged();
         return this;
       }
@@ -4379,14 +4517,14 @@ java.lang.String defaultValue) {
       private com.google.protobuf.SingleFieldBuilder<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> createdAtBuilder_;
       /**
-       * <code>optional .google.protobuf.Timestamp createdAt = 13;</code>
+       * <code>.google.protobuf.Timestamp createdAt = 13;</code>
        * @return Whether the createdAt field is set.
        */
       public boolean hasCreatedAt() {
         return ((bitField0_ & 0x00001000) != 0);
       }
       /**
-       * <code>optional .google.protobuf.Timestamp createdAt = 13;</code>
+       * <code>.google.protobuf.Timestamp createdAt = 13;</code>
        * @return The createdAt.
        */
       public com.google.protobuf.Timestamp getCreatedAt() {
@@ -4397,7 +4535,7 @@ java.lang.String defaultValue) {
         }
       }
       /**
-       * <code>optional .google.protobuf.Timestamp createdAt = 13;</code>
+       * <code>.google.protobuf.Timestamp createdAt = 13;</code>
        */
       public Builder setCreatedAt(com.google.protobuf.Timestamp value) {
         if (createdAtBuilder_ == null) {
@@ -4413,7 +4551,7 @@ java.lang.String defaultValue) {
         return this;
       }
       /**
-       * <code>optional .google.protobuf.Timestamp createdAt = 13;</code>
+       * <code>.google.protobuf.Timestamp createdAt = 13;</code>
        */
       public Builder setCreatedAt(
           com.google.protobuf.Timestamp.Builder builderForValue) {
@@ -4427,7 +4565,7 @@ java.lang.String defaultValue) {
         return this;
       }
       /**
-       * <code>optional .google.protobuf.Timestamp createdAt = 13;</code>
+       * <code>.google.protobuf.Timestamp createdAt = 13;</code>
        */
       public Builder mergeCreatedAt(com.google.protobuf.Timestamp value) {
         if (createdAtBuilder_ == null) {
@@ -4448,7 +4586,7 @@ java.lang.String defaultValue) {
         return this;
       }
       /**
-       * <code>optional .google.protobuf.Timestamp createdAt = 13;</code>
+       * <code>.google.protobuf.Timestamp createdAt = 13;</code>
        */
       public Builder clearCreatedAt() {
         bitField0_ = (bitField0_ & ~0x00001000);
@@ -4461,7 +4599,7 @@ java.lang.String defaultValue) {
         return this;
       }
       /**
-       * <code>optional .google.protobuf.Timestamp createdAt = 13;</code>
+       * <code>.google.protobuf.Timestamp createdAt = 13;</code>
        */
       public com.google.protobuf.Timestamp.Builder getCreatedAtBuilder() {
         bitField0_ |= 0x00001000;
@@ -4469,7 +4607,7 @@ java.lang.String defaultValue) {
         return getCreatedAtFieldBuilder().getBuilder();
       }
       /**
-       * <code>optional .google.protobuf.Timestamp createdAt = 13;</code>
+       * <code>.google.protobuf.Timestamp createdAt = 13;</code>
        */
       public com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder() {
         if (createdAtBuilder_ != null) {
@@ -4480,7 +4618,7 @@ java.lang.String defaultValue) {
         }
       }
       /**
-       * <code>optional .google.protobuf.Timestamp createdAt = 13;</code>
+       * <code>.google.protobuf.Timestamp createdAt = 13;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
@@ -4500,14 +4638,14 @@ java.lang.String defaultValue) {
       private com.google.protobuf.SingleFieldBuilder<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> lastUpdatedAtBuilder_;
       /**
-       * <code>optional .google.protobuf.Timestamp lastUpdatedAt = 14;</code>
+       * <code>.google.protobuf.Timestamp lastUpdatedAt = 14;</code>
        * @return Whether the lastUpdatedAt field is set.
        */
       public boolean hasLastUpdatedAt() {
         return ((bitField0_ & 0x00002000) != 0);
       }
       /**
-       * <code>optional .google.protobuf.Timestamp lastUpdatedAt = 14;</code>
+       * <code>.google.protobuf.Timestamp lastUpdatedAt = 14;</code>
        * @return The lastUpdatedAt.
        */
       public com.google.protobuf.Timestamp getLastUpdatedAt() {
@@ -4518,7 +4656,7 @@ java.lang.String defaultValue) {
         }
       }
       /**
-       * <code>optional .google.protobuf.Timestamp lastUpdatedAt = 14;</code>
+       * <code>.google.protobuf.Timestamp lastUpdatedAt = 14;</code>
        */
       public Builder setLastUpdatedAt(com.google.protobuf.Timestamp value) {
         if (lastUpdatedAtBuilder_ == null) {
@@ -4534,7 +4672,7 @@ java.lang.String defaultValue) {
         return this;
       }
       /**
-       * <code>optional .google.protobuf.Timestamp lastUpdatedAt = 14;</code>
+       * <code>.google.protobuf.Timestamp lastUpdatedAt = 14;</code>
        */
       public Builder setLastUpdatedAt(
           com.google.protobuf.Timestamp.Builder builderForValue) {
@@ -4548,7 +4686,7 @@ java.lang.String defaultValue) {
         return this;
       }
       /**
-       * <code>optional .google.protobuf.Timestamp lastUpdatedAt = 14;</code>
+       * <code>.google.protobuf.Timestamp lastUpdatedAt = 14;</code>
        */
       public Builder mergeLastUpdatedAt(com.google.protobuf.Timestamp value) {
         if (lastUpdatedAtBuilder_ == null) {
@@ -4569,7 +4707,7 @@ java.lang.String defaultValue) {
         return this;
       }
       /**
-       * <code>optional .google.protobuf.Timestamp lastUpdatedAt = 14;</code>
+       * <code>.google.protobuf.Timestamp lastUpdatedAt = 14;</code>
        */
       public Builder clearLastUpdatedAt() {
         bitField0_ = (bitField0_ & ~0x00002000);
@@ -4582,7 +4720,7 @@ java.lang.String defaultValue) {
         return this;
       }
       /**
-       * <code>optional .google.protobuf.Timestamp lastUpdatedAt = 14;</code>
+       * <code>.google.protobuf.Timestamp lastUpdatedAt = 14;</code>
        */
       public com.google.protobuf.Timestamp.Builder getLastUpdatedAtBuilder() {
         bitField0_ |= 0x00002000;
@@ -4590,7 +4728,7 @@ java.lang.String defaultValue) {
         return getLastUpdatedAtFieldBuilder().getBuilder();
       }
       /**
-       * <code>optional .google.protobuf.Timestamp lastUpdatedAt = 14;</code>
+       * <code>.google.protobuf.Timestamp lastUpdatedAt = 14;</code>
        */
       public com.google.protobuf.TimestampOrBuilder getLastUpdatedAtOrBuilder() {
         if (lastUpdatedAtBuilder_ != null) {
@@ -4601,7 +4739,7 @@ java.lang.String defaultValue) {
         }
       }
       /**
-       * <code>optional .google.protobuf.Timestamp lastUpdatedAt = 14;</code>
+       * <code>.google.protobuf.Timestamp lastUpdatedAt = 14;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
@@ -5447,26 +5585,25 @@ java.lang.String defaultValue) {
       "\002 \001(\0162\t.BankType\022\014\n\004IFSC\030\003 \001(\t\022\025\n\rcontac" +
       "tNumber\030\004 \001(\t\022\020\n\010isActive\030\005 \001(\010\022\023\n\013count" +
       "ryCode\030\006 \001(\t\" \n\010BankList\022\024\n\005banks\030\001 \003(\0132" +
-      "\005.Bank\"\231\004\n\013BankAccount\022\023\n\004bank\030\001 \001(\0132\005.B" +
+      "\005.Bank\"\275\003\n\013BankAccount\022\023\n\004bank\030\001 \001(\0132\005.B" +
       "ank\022\n\n\002id\030\002 \001(\t\022\016\n\006number\030\003 \001(\t\022\014\n\004name\030" +
-      "\004 \001(\t\022\032\n\rtransitNumber\030\005 \001(\003H\000\210\001\001\022\036\n\021ins" +
-      "titutionNumber\030\006 \001(\003H\001\210\001\001\022\017\n\007balance\030\007 \001" +
-      "(\001\022,\n\010metaData\030\010 \003(\0132\032.BankAccount.MetaD" +
-      "ataEntry\022)\n\017bankAccountType\030\t \001(\0162\020.Bank" +
-      "AccountType\022\030\n\020overdraftBalance\030\n \001(\001\022\024\n" +
-      "\014interestRate\030\013 \001(\001\022\020\n\010isActive\030\014 \001(\010\0222\n" +
-      "\tcreatedAt\030\r \001(\0132\032.google.protobuf.Times" +
-      "tampH\002\210\001\001\0226\n\rlastUpdatedAt\030\016 \001(\0132\032.googl" +
-      "e.protobuf.TimestampH\003\210\001\001\032/\n\rMetaDataEnt" +
-      "ry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001B\020\n\016_t" +
-      "ransitNumberB\024\n\022_institutionNumberB\014\n\n_c" +
-      "reatedAtB\020\n\016_lastUpdatedAt\".\n\014BankAccoun" +
-      "ts\022\036\n\010accounts\030\001 \003(\0132\014.BankAccount*!\n\010Ba" +
-      "nkType\022\010\n\004GOVT\020\000\022\013\n\007PRIVATE\020\001*_\n\017BankAcc" +
-      "ountType\022\007\n\003CHQ\020\000\022\007\n\003SAV\020\001\022\010\n\004TFSA\020\002\022\006\n\002" +
-      "NR\020\003\022\010\n\004HISA\020\004\022\r\n\tCASH_HISA\020\005\022\007\n\003STD\020\006\022\006" +
-      "\n\002CC\020\007B;\n.com.vv.personal.twm.artifactor" +
-      "y.generated.bankB\tBankProtob\006proto3"
+      "\004 \001(\t\022\025\n\rtransitNumber\030\005 \001(\t\022\031\n\021institut" +
+      "ionNumber\030\006 \001(\t\022\017\n\007balance\030\007 \001(\001\022,\n\010meta" +
+      "Data\030\010 \003(\0132\032.BankAccount.MetaDataEntry\022)" +
+      "\n\017bankAccountType\030\t \001(\0162\020.BankAccountTyp" +
+      "e\022\030\n\020overdraftBalance\030\n \001(\001\022\024\n\014interestR" +
+      "ate\030\013 \001(\001\022\020\n\010isActive\030\014 \001(\010\022-\n\tcreatedAt" +
+      "\030\r \001(\0132\032.google.protobuf.Timestamp\0221\n\rla" +
+      "stUpdatedAt\030\016 \001(\0132\032.google.protobuf.Time" +
+      "stamp\032/\n\rMetaDataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005v" +
+      "alue\030\002 \001(\t:\0028\001\".\n\014BankAccounts\022\036\n\010accoun" +
+      "ts\030\001 \003(\0132\014.BankAccount*!\n\010BankType\022\010\n\004GO" +
+      "VT\020\000\022\013\n\007PRIVATE\020\001*s\n\017BankAccountType\022\007\n\003" +
+      "CHQ\020\000\022\007\n\003SAV\020\001\022\010\n\004TFSA\020\002\022\006\n\002NR\020\003\022\010\n\004HISA" +
+      "\020\004\022\r\n\tCASH_HISA\020\005\022\007\n\003STD\020\006\022\006\n\002CC\020\007\022\010\n\004FH" +
+      "SA\020\010\022\010\n\004RRSP\020\tB;\n.com.vv.personal.twm.ar" +
+      "tifactory.generated.bankB\tBankProtob\006pro" +
+      "to3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
