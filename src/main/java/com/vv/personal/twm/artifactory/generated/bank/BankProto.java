@@ -143,6 +143,132 @@ public final class BankProto {
   }
 
   /**
+   * Protobuf enum {@code CurrencyCode}
+   */
+  public enum CurrencyCode
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>CAD = 0;</code>
+     */
+    CAD(0),
+    /**
+     * <code>INR = 1;</code>
+     */
+    INR(1),
+    /**
+     * <code>USD = 2;</code>
+     */
+    USD(2),
+    UNRECOGNIZED(-1),
+    ;
+
+    static {
+      com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
+        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+        /* major= */ 4,
+        /* minor= */ 28,
+        /* patch= */ 3,
+        /* suffix= */ "",
+        CurrencyCode.class.getName());
+    }
+    /**
+     * <code>CAD = 0;</code>
+     */
+    public static final int CAD_VALUE = 0;
+    /**
+     * <code>INR = 1;</code>
+     */
+    public static final int INR_VALUE = 1;
+    /**
+     * <code>USD = 2;</code>
+     */
+    public static final int USD_VALUE = 2;
+
+
+    public final int getNumber() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalArgumentException(
+            "Can't get the number of an unknown enum value.");
+      }
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static CurrencyCode valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static CurrencyCode forNumber(int value) {
+      switch (value) {
+        case 0: return CAD;
+        case 1: return INR;
+        case 2: return USD;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<CurrencyCode>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        CurrencyCode> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<CurrencyCode>() {
+            public CurrencyCode findValueByNumber(int number) {
+              return CurrencyCode.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalStateException(
+            "Can't get the descriptor of an unrecognized enum value.");
+      }
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return com.vv.personal.twm.artifactory.generated.bank.BankProto.getDescriptor().getEnumTypes().get(1);
+    }
+
+    private static final CurrencyCode[] VALUES = values();
+
+    public static CurrencyCode valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      if (desc.getIndex() == -1) {
+        return UNRECOGNIZED;
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private CurrencyCode(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:CurrencyCode)
+  }
+
+  /**
    * Protobuf enum {@code BankAccountType}
    */
   public enum BankAccountType
@@ -377,7 +503,7 @@ public final class BankProto {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return com.vv.personal.twm.artifactory.generated.bank.BankProto.getDescriptor().getEnumTypes().get(1);
+      return com.vv.personal.twm.artifactory.generated.bank.BankProto.getDescriptor().getEnumTypes().get(2);
     }
 
     private static final BankAccountType[] VALUES = values();
@@ -2476,6 +2602,29 @@ java.lang.String defaultValue);
      * <code>.google.protobuf.Timestamp lastUpdatedAt = 14;</code>
      */
     com.google.protobuf.TimestampOrBuilder getLastUpdatedAtOrBuilder();
+
+    /**
+     * <code>.CurrencyCode ccy = 15;</code>
+     * @return The enum numeric value on the wire for ccy.
+     */
+    int getCcyValue();
+    /**
+     * <code>.CurrencyCode ccy = 15;</code>
+     * @return The ccy.
+     */
+    com.vv.personal.twm.artifactory.generated.bank.BankProto.CurrencyCode getCcy();
+
+    /**
+     * <code>string note = 16;</code>
+     * @return The note.
+     */
+    java.lang.String getNote();
+    /**
+     * <code>string note = 16;</code>
+     * @return The bytes for note.
+     */
+    com.google.protobuf.ByteString
+        getNoteBytes();
   }
   /**
    * Protobuf type {@code BankAccount}
@@ -2505,6 +2654,8 @@ java.lang.String defaultValue);
       transitNumber_ = "";
       institutionNumber_ = "";
       bankAccountType_ = 0;
+      ccy_ = 0;
+      note_ = "";
     }
 
     public static final com.google.protobuf.Descriptors.Descriptor
@@ -2971,6 +3122,63 @@ java.lang.String defaultValue) {
       return lastUpdatedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : lastUpdatedAt_;
     }
 
+    public static final int CCY_FIELD_NUMBER = 15;
+    private int ccy_ = 0;
+    /**
+     * <code>.CurrencyCode ccy = 15;</code>
+     * @return The enum numeric value on the wire for ccy.
+     */
+    @java.lang.Override public int getCcyValue() {
+      return ccy_;
+    }
+    /**
+     * <code>.CurrencyCode ccy = 15;</code>
+     * @return The ccy.
+     */
+    @java.lang.Override public com.vv.personal.twm.artifactory.generated.bank.BankProto.CurrencyCode getCcy() {
+      com.vv.personal.twm.artifactory.generated.bank.BankProto.CurrencyCode result = com.vv.personal.twm.artifactory.generated.bank.BankProto.CurrencyCode.forNumber(ccy_);
+      return result == null ? com.vv.personal.twm.artifactory.generated.bank.BankProto.CurrencyCode.UNRECOGNIZED : result;
+    }
+
+    public static final int NOTE_FIELD_NUMBER = 16;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object note_ = "";
+    /**
+     * <code>string note = 16;</code>
+     * @return The note.
+     */
+    @java.lang.Override
+    public java.lang.String getNote() {
+      java.lang.Object ref = note_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        note_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string note = 16;</code>
+     * @return The bytes for note.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNoteBytes() {
+      java.lang.Object ref = note_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        note_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -3029,6 +3237,12 @@ java.lang.String defaultValue) {
       }
       if (((bitField0_ & 0x00000004) != 0)) {
         output.writeMessage(14, getLastUpdatedAt());
+      }
+      if (ccy_ != com.vv.personal.twm.artifactory.generated.bank.BankProto.CurrencyCode.CAD.getNumber()) {
+        output.writeEnum(15, ccy_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(note_)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 16, note_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -3096,6 +3310,13 @@ java.lang.String defaultValue) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(14, getLastUpdatedAt());
       }
+      if (ccy_ != com.vv.personal.twm.artifactory.generated.bank.BankProto.CurrencyCode.CAD.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(15, ccy_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(note_)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(16, note_);
+      }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
@@ -3150,6 +3371,9 @@ java.lang.String defaultValue) {
         if (!getLastUpdatedAt()
             .equals(other.getLastUpdatedAt())) return false;
       }
+      if (ccy_ != other.ccy_) return false;
+      if (!getNote()
+          .equals(other.getNote())) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -3201,6 +3425,10 @@ java.lang.String defaultValue) {
         hash = (37 * hash) + LASTUPDATEDAT_FIELD_NUMBER;
         hash = (53 * hash) + getLastUpdatedAt().hashCode();
       }
+      hash = (37 * hash) + CCY_FIELD_NUMBER;
+      hash = (53 * hash) + ccy_;
+      hash = (37 * hash) + NOTE_FIELD_NUMBER;
+      hash = (53 * hash) + getNote().hashCode();
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -3388,6 +3616,8 @@ java.lang.String defaultValue) {
           lastUpdatedAtBuilder_.dispose();
           lastUpdatedAtBuilder_ = null;
         }
+        ccy_ = 0;
+        note_ = "";
         return this;
       }
 
@@ -3474,6 +3704,12 @@ java.lang.String defaultValue) {
               : lastUpdatedAtBuilder_.build();
           to_bitField0_ |= 0x00000004;
         }
+        if (((from_bitField0_ & 0x00004000) != 0)) {
+          result.ccy_ = ccy_;
+        }
+        if (((from_bitField0_ & 0x00008000) != 0)) {
+          result.note_ = note_;
+        }
         result.bitField0_ |= to_bitField0_;
       }
 
@@ -3540,6 +3776,14 @@ java.lang.String defaultValue) {
         }
         if (other.hasLastUpdatedAt()) {
           mergeLastUpdatedAt(other.getLastUpdatedAt());
+        }
+        if (other.ccy_ != 0) {
+          setCcyValue(other.getCcyValue());
+        }
+        if (!other.getNote().isEmpty()) {
+          note_ = other.note_;
+          bitField0_ |= 0x00008000;
+          onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
@@ -3647,6 +3891,16 @@ java.lang.String defaultValue) {
                 bitField0_ |= 0x00002000;
                 break;
               } // case 114
+              case 120: {
+                ccy_ = input.readEnum();
+                bitField0_ |= 0x00004000;
+                break;
+              } // case 120
+              case 130: {
+                note_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00008000;
+                break;
+              } // case 130
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -4755,6 +5009,131 @@ java.lang.String defaultValue) {
         return lastUpdatedAtBuilder_;
       }
 
+      private int ccy_ = 0;
+      /**
+       * <code>.CurrencyCode ccy = 15;</code>
+       * @return The enum numeric value on the wire for ccy.
+       */
+      @java.lang.Override public int getCcyValue() {
+        return ccy_;
+      }
+      /**
+       * <code>.CurrencyCode ccy = 15;</code>
+       * @param value The enum numeric value on the wire for ccy to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCcyValue(int value) {
+        ccy_ = value;
+        bitField0_ |= 0x00004000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.CurrencyCode ccy = 15;</code>
+       * @return The ccy.
+       */
+      @java.lang.Override
+      public com.vv.personal.twm.artifactory.generated.bank.BankProto.CurrencyCode getCcy() {
+        com.vv.personal.twm.artifactory.generated.bank.BankProto.CurrencyCode result = com.vv.personal.twm.artifactory.generated.bank.BankProto.CurrencyCode.forNumber(ccy_);
+        return result == null ? com.vv.personal.twm.artifactory.generated.bank.BankProto.CurrencyCode.UNRECOGNIZED : result;
+      }
+      /**
+       * <code>.CurrencyCode ccy = 15;</code>
+       * @param value The ccy to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCcy(com.vv.personal.twm.artifactory.generated.bank.BankProto.CurrencyCode value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00004000;
+        ccy_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.CurrencyCode ccy = 15;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCcy() {
+        bitField0_ = (bitField0_ & ~0x00004000);
+        ccy_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object note_ = "";
+      /**
+       * <code>string note = 16;</code>
+       * @return The note.
+       */
+      public java.lang.String getNote() {
+        java.lang.Object ref = note_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          note_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string note = 16;</code>
+       * @return The bytes for note.
+       */
+      public com.google.protobuf.ByteString
+          getNoteBytes() {
+        java.lang.Object ref = note_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          note_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string note = 16;</code>
+       * @param value The note to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNote(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        note_ = value;
+        bitField0_ |= 0x00008000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string note = 16;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNote() {
+        note_ = getDefaultInstance().getNote();
+        bitField0_ = (bitField0_ & ~0x00008000);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string note = 16;</code>
+       * @param value The bytes for note to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNoteBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        note_ = value;
+        bitField0_ |= 0x00008000;
+        onChanged();
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:BankAccount)
     }
 
@@ -5585,7 +5964,7 @@ java.lang.String defaultValue) {
       "\002 \001(\0162\t.BankType\022\014\n\004IFSC\030\003 \001(\t\022\025\n\rcontac" +
       "tNumber\030\004 \001(\t\022\020\n\010isActive\030\005 \001(\010\022\023\n\013count" +
       "ryCode\030\006 \001(\t\" \n\010BankList\022\024\n\005banks\030\001 \003(\0132" +
-      "\005.Bank\"\275\003\n\013BankAccount\022\023\n\004bank\030\001 \001(\0132\005.B" +
+      "\005.Bank\"\347\003\n\013BankAccount\022\023\n\004bank\030\001 \001(\0132\005.B" +
       "ank\022\n\n\002id\030\002 \001(\t\022\016\n\006number\030\003 \001(\t\022\014\n\004name\030" +
       "\004 \001(\t\022\025\n\rtransitNumber\030\005 \001(\t\022\031\n\021institut" +
       "ionNumber\030\006 \001(\t\022\017\n\007balance\030\007 \001(\001\022,\n\010meta" +
@@ -5595,15 +5974,17 @@ java.lang.String defaultValue) {
       "ate\030\013 \001(\001\022\020\n\010isActive\030\014 \001(\010\022-\n\tcreatedAt" +
       "\030\r \001(\0132\032.google.protobuf.Timestamp\0221\n\rla" +
       "stUpdatedAt\030\016 \001(\0132\032.google.protobuf.Time" +
-      "stamp\032/\n\rMetaDataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005v" +
-      "alue\030\002 \001(\t:\0028\001\".\n\014BankAccounts\022\036\n\010accoun" +
-      "ts\030\001 \003(\0132\014.BankAccount*!\n\010BankType\022\010\n\004GO" +
-      "VT\020\000\022\013\n\007PRIVATE\020\001*s\n\017BankAccountType\022\007\n\003" +
-      "CHQ\020\000\022\007\n\003SAV\020\001\022\010\n\004TFSA\020\002\022\006\n\002NR\020\003\022\010\n\004HISA" +
-      "\020\004\022\r\n\tCASH_HISA\020\005\022\007\n\003STD\020\006\022\006\n\002CC\020\007\022\010\n\004FH" +
-      "SA\020\010\022\010\n\004RRSP\020\tB;\n.com.vv.personal.twm.ar" +
-      "tifactory.generated.bankB\tBankProtob\006pro" +
-      "to3"
+      "stamp\022\032\n\003ccy\030\017 \001(\0162\r.CurrencyCode\022\014\n\004not" +
+      "e\030\020 \001(\t\032/\n\rMetaDataEntry\022\013\n\003key\030\001 \001(\t\022\r\n" +
+      "\005value\030\002 \001(\t:\0028\001\".\n\014BankAccounts\022\036\n\010acco" +
+      "unts\030\001 \003(\0132\014.BankAccount*!\n\010BankType\022\010\n\004" +
+      "GOVT\020\000\022\013\n\007PRIVATE\020\001*)\n\014CurrencyCode\022\007\n\003C" +
+      "AD\020\000\022\007\n\003INR\020\001\022\007\n\003USD\020\002*s\n\017BankAccountTyp" +
+      "e\022\007\n\003CHQ\020\000\022\007\n\003SAV\020\001\022\010\n\004TFSA\020\002\022\006\n\002NR\020\003\022\010\n" +
+      "\004HISA\020\004\022\r\n\tCASH_HISA\020\005\022\007\n\003STD\020\006\022\006\n\002CC\020\007\022" +
+      "\010\n\004FHSA\020\010\022\010\n\004RRSP\020\tB;\n.com.vv.personal.t" +
+      "wm.artifactory.generated.bankB\tBankProto" +
+      "b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -5627,7 +6008,7 @@ java.lang.String defaultValue) {
     internal_static_BankAccount_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_BankAccount_descriptor,
-        new java.lang.String[] { "Bank", "Id", "Number", "Name", "TransitNumber", "InstitutionNumber", "Balance", "MetaData", "BankAccountType", "OverdraftBalance", "InterestRate", "IsActive", "CreatedAt", "LastUpdatedAt", });
+        new java.lang.String[] { "Bank", "Id", "Number", "Name", "TransitNumber", "InstitutionNumber", "Balance", "MetaData", "BankAccountType", "OverdraftBalance", "InterestRate", "IsActive", "CreatedAt", "LastUpdatedAt", "Ccy", "Note", });
     internal_static_BankAccount_MetaDataEntry_descriptor =
       internal_static_BankAccount_descriptor.getNestedTypes().get(0);
     internal_static_BankAccount_MetaDataEntry_fieldAccessorTable = new

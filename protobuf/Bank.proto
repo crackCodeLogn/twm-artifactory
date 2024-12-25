@@ -38,6 +38,15 @@ message BankAccount {
 
   google.protobuf.Timestamp createdAt = 13;
   google.protobuf.Timestamp lastUpdatedAt = 14;
+
+  CurrencyCode ccy = 15;
+  string note = 16;
+}
+
+enum CurrencyCode {
+  CAD = 0;
+  INR = 1;
+  USD = 2;
 }
 
 enum BankAccountType {

@@ -6,7 +6,7 @@
 
     <groupId>com.vv.personal</groupId>
     <artifactId>twm-artifactory</artifactId>
-    <version>1.1.10</version>
+    <version>1.1.11</version>
     <description>Serves as the common classes access points across all related TWM modules for comms</description>
     <packaging>jar</packaging>
 
