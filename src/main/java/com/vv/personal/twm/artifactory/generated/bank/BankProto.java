@@ -529,6 +529,141 @@ public final class BankProto {
     // @@protoc_insertion_point(enum_scope:BankAccountType)
   }
 
+  /**
+   * Protobuf enum {@code FilterBy}
+   */
+  public enum FilterBy
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>ALL = 0;</code>
+     */
+    ALL(0),
+    /**
+     * <code>NAME = 1;</code>
+     */
+    NAME(1),
+    /**
+     * <code>IFSC = 2;</code>
+     */
+    IFSC(2),
+    /**
+     * <code>CCY = 3;</code>
+     */
+    CCY(3),
+    UNRECOGNIZED(-1),
+    ;
+
+    static {
+      com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
+        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+        /* major= */ 4,
+        /* minor= */ 28,
+        /* patch= */ 3,
+        /* suffix= */ "",
+        FilterBy.class.getName());
+    }
+    /**
+     * <code>ALL = 0;</code>
+     */
+    public static final int ALL_VALUE = 0;
+    /**
+     * <code>NAME = 1;</code>
+     */
+    public static final int NAME_VALUE = 1;
+    /**
+     * <code>IFSC = 2;</code>
+     */
+    public static final int IFSC_VALUE = 2;
+    /**
+     * <code>CCY = 3;</code>
+     */
+    public static final int CCY_VALUE = 3;
+
+
+    public final int getNumber() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalArgumentException(
+            "Can't get the number of an unknown enum value.");
+      }
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static FilterBy valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static FilterBy forNumber(int value) {
+      switch (value) {
+        case 0: return ALL;
+        case 1: return NAME;
+        case 2: return IFSC;
+        case 3: return CCY;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<FilterBy>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        FilterBy> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<FilterBy>() {
+            public FilterBy findValueByNumber(int number) {
+              return FilterBy.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalStateException(
+            "Can't get the descriptor of an unrecognized enum value.");
+      }
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return com.vv.personal.twm.artifactory.generated.bank.BankProto.getDescriptor().getEnumTypes().get(3);
+    }
+
+    private static final FilterBy[] VALUES = values();
+
+    public static FilterBy valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      if (desc.getIndex() == -1) {
+        return UNRECOGNIZED;
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private FilterBy(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:FilterBy)
+  }
+
   public interface BankOrBuilder extends
       // @@protoc_insertion_point(interface_extends:Bank)
       com.google.protobuf.MessageOrBuilder {
@@ -5982,9 +6117,10 @@ java.lang.String defaultValue) {
       "AD\020\000\022\007\n\003INR\020\001\022\007\n\003USD\020\002*s\n\017BankAccountTyp" +
       "e\022\007\n\003CHQ\020\000\022\007\n\003SAV\020\001\022\010\n\004TFSA\020\002\022\006\n\002NR\020\003\022\010\n" +
       "\004HISA\020\004\022\r\n\tCASH_HISA\020\005\022\007\n\003STD\020\006\022\006\n\002CC\020\007\022" +
-      "\010\n\004FHSA\020\010\022\010\n\004RRSP\020\tB;\n.com.vv.personal.t" +
-      "wm.artifactory.generated.bankB\tBankProto" +
-      "b\006proto3"
+      "\010\n\004FHSA\020\010\022\010\n\004RRSP\020\t*0\n\010FilterBy\022\007\n\003ALL\020\000" +
+      "\022\010\n\004NAME\020\001\022\010\n\004IFSC\020\002\022\007\n\003CCY\020\003B;\n.com.vv." +
+      "personal.twm.artifactory.generated.bankB" +
+      "\tBankProtob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

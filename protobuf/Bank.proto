@@ -65,3 +65,10 @@ enum BankAccountType {
 message BankAccounts {
   repeated BankAccount accounts = 1;
 }
+
+enum FilterBy {
+  ALL = 0;
+  NAME = 1;
+  IFSC = 2;
+  CCY = 3;
+}

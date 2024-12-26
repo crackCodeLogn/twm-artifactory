@@ -56,6 +56,7 @@ enum FilterBy {
   ORIGINAL_USER = 2;
   KEY = 3;
   BANK = 4;
+  CCY = 5;
 }
 
 message FixedDepositList {
