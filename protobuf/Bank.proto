@@ -55,11 +55,16 @@ enum BankAccountType {
   TFSA = 2;     // tax-free saving account
   NR = 3;       // non-registered
   HISA = 4;     // high interest saving account
-  CASH_HISA = 5;
-  STD = 6;      // standard
-  CC = 7;       // credit card
-  FHSA = 8;     // first house saving account
-  RRSP = 9;     // registered retirement savings plan
+  STD = 5;      // standard
+  CC = 6;       // credit card
+  FHSA = 7;     // first house saving account
+  RRSP = 8;     // registered retirement savings plan
+  TFSA_MKT = 9;
+  NR_MKT = 10;
+  TFSA_GIC = 11;
+  NR_GIC = 12;
+  FHSA_MKT = 13;
+  FHSA_GIC = 14;
 }
 
 message BankAccounts {

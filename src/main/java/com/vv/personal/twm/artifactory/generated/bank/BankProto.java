@@ -314,41 +314,61 @@ public final class BankProto {
      */
     HISA(4),
     /**
-     * <code>CASH_HISA = 5;</code>
-     */
-    CASH_HISA(5),
-    /**
      * <pre>
      * standard
      * </pre>
      *
-     * <code>STD = 6;</code>
+     * <code>STD = 5;</code>
      */
-    STD(6),
+    STD(5),
     /**
      * <pre>
      * credit card
      * </pre>
      *
-     * <code>CC = 7;</code>
+     * <code>CC = 6;</code>
      */
-    CC(7),
+    CC(6),
     /**
      * <pre>
      * first house saving account
      * </pre>
      *
-     * <code>FHSA = 8;</code>
+     * <code>FHSA = 7;</code>
      */
-    FHSA(8),
+    FHSA(7),
     /**
      * <pre>
      * registered retirement savings plan
      * </pre>
      *
-     * <code>RRSP = 9;</code>
+     * <code>RRSP = 8;</code>
      */
-    RRSP(9),
+    RRSP(8),
+    /**
+     * <code>TFSA_MKT = 9;</code>
+     */
+    TFSA_MKT(9),
+    /**
+     * <code>NR_MKT = 10;</code>
+     */
+    NR_MKT(10),
+    /**
+     * <code>TFSA_GIC = 11;</code>
+     */
+    TFSA_GIC(11),
+    /**
+     * <code>NR_GIC = 12;</code>
+     */
+    NR_GIC(12),
+    /**
+     * <code>FHSA_MKT = 13;</code>
+     */
+    FHSA_MKT(13),
+    /**
+     * <code>FHSA_GIC = 14;</code>
+     */
+    FHSA_GIC(14),
     UNRECOGNIZED(-1),
     ;
 
@@ -402,41 +422,61 @@ public final class BankProto {
      */
     public static final int HISA_VALUE = 4;
     /**
-     * <code>CASH_HISA = 5;</code>
-     */
-    public static final int CASH_HISA_VALUE = 5;
-    /**
      * <pre>
      * standard
      * </pre>
      *
-     * <code>STD = 6;</code>
+     * <code>STD = 5;</code>
      */
-    public static final int STD_VALUE = 6;
+    public static final int STD_VALUE = 5;
     /**
      * <pre>
      * credit card
      * </pre>
      *
-     * <code>CC = 7;</code>
+     * <code>CC = 6;</code>
      */
-    public static final int CC_VALUE = 7;
+    public static final int CC_VALUE = 6;
     /**
      * <pre>
      * first house saving account
      * </pre>
      *
-     * <code>FHSA = 8;</code>
+     * <code>FHSA = 7;</code>
      */
-    public static final int FHSA_VALUE = 8;
+    public static final int FHSA_VALUE = 7;
     /**
      * <pre>
      * registered retirement savings plan
      * </pre>
      *
-     * <code>RRSP = 9;</code>
+     * <code>RRSP = 8;</code>
      */
-    public static final int RRSP_VALUE = 9;
+    public static final int RRSP_VALUE = 8;
+    /**
+     * <code>TFSA_MKT = 9;</code>
+     */
+    public static final int TFSA_MKT_VALUE = 9;
+    /**
+     * <code>NR_MKT = 10;</code>
+     */
+    public static final int NR_MKT_VALUE = 10;
+    /**
+     * <code>TFSA_GIC = 11;</code>
+     */
+    public static final int TFSA_GIC_VALUE = 11;
+    /**
+     * <code>NR_GIC = 12;</code>
+     */
+    public static final int NR_GIC_VALUE = 12;
+    /**
+     * <code>FHSA_MKT = 13;</code>
+     */
+    public static final int FHSA_MKT_VALUE = 13;
+    /**
+     * <code>FHSA_GIC = 14;</code>
+     */
+    public static final int FHSA_GIC_VALUE = 14;
 
 
     public final int getNumber() {
@@ -468,11 +508,16 @@ public final class BankProto {
         case 2: return TFSA;
         case 3: return NR;
         case 4: return HISA;
-        case 5: return CASH_HISA;
-        case 6: return STD;
-        case 7: return CC;
-        case 8: return FHSA;
-        case 9: return RRSP;
+        case 5: return STD;
+        case 6: return CC;
+        case 7: return FHSA;
+        case 8: return RRSP;
+        case 9: return TFSA_MKT;
+        case 10: return NR_MKT;
+        case 11: return TFSA_GIC;
+        case 12: return NR_GIC;
+        case 13: return FHSA_MKT;
+        case 14: return FHSA_GIC;
         default: return null;
       }
     }
@@ -6114,13 +6159,15 @@ java.lang.String defaultValue) {
       "\005value\030\002 \001(\t:\0028\001\".\n\014BankAccounts\022\036\n\010acco" +
       "unts\030\001 \003(\0132\014.BankAccount*!\n\010BankType\022\010\n\004" +
       "GOVT\020\000\022\013\n\007PRIVATE\020\001*)\n\014CurrencyCode\022\007\n\003C" +
-      "AD\020\000\022\007\n\003INR\020\001\022\007\n\003USD\020\002*s\n\017BankAccountTyp" +
-      "e\022\007\n\003CHQ\020\000\022\007\n\003SAV\020\001\022\010\n\004TFSA\020\002\022\006\n\002NR\020\003\022\010\n" +
-      "\004HISA\020\004\022\r\n\tCASH_HISA\020\005\022\007\n\003STD\020\006\022\006\n\002CC\020\007\022" +
-      "\010\n\004FHSA\020\010\022\010\n\004RRSP\020\t*0\n\010FilterBy\022\007\n\003ALL\020\000" +
-      "\022\010\n\004NAME\020\001\022\010\n\004IFSC\020\002\022\007\n\003CCY\020\003B;\n.com.vv." +
-      "personal.twm.artifactory.generated.bankB" +
-      "\tBankProtob\006proto3"
+      "AD\020\000\022\007\n\003INR\020\001\022\007\n\003USD\020\002*\264\001\n\017BankAccountTy" +
+      "pe\022\007\n\003CHQ\020\000\022\007\n\003SAV\020\001\022\010\n\004TFSA\020\002\022\006\n\002NR\020\003\022\010" +
+      "\n\004HISA\020\004\022\007\n\003STD\020\005\022\006\n\002CC\020\006\022\010\n\004FHSA\020\007\022\010\n\004R" +
+      "RSP\020\010\022\014\n\010TFSA_MKT\020\t\022\n\n\006NR_MKT\020\n\022\014\n\010TFSA_" +
+      "GIC\020\013\022\n\n\006NR_GIC\020\014\022\014\n\010FHSA_MKT\020\r\022\014\n\010FHSA_" +
+      "GIC\020\016*0\n\010FilterBy\022\007\n\003ALL\020\000\022\010\n\004NAME\020\001\022\010\n\004" +
+      "IFSC\020\002\022\007\n\003CCY\020\003B;\n.com.vv.personal.twm.a" +
+      "rtifactory.generated.bankB\tBankProtob\006pr" +
+      "oto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
