@@ -45,7 +45,9 @@ enum Direction {
 enum AccountType {
   TFSA = 0;
   NR = 1;
-  IND = 3;
+  FHSA = 2;
+  RRSP = 3;
+  IND = 4;
 }
 
 enum InstrumentType {

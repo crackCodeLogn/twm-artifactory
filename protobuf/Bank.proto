@@ -31,7 +31,7 @@ message BankAccount {
   string institutionNumber = 6; // bank, CA specific
   double balance = 7;
   map<string, string> metaData = 8;
-  BankAccountType bankAccountType = 9;
+  repeated BankAccountType bankAccountTypes = 9; // act as tagging
   double overdraftBalance = 10;
   double interestRate = 11;
   bool isActive = 12;
@@ -59,12 +59,8 @@ enum BankAccountType {
   CC = 6;       // credit card
   FHSA = 7;     // first house saving account
   RRSP = 8;     // registered retirement savings plan
-  TFSA_MKT = 9;
-  NR_MKT = 10;
-  TFSA_GIC = 11;
-  NR_GIC = 12;
-  FHSA_MKT = 13;
-  FHSA_GIC = 14;
+  MKT = 9;      // market involved
+  GIC = 10;     // guaranteed investment certificate involved
 }
 
 message BankAccounts {

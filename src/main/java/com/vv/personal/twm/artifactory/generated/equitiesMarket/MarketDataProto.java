@@ -156,9 +156,17 @@ public final class MarketDataProto {
      */
     NR(1),
     /**
-     * <code>IND = 3;</code>
+     * <code>FHSA = 2;</code>
      */
-    IND(3),
+    FHSA(2),
+    /**
+     * <code>RRSP = 3;</code>
+     */
+    RRSP(3),
+    /**
+     * <code>IND = 4;</code>
+     */
+    IND(4),
     UNRECOGNIZED(-1),
     ;
 
@@ -180,9 +188,17 @@ public final class MarketDataProto {
      */
     public static final int NR_VALUE = 1;
     /**
-     * <code>IND = 3;</code>
+     * <code>FHSA = 2;</code>
      */
-    public static final int IND_VALUE = 3;
+    public static final int FHSA_VALUE = 2;
+    /**
+     * <code>RRSP = 3;</code>
+     */
+    public static final int RRSP_VALUE = 3;
+    /**
+     * <code>IND = 4;</code>
+     */
+    public static final int IND_VALUE = 4;
 
 
     public final int getNumber() {
@@ -211,7 +227,9 @@ public final class MarketDataProto {
       switch (value) {
         case 0: return TFSA;
         case 1: return NR;
-        case 3: return IND;
+        case 2: return FHSA;
+        case 3: return RRSP;
+        case 4: return IND;
         default: return null;
       }
     }
@@ -5347,13 +5365,14 @@ java.lang.String defaultValue) {
       "\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"S\n\tPortfol" +
       "io\022$\n\013investments\030\001 \003(\0132\013.InvestmentB\002\030\001" +
       "\022 \n\013instruments\030\002 \003(\0132\013.Instrument*\036\n\tDi" +
-      "rection\022\007\n\003BUY\020\000\022\010\n\004SELL\020\001*(\n\013AccountTyp" +
-      "e\022\010\n\004TFSA\020\000\022\006\n\002NR\020\001\022\007\n\003IND\020\003*z\n\016Instrume" +
-      "ntType\022\n\n\006EQUITY\020\000\022\t\n\005INDEX\020\001\022\007\n\003ETF\020\002\022\016" +
-      "\n\nMUTUALFUND\020\003\022\n\n\006FUTURE\020\004\022\014\n\010CURRENCY\020\005" +
-      "\022\022\n\016CRYPTOCURRENCY\020\006\022\n\n\006OPTION\020\007BK\n8com." +
-      "vv.personal.twm.artifactory.generated.eq" +
-      "uitiesMarketB\017MarketDataProtob\006proto3"
+      "rection\022\007\n\003BUY\020\000\022\010\n\004SELL\020\001*<\n\013AccountTyp" +
+      "e\022\010\n\004TFSA\020\000\022\006\n\002NR\020\001\022\010\n\004FHSA\020\002\022\010\n\004RRSP\020\003\022" +
+      "\007\n\003IND\020\004*z\n\016InstrumentType\022\n\n\006EQUITY\020\000\022\t" +
+      "\n\005INDEX\020\001\022\007\n\003ETF\020\002\022\016\n\nMUTUALFUND\020\003\022\n\n\006FU" +
+      "TURE\020\004\022\014\n\010CURRENCY\020\005\022\022\n\016CRYPTOCURRENCY\020\006" +
+      "\022\n\n\006OPTION\020\007BK\n8com.vv.personal.twm.arti" +
+      "factory.generated.equitiesMarketB\017Market" +
+      "DataProtob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

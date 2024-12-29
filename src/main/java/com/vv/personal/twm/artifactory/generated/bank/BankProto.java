@@ -346,29 +346,21 @@ public final class BankProto {
      */
     RRSP(8),
     /**
-     * <code>TFSA_MKT = 9;</code>
+     * <pre>
+     * market involved
+     * </pre>
+     *
+     * <code>MKT = 9;</code>
      */
-    TFSA_MKT(9),
+    MKT(9),
     /**
-     * <code>NR_MKT = 10;</code>
+     * <pre>
+     * guaranteed investment certificate involved
+     * </pre>
+     *
+     * <code>GIC = 10;</code>
      */
-    NR_MKT(10),
-    /**
-     * <code>TFSA_GIC = 11;</code>
-     */
-    TFSA_GIC(11),
-    /**
-     * <code>NR_GIC = 12;</code>
-     */
-    NR_GIC(12),
-    /**
-     * <code>FHSA_MKT = 13;</code>
-     */
-    FHSA_MKT(13),
-    /**
-     * <code>FHSA_GIC = 14;</code>
-     */
-    FHSA_GIC(14),
+    GIC(10),
     UNRECOGNIZED(-1),
     ;
 
@@ -454,29 +446,21 @@ public final class BankProto {
      */
     public static final int RRSP_VALUE = 8;
     /**
-     * <code>TFSA_MKT = 9;</code>
+     * <pre>
+     * market involved
+     * </pre>
+     *
+     * <code>MKT = 9;</code>
      */
-    public static final int TFSA_MKT_VALUE = 9;
+    public static final int MKT_VALUE = 9;
     /**
-     * <code>NR_MKT = 10;</code>
+     * <pre>
+     * guaranteed investment certificate involved
+     * </pre>
+     *
+     * <code>GIC = 10;</code>
      */
-    public static final int NR_MKT_VALUE = 10;
-    /**
-     * <code>TFSA_GIC = 11;</code>
-     */
-    public static final int TFSA_GIC_VALUE = 11;
-    /**
-     * <code>NR_GIC = 12;</code>
-     */
-    public static final int NR_GIC_VALUE = 12;
-    /**
-     * <code>FHSA_MKT = 13;</code>
-     */
-    public static final int FHSA_MKT_VALUE = 13;
-    /**
-     * <code>FHSA_GIC = 14;</code>
-     */
-    public static final int FHSA_GIC_VALUE = 14;
+    public static final int GIC_VALUE = 10;
 
 
     public final int getNumber() {
@@ -512,12 +496,8 @@ public final class BankProto {
         case 6: return CC;
         case 7: return FHSA;
         case 8: return RRSP;
-        case 9: return TFSA_MKT;
-        case 10: return NR_MKT;
-        case 11: return TFSA_GIC;
-        case 12: return NR_GIC;
-        case 13: return FHSA_MKT;
-        case 14: return FHSA_GIC;
+        case 9: return MKT;
+        case 10: return GIC;
         default: return null;
       }
     }
@@ -2725,15 +2705,53 @@ java.lang.String defaultValue);
         java.lang.String key);
 
     /**
-     * <code>.BankAccountType bankAccountType = 9;</code>
-     * @return The enum numeric value on the wire for bankAccountType.
+     * <pre>
+     * act as tagging
+     * </pre>
+     *
+     * <code>repeated .BankAccountType bankAccountTypes = 9;</code>
+     * @return A list containing the bankAccountTypes.
      */
-    int getBankAccountTypeValue();
+    java.util.List<com.vv.personal.twm.artifactory.generated.bank.BankProto.BankAccountType> getBankAccountTypesList();
     /**
-     * <code>.BankAccountType bankAccountType = 9;</code>
-     * @return The bankAccountType.
+     * <pre>
+     * act as tagging
+     * </pre>
+     *
+     * <code>repeated .BankAccountType bankAccountTypes = 9;</code>
+     * @return The count of bankAccountTypes.
      */
-    com.vv.personal.twm.artifactory.generated.bank.BankProto.BankAccountType getBankAccountType();
+    int getBankAccountTypesCount();
+    /**
+     * <pre>
+     * act as tagging
+     * </pre>
+     *
+     * <code>repeated .BankAccountType bankAccountTypes = 9;</code>
+     * @param index The index of the element to return.
+     * @return The bankAccountTypes at the given index.
+     */
+    com.vv.personal.twm.artifactory.generated.bank.BankProto.BankAccountType getBankAccountTypes(int index);
+    /**
+     * <pre>
+     * act as tagging
+     * </pre>
+     *
+     * <code>repeated .BankAccountType bankAccountTypes = 9;</code>
+     * @return A list containing the enum numeric values on the wire for bankAccountTypes.
+     */
+    java.util.List<java.lang.Integer>
+    getBankAccountTypesValueList();
+    /**
+     * <pre>
+     * act as tagging
+     * </pre>
+     *
+     * <code>repeated .BankAccountType bankAccountTypes = 9;</code>
+     * @param index The index of the value to return.
+     * @return The enum numeric value on the wire of bankAccountTypes at the given index.
+     */
+    int getBankAccountTypesValue(int index);
 
     /**
      * <code>double overdraftBalance = 10;</code>
@@ -2833,7 +2851,7 @@ java.lang.String defaultValue);
       name_ = "";
       transitNumber_ = "";
       institutionNumber_ = "";
-      bankAccountType_ = 0;
+      bankAccountTypes_ = emptyIntList();
       ccy_ = 0;
       note_ = "";
     }
@@ -3199,23 +3217,83 @@ java.lang.String defaultValue) {
       return map.get(key);
     }
 
-    public static final int BANKACCOUNTTYPE_FIELD_NUMBER = 9;
-    private int bankAccountType_ = 0;
+    public static final int BANKACCOUNTTYPES_FIELD_NUMBER = 9;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.Internal.IntList bankAccountTypes_;
+    private static final com.google.protobuf.Internal.IntListAdapter.IntConverter<
+        com.vv.personal.twm.artifactory.generated.bank.BankProto.BankAccountType> bankAccountTypes_converter_ =
+            new com.google.protobuf.Internal.IntListAdapter.IntConverter<
+                com.vv.personal.twm.artifactory.generated.bank.BankProto.BankAccountType>() {
+              public com.vv.personal.twm.artifactory.generated.bank.BankProto.BankAccountType convert(int from) {
+                com.vv.personal.twm.artifactory.generated.bank.BankProto.BankAccountType result = com.vv.personal.twm.artifactory.generated.bank.BankProto.BankAccountType.forNumber(from);
+                return result == null ? com.vv.personal.twm.artifactory.generated.bank.BankProto.BankAccountType.UNRECOGNIZED : result;
+              }
+            };
     /**
-     * <code>.BankAccountType bankAccountType = 9;</code>
-     * @return The enum numeric value on the wire for bankAccountType.
+     * <pre>
+     * act as tagging
+     * </pre>
+     *
+     * <code>repeated .BankAccountType bankAccountTypes = 9;</code>
+     * @return A list containing the bankAccountTypes.
      */
-    @java.lang.Override public int getBankAccountTypeValue() {
-      return bankAccountType_;
+    @java.lang.Override
+    public java.util.List<com.vv.personal.twm.artifactory.generated.bank.BankProto.BankAccountType> getBankAccountTypesList() {
+      return new com.google.protobuf.Internal.IntListAdapter<
+          com.vv.personal.twm.artifactory.generated.bank.BankProto.BankAccountType>(bankAccountTypes_, bankAccountTypes_converter_);
     }
     /**
-     * <code>.BankAccountType bankAccountType = 9;</code>
-     * @return The bankAccountType.
+     * <pre>
+     * act as tagging
+     * </pre>
+     *
+     * <code>repeated .BankAccountType bankAccountTypes = 9;</code>
+     * @return The count of bankAccountTypes.
      */
-    @java.lang.Override public com.vv.personal.twm.artifactory.generated.bank.BankProto.BankAccountType getBankAccountType() {
-      com.vv.personal.twm.artifactory.generated.bank.BankProto.BankAccountType result = com.vv.personal.twm.artifactory.generated.bank.BankProto.BankAccountType.forNumber(bankAccountType_);
-      return result == null ? com.vv.personal.twm.artifactory.generated.bank.BankProto.BankAccountType.UNRECOGNIZED : result;
+    @java.lang.Override
+    public int getBankAccountTypesCount() {
+      return bankAccountTypes_.size();
     }
+    /**
+     * <pre>
+     * act as tagging
+     * </pre>
+     *
+     * <code>repeated .BankAccountType bankAccountTypes = 9;</code>
+     * @param index The index of the element to return.
+     * @return The bankAccountTypes at the given index.
+     */
+    @java.lang.Override
+    public com.vv.personal.twm.artifactory.generated.bank.BankProto.BankAccountType getBankAccountTypes(int index) {
+      return bankAccountTypes_converter_.convert(bankAccountTypes_.getInt(index));
+    }
+    /**
+     * <pre>
+     * act as tagging
+     * </pre>
+     *
+     * <code>repeated .BankAccountType bankAccountTypes = 9;</code>
+     * @return A list containing the enum numeric values on the wire for bankAccountTypes.
+     */
+    @java.lang.Override
+    public java.util.List<java.lang.Integer>
+    getBankAccountTypesValueList() {
+      return bankAccountTypes_;
+    }
+    /**
+     * <pre>
+     * act as tagging
+     * </pre>
+     *
+     * <code>repeated .BankAccountType bankAccountTypes = 9;</code>
+     * @param index The index of the value to return.
+     * @return The enum numeric value on the wire of bankAccountTypes at the given index.
+     */
+    @java.lang.Override
+    public int getBankAccountTypesValue(int index) {
+      return bankAccountTypes_.getInt(index);
+    }
+    private int bankAccountTypesMemoizedSerializedSize;
 
     public static final int OVERDRAFTBALANCE_FIELD_NUMBER = 10;
     private double overdraftBalance_ = 0D;
@@ -3373,6 +3451,7 @@ java.lang.String defaultValue) {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
+      getSerializedSize();
       if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getBank());
       }
@@ -3400,8 +3479,12 @@ java.lang.String defaultValue) {
           internalGetMetaData(),
           MetaDataDefaultEntryHolder.defaultEntry,
           8);
-      if (bankAccountType_ != com.vv.personal.twm.artifactory.generated.bank.BankProto.BankAccountType.CHQ.getNumber()) {
-        output.writeEnum(9, bankAccountType_);
+      if (getBankAccountTypesList().size() > 0) {
+        output.writeUInt32NoTag(74);
+        output.writeUInt32NoTag(bankAccountTypesMemoizedSerializedSize);
+      }
+      for (int i = 0; i < bankAccountTypes_.size(); i++) {
+        output.writeEnumNoTag(bankAccountTypes_.getInt(i));
       }
       if (java.lang.Double.doubleToRawLongBits(overdraftBalance_) != 0) {
         output.writeDouble(10, overdraftBalance_);
@@ -3466,9 +3549,17 @@ java.lang.String defaultValue) {
         size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(8, metaData__);
       }
-      if (bankAccountType_ != com.vv.personal.twm.artifactory.generated.bank.BankProto.BankAccountType.CHQ.getNumber()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(9, bankAccountType_);
+      {
+        int dataSize = 0;
+        for (int i = 0; i < bankAccountTypes_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeEnumSizeNoTag(bankAccountTypes_.getInt(i));
+        }
+        size += dataSize;
+        if (!getBankAccountTypesList().isEmpty()) {  size += 1;
+          size += com.google.protobuf.CodedOutputStream
+            .computeUInt32SizeNoTag(dataSize);
+        }bankAccountTypesMemoizedSerializedSize = dataSize;
       }
       if (java.lang.Double.doubleToRawLongBits(overdraftBalance_) != 0) {
         size += com.google.protobuf.CodedOutputStream
@@ -3532,7 +3623,7 @@ java.lang.String defaultValue) {
               other.getBalance())) return false;
       if (!internalGetMetaData().equals(
           other.internalGetMetaData())) return false;
-      if (bankAccountType_ != other.bankAccountType_) return false;
+      if (!bankAccountTypes_.equals(other.bankAccountTypes_)) return false;
       if (java.lang.Double.doubleToLongBits(getOverdraftBalance())
           != java.lang.Double.doubleToLongBits(
               other.getOverdraftBalance())) return false;
@@ -3586,8 +3677,10 @@ java.lang.String defaultValue) {
         hash = (37 * hash) + METADATA_FIELD_NUMBER;
         hash = (53 * hash) + internalGetMetaData().hashCode();
       }
-      hash = (37 * hash) + BANKACCOUNTTYPE_FIELD_NUMBER;
-      hash = (53 * hash) + bankAccountType_;
+      if (getBankAccountTypesCount() > 0) {
+        hash = (37 * hash) + BANKACCOUNTTYPES_FIELD_NUMBER;
+        hash = (53 * hash) + bankAccountTypes_.hashCode();
+      }
       hash = (37 * hash) + OVERDRAFTBALANCE_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           java.lang.Double.doubleToLongBits(getOverdraftBalance()));
@@ -3782,7 +3875,8 @@ java.lang.String defaultValue) {
         institutionNumber_ = "";
         balance_ = 0D;
         internalGetMutableMetaData().clear();
-        bankAccountType_ = 0;
+        bankAccountTypes_ = emptyIntList();
+        bitField0_ = (bitField0_ & ~0x00000100);
         overdraftBalance_ = 0D;
         interestRate_ = 0D;
         isActive_ = false;
@@ -3824,9 +3918,18 @@ java.lang.String defaultValue) {
       @java.lang.Override
       public com.vv.personal.twm.artifactory.generated.bank.BankProto.BankAccount buildPartial() {
         com.vv.personal.twm.artifactory.generated.bank.BankProto.BankAccount result = new com.vv.personal.twm.artifactory.generated.bank.BankProto.BankAccount(this);
+        buildPartialRepeatedFields(result);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartialRepeatedFields(com.vv.personal.twm.artifactory.generated.bank.BankProto.BankAccount result) {
+        if (((bitField0_ & 0x00000100) != 0)) {
+          bankAccountTypes_.makeImmutable();
+          bitField0_ = (bitField0_ & ~0x00000100);
+        }
+        result.bankAccountTypes_ = bankAccountTypes_;
       }
 
       private void buildPartial0(com.vv.personal.twm.artifactory.generated.bank.BankProto.BankAccount result) {
@@ -3859,9 +3962,6 @@ java.lang.String defaultValue) {
         if (((from_bitField0_ & 0x00000080) != 0)) {
           result.metaData_ = internalGetMetaData();
           result.metaData_.makeImmutable();
-        }
-        if (((from_bitField0_ & 0x00000100) != 0)) {
-          result.bankAccountType_ = bankAccountType_;
         }
         if (((from_bitField0_ & 0x00000200) != 0)) {
           result.overdraftBalance_ = overdraftBalance_;
@@ -3939,8 +4039,15 @@ java.lang.String defaultValue) {
         internalGetMutableMetaData().mergeFrom(
             other.internalGetMetaData());
         bitField0_ |= 0x00000080;
-        if (other.bankAccountType_ != 0) {
-          setBankAccountTypeValue(other.getBankAccountTypeValue());
+        if (!other.bankAccountTypes_.isEmpty()) {
+          if (bankAccountTypes_.isEmpty()) {
+            bankAccountTypes_ = other.bankAccountTypes_;
+            bitField0_ = (bitField0_ & ~0x00000100);
+          } else {
+            ensureBankAccountTypesIsMutable();
+            bankAccountTypes_.addAll(other.bankAccountTypes_);
+          }
+          onChanged();
         }
         if (other.getOverdraftBalance() != 0D) {
           setOverdraftBalance(other.getOverdraftBalance());
@@ -4038,10 +4145,22 @@ java.lang.String defaultValue) {
                 break;
               } // case 66
               case 72: {
-                bankAccountType_ = input.readEnum();
-                bitField0_ |= 0x00000100;
+                int tmpRaw = input.readEnum();
+                ensureBankAccountTypesIsMutable();
+                bankAccountTypes_.addInt(tmpRaw);
                 break;
               } // case 72
+              case 74: {
+                int length = input.readRawVarint32();
+                int oldLimit = input.pushLimit(length);
+                while(input.getBytesUntilLimit() > 0) {
+                  int tmpRaw = input.readEnum();
+                  ensureBankAccountTypesIsMutable();
+                  bankAccountTypes_.addInt(tmpRaw);
+                }
+                input.popLimit(oldLimit);
+                break;
+              } // case 74
               case 81: {
                 overdraftBalance_ = input.readDouble();
                 bitField0_ |= 0x00000200;
@@ -4798,55 +4917,190 @@ java.lang.String defaultValue) {
         return this;
       }
 
-      private int bankAccountType_ = 0;
-      /**
-       * <code>.BankAccountType bankAccountType = 9;</code>
-       * @return The enum numeric value on the wire for bankAccountType.
-       */
-      @java.lang.Override public int getBankAccountTypeValue() {
-        return bankAccountType_;
+      private com.google.protobuf.Internal.IntList bankAccountTypes_ =
+        emptyIntList();
+      private void ensureBankAccountTypesIsMutable() {
+        if (!((bitField0_ & 0x00000100) != 0)) {
+          bankAccountTypes_ = makeMutableCopy(bankAccountTypes_);
+          bitField0_ |= 0x00000100;
+        }
       }
       /**
-       * <code>.BankAccountType bankAccountType = 9;</code>
-       * @param value The enum numeric value on the wire for bankAccountType to set.
+       * <pre>
+       * act as tagging
+       * </pre>
+       *
+       * <code>repeated .BankAccountType bankAccountTypes = 9;</code>
+       * @return A list containing the bankAccountTypes.
+       */
+      public java.util.List<com.vv.personal.twm.artifactory.generated.bank.BankProto.BankAccountType> getBankAccountTypesList() {
+        return new com.google.protobuf.Internal.IntListAdapter<
+            com.vv.personal.twm.artifactory.generated.bank.BankProto.BankAccountType>(bankAccountTypes_, bankAccountTypes_converter_);
+      }
+      /**
+       * <pre>
+       * act as tagging
+       * </pre>
+       *
+       * <code>repeated .BankAccountType bankAccountTypes = 9;</code>
+       * @return The count of bankAccountTypes.
+       */
+      public int getBankAccountTypesCount() {
+        return bankAccountTypes_.size();
+      }
+      /**
+       * <pre>
+       * act as tagging
+       * </pre>
+       *
+       * <code>repeated .BankAccountType bankAccountTypes = 9;</code>
+       * @param index The index of the element to return.
+       * @return The bankAccountTypes at the given index.
+       */
+      public com.vv.personal.twm.artifactory.generated.bank.BankProto.BankAccountType getBankAccountTypes(int index) {
+        return bankAccountTypes_converter_.convert(bankAccountTypes_.getInt(index));
+      }
+      /**
+       * <pre>
+       * act as tagging
+       * </pre>
+       *
+       * <code>repeated .BankAccountType bankAccountTypes = 9;</code>
+       * @param index The index to set the value at.
+       * @param value The bankAccountTypes to set.
        * @return This builder for chaining.
        */
-      public Builder setBankAccountTypeValue(int value) {
-        bankAccountType_ = value;
-        bitField0_ |= 0x00000100;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>.BankAccountType bankAccountType = 9;</code>
-       * @return The bankAccountType.
-       */
-      @java.lang.Override
-      public com.vv.personal.twm.artifactory.generated.bank.BankProto.BankAccountType getBankAccountType() {
-        com.vv.personal.twm.artifactory.generated.bank.BankProto.BankAccountType result = com.vv.personal.twm.artifactory.generated.bank.BankProto.BankAccountType.forNumber(bankAccountType_);
-        return result == null ? com.vv.personal.twm.artifactory.generated.bank.BankProto.BankAccountType.UNRECOGNIZED : result;
-      }
-      /**
-       * <code>.BankAccountType bankAccountType = 9;</code>
-       * @param value The bankAccountType to set.
-       * @return This builder for chaining.
-       */
-      public Builder setBankAccountType(com.vv.personal.twm.artifactory.generated.bank.BankProto.BankAccountType value) {
+      public Builder setBankAccountTypes(
+          int index, com.vv.personal.twm.artifactory.generated.bank.BankProto.BankAccountType value) {
         if (value == null) {
           throw new NullPointerException();
         }
-        bitField0_ |= 0x00000100;
-        bankAccountType_ = value.getNumber();
+        ensureBankAccountTypesIsMutable();
+        bankAccountTypes_.setInt(index, value.getNumber());
         onChanged();
         return this;
       }
       /**
-       * <code>.BankAccountType bankAccountType = 9;</code>
+       * <pre>
+       * act as tagging
+       * </pre>
+       *
+       * <code>repeated .BankAccountType bankAccountTypes = 9;</code>
+       * @param value The bankAccountTypes to add.
        * @return This builder for chaining.
        */
-      public Builder clearBankAccountType() {
+      public Builder addBankAccountTypes(com.vv.personal.twm.artifactory.generated.bank.BankProto.BankAccountType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureBankAccountTypesIsMutable();
+        bankAccountTypes_.addInt(value.getNumber());
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * act as tagging
+       * </pre>
+       *
+       * <code>repeated .BankAccountType bankAccountTypes = 9;</code>
+       * @param values The bankAccountTypes to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllBankAccountTypes(
+          java.lang.Iterable<? extends com.vv.personal.twm.artifactory.generated.bank.BankProto.BankAccountType> values) {
+        ensureBankAccountTypesIsMutable();
+        for (com.vv.personal.twm.artifactory.generated.bank.BankProto.BankAccountType value : values) {
+          bankAccountTypes_.addInt(value.getNumber());
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * act as tagging
+       * </pre>
+       *
+       * <code>repeated .BankAccountType bankAccountTypes = 9;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBankAccountTypes() {
+        bankAccountTypes_ = emptyIntList();
         bitField0_ = (bitField0_ & ~0x00000100);
-        bankAccountType_ = 0;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * act as tagging
+       * </pre>
+       *
+       * <code>repeated .BankAccountType bankAccountTypes = 9;</code>
+       * @return A list containing the enum numeric values on the wire for bankAccountTypes.
+       */
+      public java.util.List<java.lang.Integer>
+      getBankAccountTypesValueList() {
+        return java.util.Collections.unmodifiableList(bankAccountTypes_);
+      }
+      /**
+       * <pre>
+       * act as tagging
+       * </pre>
+       *
+       * <code>repeated .BankAccountType bankAccountTypes = 9;</code>
+       * @param index The index of the value to return.
+       * @return The enum numeric value on the wire of bankAccountTypes at the given index.
+       */
+      public int getBankAccountTypesValue(int index) {
+        return bankAccountTypes_.getInt(index);
+      }
+      /**
+       * <pre>
+       * act as tagging
+       * </pre>
+       *
+       * <code>repeated .BankAccountType bankAccountTypes = 9;</code>
+       * @param index The index to set the value at.
+       * @param value The enum numeric value on the wire for bankAccountTypes to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBankAccountTypesValue(
+          int index, int value) {
+        ensureBankAccountTypesIsMutable();
+        bankAccountTypes_.setInt(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * act as tagging
+       * </pre>
+       *
+       * <code>repeated .BankAccountType bankAccountTypes = 9;</code>
+       * @param value The enum numeric value on the wire for bankAccountTypes to add.
+       * @return This builder for chaining.
+       */
+      public Builder addBankAccountTypesValue(int value) {
+        ensureBankAccountTypesIsMutable();
+        bankAccountTypes_.addInt(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * act as tagging
+       * </pre>
+       *
+       * <code>repeated .BankAccountType bankAccountTypes = 9;</code>
+       * @param values The enum numeric values on the wire for bankAccountTypes to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllBankAccountTypesValue(
+          java.lang.Iterable<java.lang.Integer> values) {
+        ensureBankAccountTypesIsMutable();
+        for (int value : values) {
+          bankAccountTypes_.addInt(value);
+        }
         onChanged();
         return this;
       }
@@ -6144,30 +6398,28 @@ java.lang.String defaultValue) {
       "\002 \001(\0162\t.BankType\022\014\n\004IFSC\030\003 \001(\t\022\025\n\rcontac" +
       "tNumber\030\004 \001(\t\022\020\n\010isActive\030\005 \001(\010\022\023\n\013count" +
       "ryCode\030\006 \001(\t\" \n\010BankList\022\024\n\005banks\030\001 \003(\0132" +
-      "\005.Bank\"\347\003\n\013BankAccount\022\023\n\004bank\030\001 \001(\0132\005.B" +
+      "\005.Bank\"\350\003\n\013BankAccount\022\023\n\004bank\030\001 \001(\0132\005.B" +
       "ank\022\n\n\002id\030\002 \001(\t\022\016\n\006number\030\003 \001(\t\022\014\n\004name\030" +
       "\004 \001(\t\022\025\n\rtransitNumber\030\005 \001(\t\022\031\n\021institut" +
       "ionNumber\030\006 \001(\t\022\017\n\007balance\030\007 \001(\001\022,\n\010meta" +
-      "Data\030\010 \003(\0132\032.BankAccount.MetaDataEntry\022)" +
-      "\n\017bankAccountType\030\t \001(\0162\020.BankAccountTyp" +
-      "e\022\030\n\020overdraftBalance\030\n \001(\001\022\024\n\014interestR" +
-      "ate\030\013 \001(\001\022\020\n\010isActive\030\014 \001(\010\022-\n\tcreatedAt" +
-      "\030\r \001(\0132\032.google.protobuf.Timestamp\0221\n\rla" +
-      "stUpdatedAt\030\016 \001(\0132\032.google.protobuf.Time" +
-      "stamp\022\032\n\003ccy\030\017 \001(\0162\r.CurrencyCode\022\014\n\004not" +
-      "e\030\020 \001(\t\032/\n\rMetaDataEntry\022\013\n\003key\030\001 \001(\t\022\r\n" +
-      "\005value\030\002 \001(\t:\0028\001\".\n\014BankAccounts\022\036\n\010acco" +
-      "unts\030\001 \003(\0132\014.BankAccount*!\n\010BankType\022\010\n\004" +
-      "GOVT\020\000\022\013\n\007PRIVATE\020\001*)\n\014CurrencyCode\022\007\n\003C" +
-      "AD\020\000\022\007\n\003INR\020\001\022\007\n\003USD\020\002*\264\001\n\017BankAccountTy" +
+      "Data\030\010 \003(\0132\032.BankAccount.MetaDataEntry\022*" +
+      "\n\020bankAccountTypes\030\t \003(\0162\020.BankAccountTy" +
+      "pe\022\030\n\020overdraftBalance\030\n \001(\001\022\024\n\014interest" +
+      "Rate\030\013 \001(\001\022\020\n\010isActive\030\014 \001(\010\022-\n\tcreatedA" +
+      "t\030\r \001(\0132\032.google.protobuf.Timestamp\0221\n\rl" +
+      "astUpdatedAt\030\016 \001(\0132\032.google.protobuf.Tim" +
+      "estamp\022\032\n\003ccy\030\017 \001(\0162\r.CurrencyCode\022\014\n\004no" +
+      "te\030\020 \001(\t\032/\n\rMetaDataEntry\022\013\n\003key\030\001 \001(\t\022\r" +
+      "\n\005value\030\002 \001(\t:\0028\001\".\n\014BankAccounts\022\036\n\010acc" +
+      "ounts\030\001 \003(\0132\014.BankAccount*!\n\010BankType\022\010\n" +
+      "\004GOVT\020\000\022\013\n\007PRIVATE\020\001*)\n\014CurrencyCode\022\007\n\003" +
+      "CAD\020\000\022\007\n\003INR\020\001\022\007\n\003USD\020\002*v\n\017BankAccountTy" +
       "pe\022\007\n\003CHQ\020\000\022\007\n\003SAV\020\001\022\010\n\004TFSA\020\002\022\006\n\002NR\020\003\022\010" +
       "\n\004HISA\020\004\022\007\n\003STD\020\005\022\006\n\002CC\020\006\022\010\n\004FHSA\020\007\022\010\n\004R" +
-      "RSP\020\010\022\014\n\010TFSA_MKT\020\t\022\n\n\006NR_MKT\020\n\022\014\n\010TFSA_" +
-      "GIC\020\013\022\n\n\006NR_GIC\020\014\022\014\n\010FHSA_MKT\020\r\022\014\n\010FHSA_" +
-      "GIC\020\016*0\n\010FilterBy\022\007\n\003ALL\020\000\022\010\n\004NAME\020\001\022\010\n\004" +
-      "IFSC\020\002\022\007\n\003CCY\020\003B;\n.com.vv.personal.twm.a" +
-      "rtifactory.generated.bankB\tBankProtob\006pr" +
-      "oto3"
+      "RSP\020\010\022\007\n\003MKT\020\t\022\007\n\003GIC\020\n*0\n\010FilterBy\022\007\n\003A" +
+      "LL\020\000\022\010\n\004NAME\020\001\022\010\n\004IFSC\020\002\022\007\n\003CCY\020\003B;\n.com" +
+      ".vv.personal.twm.artifactory.generated.b" +
+      "ankB\tBankProtob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -6191,7 +6443,7 @@ java.lang.String defaultValue) {
     internal_static_BankAccount_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_BankAccount_descriptor,
-        new java.lang.String[] { "Bank", "Id", "Number", "Name", "TransitNumber", "InstitutionNumber", "Balance", "MetaData", "BankAccountType", "OverdraftBalance", "InterestRate", "IsActive", "CreatedAt", "LastUpdatedAt", "Ccy", "Note", });
+        new java.lang.String[] { "Bank", "Id", "Number", "Name", "TransitNumber", "InstitutionNumber", "Balance", "MetaData", "BankAccountTypes", "OverdraftBalance", "InterestRate", "IsActive", "CreatedAt", "LastUpdatedAt", "Ccy", "Note", });
     internal_static_BankAccount_MetaDataEntry_descriptor =
       internal_static_BankAccount_descriptor.getNestedTypes().get(0);
     internal_static_BankAccount_MetaDataEntry_fieldAccessorTable = new
