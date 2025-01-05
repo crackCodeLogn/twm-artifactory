@@ -28,12 +28,20 @@ message FixedDeposit {
   AnnualBreakdownList annualBreakdownList = 19;
   AccountType accountType = 20;
   int32 freeze = 21;
+  RenewalType renewalType = 22;
 }
 
 enum AccountType {
   IND = 0;
   TFSA = 1;
   NR = 2;
+  FHSA = 3;
+}
+
+enum RenewalType {
+  RENEW_AMOUNT = 0;
+  RENEW_DEPOSIT = 1;
+  DO_NOT_RENEW = 2;
 }
 
 enum InterestType {

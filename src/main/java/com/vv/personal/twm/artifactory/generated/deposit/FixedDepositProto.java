@@ -42,6 +42,10 @@ public final class FixedDepositProto {
      * <code>NR = 2;</code>
      */
     NR(2),
+    /**
+     * <code>FHSA = 3;</code>
+     */
+    FHSA(3),
     UNRECOGNIZED(-1),
     ;
 
@@ -66,6 +70,10 @@ public final class FixedDepositProto {
      * <code>NR = 2;</code>
      */
     public static final int NR_VALUE = 2;
+    /**
+     * <code>FHSA = 3;</code>
+     */
+    public static final int FHSA_VALUE = 3;
 
 
     public final int getNumber() {
@@ -95,6 +103,7 @@ public final class FixedDepositProto {
         case 0: return IND;
         case 1: return TFSA;
         case 2: return NR;
+        case 3: return FHSA;
         default: return null;
       }
     }
@@ -149,6 +158,132 @@ public final class FixedDepositProto {
     }
 
     // @@protoc_insertion_point(enum_scope:AccountType)
+  }
+
+  /**
+   * Protobuf enum {@code RenewalType}
+   */
+  public enum RenewalType
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>RENEW_AMOUNT = 0;</code>
+     */
+    RENEW_AMOUNT(0),
+    /**
+     * <code>RENEW_DEPOSIT = 1;</code>
+     */
+    RENEW_DEPOSIT(1),
+    /**
+     * <code>DO_NOT_RENEW = 2;</code>
+     */
+    DO_NOT_RENEW(2),
+    UNRECOGNIZED(-1),
+    ;
+
+    static {
+      com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
+        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+        /* major= */ 4,
+        /* minor= */ 28,
+        /* patch= */ 3,
+        /* suffix= */ "",
+        RenewalType.class.getName());
+    }
+    /**
+     * <code>RENEW_AMOUNT = 0;</code>
+     */
+    public static final int RENEW_AMOUNT_VALUE = 0;
+    /**
+     * <code>RENEW_DEPOSIT = 1;</code>
+     */
+    public static final int RENEW_DEPOSIT_VALUE = 1;
+    /**
+     * <code>DO_NOT_RENEW = 2;</code>
+     */
+    public static final int DO_NOT_RENEW_VALUE = 2;
+
+
+    public final int getNumber() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalArgumentException(
+            "Can't get the number of an unknown enum value.");
+      }
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static RenewalType valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static RenewalType forNumber(int value) {
+      switch (value) {
+        case 0: return RENEW_AMOUNT;
+        case 1: return RENEW_DEPOSIT;
+        case 2: return DO_NOT_RENEW;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<RenewalType>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        RenewalType> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<RenewalType>() {
+            public RenewalType findValueByNumber(int number) {
+              return RenewalType.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalStateException(
+            "Can't get the descriptor of an unrecognized enum value.");
+      }
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.getDescriptor().getEnumTypes().get(1);
+    }
+
+    private static final RenewalType[] VALUES = values();
+
+    public static RenewalType valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      if (desc.getIndex() == -1) {
+        return UNRECOGNIZED;
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private RenewalType(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:RenewalType)
   }
 
   /**
@@ -251,7 +386,7 @@ public final class FixedDepositProto {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.getDescriptor().getEnumTypes().get(1);
+      return com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.getDescriptor().getEnumTypes().get(2);
     }
 
     private static final InterestType[] VALUES = values();
@@ -395,7 +530,7 @@ public final class FixedDepositProto {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.getDescriptor().getEnumTypes().get(2);
+      return com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.getDescriptor().getEnumTypes().get(3);
     }
 
     private static final OrderFDsBy[] VALUES = values();
@@ -548,7 +683,7 @@ public final class FixedDepositProto {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.getDescriptor().getEnumTypes().get(3);
+      return com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.getDescriptor().getEnumTypes().get(4);
     }
 
     private static final FilterBy[] VALUES = values();
@@ -806,6 +941,17 @@ public final class FixedDepositProto {
      * @return The freeze.
      */
     int getFreeze();
+
+    /**
+     * <code>.RenewalType renewalType = 22;</code>
+     * @return The enum numeric value on the wire for renewalType.
+     */
+    int getRenewalTypeValue();
+    /**
+     * <code>.RenewalType renewalType = 22;</code>
+     * @return The renewalType.
+     */
+    com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.RenewalType getRenewalType();
   }
   /**
    * Protobuf type {@code FixedDeposit}
@@ -839,6 +985,7 @@ public final class FixedDepositProto {
       nominee_ = "";
       originalUser_ = "";
       accountType_ = 0;
+      renewalType_ = 0;
     }
 
     public static final com.google.protobuf.Descriptors.Descriptor
@@ -1375,6 +1522,24 @@ public final class FixedDepositProto {
       return freeze_;
     }
 
+    public static final int RENEWALTYPE_FIELD_NUMBER = 22;
+    private int renewalType_ = 0;
+    /**
+     * <code>.RenewalType renewalType = 22;</code>
+     * @return The enum numeric value on the wire for renewalType.
+     */
+    @java.lang.Override public int getRenewalTypeValue() {
+      return renewalType_;
+    }
+    /**
+     * <code>.RenewalType renewalType = 22;</code>
+     * @return The renewalType.
+     */
+    @java.lang.Override public com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.RenewalType getRenewalType() {
+      com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.RenewalType result = com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.RenewalType.forNumber(renewalType_);
+      return result == null ? com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.RenewalType.UNRECOGNIZED : result;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -1451,6 +1616,9 @@ public final class FixedDepositProto {
       }
       if (freeze_ != 0) {
         output.writeInt32(21, freeze_);
+      }
+      if (renewalType_ != com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.RenewalType.RENEW_AMOUNT.getNumber()) {
+        output.writeEnum(22, renewalType_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -1537,6 +1705,10 @@ public final class FixedDepositProto {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(21, freeze_);
       }
+      if (renewalType_ != com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.RenewalType.RENEW_AMOUNT.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(22, renewalType_);
+      }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
@@ -1599,6 +1771,7 @@ public final class FixedDepositProto {
       if (accountType_ != other.accountType_) return false;
       if (getFreeze()
           != other.getFreeze()) return false;
+      if (renewalType_ != other.renewalType_) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -1660,6 +1833,8 @@ public final class FixedDepositProto {
       hash = (53 * hash) + accountType_;
       hash = (37 * hash) + FREEZE_FIELD_NUMBER;
       hash = (53 * hash) + getFreeze();
+      hash = (37 * hash) + RENEWALTYPE_FIELD_NUMBER;
+      hash = (53 * hash) + renewalType_;
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -1822,6 +1997,7 @@ public final class FixedDepositProto {
         }
         accountType_ = 0;
         freeze_ = 0;
+        renewalType_ = 0;
         return this;
       }
 
@@ -1922,6 +2098,9 @@ public final class FixedDepositProto {
         if (((from_bitField0_ & 0x00100000) != 0)) {
           result.freeze_ = freeze_;
         }
+        if (((from_bitField0_ & 0x00200000) != 0)) {
+          result.renewalType_ = renewalType_;
+        }
         result.bitField0_ |= to_bitField0_;
       }
 
@@ -2015,6 +2194,9 @@ public final class FixedDepositProto {
         }
         if (other.getFreeze() != 0) {
           setFreeze(other.getFreeze());
+        }
+        if (other.renewalType_ != 0) {
+          setRenewalTypeValue(other.getRenewalTypeValue());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
@@ -2149,6 +2331,11 @@ public final class FixedDepositProto {
                 bitField0_ |= 0x00100000;
                 break;
               } // case 168
+              case 176: {
+                renewalType_ = input.readEnum();
+                bitField0_ |= 0x00200000;
+                break;
+              } // case 176
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -3377,6 +3564,59 @@ public final class FixedDepositProto {
       public Builder clearFreeze() {
         bitField0_ = (bitField0_ & ~0x00100000);
         freeze_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int renewalType_ = 0;
+      /**
+       * <code>.RenewalType renewalType = 22;</code>
+       * @return The enum numeric value on the wire for renewalType.
+       */
+      @java.lang.Override public int getRenewalTypeValue() {
+        return renewalType_;
+      }
+      /**
+       * <code>.RenewalType renewalType = 22;</code>
+       * @param value The enum numeric value on the wire for renewalType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRenewalTypeValue(int value) {
+        renewalType_ = value;
+        bitField0_ |= 0x00200000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.RenewalType renewalType = 22;</code>
+       * @return The renewalType.
+       */
+      @java.lang.Override
+      public com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.RenewalType getRenewalType() {
+        com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.RenewalType result = com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.RenewalType.forNumber(renewalType_);
+        return result == null ? com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.RenewalType.UNRECOGNIZED : result;
+      }
+      /**
+       * <code>.RenewalType renewalType = 22;</code>
+       * @param value The renewalType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRenewalType(com.vv.personal.twm.artifactory.generated.deposit.FixedDepositProto.RenewalType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00200000;
+        renewalType_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.RenewalType renewalType = 22;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRenewalType() {
+        bitField0_ = (bitField0_ & ~0x00200000);
+        renewalType_ = 0;
         onChanged();
         return this;
       }
@@ -6012,7 +6252,7 @@ public final class FixedDepositProto {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\022FixedDeposit.proto\"\351\003\n\014FixedDeposit\022\014\n" +
+      "\n\022FixedDeposit.proto\"\214\004\n\014FixedDeposit\022\014\n" +
       "\004user\030\001 \001(\t\022\020\n\010fdNumber\030\002 \001(\t\022\022\n\ncustome" +
       "rId\030\003 \001(\t\022\020\n\010bankIFSC\030\004 \001(\t\022\025\n\rdepositAm" +
       "ount\030\005 \001(\001\022\026\n\016rateOfInterest\030\006 \001(\001\022\021\n\tst" +
@@ -6024,24 +6264,26 @@ public final class FixedDepositProto {
       "ve\030\020 \001(\010\022\022\n\nisFdBroken\030\021 \001(\010\022\024\n\014original" +
       "User\030\022 \001(\t\0221\n\023annualBreakdownList\030\023 \001(\0132" +
       "\024.AnnualBreakdownList\022!\n\013accountType\030\024 \001" +
-      "(\0162\014.AccountType\022\016\n\006freeze\030\025 \001(\005\"7\n\020Fixe" +
-      "dDepositList\022#\n\014FixedDeposit\030\001 \003(\0132\r.Fix" +
-      "edDeposit\"\246\001\n\017AnnualBreakdown\022\021\n\tstartDa" +
-      "te\030\001 \001(\t\022\017\n\007endDate\030\002 \001(\t\022\025\n\rdaysInBetwe" +
-      "en\030\003 \001(\003\022\036\n\026expectedInterestGained\030\004 \001(\001" +
-      "\022!\n\031expectedAmountAccumulated\030\005 \001(\001\022\025\n\rf" +
-      "inancialYear\030\006 \001(\t\"@\n\023AnnualBreakdownLis" +
-      "t\022)\n\017annualBreakdown\030\001 \003(\0132\020.AnnualBreak" +
-      "down*(\n\013AccountType\022\007\n\003IND\020\000\022\010\n\004TFSA\020\001\022\006" +
-      "\n\002NR\020\002*;\n\014InterestType\022\017\n\013ON_MATURITY\020\000\022" +
-      "\r\n\tQUARTERLY\020\001\022\013\n\007MONTHLY\020\002*`\n\nOrderFDsB" +
-      "y\022\016\n\nSTART_DATE\020\000\022\014\n\010END_DATE\020\001\022\022\n\016DEPOS" +
-      "IT_AMOUNT\020\002\022\024\n\020RATE_OF_INTEREST\020\003\022\n\n\006MON" +
-      "THS\020\004*L\n\010FilterBy\022\007\n\003ALL\020\000\022\010\n\004USER\020\001\022\021\n\r" +
-      "ORIGINAL_USER\020\002\022\007\n\003KEY\020\003\022\010\n\004BANK\020\004\022\007\n\003CC" +
-      "Y\020\005BF\n1com.vv.personal.twm.artifactory.g" +
-      "enerated.depositB\021FixedDepositProtob\006pro" +
-      "to3"
+      "(\0162\014.AccountType\022\016\n\006freeze\030\025 \001(\005\022!\n\013rene" +
+      "walType\030\026 \001(\0162\014.RenewalType\"7\n\020FixedDepo" +
+      "sitList\022#\n\014FixedDeposit\030\001 \003(\0132\r.FixedDep" +
+      "osit\"\246\001\n\017AnnualBreakdown\022\021\n\tstartDate\030\001 " +
+      "\001(\t\022\017\n\007endDate\030\002 \001(\t\022\025\n\rdaysInBetween\030\003 " +
+      "\001(\003\022\036\n\026expectedInterestGained\030\004 \001(\001\022!\n\031e" +
+      "xpectedAmountAccumulated\030\005 \001(\001\022\025\n\rfinanc" +
+      "ialYear\030\006 \001(\t\"@\n\023AnnualBreakdownList\022)\n\017" +
+      "annualBreakdown\030\001 \003(\0132\020.AnnualBreakdown*" +
+      "2\n\013AccountType\022\007\n\003IND\020\000\022\010\n\004TFSA\020\001\022\006\n\002NR\020" +
+      "\002\022\010\n\004FHSA\020\003*D\n\013RenewalType\022\020\n\014RENEW_AMOU" +
+      "NT\020\000\022\021\n\rRENEW_DEPOSIT\020\001\022\020\n\014DO_NOT_RENEW\020" +
+      "\002*;\n\014InterestType\022\017\n\013ON_MATURITY\020\000\022\r\n\tQU" +
+      "ARTERLY\020\001\022\013\n\007MONTHLY\020\002*`\n\nOrderFDsBy\022\016\n\n" +
+      "START_DATE\020\000\022\014\n\010END_DATE\020\001\022\022\n\016DEPOSIT_AM" +
+      "OUNT\020\002\022\024\n\020RATE_OF_INTEREST\020\003\022\n\n\006MONTHS\020\004" +
+      "*L\n\010FilterBy\022\007\n\003ALL\020\000\022\010\n\004USER\020\001\022\021\n\rORIGI" +
+      "NAL_USER\020\002\022\007\n\003KEY\020\003\022\010\n\004BANK\020\004\022\007\n\003CCY\020\005BF" +
+      "\n1com.vv.personal.twm.artifactory.genera" +
+      "ted.depositB\021FixedDepositProtob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -6052,7 +6294,7 @@ public final class FixedDepositProto {
     internal_static_FixedDeposit_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_FixedDeposit_descriptor,
-        new java.lang.String[] { "User", "FdNumber", "CustomerId", "BankIFSC", "DepositAmount", "RateOfInterest", "StartDate", "EndDate", "Months", "Days", "InterestType", "Nominee", "ExpectedAmount", "ExpectedInterest", "CalculatedDays", "IsFdActive", "IsFdBroken", "OriginalUser", "AnnualBreakdownList", "AccountType", "Freeze", });
+        new java.lang.String[] { "User", "FdNumber", "CustomerId", "BankIFSC", "DepositAmount", "RateOfInterest", "StartDate", "EndDate", "Months", "Days", "InterestType", "Nominee", "ExpectedAmount", "ExpectedInterest", "CalculatedDays", "IsFdActive", "IsFdBroken", "OriginalUser", "AnnualBreakdownList", "AccountType", "Freeze", "RenewalType", });
     internal_static_FixedDepositList_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_FixedDepositList_fieldAccessorTable = new

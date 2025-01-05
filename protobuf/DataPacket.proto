@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+option java_package = "com.vv.personal.twm.artifactory.generated.data";
+option java_outer_classname = "DataPacketProto";
+
+message DataPacket {
+  map<int32, double> intDoubleMap = 1;
+  map<int32, int32> intIntMap = 2;
+
+  repeated int32 ints = 3;
+  repeated int64 longs = 4;
+  repeated double doubles = 5;
+}
