@@ -10,4 +10,9 @@ message DataPacket {
   repeated int32 ints = 3;
   repeated int64 longs = 4;
   repeated double doubles = 5;
+
+  map<string, string> stringStringMap = 6;
+  map<string, double> stringDoubleMap = 7;
+  map<string, int32> stringIntMap = 8;
+  map<string, int64> stringLongMap = 9;
 }
