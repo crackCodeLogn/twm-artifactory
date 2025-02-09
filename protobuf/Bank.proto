@@ -61,6 +61,8 @@ enum BankAccountType {
   RRSP = 8;     // registered retirement savings plan
   MKT = 9;      // market involved
   GIC = 10;     // guaranteed investment certificate involved
+  CASH_R = 11;  // real physical cash
+  GOLD_R = 12;  // real physical gold - distant thought :D
 }
 
 message BankAccounts {
