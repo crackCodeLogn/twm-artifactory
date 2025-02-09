@@ -29,6 +29,7 @@ message FixedDeposit {
   AccountType accountType = 20;
   int32 freeze = 21;
   RenewalType renewalType = 22;
+  string externalId = 23;
 }
 
 enum AccountType {

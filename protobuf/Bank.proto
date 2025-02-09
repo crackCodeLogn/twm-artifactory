@@ -11,6 +11,7 @@ message Bank {
   string contactNumber = 4;
   bool isActive = 5;
   string countryCode = 6;
+  string externalId = 7;
 }
 
 enum BankType {
@@ -41,6 +42,7 @@ message BankAccount {
 
   CurrencyCode ccy = 15;
   string note = 16;
+  string externalId = 17;
 }
 
 enum CurrencyCode {
