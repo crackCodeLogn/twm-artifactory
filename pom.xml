@@ -6,9 +6,19 @@
 
     <groupId>com.vv.personal</groupId>
     <artifactId>twm-artifactory</artifactId>
-    <version>1.1.17</version>
+    <version>1.1.18</version>
     <description>Serves as the common classes access points across all related TWM modules for comms</description>
     <packaging>jar</packaging>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <java.version>17</java.version>
+        <google-guava.version>33.4.7-jre</google-guava.version>
+        <commons-lang3.version>3.15.0</commons-lang3.version>
+        <protobuf.version>4.29.2</protobuf.version>
+        <junit5.version>5.10.3</junit5.version>
+    </properties>
 
     <build>
         <plugins>
@@ -27,25 +37,31 @@
         <dependency>
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-lang3</artifactId>
-            <version>3.15.0</version>
+            <version>${commons-lang3.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>${google-guava.version}</version>
         </dependency>
 
         <dependency>
             <groupId>com.google.protobuf</groupId>
             <artifactId>protobuf-java</artifactId>
-            <version>4.29.2</version>
+            <version>${protobuf.version}</version>
         </dependency>
 
         <dependency>
             <groupId>com.google.protobuf</groupId>
             <artifactId>protobuf-java-util</artifactId>
-            <version>4.29.2</version>
+            <version>${protobuf.version}</version>
         </dependency>
 
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter</artifactId>
-            <version>5.10.3</version>
+            <version>${junit5.version}</version>
             <scope>test</scope>
         </dependency>
     </dependencies>
