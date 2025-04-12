@@ -6,7 +6,7 @@
 
     <groupId>com.vv.personal</groupId>
     <artifactId>twm-artifactory</artifactId>
-    <version>1.1.18</version>
+    <version>1.1.19</version>
     <description>Serves as the common classes access points across all related TWM modules for comms</description>
     <packaging>jar</packaging>
 
@@ -16,7 +16,7 @@
         <java.version>17</java.version>
         <google-guava.version>33.4.7-jre</google-guava.version>
         <commons-lang3.version>3.15.0</commons-lang3.version>
-        <protobuf.version>4.29.2</protobuf.version>
+        <protobuf.version>4.30.2</protobuf.version>
         <junit5.version>5.10.3</junit5.version>
     </properties>
 

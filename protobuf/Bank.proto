@@ -43,6 +43,7 @@ message BankAccount {
   CurrencyCode ccy = 15;
   string note = 16;
   string externalId = 17;
+  string userId = 18;
 }
 
 enum CurrencyCode {

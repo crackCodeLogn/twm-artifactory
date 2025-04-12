@@ -30,11 +30,13 @@ message Instrument {
   AccountType accountType = 3;
   Direction direction = 4;
   map<string, string> metaData = 5;
+  string userId = 6;
 }
 
 message Portfolio {
   repeated Investment investments = 1 [deprecated = true];
   repeated Instrument instruments = 2;
+  string userId = 3;
 }
 
 enum Direction {
