@@ -1,0 +1,20 @@
+syntax = "proto3";
+import "google/protobuf/timestamp.proto";
+
+option java_package = "com.vv.personal.twm.artifactory.generated.user";
+option java_outer_classname = "UserProto";
+
+message User {
+  string id = 1; // uuid
+  string username = 2;
+  string email = 3;
+  string credential = 4;
+  string externalId = 5;
+
+  google.protobuf.Timestamp createdAt = 6;
+  google.protobuf.Timestamp lastUpdatedAt = 7;
+}
+
+message Users {
+  repeated User users = 1;
+}
