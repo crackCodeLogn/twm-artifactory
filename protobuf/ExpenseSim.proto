@@ -19,15 +19,15 @@ message Transaction {
 }
 
 enum TxMode {
-  U = 0;
-  Q = 1;
-  C = 2;
-  DC = 3;
-  CC = 4;
-  R = 5;
-  I = 6;
-  SAL = 7;
-  NB = 8;
+  U = 0; // update | expense
+  CC = 1; // credit card
+  R = 2; // rent
+  RB = 3; // rebal
+  I = 4; // investment
+  SAL = 5; // salary
+  INC = 6; // income
+  EXP = 7; // expiry
+  MISC = 8;
 }
 
 message Statement {
