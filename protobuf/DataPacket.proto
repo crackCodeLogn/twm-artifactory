@@ -15,4 +15,6 @@ message DataPacket {
   map<string, double> stringDoubleMap = 7;
   map<string, int32> stringIntMap = 8;
   map<string, int64> stringLongMap = 9;
+
+  repeated string strings = 10;
 }

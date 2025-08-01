@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+option java_package = "com.vv.personal.twm.artifactory.generated.itemPricing";
+option java_outer_classname = "ItemPricingProto";
+
+message ItemPricingRecord {
+  int32 date = 1;
+  string item = 2;
+  string quantity = 3;
+  double price = 4;
+  string source = 5;
+  string location = 6;
+  string category = 7;
+  string note = 8;
+}
+
+message ItemPricingStats {
+  int32 startDate = 1;
+  int32 endDate = 2;
+
+  double totalSpent = 3;
+  map<string, double> categoryTotalPriceMap = 4;
+  map<string, double> categoryExtraAggregateMap = 5;
+  repeated ItemPricingRecord itemPricingRecords = 6;
+}

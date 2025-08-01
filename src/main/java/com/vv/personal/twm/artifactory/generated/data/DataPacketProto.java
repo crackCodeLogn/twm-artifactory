@@ -262,6 +262,31 @@ java.lang.String defaultValue);
      */
     long getStringLongMapOrThrow(
         java.lang.String key);
+
+    /**
+     * <code>repeated string strings = 10;</code>
+     * @return A list containing the strings.
+     */
+    java.util.List<java.lang.String>
+        getStringsList();
+    /**
+     * <code>repeated string strings = 10;</code>
+     * @return The count of strings.
+     */
+    int getStringsCount();
+    /**
+     * <code>repeated string strings = 10;</code>
+     * @param index The index of the element to return.
+     * @return The strings at the given index.
+     */
+    java.lang.String getStrings(int index);
+    /**
+     * <code>repeated string strings = 10;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the strings at the given index.
+     */
+    com.google.protobuf.ByteString
+        getStringsBytes(int index);
   }
   /**
    * Protobuf type {@code DataPacket}
@@ -279,6 +304,7 @@ java.lang.String defaultValue);
       ints_ = emptyIntList();
       longs_ = emptyLongList();
       doubles_ = emptyDoubleList();
+      strings_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     }
 
     @java.lang.Override
@@ -879,6 +905,42 @@ java.lang.String defaultValue) {
       return map.get(key);
     }
 
+    public static final int STRINGS_FIELD_NUMBER = 10;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.LazyStringList strings_;
+    /**
+     * <code>repeated string strings = 10;</code>
+     * @return A list containing the strings.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getStringsList() {
+      return strings_;
+    }
+    /**
+     * <code>repeated string strings = 10;</code>
+     * @return The count of strings.
+     */
+    public int getStringsCount() {
+      return strings_.size();
+    }
+    /**
+     * <code>repeated string strings = 10;</code>
+     * @param index The index of the element to return.
+     * @return The strings at the given index.
+     */
+    public java.lang.String getStrings(int index) {
+      return strings_.get(index);
+    }
+    /**
+     * <code>repeated string strings = 10;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the strings at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getStringsBytes(int index) {
+      return strings_.getByteString(index);
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -951,6 +1013,9 @@ java.lang.String defaultValue) {
           internalGetStringLongMap(),
           StringLongMapDefaultEntryHolder.defaultEntry,
           9);
+      for (int i = 0; i < strings_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 10, strings_.getRaw(i));
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -1059,6 +1124,14 @@ java.lang.String defaultValue) {
         size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(9, stringLongMap__);
       }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < strings_.size(); i++) {
+          dataSize += computeStringSizeNoTag(strings_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getStringsList().size();
+      }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
@@ -1092,6 +1165,8 @@ java.lang.String defaultValue) {
           other.internalGetStringIntMap())) return false;
       if (!internalGetStringLongMap().equals(
           other.internalGetStringLongMap())) return false;
+      if (!getStringsList()
+          .equals(other.getStringsList())) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -1138,6 +1213,10 @@ java.lang.String defaultValue) {
       if (!internalGetStringLongMap().getMap().isEmpty()) {
         hash = (37 * hash) + STRINGLONGMAP_FIELD_NUMBER;
         hash = (53 * hash) + internalGetStringLongMap().hashCode();
+      }
+      if (getStringsCount() > 0) {
+        hash = (37 * hash) + STRINGS_FIELD_NUMBER;
+        hash = (53 * hash) + getStringsList().hashCode();
       }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
@@ -1319,6 +1398,8 @@ java.lang.String defaultValue) {
         internalGetMutableStringDoubleMap().clear();
         internalGetMutableStringIntMap().clear();
         internalGetMutableStringLongMap().clear();
+        strings_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000200);
         return this;
       }
 
@@ -1367,6 +1448,11 @@ java.lang.String defaultValue) {
           bitField0_ = (bitField0_ & ~0x00000010);
         }
         result.doubles_ = doubles_;
+        if (((bitField0_ & 0x00000200) != 0)) {
+          strings_ = strings_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000200);
+        }
+        result.strings_ = strings_;
       }
 
       private void buildPartial0(com.vv.personal.twm.artifactory.generated.data.DataPacketProto.DataPacket result) {
@@ -1489,6 +1575,16 @@ java.lang.String defaultValue) {
         internalGetMutableStringLongMap().mergeFrom(
             other.internalGetStringLongMap());
         bitField0_ |= 0x00000100;
+        if (!other.strings_.isEmpty()) {
+          if (strings_.isEmpty()) {
+            strings_ = other.strings_;
+            bitField0_ = (bitField0_ & ~0x00000200);
+          } else {
+            ensureStringsIsMutable();
+            strings_.addAll(other.strings_);
+          }
+          onChanged();
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -1617,6 +1713,12 @@ java.lang.String defaultValue) {
                 bitField0_ |= 0x00000100;
                 break;
               } // case 74
+              case 82: {
+                java.lang.String s = input.readStringRequireUtf8();
+                ensureStringsIsMutable();
+                strings_.add(s);
+                break;
+              } // case 82
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -2628,6 +2730,110 @@ java.lang.String defaultValue) {
         bitField0_ |= 0x00000100;
         return this;
       }
+
+      private com.google.protobuf.LazyStringList strings_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureStringsIsMutable() {
+        if (!((bitField0_ & 0x00000200) != 0)) {
+          strings_ = new com.google.protobuf.LazyStringArrayList(strings_);
+          bitField0_ |= 0x00000200;
+         }
+      }
+      /**
+       * <code>repeated string strings = 10;</code>
+       * @return A list containing the strings.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getStringsList() {
+        return strings_.getUnmodifiableView();
+      }
+      /**
+       * <code>repeated string strings = 10;</code>
+       * @return The count of strings.
+       */
+      public int getStringsCount() {
+        return strings_.size();
+      }
+      /**
+       * <code>repeated string strings = 10;</code>
+       * @param index The index of the element to return.
+       * @return The strings at the given index.
+       */
+      public java.lang.String getStrings(int index) {
+        return strings_.get(index);
+      }
+      /**
+       * <code>repeated string strings = 10;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the strings at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getStringsBytes(int index) {
+        return strings_.getByteString(index);
+      }
+      /**
+       * <code>repeated string strings = 10;</code>
+       * @param index The index to set the value at.
+       * @param value The strings to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStrings(
+          int index, java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureStringsIsMutable();
+        strings_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string strings = 10;</code>
+       * @param value The strings to add.
+       * @return This builder for chaining.
+       */
+      public Builder addStrings(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureStringsIsMutable();
+        strings_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string strings = 10;</code>
+       * @param values The strings to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllStrings(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureStringsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, strings_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string strings = 10;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStrings() {
+        strings_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000200);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string strings = 10;</code>
+       * @param value The bytes of the strings to add.
+       * @return This builder for chaining.
+       */
+      public Builder addStringsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        ensureStringsIsMutable();
+        strings_.add(value);
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -2736,7 +2942,7 @@ java.lang.String defaultValue) {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\020DataPacket.proto\"\302\005\n\nDataPacket\0223\n\014int" +
+      "\n\020DataPacket.proto\"\323\005\n\nDataPacket\0223\n\014int" +
       "DoubleMap\030\001 \003(\0132\035.DataPacket.IntDoubleMa" +
       "pEntry\022-\n\tintIntMap\030\002 \003(\0132\032.DataPacket.I" +
       "ntIntMapEntry\022\014\n\004ints\030\003 \003(\005\022\r\n\005longs\030\004 \003" +
@@ -2746,17 +2952,17 @@ java.lang.String defaultValue) {
       "ingDoubleMapEntry\0223\n\014stringIntMap\030\010 \003(\0132" +
       "\035.DataPacket.StringIntMapEntry\0225\n\rstring" +
       "LongMap\030\t \003(\0132\036.DataPacket.StringLongMap" +
-      "Entry\0323\n\021IntDoubleMapEntry\022\013\n\003key\030\001 \001(\005\022" +
-      "\r\n\005value\030\002 \001(\001:\0028\001\0320\n\016IntIntMapEntry\022\013\n\003" +
-      "key\030\001 \001(\005\022\r\n\005value\030\002 \001(\005:\0028\001\0326\n\024StringSt" +
-      "ringMapEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t" +
-      ":\0028\001\0326\n\024StringDoubleMapEntry\022\013\n\003key\030\001 \001(" +
-      "\t\022\r\n\005value\030\002 \001(\001:\0028\001\0323\n\021StringIntMapEntr" +
-      "y\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\005:\0028\001\0324\n\022Str" +
-      "ingLongMapEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 " +
-      "\001(\003:\0028\001BA\n.com.vv.personal.twm.artifacto" +
-      "ry.generated.dataB\017DataPacketProtob\006prot" +
-      "o3"
+      "Entry\022\017\n\007strings\030\n \003(\t\0323\n\021IntDoubleMapEn" +
+      "try\022\013\n\003key\030\001 \001(\005\022\r\n\005value\030\002 \001(\001:\0028\001\0320\n\016I" +
+      "ntIntMapEntry\022\013\n\003key\030\001 \001(\005\022\r\n\005value\030\002 \001(" +
+      "\005:\0028\001\0326\n\024StringStringMapEntry\022\013\n\003key\030\001 \001" +
+      "(\t\022\r\n\005value\030\002 \001(\t:\0028\001\0326\n\024StringDoubleMap" +
+      "Entry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\001:\0028\001\0323\n" +
+      "\021StringIntMapEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value" +
+      "\030\002 \001(\005:\0028\001\0324\n\022StringLongMapEntry\022\013\n\003key\030" +
+      "\001 \001(\t\022\r\n\005value\030\002 \001(\003:\0028\001BA\n.com.vv.perso" +
+      "nal.twm.artifactory.generated.dataB\017Data" +
+      "PacketProtob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -2767,7 +2973,7 @@ java.lang.String defaultValue) {
     internal_static_DataPacket_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_DataPacket_descriptor,
-        new java.lang.String[] { "IntDoubleMap", "IntIntMap", "Ints", "Longs", "Doubles", "StringStringMap", "StringDoubleMap", "StringIntMap", "StringLongMap", });
+        new java.lang.String[] { "IntDoubleMap", "IntIntMap", "Ints", "Longs", "Doubles", "StringStringMap", "StringDoubleMap", "StringIntMap", "StringLongMap", "Strings", });
     internal_static_DataPacket_IntDoubleMapEntry_descriptor =
       internal_static_DataPacket_descriptor.getNestedTypes().get(0);
     internal_static_DataPacket_IntDoubleMapEntry_fieldAccessorTable = new
