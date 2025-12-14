@@ -39,6 +39,16 @@ message Portfolio {
   string userId = 3;
 }
 
+message CorrelationMatrix {
+  repeated CorrelationCell entries = 1;
+}
+
+message CorrelationCell {
+  string imntRow = 1;
+  string imntCol = 2;
+  double value = 3;
+}
+
 enum Direction {
   BUY = 0;
   SELL = 1;

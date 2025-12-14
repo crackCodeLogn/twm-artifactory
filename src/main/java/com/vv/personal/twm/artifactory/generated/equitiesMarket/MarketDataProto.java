@@ -5771,6 +5771,1568 @@ java.lang.String defaultValue) {
 
   }
 
+  public interface CorrelationMatrixOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:CorrelationMatrix)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .CorrelationCell entries = 1;</code>
+     */
+    java.util.List<com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorrelationCell> 
+        getEntriesList();
+    /**
+     * <code>repeated .CorrelationCell entries = 1;</code>
+     */
+    com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorrelationCell getEntries(int index);
+    /**
+     * <code>repeated .CorrelationCell entries = 1;</code>
+     */
+    int getEntriesCount();
+    /**
+     * <code>repeated .CorrelationCell entries = 1;</code>
+     */
+    java.util.List<? extends com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorrelationCellOrBuilder> 
+        getEntriesOrBuilderList();
+    /**
+     * <code>repeated .CorrelationCell entries = 1;</code>
+     */
+    com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorrelationCellOrBuilder getEntriesOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code CorrelationMatrix}
+   */
+  public static final class CorrelationMatrix extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:CorrelationMatrix)
+      CorrelationMatrixOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CorrelationMatrix.newBuilder() to construct.
+    private CorrelationMatrix(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CorrelationMatrix() {
+      entries_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CorrelationMatrix();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.internal_static_CorrelationMatrix_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.internal_static_CorrelationMatrix_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorrelationMatrix.class, com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorrelationMatrix.Builder.class);
+    }
+
+    public static final int ENTRIES_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorrelationCell> entries_;
+    /**
+     * <code>repeated .CorrelationCell entries = 1;</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorrelationCell> getEntriesList() {
+      return entries_;
+    }
+    /**
+     * <code>repeated .CorrelationCell entries = 1;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorrelationCellOrBuilder> 
+        getEntriesOrBuilderList() {
+      return entries_;
+    }
+    /**
+     * <code>repeated .CorrelationCell entries = 1;</code>
+     */
+    @java.lang.Override
+    public int getEntriesCount() {
+      return entries_.size();
+    }
+    /**
+     * <code>repeated .CorrelationCell entries = 1;</code>
+     */
+    @java.lang.Override
+    public com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorrelationCell getEntries(int index) {
+      return entries_.get(index);
+    }
+    /**
+     * <code>repeated .CorrelationCell entries = 1;</code>
+     */
+    @java.lang.Override
+    public com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorrelationCellOrBuilder getEntriesOrBuilder(
+        int index) {
+      return entries_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < entries_.size(); i++) {
+        output.writeMessage(1, entries_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < entries_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, entries_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorrelationMatrix)) {
+        return super.equals(obj);
+      }
+      com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorrelationMatrix other = (com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorrelationMatrix) obj;
+
+      if (!getEntriesList()
+          .equals(other.getEntriesList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getEntriesCount() > 0) {
+        hash = (37 * hash) + ENTRIES_FIELD_NUMBER;
+        hash = (53 * hash) + getEntriesList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorrelationMatrix parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorrelationMatrix parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorrelationMatrix parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorrelationMatrix parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorrelationMatrix parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorrelationMatrix parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorrelationMatrix parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorrelationMatrix parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorrelationMatrix parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorrelationMatrix parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorrelationMatrix parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorrelationMatrix parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorrelationMatrix prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code CorrelationMatrix}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:CorrelationMatrix)
+        com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorrelationMatrixOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.internal_static_CorrelationMatrix_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.internal_static_CorrelationMatrix_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorrelationMatrix.class, com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorrelationMatrix.Builder.class);
+      }
+
+      // Construct using com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorrelationMatrix.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (entriesBuilder_ == null) {
+          entries_ = java.util.Collections.emptyList();
+        } else {
+          entries_ = null;
+          entriesBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.internal_static_CorrelationMatrix_descriptor;
+      }
+
+      @java.lang.Override
+      public com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorrelationMatrix getDefaultInstanceForType() {
+        return com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorrelationMatrix.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorrelationMatrix build() {
+        com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorrelationMatrix result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorrelationMatrix buildPartial() {
+        com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorrelationMatrix result = new com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorrelationMatrix(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorrelationMatrix result) {
+        if (entriesBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            entries_ = java.util.Collections.unmodifiableList(entries_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.entries_ = entries_;
+        } else {
+          result.entries_ = entriesBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorrelationMatrix result) {
+        int from_bitField0_ = bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorrelationMatrix) {
+          return mergeFrom((com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorrelationMatrix)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorrelationMatrix other) {
+        if (other == com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorrelationMatrix.getDefaultInstance()) return this;
+        if (entriesBuilder_ == null) {
+          if (!other.entries_.isEmpty()) {
+            if (entries_.isEmpty()) {
+              entries_ = other.entries_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureEntriesIsMutable();
+              entries_.addAll(other.entries_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.entries_.isEmpty()) {
+            if (entriesBuilder_.isEmpty()) {
+              entriesBuilder_.dispose();
+              entriesBuilder_ = null;
+              entries_ = other.entries_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              entriesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getEntriesFieldBuilder() : null;
+            } else {
+              entriesBuilder_.addAllMessages(other.entries_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorrelationCell m =
+                    input.readMessage(
+                        com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorrelationCell.parser(),
+                        extensionRegistry);
+                if (entriesBuilder_ == null) {
+                  ensureEntriesIsMutable();
+                  entries_.add(m);
+                } else {
+                  entriesBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorrelationCell> entries_ =
+        java.util.Collections.emptyList();
+      private void ensureEntriesIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          entries_ = new java.util.ArrayList<com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorrelationCell>(entries_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorrelationCell, com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorrelationCell.Builder, com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorrelationCellOrBuilder> entriesBuilder_;
+
+      /**
+       * <code>repeated .CorrelationCell entries = 1;</code>
+       */
+      public java.util.List<com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorrelationCell> getEntriesList() {
+        if (entriesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(entries_);
+        } else {
+          return entriesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .CorrelationCell entries = 1;</code>
+       */
+      public int getEntriesCount() {
+        if (entriesBuilder_ == null) {
+          return entries_.size();
+        } else {
+          return entriesBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .CorrelationCell entries = 1;</code>
+       */
+      public com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorrelationCell getEntries(int index) {
+        if (entriesBuilder_ == null) {
+          return entries_.get(index);
+        } else {
+          return entriesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .CorrelationCell entries = 1;</code>
+       */
+      public Builder setEntries(
+          int index, com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorrelationCell value) {
+        if (entriesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureEntriesIsMutable();
+          entries_.set(index, value);
+          onChanged();
+        } else {
+          entriesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CorrelationCell entries = 1;</code>
+       */
+      public Builder setEntries(
+          int index, com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorrelationCell.Builder builderForValue) {
+        if (entriesBuilder_ == null) {
+          ensureEntriesIsMutable();
+          entries_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          entriesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CorrelationCell entries = 1;</code>
+       */
+      public Builder addEntries(com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorrelationCell value) {
+        if (entriesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureEntriesIsMutable();
+          entries_.add(value);
+          onChanged();
+        } else {
+          entriesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CorrelationCell entries = 1;</code>
+       */
+      public Builder addEntries(
+          int index, com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorrelationCell value) {
+        if (entriesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureEntriesIsMutable();
+          entries_.add(index, value);
+          onChanged();
+        } else {
+          entriesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CorrelationCell entries = 1;</code>
+       */
+      public Builder addEntries(
+          com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorrelationCell.Builder builderForValue) {
+        if (entriesBuilder_ == null) {
+          ensureEntriesIsMutable();
+          entries_.add(builderForValue.build());
+          onChanged();
+        } else {
+          entriesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CorrelationCell entries = 1;</code>
+       */
+      public Builder addEntries(
+          int index, com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorrelationCell.Builder builderForValue) {
+        if (entriesBuilder_ == null) {
+          ensureEntriesIsMutable();
+          entries_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          entriesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CorrelationCell entries = 1;</code>
+       */
+      public Builder addAllEntries(
+          java.lang.Iterable<? extends com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorrelationCell> values) {
+        if (entriesBuilder_ == null) {
+          ensureEntriesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, entries_);
+          onChanged();
+        } else {
+          entriesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CorrelationCell entries = 1;</code>
+       */
+      public Builder clearEntries() {
+        if (entriesBuilder_ == null) {
+          entries_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          entriesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CorrelationCell entries = 1;</code>
+       */
+      public Builder removeEntries(int index) {
+        if (entriesBuilder_ == null) {
+          ensureEntriesIsMutable();
+          entries_.remove(index);
+          onChanged();
+        } else {
+          entriesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CorrelationCell entries = 1;</code>
+       */
+      public com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorrelationCell.Builder getEntriesBuilder(
+          int index) {
+        return getEntriesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .CorrelationCell entries = 1;</code>
+       */
+      public com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorrelationCellOrBuilder getEntriesOrBuilder(
+          int index) {
+        if (entriesBuilder_ == null) {
+          return entries_.get(index);  } else {
+          return entriesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .CorrelationCell entries = 1;</code>
+       */
+      public java.util.List<? extends com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorrelationCellOrBuilder> 
+           getEntriesOrBuilderList() {
+        if (entriesBuilder_ != null) {
+          return entriesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(entries_);
+        }
+      }
+      /**
+       * <code>repeated .CorrelationCell entries = 1;</code>
+       */
+      public com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorrelationCell.Builder addEntriesBuilder() {
+        return getEntriesFieldBuilder().addBuilder(
+            com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorrelationCell.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .CorrelationCell entries = 1;</code>
+       */
+      public com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorrelationCell.Builder addEntriesBuilder(
+          int index) {
+        return getEntriesFieldBuilder().addBuilder(
+            index, com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorrelationCell.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .CorrelationCell entries = 1;</code>
+       */
+      public java.util.List<com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorrelationCell.Builder> 
+           getEntriesBuilderList() {
+        return getEntriesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorrelationCell, com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorrelationCell.Builder, com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorrelationCellOrBuilder> 
+          getEntriesFieldBuilder() {
+        if (entriesBuilder_ == null) {
+          entriesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorrelationCell, com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorrelationCell.Builder, com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorrelationCellOrBuilder>(
+                  entries_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          entries_ = null;
+        }
+        return entriesBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:CorrelationMatrix)
+    }
+
+    // @@protoc_insertion_point(class_scope:CorrelationMatrix)
+    private static final com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorrelationMatrix DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorrelationMatrix();
+    }
+
+    public static com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorrelationMatrix getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<CorrelationMatrix>
+        PARSER = new com.google.protobuf.AbstractParser<CorrelationMatrix>() {
+      @java.lang.Override
+      public CorrelationMatrix parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<CorrelationMatrix> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CorrelationMatrix> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorrelationMatrix getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface CorrelationCellOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:CorrelationCell)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string imntRow = 1;</code>
+     * @return The imntRow.
+     */
+    java.lang.String getImntRow();
+    /**
+     * <code>string imntRow = 1;</code>
+     * @return The bytes for imntRow.
+     */
+    com.google.protobuf.ByteString
+        getImntRowBytes();
+
+    /**
+     * <code>string imntCol = 2;</code>
+     * @return The imntCol.
+     */
+    java.lang.String getImntCol();
+    /**
+     * <code>string imntCol = 2;</code>
+     * @return The bytes for imntCol.
+     */
+    com.google.protobuf.ByteString
+        getImntColBytes();
+
+    /**
+     * <code>double value = 3;</code>
+     * @return The value.
+     */
+    double getValue();
+  }
+  /**
+   * Protobuf type {@code CorrelationCell}
+   */
+  public static final class CorrelationCell extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:CorrelationCell)
+      CorrelationCellOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CorrelationCell.newBuilder() to construct.
+    private CorrelationCell(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CorrelationCell() {
+      imntRow_ = "";
+      imntCol_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CorrelationCell();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.internal_static_CorrelationCell_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.internal_static_CorrelationCell_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorrelationCell.class, com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorrelationCell.Builder.class);
+    }
+
+    public static final int IMNTROW_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object imntRow_ = "";
+    /**
+     * <code>string imntRow = 1;</code>
+     * @return The imntRow.
+     */
+    @java.lang.Override
+    public java.lang.String getImntRow() {
+      java.lang.Object ref = imntRow_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        imntRow_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string imntRow = 1;</code>
+     * @return The bytes for imntRow.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getImntRowBytes() {
+      java.lang.Object ref = imntRow_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        imntRow_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int IMNTCOL_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object imntCol_ = "";
+    /**
+     * <code>string imntCol = 2;</code>
+     * @return The imntCol.
+     */
+    @java.lang.Override
+    public java.lang.String getImntCol() {
+      java.lang.Object ref = imntCol_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        imntCol_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string imntCol = 2;</code>
+     * @return The bytes for imntCol.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getImntColBytes() {
+      java.lang.Object ref = imntCol_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        imntCol_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int VALUE_FIELD_NUMBER = 3;
+    private double value_ = 0D;
+    /**
+     * <code>double value = 3;</code>
+     * @return The value.
+     */
+    @java.lang.Override
+    public double getValue() {
+      return value_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(imntRow_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, imntRow_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(imntCol_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, imntCol_);
+      }
+      if (java.lang.Double.doubleToRawLongBits(value_) != 0) {
+        output.writeDouble(3, value_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(imntRow_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, imntRow_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(imntCol_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, imntCol_);
+      }
+      if (java.lang.Double.doubleToRawLongBits(value_) != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeDoubleSize(3, value_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorrelationCell)) {
+        return super.equals(obj);
+      }
+      com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorrelationCell other = (com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorrelationCell) obj;
+
+      if (!getImntRow()
+          .equals(other.getImntRow())) return false;
+      if (!getImntCol()
+          .equals(other.getImntCol())) return false;
+      if (java.lang.Double.doubleToLongBits(getValue())
+          != java.lang.Double.doubleToLongBits(
+              other.getValue())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + IMNTROW_FIELD_NUMBER;
+      hash = (53 * hash) + getImntRow().hashCode();
+      hash = (37 * hash) + IMNTCOL_FIELD_NUMBER;
+      hash = (53 * hash) + getImntCol().hashCode();
+      hash = (37 * hash) + VALUE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          java.lang.Double.doubleToLongBits(getValue()));
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorrelationCell parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorrelationCell parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorrelationCell parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorrelationCell parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorrelationCell parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorrelationCell parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorrelationCell parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorrelationCell parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorrelationCell parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorrelationCell parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorrelationCell parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorrelationCell parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorrelationCell prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code CorrelationCell}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:CorrelationCell)
+        com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorrelationCellOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.internal_static_CorrelationCell_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.internal_static_CorrelationCell_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorrelationCell.class, com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorrelationCell.Builder.class);
+      }
+
+      // Construct using com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorrelationCell.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        imntRow_ = "";
+        imntCol_ = "";
+        value_ = 0D;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.internal_static_CorrelationCell_descriptor;
+      }
+
+      @java.lang.Override
+      public com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorrelationCell getDefaultInstanceForType() {
+        return com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorrelationCell.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorrelationCell build() {
+        com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorrelationCell result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorrelationCell buildPartial() {
+        com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorrelationCell result = new com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorrelationCell(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorrelationCell result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.imntRow_ = imntRow_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.imntCol_ = imntCol_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.value_ = value_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorrelationCell) {
+          return mergeFrom((com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorrelationCell)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorrelationCell other) {
+        if (other == com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorrelationCell.getDefaultInstance()) return this;
+        if (!other.getImntRow().isEmpty()) {
+          imntRow_ = other.imntRow_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getImntCol().isEmpty()) {
+          imntCol_ = other.imntCol_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (other.getValue() != 0D) {
+          setValue(other.getValue());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                imntRow_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                imntCol_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 25: {
+                value_ = input.readDouble();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 25
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object imntRow_ = "";
+      /**
+       * <code>string imntRow = 1;</code>
+       * @return The imntRow.
+       */
+      public java.lang.String getImntRow() {
+        java.lang.Object ref = imntRow_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          imntRow_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string imntRow = 1;</code>
+       * @return The bytes for imntRow.
+       */
+      public com.google.protobuf.ByteString
+          getImntRowBytes() {
+        java.lang.Object ref = imntRow_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          imntRow_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string imntRow = 1;</code>
+       * @param value The imntRow to set.
+       * @return This builder for chaining.
+       */
+      public Builder setImntRow(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        imntRow_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string imntRow = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearImntRow() {
+        imntRow_ = getDefaultInstance().getImntRow();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string imntRow = 1;</code>
+       * @param value The bytes for imntRow to set.
+       * @return This builder for chaining.
+       */
+      public Builder setImntRowBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        imntRow_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object imntCol_ = "";
+      /**
+       * <code>string imntCol = 2;</code>
+       * @return The imntCol.
+       */
+      public java.lang.String getImntCol() {
+        java.lang.Object ref = imntCol_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          imntCol_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string imntCol = 2;</code>
+       * @return The bytes for imntCol.
+       */
+      public com.google.protobuf.ByteString
+          getImntColBytes() {
+        java.lang.Object ref = imntCol_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          imntCol_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string imntCol = 2;</code>
+       * @param value The imntCol to set.
+       * @return This builder for chaining.
+       */
+      public Builder setImntCol(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        imntCol_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string imntCol = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearImntCol() {
+        imntCol_ = getDefaultInstance().getImntCol();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string imntCol = 2;</code>
+       * @param value The bytes for imntCol to set.
+       * @return This builder for chaining.
+       */
+      public Builder setImntColBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        imntCol_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private double value_ ;
+      /**
+       * <code>double value = 3;</code>
+       * @return The value.
+       */
+      @java.lang.Override
+      public double getValue() {
+        return value_;
+      }
+      /**
+       * <code>double value = 3;</code>
+       * @param value The value to set.
+       * @return This builder for chaining.
+       */
+      public Builder setValue(double value) {
+        
+        value_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>double value = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearValue() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        value_ = 0D;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:CorrelationCell)
+    }
+
+    // @@protoc_insertion_point(class_scope:CorrelationCell)
+    private static final com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorrelationCell DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorrelationCell();
+    }
+
+    public static com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorrelationCell getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<CorrelationCell>
+        PARSER = new com.google.protobuf.AbstractParser<CorrelationCell>() {
+      @java.lang.Override
+      public CorrelationCell parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<CorrelationCell> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CorrelationCell> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorrelationCell getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_Ticker_descriptor;
   private static final 
@@ -5801,6 +7363,16 @@ java.lang.String defaultValue) {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_Portfolio_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CorrelationMatrix_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_CorrelationMatrix_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CorrelationCell_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_CorrelationCell_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -5824,15 +7396,18 @@ java.lang.String defaultValue) {
       "MetaDataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(" +
       "\t:\0028\001\"c\n\tPortfolio\022$\n\013investments\030\001 \003(\0132" +
       "\013.InvestmentB\002\030\001\022 \n\013instruments\030\002 \003(\0132\013." +
-      "Instrument\022\016\n\006userId\030\003 \001(\t*\036\n\tDirection\022" +
-      "\007\n\003BUY\020\000\022\010\n\004SELL\020\001*<\n\013AccountType\022\010\n\004TFS" +
-      "A\020\000\022\006\n\002NR\020\001\022\010\n\004FHSA\020\002\022\010\n\004RRSP\020\003\022\007\n\003IND\020\004" +
-      "*z\n\016InstrumentType\022\n\n\006EQUITY\020\000\022\t\n\005INDEX\020" +
-      "\001\022\007\n\003ETF\020\002\022\016\n\nMUTUALFUND\020\003\022\n\n\006FUTURE\020\004\022\014" +
-      "\n\010CURRENCY\020\005\022\022\n\016CRYPTOCURRENCY\020\006\022\n\n\006OPTI" +
-      "ON\020\007BK\n8com.vv.personal.twm.artifactory." +
-      "generated.equitiesMarketB\017MarketDataProt" +
-      "ob\006proto3"
+      "Instrument\022\016\n\006userId\030\003 \001(\t\"6\n\021Correlatio" +
+      "nMatrix\022!\n\007entries\030\001 \003(\0132\020.CorrelationCe" +
+      "ll\"B\n\017CorrelationCell\022\017\n\007imntRow\030\001 \001(\t\022\017" +
+      "\n\007imntCol\030\002 \001(\t\022\r\n\005value\030\003 \001(\001*\036\n\tDirect" +
+      "ion\022\007\n\003BUY\020\000\022\010\n\004SELL\020\001*<\n\013AccountType\022\010\n" +
+      "\004TFSA\020\000\022\006\n\002NR\020\001\022\010\n\004FHSA\020\002\022\010\n\004RRSP\020\003\022\007\n\003I" +
+      "ND\020\004*z\n\016InstrumentType\022\n\n\006EQUITY\020\000\022\t\n\005IN" +
+      "DEX\020\001\022\007\n\003ETF\020\002\022\016\n\nMUTUALFUND\020\003\022\n\n\006FUTURE" +
+      "\020\004\022\014\n\010CURRENCY\020\005\022\022\n\016CRYPTOCURRENCY\020\006\022\n\n\006" +
+      "OPTION\020\007BK\n8com.vv.personal.twm.artifact" +
+      "ory.generated.equitiesMarketB\017MarketData" +
+      "Protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -5874,6 +7449,18 @@ java.lang.String defaultValue) {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_Portfolio_descriptor,
         new java.lang.String[] { "Investments", "Instruments", "UserId", });
+    internal_static_CorrelationMatrix_descriptor =
+      getDescriptor().getMessageTypes().get(5);
+    internal_static_CorrelationMatrix_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_CorrelationMatrix_descriptor,
+        new java.lang.String[] { "Entries", });
+    internal_static_CorrelationCell_descriptor =
+      getDescriptor().getMessageTypes().get(6);
+    internal_static_CorrelationCell_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_CorrelationCell_descriptor,
+        new java.lang.String[] { "ImntRow", "ImntCol", "Value", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

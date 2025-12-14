@@ -17,4 +17,22 @@ message DataPacket {
   map<string, int64> stringLongMap = 9;
 
   repeated string strings = 10;
+  repeated Table table = 11;
+  map<int32, string> intStringMap = 12;
+  repeated RepeatedDataPacket dataPacketList = 13;
+
+  message Table {
+    repeated TableCell entries = 1;
+  }
+
+  message TableCell {
+    string rowKey = 1;
+    string colKey = 2;
+    string value = 3;
+  }
+
+  message RepeatedDataPacket {
+    string uuid = 1;
+    DataPacket dataPacket = 2;
+  }
 }
