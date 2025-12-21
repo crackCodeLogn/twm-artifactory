@@ -419,6 +419,384 @@ public final class MarketDataProto {
     // @@protoc_insertion_point(enum_scope:InstrumentType)
   }
 
+  /**
+   * Protobuf enum {@code Signal}
+   */
+  public enum Signal
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>SIG_HOLD = 0;</code>
+     */
+    SIG_HOLD(0),
+    /**
+     * <code>SIG_BUY = 1;</code>
+     */
+    SIG_BUY(1),
+    /**
+     * <code>SIG_STRONG_BUY = 2;</code>
+     */
+    SIG_STRONG_BUY(2),
+    /**
+     * <code>SIG_SELL = 3;</code>
+     */
+    SIG_SELL(3),
+    /**
+     * <code>SIG_STRONG_SELL = 4;</code>
+     */
+    SIG_STRONG_SELL(4),
+    UNRECOGNIZED(-1),
+    ;
+
+    /**
+     * <code>SIG_HOLD = 0;</code>
+     */
+    public static final int SIG_HOLD_VALUE = 0;
+    /**
+     * <code>SIG_BUY = 1;</code>
+     */
+    public static final int SIG_BUY_VALUE = 1;
+    /**
+     * <code>SIG_STRONG_BUY = 2;</code>
+     */
+    public static final int SIG_STRONG_BUY_VALUE = 2;
+    /**
+     * <code>SIG_SELL = 3;</code>
+     */
+    public static final int SIG_SELL_VALUE = 3;
+    /**
+     * <code>SIG_STRONG_SELL = 4;</code>
+     */
+    public static final int SIG_STRONG_SELL_VALUE = 4;
+
+
+    public final int getNumber() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalArgumentException(
+            "Can't get the number of an unknown enum value.");
+      }
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static Signal valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static Signal forNumber(int value) {
+      switch (value) {
+        case 0: return SIG_HOLD;
+        case 1: return SIG_BUY;
+        case 2: return SIG_STRONG_BUY;
+        case 3: return SIG_SELL;
+        case 4: return SIG_STRONG_SELL;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<Signal>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        Signal> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<Signal>() {
+            public Signal findValueByNumber(int number) {
+              return Signal.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalStateException(
+            "Can't get the descriptor of an unrecognized enum value.");
+      }
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.getDescriptor().getEnumTypes().get(3);
+    }
+
+    private static final Signal[] VALUES = values();
+
+    public static Signal valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      if (desc.getIndex() == -1) {
+        return UNRECOGNIZED;
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private Signal(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:Signal)
+  }
+
+  /**
+   * Protobuf enum {@code Country}
+   */
+  public enum Country
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>CA = 0;</code>
+     */
+    CA(0),
+    /**
+     * <code>IN = 1;</code>
+     */
+    IN(1),
+    /**
+     * <code>US = 2;</code>
+     */
+    US(2),
+    /**
+     * <code>GLOBAL = 3;</code>
+     */
+    GLOBAL(3),
+    UNRECOGNIZED(-1),
+    ;
+
+    /**
+     * <code>CA = 0;</code>
+     */
+    public static final int CA_VALUE = 0;
+    /**
+     * <code>IN = 1;</code>
+     */
+    public static final int IN_VALUE = 1;
+    /**
+     * <code>US = 2;</code>
+     */
+    public static final int US_VALUE = 2;
+    /**
+     * <code>GLOBAL = 3;</code>
+     */
+    public static final int GLOBAL_VALUE = 3;
+
+
+    public final int getNumber() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalArgumentException(
+            "Can't get the number of an unknown enum value.");
+      }
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static Country valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static Country forNumber(int value) {
+      switch (value) {
+        case 0: return CA;
+        case 1: return IN;
+        case 2: return US;
+        case 3: return GLOBAL;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<Country>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        Country> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<Country>() {
+            public Country findValueByNumber(int number) {
+              return Country.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalStateException(
+            "Can't get the descriptor of an unrecognized enum value.");
+      }
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.getDescriptor().getEnumTypes().get(4);
+    }
+
+    private static final Country[] VALUES = values();
+
+    public static Country valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      if (desc.getIndex() == -1) {
+        return UNRECOGNIZED;
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private Country(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:Country)
+  }
+
+  /**
+   * Protobuf enum {@code CurrencyCode}
+   */
+  public enum CurrencyCode
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>CAD = 0;</code>
+     */
+    CAD(0),
+    /**
+     * <code>INR = 1;</code>
+     */
+    INR(1),
+    /**
+     * <code>USD = 2;</code>
+     */
+    USD(2),
+    UNRECOGNIZED(-1),
+    ;
+
+    /**
+     * <code>CAD = 0;</code>
+     */
+    public static final int CAD_VALUE = 0;
+    /**
+     * <code>INR = 1;</code>
+     */
+    public static final int INR_VALUE = 1;
+    /**
+     * <code>USD = 2;</code>
+     */
+    public static final int USD_VALUE = 2;
+
+
+    public final int getNumber() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalArgumentException(
+            "Can't get the number of an unknown enum value.");
+      }
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static CurrencyCode valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static CurrencyCode forNumber(int value) {
+      switch (value) {
+        case 0: return CAD;
+        case 1: return INR;
+        case 2: return USD;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<CurrencyCode>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        CurrencyCode> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<CurrencyCode>() {
+            public CurrencyCode findValueByNumber(int number) {
+              return CurrencyCode.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalStateException(
+            "Can't get the descriptor of an unrecognized enum value.");
+      }
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.getDescriptor().getEnumTypes().get(5);
+    }
+
+    private static final CurrencyCode[] VALUES = values();
+
+    public static CurrencyCode valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      if (desc.getIndex() == -1) {
+        return UNRECOGNIZED;
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private CurrencyCode(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:CurrencyCode)
+  }
+
   public interface TickerOrBuilder extends
       // @@protoc_insertion_point(interface_extends:Ticker)
       com.google.protobuf.MessageOrBuilder {
@@ -3208,6 +3586,74 @@ java.lang.String defaultValue);
      */
     com.google.protobuf.ByteString
         getUserIdBytes();
+
+    /**
+     * <code>.Signal signal = 7;</code>
+     * @return The enum numeric value on the wire for signal.
+     */
+    int getSignalValue();
+    /**
+     * <code>.Signal signal = 7;</code>
+     * @return The signal.
+     */
+    com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Signal getSignal();
+
+    /**
+     * <code>double dividendYield = 8;</code>
+     * @return The dividendYield.
+     */
+    double getDividendYield();
+
+    /**
+     * <code>double mer = 9;</code>
+     * @return The mer.
+     */
+    double getMer();
+
+    /**
+     * <code>string notes = 10;</code>
+     * @return The notes.
+     */
+    java.lang.String getNotes();
+    /**
+     * <code>string notes = 10;</code>
+     * @return The bytes for notes.
+     */
+    com.google.protobuf.ByteString
+        getNotesBytes();
+
+    /**
+     * <code>.Country issueCountry = 11;</code>
+     * @return The enum numeric value on the wire for issueCountry.
+     */
+    int getIssueCountryValue();
+    /**
+     * <code>.Country issueCountry = 11;</code>
+     * @return The issueCountry.
+     */
+    com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Country getIssueCountry();
+
+    /**
+     * <code>.Country originCountry = 12;</code>
+     * @return The enum numeric value on the wire for originCountry.
+     */
+    int getOriginCountryValue();
+    /**
+     * <code>.Country originCountry = 12;</code>
+     * @return The originCountry.
+     */
+    com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Country getOriginCountry();
+
+    /**
+     * <code>.CurrencyCode ccy = 13;</code>
+     * @return The enum numeric value on the wire for ccy.
+     */
+    int getCcyValue();
+    /**
+     * <code>.CurrencyCode ccy = 13;</code>
+     * @return The ccy.
+     */
+    com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CurrencyCode getCcy();
   }
   /**
    * Protobuf type {@code Instrument}
@@ -3225,6 +3671,11 @@ java.lang.String defaultValue);
       accountType_ = 0;
       direction_ = 0;
       userId_ = "";
+      signal_ = 0;
+      notes_ = "";
+      issueCountry_ = 0;
+      originCountry_ = 0;
+      ccy_ = 0;
     }
 
     @java.lang.Override
@@ -3455,6 +3906,139 @@ java.lang.String defaultValue) {
       }
     }
 
+    public static final int SIGNAL_FIELD_NUMBER = 7;
+    private int signal_ = 0;
+    /**
+     * <code>.Signal signal = 7;</code>
+     * @return The enum numeric value on the wire for signal.
+     */
+    @java.lang.Override public int getSignalValue() {
+      return signal_;
+    }
+    /**
+     * <code>.Signal signal = 7;</code>
+     * @return The signal.
+     */
+    @java.lang.Override public com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Signal getSignal() {
+      com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Signal result = com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Signal.forNumber(signal_);
+      return result == null ? com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Signal.UNRECOGNIZED : result;
+    }
+
+    public static final int DIVIDENDYIELD_FIELD_NUMBER = 8;
+    private double dividendYield_ = 0D;
+    /**
+     * <code>double dividendYield = 8;</code>
+     * @return The dividendYield.
+     */
+    @java.lang.Override
+    public double getDividendYield() {
+      return dividendYield_;
+    }
+
+    public static final int MER_FIELD_NUMBER = 9;
+    private double mer_ = 0D;
+    /**
+     * <code>double mer = 9;</code>
+     * @return The mer.
+     */
+    @java.lang.Override
+    public double getMer() {
+      return mer_;
+    }
+
+    public static final int NOTES_FIELD_NUMBER = 10;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object notes_ = "";
+    /**
+     * <code>string notes = 10;</code>
+     * @return The notes.
+     */
+    @java.lang.Override
+    public java.lang.String getNotes() {
+      java.lang.Object ref = notes_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        notes_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string notes = 10;</code>
+     * @return The bytes for notes.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNotesBytes() {
+      java.lang.Object ref = notes_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        notes_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ISSUECOUNTRY_FIELD_NUMBER = 11;
+    private int issueCountry_ = 0;
+    /**
+     * <code>.Country issueCountry = 11;</code>
+     * @return The enum numeric value on the wire for issueCountry.
+     */
+    @java.lang.Override public int getIssueCountryValue() {
+      return issueCountry_;
+    }
+    /**
+     * <code>.Country issueCountry = 11;</code>
+     * @return The issueCountry.
+     */
+    @java.lang.Override public com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Country getIssueCountry() {
+      com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Country result = com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Country.forNumber(issueCountry_);
+      return result == null ? com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Country.UNRECOGNIZED : result;
+    }
+
+    public static final int ORIGINCOUNTRY_FIELD_NUMBER = 12;
+    private int originCountry_ = 0;
+    /**
+     * <code>.Country originCountry = 12;</code>
+     * @return The enum numeric value on the wire for originCountry.
+     */
+    @java.lang.Override public int getOriginCountryValue() {
+      return originCountry_;
+    }
+    /**
+     * <code>.Country originCountry = 12;</code>
+     * @return The originCountry.
+     */
+    @java.lang.Override public com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Country getOriginCountry() {
+      com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Country result = com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Country.forNumber(originCountry_);
+      return result == null ? com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Country.UNRECOGNIZED : result;
+    }
+
+    public static final int CCY_FIELD_NUMBER = 13;
+    private int ccy_ = 0;
+    /**
+     * <code>.CurrencyCode ccy = 13;</code>
+     * @return The enum numeric value on the wire for ccy.
+     */
+    @java.lang.Override public int getCcyValue() {
+      return ccy_;
+    }
+    /**
+     * <code>.CurrencyCode ccy = 13;</code>
+     * @return The ccy.
+     */
+    @java.lang.Override public com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CurrencyCode getCcy() {
+      com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CurrencyCode result = com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CurrencyCode.forNumber(ccy_);
+      return result == null ? com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CurrencyCode.UNRECOGNIZED : result;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -3489,6 +4073,27 @@ java.lang.String defaultValue) {
           5);
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(userId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 6, userId_);
+      }
+      if (signal_ != com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Signal.SIG_HOLD.getNumber()) {
+        output.writeEnum(7, signal_);
+      }
+      if (java.lang.Double.doubleToRawLongBits(dividendYield_) != 0) {
+        output.writeDouble(8, dividendYield_);
+      }
+      if (java.lang.Double.doubleToRawLongBits(mer_) != 0) {
+        output.writeDouble(9, mer_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(notes_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 10, notes_);
+      }
+      if (issueCountry_ != com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Country.CA.getNumber()) {
+        output.writeEnum(11, issueCountry_);
+      }
+      if (originCountry_ != com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Country.CA.getNumber()) {
+        output.writeEnum(12, originCountry_);
+      }
+      if (ccy_ != com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CurrencyCode.CAD.getNumber()) {
+        output.writeEnum(13, ccy_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -3528,6 +4133,33 @@ java.lang.String defaultValue) {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(userId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, userId_);
       }
+      if (signal_ != com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Signal.SIG_HOLD.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(7, signal_);
+      }
+      if (java.lang.Double.doubleToRawLongBits(dividendYield_) != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeDoubleSize(8, dividendYield_);
+      }
+      if (java.lang.Double.doubleToRawLongBits(mer_) != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeDoubleSize(9, mer_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(notes_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(10, notes_);
+      }
+      if (issueCountry_ != com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Country.CA.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(11, issueCountry_);
+      }
+      if (originCountry_ != com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Country.CA.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(12, originCountry_);
+      }
+      if (ccy_ != com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CurrencyCode.CAD.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(13, ccy_);
+      }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
@@ -3557,6 +4189,18 @@ java.lang.String defaultValue) {
           other.internalGetMetaData())) return false;
       if (!getUserId()
           .equals(other.getUserId())) return false;
+      if (signal_ != other.signal_) return false;
+      if (java.lang.Double.doubleToLongBits(getDividendYield())
+          != java.lang.Double.doubleToLongBits(
+              other.getDividendYield())) return false;
+      if (java.lang.Double.doubleToLongBits(getMer())
+          != java.lang.Double.doubleToLongBits(
+              other.getMer())) return false;
+      if (!getNotes()
+          .equals(other.getNotes())) return false;
+      if (issueCountry_ != other.issueCountry_) return false;
+      if (originCountry_ != other.originCountry_) return false;
+      if (ccy_ != other.ccy_) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -3585,6 +4229,22 @@ java.lang.String defaultValue) {
       }
       hash = (37 * hash) + USERID_FIELD_NUMBER;
       hash = (53 * hash) + getUserId().hashCode();
+      hash = (37 * hash) + SIGNAL_FIELD_NUMBER;
+      hash = (53 * hash) + signal_;
+      hash = (37 * hash) + DIVIDENDYIELD_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          java.lang.Double.doubleToLongBits(getDividendYield()));
+      hash = (37 * hash) + MER_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          java.lang.Double.doubleToLongBits(getMer()));
+      hash = (37 * hash) + NOTES_FIELD_NUMBER;
+      hash = (53 * hash) + getNotes().hashCode();
+      hash = (37 * hash) + ISSUECOUNTRY_FIELD_NUMBER;
+      hash = (53 * hash) + issueCountry_;
+      hash = (37 * hash) + ORIGINCOUNTRY_FIELD_NUMBER;
+      hash = (53 * hash) + originCountry_;
+      hash = (37 * hash) + CCY_FIELD_NUMBER;
+      hash = (53 * hash) + ccy_;
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -3746,6 +4406,13 @@ java.lang.String defaultValue) {
         direction_ = 0;
         internalGetMutableMetaData().clear();
         userId_ = "";
+        signal_ = 0;
+        dividendYield_ = 0D;
+        mer_ = 0D;
+        notes_ = "";
+        issueCountry_ = 0;
+        originCountry_ = 0;
+        ccy_ = 0;
         return this;
       }
 
@@ -3799,6 +4466,27 @@ java.lang.String defaultValue) {
         }
         if (((from_bitField0_ & 0x00000020) != 0)) {
           result.userId_ = userId_;
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.signal_ = signal_;
+        }
+        if (((from_bitField0_ & 0x00000080) != 0)) {
+          result.dividendYield_ = dividendYield_;
+        }
+        if (((from_bitField0_ & 0x00000100) != 0)) {
+          result.mer_ = mer_;
+        }
+        if (((from_bitField0_ & 0x00000200) != 0)) {
+          result.notes_ = notes_;
+        }
+        if (((from_bitField0_ & 0x00000400) != 0)) {
+          result.issueCountry_ = issueCountry_;
+        }
+        if (((from_bitField0_ & 0x00000800) != 0)) {
+          result.originCountry_ = originCountry_;
+        }
+        if (((from_bitField0_ & 0x00001000) != 0)) {
+          result.ccy_ = ccy_;
         }
       }
 
@@ -3866,6 +4554,29 @@ java.lang.String defaultValue) {
           bitField0_ |= 0x00000020;
           onChanged();
         }
+        if (other.signal_ != 0) {
+          setSignalValue(other.getSignalValue());
+        }
+        if (other.getDividendYield() != 0D) {
+          setDividendYield(other.getDividendYield());
+        }
+        if (other.getMer() != 0D) {
+          setMer(other.getMer());
+        }
+        if (!other.getNotes().isEmpty()) {
+          notes_ = other.notes_;
+          bitField0_ |= 0x00000200;
+          onChanged();
+        }
+        if (other.issueCountry_ != 0) {
+          setIssueCountryValue(other.getIssueCountryValue());
+        }
+        if (other.originCountry_ != 0) {
+          setOriginCountryValue(other.getOriginCountryValue());
+        }
+        if (other.ccy_ != 0) {
+          setCcyValue(other.getCcyValue());
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -3928,6 +4639,41 @@ java.lang.String defaultValue) {
                 bitField0_ |= 0x00000020;
                 break;
               } // case 50
+              case 56: {
+                signal_ = input.readEnum();
+                bitField0_ |= 0x00000040;
+                break;
+              } // case 56
+              case 65: {
+                dividendYield_ = input.readDouble();
+                bitField0_ |= 0x00000080;
+                break;
+              } // case 65
+              case 73: {
+                mer_ = input.readDouble();
+                bitField0_ |= 0x00000100;
+                break;
+              } // case 73
+              case 82: {
+                notes_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000200;
+                break;
+              } // case 82
+              case 88: {
+                issueCountry_ = input.readEnum();
+                bitField0_ |= 0x00000400;
+                break;
+              } // case 88
+              case 96: {
+                originCountry_ = input.readEnum();
+                bitField0_ |= 0x00000800;
+                break;
+              } // case 96
+              case 104: {
+                ccy_ = input.readEnum();
+                bitField0_ |= 0x00001000;
+                break;
+              } // case 104
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -4397,6 +5143,354 @@ java.lang.String defaultValue) {
         checkByteStringIsUtf8(value);
         userId_ = value;
         bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+
+      private int signal_ = 0;
+      /**
+       * <code>.Signal signal = 7;</code>
+       * @return The enum numeric value on the wire for signal.
+       */
+      @java.lang.Override public int getSignalValue() {
+        return signal_;
+      }
+      /**
+       * <code>.Signal signal = 7;</code>
+       * @param value The enum numeric value on the wire for signal to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSignalValue(int value) {
+        signal_ = value;
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.Signal signal = 7;</code>
+       * @return The signal.
+       */
+      @java.lang.Override
+      public com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Signal getSignal() {
+        com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Signal result = com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Signal.forNumber(signal_);
+        return result == null ? com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Signal.UNRECOGNIZED : result;
+      }
+      /**
+       * <code>.Signal signal = 7;</code>
+       * @param value The signal to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSignal(com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Signal value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000040;
+        signal_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.Signal signal = 7;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSignal() {
+        bitField0_ = (bitField0_ & ~0x00000040);
+        signal_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private double dividendYield_ ;
+      /**
+       * <code>double dividendYield = 8;</code>
+       * @return The dividendYield.
+       */
+      @java.lang.Override
+      public double getDividendYield() {
+        return dividendYield_;
+      }
+      /**
+       * <code>double dividendYield = 8;</code>
+       * @param value The dividendYield to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDividendYield(double value) {
+        
+        dividendYield_ = value;
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>double dividendYield = 8;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDividendYield() {
+        bitField0_ = (bitField0_ & ~0x00000080);
+        dividendYield_ = 0D;
+        onChanged();
+        return this;
+      }
+
+      private double mer_ ;
+      /**
+       * <code>double mer = 9;</code>
+       * @return The mer.
+       */
+      @java.lang.Override
+      public double getMer() {
+        return mer_;
+      }
+      /**
+       * <code>double mer = 9;</code>
+       * @param value The mer to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMer(double value) {
+        
+        mer_ = value;
+        bitField0_ |= 0x00000100;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>double mer = 9;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMer() {
+        bitField0_ = (bitField0_ & ~0x00000100);
+        mer_ = 0D;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object notes_ = "";
+      /**
+       * <code>string notes = 10;</code>
+       * @return The notes.
+       */
+      public java.lang.String getNotes() {
+        java.lang.Object ref = notes_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          notes_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string notes = 10;</code>
+       * @return The bytes for notes.
+       */
+      public com.google.protobuf.ByteString
+          getNotesBytes() {
+        java.lang.Object ref = notes_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          notes_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string notes = 10;</code>
+       * @param value The notes to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNotes(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        notes_ = value;
+        bitField0_ |= 0x00000200;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string notes = 10;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNotes() {
+        notes_ = getDefaultInstance().getNotes();
+        bitField0_ = (bitField0_ & ~0x00000200);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string notes = 10;</code>
+       * @param value The bytes for notes to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNotesBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        notes_ = value;
+        bitField0_ |= 0x00000200;
+        onChanged();
+        return this;
+      }
+
+      private int issueCountry_ = 0;
+      /**
+       * <code>.Country issueCountry = 11;</code>
+       * @return The enum numeric value on the wire for issueCountry.
+       */
+      @java.lang.Override public int getIssueCountryValue() {
+        return issueCountry_;
+      }
+      /**
+       * <code>.Country issueCountry = 11;</code>
+       * @param value The enum numeric value on the wire for issueCountry to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIssueCountryValue(int value) {
+        issueCountry_ = value;
+        bitField0_ |= 0x00000400;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.Country issueCountry = 11;</code>
+       * @return The issueCountry.
+       */
+      @java.lang.Override
+      public com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Country getIssueCountry() {
+        com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Country result = com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Country.forNumber(issueCountry_);
+        return result == null ? com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Country.UNRECOGNIZED : result;
+      }
+      /**
+       * <code>.Country issueCountry = 11;</code>
+       * @param value The issueCountry to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIssueCountry(com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Country value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000400;
+        issueCountry_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.Country issueCountry = 11;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIssueCountry() {
+        bitField0_ = (bitField0_ & ~0x00000400);
+        issueCountry_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int originCountry_ = 0;
+      /**
+       * <code>.Country originCountry = 12;</code>
+       * @return The enum numeric value on the wire for originCountry.
+       */
+      @java.lang.Override public int getOriginCountryValue() {
+        return originCountry_;
+      }
+      /**
+       * <code>.Country originCountry = 12;</code>
+       * @param value The enum numeric value on the wire for originCountry to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOriginCountryValue(int value) {
+        originCountry_ = value;
+        bitField0_ |= 0x00000800;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.Country originCountry = 12;</code>
+       * @return The originCountry.
+       */
+      @java.lang.Override
+      public com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Country getOriginCountry() {
+        com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Country result = com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Country.forNumber(originCountry_);
+        return result == null ? com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Country.UNRECOGNIZED : result;
+      }
+      /**
+       * <code>.Country originCountry = 12;</code>
+       * @param value The originCountry to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOriginCountry(com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Country value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000800;
+        originCountry_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.Country originCountry = 12;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOriginCountry() {
+        bitField0_ = (bitField0_ & ~0x00000800);
+        originCountry_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int ccy_ = 0;
+      /**
+       * <code>.CurrencyCode ccy = 13;</code>
+       * @return The enum numeric value on the wire for ccy.
+       */
+      @java.lang.Override public int getCcyValue() {
+        return ccy_;
+      }
+      /**
+       * <code>.CurrencyCode ccy = 13;</code>
+       * @param value The enum numeric value on the wire for ccy to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCcyValue(int value) {
+        ccy_ = value;
+        bitField0_ |= 0x00001000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.CurrencyCode ccy = 13;</code>
+       * @return The ccy.
+       */
+      @java.lang.Override
+      public com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CurrencyCode getCcy() {
+        com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CurrencyCode result = com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CurrencyCode.forNumber(ccy_);
+        return result == null ? com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CurrencyCode.UNRECOGNIZED : result;
+      }
+      /**
+       * <code>.CurrencyCode ccy = 13;</code>
+       * @param value The ccy to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCcy(com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CurrencyCode value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00001000;
+        ccy_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.CurrencyCode ccy = 13;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCcy() {
+        bitField0_ = (bitField0_ & ~0x00001000);
+        ccy_ = 0;
         onChanged();
         return this;
       }
@@ -7388,26 +8482,35 @@ java.lang.String defaultValue) {
       "\006.Value\"$\n\005Value\022\014\n\004date\030\001 \001(\005\022\r\n\005price\030" +
       "\002 \001(\001\"Y\n\nInvestment\022\027\n\006ticker\030\001 \001(\0132\007.Ti" +
       "cker\022\013\n\003qty\030\002 \001(\001\022!\n\013accountType\030\003 \001(\0162\014" +
-      ".AccountType:\002\030\001\"\342\001\n\nInstrument\022\027\n\006ticke" +
+      ".AccountType:\002\030\001\"\213\003\n\nInstrument\022\027\n\006ticke" +
       "r\030\001 \001(\0132\007.Ticker\022\013\n\003qty\030\002 \001(\001\022!\n\013account" +
       "Type\030\003 \001(\0162\014.AccountType\022\035\n\tdirection\030\004 " +
       "\001(\0162\n.Direction\022+\n\010metaData\030\005 \003(\0132\031.Inst" +
-      "rument.MetaDataEntry\022\016\n\006userId\030\006 \001(\t\032/\n\r" +
-      "MetaDataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(" +
-      "\t:\0028\001\"c\n\tPortfolio\022$\n\013investments\030\001 \003(\0132" +
-      "\013.InvestmentB\002\030\001\022 \n\013instruments\030\002 \003(\0132\013." +
-      "Instrument\022\016\n\006userId\030\003 \001(\t\"6\n\021Correlatio" +
-      "nMatrix\022!\n\007entries\030\001 \003(\0132\020.CorrelationCe" +
-      "ll\"B\n\017CorrelationCell\022\017\n\007imntRow\030\001 \001(\t\022\017" +
-      "\n\007imntCol\030\002 \001(\t\022\r\n\005value\030\003 \001(\001*\036\n\tDirect" +
-      "ion\022\007\n\003BUY\020\000\022\010\n\004SELL\020\001*<\n\013AccountType\022\010\n" +
-      "\004TFSA\020\000\022\006\n\002NR\020\001\022\010\n\004FHSA\020\002\022\010\n\004RRSP\020\003\022\007\n\003I" +
-      "ND\020\004*z\n\016InstrumentType\022\n\n\006EQUITY\020\000\022\t\n\005IN" +
-      "DEX\020\001\022\007\n\003ETF\020\002\022\016\n\nMUTUALFUND\020\003\022\n\n\006FUTURE" +
-      "\020\004\022\014\n\010CURRENCY\020\005\022\022\n\016CRYPTOCURRENCY\020\006\022\n\n\006" +
-      "OPTION\020\007BK\n8com.vv.personal.twm.artifact" +
-      "ory.generated.equitiesMarketB\017MarketData" +
-      "Protob\006proto3"
+      "rument.MetaDataEntry\022\016\n\006userId\030\006 \001(\t\022\027\n\006" +
+      "signal\030\007 \001(\0162\007.Signal\022\025\n\rdividendYield\030\010" +
+      " \001(\001\022\013\n\003mer\030\t \001(\001\022\r\n\005notes\030\n \001(\t\022\036\n\014issu" +
+      "eCountry\030\013 \001(\0162\010.Country\022\037\n\roriginCountr" +
+      "y\030\014 \001(\0162\010.Country\022\032\n\003ccy\030\r \001(\0162\r.Currenc" +
+      "yCode\032/\n\rMetaDataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005v" +
+      "alue\030\002 \001(\t:\0028\001\"c\n\tPortfolio\022$\n\013investmen" +
+      "ts\030\001 \003(\0132\013.InvestmentB\002\030\001\022 \n\013instruments" +
+      "\030\002 \003(\0132\013.Instrument\022\016\n\006userId\030\003 \001(\t\"6\n\021C" +
+      "orrelationMatrix\022!\n\007entries\030\001 \003(\0132\020.Corr" +
+      "elationCell\"B\n\017CorrelationCell\022\017\n\007imntRo" +
+      "w\030\001 \001(\t\022\017\n\007imntCol\030\002 \001(\t\022\r\n\005value\030\003 \001(\001*" +
+      "\036\n\tDirection\022\007\n\003BUY\020\000\022\010\n\004SELL\020\001*<\n\013Accou" +
+      "ntType\022\010\n\004TFSA\020\000\022\006\n\002NR\020\001\022\010\n\004FHSA\020\002\022\010\n\004RR" +
+      "SP\020\003\022\007\n\003IND\020\004*z\n\016InstrumentType\022\n\n\006EQUIT" +
+      "Y\020\000\022\t\n\005INDEX\020\001\022\007\n\003ETF\020\002\022\016\n\nMUTUALFUND\020\003\022" +
+      "\n\n\006FUTURE\020\004\022\014\n\010CURRENCY\020\005\022\022\n\016CRYPTOCURRE" +
+      "NCY\020\006\022\n\n\006OPTION\020\007*Z\n\006Signal\022\014\n\010SIG_HOLD\020" +
+      "\000\022\013\n\007SIG_BUY\020\001\022\022\n\016SIG_STRONG_BUY\020\002\022\014\n\010SI" +
+      "G_SELL\020\003\022\023\n\017SIG_STRONG_SELL\020\004*-\n\007Country" +
+      "\022\006\n\002CA\020\000\022\006\n\002IN\020\001\022\006\n\002US\020\002\022\n\n\006GLOBAL\020\003*)\n\014" +
+      "CurrencyCode\022\007\n\003CAD\020\000\022\007\n\003INR\020\001\022\007\n\003USD\020\002B" +
+      "K\n8com.vv.personal.twm.artifactory.gener" +
+      "ated.equitiesMarketB\017MarketDataProtob\006pr" +
+      "oto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -7436,7 +8539,7 @@ java.lang.String defaultValue) {
     internal_static_Instrument_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_Instrument_descriptor,
-        new java.lang.String[] { "Ticker", "Qty", "AccountType", "Direction", "MetaData", "UserId", });
+        new java.lang.String[] { "Ticker", "Qty", "AccountType", "Direction", "MetaData", "UserId", "Signal", "DividendYield", "Mer", "Notes", "IssueCountry", "OriginCountry", "Ccy", });
     internal_static_Instrument_MetaDataEntry_descriptor =
       internal_static_Instrument_descriptor.getNestedTypes().get(0);
     internal_static_Instrument_MetaDataEntry_fieldAccessorTable = new

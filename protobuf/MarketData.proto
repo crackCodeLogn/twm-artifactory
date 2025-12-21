@@ -31,6 +31,14 @@ message Instrument {
   Direction direction = 4;
   map<string, string> metaData = 5;
   string userId = 6;
+
+  Signal signal = 7;
+  double dividendYield = 8;
+  double mer = 9;
+  string notes = 10;
+  Country issueCountry = 11;
+  Country originCountry = 12;
+  CurrencyCode ccy = 13;
 }
 
 message Portfolio {
@@ -71,4 +79,25 @@ enum InstrumentType {
   CURRENCY = 5;
   CRYPTOCURRENCY = 6;
   OPTION = 7;
+}
+
+enum Signal {
+  SIG_HOLD = 0;
+  SIG_BUY = 1;
+  SIG_STRONG_BUY = 2;
+  SIG_SELL = 3;
+  SIG_STRONG_SELL = 4;
+}
+
+enum Country {
+  CA = 0;
+  IN = 1;
+  US = 2;
+  GLOBAL = 3;
+}
+
+enum CurrencyCode {
+  CAD = 0;
+  INR = 1;
+  USD = 2;
 }
