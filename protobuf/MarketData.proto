@@ -39,6 +39,8 @@ message Instrument {
   Country issueCountry = 11;
   Country originCountry = 12;
   CurrencyCode ccy = 13;
+  repeated CorporateAction corporateActions = 14;
+  repeated CompanyOfficer companyOfficers = 15;
 }
 
 message Portfolio {
@@ -55,6 +57,22 @@ message CorrelationCell {
   string imntRow = 1;
   string imntCol = 2;
   double value = 3;
+}
+
+message CorporateAction {
+  string header = 1;
+  string message = 2;
+  string metaAmount = 3;
+  string metaDate = 4;
+  string metaEventType = 5;
+}
+
+message CompanyOfficer {
+  string name = 1;
+  string title = 2;
+  string totalPay = 3;
+  string fiscalYear = 4;
+  string age = 5;
 }
 
 enum Direction {

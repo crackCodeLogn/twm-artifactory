@@ -3654,6 +3654,54 @@ java.lang.String defaultValue);
      * @return The ccy.
      */
     com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CurrencyCode getCcy();
+
+    /**
+     * <code>repeated .CorporateAction corporateActions = 14;</code>
+     */
+    java.util.List<com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorporateAction> 
+        getCorporateActionsList();
+    /**
+     * <code>repeated .CorporateAction corporateActions = 14;</code>
+     */
+    com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorporateAction getCorporateActions(int index);
+    /**
+     * <code>repeated .CorporateAction corporateActions = 14;</code>
+     */
+    int getCorporateActionsCount();
+    /**
+     * <code>repeated .CorporateAction corporateActions = 14;</code>
+     */
+    java.util.List<? extends com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorporateActionOrBuilder> 
+        getCorporateActionsOrBuilderList();
+    /**
+     * <code>repeated .CorporateAction corporateActions = 14;</code>
+     */
+    com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorporateActionOrBuilder getCorporateActionsOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .CompanyOfficer companyOfficers = 15;</code>
+     */
+    java.util.List<com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CompanyOfficer> 
+        getCompanyOfficersList();
+    /**
+     * <code>repeated .CompanyOfficer companyOfficers = 15;</code>
+     */
+    com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CompanyOfficer getCompanyOfficers(int index);
+    /**
+     * <code>repeated .CompanyOfficer companyOfficers = 15;</code>
+     */
+    int getCompanyOfficersCount();
+    /**
+     * <code>repeated .CompanyOfficer companyOfficers = 15;</code>
+     */
+    java.util.List<? extends com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CompanyOfficerOrBuilder> 
+        getCompanyOfficersOrBuilderList();
+    /**
+     * <code>repeated .CompanyOfficer companyOfficers = 15;</code>
+     */
+    com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CompanyOfficerOrBuilder getCompanyOfficersOrBuilder(
+        int index);
   }
   /**
    * Protobuf type {@code Instrument}
@@ -3676,6 +3724,8 @@ java.lang.String defaultValue);
       issueCountry_ = 0;
       originCountry_ = 0;
       ccy_ = 0;
+      corporateActions_ = java.util.Collections.emptyList();
+      companyOfficers_ = java.util.Collections.emptyList();
     }
 
     @java.lang.Override
@@ -4039,6 +4089,88 @@ java.lang.String defaultValue) {
       return result == null ? com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CurrencyCode.UNRECOGNIZED : result;
     }
 
+    public static final int CORPORATEACTIONS_FIELD_NUMBER = 14;
+    @SuppressWarnings("serial")
+    private java.util.List<com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorporateAction> corporateActions_;
+    /**
+     * <code>repeated .CorporateAction corporateActions = 14;</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorporateAction> getCorporateActionsList() {
+      return corporateActions_;
+    }
+    /**
+     * <code>repeated .CorporateAction corporateActions = 14;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorporateActionOrBuilder> 
+        getCorporateActionsOrBuilderList() {
+      return corporateActions_;
+    }
+    /**
+     * <code>repeated .CorporateAction corporateActions = 14;</code>
+     */
+    @java.lang.Override
+    public int getCorporateActionsCount() {
+      return corporateActions_.size();
+    }
+    /**
+     * <code>repeated .CorporateAction corporateActions = 14;</code>
+     */
+    @java.lang.Override
+    public com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorporateAction getCorporateActions(int index) {
+      return corporateActions_.get(index);
+    }
+    /**
+     * <code>repeated .CorporateAction corporateActions = 14;</code>
+     */
+    @java.lang.Override
+    public com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorporateActionOrBuilder getCorporateActionsOrBuilder(
+        int index) {
+      return corporateActions_.get(index);
+    }
+
+    public static final int COMPANYOFFICERS_FIELD_NUMBER = 15;
+    @SuppressWarnings("serial")
+    private java.util.List<com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CompanyOfficer> companyOfficers_;
+    /**
+     * <code>repeated .CompanyOfficer companyOfficers = 15;</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CompanyOfficer> getCompanyOfficersList() {
+      return companyOfficers_;
+    }
+    /**
+     * <code>repeated .CompanyOfficer companyOfficers = 15;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CompanyOfficerOrBuilder> 
+        getCompanyOfficersOrBuilderList() {
+      return companyOfficers_;
+    }
+    /**
+     * <code>repeated .CompanyOfficer companyOfficers = 15;</code>
+     */
+    @java.lang.Override
+    public int getCompanyOfficersCount() {
+      return companyOfficers_.size();
+    }
+    /**
+     * <code>repeated .CompanyOfficer companyOfficers = 15;</code>
+     */
+    @java.lang.Override
+    public com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CompanyOfficer getCompanyOfficers(int index) {
+      return companyOfficers_.get(index);
+    }
+    /**
+     * <code>repeated .CompanyOfficer companyOfficers = 15;</code>
+     */
+    @java.lang.Override
+    public com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CompanyOfficerOrBuilder getCompanyOfficersOrBuilder(
+        int index) {
+      return companyOfficers_.get(index);
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -4094,6 +4226,12 @@ java.lang.String defaultValue) {
       }
       if (ccy_ != com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CurrencyCode.CAD.getNumber()) {
         output.writeEnum(13, ccy_);
+      }
+      for (int i = 0; i < corporateActions_.size(); i++) {
+        output.writeMessage(14, corporateActions_.get(i));
+      }
+      for (int i = 0; i < companyOfficers_.size(); i++) {
+        output.writeMessage(15, companyOfficers_.get(i));
       }
       getUnknownFields().writeTo(output);
     }
@@ -4160,6 +4298,14 @@ java.lang.String defaultValue) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(13, ccy_);
       }
+      for (int i = 0; i < corporateActions_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(14, corporateActions_.get(i));
+      }
+      for (int i = 0; i < companyOfficers_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(15, companyOfficers_.get(i));
+      }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
@@ -4201,6 +4347,10 @@ java.lang.String defaultValue) {
       if (issueCountry_ != other.issueCountry_) return false;
       if (originCountry_ != other.originCountry_) return false;
       if (ccy_ != other.ccy_) return false;
+      if (!getCorporateActionsList()
+          .equals(other.getCorporateActionsList())) return false;
+      if (!getCompanyOfficersList()
+          .equals(other.getCompanyOfficersList())) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -4245,6 +4395,14 @@ java.lang.String defaultValue) {
       hash = (53 * hash) + originCountry_;
       hash = (37 * hash) + CCY_FIELD_NUMBER;
       hash = (53 * hash) + ccy_;
+      if (getCorporateActionsCount() > 0) {
+        hash = (37 * hash) + CORPORATEACTIONS_FIELD_NUMBER;
+        hash = (53 * hash) + getCorporateActionsList().hashCode();
+      }
+      if (getCompanyOfficersCount() > 0) {
+        hash = (37 * hash) + COMPANYOFFICERS_FIELD_NUMBER;
+        hash = (53 * hash) + getCompanyOfficersList().hashCode();
+      }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -4413,6 +4571,20 @@ java.lang.String defaultValue) {
         issueCountry_ = 0;
         originCountry_ = 0;
         ccy_ = 0;
+        if (corporateActionsBuilder_ == null) {
+          corporateActions_ = java.util.Collections.emptyList();
+        } else {
+          corporateActions_ = null;
+          corporateActionsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00002000);
+        if (companyOfficersBuilder_ == null) {
+          companyOfficers_ = java.util.Collections.emptyList();
+        } else {
+          companyOfficers_ = null;
+          companyOfficersBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00004000);
         return this;
       }
 
@@ -4439,9 +4611,31 @@ java.lang.String defaultValue) {
       @java.lang.Override
       public com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Instrument buildPartial() {
         com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Instrument result = new com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Instrument(this);
+        buildPartialRepeatedFields(result);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartialRepeatedFields(com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Instrument result) {
+        if (corporateActionsBuilder_ == null) {
+          if (((bitField0_ & 0x00002000) != 0)) {
+            corporateActions_ = java.util.Collections.unmodifiableList(corporateActions_);
+            bitField0_ = (bitField0_ & ~0x00002000);
+          }
+          result.corporateActions_ = corporateActions_;
+        } else {
+          result.corporateActions_ = corporateActionsBuilder_.build();
+        }
+        if (companyOfficersBuilder_ == null) {
+          if (((bitField0_ & 0x00004000) != 0)) {
+            companyOfficers_ = java.util.Collections.unmodifiableList(companyOfficers_);
+            bitField0_ = (bitField0_ & ~0x00004000);
+          }
+          result.companyOfficers_ = companyOfficers_;
+        } else {
+          result.companyOfficers_ = companyOfficersBuilder_.build();
+        }
       }
 
       private void buildPartial0(com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Instrument result) {
@@ -4577,6 +4771,58 @@ java.lang.String defaultValue) {
         if (other.ccy_ != 0) {
           setCcyValue(other.getCcyValue());
         }
+        if (corporateActionsBuilder_ == null) {
+          if (!other.corporateActions_.isEmpty()) {
+            if (corporateActions_.isEmpty()) {
+              corporateActions_ = other.corporateActions_;
+              bitField0_ = (bitField0_ & ~0x00002000);
+            } else {
+              ensureCorporateActionsIsMutable();
+              corporateActions_.addAll(other.corporateActions_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.corporateActions_.isEmpty()) {
+            if (corporateActionsBuilder_.isEmpty()) {
+              corporateActionsBuilder_.dispose();
+              corporateActionsBuilder_ = null;
+              corporateActions_ = other.corporateActions_;
+              bitField0_ = (bitField0_ & ~0x00002000);
+              corporateActionsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getCorporateActionsFieldBuilder() : null;
+            } else {
+              corporateActionsBuilder_.addAllMessages(other.corporateActions_);
+            }
+          }
+        }
+        if (companyOfficersBuilder_ == null) {
+          if (!other.companyOfficers_.isEmpty()) {
+            if (companyOfficers_.isEmpty()) {
+              companyOfficers_ = other.companyOfficers_;
+              bitField0_ = (bitField0_ & ~0x00004000);
+            } else {
+              ensureCompanyOfficersIsMutable();
+              companyOfficers_.addAll(other.companyOfficers_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.companyOfficers_.isEmpty()) {
+            if (companyOfficersBuilder_.isEmpty()) {
+              companyOfficersBuilder_.dispose();
+              companyOfficersBuilder_ = null;
+              companyOfficers_ = other.companyOfficers_;
+              bitField0_ = (bitField0_ & ~0x00004000);
+              companyOfficersBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getCompanyOfficersFieldBuilder() : null;
+            } else {
+              companyOfficersBuilder_.addAllMessages(other.companyOfficers_);
+            }
+          }
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -4674,6 +4920,32 @@ java.lang.String defaultValue) {
                 bitField0_ |= 0x00001000;
                 break;
               } // case 104
+              case 114: {
+                com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorporateAction m =
+                    input.readMessage(
+                        com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorporateAction.parser(),
+                        extensionRegistry);
+                if (corporateActionsBuilder_ == null) {
+                  ensureCorporateActionsIsMutable();
+                  corporateActions_.add(m);
+                } else {
+                  corporateActionsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 114
+              case 122: {
+                com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CompanyOfficer m =
+                    input.readMessage(
+                        com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CompanyOfficer.parser(),
+                        extensionRegistry);
+                if (companyOfficersBuilder_ == null) {
+                  ensureCompanyOfficersIsMutable();
+                  companyOfficers_.add(m);
+                } else {
+                  companyOfficersBuilder_.addMessage(m);
+                }
+                break;
+              } // case 122
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -5493,6 +5765,486 @@ java.lang.String defaultValue) {
         ccy_ = 0;
         onChanged();
         return this;
+      }
+
+      private java.util.List<com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorporateAction> corporateActions_ =
+        java.util.Collections.emptyList();
+      private void ensureCorporateActionsIsMutable() {
+        if (!((bitField0_ & 0x00002000) != 0)) {
+          corporateActions_ = new java.util.ArrayList<com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorporateAction>(corporateActions_);
+          bitField0_ |= 0x00002000;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorporateAction, com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorporateAction.Builder, com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorporateActionOrBuilder> corporateActionsBuilder_;
+
+      /**
+       * <code>repeated .CorporateAction corporateActions = 14;</code>
+       */
+      public java.util.List<com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorporateAction> getCorporateActionsList() {
+        if (corporateActionsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(corporateActions_);
+        } else {
+          return corporateActionsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .CorporateAction corporateActions = 14;</code>
+       */
+      public int getCorporateActionsCount() {
+        if (corporateActionsBuilder_ == null) {
+          return corporateActions_.size();
+        } else {
+          return corporateActionsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .CorporateAction corporateActions = 14;</code>
+       */
+      public com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorporateAction getCorporateActions(int index) {
+        if (corporateActionsBuilder_ == null) {
+          return corporateActions_.get(index);
+        } else {
+          return corporateActionsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .CorporateAction corporateActions = 14;</code>
+       */
+      public Builder setCorporateActions(
+          int index, com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorporateAction value) {
+        if (corporateActionsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureCorporateActionsIsMutable();
+          corporateActions_.set(index, value);
+          onChanged();
+        } else {
+          corporateActionsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CorporateAction corporateActions = 14;</code>
+       */
+      public Builder setCorporateActions(
+          int index, com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorporateAction.Builder builderForValue) {
+        if (corporateActionsBuilder_ == null) {
+          ensureCorporateActionsIsMutable();
+          corporateActions_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          corporateActionsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CorporateAction corporateActions = 14;</code>
+       */
+      public Builder addCorporateActions(com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorporateAction value) {
+        if (corporateActionsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureCorporateActionsIsMutable();
+          corporateActions_.add(value);
+          onChanged();
+        } else {
+          corporateActionsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CorporateAction corporateActions = 14;</code>
+       */
+      public Builder addCorporateActions(
+          int index, com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorporateAction value) {
+        if (corporateActionsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureCorporateActionsIsMutable();
+          corporateActions_.add(index, value);
+          onChanged();
+        } else {
+          corporateActionsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CorporateAction corporateActions = 14;</code>
+       */
+      public Builder addCorporateActions(
+          com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorporateAction.Builder builderForValue) {
+        if (corporateActionsBuilder_ == null) {
+          ensureCorporateActionsIsMutable();
+          corporateActions_.add(builderForValue.build());
+          onChanged();
+        } else {
+          corporateActionsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CorporateAction corporateActions = 14;</code>
+       */
+      public Builder addCorporateActions(
+          int index, com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorporateAction.Builder builderForValue) {
+        if (corporateActionsBuilder_ == null) {
+          ensureCorporateActionsIsMutable();
+          corporateActions_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          corporateActionsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CorporateAction corporateActions = 14;</code>
+       */
+      public Builder addAllCorporateActions(
+          java.lang.Iterable<? extends com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorporateAction> values) {
+        if (corporateActionsBuilder_ == null) {
+          ensureCorporateActionsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, corporateActions_);
+          onChanged();
+        } else {
+          corporateActionsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CorporateAction corporateActions = 14;</code>
+       */
+      public Builder clearCorporateActions() {
+        if (corporateActionsBuilder_ == null) {
+          corporateActions_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00002000);
+          onChanged();
+        } else {
+          corporateActionsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CorporateAction corporateActions = 14;</code>
+       */
+      public Builder removeCorporateActions(int index) {
+        if (corporateActionsBuilder_ == null) {
+          ensureCorporateActionsIsMutable();
+          corporateActions_.remove(index);
+          onChanged();
+        } else {
+          corporateActionsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CorporateAction corporateActions = 14;</code>
+       */
+      public com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorporateAction.Builder getCorporateActionsBuilder(
+          int index) {
+        return getCorporateActionsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .CorporateAction corporateActions = 14;</code>
+       */
+      public com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorporateActionOrBuilder getCorporateActionsOrBuilder(
+          int index) {
+        if (corporateActionsBuilder_ == null) {
+          return corporateActions_.get(index);  } else {
+          return corporateActionsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .CorporateAction corporateActions = 14;</code>
+       */
+      public java.util.List<? extends com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorporateActionOrBuilder> 
+           getCorporateActionsOrBuilderList() {
+        if (corporateActionsBuilder_ != null) {
+          return corporateActionsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(corporateActions_);
+        }
+      }
+      /**
+       * <code>repeated .CorporateAction corporateActions = 14;</code>
+       */
+      public com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorporateAction.Builder addCorporateActionsBuilder() {
+        return getCorporateActionsFieldBuilder().addBuilder(
+            com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorporateAction.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .CorporateAction corporateActions = 14;</code>
+       */
+      public com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorporateAction.Builder addCorporateActionsBuilder(
+          int index) {
+        return getCorporateActionsFieldBuilder().addBuilder(
+            index, com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorporateAction.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .CorporateAction corporateActions = 14;</code>
+       */
+      public java.util.List<com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorporateAction.Builder> 
+           getCorporateActionsBuilderList() {
+        return getCorporateActionsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorporateAction, com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorporateAction.Builder, com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorporateActionOrBuilder> 
+          getCorporateActionsFieldBuilder() {
+        if (corporateActionsBuilder_ == null) {
+          corporateActionsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorporateAction, com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorporateAction.Builder, com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorporateActionOrBuilder>(
+                  corporateActions_,
+                  ((bitField0_ & 0x00002000) != 0),
+                  getParentForChildren(),
+                  isClean());
+          corporateActions_ = null;
+        }
+        return corporateActionsBuilder_;
+      }
+
+      private java.util.List<com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CompanyOfficer> companyOfficers_ =
+        java.util.Collections.emptyList();
+      private void ensureCompanyOfficersIsMutable() {
+        if (!((bitField0_ & 0x00004000) != 0)) {
+          companyOfficers_ = new java.util.ArrayList<com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CompanyOfficer>(companyOfficers_);
+          bitField0_ |= 0x00004000;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CompanyOfficer, com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CompanyOfficer.Builder, com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CompanyOfficerOrBuilder> companyOfficersBuilder_;
+
+      /**
+       * <code>repeated .CompanyOfficer companyOfficers = 15;</code>
+       */
+      public java.util.List<com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CompanyOfficer> getCompanyOfficersList() {
+        if (companyOfficersBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(companyOfficers_);
+        } else {
+          return companyOfficersBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .CompanyOfficer companyOfficers = 15;</code>
+       */
+      public int getCompanyOfficersCount() {
+        if (companyOfficersBuilder_ == null) {
+          return companyOfficers_.size();
+        } else {
+          return companyOfficersBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .CompanyOfficer companyOfficers = 15;</code>
+       */
+      public com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CompanyOfficer getCompanyOfficers(int index) {
+        if (companyOfficersBuilder_ == null) {
+          return companyOfficers_.get(index);
+        } else {
+          return companyOfficersBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .CompanyOfficer companyOfficers = 15;</code>
+       */
+      public Builder setCompanyOfficers(
+          int index, com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CompanyOfficer value) {
+        if (companyOfficersBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureCompanyOfficersIsMutable();
+          companyOfficers_.set(index, value);
+          onChanged();
+        } else {
+          companyOfficersBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CompanyOfficer companyOfficers = 15;</code>
+       */
+      public Builder setCompanyOfficers(
+          int index, com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CompanyOfficer.Builder builderForValue) {
+        if (companyOfficersBuilder_ == null) {
+          ensureCompanyOfficersIsMutable();
+          companyOfficers_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          companyOfficersBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CompanyOfficer companyOfficers = 15;</code>
+       */
+      public Builder addCompanyOfficers(com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CompanyOfficer value) {
+        if (companyOfficersBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureCompanyOfficersIsMutable();
+          companyOfficers_.add(value);
+          onChanged();
+        } else {
+          companyOfficersBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CompanyOfficer companyOfficers = 15;</code>
+       */
+      public Builder addCompanyOfficers(
+          int index, com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CompanyOfficer value) {
+        if (companyOfficersBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureCompanyOfficersIsMutable();
+          companyOfficers_.add(index, value);
+          onChanged();
+        } else {
+          companyOfficersBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CompanyOfficer companyOfficers = 15;</code>
+       */
+      public Builder addCompanyOfficers(
+          com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CompanyOfficer.Builder builderForValue) {
+        if (companyOfficersBuilder_ == null) {
+          ensureCompanyOfficersIsMutable();
+          companyOfficers_.add(builderForValue.build());
+          onChanged();
+        } else {
+          companyOfficersBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CompanyOfficer companyOfficers = 15;</code>
+       */
+      public Builder addCompanyOfficers(
+          int index, com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CompanyOfficer.Builder builderForValue) {
+        if (companyOfficersBuilder_ == null) {
+          ensureCompanyOfficersIsMutable();
+          companyOfficers_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          companyOfficersBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CompanyOfficer companyOfficers = 15;</code>
+       */
+      public Builder addAllCompanyOfficers(
+          java.lang.Iterable<? extends com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CompanyOfficer> values) {
+        if (companyOfficersBuilder_ == null) {
+          ensureCompanyOfficersIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, companyOfficers_);
+          onChanged();
+        } else {
+          companyOfficersBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CompanyOfficer companyOfficers = 15;</code>
+       */
+      public Builder clearCompanyOfficers() {
+        if (companyOfficersBuilder_ == null) {
+          companyOfficers_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00004000);
+          onChanged();
+        } else {
+          companyOfficersBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CompanyOfficer companyOfficers = 15;</code>
+       */
+      public Builder removeCompanyOfficers(int index) {
+        if (companyOfficersBuilder_ == null) {
+          ensureCompanyOfficersIsMutable();
+          companyOfficers_.remove(index);
+          onChanged();
+        } else {
+          companyOfficersBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CompanyOfficer companyOfficers = 15;</code>
+       */
+      public com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CompanyOfficer.Builder getCompanyOfficersBuilder(
+          int index) {
+        return getCompanyOfficersFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .CompanyOfficer companyOfficers = 15;</code>
+       */
+      public com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CompanyOfficerOrBuilder getCompanyOfficersOrBuilder(
+          int index) {
+        if (companyOfficersBuilder_ == null) {
+          return companyOfficers_.get(index);  } else {
+          return companyOfficersBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .CompanyOfficer companyOfficers = 15;</code>
+       */
+      public java.util.List<? extends com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CompanyOfficerOrBuilder> 
+           getCompanyOfficersOrBuilderList() {
+        if (companyOfficersBuilder_ != null) {
+          return companyOfficersBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(companyOfficers_);
+        }
+      }
+      /**
+       * <code>repeated .CompanyOfficer companyOfficers = 15;</code>
+       */
+      public com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CompanyOfficer.Builder addCompanyOfficersBuilder() {
+        return getCompanyOfficersFieldBuilder().addBuilder(
+            com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CompanyOfficer.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .CompanyOfficer companyOfficers = 15;</code>
+       */
+      public com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CompanyOfficer.Builder addCompanyOfficersBuilder(
+          int index) {
+        return getCompanyOfficersFieldBuilder().addBuilder(
+            index, com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CompanyOfficer.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .CompanyOfficer companyOfficers = 15;</code>
+       */
+      public java.util.List<com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CompanyOfficer.Builder> 
+           getCompanyOfficersBuilderList() {
+        return getCompanyOfficersFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CompanyOfficer, com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CompanyOfficer.Builder, com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CompanyOfficerOrBuilder> 
+          getCompanyOfficersFieldBuilder() {
+        if (companyOfficersBuilder_ == null) {
+          companyOfficersBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CompanyOfficer, com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CompanyOfficer.Builder, com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CompanyOfficerOrBuilder>(
+                  companyOfficers_,
+                  ((bitField0_ & 0x00004000) != 0),
+                  getParentForChildren(),
+                  isClean());
+          companyOfficers_ = null;
+        }
+        return companyOfficersBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -8427,6 +9179,2300 @@ java.lang.String defaultValue) {
 
   }
 
+  public interface CorporateActionOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:CorporateAction)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string header = 1;</code>
+     * @return The header.
+     */
+    java.lang.String getHeader();
+    /**
+     * <code>string header = 1;</code>
+     * @return The bytes for header.
+     */
+    com.google.protobuf.ByteString
+        getHeaderBytes();
+
+    /**
+     * <code>string message = 2;</code>
+     * @return The message.
+     */
+    java.lang.String getMessage();
+    /**
+     * <code>string message = 2;</code>
+     * @return The bytes for message.
+     */
+    com.google.protobuf.ByteString
+        getMessageBytes();
+
+    /**
+     * <code>string metaAmount = 3;</code>
+     * @return The metaAmount.
+     */
+    java.lang.String getMetaAmount();
+    /**
+     * <code>string metaAmount = 3;</code>
+     * @return The bytes for metaAmount.
+     */
+    com.google.protobuf.ByteString
+        getMetaAmountBytes();
+
+    /**
+     * <code>string metaDate = 4;</code>
+     * @return The metaDate.
+     */
+    java.lang.String getMetaDate();
+    /**
+     * <code>string metaDate = 4;</code>
+     * @return The bytes for metaDate.
+     */
+    com.google.protobuf.ByteString
+        getMetaDateBytes();
+
+    /**
+     * <code>string metaEventType = 5;</code>
+     * @return The metaEventType.
+     */
+    java.lang.String getMetaEventType();
+    /**
+     * <code>string metaEventType = 5;</code>
+     * @return The bytes for metaEventType.
+     */
+    com.google.protobuf.ByteString
+        getMetaEventTypeBytes();
+  }
+  /**
+   * Protobuf type {@code CorporateAction}
+   */
+  public static final class CorporateAction extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:CorporateAction)
+      CorporateActionOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CorporateAction.newBuilder() to construct.
+    private CorporateAction(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CorporateAction() {
+      header_ = "";
+      message_ = "";
+      metaAmount_ = "";
+      metaDate_ = "";
+      metaEventType_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CorporateAction();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.internal_static_CorporateAction_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.internal_static_CorporateAction_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorporateAction.class, com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorporateAction.Builder.class);
+    }
+
+    public static final int HEADER_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object header_ = "";
+    /**
+     * <code>string header = 1;</code>
+     * @return The header.
+     */
+    @java.lang.Override
+    public java.lang.String getHeader() {
+      java.lang.Object ref = header_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        header_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string header = 1;</code>
+     * @return The bytes for header.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getHeaderBytes() {
+      java.lang.Object ref = header_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        header_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int MESSAGE_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object message_ = "";
+    /**
+     * <code>string message = 2;</code>
+     * @return The message.
+     */
+    @java.lang.Override
+    public java.lang.String getMessage() {
+      java.lang.Object ref = message_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        message_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string message = 2;</code>
+     * @return The bytes for message.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getMessageBytes() {
+      java.lang.Object ref = message_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        message_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int METAAMOUNT_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object metaAmount_ = "";
+    /**
+     * <code>string metaAmount = 3;</code>
+     * @return The metaAmount.
+     */
+    @java.lang.Override
+    public java.lang.String getMetaAmount() {
+      java.lang.Object ref = metaAmount_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        metaAmount_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string metaAmount = 3;</code>
+     * @return The bytes for metaAmount.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getMetaAmountBytes() {
+      java.lang.Object ref = metaAmount_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        metaAmount_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int METADATE_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object metaDate_ = "";
+    /**
+     * <code>string metaDate = 4;</code>
+     * @return The metaDate.
+     */
+    @java.lang.Override
+    public java.lang.String getMetaDate() {
+      java.lang.Object ref = metaDate_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        metaDate_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string metaDate = 4;</code>
+     * @return The bytes for metaDate.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getMetaDateBytes() {
+      java.lang.Object ref = metaDate_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        metaDate_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int METAEVENTTYPE_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object metaEventType_ = "";
+    /**
+     * <code>string metaEventType = 5;</code>
+     * @return The metaEventType.
+     */
+    @java.lang.Override
+    public java.lang.String getMetaEventType() {
+      java.lang.Object ref = metaEventType_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        metaEventType_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string metaEventType = 5;</code>
+     * @return The bytes for metaEventType.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getMetaEventTypeBytes() {
+      java.lang.Object ref = metaEventType_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        metaEventType_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(header_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, header_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(message_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, message_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(metaAmount_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, metaAmount_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(metaDate_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, metaDate_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(metaEventType_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, metaEventType_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(header_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, header_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(message_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, message_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(metaAmount_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, metaAmount_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(metaDate_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, metaDate_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(metaEventType_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, metaEventType_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorporateAction)) {
+        return super.equals(obj);
+      }
+      com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorporateAction other = (com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorporateAction) obj;
+
+      if (!getHeader()
+          .equals(other.getHeader())) return false;
+      if (!getMessage()
+          .equals(other.getMessage())) return false;
+      if (!getMetaAmount()
+          .equals(other.getMetaAmount())) return false;
+      if (!getMetaDate()
+          .equals(other.getMetaDate())) return false;
+      if (!getMetaEventType()
+          .equals(other.getMetaEventType())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + HEADER_FIELD_NUMBER;
+      hash = (53 * hash) + getHeader().hashCode();
+      hash = (37 * hash) + MESSAGE_FIELD_NUMBER;
+      hash = (53 * hash) + getMessage().hashCode();
+      hash = (37 * hash) + METAAMOUNT_FIELD_NUMBER;
+      hash = (53 * hash) + getMetaAmount().hashCode();
+      hash = (37 * hash) + METADATE_FIELD_NUMBER;
+      hash = (53 * hash) + getMetaDate().hashCode();
+      hash = (37 * hash) + METAEVENTTYPE_FIELD_NUMBER;
+      hash = (53 * hash) + getMetaEventType().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorporateAction parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorporateAction parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorporateAction parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorporateAction parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorporateAction parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorporateAction parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorporateAction parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorporateAction parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorporateAction parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorporateAction parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorporateAction parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorporateAction parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorporateAction prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code CorporateAction}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:CorporateAction)
+        com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorporateActionOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.internal_static_CorporateAction_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.internal_static_CorporateAction_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorporateAction.class, com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorporateAction.Builder.class);
+      }
+
+      // Construct using com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorporateAction.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        header_ = "";
+        message_ = "";
+        metaAmount_ = "";
+        metaDate_ = "";
+        metaEventType_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.internal_static_CorporateAction_descriptor;
+      }
+
+      @java.lang.Override
+      public com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorporateAction getDefaultInstanceForType() {
+        return com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorporateAction.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorporateAction build() {
+        com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorporateAction result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorporateAction buildPartial() {
+        com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorporateAction result = new com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorporateAction(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorporateAction result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.header_ = header_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.message_ = message_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.metaAmount_ = metaAmount_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.metaDate_ = metaDate_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.metaEventType_ = metaEventType_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorporateAction) {
+          return mergeFrom((com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorporateAction)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorporateAction other) {
+        if (other == com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorporateAction.getDefaultInstance()) return this;
+        if (!other.getHeader().isEmpty()) {
+          header_ = other.header_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getMessage().isEmpty()) {
+          message_ = other.message_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getMetaAmount().isEmpty()) {
+          metaAmount_ = other.metaAmount_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (!other.getMetaDate().isEmpty()) {
+          metaDate_ = other.metaDate_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        if (!other.getMetaEventType().isEmpty()) {
+          metaEventType_ = other.metaEventType_;
+          bitField0_ |= 0x00000010;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                header_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                message_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                metaAmount_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                metaDate_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 42: {
+                metaEventType_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object header_ = "";
+      /**
+       * <code>string header = 1;</code>
+       * @return The header.
+       */
+      public java.lang.String getHeader() {
+        java.lang.Object ref = header_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          header_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string header = 1;</code>
+       * @return The bytes for header.
+       */
+      public com.google.protobuf.ByteString
+          getHeaderBytes() {
+        java.lang.Object ref = header_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          header_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string header = 1;</code>
+       * @param value The header to set.
+       * @return This builder for chaining.
+       */
+      public Builder setHeader(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        header_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string header = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearHeader() {
+        header_ = getDefaultInstance().getHeader();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string header = 1;</code>
+       * @param value The bytes for header to set.
+       * @return This builder for chaining.
+       */
+      public Builder setHeaderBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        header_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object message_ = "";
+      /**
+       * <code>string message = 2;</code>
+       * @return The message.
+       */
+      public java.lang.String getMessage() {
+        java.lang.Object ref = message_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          message_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string message = 2;</code>
+       * @return The bytes for message.
+       */
+      public com.google.protobuf.ByteString
+          getMessageBytes() {
+        java.lang.Object ref = message_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          message_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string message = 2;</code>
+       * @param value The message to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMessage(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        message_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string message = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMessage() {
+        message_ = getDefaultInstance().getMessage();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string message = 2;</code>
+       * @param value The bytes for message to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMessageBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        message_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object metaAmount_ = "";
+      /**
+       * <code>string metaAmount = 3;</code>
+       * @return The metaAmount.
+       */
+      public java.lang.String getMetaAmount() {
+        java.lang.Object ref = metaAmount_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          metaAmount_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string metaAmount = 3;</code>
+       * @return The bytes for metaAmount.
+       */
+      public com.google.protobuf.ByteString
+          getMetaAmountBytes() {
+        java.lang.Object ref = metaAmount_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          metaAmount_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string metaAmount = 3;</code>
+       * @param value The metaAmount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMetaAmount(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        metaAmount_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string metaAmount = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMetaAmount() {
+        metaAmount_ = getDefaultInstance().getMetaAmount();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string metaAmount = 3;</code>
+       * @param value The bytes for metaAmount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMetaAmountBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        metaAmount_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object metaDate_ = "";
+      /**
+       * <code>string metaDate = 4;</code>
+       * @return The metaDate.
+       */
+      public java.lang.String getMetaDate() {
+        java.lang.Object ref = metaDate_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          metaDate_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string metaDate = 4;</code>
+       * @return The bytes for metaDate.
+       */
+      public com.google.protobuf.ByteString
+          getMetaDateBytes() {
+        java.lang.Object ref = metaDate_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          metaDate_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string metaDate = 4;</code>
+       * @param value The metaDate to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMetaDate(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        metaDate_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string metaDate = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMetaDate() {
+        metaDate_ = getDefaultInstance().getMetaDate();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string metaDate = 4;</code>
+       * @param value The bytes for metaDate to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMetaDateBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        metaDate_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object metaEventType_ = "";
+      /**
+       * <code>string metaEventType = 5;</code>
+       * @return The metaEventType.
+       */
+      public java.lang.String getMetaEventType() {
+        java.lang.Object ref = metaEventType_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          metaEventType_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string metaEventType = 5;</code>
+       * @return The bytes for metaEventType.
+       */
+      public com.google.protobuf.ByteString
+          getMetaEventTypeBytes() {
+        java.lang.Object ref = metaEventType_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          metaEventType_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string metaEventType = 5;</code>
+       * @param value The metaEventType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMetaEventType(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        metaEventType_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string metaEventType = 5;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMetaEventType() {
+        metaEventType_ = getDefaultInstance().getMetaEventType();
+        bitField0_ = (bitField0_ & ~0x00000010);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string metaEventType = 5;</code>
+       * @param value The bytes for metaEventType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMetaEventTypeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        metaEventType_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:CorporateAction)
+    }
+
+    // @@protoc_insertion_point(class_scope:CorporateAction)
+    private static final com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorporateAction DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorporateAction();
+    }
+
+    public static com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorporateAction getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<CorporateAction>
+        PARSER = new com.google.protobuf.AbstractParser<CorporateAction>() {
+      @java.lang.Override
+      public CorporateAction parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<CorporateAction> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CorporateAction> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorporateAction getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface CompanyOfficerOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:CompanyOfficer)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string name = 1;</code>
+     * @return The name.
+     */
+    java.lang.String getName();
+    /**
+     * <code>string name = 1;</code>
+     * @return The bytes for name.
+     */
+    com.google.protobuf.ByteString
+        getNameBytes();
+
+    /**
+     * <code>string title = 2;</code>
+     * @return The title.
+     */
+    java.lang.String getTitle();
+    /**
+     * <code>string title = 2;</code>
+     * @return The bytes for title.
+     */
+    com.google.protobuf.ByteString
+        getTitleBytes();
+
+    /**
+     * <code>string totalPay = 3;</code>
+     * @return The totalPay.
+     */
+    java.lang.String getTotalPay();
+    /**
+     * <code>string totalPay = 3;</code>
+     * @return The bytes for totalPay.
+     */
+    com.google.protobuf.ByteString
+        getTotalPayBytes();
+
+    /**
+     * <code>string fiscalYear = 4;</code>
+     * @return The fiscalYear.
+     */
+    java.lang.String getFiscalYear();
+    /**
+     * <code>string fiscalYear = 4;</code>
+     * @return The bytes for fiscalYear.
+     */
+    com.google.protobuf.ByteString
+        getFiscalYearBytes();
+
+    /**
+     * <code>string age = 5;</code>
+     * @return The age.
+     */
+    java.lang.String getAge();
+    /**
+     * <code>string age = 5;</code>
+     * @return The bytes for age.
+     */
+    com.google.protobuf.ByteString
+        getAgeBytes();
+  }
+  /**
+   * Protobuf type {@code CompanyOfficer}
+   */
+  public static final class CompanyOfficer extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:CompanyOfficer)
+      CompanyOfficerOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CompanyOfficer.newBuilder() to construct.
+    private CompanyOfficer(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CompanyOfficer() {
+      name_ = "";
+      title_ = "";
+      totalPay_ = "";
+      fiscalYear_ = "";
+      age_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CompanyOfficer();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.internal_static_CompanyOfficer_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.internal_static_CompanyOfficer_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CompanyOfficer.class, com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CompanyOfficer.Builder.class);
+    }
+
+    public static final int NAME_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object name_ = "";
+    /**
+     * <code>string name = 1;</code>
+     * @return The name.
+     */
+    @java.lang.Override
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        name_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string name = 1;</code>
+     * @return The bytes for name.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        name_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TITLE_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object title_ = "";
+    /**
+     * <code>string title = 2;</code>
+     * @return The title.
+     */
+    @java.lang.Override
+    public java.lang.String getTitle() {
+      java.lang.Object ref = title_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        title_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string title = 2;</code>
+     * @return The bytes for title.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTitleBytes() {
+      java.lang.Object ref = title_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        title_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TOTALPAY_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object totalPay_ = "";
+    /**
+     * <code>string totalPay = 3;</code>
+     * @return The totalPay.
+     */
+    @java.lang.Override
+    public java.lang.String getTotalPay() {
+      java.lang.Object ref = totalPay_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        totalPay_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string totalPay = 3;</code>
+     * @return The bytes for totalPay.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTotalPayBytes() {
+      java.lang.Object ref = totalPay_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        totalPay_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int FISCALYEAR_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object fiscalYear_ = "";
+    /**
+     * <code>string fiscalYear = 4;</code>
+     * @return The fiscalYear.
+     */
+    @java.lang.Override
+    public java.lang.String getFiscalYear() {
+      java.lang.Object ref = fiscalYear_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        fiscalYear_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string fiscalYear = 4;</code>
+     * @return The bytes for fiscalYear.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getFiscalYearBytes() {
+      java.lang.Object ref = fiscalYear_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        fiscalYear_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int AGE_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object age_ = "";
+    /**
+     * <code>string age = 5;</code>
+     * @return The age.
+     */
+    @java.lang.Override
+    public java.lang.String getAge() {
+      java.lang.Object ref = age_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        age_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string age = 5;</code>
+     * @return The bytes for age.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAgeBytes() {
+      java.lang.Object ref = age_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        age_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(title_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, title_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(totalPay_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, totalPay_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(fiscalYear_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, fiscalYear_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(age_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, age_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(title_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, title_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(totalPay_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, totalPay_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(fiscalYear_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, fiscalYear_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(age_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, age_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CompanyOfficer)) {
+        return super.equals(obj);
+      }
+      com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CompanyOfficer other = (com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CompanyOfficer) obj;
+
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getTitle()
+          .equals(other.getTitle())) return false;
+      if (!getTotalPay()
+          .equals(other.getTotalPay())) return false;
+      if (!getFiscalYear()
+          .equals(other.getFiscalYear())) return false;
+      if (!getAge()
+          .equals(other.getAge())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getName().hashCode();
+      hash = (37 * hash) + TITLE_FIELD_NUMBER;
+      hash = (53 * hash) + getTitle().hashCode();
+      hash = (37 * hash) + TOTALPAY_FIELD_NUMBER;
+      hash = (53 * hash) + getTotalPay().hashCode();
+      hash = (37 * hash) + FISCALYEAR_FIELD_NUMBER;
+      hash = (53 * hash) + getFiscalYear().hashCode();
+      hash = (37 * hash) + AGE_FIELD_NUMBER;
+      hash = (53 * hash) + getAge().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CompanyOfficer parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CompanyOfficer parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CompanyOfficer parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CompanyOfficer parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CompanyOfficer parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CompanyOfficer parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CompanyOfficer parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CompanyOfficer parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CompanyOfficer parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CompanyOfficer parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CompanyOfficer parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CompanyOfficer parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CompanyOfficer prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code CompanyOfficer}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:CompanyOfficer)
+        com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CompanyOfficerOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.internal_static_CompanyOfficer_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.internal_static_CompanyOfficer_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CompanyOfficer.class, com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CompanyOfficer.Builder.class);
+      }
+
+      // Construct using com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CompanyOfficer.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        name_ = "";
+        title_ = "";
+        totalPay_ = "";
+        fiscalYear_ = "";
+        age_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.internal_static_CompanyOfficer_descriptor;
+      }
+
+      @java.lang.Override
+      public com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CompanyOfficer getDefaultInstanceForType() {
+        return com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CompanyOfficer.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CompanyOfficer build() {
+        com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CompanyOfficer result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CompanyOfficer buildPartial() {
+        com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CompanyOfficer result = new com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CompanyOfficer(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CompanyOfficer result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.name_ = name_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.title_ = title_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.totalPay_ = totalPay_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.fiscalYear_ = fiscalYear_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.age_ = age_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CompanyOfficer) {
+          return mergeFrom((com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CompanyOfficer)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CompanyOfficer other) {
+        if (other == com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CompanyOfficer.getDefaultInstance()) return this;
+        if (!other.getName().isEmpty()) {
+          name_ = other.name_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getTitle().isEmpty()) {
+          title_ = other.title_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getTotalPay().isEmpty()) {
+          totalPay_ = other.totalPay_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (!other.getFiscalYear().isEmpty()) {
+          fiscalYear_ = other.fiscalYear_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        if (!other.getAge().isEmpty()) {
+          age_ = other.age_;
+          bitField0_ |= 0x00000010;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                name_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                title_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                totalPay_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                fiscalYear_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 42: {
+                age_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object name_ = "";
+      /**
+       * <code>string name = 1;</code>
+       * @return The name.
+       */
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          name_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string name = 1;</code>
+       * @return The bytes for name.
+       */
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          name_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string name = 1;</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setName(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        name_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string name = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearName() {
+        name_ = getDefaultInstance().getName();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string name = 1;</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        name_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object title_ = "";
+      /**
+       * <code>string title = 2;</code>
+       * @return The title.
+       */
+      public java.lang.String getTitle() {
+        java.lang.Object ref = title_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          title_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string title = 2;</code>
+       * @return The bytes for title.
+       */
+      public com.google.protobuf.ByteString
+          getTitleBytes() {
+        java.lang.Object ref = title_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          title_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string title = 2;</code>
+       * @param value The title to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTitle(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        title_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string title = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTitle() {
+        title_ = getDefaultInstance().getTitle();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string title = 2;</code>
+       * @param value The bytes for title to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTitleBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        title_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object totalPay_ = "";
+      /**
+       * <code>string totalPay = 3;</code>
+       * @return The totalPay.
+       */
+      public java.lang.String getTotalPay() {
+        java.lang.Object ref = totalPay_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          totalPay_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string totalPay = 3;</code>
+       * @return The bytes for totalPay.
+       */
+      public com.google.protobuf.ByteString
+          getTotalPayBytes() {
+        java.lang.Object ref = totalPay_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          totalPay_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string totalPay = 3;</code>
+       * @param value The totalPay to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTotalPay(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        totalPay_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string totalPay = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTotalPay() {
+        totalPay_ = getDefaultInstance().getTotalPay();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string totalPay = 3;</code>
+       * @param value The bytes for totalPay to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTotalPayBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        totalPay_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object fiscalYear_ = "";
+      /**
+       * <code>string fiscalYear = 4;</code>
+       * @return The fiscalYear.
+       */
+      public java.lang.String getFiscalYear() {
+        java.lang.Object ref = fiscalYear_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          fiscalYear_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string fiscalYear = 4;</code>
+       * @return The bytes for fiscalYear.
+       */
+      public com.google.protobuf.ByteString
+          getFiscalYearBytes() {
+        java.lang.Object ref = fiscalYear_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          fiscalYear_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string fiscalYear = 4;</code>
+       * @param value The fiscalYear to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFiscalYear(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        fiscalYear_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string fiscalYear = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFiscalYear() {
+        fiscalYear_ = getDefaultInstance().getFiscalYear();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string fiscalYear = 4;</code>
+       * @param value The bytes for fiscalYear to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFiscalYearBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        fiscalYear_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object age_ = "";
+      /**
+       * <code>string age = 5;</code>
+       * @return The age.
+       */
+      public java.lang.String getAge() {
+        java.lang.Object ref = age_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          age_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string age = 5;</code>
+       * @return The bytes for age.
+       */
+      public com.google.protobuf.ByteString
+          getAgeBytes() {
+        java.lang.Object ref = age_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          age_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string age = 5;</code>
+       * @param value The age to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAge(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        age_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string age = 5;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAge() {
+        age_ = getDefaultInstance().getAge();
+        bitField0_ = (bitField0_ & ~0x00000010);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string age = 5;</code>
+       * @param value The bytes for age to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAgeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        age_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:CompanyOfficer)
+    }
+
+    // @@protoc_insertion_point(class_scope:CompanyOfficer)
+    private static final com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CompanyOfficer DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CompanyOfficer();
+    }
+
+    public static com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CompanyOfficer getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<CompanyOfficer>
+        PARSER = new com.google.protobuf.AbstractParser<CompanyOfficer>() {
+      @java.lang.Override
+      public CompanyOfficer parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<CompanyOfficer> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CompanyOfficer> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CompanyOfficer getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_Ticker_descriptor;
   private static final 
@@ -8467,6 +11513,16 @@ java.lang.String defaultValue) {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_CorrelationCell_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CorporateAction_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_CorporateAction_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CompanyOfficer_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_CompanyOfficer_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -8482,7 +11538,7 @@ java.lang.String defaultValue) {
       "\006.Value\"$\n\005Value\022\014\n\004date\030\001 \001(\005\022\r\n\005price\030" +
       "\002 \001(\001\"Y\n\nInvestment\022\027\n\006ticker\030\001 \001(\0132\007.Ti" +
       "cker\022\013\n\003qty\030\002 \001(\001\022!\n\013accountType\030\003 \001(\0162\014" +
-      ".AccountType:\002\030\001\"\213\003\n\nInstrument\022\027\n\006ticke" +
+      ".AccountType:\002\030\001\"\341\003\n\nInstrument\022\027\n\006ticke" +
       "r\030\001 \001(\0132\007.Ticker\022\013\n\003qty\030\002 \001(\001\022!\n\013account" +
       "Type\030\003 \001(\0162\014.AccountType\022\035\n\tdirection\030\004 " +
       "\001(\0162\n.Direction\022+\n\010metaData\030\005 \003(\0132\031.Inst" +
@@ -8491,26 +11547,33 @@ java.lang.String defaultValue) {
       " \001(\001\022\013\n\003mer\030\t \001(\001\022\r\n\005notes\030\n \001(\t\022\036\n\014issu" +
       "eCountry\030\013 \001(\0162\010.Country\022\037\n\roriginCountr" +
       "y\030\014 \001(\0162\010.Country\022\032\n\003ccy\030\r \001(\0162\r.Currenc" +
-      "yCode\032/\n\rMetaDataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005v" +
-      "alue\030\002 \001(\t:\0028\001\"c\n\tPortfolio\022$\n\013investmen" +
-      "ts\030\001 \003(\0132\013.InvestmentB\002\030\001\022 \n\013instruments" +
-      "\030\002 \003(\0132\013.Instrument\022\016\n\006userId\030\003 \001(\t\"6\n\021C" +
-      "orrelationMatrix\022!\n\007entries\030\001 \003(\0132\020.Corr" +
-      "elationCell\"B\n\017CorrelationCell\022\017\n\007imntRo" +
-      "w\030\001 \001(\t\022\017\n\007imntCol\030\002 \001(\t\022\r\n\005value\030\003 \001(\001*" +
-      "\036\n\tDirection\022\007\n\003BUY\020\000\022\010\n\004SELL\020\001*<\n\013Accou" +
-      "ntType\022\010\n\004TFSA\020\000\022\006\n\002NR\020\001\022\010\n\004FHSA\020\002\022\010\n\004RR" +
-      "SP\020\003\022\007\n\003IND\020\004*z\n\016InstrumentType\022\n\n\006EQUIT" +
-      "Y\020\000\022\t\n\005INDEX\020\001\022\007\n\003ETF\020\002\022\016\n\nMUTUALFUND\020\003\022" +
-      "\n\n\006FUTURE\020\004\022\014\n\010CURRENCY\020\005\022\022\n\016CRYPTOCURRE" +
-      "NCY\020\006\022\n\n\006OPTION\020\007*Z\n\006Signal\022\014\n\010SIG_HOLD\020" +
-      "\000\022\013\n\007SIG_BUY\020\001\022\022\n\016SIG_STRONG_BUY\020\002\022\014\n\010SI" +
-      "G_SELL\020\003\022\023\n\017SIG_STRONG_SELL\020\004*-\n\007Country" +
-      "\022\006\n\002CA\020\000\022\006\n\002IN\020\001\022\006\n\002US\020\002\022\n\n\006GLOBAL\020\003*)\n\014" +
-      "CurrencyCode\022\007\n\003CAD\020\000\022\007\n\003INR\020\001\022\007\n\003USD\020\002B" +
-      "K\n8com.vv.personal.twm.artifactory.gener" +
-      "ated.equitiesMarketB\017MarketDataProtob\006pr" +
-      "oto3"
+      "yCode\022*\n\020corporateActions\030\016 \003(\0132\020.Corpor" +
+      "ateAction\022(\n\017companyOfficers\030\017 \003(\0132\017.Com" +
+      "panyOfficer\032/\n\rMetaDataEntry\022\013\n\003key\030\001 \001(" +
+      "\t\022\r\n\005value\030\002 \001(\t:\0028\001\"c\n\tPortfolio\022$\n\013inv" +
+      "estments\030\001 \003(\0132\013.InvestmentB\002\030\001\022 \n\013instr" +
+      "uments\030\002 \003(\0132\013.Instrument\022\016\n\006userId\030\003 \001(" +
+      "\t\"6\n\021CorrelationMatrix\022!\n\007entries\030\001 \003(\0132" +
+      "\020.CorrelationCell\"B\n\017CorrelationCell\022\017\n\007" +
+      "imntRow\030\001 \001(\t\022\017\n\007imntCol\030\002 \001(\t\022\r\n\005value\030" +
+      "\003 \001(\001\"o\n\017CorporateAction\022\016\n\006header\030\001 \001(\t" +
+      "\022\017\n\007message\030\002 \001(\t\022\022\n\nmetaAmount\030\003 \001(\t\022\020\n" +
+      "\010metaDate\030\004 \001(\t\022\025\n\rmetaEventType\030\005 \001(\t\"`" +
+      "\n\016CompanyOfficer\022\014\n\004name\030\001 \001(\t\022\r\n\005title\030" +
+      "\002 \001(\t\022\020\n\010totalPay\030\003 \001(\t\022\022\n\nfiscalYear\030\004 " +
+      "\001(\t\022\013\n\003age\030\005 \001(\t*\036\n\tDirection\022\007\n\003BUY\020\000\022\010" +
+      "\n\004SELL\020\001*<\n\013AccountType\022\010\n\004TFSA\020\000\022\006\n\002NR\020" +
+      "\001\022\010\n\004FHSA\020\002\022\010\n\004RRSP\020\003\022\007\n\003IND\020\004*z\n\016Instru" +
+      "mentType\022\n\n\006EQUITY\020\000\022\t\n\005INDEX\020\001\022\007\n\003ETF\020\002" +
+      "\022\016\n\nMUTUALFUND\020\003\022\n\n\006FUTURE\020\004\022\014\n\010CURRENCY" +
+      "\020\005\022\022\n\016CRYPTOCURRENCY\020\006\022\n\n\006OPTION\020\007*Z\n\006Si" +
+      "gnal\022\014\n\010SIG_HOLD\020\000\022\013\n\007SIG_BUY\020\001\022\022\n\016SIG_S" +
+      "TRONG_BUY\020\002\022\014\n\010SIG_SELL\020\003\022\023\n\017SIG_STRONG_" +
+      "SELL\020\004*-\n\007Country\022\006\n\002CA\020\000\022\006\n\002IN\020\001\022\006\n\002US\020" +
+      "\002\022\n\n\006GLOBAL\020\003*)\n\014CurrencyCode\022\007\n\003CAD\020\000\022\007" +
+      "\n\003INR\020\001\022\007\n\003USD\020\002BK\n8com.vv.personal.twm." +
+      "artifactory.generated.equitiesMarketB\017Ma" +
+      "rketDataProtob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -8539,7 +11602,7 @@ java.lang.String defaultValue) {
     internal_static_Instrument_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_Instrument_descriptor,
-        new java.lang.String[] { "Ticker", "Qty", "AccountType", "Direction", "MetaData", "UserId", "Signal", "DividendYield", "Mer", "Notes", "IssueCountry", "OriginCountry", "Ccy", });
+        new java.lang.String[] { "Ticker", "Qty", "AccountType", "Direction", "MetaData", "UserId", "Signal", "DividendYield", "Mer", "Notes", "IssueCountry", "OriginCountry", "Ccy", "CorporateActions", "CompanyOfficers", });
     internal_static_Instrument_MetaDataEntry_descriptor =
       internal_static_Instrument_descriptor.getNestedTypes().get(0);
     internal_static_Instrument_MetaDataEntry_fieldAccessorTable = new
@@ -8564,6 +11627,18 @@ java.lang.String defaultValue) {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CorrelationCell_descriptor,
         new java.lang.String[] { "ImntRow", "ImntCol", "Value", });
+    internal_static_CorporateAction_descriptor =
+      getDescriptor().getMessageTypes().get(7);
+    internal_static_CorporateAction_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_CorporateAction_descriptor,
+        new java.lang.String[] { "Header", "Message", "MetaAmount", "MetaDate", "MetaEventType", });
+    internal_static_CompanyOfficer_descriptor =
+      getDescriptor().getMessageTypes().get(8);
+    internal_static_CompanyOfficer_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_CompanyOfficer_descriptor,
+        new java.lang.String[] { "Name", "Title", "TotalPay", "FiscalYear", "Age", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)
