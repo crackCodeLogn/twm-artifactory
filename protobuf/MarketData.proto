@@ -41,6 +41,7 @@ message Instrument {
   CurrencyCode ccy = 13;
   repeated CorporateAction corporateActions = 14;
   repeated CompanyOfficer companyOfficers = 15;
+  double beta = 16;
 }
 
 message Portfolio {

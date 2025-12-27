@@ -3702,6 +3702,12 @@ java.lang.String defaultValue);
      */
     com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CompanyOfficerOrBuilder getCompanyOfficersOrBuilder(
         int index);
+
+    /**
+     * <code>double beta = 16;</code>
+     * @return The beta.
+     */
+    double getBeta();
   }
   /**
    * Protobuf type {@code Instrument}
@@ -4171,6 +4177,17 @@ java.lang.String defaultValue) {
       return companyOfficers_.get(index);
     }
 
+    public static final int BETA_FIELD_NUMBER = 16;
+    private double beta_ = 0D;
+    /**
+     * <code>double beta = 16;</code>
+     * @return The beta.
+     */
+    @java.lang.Override
+    public double getBeta() {
+      return beta_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -4232,6 +4249,9 @@ java.lang.String defaultValue) {
       }
       for (int i = 0; i < companyOfficers_.size(); i++) {
         output.writeMessage(15, companyOfficers_.get(i));
+      }
+      if (java.lang.Double.doubleToRawLongBits(beta_) != 0) {
+        output.writeDouble(16, beta_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -4306,6 +4326,10 @@ java.lang.String defaultValue) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(15, companyOfficers_.get(i));
       }
+      if (java.lang.Double.doubleToRawLongBits(beta_) != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeDoubleSize(16, beta_);
+      }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
@@ -4351,6 +4375,9 @@ java.lang.String defaultValue) {
           .equals(other.getCorporateActionsList())) return false;
       if (!getCompanyOfficersList()
           .equals(other.getCompanyOfficersList())) return false;
+      if (java.lang.Double.doubleToLongBits(getBeta())
+          != java.lang.Double.doubleToLongBits(
+              other.getBeta())) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -4403,6 +4430,9 @@ java.lang.String defaultValue) {
         hash = (37 * hash) + COMPANYOFFICERS_FIELD_NUMBER;
         hash = (53 * hash) + getCompanyOfficersList().hashCode();
       }
+      hash = (37 * hash) + BETA_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          java.lang.Double.doubleToLongBits(getBeta()));
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -4585,6 +4615,7 @@ java.lang.String defaultValue) {
           companyOfficersBuilder_.clear();
         }
         bitField0_ = (bitField0_ & ~0x00004000);
+        beta_ = 0D;
         return this;
       }
 
@@ -4681,6 +4712,9 @@ java.lang.String defaultValue) {
         }
         if (((from_bitField0_ & 0x00001000) != 0)) {
           result.ccy_ = ccy_;
+        }
+        if (((from_bitField0_ & 0x00008000) != 0)) {
+          result.beta_ = beta_;
         }
       }
 
@@ -4823,6 +4857,9 @@ java.lang.String defaultValue) {
             }
           }
         }
+        if (other.getBeta() != 0D) {
+          setBeta(other.getBeta());
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -4946,6 +4983,11 @@ java.lang.String defaultValue) {
                 }
                 break;
               } // case 122
+              case 129: {
+                beta_ = input.readDouble();
+                bitField0_ |= 0x00008000;
+                break;
+              } // case 129
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -6245,6 +6287,38 @@ java.lang.String defaultValue) {
           companyOfficers_ = null;
         }
         return companyOfficersBuilder_;
+      }
+
+      private double beta_ ;
+      /**
+       * <code>double beta = 16;</code>
+       * @return The beta.
+       */
+      @java.lang.Override
+      public double getBeta() {
+        return beta_;
+      }
+      /**
+       * <code>double beta = 16;</code>
+       * @param value The beta to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBeta(double value) {
+        
+        beta_ = value;
+        bitField0_ |= 0x00008000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>double beta = 16;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBeta() {
+        bitField0_ = (bitField0_ & ~0x00008000);
+        beta_ = 0D;
+        onChanged();
+        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -11538,7 +11612,7 @@ java.lang.String defaultValue) {
       "\006.Value\"$\n\005Value\022\014\n\004date\030\001 \001(\005\022\r\n\005price\030" +
       "\002 \001(\001\"Y\n\nInvestment\022\027\n\006ticker\030\001 \001(\0132\007.Ti" +
       "cker\022\013\n\003qty\030\002 \001(\001\022!\n\013accountType\030\003 \001(\0162\014" +
-      ".AccountType:\002\030\001\"\341\003\n\nInstrument\022\027\n\006ticke" +
+      ".AccountType:\002\030\001\"\357\003\n\nInstrument\022\027\n\006ticke" +
       "r\030\001 \001(\0132\007.Ticker\022\013\n\003qty\030\002 \001(\001\022!\n\013account" +
       "Type\030\003 \001(\0162\014.AccountType\022\035\n\tdirection\030\004 " +
       "\001(\0162\n.Direction\022+\n\010metaData\030\005 \003(\0132\031.Inst" +
@@ -11549,31 +11623,31 @@ java.lang.String defaultValue) {
       "y\030\014 \001(\0162\010.Country\022\032\n\003ccy\030\r \001(\0162\r.Currenc" +
       "yCode\022*\n\020corporateActions\030\016 \003(\0132\020.Corpor" +
       "ateAction\022(\n\017companyOfficers\030\017 \003(\0132\017.Com" +
-      "panyOfficer\032/\n\rMetaDataEntry\022\013\n\003key\030\001 \001(" +
-      "\t\022\r\n\005value\030\002 \001(\t:\0028\001\"c\n\tPortfolio\022$\n\013inv" +
-      "estments\030\001 \003(\0132\013.InvestmentB\002\030\001\022 \n\013instr" +
-      "uments\030\002 \003(\0132\013.Instrument\022\016\n\006userId\030\003 \001(" +
-      "\t\"6\n\021CorrelationMatrix\022!\n\007entries\030\001 \003(\0132" +
-      "\020.CorrelationCell\"B\n\017CorrelationCell\022\017\n\007" +
-      "imntRow\030\001 \001(\t\022\017\n\007imntCol\030\002 \001(\t\022\r\n\005value\030" +
-      "\003 \001(\001\"o\n\017CorporateAction\022\016\n\006header\030\001 \001(\t" +
-      "\022\017\n\007message\030\002 \001(\t\022\022\n\nmetaAmount\030\003 \001(\t\022\020\n" +
-      "\010metaDate\030\004 \001(\t\022\025\n\rmetaEventType\030\005 \001(\t\"`" +
-      "\n\016CompanyOfficer\022\014\n\004name\030\001 \001(\t\022\r\n\005title\030" +
-      "\002 \001(\t\022\020\n\010totalPay\030\003 \001(\t\022\022\n\nfiscalYear\030\004 " +
-      "\001(\t\022\013\n\003age\030\005 \001(\t*\036\n\tDirection\022\007\n\003BUY\020\000\022\010" +
-      "\n\004SELL\020\001*<\n\013AccountType\022\010\n\004TFSA\020\000\022\006\n\002NR\020" +
-      "\001\022\010\n\004FHSA\020\002\022\010\n\004RRSP\020\003\022\007\n\003IND\020\004*z\n\016Instru" +
-      "mentType\022\n\n\006EQUITY\020\000\022\t\n\005INDEX\020\001\022\007\n\003ETF\020\002" +
-      "\022\016\n\nMUTUALFUND\020\003\022\n\n\006FUTURE\020\004\022\014\n\010CURRENCY" +
-      "\020\005\022\022\n\016CRYPTOCURRENCY\020\006\022\n\n\006OPTION\020\007*Z\n\006Si" +
-      "gnal\022\014\n\010SIG_HOLD\020\000\022\013\n\007SIG_BUY\020\001\022\022\n\016SIG_S" +
-      "TRONG_BUY\020\002\022\014\n\010SIG_SELL\020\003\022\023\n\017SIG_STRONG_" +
-      "SELL\020\004*-\n\007Country\022\006\n\002CA\020\000\022\006\n\002IN\020\001\022\006\n\002US\020" +
-      "\002\022\n\n\006GLOBAL\020\003*)\n\014CurrencyCode\022\007\n\003CAD\020\000\022\007" +
-      "\n\003INR\020\001\022\007\n\003USD\020\002BK\n8com.vv.personal.twm." +
-      "artifactory.generated.equitiesMarketB\017Ma" +
-      "rketDataProtob\006proto3"
+      "panyOfficer\022\014\n\004beta\030\020 \001(\001\032/\n\rMetaDataEnt" +
+      "ry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"c\n\tPo" +
+      "rtfolio\022$\n\013investments\030\001 \003(\0132\013.Investmen" +
+      "tB\002\030\001\022 \n\013instruments\030\002 \003(\0132\013.Instrument\022" +
+      "\016\n\006userId\030\003 \001(\t\"6\n\021CorrelationMatrix\022!\n\007" +
+      "entries\030\001 \003(\0132\020.CorrelationCell\"B\n\017Corre" +
+      "lationCell\022\017\n\007imntRow\030\001 \001(\t\022\017\n\007imntCol\030\002" +
+      " \001(\t\022\r\n\005value\030\003 \001(\001\"o\n\017CorporateAction\022\016" +
+      "\n\006header\030\001 \001(\t\022\017\n\007message\030\002 \001(\t\022\022\n\nmetaA" +
+      "mount\030\003 \001(\t\022\020\n\010metaDate\030\004 \001(\t\022\025\n\rmetaEve" +
+      "ntType\030\005 \001(\t\"`\n\016CompanyOfficer\022\014\n\004name\030\001" +
+      " \001(\t\022\r\n\005title\030\002 \001(\t\022\020\n\010totalPay\030\003 \001(\t\022\022\n" +
+      "\nfiscalYear\030\004 \001(\t\022\013\n\003age\030\005 \001(\t*\036\n\tDirect" +
+      "ion\022\007\n\003BUY\020\000\022\010\n\004SELL\020\001*<\n\013AccountType\022\010\n" +
+      "\004TFSA\020\000\022\006\n\002NR\020\001\022\010\n\004FHSA\020\002\022\010\n\004RRSP\020\003\022\007\n\003I" +
+      "ND\020\004*z\n\016InstrumentType\022\n\n\006EQUITY\020\000\022\t\n\005IN" +
+      "DEX\020\001\022\007\n\003ETF\020\002\022\016\n\nMUTUALFUND\020\003\022\n\n\006FUTURE" +
+      "\020\004\022\014\n\010CURRENCY\020\005\022\022\n\016CRYPTOCURRENCY\020\006\022\n\n\006" +
+      "OPTION\020\007*Z\n\006Signal\022\014\n\010SIG_HOLD\020\000\022\013\n\007SIG_" +
+      "BUY\020\001\022\022\n\016SIG_STRONG_BUY\020\002\022\014\n\010SIG_SELL\020\003\022" +
+      "\023\n\017SIG_STRONG_SELL\020\004*-\n\007Country\022\006\n\002CA\020\000\022" +
+      "\006\n\002IN\020\001\022\006\n\002US\020\002\022\n\n\006GLOBAL\020\003*)\n\014CurrencyC" +
+      "ode\022\007\n\003CAD\020\000\022\007\n\003INR\020\001\022\007\n\003USD\020\002BK\n8com.vv" +
+      ".personal.twm.artifactory.generated.equi" +
+      "tiesMarketB\017MarketDataProtob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -11602,7 +11676,7 @@ java.lang.String defaultValue) {
     internal_static_Instrument_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_Instrument_descriptor,
-        new java.lang.String[] { "Ticker", "Qty", "AccountType", "Direction", "MetaData", "UserId", "Signal", "DividendYield", "Mer", "Notes", "IssueCountry", "OriginCountry", "Ccy", "CorporateActions", "CompanyOfficers", });
+        new java.lang.String[] { "Ticker", "Qty", "AccountType", "Direction", "MetaData", "UserId", "Signal", "DividendYield", "Mer", "Notes", "IssueCountry", "OriginCountry", "Ccy", "CorporateActions", "CompanyOfficers", "Beta", });
     internal_static_Instrument_MetaDataEntry_descriptor =
       internal_static_Instrument_descriptor.getNestedTypes().get(0);
     internal_static_Instrument_MetaDataEntry_fieldAccessorTable = new
