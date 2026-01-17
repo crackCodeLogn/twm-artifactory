@@ -48,6 +48,8 @@ message Portfolio {
   repeated Investment investments = 1 [deprecated = true];
   repeated Instrument instruments = 2;
   string userId = 3;
+
+  optional CorrelationMatrix correlationMatrix = 4;
 }
 
 message CorrelationMatrix {

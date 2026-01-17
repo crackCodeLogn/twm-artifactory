@@ -6447,6 +6447,21 @@ java.lang.String defaultValue) {
      */
     com.google.protobuf.ByteString
         getUserIdBytes();
+
+    /**
+     * <code>optional .CorrelationMatrix correlationMatrix = 4;</code>
+     * @return Whether the correlationMatrix field is set.
+     */
+    boolean hasCorrelationMatrix();
+    /**
+     * <code>optional .CorrelationMatrix correlationMatrix = 4;</code>
+     * @return The correlationMatrix.
+     */
+    com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorrelationMatrix getCorrelationMatrix();
+    /**
+     * <code>optional .CorrelationMatrix correlationMatrix = 4;</code>
+     */
+    com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorrelationMatrixOrBuilder getCorrelationMatrixOrBuilder();
   }
   /**
    * Protobuf type {@code Portfolio}
@@ -6491,6 +6506,7 @@ java.lang.String defaultValue) {
               com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Portfolio.class, com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Portfolio.Builder.class);
     }
 
+    private int bitField0_;
     public static final int INVESTMENTS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private java.util.List<com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Investment> investments_;
@@ -6612,6 +6628,32 @@ java.lang.String defaultValue) {
       }
     }
 
+    public static final int CORRELATIONMATRIX_FIELD_NUMBER = 4;
+    private com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorrelationMatrix correlationMatrix_;
+    /**
+     * <code>optional .CorrelationMatrix correlationMatrix = 4;</code>
+     * @return Whether the correlationMatrix field is set.
+     */
+    @java.lang.Override
+    public boolean hasCorrelationMatrix() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>optional .CorrelationMatrix correlationMatrix = 4;</code>
+     * @return The correlationMatrix.
+     */
+    @java.lang.Override
+    public com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorrelationMatrix getCorrelationMatrix() {
+      return correlationMatrix_ == null ? com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorrelationMatrix.getDefaultInstance() : correlationMatrix_;
+    }
+    /**
+     * <code>optional .CorrelationMatrix correlationMatrix = 4;</code>
+     */
+    @java.lang.Override
+    public com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorrelationMatrixOrBuilder getCorrelationMatrixOrBuilder() {
+      return correlationMatrix_ == null ? com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorrelationMatrix.getDefaultInstance() : correlationMatrix_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -6635,6 +6677,9 @@ java.lang.String defaultValue) {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(userId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, userId_);
       }
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeMessage(4, getCorrelationMatrix());
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -6654,6 +6699,10 @@ java.lang.String defaultValue) {
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(userId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, userId_);
+      }
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getCorrelationMatrix());
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -6676,6 +6725,11 @@ java.lang.String defaultValue) {
           .equals(other.getInstrumentsList())) return false;
       if (!getUserId()
           .equals(other.getUserId())) return false;
+      if (hasCorrelationMatrix() != other.hasCorrelationMatrix()) return false;
+      if (hasCorrelationMatrix()) {
+        if (!getCorrelationMatrix()
+            .equals(other.getCorrelationMatrix())) return false;
+      }
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -6697,6 +6751,10 @@ java.lang.String defaultValue) {
       }
       hash = (37 * hash) + USERID_FIELD_NUMBER;
       hash = (53 * hash) + getUserId().hashCode();
+      if (hasCorrelationMatrix()) {
+        hash = (37 * hash) + CORRELATIONMATRIX_FIELD_NUMBER;
+        hash = (53 * hash) + getCorrelationMatrix().hashCode();
+      }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -6814,13 +6872,21 @@ java.lang.String defaultValue) {
 
       // Construct using com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.Portfolio.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getInvestmentsFieldBuilder();
+          getInstrumentsFieldBuilder();
+          getCorrelationMatrixFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -6841,6 +6907,11 @@ java.lang.String defaultValue) {
         }
         bitField0_ = (bitField0_ & ~0x00000002);
         userId_ = "";
+        correlationMatrix_ = null;
+        if (correlationMatrixBuilder_ != null) {
+          correlationMatrixBuilder_.dispose();
+          correlationMatrixBuilder_ = null;
+        }
         return this;
       }
 
@@ -6899,6 +6970,14 @@ java.lang.String defaultValue) {
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.userId_ = userId_;
         }
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.correlationMatrix_ = correlationMatrixBuilder_ == null
+              ? correlationMatrix_
+              : correlationMatrixBuilder_.build();
+          to_bitField0_ |= 0x00000001;
+        }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -7002,6 +7081,9 @@ java.lang.String defaultValue) {
           bitField0_ |= 0x00000004;
           onChanged();
         }
+        if (other.hasCorrelationMatrix()) {
+          mergeCorrelationMatrix(other.getCorrelationMatrix());
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -7059,6 +7141,13 @@ java.lang.String defaultValue) {
                 bitField0_ |= 0x00000004;
                 break;
               } // case 26
+              case 34: {
+                input.readMessage(
+                    getCorrelationMatrixFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -7626,6 +7715,125 @@ java.lang.String defaultValue) {
         bitField0_ |= 0x00000004;
         onChanged();
         return this;
+      }
+
+      private com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorrelationMatrix correlationMatrix_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorrelationMatrix, com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorrelationMatrix.Builder, com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorrelationMatrixOrBuilder> correlationMatrixBuilder_;
+      /**
+       * <code>optional .CorrelationMatrix correlationMatrix = 4;</code>
+       * @return Whether the correlationMatrix field is set.
+       */
+      public boolean hasCorrelationMatrix() {
+        return ((bitField0_ & 0x00000008) != 0);
+      }
+      /**
+       * <code>optional .CorrelationMatrix correlationMatrix = 4;</code>
+       * @return The correlationMatrix.
+       */
+      public com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorrelationMatrix getCorrelationMatrix() {
+        if (correlationMatrixBuilder_ == null) {
+          return correlationMatrix_ == null ? com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorrelationMatrix.getDefaultInstance() : correlationMatrix_;
+        } else {
+          return correlationMatrixBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .CorrelationMatrix correlationMatrix = 4;</code>
+       */
+      public Builder setCorrelationMatrix(com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorrelationMatrix value) {
+        if (correlationMatrixBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          correlationMatrix_ = value;
+        } else {
+          correlationMatrixBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .CorrelationMatrix correlationMatrix = 4;</code>
+       */
+      public Builder setCorrelationMatrix(
+          com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorrelationMatrix.Builder builderForValue) {
+        if (correlationMatrixBuilder_ == null) {
+          correlationMatrix_ = builderForValue.build();
+        } else {
+          correlationMatrixBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .CorrelationMatrix correlationMatrix = 4;</code>
+       */
+      public Builder mergeCorrelationMatrix(com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorrelationMatrix value) {
+        if (correlationMatrixBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) != 0) &&
+            correlationMatrix_ != null &&
+            correlationMatrix_ != com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorrelationMatrix.getDefaultInstance()) {
+            getCorrelationMatrixBuilder().mergeFrom(value);
+          } else {
+            correlationMatrix_ = value;
+          }
+        } else {
+          correlationMatrixBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .CorrelationMatrix correlationMatrix = 4;</code>
+       */
+      public Builder clearCorrelationMatrix() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        correlationMatrix_ = null;
+        if (correlationMatrixBuilder_ != null) {
+          correlationMatrixBuilder_.dispose();
+          correlationMatrixBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .CorrelationMatrix correlationMatrix = 4;</code>
+       */
+      public com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorrelationMatrix.Builder getCorrelationMatrixBuilder() {
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return getCorrelationMatrixFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .CorrelationMatrix correlationMatrix = 4;</code>
+       */
+      public com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorrelationMatrixOrBuilder getCorrelationMatrixOrBuilder() {
+        if (correlationMatrixBuilder_ != null) {
+          return correlationMatrixBuilder_.getMessageOrBuilder();
+        } else {
+          return correlationMatrix_ == null ?
+              com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorrelationMatrix.getDefaultInstance() : correlationMatrix_;
+        }
+      }
+      /**
+       * <code>optional .CorrelationMatrix correlationMatrix = 4;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorrelationMatrix, com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorrelationMatrix.Builder, com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorrelationMatrixOrBuilder> 
+          getCorrelationMatrixFieldBuilder() {
+        if (correlationMatrixBuilder_ == null) {
+          correlationMatrixBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorrelationMatrix, com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorrelationMatrix.Builder, com.vv.personal.twm.artifactory.generated.equitiesMarket.MarketDataProto.CorrelationMatrixOrBuilder>(
+                  getCorrelationMatrix(),
+                  getParentForChildren(),
+                  isClean());
+          correlationMatrix_ = null;
+        }
+        return correlationMatrixBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -11624,30 +11832,32 @@ java.lang.String defaultValue) {
       "yCode\022*\n\020corporateActions\030\016 \003(\0132\020.Corpor" +
       "ateAction\022(\n\017companyOfficers\030\017 \003(\0132\017.Com" +
       "panyOfficer\022\014\n\004beta\030\020 \001(\001\032/\n\rMetaDataEnt" +
-      "ry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"c\n\tPo" +
-      "rtfolio\022$\n\013investments\030\001 \003(\0132\013.Investmen" +
-      "tB\002\030\001\022 \n\013instruments\030\002 \003(\0132\013.Instrument\022" +
-      "\016\n\006userId\030\003 \001(\t\"6\n\021CorrelationMatrix\022!\n\007" +
-      "entries\030\001 \003(\0132\020.CorrelationCell\"B\n\017Corre" +
-      "lationCell\022\017\n\007imntRow\030\001 \001(\t\022\017\n\007imntCol\030\002" +
-      " \001(\t\022\r\n\005value\030\003 \001(\001\"o\n\017CorporateAction\022\016" +
-      "\n\006header\030\001 \001(\t\022\017\n\007message\030\002 \001(\t\022\022\n\nmetaA" +
-      "mount\030\003 \001(\t\022\020\n\010metaDate\030\004 \001(\t\022\025\n\rmetaEve" +
-      "ntType\030\005 \001(\t\"`\n\016CompanyOfficer\022\014\n\004name\030\001" +
-      " \001(\t\022\r\n\005title\030\002 \001(\t\022\020\n\010totalPay\030\003 \001(\t\022\022\n" +
-      "\nfiscalYear\030\004 \001(\t\022\013\n\003age\030\005 \001(\t*\036\n\tDirect" +
-      "ion\022\007\n\003BUY\020\000\022\010\n\004SELL\020\001*<\n\013AccountType\022\010\n" +
-      "\004TFSA\020\000\022\006\n\002NR\020\001\022\010\n\004FHSA\020\002\022\010\n\004RRSP\020\003\022\007\n\003I" +
-      "ND\020\004*z\n\016InstrumentType\022\n\n\006EQUITY\020\000\022\t\n\005IN" +
-      "DEX\020\001\022\007\n\003ETF\020\002\022\016\n\nMUTUALFUND\020\003\022\n\n\006FUTURE" +
-      "\020\004\022\014\n\010CURRENCY\020\005\022\022\n\016CRYPTOCURRENCY\020\006\022\n\n\006" +
-      "OPTION\020\007*Z\n\006Signal\022\014\n\010SIG_HOLD\020\000\022\013\n\007SIG_" +
-      "BUY\020\001\022\022\n\016SIG_STRONG_BUY\020\002\022\014\n\010SIG_SELL\020\003\022" +
-      "\023\n\017SIG_STRONG_SELL\020\004*-\n\007Country\022\006\n\002CA\020\000\022" +
-      "\006\n\002IN\020\001\022\006\n\002US\020\002\022\n\n\006GLOBAL\020\003*)\n\014CurrencyC" +
-      "ode\022\007\n\003CAD\020\000\022\007\n\003INR\020\001\022\007\n\003USD\020\002BK\n8com.vv" +
-      ".personal.twm.artifactory.generated.equi" +
-      "tiesMarketB\017MarketDataProtob\006proto3"
+      "ry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\255\001\n\tP" +
+      "ortfolio\022$\n\013investments\030\001 \003(\0132\013.Investme" +
+      "ntB\002\030\001\022 \n\013instruments\030\002 \003(\0132\013.Instrument" +
+      "\022\016\n\006userId\030\003 \001(\t\0222\n\021correlationMatrix\030\004 " +
+      "\001(\0132\022.CorrelationMatrixH\000\210\001\001B\024\n\022_correla" +
+      "tionMatrix\"6\n\021CorrelationMatrix\022!\n\007entri" +
+      "es\030\001 \003(\0132\020.CorrelationCell\"B\n\017Correlatio" +
+      "nCell\022\017\n\007imntRow\030\001 \001(\t\022\017\n\007imntCol\030\002 \001(\t\022" +
+      "\r\n\005value\030\003 \001(\001\"o\n\017CorporateAction\022\016\n\006hea" +
+      "der\030\001 \001(\t\022\017\n\007message\030\002 \001(\t\022\022\n\nmetaAmount" +
+      "\030\003 \001(\t\022\020\n\010metaDate\030\004 \001(\t\022\025\n\rmetaEventTyp" +
+      "e\030\005 \001(\t\"`\n\016CompanyOfficer\022\014\n\004name\030\001 \001(\t\022" +
+      "\r\n\005title\030\002 \001(\t\022\020\n\010totalPay\030\003 \001(\t\022\022\n\nfisc" +
+      "alYear\030\004 \001(\t\022\013\n\003age\030\005 \001(\t*\036\n\tDirection\022\007" +
+      "\n\003BUY\020\000\022\010\n\004SELL\020\001*<\n\013AccountType\022\010\n\004TFSA" +
+      "\020\000\022\006\n\002NR\020\001\022\010\n\004FHSA\020\002\022\010\n\004RRSP\020\003\022\007\n\003IND\020\004*" +
+      "z\n\016InstrumentType\022\n\n\006EQUITY\020\000\022\t\n\005INDEX\020\001" +
+      "\022\007\n\003ETF\020\002\022\016\n\nMUTUALFUND\020\003\022\n\n\006FUTURE\020\004\022\014\n" +
+      "\010CURRENCY\020\005\022\022\n\016CRYPTOCURRENCY\020\006\022\n\n\006OPTIO" +
+      "N\020\007*Z\n\006Signal\022\014\n\010SIG_HOLD\020\000\022\013\n\007SIG_BUY\020\001" +
+      "\022\022\n\016SIG_STRONG_BUY\020\002\022\014\n\010SIG_SELL\020\003\022\023\n\017SI" +
+      "G_STRONG_SELL\020\004*-\n\007Country\022\006\n\002CA\020\000\022\006\n\002IN" +
+      "\020\001\022\006\n\002US\020\002\022\n\n\006GLOBAL\020\003*)\n\014CurrencyCode\022\007" +
+      "\n\003CAD\020\000\022\007\n\003INR\020\001\022\007\n\003USD\020\002BK\n8com.vv.pers" +
+      "onal.twm.artifactory.generated.equitiesM" +
+      "arketB\017MarketDataProtob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -11688,7 +11898,7 @@ java.lang.String defaultValue) {
     internal_static_Portfolio_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_Portfolio_descriptor,
-        new java.lang.String[] { "Investments", "Instruments", "UserId", });
+        new java.lang.String[] { "Investments", "Instruments", "UserId", "CorrelationMatrix", "CorrelationMatrix", });
     internal_static_CorrelationMatrix_descriptor =
       getDescriptor().getMessageTypes().get(5);
     internal_static_CorrelationMatrix_fieldAccessorTable = new
